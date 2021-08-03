@@ -105,3 +105,116 @@ body {
     text-decoration: none;
     line-height: 2rem;
 }
+
+nav {
+    position: fixed;
+    width: 100vw;
+    background-color: #f2e7ce;
+    border-radius: 0px 0px 25px 25px;
+}
+
+#upper-nav {
+    display: flex;
+    align-items: center;
+    padding-left:4.375rem;
+    padding-top: 2.625rem;
+    padding-bottom: 1.891rem;
+    transform: 0.3s;
+}
+
+#logo {
+    transition: 0.3s;
+}
+
+#mark {
+    margin-left:2.188rem;
+}
+
+#nav-hr {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height: 1.5px;
+    min-width: calc(100vw - 8.75rem);
+    background-color: #2e4565;
+    transition: 0.3s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+nav ul#nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 2rem 12rem;
+    transition: 0.3s;
+}
+
+
+nav ul#nav-menu li a{
+    display: block;
+    min-height: 2rem;
+    font-family: NotoSansTC;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #2e4565;
+}
+
+div ul li{
+    font-family: NotoSansTC;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    color:#2e4565;
+    list-style: none;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+.none-display {
+    transform: translateY(-20px);
+}
+
+.nav-menu-pullup {
+    transform: translateY(-130px);
+}
+
+
+.logo-stay {
+    transform: translateY(150px);
+    transition: 0.3s;
+}
+
+#nav-disappearable {
+    transition: 0.3s;
+}
+
+#main-nav {
+    transition: 0.3s;
+}
+
+.dropdown-menu {
+    display: none;
+    transition: 0.3s;
+    padding-top: 3.125rem;
+}
+
+.dropdown-menu ul li a{
+    text-decoration: none;
+}
+
+.menu-list {
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-menu ul li {
+    margin-top: 1.563rem;
+    max-width: 6rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
