@@ -6,9 +6,115 @@
 .homepage
 {
     width: 100%;
-    height: 98%;
+    height: 110%;
     position: absolute;
-   
     background-color: #374a73;
     z-index: -1;
+}
+
+.News-container
+{
+    width: 100%;
+    height: 100%;
+    background-color: #f2e7ce;
+    position: absolute;
+    top: 88%;
+    z-index: 1;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.icon
+{
+    background-image: url(..images/icon/hp-News_icon);
+}
+
+/***********************/
+/* Posts */
+
+.article-content {
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    width: 20%;
+    height: 45%;
+    background: #f2e7ce;
+    border: solid 2px #374a73;
+}
+.article-content p {
+    
+    color: #374a73;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/*.article-title {
+    font-size: 32px;
+    color: #555;
+    line-height: 1.8;
+    font-weight: 300;
+    }
+*/
+.article-title
+{
+    position: absolute;
+    top: 60%;
+}
+
+.article-title a{
+    
+    color: #374a73;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    font-size: 1.563rem;
+    line-height: 1.28;
+    letter-spacing: 2.5px;
+    text-align: left;
+    font-weight: 400;
+}
+
+
+/*.article-meta span a:hover {
+    text-decoration: underline;
+}*/
+.article-meta{
+    position: absolute;
+    top: 50%;
+}
+
+.post_time{
+    
+    color: rgba(46, 69, 101, 0.7);
+    font-family: /*'TimesNewRoman'*/'Noto Sans TC', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    text-align: left;
+}
+
+
+.post_category{
+    
+    width: 5.5rem;
+    height: 1.875rem;
+    padding: 0.251rem 0.813rem 0.374rem;
+    border-radius: 15px;
+    background-color: #374a73;
+}
+.post_category a{
+    color: #ffbb00;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1.57;
+    letter-spacing: 2.1px;
+    text-align: left;
+    
+}
+
+
+.clearfix {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
