@@ -17,20 +17,67 @@
     width: 100%;
     height: 100%;
     background-color: #f2e7ce;
-    position: absolute;
+    position: relative;
     top: 88%;
     z-index: 1;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
 }
+/* icon and title */
+.news-title{
+    width: 15.5%;
+    height: 15.5%;
+    position: absolute;
+    top: 5%;
+    left: 42.2%;
 
+} 
+.news-title span{
+    color: #374a73;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
 .icon
 {
-    background-image: url(..images/icon/hp-News_icon);
+    position: absolute;
+    width: 2.505rem;
+    height: 2.505rem;
+    left: 40%;
+    background-image: url("../images/icon/hp-News_icon.svg");
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    
 }
 
+.ch-title{
+
+    position: absolute;
+    padding-left: 21%;
+    padding-top: 21%;
+    font-size: 1.875rem;
+    line-height: 1.13;
+    letter-spacing: 6px;
+}
+.en-title{
+    position: absolute;
+    padding-left: 35%;
+    padding-top: 37%;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
 /***********************/
 /* Posts */
+.news-article
+{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 30%;
+    /*border: solid 2px #374a73;*/
+
+}
 
 .article-content {
     position: relative;
