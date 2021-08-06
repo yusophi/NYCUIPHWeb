@@ -18,7 +18,7 @@
    <!-- the News -->
    <div class="News-container">
       <div class="news-title">
-            <div class="icon"></div>
+            <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
             <span class="ch-title">最新消息<br></span>
             <span class="en-title">News</span>
       </div>
@@ -42,7 +42,8 @@
             ?>
                   <div class="article-content num-<?php echo $counter ?>">
                         <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "."?>&nbsp;&nbsp;</div>
-                        <img class="thumbnail_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-newspaper50.svg">
+                        <img class="thumbnail_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-newspaper-new.svg">
+                        <div class="border-anim"><div class="inner-box"></div></div>
                         <div class="article-meta">
                               <img class="icon-clock>" src="<?php bloginfo('template_url')?>/images/icon/icon-clock.svg">
                               <span class="post_time"><?php the_time('Y.m.j'); ?></span>
