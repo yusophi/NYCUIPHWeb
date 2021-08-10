@@ -43,6 +43,7 @@
                   <div class="article-content num-<?php echo $counter ?>">
                         <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "."?>&nbsp;&nbsp;</div>
                         <img class="thumbnail_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-newspaper-new.svg">
+                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-news-more.svg">
                         <div class="border-anim"><div class="inner-box"></div></div>
                         <div class="article-meta">
                               <img class="icon-clock>" src="<?php bloginfo('template_url')?>/images/icon/icon-clock.svg">
@@ -51,23 +52,31 @@
                               <!--<span><?php //the_tags('', ' , ', ''); ?></span>-->
                         </div>
                         <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <div class="excerpt <?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
+                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
                         <div class="clearfix"></div>
                   </div>
             <?php endwhile; ?>
       </div>
       <?php endif; wp_reset_postdata(); ?> 
       <!-- js for hover event-->
-      <script>
-            function showUP(x) {
-            x.style.height = "64px";
-            x.style.width = "64px";
-            }
 
-            function hidden(x) {
-            x.style.height = "32px";
-            x.style.width = "32px";
+      <div class="bt-readmore">
+            <a class="readmore">read more</a>
+            
+      </div>
+
+      <script type="text/javascript">
+            var button1 = document.querySelector('.num-1');
+
+            function show(elementIdName) {
+              var element = document.getElementById(elementIdName);
+              element.style.visibility = 'visible';
             }
       </script>
+   </div>
+
+
+   <div class="events">
+      
    </div>
 </div>
