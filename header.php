@@ -23,13 +23,18 @@
     <div class="container">
         <header class="header">
             <nav id="main-nav">
-                <div id="nav-disappearable">
+                <div class="cf nav-disappearable">
                     <div id="upper-nav">
                         <div id="logo"><img src="asset/LOGO.png" width="72" /></div>
                         <div id="mark"><img src="asset/MARK.png" width="205.5" /></div>
                     </div>
-                    <div id="nav-hr"></div>
+                    <div id="nav-toolbar">
+                        <div id="icon-en"><img src="asset/icon-en.png"></div>
+                        <div id="icon-search"><img src="asset/icon-search.png"></div>
+                        <div id="icon-calendar"><img src="asset/icon-calendar.png"></div>
+                    </div>
                 </div>
+                <div id="nav-hr" class="nav-disappearable"></div>
                 <ul id="nav-menu">
                     <li id="nav-main-list-item-1">
                         <a class="menu-list nav-list-item-1">關於我們</a>
@@ -51,7 +56,6 @@
                             </ul>
                         </div>
                     </li>
-
                     <li id="nav-main-list-item-3">
                         <a class="menu-list nav-list-item-3">招生專區</a>
                         <div class="dropdown-menu">

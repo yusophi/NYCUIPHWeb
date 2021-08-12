@@ -106,21 +106,57 @@ body {
     line-height: 2rem;
 }
 
-nav {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+
+#main-nav {
     position: fixed;
     width: 100vw;
-    background-color: #f2e7ce;
+    background-color: #e4dfd2;
     border-radius: 0px 0px 25px 25px;
+    transition: 0.3s
 }
 
 #upper-nav {
     display: flex;
+    float: left;
     align-items: center;
     padding-left:4.375rem;
     padding-top: 2.625rem;
     padding-bottom: 1.891rem;
     transform: 0.3s;
 }
+
+
+#nav-toolbar {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 129.39px;
+    width: 200px;
+    padding-right: 4.438rem;
+    padding-top: 2.625rem;
+    padding-bottom: 1.891rem;
+    justify-content: space-between;
+    transition: 0.3s;
+    transform: translateY(0px);
+}
+
+#nav-toolbar.pulldown {
+    width: 180px;
+    transform: translateY(125px);
+    transition: 0.3s;
+}
+
+
+.cf::before,
+.cf::after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+  }
 
 #logo {
     transition: 0.3s;
@@ -145,7 +181,7 @@ nav {
 }
 
 
-nav ul#nav-menu {
+#nav-menu {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -153,8 +189,13 @@ nav ul#nav-menu {
     transition: 0.3s;
 }
 
+#nav-menu.shorten {
+    padding: 2rem 20rem 2rem 12rem;
+    transition: 0.3s;
+}
 
-nav ul#nav-menu li a{
+
+#nav-menu li a{
     display: block;
     min-height: 2rem;
     font-family: NotoSansTC;
@@ -174,8 +215,12 @@ div ul li{
     opacity: 0.5;
 }
 
+#nav-hr.none-display {
+    transform: translateY(-30px);
+}
+
 .none-display {
-    transform: translateY(-20px);
+    transform: translateY(-30px);
 }
 
 .nav-menu-pullup {
@@ -183,18 +228,15 @@ div ul li{
 }
 
 
-.logo-stay {
-    transform: translateY(150px);
+#logo.stay {
+    transform: translateY(160px);
     transition: 0.3s;
 }
 
-#nav-disappearable {
+.nav-disappearable {
     transition: 0.3s;
 }
 
-#main-nav {
-    transition: 0.3s;
-}
 
 .dropdown-menu {
     display: none;
@@ -217,4 +259,15 @@ div ul li{
     cursor: pointer;
     width: 100%;
     height: 100%;
+}
+
+#slider-section {
+    background-color: #2e4565;
+    padding-top: 200px;
+}
+
+#slider {
+    display: grid;
+    place-items: center;
+    padding: 5.188rem 10.75rem 7.938rem 10.75rem
 }
