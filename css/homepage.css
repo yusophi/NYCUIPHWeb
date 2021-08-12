@@ -105,7 +105,7 @@
     /*margin: 5.625rem 0 0 6.313rem;
     padding: 0 0 1.188rem;*/
     margin: 6% 0 0 6.9%;
-    padding: 0 0 2rem;
+    padding: 0 0 3%;
 }
 .article-content p {
     
@@ -215,7 +215,7 @@
 .article-title
 {
     position: absolute;
-    top: 82.5%;
+    top: 79.5%;
     width: 100%;
     transition: 500ms cubic-bezier(.52,.06,.42,.86);
     /*border: solid 2px #2e4565;*/
@@ -227,7 +227,7 @@
     color: #374a73;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.28;
     letter-spacing: 2.5px;
     font-weight: bold;
@@ -291,6 +291,13 @@
     border: solid 1.8px #2e4565;
     border-radius: 40px;
     color: #2e4565;
+
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
    
 }
 
@@ -311,8 +318,8 @@
     transform-origin: bottom;
     -webkit-transition-property: transform;
     transition-property: transform;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(.86,.01,.15,.99);
 }
@@ -331,6 +338,7 @@
 
 .bt-readmore:hover{
     color: #efeee4;
+
 }
 
 .bt-readmore:hover::before{

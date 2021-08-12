@@ -62,17 +62,16 @@
 
       <div class="bt-readmore">
             <a class="readmore">read more</a>
-            
       </div>
 
-      <script type="text/javascript">
+      <!--<script type="text/javascript">
             var button1 = document.querySelector('.num-1');
 
             function show(elementIdName) {
               var element = document.getElementById(elementIdName);
               element.style.visibility = 'visible';
             }
-      </script>
+      </script>-->
    </div>
 
 
