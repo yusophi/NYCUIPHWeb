@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <style>
+            .cls-3{fill:#fb0}
+        </style>
+    </defs>
+    <g id="報紙icon" transform="translate(26.972 13.056)">
+        <rect id="矩形_38" width="64" height="64" fill="#2e4565" rx="32" transform="translate(-26.972 -13.056)"/>
+        <g id="more-horizotnal" transform="translate(-15.53 15.028)">
+            <circle id="椭圆_147" cx="4" cy="4" r="4" class="cls-3" transform="translate(33.558 -0.084)"/>
+            <circle id="椭圆_148" cx="4" cy="4" r="4" class="cls-3" transform="translate(16.558 -0.084)"/>
+            <circle id="椭圆_149" cx="4" cy="4" r="4" class="cls-3" transform="translate(-0.441 -0.084)"/>
+        </g>
+    </g>
+</svg>
