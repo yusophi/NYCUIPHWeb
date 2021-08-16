@@ -16,8 +16,9 @@
                   $args = array(
                   'post_type' => 'post',
                   'post_status' => 'publish',
-                  'category_name' => 'slideshow',
+                  'tag' => 'tag-slideshow',
                   'orderby'=>'date',
+                  'order'=>'DESC',
                   'posts_per_page' => 7);
                   $arr_posts = new WP_Query( $args );
                   if ( $arr_posts->have_posts() ) :
@@ -29,7 +30,7 @@
                               $arr_posts->the_post(); 
                               $counter = $counter + 1;
                   ?>
-                        <div class="imagesSlide thumb-image ">
+                        <div class="imagesSlide thumb-image <?php echo $counter ?>">
                               <?php if ( has_post_thumbnail() ) : ?>
                               <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                     <?php the_post_thumbnail(); ?>
@@ -42,7 +43,7 @@
 
             <div class="bar">                    
             <?php for($i=0; $i<7 ;$i++):?>
-                  <span class="dot" onclick="currentImage(<?php echo $i+1;?>)"></span>
+                  <div class="dot" onclick="currentImage(<?php echo $i+1;?>)"></div>
             <?php endfor;?>
             </div>
 
