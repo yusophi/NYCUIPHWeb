@@ -261,7 +261,7 @@ body::-webkit-scrollbar {
     transition: 0.3s;
 }
 
-.visible {
+.dropdown-menu .visible { 
     opacity: 1;
 }
 
@@ -288,7 +288,6 @@ body::-webkit-scrollbar {
     margin-left:0;*/
     padding: 1.5rem 20rem 0.5rem 10rem;
     transition: 0.3s;
-
 }
 
 
@@ -297,7 +296,7 @@ body::-webkit-scrollbar {
     min-height: 2rem;
     /*font-family: 'Noto Sans TC', sans-serif;*/
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.2rem;
     /*font-size: 1.15rem;
     font-weight: normal;
     letter-spacing: 4px;
@@ -309,6 +308,9 @@ body::-webkit-scrollbar {
     color: #2e4565;
 }
 
+#nav-menu li a:hover{
+    font-weight: bold;
+}
 
 /*div ul li{
     font-family: 'Noto Sans TC', sans-serif;
@@ -373,7 +375,8 @@ body::-webkit-scrollbar {
     list-style: none;
     text-decoration: none;
     opacity: 0.5;
-    font-weight: normal;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 #slider-section {
