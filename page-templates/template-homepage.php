@@ -60,7 +60,10 @@
             </div>
 
       </div>
-
+      <script>
+            var imagesIndex = 1;
+            displayImage(imagesIndex);
+      </script>
       <!-- the News block -->
       <div class="News-container">
             <div class="news-title">
