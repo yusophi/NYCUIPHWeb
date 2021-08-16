@@ -359,24 +359,30 @@
  /*********************************/
 
 
-
+/*** the readmore button*****/
 .bt-readmore{
+    
     position: absolute;
     width: 8.8%;
     height: 3.6%;
     left: 46%;
     top: 90%;
-    border: solid 1.8px #2e4565;
+    border: solid 2px #2e4565;
     border-radius: 40px;
     color: #2e4565;
 
     -webkit-transition-property: color;
     transition-property: color;
+    
     -webkit-transition-duration: 0.6s;
     transition-duration: 0.6s;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(.86,.01,.15,.99);
    
+}
+
+.bt-readmore:hover{
+    color: #efeee4;
 }
 
 .bt-readmore::before{
@@ -387,9 +393,8 @@
     right: 0;
     bottom: 0;
     border-radius: 40px;
-    /*border: solid 1.5px #2e4565;*/
-    background: #2e4565;
-    
+    background-color: #2e4565;
+
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
@@ -403,26 +408,73 @@
 }
 
 
+.bt-readmore:hover::before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
 .readmore{
     position: absolute;
-    margin: 0.625rem 0.625rem 0 1.375rem;
+    margin: 0.625rem 0.625rem 0 1.2rem;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.7;
     text-align: left;
-    text-decoration: none;   
+    text-decoration: none;  
 }
 
-.bt-readmore:hover{
-    color: #efeee4;
+.plus_icon{
+    position: absolute;
+    width: 0.85rem;
+    height: 0.85rem;
+    top: 23%;
+    left: 69%;
+    margin: 0.438rem 1.375rem 1.5rem 0.625rem;
+    object-fit: contain;
 
+   
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
+    opacity: 1;
 }
 
-.bt-readmore:hover::before{
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  
+.plus_icon_hover{
+    position: absolute;
+    width: 0.85rem;
+    height: 0.85rem;
+    top: 23%;
+    left: 69%;
+    margin: 0.438rem 1.375rem 1.5rem 0.625rem;
+    object-fit: contain;
+
+    
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
+    opacity: 0;
+}
+
+.bt-readmore:hover .plus_icon{
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.bt-readmore:hover .plus_icon_hover{
+    opacity: 1;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .clearfix {

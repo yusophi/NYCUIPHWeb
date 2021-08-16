@@ -108,8 +108,9 @@
       
             <div class="bt-readmore">
                   <a class="readmore">read more</a>
+                  <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
+                  <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
             </div>
-
       </div>
       <div class="events"></div>
 </div>
