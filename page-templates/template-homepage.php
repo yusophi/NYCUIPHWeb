@@ -4,10 +4,9 @@
  */
 ?>
 
-
 <?php get_header(); ?>
 <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/homepage.js"></script>
-<head> <link href="css/homepage.css" rel="stylesheet" type="text/css"> </head>
+<link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
       <!-- the slideshoe block-->
@@ -73,8 +72,10 @@
                   'post_type' => 'post',
                   'post_status' => 'publish',
                   'category_name' => 'news',
+                  'category__not_in' => array( 14 ),
                   'orderby'=>'date',
                   'posts_per_page' => 6);
+
                   $arr_posts = new WP_Query( $args );
 
                   if ( $arr_posts->have_posts() ) :
@@ -107,8 +108,9 @@
       
             <div class="bt-readmore">
                   <a class="readmore">read more</a>
+                  <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
+                  <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
             </div>
-
       </div>
       <div class="events"></div>
 </div>

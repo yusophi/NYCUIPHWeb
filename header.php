@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style="margin:0!important">
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
@@ -21,25 +21,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
     <div class="container">
-        <header class="header">
+        <div class="header">
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
                     <div id="upper-nav">
-                        <div id="logo"><img src="asset/LOGO.png" width="72" /></div>
-                        <div id="mark"><img src="asset/MARK.png" width="205.5" /></div>
+                        <div id="logo"><img src="<?php bloginfo('template_url')?>/images/icon/LOGO.png" width="72" /></div>
+                        <!--<div id="mark"><img src="<?php bloginfo('template_url')?>/images/icon/MARK.png" width="205.5" /></div>
+                        -->
+                        <a class="web_name" href="<?php //bloginfo('url'); ?>">
+                            <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
+                            <span class="enName">Institute of Public Health, NYCU</span>
+                        </a>
                     </div>
+                    <!--<div class="title">
+                        <div class="logo"></div>
+                        <a class="web_name" href="<?php //bloginfo('url'); ?>">
+                            <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
+                            <span class="enName">Institute of Public Health, NYCU</span>
+                        </a>
+                    </div>-->
                     <div id="nav-toolbar">
-                        <div id="icon-en"><img src="asset/icon-en.png"></div>
-                        <div id="icon-search"><img src="asset/icon-search.png"></div>
-                        <div id="icon-calendar"><img src="asset/icon-calendar.png"></div>
+                        <div id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></div>
+                        <div id="icon-search"><img src="<?php bloginfo('template_url')?>/images/icon/icon-search.png"></div>
+                        <div id="icon-calendar"><img src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png"></div>
                     </div>
                 </div>
+                 
                 <div id="nav-hr" class="nav-disappearable"></div>
+                <div class="nav-container">
                 <ul id="nav-menu">
                     <li id="nav-main-list-item-1">
                         <a class="menu-list nav-list-item-1">關於我們</a>
@@ -118,9 +131,13 @@
                         <div class="dropdown-menu"></div>
                     </li>
                 </ul>
+                </div>
             </nav>
-
-    </head>
+        </div>
+    </div>
+    <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
+            
+    <head>
     <?php
         if(is_page('homepage')){ /*首頁*/
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
@@ -134,6 +151,7 @@
         }
 
     ?>
+    </head>
     <!--<body>
     <div class="container">
         <header class="header">
