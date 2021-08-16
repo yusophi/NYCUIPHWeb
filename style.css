@@ -1,7 +1,7 @@
 /*
-Theme Name: jenny
+Theme Name: NYCU-IPH-Web
 Theme URI: 
-Description: test IPH web theme.
+Description: IPH web theme.
 Author: Yuxin
 Author URI: 
 Version: 1.0
@@ -16,6 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap');
 
+/*initialize*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,49 +60,333 @@ table {
     border-spacing: 0;
 }
 
+/*@media screen and (min-width: 701px) {
 
+    li li,
+    li p,
+    li span,
+    li p span,
+    p span {
+        font-size: 1em
+    }
+
+    /* 歸零 */
+    /* * {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        overflow: hidden;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+        border: none;
+    }
+
+    a {
+        font-family: 'Noto Sans TC', sans-serif;
+        text-decoration: none;
+        color: #646464;
+    }
+
+    .clear_both {
+        clear: both;
+    }
+*/
 /***header***/
+html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+
 body {
     background: #FAFAFA;
     font-family: 'Noto Sans TC', sans-serif;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.header {
+body::-webkit-scrollbar {
+    display: none; /*hide the scrollbar*/
+}
+
+/*.header {
     position: fixed;
     width: 100%;
-    height: 30%;
+    height: 22%;
     background-color: #f2e7ce;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     
-/*text-align: center;*/
-}
+
+}*/
 
 .title {
     position: relative;
     width: 85%;
     left: 5rem;
-    top: 2rem;
+    top: 1rem;
     right: 5rem;
     padding-left: 7rem;
-    padding-bottom: 1rem;
+    /*padding-bottom: 1rem;*/
     border-bottom: solid 2px #374a73;
+    /*border: solid 2px #374a73;*/
+
 }
 
-.web_name {
+.web_name{
+    
+    margin-left: 1.8%;
     color: #374a73;
-    font-size: 1.5rem;
     font-family: 'Noto Sans TC', sans-serif;
-    letter-spacing: 3.5px;
     text-decoration: none;
-    line-height: 2rem;
+    line-height: 1.6rem;
+    /*border: solid 2px #2e4565;*/
+}
+.Name {
+    
+    font-size: 1.3rem;
+    letter-spacing: 3.5px;
 }
 .enName
 {
-    color: #374a73;
-    font-size: 0.9rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.8rem;
     letter-spacing: 1px;
-    text-decoration: none;
-    line-height: 2rem;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+
+#main-nav {
+    position: fixed;
+    /*width: 100vw;*/
+    width: 100%;
+    /*height: 20.2%;*/
+    background-color: #e4dfd2;
+    /*border-radius: 0px 0px 25px 25px;*/
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: 0.3s
+}
+
+#upper-nav {
+    display: flex;
+    float: left;
+    align-items: center;
+    /*padding-left:4.375rem;
+    padding-top: 2.625rem;
+    padding-bottom: 1.891rem;*/
+    width: 21%;
+    margin-left: 3.9%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    /*position: absolute;
+    left: 3.9%;
+    top: 7.1%;*/
+    /*border: solid 2px #2e4565;*/
+    /*width: 19.9%;
+    height: 41.6%;*/
+   
+    transform: 0.3s;
+
+}
+
+
+#nav-toolbar {
+    float: right;
+    display: flex;
+    align-items: center;
+
+    /*height: 129.39px;*/
+    width: 130px;
+    /*padding-right: 4.438rem;
+    padding-top: 2.625rem;
+    padding-bottom: 1.891rem;*/
+    
+    margin-right: 4.5%;
+    margin-top: 3.5%;
+    justify-content: space-between;
+    transition: 0.3s;
+    transform: translateY(0px);
+    /*border: solid 2px #2e4565;*/
+    /*width: 10%;
+    position: absolute;
+    top: 21.7%;
+    right: 5.2%;*/
+}
+
+#nav-toolbar.pulldown {
+    width: 130px;
+    transform: translateY(100px);
+    transition: 0.3s;
+}
+
+
+.cf::before,
+.cf::after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+  }
+
+#logo {
+    transition: 0.3s;
+}
+
+#mark {
+    margin-left:2.188rem;
+}
+
+#nav-hr {
+    position: absolute;
+    left:50%;
+    /*top: 62%;*/
+    transform: translateX(-50%);
+    height: 1.5px;
+    min-width: calc(100vw - 8.75rem);
+    background-color: #2e4565;
+    transition: 0.3s;
+}
+
+.dropdown-menu .visible { 
+    opacity: 1;
+}
+
+.nav-container{
+   width: 100%;
+}
+
+#nav-menu {
+    display: flex;
+   /* position: relative;
+    top: 63%;*/
+    justify-content: space-between;
+    list-style: none;
+    /*width: 92%;
+    margin-left: 3.5%;*/
+    padding: 1.15rem 8.5rem;
+    padding-bottom: 0.8rem;
+    transition: 0.3s;
+}
+
+#nav-menu.shorten {
+    /*border: solid 2px black;
+    width: 92%;
+    margin-left:0;*/
+    padding: 1.5rem 20rem 0.5rem 10rem;
+    transition: 0.3s;
+}
+
+
+#nav-menu li a{
+    display: block;
+    min-height: 2rem;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.2rem;
+    /*font-size: 1.15rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    line-height: 0.05;
+    color: #2e4565;
+    text-decoration: none;*/
+    /*font-weight: bold;*/
+    letter-spacing: 4px;
+    color: #2e4565;
+}
+
+#nav-menu li a:hover{
+    font-weight: bold;
+}
+
+/*div ul li{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 4px;
+    color:#2e4565;
+    list-style: none;
+    text-decoration: none;
+    opacity: 0.5;
+}*/
+
+#nav-hr.none-display {
+    transform: translateY(-30px);
+}
+
+.none-display {
+    transform: translateY(-30px);
+}
+
+.nav-menu-pullup {
+    transform: translateY(-110px);
+}
+
+
+#logo.stay {
+    transform: translateY(139px);
+    transition: 0.3s;
+}
+
+.nav-disappearable {
+    transition: 0.3s;
+}
+
+
+.dropdown-menu {
+    display: none;
+    transition: 0.3s;
+    padding-top: 1.5rem;
+
+}
+
+.dropdown-menu ul li a{
+    text-decoration: none;
+}
+
+.menu-list {
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-menu ul li {
+    margin-top: 1.563rem;
+    max-width: 6rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.12rem;
+    letter-spacing: 4px;
+    color:#2e4565;
+    list-style: none;
+    text-decoration: none;
+    opacity: 0.5;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+#slider-section {
+    background-color: #2e4565;
+    padding-top: 200px;
+}
+
+#slider {
+    display: grid;
+    place-items: center;
+    padding: 5.188rem 10.75rem 7.938rem 10.75rem
+}
+
