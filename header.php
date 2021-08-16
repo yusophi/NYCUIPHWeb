@@ -135,7 +135,7 @@
             </nav>
         </div>
     </div>
-    <script type="text/javascript" src="<?php bloginfo('template_url')?>/jsfile/iph.header.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
             
     <head>
     <?php
