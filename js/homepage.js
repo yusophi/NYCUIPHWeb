@@ -16,7 +16,6 @@ function displayImage(n){
     var allDots = document.getElementsByClassName("dot");
     if( n > availableImages.length) { imagesIndex = 1; }
     if( n < 1) { imagesIndex = availableImages.length; }
-
     for(var i=0; i<availableImages.length; i++){
         availableImages[i].style.display = "none";
     }
