@@ -66,7 +66,7 @@
       </script>
       <!-- the News block -->
       <div class="News-container">
-            <div class="news-title">
+            <div class="block-title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
                   <span class="ch-title">最新消息<br></span>
                   <span class="en-title">News</span>
@@ -117,4 +117,24 @@
             </div>
       </div>
       <div class="events"></div>
+
+
+
+
+      <!-- About Us Block -->
+      <div class="About-container">
+            <div class="block-title abouttitle">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
+                  <span class="ch-title">關於我們<br></span>
+                  <span class="en-title">About</span>
+            </div>
+
+
+
+
+
+
+
+      </div>
+
 </div>
