@@ -110,7 +110,7 @@
             </div>
             <?php endif; wp_reset_postdata(); ?> 
       
-            <div class="bt-readmore">
+            <div class="bt-readmore news_readmore_btn">
                   <a class="readmore">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
@@ -129,11 +129,20 @@
                   <span class="en-title">About</span>
             </div>
 
-            <div class="intro_content"></div>
+            <div class="intro_content">
+                  <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
+                  <div class="iph_en"> <?php the_field('iph_en') ?></div>
+                  <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
+                  <div class="bt-readmore aboutUS_intro_btn">
+                        <a class="readmore">read more</a>
+                        <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
+                        <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
+                  </div>
+            </div>
 
+            <div class="videos">
 
-
-            <div class="videos"></div>
+            </div>
 
 
       </div>
