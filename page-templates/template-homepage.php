@@ -68,8 +68,9 @@
       </script>
       <!-- the News block -->
       <div class="News-container">
-            <div class="news-title">
-                  <img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-News_icon.svg">
+
+            <div class="block-title">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
                   <span class="ch-title">最新消息<br></span>
                   <span class="en-title">News</span>
             </div>
@@ -114,14 +115,12 @@
                               </div>
                         <?php endwhile; ?>
                   </div>
-            <?php endif;
-            wp_reset_postdata(); ?>
-
-            <div class="bt-readmore">
+            <?php endif; wp_reset_postdata(); ?>
+            <div class="bt-readmore news_readmore_btn">
                   <a class="readmore">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-            </div>
+            </div> 
       </div>
       <div class="events">
             <div class="event-title">
@@ -257,4 +256,55 @@
                   </div>
             </div>
       </div>
+      
+      <!-- About Us Block -->
+      <div class="About-container">
+            <div class="block-title abouttitle">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
+                  <span class="ch-title">關於我們<br></span>
+                  <span class="en-title">About</span>
+            </div>
+
+            <div class="intro_content">
+                  <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
+                  <div class="iph_en"> <?php the_field('iph_en') ?></div>
+                  <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
+                  <img class="icon_aboutus_1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
+                  <div class="bt-readmore aboutUS_intro_btn">
+                        <a class="readmore">read more</a>
+                        <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
+                        <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
+                  </div>
+            </div>
+
+            <div class="videos">
+                  <div class="module video1">
+                        <span class="bk_num video1">01.</span> 
+                        <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
+                        <div class="video_title video1"> 陽明大學醫學系-醫學人文必修你該知道的事<?php //the_field('video_title1') ?></div>    
+                        <div class="bt-watchmore video1">
+                              <a class="watchmore">watch</a>
+                              <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
+                              <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                        </div>
+                  </div>
+                  <div class="module video2">
+                        <span class="bk_num video2">02.</span> 
+                        <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
+                        <div class="video_title video2"> 陽明大學公共衛生研究所 招生宣傳短片<?php //the_field('video_title1') ?></div>    
+                        <div class="bt-watchmore video2">
+                              <a class="watchmore">watch</a>
+                              <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
+                              <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                        </div>        
+                  </div>
+            </div>
+
+
+      </div>
+
+      <div class="Specialization-container"> 
+
+      </div>
+
 </div>
