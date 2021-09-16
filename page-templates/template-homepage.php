@@ -122,59 +122,63 @@
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
             </div> 
       </div>
+
       <div class="events">
             <div class="event-title">
                   <div class="event-icon-container"><img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg"></div>
                   <div class="event-ch-title">學術活動<br></div>
                   <div class="event-en-title">Events</div>
             </div>
+            
             <div id="event-slides">
-                  <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
-                  <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
+                  <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
+                  <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
                   <div id="event-data">
-                        <?php //query the recent 6 posts
-                        $args = array(
-                              'post_type' => 'post',
-                              'post_status' => 'publish',
-                              'category_name' => 'event',
-                              'orderby' => 'date',
-                              'posts_per_page' => 6
-                        );
+                        <?php /*query the recent 6 posts*/
+                              $args = array(
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'category_name' => 'event',
+                                    'orderby' => 'date',
+                                    'posts_per_page' => 6
+                              );
 
                         $arr_posts = new WP_Query($args);
 
-                        if ($arr_posts->have_posts()) :
-                              while ($arr_posts->have_posts()) :
-                                    $arr_posts->the_post();
+                        if ($arr_posts->have_posts()) :                
                         ?>
-                                    <!-- One event-data-item means one event -->
-                                    <div class="event-data-item">
-                                          <div class="event-container">
-                                                <div class="single-event">
-                                                      <div class="event-mask">
-                                                            <div class="event-main-margin">
-                                                                  <div class="event-main-slide-upper">
-                                                                        <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                                                                        <div class="event-info">
-                                                                              <div class="event-date-title">
-                                                                                    <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg" style="z-index: -1;">
-                                                                                    <span class="event-date-words">Date</span>
-                                                                              </div>
-                                                                              <div class="event-date">2020.10.12(Mon.)</div>
-                                                                              <div class="event-tags">
-                                                                                    <span class="event-tag-mask">測試</span>
-                                                                                    <span class="event-tag-mask">醫學二館221室</span>
-                                                                              </div>
+                              <?php  
+                              while ($arr_posts->have_posts()) :
+                              $arr_posts->the_post();
+                              ?>
+                              <!-- One event-data-item means one event -->
+                              <div class="event-data-item">
+                                    <div class="event-container">
+                                          <div class="single-event">
+                                                <div class="event-mask">
+                                                      <div class="event-main-margin">
+                                                            <div class="event-main-slide-upper">
+                                                                  <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
+                                                                  <div class="event-info">
+                                                                        <div class="event-date-title">
+                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg" style="z-index: -1;">
+                                                                              <span class="event-date-words">Date</span>
+                                                                        </div>
+                                                                        <div class="event-date">2020.10.12(Mon.)</div>
+                                                                        <div class="event-tags">
+                                                                              <span class="event-tag-mask">測試</span>
+                                                                              <span class="event-tag-mask">醫學二館221室</span>
                                                                         </div>
                                                                   </div>
-                                                                  <div class="event-name"><?php the_title(); ?></div>
-                                                                  <div class="event-intro"><?php the_excerpt(); ?></div>
                                                             </div>
+                                                            <div class="event-name"><?php the_title(); ?></div>
+                                                            <div class="event-intro"><?php the_excerpt(); ?></div>
                                                       </div>
                                                 </div>
                                           </div>
                                     </div>
-
+                              </div>
+                              
                               <?php endwhile; ?>
                         <?php endif;
                         wp_reset_postdata(); ?>
@@ -185,10 +189,10 @@
                                           <div class="event-mask">
                                                 <div class="event-main-margin">
                                                       <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
+                                                            <div class="event-img-container"><img src="<?php //bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                             <div class="event-info">
                                                                   <div class="event-date-title">
-                                                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                                                        <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                                                                         <span class="event-date-words">Date</span>
                                                                   </div>
                                                                   <div class="event-date">2020.10.12(Mon.)</div>
@@ -213,7 +217,7 @@
                                           <div class="event-mask">
                                                 <div class="event-main-margin">
                                                       <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
+                                                            <div class="event-img-container"><img src="<?php //bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                             <div class="event-info">
                                                                   <div class="event-date-title">
                                                                         <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
@@ -248,15 +252,13 @@
                         </div>
                   </div>
             </div>
-            <div id="btn-event-readmore-container">
-                  <a>read more</a>
-                  <div class="event-layered">
-                        <img id="event-icon-plus-white" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-                        <img id="event-icon-plus-blue" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-                  </div>
+            <div class="bt-readmore event_readmore_btn">
+                  <a class="readmore">read more</a>
+                  <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+                  <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
             </div>
       </div>
-      
+
       <!-- About Us Block -->
       <div class="About-container">
             <div class="block-title abouttitle">
