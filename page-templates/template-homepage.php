@@ -130,8 +130,6 @@
                   <div class="event-en-title">Events</div>
             </div>
             <div id="event-slides">
-                  <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
-                  <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
                   <div id="event-data">
                         <?php //query the recent 6 posts
                         $args = array(
@@ -179,61 +177,6 @@
                               <?php endwhile; ?>
                         <?php endif;
                         wp_reset_postdata(); ?>
-
-                        <div class="event-data-item">
-                              <div class="event-container">
-                                    <div class="single-event">
-                                          <div class="event-mask">
-                                                <div class="event-main-margin">
-                                                      <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                                                            <div class="event-info">
-                                                                  <div class="event-date-title">
-                                                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                                                        <span class="event-date-words">Date</span>
-                                                                  </div>
-                                                                  <div class="event-date">2020.10.12(Mon.)</div>
-                                                                  <div class="event-tags">
-                                                                        <span class="event-tag-mask">讀書會</span>
-                                                                        <span class="event-tag-mask">醫學二館221室</span>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="event-name">優雅的老年：678位修女揭開大腦健康之鑰 (莊宜芳老師)</div>
-                                                      <div class="event-intro">這不只是一本突破性的健康與科學書籍，更是一個感動人心的故事，因為眾多高齡修女們的慷慨奉獻
-                                                            ，我們才能活得更久、活得更好。老年如何過得優雅？經過一生的學習和打拚，到了歲月將盡之時，究竟能以豐富的大腦功能
-                                                            安享天年？.......</div>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                        <div class="event-data-item">
-                              <div class="event-container">
-                                    <div class="single-event">
-                                          <div class="event-mask">
-                                                <div class="event-main-margin">
-                                                      <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                                                            <div class="event-info">
-                                                                  <div class="event-date-title">
-                                                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                                                        <span class="event-date-words">Date</span>
-                                                                  </div>
-                                                                  <div class="event-date">年份.月份.日期(禮拜幾.)</div>
-                                                                  <div class="event-tags">
-                                                                        <span class="event-tag-mask">標籤</span>
-                                                                        <span class="event-tag-mask">標籤</span>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="event-name">標題</div>
-                                                      <div class="event-intro">內容...</div>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
                   </div>
                   <div id="event-slider-container-outer">
                         <div id="event-slider-container" class="event-slider-container-transition">
@@ -248,6 +191,8 @@
                               <div class="event-slider-item"></div>
                         </div>
                   </div>
+                  <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
+                  <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
             </div>
             <div id="btn-event-readmore-container">
                   <a>read more</a>

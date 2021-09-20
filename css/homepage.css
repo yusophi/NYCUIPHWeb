@@ -485,25 +485,28 @@
     visibility: hidden;
 }
 
+/* Milo: start of event part */
 #event-slider-container-outer {
     transform: translateX(-56.35%);
     min-height: 100%;
     height: 100%;
     position: relative;
+    z-index: 0;
 }
 #event-slider-container {
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     height: 100%;
 }
 .event-slider-container-transition {
-	transition: transform 0.7s ease-in-out;
+    transition: 0.7s ease-in-out;
 }
 .event-slider-item {
-	min-width: 35.41%;
+    min-width: 35.41%;
     max-width: 35.41%;
-	flex-shrink: 0;
+    flex-shrink: 0;
+    z-index: 10;
 }
 #event-slides {
     position: absolute;
@@ -557,11 +560,10 @@
     overflow: hidden;
 }
 .event-mask {
-    position: absolute;
+    position: relative;
     top: calc((100% - 100vw * 0.2344) / 2);
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     z-index: 5;
     height: calc(100vw * 0.2344);
     border-radius: 60px;
@@ -572,24 +574,40 @@
 .main-event .event-mask {
     top: calc((100% - 100vw * 0.2615) / 2);
     height: calc(100vw * 0.2615);
-    background-color: rgba(0, 0, 0, 0);
 }
 .event-mask.event-to-brighter {
-    transition: .7s;
+    transition: 0.7s;
     top: calc((100% - 100vw * 0.2615) / 2);
     height: calc(100vw * 0.2615);
-    background-color: rgba(0, 0, 0, 0);
 }
 .main-event .event-mask.event-to-darker {
-    transition: .7s;
+    transition: 0.7s;
     top: calc((100% - 100vw * 0.2344) / 2);
     height: calc(100vw * 0.2344);
+}
+.event-mask::after {
+    transition: 0.7s;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.2);
+}
+.main-event .event-mask::after {
+    background-color: rgba(0, 0, 0, 0);
+}
+.event-mask.event-to-darker::after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.event-mask.event-to-brighter::after {
+    background-color: rgba(0, 0, 0, 0);
 }
 .event-indent {
     min-width: 8.7%;
 }
-.event-title{
+.event-title {
     width: 15.5%;
     height: 20%;
     position: absolute;
@@ -597,32 +615,32 @@
     left: 50%;
     transform: translateX(-50%);
     min-width: 140px;
-} 
-.event-title div{
+}
+.event-title div {
     display: block;
     position: relative;
-    color:#ffbb00;
-    font-family: 'Noto Sans TC', sans-serif;
+    color: #ffbb00;
+    font-family: "Noto Sans TC", sans-serif;
     font-weight: bold;
     text-align: center;
 }
-.event-ch-title{
+.event-ch-title {
     margin-top: 0.618rem;
     font-size: 1.875rem;
     line-height: 1.13;
     letter-spacing: 5px;
 }
-.event-en-title{
+.event-en-title {
     margin-top: 0.618rem;
     font-size: 1.5rem;
     line-height: 1.13;
     letter-spacing: 1.8px;
 }
-.event-icon-container{
+.event-icon-container {
     height: 50px;
     width: 100%;
 }
-.event-icon-container img{
+.event-icon-container img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -638,13 +656,17 @@
 .event-img-container {
     width: 47%;
 }
-.event-img-container img{
+.event-img-container img {
     min-width: 140px;
     max-width: 100%;
 }
 .event-main-margin {
-    max-height: 100%;
-    padding: 7.75% 12.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100vw * 0.2615 * 0.9);
+    padding: 0 12.5%;
 }
 .event-date-title {
     display: flex;
@@ -653,7 +675,7 @@
 }
 .event-date-words {
     padding-left: 0.538rem;
-    font-family: TimesNewRoman;
+    font-family: "TimesNewRoman";
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.3;
@@ -663,7 +685,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-evenly;
     padding-top: 8%;
     padding-left: 2.295rem;
 }
@@ -675,7 +697,7 @@
     margin-right: 3px;
     margin-bottom: 4px;
     padding: 4px 10px;
-    font-family: NotoSansTC;
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 0.675rem;
     font-weight: bold;
     letter-spacing: 2.1px;
@@ -686,7 +708,7 @@
     display: inline-block;
 }
 .event-date {
-    font-family: TimesNewRoman;
+    font-family: "TimesNewRoman";
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 0.86;
@@ -694,8 +716,7 @@
     color: #2e4565;
 }
 .event-name {
-    margin-top: 2.511rem;
-    font-family: NotoSansTC;
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 1.28;
@@ -703,8 +724,7 @@
     color: #2e4565;
 }
 .event-intro {
-    margin-top: 1.25rem;
-    font-family: NotoSansTC;
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 0.71rem;
     font-weight: normal;
     font-stretch: normal;
@@ -728,13 +748,13 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(to top, #efeee4 50%, #2e4565 50%);
-    background-size: 100% 200%;
-    background-position: left top;
-    transition: all .6s ease;
+    background: linear-gradient(to top, #efeee4 60%, #2e4565 40%);
+    background-size: 100% 250%;
+    background-position: left 0%;
+    transition: all 0.6s ease;
 }
 #btn-event-readmore-container:hover {
-    background-position: left bottom;
+    background-position: 0% 90%;
 }
 #btn-event-readmore-container:hover a {
     color: #2e4565;
@@ -758,19 +778,19 @@
 #btn-event-readmore-container a {
     font-weight: 500;
     color: #efeee4;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 1rem;
-    text-decoration: none;  
-    transition: .6s ease;;
+    text-decoration: none;
+    transition: 0.6s ease;
 }
 #event-icon-plus-blue {
     opacity: 0;
-    transition: .6s ease;
+    transition: 0.6s ease;
     transform: rotate(0deg);
 }
 #event-icon-plus-white {
     opacity: 1;
-    transition: .6s ease;
+    transition: 0.6s ease;
     transform: rotate(0deg);
 }
 #btn-event-readmore-container:hover #event-icon-plus-blue {
@@ -791,3 +811,4 @@
     grid-column-start: 1;
     grid-row-start: 1;
 }
+/* Milo: end of event part */
