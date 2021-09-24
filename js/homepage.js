@@ -26,3 +26,25 @@ function displayImage(n){
     availableImages[imagesIndex-1].style.display="block";
     allDots[imagesIndex-1].className +=" active";
 }
+
+
+/*this is for the overlay block*/
+function on(n) {
+    /*if(n == 1)
+    {
+        var vedio1 = document.getElementsByClassName("overlay1");
+        vedio1.className = vedio1.className.replace("activevideo"," ");
+        document.getElementsByClassName("activevideo").style.display = "block";
+    }
+    if(n == 2)
+    {
+        document.getElementsByClassName("overlay2").style.display = "block";
+    }*/
+    document.getElementById("overlay").style.display = "block";
+
+}
+  
+function off() {
+
+    document.getElementById("overlay").style.display = "none";
+}

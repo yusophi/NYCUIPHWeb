@@ -283,26 +283,43 @@
                   <div class="module video1">
                         <span class="bk_num video1">01.</span> 
                         <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
-                        <div class="video_title video1"> 陽明大學醫學系-醫學人文必修你該知道的事<?php //the_field('video_title1') ?></div>    
-                        <div class="bt-watchmore video1">
+                        <div class="video_title video1"> <?php the_field('video_title1') ?></div>    
+                        <div class="bt-watchmore video1" onclick="on()">
                               <a class="watchmore">watch</a>
                               <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                               <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                        </div>
+                        <div id="overlay"  class="overlay1" onclick="off()">
+                              <div class="overlay_content">
+                                    <img class="closebtn" onclick="off()" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                    <div class="video_content"><?php the_field('video1') ?></div>
+                              </div>
                         </div>
                   </div>
                   <div class="module video2">
                         <span class="bk_num video2">02.</span> 
                         <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
-                        <div class="video_title video2"> 陽明大學公共衛生研究所 招生宣傳短片<?php //the_field('video_title1') ?></div>    
-                        <div class="bt-watchmore video2">
+                        <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
+                        <div class="bt-watchmore video2" onclick="on()">
                               <a class="watchmore">watch</a>
                               <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                               <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                        </div>
+                        <div id="overlay" class="overlay2" onclick="off()">
+                              <div class="overlay_content">
+                                    <img class="closebtn" onclick="off()" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                    <div class="video_content"><?php the_field('video2') ?></div>
+                              </div>
                         </div>        
                   </div>
             </div>
 
-
+            <div class="deco_waves">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_1.png">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_2.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_3.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
+            </div>
       </div>
 
       <div class="Specialization-container"> 
