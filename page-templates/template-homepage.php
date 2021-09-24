@@ -131,8 +131,8 @@
             </div>
             
             <div id="event-slides">
-                  <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
-                  <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
+                  <!--<img id="event-icon-prev" src="<?php //bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
+                  <img id="event-icon-next" src="<?php //bloginfo('template_url') ?>/images/icon/icon-next_white.svg">-->
                   <div id="event-data">
                         <?php /*query the recent 6 posts*/
                               $args = array(
@@ -146,10 +146,10 @@
                         $arr_posts = new WP_Query($args);
 
                         if ($arr_posts->have_posts()) :                
-                        ?>
+                        ?>    
                               <?php  
-                              while ($arr_posts->have_posts()) :
-                              $arr_posts->the_post();
+                                    while ($arr_posts->have_posts()) :
+                                    $arr_posts->the_post();                              
                               ?>
                               <!-- One event-data-item means one event -->
                               <div class="event-data-item">
@@ -164,10 +164,10 @@
                                                                               <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg" style="z-index: -1;">
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
-                                                                        <div class="event-date">2020.10.12(Mon.)</div>
+                                                                        <div class="event-date"><?php the_field('event_date')?> </div>
                                                                         <div class="event-tags">
-                                                                              <span class="event-tag-mask">測試</span>
-                                                                              <span class="event-tag-mask">醫學二館221室</span>
+                                                                              <span class="event-tag-mask"><?php the_field('event_category')?></span>
+                                                                              <span class="event-tag-mask"><?php the_field('location')?></span>
                                                                         </div>
                                                                   </div>
                                                             </div>
@@ -183,16 +183,16 @@
                         <?php endif;
                         wp_reset_postdata(); ?>
 
-                        <div class="event-data-item">
+                        <!--<div class="event-data-item">
                               <div class="event-container">
                                     <div class="single-event">
                                           <div class="event-mask">
                                                 <div class="event-main-margin">
                                                       <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php //bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
+                                                            <div class="event-img-container"><img src="<?php// bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                             <div class="event-info">
                                                                   <div class="event-date-title">
-                                                                        <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                                                        <img src="<?php// bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                                                                         <span class="event-date-words">Date</span>
                                                                   </div>
                                                                   <div class="event-date">2020.10.12(Mon.)</div>
@@ -220,7 +220,7 @@
                                                             <div class="event-img-container"><img src="<?php //bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                             <div class="event-info">
                                                                   <div class="event-date-title">
-                                                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                                                        <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                                                                         <span class="event-date-words">Date</span>
                                                                   </div>
                                                                   <div class="event-date">年份.月份.日期(禮拜幾.)</div>
@@ -236,8 +236,9 @@
                                           </div>
                                     </div>
                               </div>
-                        </div>
+                        </div>-->
                   </div>
+
                   <div id="event-slider-container-outer">
                         <div id="event-slider-container" class="event-slider-container-transition">
                               <div class="event-slider-item"></div>
@@ -251,6 +252,8 @@
                               <div class="event-slider-item"></div>
                         </div>
                   </div>
+                  <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
+                  <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
             </div>
             <div class="bt-readmore event_readmore_btn">
                   <a class="readmore">read more</a>
@@ -258,8 +261,10 @@
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
             </div>
       </div>
-
-      <!-- About Us Block -->
+      <!--<script>
+            FlexSlider.init();
+      </script>-->
+      <!-- Jenny: About Us Block -->
       <div class="About-container">
             <div class="block-title abouttitle">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
