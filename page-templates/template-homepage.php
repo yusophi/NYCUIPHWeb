@@ -284,14 +284,14 @@
                         <span class="bk_num video1">01.</span> 
                         <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
                         <div class="video_title video1"> <?php the_field('video_title1') ?></div>    
-                        <div class="bt-watchmore video1" onclick="on()">
+                        <div class="bt-watchmore video1" onclick="on(1)">
                               <a class="watchmore">watch</a>
                               <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                               <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                         </div>
-                        <div id="overlay"  class="overlay1" onclick="off()">
+                        <div id="overlay1"  class="overlay" onclick="off(1)">
                               <div class="overlay_content">
-                                    <img class="closebtn" onclick="off()" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                    <img class="closebtn" onclick="off(1)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
                                     <div class="video_content"><?php the_field('video1') ?></div>
                               </div>
                         </div>
@@ -300,14 +300,14 @@
                         <span class="bk_num video2">02.</span> 
                         <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
                         <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
-                        <div class="bt-watchmore video2" onclick="on()">
+                        <div class="bt-watchmore video2" onclick="on(2)">
                               <a class="watchmore">watch</a>
                               <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                               <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                         </div>
-                        <div id="overlay" class="overlay2" onclick="off()">
+                        <div id="overlay2" class="overlay" onclick="off(2)">
                               <div class="overlay_content">
-                                    <img class="closebtn" onclick="off()" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                    <img class="closebtn" onclick="off(2)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
                                     <div class="video_content"><?php the_field('video2') ?></div>
                               </div>
                         </div>        

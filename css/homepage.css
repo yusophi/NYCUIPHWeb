@@ -1126,7 +1126,7 @@
     margin-top: 2%;
 }
 
-#overlay {
+.overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -1136,8 +1136,10 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.65);
-    z-index: 9999;
-    
+    z-index: 2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
 }
 
 .overlay_content

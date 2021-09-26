@@ -177,7 +177,7 @@ body::-webkit-scrollbar {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     transition: 0.3s;
-    z-index: 99;
+    /*z-index: 99;*/
 }
 
 #upper-nav {
