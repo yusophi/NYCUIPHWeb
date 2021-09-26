@@ -107,11 +107,13 @@
 .block-title{
     width: 15.5%;
     height: 13.5%;
+} 
+
+.news_title{
     position: absolute;
     top: 3%;
     left: 42.5%;
-
-} 
+}
 
 .block-title span{
     color: #374a73;
@@ -126,8 +128,7 @@
     width: 2.505rem;
     height: 2.505rem;
     left: 42.6%;
-    top: 12.4%;
-    
+    top: 12.4%;   
 }
 
 .ch-title{
@@ -895,7 +896,7 @@
 .About-container
 {
     width: 100%;
-    height: 260%;
+    height: 280%;
     background-color: #e4dfd2;
     position: relative;
     top: 80%;
@@ -904,7 +905,7 @@
     border-top-right-radius: 2rem;*/
 }
 
-.abouttitle{
+#abouttitle{
     position: absolute;
     top: 3%;
     left: 43%;
@@ -1038,6 +1039,7 @@
 
 .bt-watchmore:hover{
     color: #ffbb00;
+    cursor: pointer;
 }
 
 .bt-watchmore::before{
@@ -1120,17 +1122,10 @@
 
 .bt-watchmore:hover .watch_icon{
     opacity: 0;
-    /*-webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(180deg);*/
 }
-
 
 .bt-watchmore:hover .watch_icon_hover{
     opacity: 1;
-   /* -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(180deg);*/
 }
 
 
@@ -1145,17 +1140,162 @@
 
 
 
+/* the waves decorations */
+.deco_waves{
+    position: absolute;
+    top: 62%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+/* let waves have spacing*/
+.deco_waves img{
+    margin-top: 2%;
+}
 
+/*video overlay*/
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+}
 
+.overlay_content
+{
+    display: flex;
+    flex-direction: row;
+    width: 72%;
+    height: 69%;
+    margin: 10% 14% 0%;
+    
+}
 
+.closebtn{
+    width: 2.78rem;
+    height: 5rem;
+    margin-top: -1.2%;
+    cursor: pointer;
+}
 
+.video_content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: 2.6%;
+}
+
+.video_content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#interview{
+    position: absolute;
+    top: 90%;
+    width: 100%; 
+    height: 10%;
+    border: solid 2px #2e4565;  
+}
 
 .Specialization-container{
     width: 100%;
-    height: 100%;
+    height: 180%;
     background-color: #e4dfd2;
     position: relative;
-    top: 55%;
-    z-index: -1;   
-    border: solid 2px #2e4565;
+    top: 80%;
+    z-index: -1; 
+    border: solid 2px #2e4565;  
+}
+
+
+#below_wave{
+    top: 10%;
+}
+
+#Specialization_title{
+    position: absolute;
+    top: 45%;
+    left: 42.5%;
+}
+
+#Specialization_title .en-title
+{
+    margin-left: 15%;
+}
+
+#SP_content_container{
+    position: absolute;
+    top: 65%;
+    left: 2.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.SP_content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 13%;
+}
+
+.SP_img{
+    width: 20rem;
+    height: 12.9rem;    
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+}
+
+.SP_img:hover{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.SP_img_shadow{
+    width: 20rem;
+    height: 12.9rem;
+    border-radius: 25px;
+    box-shadow: 7px 10px 20px 0 rgba(255, 111, 0, 0.6);
+    overflow: hidden;
+}
+
+.SP_ch_title{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #2e4565;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.SP_en_title{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #2e4565;
+    text-align: center;
 }

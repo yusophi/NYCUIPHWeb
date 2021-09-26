@@ -69,7 +69,7 @@
       <!-- the News block -->
       <div class="News-container">
 
-            <div class="block-title">
+            <div class="block-title news_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
                   <span class="ch-title">最新消息<br></span>
                   <span class="en-title">News</span>
@@ -266,7 +266,7 @@
       </script>-->
       <!-- Jenny: About Us Block -->
       <div class="About-container">
-            <div class="block-title abouttitle">
+            <div class="block-title" id="abouttitle">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
                   <span class="ch-title">關於我們<br></span>
                   <span class="en-title">About</span>
@@ -288,29 +288,87 @@
                   <div class="module video1">
                         <span class="bk_num video1">01.</span> 
                         <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
-                        <div class="video_title video1"> 陽明大學醫學系-醫學人文必修你該知道的事<?php //the_field('video_title1') ?></div>    
-                        <div class="bt-watchmore video1">
+                        <div class="video_title video1"> <?php the_field('video_title1') ?></div>    
+                        <div class="bt-watchmore video1" onclick="on(1)">
                               <a class="watchmore">watch</a>
                               <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                               <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                        </div>
+                        <div id="overlay1"  class="overlay" onclick="off(1)">
+                              <div class="overlay_content">
+                                    <img class="closebtn" onclick="off(1)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                    <div class="video_content"><?php the_field('video1') ?></div>
+                              </div>
                         </div>
                   </div>
                   <div class="module video2">
                         <span class="bk_num video2">02.</span> 
                         <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
-                        <div class="video_title video2"> 陽明大學公共衛生研究所 招生宣傳短片<?php //the_field('video_title1') ?></div>    
-                        <div class="bt-watchmore video2">
+                        <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
+                        <div class="bt-watchmore video2" onclick="on(2)">
                               <a class="watchmore">watch</a>
                               <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                               <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                        </div>
+                        <div id="overlay2" class="overlay" onclick="off(2)">
+                              <div class="overlay_content">
+                                    <img class="closebtn" onclick="off(2)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                    <div class="video_content"><?php the_field('video2') ?></div>
+                              </div>
                         </div>        
                   </div>
             </div>
 
-
+            <div class="deco_waves">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_1.png">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_2.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_3.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
+            </div>
+            <div id="interview">
+                  1235
+            </div>
+            
       </div>
 
       <div class="Specialization-container"> 
+            <div class="deco_waves" id="below_wave">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_5.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_6.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_7.svg">
+            </div>
+
+            <div class="block-title" id="Specialization_title">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-SP.svg">
+                  <span class="ch-title">專業領域<br></span>
+                  <span class="en-title">Specialization</span>
+            </div>
+
+            <div id="SP_content_container">
+                  <div id="SP_1" class="SP_content">
+                        <div class="SP_img_shadow">
+                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
+                        </div>
+                        <!--<img class="SP_img" src="<?php //bloginfo('template_url')?>/images/icon/SP_Epide.png">
+                        <div class="SP_img_shadow"></div>-->
+                        <span class="SP_ch_title">流行病學<br></span>
+                        <span class="SP_en_title">Epidemiology</span>
+                  </div>
+                  <div id="SP_2" class="SP_content">
+                        <div class="SP_img_shadow">
+                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
+                        </div>
+                        <span class="SP_ch_title">生物統計與資料科學<br></span>
+                        <span class="SP_en_title">Biostatistics and Data Science</span>
+                  </div>
+                  <div id="SP_3" class="SP_content">
+                        <div class="SP_img_shadow">
+                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
+                        </div>
+                        <span class="SP_ch_title">健康政策與法律<br></span>
+                        <span class="SP_en_title">Policy and Law</span>
+                  </div>
+            </div>
 
       </div>
 
