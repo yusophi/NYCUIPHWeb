@@ -107,13 +107,9 @@
 .block-title{
     width: 15.5%;
     height: 13.5%;
+    display: flex;
+    flex-direction: column;
 } 
-
-.news_title{
-    position: absolute;
-    top: 3%;
-    left: 42.5%;
-}
 
 .block-title span{
     color: #374a73;
@@ -125,8 +121,6 @@
 .icon
 {
     position:absolute;
-    width: 2.505rem;
-    height: 2.505rem;
     left: 42.6%;
     top: 12.4%;   
 }
@@ -151,6 +145,12 @@
 
 /***********************/
 /* Posts */
+.news_title{
+    position: absolute;
+    top: 3%;
+    left: 42.5%;
+}
+
 .news-article
 {
     width: 100%;
@@ -610,6 +610,8 @@
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 60px;
+
 }
 .main-event .event-mask::after {
     background-color: rgba(0, 0, 0, 0);
@@ -908,11 +910,7 @@
 #abouttitle{
     position: absolute;
     top: 3%;
-    left: 43%;
-}
-
-.abouttitle .icon{
-    left: 44.5%;   
+    left: 42.5%;
 }
 
 .intro_content{
@@ -1138,8 +1136,6 @@
     margin-left: 70%;
 }
 
-
-
 /* the waves decorations */
 .deco_waves{
     position: absolute;
@@ -1205,27 +1201,25 @@
     top: 90%;
     width: 100%; 
     height: 10%;
-    border: solid 2px #2e4565;  
 }
 
 .Specialization-container{
     width: 100%;
-    height: 180%;
+    height: 160%;
     background-color: #e4dfd2;
     position: relative;
     top: 80%;
     z-index: -1; 
-    border: solid 2px #2e4565;  
 }
 
 
 #below_wave{
-    top: 10%;
+    top: 0%;
 }
 
 #Specialization_title{
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 42.5%;
 }
 
@@ -1236,7 +1230,7 @@
 
 #SP_content_container{
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 2.5%;
     display: flex;
     flex-direction: row;
@@ -1280,7 +1274,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
-    letter-spacing: 1.25px;
+    letter-spacing: 1.5px;
     text-align: center;
     color: #2e4565;
     text-align: center;
@@ -1299,3 +1293,133 @@
     color: #2e4565;
     text-align: center;
 }
+
+/* More resource part */
+/* Milo: links開始 */
+.Links-container {
+    width: 100%;
+    height: 110%;
+    background-color: #2e4565;
+    position: relative;
+    z-index: 2;
+    border-radius: 25px;
+    transition: .6s;
+    top: 70%;
+}
+.Links-container.expanded {
+    height: 141%;
+}
+/* Jenny: change start */
+#links_title{
+    position: relative;
+    top: 7.625rem;
+    left: 42.5%;
+}
+
+#links_title span{
+    color:#ffbb00;
+}
+
+#link_title img{
+    position: absolute;
+}
+/* Jenny: end of change*/
+.links-title{
+    width: 15.5%;
+    position: relative;
+    top: 7.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.links-title div{
+    color:#ffbb00;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.875rem;
+    line-height: 1.13;
+    letter-spacing: 5px;
+    margin-top: 16px;
+}
+.links-title div:nth-child(3) {
+    letter-spacing: 1.8px; 
+}
+.links-content {
+    width: 61.5rem;
+    height: 12rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 29.063rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: unset;
+    align-content: space-between;
+}
+.links-category-item {
+    position: relative;
+    background-color: #efeee4;
+    min-width: 30.125rem;
+    min-height: 5.375rem;
+    border-radius: 15px;
+    margin-bottom: 1.25rem;
+    display: inline-block;
+    overflow: hidden;
+    transition: .6s;
+    max-height: 5.375rem;
+}
+.links-category-item.expanded {
+    max-height: 30rem;
+}
+.links-category-item.expanded .links-item-title {
+    transform: translate(0%, -50%);
+    left: 2.813rem;
+}
+.links-item-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.563rem;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 3.75px; 
+    color: #2e4565;
+    transition: .6s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .6s;
+}
+.links-icon-more-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 1.563rem;
+}
+.links-item {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.25rem;
+    line-height: 2;
+    letter-spacing: 3px;
+    text-align: left;
+    color: #2e4565;
+    transform: translateX(2.813rem);
+    border-bottom: #707070 solid 1px;
+    width: calc(100% - 5.626rem);
+}
+.links-items .links-item:last-child {
+    padding-bottom: 30px;
+    border-bottom: none;
+}
+.links-upper-item {
+    min-height: 5.375rem;
+    min-width: 30.125rem;
+    position: relative;
+    cursor: pointer; 
+}
+/* Milo: links結束，css檔案只有改動這一塊 */

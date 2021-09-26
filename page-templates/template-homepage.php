@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
 <link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
@@ -326,7 +325,7 @@
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
             </div>
             <div id="interview">
-                  1235
+                  
             </div>
             
       </div>
@@ -369,7 +368,87 @@
                         <span class="SP_en_title">Policy and Law</span>
                   </div>
             </div>
-
       </div>
 
+      <!-- Milo: 從這裡開始是links的內容 -->
+      <div class="Links-container">
+            <div class="block-title" id="links_title">
+                  <img  class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-links.svg">
+                  <span class="ch-title">相關連結<br></span>
+                  <span class="en-title">Links</span>
+            </div>
+            <div class="links-content">
+                  <span class="links-flex-col">
+                        <div class="links-category-item">
+                              <div class="links-upper-item">
+                                    <span class="links-item-title">資料庫</span>
+                                    <span class="links-icon-more-item">+</span>
+                              </div>
+                              <div class="links-items">
+                                    <div class="links-item">陽明大學圖書館</div>
+                                    <div class="links-item">中央研究院館藏查詢</div>
+                                    <div class="links-item">國家圖書館</div>
+                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
+                                    <div class="links-item">全國法規資料庫</div>
+                                    <div class="links-item">全民健康保險研究資料庫</div>
+                                    <div class="links-item">科技部科普知識</div>
+                                    <div class="links-item">健康數據統計研究資源中心</div>
+                              </div>
+                        </div>
+                        <div class="links-category-item">
+                              <div class="links-upper-item">
+                                    <span class="links-item-title">相關單位</span>
+                                    <span class="links-icon-more-item">+</span>
+                              </div>
+                              <div class="links-items">
+                                    <div class="links-item">陽明大學圖書館</div>
+                                    <div class="links-item">中央研究院館藏查詢</div>
+                                    <div class="links-item">國家圖書館</div>
+                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
+                                    <div class="links-item">全國法規資料庫</div>
+                                    <div class="links-item">全民健康保險研究資料庫</div>
+                                    <div class="links-item">科技部科普知識</div>
+                                    <div class="links-item">健康數據統計研究資源中心</div>
+                              </div>
+                        </div>
+                  </span>
+                  <span class="links-flex-col">
+                        <div class="links-category-item">
+                              <div class="links-upper-item">
+                                    <span class="links-item-title">政府機構</span>
+                                    <span class="links-icon-more-item">+</span>
+                              </div>
+                              <div class="link s-items">
+                                    <div class="links-item">陽明大學圖書館</div>
+                                    <div class="links-item">中央研究院館藏查詢</div>
+                                    <div class="links-item">國家圖書館</div>
+                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
+                                    <div class="links-item">全國法規資料庫</div>
+                                    <div class="links-item">全民健康保險研究資料庫</div>
+                                    <div class="links-item">科技部科普知識</div>
+                                    <div class="links-item">健康數據統計研究資源中心</div>
+                              </div>
+                        </div>
+                        <div class="links-category-item">
+                              <div class="links-upper-item">
+                                    <span class="links-item-title">搜尋引擎</span>
+                                    <span class="links-icon-more-item">+</span>
+                              </div>
+                              <div class="links-items">
+                                    <div class="links-item">陽明大學圖書館</div>
+                                    <div class="links-item">中央研究院館藏查詢</div>
+                                    <div class="links-item">國家圖書館</div>
+                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
+                                    <div class="links-item">全國法規資料庫</div>
+                                    <div class="links-item">全民健康保險研究資料庫</div>
+                                    <div class="links-item">科技部科普知識</div>
+                                    <div class="links-item">健康數據統計研究資源中心</div>
+                              </div>
+                        </div>
+                  </span>
+            </div>
+      </div>
+      <!-- Milo: links結束 -->
+      <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
+      
 </div>
