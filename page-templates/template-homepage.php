@@ -69,7 +69,7 @@
       <!-- the News block -->
       <div class="News-container">
 
-            <div class="block-title">
+            <div class="block-title news_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
                   <span class="ch-title">最新消息<br></span>
                   <span class="en-title">News</span>
@@ -261,7 +261,7 @@
 
       <!-- About Us Block -->
       <div class="About-container">
-            <div class="block-title abouttitle">
+            <div class="block-title" id="abouttitle">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
                   <span class="ch-title">關於我們<br></span>
                   <span class="en-title">About</span>
@@ -320,9 +320,50 @@
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_3.svg">
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
             </div>
+            <div id="interview">
+                  1235
+            </div>
+            
       </div>
 
       <div class="Specialization-container"> 
+            <div class="deco_waves" id="below_wave">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_5.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_6.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_7.svg">
+            </div>
+
+            <div class="block-title" id="Specialization_title">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-SP.svg">
+                  <span class="ch-title">專業領域<br></span>
+                  <span class="en-title">Specialization</span>
+            </div>
+
+            <div id="SP_content_container">
+                  <div id="SP_1" class="SP_content">
+                        <div class="SP_img_shadow">
+                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
+                        </div>
+                        <!--<img class="SP_img" src="<?php //bloginfo('template_url')?>/images/icon/SP_Epide.png">
+                        <div class="SP_img_shadow"></div>-->
+                        <span class="SP_ch_title">流行病學<br></span>
+                        <span class="SP_en_title">Epidemiology</span>
+                  </div>
+                  <div id="SP_2" class="SP_content">
+                        <div class="SP_img_shadow">
+                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
+                        </div>
+                        <span class="SP_ch_title">生物統計與資料科學<br></span>
+                        <span class="SP_en_title">Biostatistics and Data Science</span>
+                  </div>
+                  <div id="SP_3" class="SP_content">
+                        <div class="SP_img_shadow">
+                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
+                        </div>
+                        <span class="SP_ch_title">健康政策與法律<br></span>
+                        <span class="SP_en_title">Policy and Law</span>
+                  </div>
+            </div>
 
       </div>
 
