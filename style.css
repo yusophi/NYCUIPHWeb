@@ -170,7 +170,7 @@ body::-webkit-scrollbar {
 #main-nav {
     position: fixed;
     /*width: 100vw;*/
-    width: 100%;
+    width: 100vw;
     /*height: 20.2%;*/
     background-color: #e4dfd2;
     /*border-radius: 0px 0px 25px 25px;*/

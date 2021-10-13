@@ -181,61 +181,6 @@
                               <?php endwhile; ?>
                         <?php endif;
                         wp_reset_postdata(); ?>
-
-                        <!--<div class="event-data-item">
-                              <div class="event-container">
-                                    <div class="single-event">
-                                          <div class="event-mask">
-                                                <div class="event-main-margin">
-                                                      <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php// bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                                                            <div class="event-info">
-                                                                  <div class="event-date-title">
-                                                                        <img src="<?php// bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                                                        <span class="event-date-words">Date</span>
-                                                                  </div>
-                                                                  <div class="event-date">2020.10.12(Mon.)</div>
-                                                                  <div class="event-tags">
-                                                                        <span class="event-tag-mask">讀書會</span>
-                                                                        <span class="event-tag-mask">醫學二館221室</span>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="event-name">優雅的老年：678位修女揭開大腦健康之鑰 (莊宜芳老師)</div>
-                                                      <div class="event-intro">這不只是一本突破性的健康與科學書籍，更是一個感動人心的故事，因為眾多高齡修女們的慷慨奉獻
-                                                            ，我們才能活得更久、活得更好。老年如何過得優雅？經過一生的學習和打拚，到了歲月將盡之時，究竟能以豐富的大腦功能
-                                                            安享天年？.......</div>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                        <div class="event-data-item">
-                              <div class="event-container">
-                                    <div class="single-event">
-                                          <div class="event-mask">
-                                                <div class="event-main-margin">
-                                                      <div class="event-main-slide-upper">
-                                                            <div class="event-img-container"><img src="<?php //bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                                                            <div class="event-info">
-                                                                  <div class="event-date-title">
-                                                                        <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                                                        <span class="event-date-words">Date</span>
-                                                                  </div>
-                                                                  <div class="event-date">年份.月份.日期(禮拜幾.)</div>
-                                                                  <div class="event-tags">
-                                                                        <span class="event-tag-mask">標籤</span>
-                                                                        <span class="event-tag-mask">標籤</span>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="event-name">標題</div>
-                                                      <div class="event-intro">內容...</div>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>-->
                   </div>
 
                   <div id="event-slider-container-outer">
@@ -260,10 +205,7 @@
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
             </div>
       </div>
-      <!--<script>
-            FlexSlider.init();
-      </script>-->
-      <!-- Jenny: About Us Block -->
+      <!-- Jenny: About Us block-->
       <div class="About-container">
             <div class="block-title" id="abouttitle">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
@@ -348,8 +290,6 @@
                         <div class="SP_img_shadow">
                               <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
                         </div>
-                        <!--<img class="SP_img" src="<?php //bloginfo('template_url')?>/images/icon/SP_Epide.png">
-                        <div class="SP_img_shadow"></div>-->
                         <span class="SP_ch_title">流行病學<br></span>
                         <span class="SP_en_title">Epidemiology</span>
                   </div>
@@ -451,4 +391,116 @@
       <!-- Milo: links結束 -->
       <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
       
+      <!-- Jenny: Contact Us block start-->
+      <div class="ContactUs-container"> 
+            <div class="block-title" id="ContactUS_title">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-contact.svg">
+                  <span class="ch-title">聯絡我們<br></span>
+                  <span class="en-title">Contact us</span>
+            </div>
+            <div id=administor_profile_block>
+                  
+                  <?php
+                        //$i=1;
+                        //$b1_page=0;
+                        $args = array(
+                              'post_type' => 'Staff', 
+                              'post_status' => 'publish',
+                              'category_name' => 'administrator', 
+                              'orderby'=>'date',
+                              'order'=>'ASC');
+                        $the_query = new WP_Query($args);
+                        //echo $the_query->max_num_pages;
+                        if($the_query->have_posts()):
+                  ?>
+                  <?php
+                        $counter=0;
+                        while($the_query->have_posts()):
+                              $counter = $counter + 1;
+                              $the_query->the_post();
+                  ?>
+                        <div class="profile">
+                              <div class="profile-header" onclick="on(3)" >
+                                    <!--<?php //$imageQ = wp_get_attachment_image_src(get_field('staff_photo'), 'custom size'); ?>-->
+                                    <!--<img src="<?php //echo $imageQ[0]; ?>" alt="<?php// echo get_the_title(get_field('staff_photo')) ?>" >-->
+                                    <?php echo wp_get_attachment_image( get_field('staff_photo'), 'medium' ); ?>
+
+                                    <?php 
+                                    $image = get_field('staff_photo');
+                                    if( !empty( $image ) ): ?>
+                                          <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                                    <?php endif; ?>
+                              </div>
+
+                              <div class="profile_content">
+                                    <div class="profile_p1">
+                                          <p class="staff_name"><?php the_field('staff_name') ?></p>
+                                          <p class="work_respon" id="out_WR"><?php the_field('work_group') ?></p>
+                                    </div>
+                                    <div class="profile_p2" id="out_profile_p2">
+                                          <p class="contact_title">電話:</p>
+                                          <p class="phone_num"><?php the_field('phone_number') ?> </p>
+                                    </div>
+                                    <div class="profile_p3">
+                                          <p class="contact_title">信箱:</p>
+                                          <p class="email"><?php the_field('email') ?> </p>
+                                    </div>
+                              </div> 
+                        </div>
+
+                        <div class="overlay" id="profile_overlay<?php echo $counter ?>">
+                              <div class="overlay_wapper">
+                                    <div class="cls_btn">
+                                          <img onclick="off(3)" src="<?php bloginfo('template_url')?>/images/icon/profile_back.svg">
+                                    </div>
+                                    <div class="overlay_profile_content">
+                                          <div class="overlay_title">
+                                                <p id="profile_text">(Profile)</p>
+                                                <p class="work_respon" id="overlay_WR"><?php the_field('work_group') ?> </p>
+                                                <img src="<?php bloginfo('template_url')?>/images/icon/overlay_Contactus_icon.svg">
+                                          </div>
+                                          <div class="overlay_middle">
+                                                <div class="overlay_img">
+                                                      <p>here is the num.</p>
+                                                      <div class="img_block">
+                                                      <?php 
+                                                            $image = get_field('staff_photo');
+                                                            if( !empty( $image ) ): ?>
+                                                                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                                                            <?php endif; ?>   
+                                                      </div>
+                                                </div>
+                                                <div class="overlay_self_info">
+                                                      <p class="staff_name" id="overlay_SN"><?php the_field('staff_name') ?></p>
+                                                      <div class="profile_p2" id="overlay_pro_p2">
+                                                            <p class="contact_title">電話:</p>
+                                                            <p class="phone_num" id="overlay_phone"><?php the_field('phone_number') ?> </p>
+                                                      </div>
+                                                      <div class="profile_p3" id="overlay_pro_p3">
+                                                            <p class="contact_title" >信箱:</p>
+                                                            <p class="email" id="overlay_mail"><?php the_field('email') ?> </p>
+                                                      </div>
+                                                      <!--<p class="phone_num"><?php //the_field('phone_number') ?> </p>
+                                                      <p class="email"><?php //the_field('email') ?> </p>-->
+                                                      <p class="self_intro"><?php the_field('self_introduction') ?> </p>
+                                                </div>
+                                          </div>
+                                          <div class="ovetlay_bottom">
+                                                <div class="overlay_profile_left_pointer">
+                                                      <img src="<?php bloginfo('template_url')?>/images/icon/overlay_left_pointer.svg">
+                                                </div>
+                                                <div class="overlay_profile_right_pointer">
+                                                      <img src="<?php bloginfo('template_url')?>/images/icon/overlay_right_pointer.svg">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <?php endwhile; ?>
+                  <?php endif;
+                        wp_reset_postdata(); 
+                  ?>
+            </div>
+            
+      </div>
 </div>
