@@ -420,7 +420,7 @@
                               $the_query->the_post();
                   ?>
                         <div class="profile">
-                              <div class="profile-header" onclick="on(3)" >
+                              <div class="profile-header" onclick="currentProfile(<?php echo $counter; ?>)" >
                                     <!--<?php //$imageQ = wp_get_attachment_image_src(get_field('staff_photo'), 'custom size'); ?>-->
                                     <!--<img src="<?php //echo $imageQ[0]; ?>" alt="<?php// echo get_the_title(get_field('staff_photo')) ?>" >-->
                                     <?php echo wp_get_attachment_image( get_field('staff_photo'), 'medium' ); ?>
@@ -431,7 +431,6 @@
                                           <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
                                     <?php endif; ?>
                               </div>
-
                               <div class="profile_content">
                                     <div class="profile_p1">
                                           <p class="staff_name"><?php the_field('staff_name') ?></p>
@@ -448,10 +447,10 @@
                               </div> 
                         </div>
 
-                        <div class="overlay" id="profile_overlay<?php echo $counter ?>">
+                        <div class="overlayinContact" id="profile_overlay<?php echo $counter ?>">
                               <div class="overlay_wapper">
                                     <div class="cls_btn">
-                                          <img onclick="off(3)" src="<?php bloginfo('template_url')?>/images/icon/profile_back.svg">
+                                          <img onclick="closeProfile(<?php echo $counter; ?>)" src="<?php bloginfo('template_url')?>/images/icon/profile_back.svg">
                                     </div>
                                     <div class="overlay_profile_content">
                                           <div class="overlay_title">
@@ -461,7 +460,10 @@
                                           </div>
                                           <div class="overlay_middle">
                                                 <div class="overlay_img">
-                                                      <p>here is the num.</p>
+                                                      <div class="profile_post_num">
+                                                            <p><?php echo "0" . $counter; ?></p>
+                                                            <p><?php echo "/0" . $the_query->found_posts; ?></p>
+                                                      </div>
                                                       <div class="img_block">
                                                       <?php 
                                                             $image = get_field('staff_photo');
@@ -486,10 +488,10 @@
                                                 </div>
                                           </div>
                                           <div class="ovetlay_bottom">
-                                                <div class="overlay_profile_left_pointer">
+                                                <div class="overlay_profile_left_pointer" onclick="plusProfile(-1)">
                                                       <img src="<?php bloginfo('template_url')?>/images/icon/overlay_left_pointer.svg">
                                                 </div>
-                                                <div class="overlay_profile_right_pointer">
+                                                <div class="overlay_profile_right_pointer"  onclick="plusProfile(1)">
                                                       <img src="<?php bloginfo('template_url')?>/images/icon/overlay_right_pointer.svg">
                                                 </div>
                                           </div>
