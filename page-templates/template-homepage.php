@@ -511,6 +511,9 @@
                   <span class="en-title">back to top</span>
             </div>
       </div>
+      <?php get_footer(); ?>
       <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
-
+      
 </div>
+
+
