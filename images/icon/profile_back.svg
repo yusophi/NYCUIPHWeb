@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54">
+    <path d="m-13.357-24.627-4.567 4.379h11.045A1.448 1.448 0 0 1-5.428-18.8v.968A1.448 1.448 0 0 1-6.88-16.38h-11.044l4.567 4.38a1.453 1.453 0 0 1 .024 2.075l-.667.661a1.446 1.446 0 0 1-2.05 0l-8.026-8.02a1.446 1.446 0 0 1 0-2.05l8.026-8.032a1.446 1.446 0 0 1 2.05 0l.665.659a1.46 1.46 0 0 1-.024 2.081z" transform="rotate(180 6.017 4.343)" style="fill:#efeee4"/>
+    <g data-name="椭圆 156" style="stroke:#efeee4;stroke-width:3.5px;fill:none" transform="rotate(180 27 27)">
+        <circle cx="27" cy="27" r="27" style="stroke:none"/>
+        <circle cx="27" cy="27" r="25.25" style="fill:none"/>
+    </g>
+</svg>

@@ -206,7 +206,18 @@ function on(n) {
     {
         document.getElementById("overlay2").style.display = "block";
     }
+    /*else if (n == 3)
+    {
+        document.getElementById("profile_overlay1").style.display = "block";
+        document.getElementById("main-nav").style.display = "none";
 
+    }
+    else if (n == 4)
+    {
+        document.getElementById("profile_overlay2").style.display = "block";
+        document.getElementById("main-nav").style.display = "none";
+
+    }*/
 }
   
 function off(n) {
@@ -221,6 +232,21 @@ function off(n) {
     {
         document.getElementById("overlay2").style.display = "none";
     }
+    /*else if (n == 3)
+    {
+        document.getElementById("profile_overlay1").style.display = "none";
+        document.getElementById("main-nav").style.display = "block";
+    }
+    else if (n == 4)
+    {
+        document.getElementById("profile_overlay2").style.display = "none";
+        document.getElementById("main-nav").style.display = "block";
+
+    }else if (n == 5)
+    {
+        document.getElementById("profile_overlay3").style.display = "none";
+        document.getElementById("main-nav").style.display = "block";
+    }*/
 }
 // end of overaly
 
@@ -252,3 +278,50 @@ for (var i = 0; i < links_upper_items.length; i++) {
 }
 
 // Milo: End of links part
+
+
+/* Jenny: contactUs block js*/
+var ProfileIndex = 1;
+function currentProfile(n){
+    ProfileIndex = n;
+    displayProfile(ProfileIndex);
+}
+
+function plusProfile(n){
+    ProfileIndex = ProfileIndex+n;
+    displayProfile(ProfileIndex);
+}
+
+function displayProfile(n){
+    var availableProfiles = document.getElementsByClassName("overlayinContact");
+    if( n > availableProfiles.length) { ProfileIndex = 1; }
+    if( n < 1) { ProfileIndex = availableProfiles.length; }
+
+    for(var i=0; i < availableProfiles.length; i++){
+        availableProfiles[i].style.display = "none";
+    }
+
+    availableProfiles[ProfileIndex-1].style.display="block";
+    document.getElementById("main-nav").style.display = "none";
+    /*allDots[ProfileIndex-1].className +=" active";*/
+}
+
+function closeProfile(n){
+    var availableProfiles = document.getElementsByClassName("overlayinContact");
+    if( n > availableProfiles.length) { ProfileIndex = 1; }
+    if( n < 1) { ProfileIndex = availableProfiles.length; }
+
+    for(var i=0; i < availableProfiles.length; i++){
+        availableProfiles[i].style.display = "none";
+    }
+
+    availableProfiles[ProfileIndex-1].style.display="none";
+    document.getElementById("main-nav").style.display = "block";
+    /*allDots[ProfileIndex-1].className +=" active";*/
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
