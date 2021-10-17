@@ -1676,3 +1676,29 @@
     cursor: pointer;
     z-index: inherit;
 }
+
+#footer_wave{
+    top: 78%;
+}
+
+#back_to_top{
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    width: 10.5%;
+    height: 9.5%;
+}
+
+#back_to_top .en-title{
+    font-size: 1rem;
+    line-height: 0.05;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+#back_to_top .icon{
+    margin-bottom: 8%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

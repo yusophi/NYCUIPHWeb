@@ -503,6 +503,14 @@
                         wp_reset_postdata(); 
                   ?>
             </div>
-            
+            <div class="deco_waves" id="footer_wave">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
+            </div>
+            <div class="block-title" id="back_to_top" onclick="topFunction()">
+                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
+                  <span class="en-title">back to top</span>
+            </div>
       </div>
+      <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
+
 </div>
