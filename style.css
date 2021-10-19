@@ -392,7 +392,7 @@ body::-webkit-scrollbar {
 }
 
 /* Milo: Start of footer part */
-.Footer-container {
+/*.Footer-container {
     width: 100%;
     min-height: 95%;
     background-color: #162a47;
@@ -461,5 +461,5 @@ body::-webkit-scrollbar {
     color: #6c63ff;
     cursor: pointer;
     text-decoration: none;
-}
+}*/
 /* Milo: End of footer part */

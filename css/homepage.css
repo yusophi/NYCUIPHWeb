@@ -1703,7 +1703,7 @@
 }
 
 /* Milo: Start of footer part */
-/*.Footer-container {
+.Footer-container {
     width: 100%;
     min-height: 95%;
     background-color: #162a47;
@@ -1773,4 +1773,4 @@
     cursor: pointer;
     text-decoration: none;
 }
-*//* Milo: End of footer part */
+/* Milo: End of footer part */
