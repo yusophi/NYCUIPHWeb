@@ -389,7 +389,6 @@
             </div>
       </div>
       <!-- Milo: links結束 -->
-      <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
       
       <!-- Jenny: Contact Us block start-->
       <div class="ContactUs-container"> 

@@ -303,6 +303,8 @@ function displayProfile(n){
 
     availableProfiles[ProfileIndex-1].style.display="block";
     document.getElementById("main-nav").style.display = "none";
+    /*document.getElementsByClassName("Links-container").style.zIndex = "-1";*/
+
     /*allDots[ProfileIndex-1].className +=" active";*/
 }
 
