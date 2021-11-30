@@ -159,6 +159,11 @@
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo'/mobile-css/news-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
         }
+        if(is_page_template( 'page-templates/template-singlepost.php' )){ /*首頁*/
+            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
+            /*************/
+         }
 
     ?>
     </head>
