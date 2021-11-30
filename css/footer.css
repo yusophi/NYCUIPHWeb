@@ -1,0 +1,70 @@
+.Footer-container {
+    width: 100%;
+    min-height: 95%;
+    background-color: #162a47;
+    position: relative;
+    z-index: 2;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: .6s;
+    top: 64%;
+}
+.footer-margin {
+    padding: 7% 9%;
+    padding-bottom: 0%;
+}
+.footer-exclam {
+    width: 64.6%;
+    opacity: 0.7;
+    font-family:  'Noto Sans TC', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.32;
+    letter-spacing: 6.5px;
+    color: #efeee4;
+}
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #d9e0e2;
+    z-index: 3;
+    margin-top: 5.03%;
+    opacity: 0.7;
+}
+.footer-pic img{
+    transform: translate3d(200%, -60%, 0);
+    background-color: #162a47;
+    width: 25rem;
+    height: 14.09rem;
+
+}
+.footer-info {
+    position: absolute;
+    bottom: 4.3%;
+    opacity: 0.7;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.79725rem; 
+    font-weight: 300;
+    line-height: 1.66; 
+    letter-spacing: 2.55px;
+    color: #efeee4;
+}
+
+.footer-statement {
+    position: absolute;
+    opacity: 0.7;
+    font-family: NotoSansTC;
+    font-size: 0.79725rem;
+    font-weight: 300;
+    line-height: 1.76;
+    letter-spacing: 2.55px;
+    bottom: 4.3%;
+    right: 9%;
+    color: #efeee4;
+    text-align: right;
+}
+.footer-iconscout-link {
+    color: #6c63ff;
+    cursor: pointer;
+    text-decoration: none;
+}

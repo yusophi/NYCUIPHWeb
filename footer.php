@@ -1,5 +1,5 @@
-<!-- Milo: Start of footer part -->
-    <div class="Footer-container">
+      <!-- Milo: Start of footer part -->
+      <div class="Footer-container">
             <div class="footer-margin">
                   <div class="footer-exclam">
                         Ensuring Safer, Longer,
@@ -25,17 +25,17 @@
                         </div>
                   </div>
                   <div class="footer-statement">
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link_white.svg">&nbsp;&nbsp;&nbsp;
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link_white.svg">
-                  <br>
-                  <div style="padding-top: 1.875rem;">
-                        © 國立陽明交通大學公共衛生研究所 2021&nbsp;&nbsp;&nbsp;
-                        illustration by &nbsp;
-                        <a class="footer-iconscout-link" href="https://iconscout.com/">iconscout</a>
-                  </div>
+                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link_white.svg">&nbsp;&nbsp;&nbsp;
+                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link_white.svg">
+                        <br>
+                        <div style="padding-top: 1.875rem;">
+                              © 國立陽明交通大學公共衛生研究所 2021&nbsp;&nbsp;&nbsp;
+                              illustration by &nbsp;
+                              <a class="footer-iconscout-link" href="https://iconscout.com/">iconscout</a>
+                        </div>
                   </div>
             </div>
-    </div>
+      </div>
       <!-- Milo: End of footer part -->
 <!--</body>
 </html>-->
