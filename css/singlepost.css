@@ -1,12 +1,16 @@
+body{
+    background-color: #2e4565;
+}
 .single_post{
     position: absolute;
     width: 100%;
-    height: 300%;
+    height: auto;
     background-color: #2e4565;
     display: flex;
     flex-direction:column;
     z-index: -1;
 }
+
 
 .banner{
     position: absolute;
@@ -90,11 +94,35 @@
     position: absolute;
     width: 60.4%;
     height: auto;
-    margin-top: 50%;
+    margin-top: 55%;
     margin-left: 9%;
-    border: solid 2px #efeee4;
+    /*border: solid 2px #efeee4;
+*/
 }
 
-.article p{
+.article p, h3{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: 3px;
+    text-align: left;
     color: #efeee4;
+    margin-top: 4%;
+    /*border:solid 2px rgba(212, 231, 125, 0.267);
+*/
+}
+
+.article h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 3.75px;
+    text-align: left;
+    color: #efeee4;
+    margin-top: 8.5%;
+    margin-bottom: 8.5%;
+    /*border:solid 2px rgba(212, 231, 125, 0.267);*/
 }

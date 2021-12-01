@@ -19,7 +19,7 @@
         </div>      
     </div>
     <div class="article">
-        <?php the_content(); ?>
+        <?php the_field('content'); ?>
     </div>
     <div class="sidebar"></div>
 </div>
