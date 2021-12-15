@@ -67,3 +67,19 @@
     echo $pages . paginate_links($args) . '</div>';}
     }
 ?>
+
+<?php
+  if ( function_exists('register_sidebar') ){
+    register_sidebar(array(
+    'name' => '側邊欄',
+    'id' => 'sidebar',
+    'description' => '顯示於每個網頁的右方。',
+    'before_widget' => '<section id="%1$s" 
+    class="sidebar-right">',
+    'after_widget' => '</section>',
+    'before_title' => '<h1 class="sidebar-title">',
+    'after_title' => '</h1>'
+    ));
+    }
+    
+?>
