@@ -167,15 +167,4 @@
 
     ?>
     </head>
-    <!--<body>
-    <div class="container">
-        <header class="header">
-        <div class="title">
-            <div class="logo"></div>
-            <a class="web_name" href="<?php //bloginfo('url'); ?>">
-                <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
-                <span class="enName">Institute of Public Health, NYCU</span>
-            </a>
-        </div>
-
-        </header>-->
+    

@@ -57,56 +57,66 @@
         </div>
     </div>
     <!-- ******** -->
+    
     <div class="next_news">
-        <?php
-            // WP_Query arguments
-            $args = array (
-                'post_type' => 'post',
-                'post_status'   => 'publish',
-                'date_query'    => array(
-                    'column'  => 'post_date',
-                    'before'   => get_the_date()
-                ),
-                'orderby' => 'date',
-                'posts_per_page' => 3
-            );
+        <div class="next_news_title">
+            <span>下則新聞</span>
+            <span id="next_news_title_eg">Next</span>
             
-            // The Query
-            $arr_posts = new WP_Query( $args );
-            if ($arr_posts->have_posts()) :
-        ?>
-        <div class="news-article">
-            <?php
-            $counter = 0;
-            while ($arr_posts->have_posts()) :
-                    $arr_posts->the_post();
-                    $counter = $counter + 1;
-            ?>
-                <div class="article-content num-<?php echo $counter ?>">
-                        <div class="post_counter <?php echo $counter ?>">
-                            <?php if($counter >= 10){
-                                echo $counter . ".";
-                            }
-                                else
-                                {echo "0" . $counter . ".";} ?>&nbsp;&nbsp;
-                        </div>
-                        <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
-                        <div class="border-anim">
-                                <div class="inner-box"></div>
-                        </div>
-                        <div class="article-meta">
-                            <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                            <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                            <span class="post_category"><?php the_category(' , '); ?></span>
-                        </div>
-                        <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
-                        <div class="clearfix"></div>
-                </div>
-            <?php endwhile; ?>
         </div>
-        <?php endif; wp_reset_postdata(); ?>
+        <div class="the_next3_news">
+            <?php
+                global $post;
+                $myposts = get_posts( array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'news',
+                    'category__not_in' => array(14),
+                    'orderby' => 'date',
+                    'posts_per_page' => 3
+                    ) 
+                );
+                if ( $myposts ) :
+            ?>
+                    <?php
+                        $counter = 0;
+                        foreach ( $myposts as $post ) :
+                            $counter = $counter + 1;
+                            setup_postdata( $post );
+                    ?>
+                    <!--<div> <?php //echo the_title() ?></div>-->
+                        <div class="article-content num-<?php echo $counter ?>">
+                            <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
+                            <div class="border-anim"></div>
+                            <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
+                            <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                            <div class="article-meta">
+                                <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                <span class="post_time"><?php the_time('Y.m.j'); ?></span>
+                                <span class="post_category"><?php the_category(' , '); ?></span>
+                            </div>
+                            <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                            <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                        </div>
+                    <?php endforeach; wp_reset_postdata();?>
+                <?php endif; ?>
+        </div>
     </div>
+
+    <div class="deco_waves" id="footer_wave">
+        <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
+    </div>
+    <div class="back_to_top" onclick="topFunction()">
+            <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
+            <span class="en-title">back to top</span>
+    </div>
+
+    <?php get_footer(); ?>
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
 </div>
-<?php //get_footer(); ?>

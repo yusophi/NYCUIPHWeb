@@ -69,17 +69,19 @@
 ?>
 
 <?php
-  if ( function_exists('register_sidebar') ){
-    register_sidebar(array(
-    'name' => '側邊欄',
-    'id' => 'sidebar',
-    'description' => '顯示於每個網頁的右方。',
-    'before_widget' => '<section id="%1$s" 
-    class="sidebar-right">',
-    'after_widget' => '</section>',
-    'before_title' => '<h1 class="sidebar-title">',
-    'after_title' => '</h1>'
-    ));
-    }
-    
+  function get_next_post_id( $post_id ) {
+    // Get a global post reference since get_adjacent_post() references it
+    global $post;
+    // Store the existing post object for later so we don't lose it
+    $oldGlobal = $post;
+    // Get the post object for the specified post and place it in the global variable
+    $post = get_post( $post_id );
+    // Get the post object for the next post
+    $next_post = get_next_post();
+    // Reset our global object
+    $post = $oldGlobal;
+    if ( '' == $next_post ) 
+        return 0;
+    return $next_post->ID; 
+  }   
 ?>
