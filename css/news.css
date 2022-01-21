@@ -1,15 +1,16 @@
+
 .page_News{
     position: absolute;
     width: 100%;
-    height: 110%;
-    background-color: #e4dfd2;
+    height: auto;
     display: flex;
     flex-direction:column;
+    background-color: #e4dfd2;
     z-index: -1;
 }
 
 .banner{
-    position: absolute;
+    position: relative;
     width: 82%;
     height: auto;
     margin-top: 20%;
@@ -46,10 +47,10 @@
 }
 
 .class_selector{
-    position: absolute;
+    position: relative;
     width: 82%;
-    height: 5%;
-    margin-top: 40%;
+    height: 5vh;
+    margin-top: 15%;
     margin-left: 9%;
     margin-right: 9%;
     padding-bottom: 0.8%;
@@ -139,23 +140,22 @@
 
 /*the News_block */
 .news_block{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 160%;
-    margin-top: 45%;
+    margin-top: 5%;
+    height: auto;
     background-color: #e4dfd2;
 }
-#new_bkg{
+/*#new_bkg{
     margin-top: 120%;
     z-index: -1;
-}
+}*/
 /*** the post style ***/
 /* Posts */
 .news-article
 {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    min-height: auto;
     display: inline-block;
     background-color: #e4dfd2;
 }
@@ -164,7 +164,9 @@
     position: relative;
     display: inline-block;
     width: 22.8%;
-    height: 25.6%;
+    height: 20rem;
+    /*min-width: 22.8vw;
+    max-height: 46.6vh;*/
     left: 1.5%;
     right: 1.9%;
     background-color: #e4dfd2;
@@ -349,15 +351,24 @@
  }
  /*********************************/
 
+.pagination{
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    margin-top: 13%;
+    border:  solid 2px #374a73;
+    background-color: #ffbb00;
+}
+
+
  /*** back to top btn ***/
 .deco_waves{
-    position: absolute;
-    margin-top: 220%;
+    position: relative;
+    margin-top: 10%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    z-index: -1;
-    background-color: #e4dfd2;
+    /*z-index: -1;*/
 }
 /* let waves have spacing*/
 .deco_waves img{
@@ -381,8 +392,7 @@
 }
 
 #back_to_top{
-    position: absolute;
-    margin-top: 225%;
+    position: relative;
     left: 45%;
     width: 10.5%;
     height: 9.5%;
@@ -402,19 +412,18 @@
     cursor: pointer;
 }
 
-
  /***********************/
 
  .Footer-container {
+    position: relative;
     width: 100%;
-    min-height: 97%;
+    min-height: 105vh;
     background-color: #162a47;
-    position: absolute;
-    z-index: 2;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     transition: .6s;
-    margin-top: 236%;
+    margin-top: -5vh;
+    z-index: 1;
 }
 .footer-margin {
     padding: 7% 9%;
@@ -504,3 +513,7 @@
 .paging ul li a:hover {
     background-color:#333;
 }
+
+
+
+/******pagination *******/

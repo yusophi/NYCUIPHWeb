@@ -7,7 +7,6 @@
 <?php get_header(); ?>
 <link href="css/news.css" rel="stylesheet" type="text/css">
 <link href="css/footer.css" rel="stylesheet" type="text/css">
-
 <div class="page_News">
     <div class="banner">
         <span class="page_name" id="zh">最新消息<br></span>
@@ -39,18 +38,21 @@
 
     <div class="news_block">
         <?php //query the recent 6 posts
+            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'news',
                 'category__not_in' => array(14),
                 'orderby' => 'date',
+                'paged' => $paged,
                 'posts_per_page' => 15
             );
 
             $arr_posts = new WP_Query($args);
             if ($arr_posts->have_posts()) :
         ?>
+
         <div class="news-article">
             <?php
             $counter = 0;
@@ -83,7 +85,14 @@
                         <div class="clearfix"></div>
                 </div>
             <?php endwhile; ?>
-            <div class="paging">
+        </div>
+       
+        <?php endif; wp_reset_postdata(); ?>
+
+    </div>
+    <!--<div class="news_block" id="new_bkg"></div>-->
+
+    <div class="pagination">
                 <ul>
                     <?PHP
                         $big = 999999999; // need an unlikely integer
@@ -101,16 +110,10 @@
                             'type' => 'list',
                             );
                         echo paginate_links($args);
+                        echo $arr_posts->max_num_pages
                     ?>
                 </ul>
-            </div>
-        </div>
-        <?php endif; wp_reset_postdata(); ?>
     </div>
-    <div class="news_block" id="new_bkg"></div>
-        
-    <div class="page_nav"></div>
-
     <div class="deco_waves" id="footer_wave">
         <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
     </div>
@@ -119,10 +122,11 @@
             <span class="en-title">back to top</span>
     </div>
     <?php get_footer(); ?>
-    <script>
+    
+</div>
+<script>
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-    </script>
-</div>
+</script>
