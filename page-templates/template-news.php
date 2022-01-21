@@ -93,26 +93,28 @@
     <!--<div class="news_block" id="new_bkg"></div>-->
 
     <div class="pagination">
-                <ul>
-                    <?PHP
-                        $big = 999999999; // need an unlikely integer
-                        $args = array(
-                            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                            'format' => '?page=%#%',
-                            'total' => $arr_posts->max_num_pages,
-                            'current' => max( 1, get_query_var( 'paged') ),
-                            'show_all' => false,
-                            'end_size' => 3,
-                            'mid_size' => 2,
-                            'prev_next' => True,
-                            'prev_text' => __('<'),
-                            'next_text' => __('>'),
-                            'type' => 'list',
-                            );
-                        echo paginate_links($args);
-                        echo $arr_posts->max_num_pages
-                    ?>
-                </ul>
+        <!--<img class="icon-paging prev_page" src="<?php bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
+            
+                <?PHP
+                    $big = 999999999; // need an unlikely integer
+                    $args = array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?page=%#%',
+                        'total' => $arr_posts->max_num_pages,
+                        'current' => max( 1, get_query_var( 'paged') ),
+                        'show_all' => false,
+                        'end_size' => 3,
+                        'mid_size' => 2,
+                        'prev_next' => True,
+                        'prev_text' => __('<'),
+                        'next_text' => __('>'),
+                        'type' => 'list',
+                        );
+                    echo paginate_links($args);
+                ?>
+            
+        <!--<img class="icon-paging next_page" src="<?php //bloginfo('template_url') ?>/images/page_news/next_page.svg">-->
+        
     </div>
     <div class="deco_waves" id="footer_wave">
         <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
