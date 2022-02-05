@@ -55,7 +55,7 @@
                 <div class="nav-container">
                 <ul id="nav-menu">
                     <li id="nav-main-list-item-1">
-                        <a class="menu-list nav-list-item-1">關於我們</a>
+                        <a class="menu-list nav-list-item-1" href="<?php echo site_url(); ?>/homepage/">關於我們</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="">系所簡介</a></li>

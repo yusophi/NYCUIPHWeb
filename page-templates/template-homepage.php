@@ -266,25 +266,16 @@
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_3.svg">
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
             </div>
-            <div id="interview">
-                  
-            </div>
+            
             
       </div>
 
       <div class="Specialization-container"> 
-            <div class="deco_waves" id="below_wave">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_5.svg">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_6.svg">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_7.svg">
-            </div>
-
             <div class="block-title" id="Specialization_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-SP.svg">
                   <span class="ch-title">專業領域<br></span>
                   <span class="en-title">Specialization</span>
             </div>
-
             <div id="SP_content_container">
                   <div id="SP_1" class="SP_content">
                         <div class="SP_img_shadow">
@@ -309,6 +300,52 @@
                   </div>
             </div>
       </div>
+      
+      <div class="deco_waves" id="below_wave">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_5.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_6.svg">
+                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_7.svg">
+      </div>
+      
+      <div class="Interview-container">
+            <div class="cards">
+                  <?php //query the recent 6 posts
+                  $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'category_name' => 'interviews',
+                        'category__not_in' => array(14),
+                        'orderby' => 'date',
+                        'posts_per_page' => 6
+                  );
+
+                  $arr_posts = new WP_Query($args);
+
+                  if ($arr_posts->have_posts()) :
+                  ?>
+                        <?php
+                        //$counter = 0;
+                        while ($arr_posts->have_posts()) :
+                              $arr_posts->the_post();
+                              //$counter = $counter + 1;
+                        ?>
+                              <div class="interview-slide">
+                                    
+                                    <div class="interview-picture">
+                                          <?php echo wp_get_attachment_image( get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
+                                    </div>      
+                                    <div class="interview-text-content">
+                                          <a class="interview-title"href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
+                                          <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "..." ?></span>
+                                    </div>
+                                          
+                              </div>
+                        <?php endwhile; ?>
+                  
+                  <?php endif; wp_reset_postdata(); ?>
+            </div> 
+      </div>
+      
 
       <!-- Milo: 從這裡開始是links的內容 -->
       <div class="Links-container">
@@ -502,17 +539,19 @@
                         wp_reset_postdata(); 
                   ?>
             </div>
-            <div class="deco_waves" id="footer_wave">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
-            </div>
-            <div class="block-title" id="back_to_top" onclick="topFunction()">
-                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
-                  <span class="en-title">back to top</span>
-            </div>
+            
+      </div>
+      <div class="deco_waves" id="footer_wave">
+            <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
+      </div>
+      <div class="block-title" id="back_to_top" onclick="topFunction()">
+            <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
+            <span class="en-title">back to top</span>
       </div>
       <?php get_footer(); ?>
-      <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
       
+      <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
+      <script src="<?php bloginfo('template_url') ?>/js/draggable-slides.js"></script>
 </div>
 
 

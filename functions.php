@@ -50,3 +50,17 @@
   }
   add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 ?>
+
+<?php
+  add_image_size( 'hp-interview-img-thumb', 200, 200, array( 'center', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
+  
+  function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+    'hp-interview-img-thumb' => __( 'Homepage-interview-picture' ),
+    'hp-interview-img-thumb1' => __( 'Search Thumb' ))   
+  );
+  add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
+}
+?>
