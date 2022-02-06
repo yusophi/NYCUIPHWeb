@@ -32,7 +32,7 @@
                         <div id="logo"><img src="<?php bloginfo('template_url')?>/images/icon/LOGO.png" width="72" /></div>
                         <!--<div id="mark"><img src="<?php bloginfo('template_url')?>/images/icon/MARK.png" width="205.5" /></div>
                         -->
-                        <a class="web_name" href="<?php //bloginfo('url'); ?>">
+                        <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
                             <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
                             <span class="enName">Institute of Public Health, NYCU</span>
                         </a>
@@ -65,7 +65,7 @@
                         </div>
                     </li>
                     <li id="nav-main-list-item-2">
-                        <a class="menu-list nav-list-item-2">最新消息</a>
+                        <a class="menu-list nav-list-item-2" href="<?php echo site_url(); ?>/news/">最新消息</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="">系所公告</a></li>
@@ -149,18 +149,22 @@
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo'/mobile-css/homepage-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
         }
+        if(is_page('news')){ /*首頁*/
+            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo '/css/news.css" type="text/css" media="screen and (min-width: 701px)" />';
+            /*************/
+            echo '<script src="';bloginfo('template_url');
+            echo '/js/news.js" type="text/javascript" media="screen and (min-width: 701px)"></script>';
+            /*************/
+            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo'/mobile-css/news-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
+        }
+        if(is_page_template( 'page-templates/template-singlepost.php' )){ /*文章模板*/
+            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
+            /*************/
+         }
 
     ?>
     </head>
-    <!--<body>
-    <div class="container">
-        <header class="header">
-        <div class="title">
-            <div class="logo"></div>
-            <a class="web_name" href="<?php //bloginfo('url'); ?>">
-                <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
-                <span class="enName">Institute of Public Health, NYCU</span>
-            </a>
-        </div>
-
-        </header>-->
+    
