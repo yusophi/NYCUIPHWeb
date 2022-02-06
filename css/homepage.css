@@ -1202,7 +1202,6 @@
     top: 40%;
     background-color: #e4dfd2;
     overflow: hidden;
-    border-top: solid 5px #162a47 ;
 }
 
 .cards{
@@ -1215,7 +1214,6 @@
     pointer-events: none;
     margin-top: 20vh;
     margin-bottom: 20vh;
-    border-bottom: solid 5px #ffbb00;
 }
 
 .interview-slide{
