@@ -4,7 +4,6 @@
 .homepage
 {
     position: absolute;
-   
     width: 100%;
     height: 110%;
     background-color: #2e4565;
@@ -105,8 +104,8 @@
 
 /* icon and title */
 .block-title{
-    width: 15.5%;
-    height: 13.5%;
+    width: 15.5vw;
+    height: 20.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,7 +185,7 @@
     height: 4.063rem;
     margin: 0 7.125rem 4.063rem 0;
     font-family: 'TimesNewRoman';
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -907,7 +906,7 @@
 
 #abouttitle{
     position: absolute;
-    top: 3%;
+    top: 5%;
     left: 42.5%;
 }
 
@@ -1196,46 +1195,112 @@
     height: 100%;
 }
 
-#interview{
-    position: absolute;
-    top: 90%;
+.Interview-container{
+    position: relative;
     width: 100%; 
-    height: 10%;
+    height: 65vh;
+    top: 40%;
+    background-color: #e4dfd2;
+    overflow: hidden;
+}
+
+.cards{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    pointer-events: none;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.interview-slide{
+    position: relative;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+}
+
+.interview-picture > img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.interview-text-content{
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1.5vw;
+}
+
+.interview-text-content > a{
+    position: relative;
+    margin-top: 2.5%;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 3.75px;
+    text-align: left;
+    color: #2e4565;
+    text-decoration: none;
+}
+
+.interview-text-content > span{
+    position: relative;
+    margin-top: 6.5%;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    color: #647386;
 }
 
 .Specialization-container{
     width: 100%;
-    height: 160%;
     background-color: #e4dfd2;
     position: relative;
-    top: 80%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: -1; 
 }
 
 
 #below_wave{
-    top: 0%;
+    position: relative;
+    top: 40%;
+    background-color: #e4dfd2;
+    padding-top: 5%;
 }
 
 #Specialization_title{
-    position: absolute;
-    top: 40%;
-    left: 42.5%;
+    margin-top: 3%;
 }
 
 #SP_content_container{
-    position: absolute;
-    top: 60%;
-    left: 2.5%;
+    position: relative;
+    min-height: 50vh;
+    margin-top: 4vh;
     display: flex;
     flex-direction: row;
+    justify-items: space-evenly;
 }
 
 .SP_content{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 13%;
+    margin: 3vw;
 }
 
 .SP_img{
@@ -1299,16 +1364,20 @@
     z-index: 2;
     border-radius: 25px;
     transition: .6s;
-    top: 70%;
+    top: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .Links-container.expanded {
     height: 141%;
 }
+
 /* Jenny: change start */
 #links_title{
-    position: relative;
+    position: absolute;
     top: 7.625rem;
-    left: 42.5%;
+    left: 42%;
 }
 
 #links_title span{
@@ -1319,7 +1388,7 @@
     position: absolute;
 }
 /* Jenny: end of change*/
-.links-title{
+/*.links-title{
     width: 15.5%;
     position: relative;
     top: 7.625rem;
@@ -1342,14 +1411,14 @@
 }
 .links-title div:nth-child(3) {
     letter-spacing: 1.8px; 
-}
+}*/
 .links-content {
     width: 61.5rem;
     height: 12rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 29.063rem;
+    top: 25.063rem;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -1423,16 +1492,16 @@
 /* Jenny: Contact us block start*/
 .ContactUs-container{
     width: 100%;
-    height: 140%;
+    height: 110%;
     background-color: #e4dfd2;
     position: relative;
-    top: 66%;
+    top: 35%;
     z-index: -1; 
 }
 
 #ContactUS_title{
-    position: absolute;
-    top: 7%;
+    position: relative;
+    top: 15%;
     left: 42.5%;
 }
 
@@ -1440,7 +1509,7 @@
     position: relative;
     width: 90%;
     height: 40%;
-    top: 25%;
+    margin-top: 16%;
     left: 6.3%;
     display: flex;
     align-items: center;
@@ -1532,7 +1601,7 @@
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 2;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .overlay_wapper{
@@ -1548,6 +1617,7 @@
     height: 1.2rem;
     margin-left: 33%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 .overlay_profile_content{
@@ -1678,15 +1748,17 @@
 }
 
 #footer_wave{
-    top: 78%;
+    position: relative;
+    top: 35%;
+    background-color: #e4dfd2;
 }
 
 #back_to_top{
-    position: absolute;
-    top: 85%;
+    position: relative;
+    top: 10%;
     left: 45%;
-    width: 10.5%;
-    height: 9.5%;
+    width: 10.5vw;
+    height: 9.5vh;
 }
 
 #back_to_top .en-title{
@@ -1713,7 +1785,7 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     transition: .6s;
-    top: 64%;
+    top: 22%;
 }
 .footer-margin {
     padding: 7% 9%;
