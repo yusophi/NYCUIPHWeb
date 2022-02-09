@@ -206,18 +206,6 @@ function on(n) {
     {
         document.getElementById("overlay2").style.display = "block";
     }
-    /*else if (n == 3)
-    {
-        document.getElementById("profile_overlay1").style.display = "block";
-        document.getElementById("main-nav").style.display = "none";
-
-    }
-    else if (n == 4)
-    {
-        document.getElementById("profile_overlay2").style.display = "block";
-        document.getElementById("main-nav").style.display = "none";
-
-    }*/
 }
   
 function off(n) {
@@ -232,21 +220,6 @@ function off(n) {
     {
         document.getElementById("overlay2").style.display = "none";
     }
-    /*else if (n == 3)
-    {
-        document.getElementById("profile_overlay1").style.display = "none";
-        document.getElementById("main-nav").style.display = "block";
-    }
-    else if (n == 4)
-    {
-        document.getElementById("profile_overlay2").style.display = "none";
-        document.getElementById("main-nav").style.display = "block";
-
-    }else if (n == 5)
-    {
-        document.getElementById("profile_overlay3").style.display = "none";
-        document.getElementById("main-nav").style.display = "block";
-    }*/
 }
 // end of overaly
 

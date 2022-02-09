@@ -5,8 +5,7 @@
 ?>
 
 <?php get_header(); ?>
-<link href="css/news.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
+
 <div class="page_News">
     <div class="banner">
         <span class="page_name" id="zh">最新消息<br></span>
@@ -14,15 +13,11 @@
         <div id="circle"></div>
     </div>
     <div class="class_selector">
-        <label class="select_container" id="selection_all">全部
+        <label class="select_container" id="selection_all">總覽
             <input type="radio" checked="checked" name="radio">
             <span class="checkmark"></span>
         </label>
-        <label class="select_container" id="selection_general">一般公告
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container">公衛所新聞
+        <label class="select_container" id="selection_general">公告
             <input type="radio" name="radio">
             <span class="checkmark"></span>
         </label>
@@ -34,10 +29,26 @@
             <input type="radio" name="radio">
             <span class="checkmark"></span>
         </label>
+        <ul>
+            <?php 
+                $categories = get_terms( array(
+                    'taxonomy' => 'category',
+                    'orderby'    => 'name',
+                    'include' => '20,21,22,23,24',
+                    'hide_empty' => 0,
+                ) );
+                if ( ! empty( $categories ) && ! is_wp_error( $categories ) ){
+                    foreach ( $categories as $category ) {
+                        echo $category->name;
+                    }
+                }
+            ?> 
+        </ul>
+
     </div>
 
     <div class="news_block">
-        <?php //query the recent 6 posts
+        <?php 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $args = array(
                 'post_type' => 'post',
@@ -76,7 +87,23 @@
                         <div class="article-meta">
                             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                             <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                            <span class="post_category"><?php the_category(' , '); ?></span>
+                            <div class="post_categories">
+                                <?php 
+                                    /*$args_cate = array(
+                                        'order'   => 'ASC'
+                                    );*/
+                                   
+                                    $categories = get_the_category();
+                                    //echo $categories;
+                                    //var_dump($categories);
+                                    if ( ! empty( $categories ) ) {
+                                        foreach( $categories as $category ) {
+                                            //echo $category->name;
+                                            echo '<div class="post_category"><p>'. $category->name . '</p></div>';
+                                        }
+                                    }
+                                ?>
+                            </div>
                             <!--<span><?php //the_tags('', ' , ', ''); 
                                         ?></span>-->
                         </div>
@@ -93,7 +120,7 @@
     <!--<div class="news_block" id="new_bkg"></div>-->
 
     <div class="pagination">
-        <!--<img class="icon-paging prev_page" src="<?php bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
+        <!--<img class="icon-paging prev_page" src="<?php// bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
             
                 <?PHP
                     $big = 999999999; // need an unlikely integer
@@ -116,19 +143,14 @@
         <!--<img class="icon-paging next_page" src="<?php //bloginfo('template_url') ?>/images/page_news/next_page.svg">-->
         
     </div>
-    <div class="deco_waves" id="footer_wave">
-        <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
-    </div>
-    <div class="block-title" id="back_to_top" onclick="topFunction()">
-            <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
-            <span class="en-title">back to top</span>
-    </div>
-    <?php get_footer(); ?>
     
+    <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+
 <script>
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
 </script>
+<?php get_footer(); ?>

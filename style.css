@@ -128,7 +128,6 @@ body::-webkit-scrollbar {
     background-color: #f2e7ce;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    
 
 }*/
 
@@ -167,18 +166,17 @@ body::-webkit-scrollbar {
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
 
+
 #main-nav {
     position: fixed;
-    /*width: 100vw;*/
     width: 100vw;
-    /*height: 20.2%;*/
+    top:0;
+    z-index: 999;
     background-color: #e4dfd2;
-    /*border-radius: 0px 0px 25px 25px;*/
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     box-shadow: 0px 1px 2rem -1rem rgba(0.0,0.0,0.0,0.3);
     transition: 0.3s;
-    /*z-index: 99;*/
 }
 
 #upper-nav {
@@ -198,9 +196,7 @@ body::-webkit-scrollbar {
     /*border: solid 2px #2e4565;*/
     /*width: 19.9%;
     height: 41.6%;*/
-   
     transform: 0.3s;
-
 }
 
 

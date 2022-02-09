@@ -1,12 +1,10 @@
-
 .page_News{
-    position: absolute;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction:column;
+    align-items: center;
     background-color: #e4dfd2;
-    z-index: -1;
 }
 
 .banner{
@@ -16,7 +14,6 @@
     margin-top: 20%;
     margin-left: 9%;
     margin-right: 9%;
-    background-color: #e4dfd2;
 }
 
 .page_name{
@@ -59,6 +56,7 @@
     align-items: center;
     background-color: #e4dfd2;
     border-bottom: solid 2px #2e4565;
+    border: solid 2px #ffbb00;
 }
 
 /***********/
@@ -141,17 +139,12 @@
 /*the News_block */
 .news_block{
     position: relative;
-    width: 100%;
+    width: 100vw;
     margin-top: 5%;
     height: auto;
     background-color: #e4dfd2;
 }
-/*#new_bkg{
-    margin-top: 120%;
-    z-index: -1;
-}*/
-/*** the post style ***/
-/* Posts */
+
 .news-article
 {
     width: 100%;
@@ -163,10 +156,8 @@
 .article-content {
     position: relative;
     display: inline-block;
-    width: 22.8%;
-    height: 20rem;
-    /*min-width: 22.8vw;
-    max-height: 46.6vh;*/
+    width: 22.8vw;
+    height: 18.6vw;
     left: 1.5%;
     right: 1.9%;
     background-color: #e4dfd2;
@@ -231,7 +222,6 @@
     border-top: solid 2px #2e4565;
     border-right: solid 2px #2e4565;
     transition: width 800ms, height 800ms ease-in-out;
-
 }
 
 .article-meta{
@@ -240,7 +230,6 @@
     width: 7rem;
     height: 1.5rem;
     transition: 500ms cubic-bezier(.52,.06,.42,.86);
-
 }
 
 .post_time{
@@ -254,34 +243,35 @@
     font-weight: bold;
     letter-spacing: normal;
 }
-/*
-.icon-clock
-{
-    position: absolute;
-    width: 19.2%;
-    height: 18.8%;
-    border: solid 2px #ffbb00;
-}
-*/
-.post_category{
-    position: absolute;
-    left: 0;
-    top: 2rem;
-    padding: 0.251rem 0.813rem 0.374rem;
-    border-radius: 15px;
-    background-color: #374a73;
-    text-align: center;
-}
-.post_category a{
-    color: #ffbb00;
-    font-family: 'Noto Sans TC', sans-serif;
-    text-decoration: none;
-    font-size: 0.47rem;
-    line-height: 1.57;
-    letter-spacing: 2px;
-    font-weight: bold;
+
+
+.post_categories{
+    position: relative;
+    left: -1vw;
+    margin-top: 0.5vw;
+    display: flex;
+    flex-direction: row;
 }
 
+.post_category{
+    background-color: #2e4565;
+    border-radius: 15px;
+    margin-left: 1vw;
+    height: 1.7vw;
+}
+
+.post_category > p{
+    position: relative;
+    top:0.45vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    color: #ffbb00;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.8475rem;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 .article-title
 {
@@ -353,11 +343,12 @@
 
 .pagination{
     position: relative;
-    width: 82%;
-    margin-left: 9%;
-    margin-right: 9%;
-    height: 10vh;
-    margin-top: 13%;
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 11.9vw;
+    margin-top: 11.9vw;
+    margin-bottom: 8.69vw;
 }
 
 .page-numbers {
@@ -409,29 +400,13 @@
     right: 35rem;
 }
 
- /*** back to top btn ***/
-.deco_waves{
-    position: relative;
-    margin-top: 10%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /*z-index: -1;*/
-}
-/* let waves have spacing*/
-.deco_waves img{
-    margin-top: 2%;
-}
-
 .block-title{
-    width: 15.5%;
-    height: 13.5%;
+    position: relative;
+    width: 9.5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin-top: -26.5vh;
 } 
 
 .block-title span{
@@ -441,130 +416,19 @@
     text-align: center;
 }
 
-#back_to_top{
-    position: relative;
-    top: -10%;
-    left: 45%;
-    width: 10.5%;
-    height: 9.5%;
+.icon{
+    width: auto;
+    height: auto; 
 }
 
-#back_to_top .en-title{
-    font-size: 1rem;
-    line-height: 0.05;
-    letter-spacing: 1.5px;
-    text-align: left;
+.ch-title{
+    margin-top: 0.5vw;
+    font-size: 1.875rem;
+    letter-spacing: 0.3125vw;
 }
 
-#back_to_top .icon{
-    margin-bottom: 8%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+.en-title{
+    margin-top: 0.5vw;
+    font-size: 1.406rem;
+    letter-spacing: 1.8px;
 }
-
- /***********************/
-
- .Footer-container {
-    position: relative;
-    width: 100%;
-    min-height: 105vh;
-    background-color: #162a47;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    transition: .6s;
-    margin-top: 15vh;
-    z-index: 1;
-}
-.footer-margin {
-    padding: 7% 9%;
-    padding-bottom: 0%;
-    position: relative;
-}
-.footer-exclam {
-    width: 64.6%;
-    opacity: 0.7;
-    font-family:  'Noto Sans TC', sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.32;
-    letter-spacing: 6.5px;
-    color: #efeee4;
-}
-.footer-divider {
-    width: 100%;
-    height: 1px;
-    background-color: #d9e0e2;
-    z-index: 3;
-    margin-top: 5.03%;
-    opacity: 0.7;
-}
-.footer-pic img{
-    transform: translate3d(200%, -65%, 0);
-    background-color: #162a47;
-    width: 25rem;
-    height: 14.09rem;
-
-}
-.footer-info {
-    position: absolute;
-    top: 75%;
-    opacity: 0.7;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.79725rem; 
-    font-weight: 300;
-    line-height: 1.66; 
-    letter-spacing: 2.55px;
-    color: #efeee4;
-}
-
-.footer-statement {
-    position: absolute;
-    opacity: 0.7;
-    font-family: NotoSansTC;
-    font-size: 0.79725rem;
-    font-weight: 300;
-    line-height: 1.76;
-    letter-spacing: 2.55px;
-    bottom: -27%;
-    right: 9%;
-    color: #efeee4;
-    text-align: right;
-}
-
-.footer-iconscout-link {
-    color: #6c63ff;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.paging ul {
-    float:right;
-}
-.paging ul li {
-    float:left;
-    margin:0px 0px 2px 0px;
-}
-.paging ul li a{
-    background-color:#000;
-    color:#FFF;
-    padding:7px 11px 7px 11px;
-    font-size:12px;
-    border:solid 2px #000;
-    margin-left:1px;
-}
-.paging ul li .current, .paging ul li .dots  {
-    background-color:#FFF;
-    color:#000;
-    padding:7px 11px 7px 11px;
-    font-size:12px;
-    border:solid 2px #000;
-    margin-left:1px;
-}
-.paging ul li a:hover {
-    background-color:#333;
-}
-
-
-
-/******pagination *******/

@@ -1,0 +1,42 @@
+
+/* the waves decorations */
+.deco_waves{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* let waves have spacing*/
+.deco_waves img{
+    width: 100vw;
+    margin-top: 2%;
+}
+
+.footer-back-to-top{
+    position: relative;
+    background-color: #e4dfd2;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.back_to_top{
+    position: relative;
+    top: -12.5vw;
+    width: 10.5vw;
+    height: 9.5vh;
+}
+
+.back_to_top .en-title{
+    font-size: 1rem;
+    line-height: 0.05;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+.back_to_top .icon{
+    margin-bottom: 8%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

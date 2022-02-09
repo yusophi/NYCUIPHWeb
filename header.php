@@ -135,7 +135,7 @@
             </nav>
         </div>
     </div>
-    <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
+    
             
     <head>
     <?php
@@ -167,4 +167,6 @@
 
     ?>
     </head>
+    <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
+
     

@@ -21,11 +21,11 @@
                   'posts_per_page' => 7
             );
             $arr_posts = new WP_Query($args);
+            $counter = 0;
             if ($arr_posts->have_posts()) :
             ?>
                   <div class="images-container">
                         <?php
-                        $counter = 0;
                         while ($arr_posts->have_posts()) :
                               $arr_posts->the_post();
                               $counter = $counter + 1;
@@ -42,8 +42,8 @@
             <?php endif;
             wp_reset_postdata(); ?>
 
-            <div class="bar">
-                  <?php for ($i = 0; $i < 7; $i++) : ?>
+            <div class="image-bar">
+                  <?php for ($i = 0; $i < $counter ; $i++) : ?>
                         <div class="dot" onclick="currentImage(<?php echo $i + 1; ?>)"></div>
                   <?php endfor; ?>
             </div>
@@ -207,149 +207,149 @@
       </div>
       <!-- Jenny: About Us block-->
       <div class="About-container">
-            <div class="block-title" id="abouttitle">
+            <div class="block-title abouttitle">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
                   <span class="ch-title">關於我們<br></span>
                   <span class="en-title">About</span>
             </div>
-
-            <div class="intro_content">
-                  <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
-                  <div class="iph_en"> <?php the_field('iph_en') ?></div>
-                  <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
-                  <img class="icon_aboutus_1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
-                  <div class="bt-readmore aboutUS_intro_btn">
-                        <a class="readmore">read more</a>
-                        <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
-                        <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
-                  </div>
-            </div>
-
-            <div class="videos">
-                  <div class="module video1">
-                        <span class="bk_num video1">01.</span> 
-                        <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
-                        <div class="video_title video1"> <?php the_field('video_title1') ?></div>    
-                        <div class="bt-watchmore video1" onclick="on(1)">
-                              <a class="watchmore">watch</a>
-                              <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
-                              <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+            <div class="Aboutus-content-container">
+                  <div class="intro_content">
+                        <div class="intro_content-text">
+                              <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
+                              <div class="iph_en"> <?php the_field('iph_en') ?></div>
+                              <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
+                        <!--<img class="icon_aboutus_1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
+                                    -->
                         </div>
-                        <div id="overlay1"  class="overlay" onclick="off(1)">
-                              <div class="overlay_content">
-                                    <img class="closebtn" onclick="off(1)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
-                                    <div class="video_content"><?php the_field('video1') ?></div>
+                        <div class="bt-readmore aboutUS_intro_btn">
+                              <a class="readmore">read more</a>
+                              <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
+                              <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
+                        </div>
+                  </div>
+
+                  <div class="videos">
+                        <div class="module video1">
+                              <span class="bk_num video1">01.</span> 
+                              <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
+                              <div class="video_title video1"> <?php the_field('video_title1') ?></div>    
+                              <div class="bt-watchmore video1" onclick="on(1)">
+                                    <a class="watchmore">watch</a>
+                                    <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
+                                    <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
+                              </div>
+                              <div id="overlay1"  class="overlay" onclick="off(1)">
+                                    <div class="overlay_content">
+                                          <img class="closebtn" onclick="off(1)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                          <div class="video_content"><?php the_field('video1') ?></div>
+                                    </div>
                               </div>
                         </div>
-                  </div>
-                  <div class="module video2">
-                        <span class="bk_num video2">02.</span> 
-                        <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
-                        <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
-                        <div class="bt-watchmore video2" onclick="on(2)">
-                              <a class="watchmore">watch</a>
-                              <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
-                              <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
-                        </div>
-                        <div id="overlay2" class="overlay" onclick="off(2)">
-                              <div class="overlay_content">
-                                    <img class="closebtn" onclick="off(2)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
-                                    <div class="video_content"><?php the_field('video2') ?></div>
+                        <div class="module video2">
+                              <span class="bk_num video2">02.</span> 
+                              <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
+                              <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
+                              <div class="bt-watchmore video2" onclick="on(2)">
+                                    <a class="watchmore">watch</a>
+                                    <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
+                                    <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                               </div>
-                        </div>        
+                              <div id="overlay2" class="overlay" onclick="off(2)">
+                                    <div class="overlay_content">
+                                          <img class="closebtn" onclick="off(2)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
+                                          <div class="video_content"><?php the_field('video2') ?></div>
+                                    </div>
+                              </div>        
+                        </div>
                   </div>
-            </div>
-
-            <div class="deco_waves">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_1.png">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_2.svg">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_3.svg">
-                  <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
+                  <div class="deco_waves" id="up_waves">
+                        <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_2.svg">
+                        <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_3.svg">
+                        <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_4.svg">            
+                  </div>
             </div>
             
-            
-      </div>
+            <div class="Specialization-container"> 
+                  <div class="block-title" id="Specialization_title">
+                        <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-SP.svg">
+                        <span class="ch-title">專業領域<br></span>
+                        <span class="en-title">Specialization</span>
+                  </div>
 
-      <div class="Specialization-container"> 
-            <div class="block-title" id="Specialization_title">
-                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-SP.svg">
-                  <span class="ch-title">專業領域<br></span>
-                  <span class="en-title">Specialization</span>
-            </div>
-            <div id="SP_content_container">
-                  <div id="SP_1" class="SP_content">
-                        <div class="SP_img_shadow">
-                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
+                  <div id="SP_content_container">
+                        <div id="SP_1" class="SP_content">
+                              <div class="SP_img_shadow">
+                                    <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
+                              </div>
+                              <span class="SP_ch_title">流行病學<br></span>
+                              <span class="SP_en_title">Epidemiology</span>
                         </div>
-                        <span class="SP_ch_title">流行病學<br></span>
-                        <span class="SP_en_title">Epidemiology</span>
-                  </div>
-                  <div id="SP_2" class="SP_content">
-                        <div class="SP_img_shadow">
-                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
+                        <div id="SP_2" class="SP_content">
+                              <div class="SP_img_shadow">
+                                    <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
+                              </div>
+                              <span class="SP_ch_title">生物統計與資料科學<br></span>
+                              <span class="SP_en_title">Biostatistics and Data Science</span>
                         </div>
-                        <span class="SP_ch_title">生物統計與資料科學<br></span>
-                        <span class="SP_en_title">Biostatistics and Data Science</span>
-                  </div>
-                  <div id="SP_3" class="SP_content">
-                        <div class="SP_img_shadow">
-                              <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
+                        <div id="SP_3" class="SP_content">
+                              <div class="SP_img_shadow">
+                                    <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
+                              </div>
+                              <span class="SP_ch_title">健康政策與法律<br></span>
+                              <span class="SP_en_title">Policy and Law</span>
                         </div>
-                        <span class="SP_ch_title">健康政策與法律<br></span>
-                        <span class="SP_en_title">Policy and Law</span>
                   </div>
             </div>
-      </div>
-      
-      <div class="deco_waves" id="below_wave">
+            
+            <div class="deco_waves" id="below_wave">
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_5.svg">
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_6.svg">
                   <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/wave_7.svg">
-      </div>
+            </div>
       
-      <div class="Interview-container">
-            <div class="cards">
-                  <?php //query the recent 6 posts
-                  $args = array(
-                        'post_type' => 'post',
-                        'post_status' => 'publish',
-                        'category_name' => 'interviews',
-                        'category__not_in' => array(14),
-                        'orderby' => 'date',
-                        'posts_per_page' => 6
-                  );
+            <div class="Interview-container">
+                  <div class="cards">
+                        <?php //query the recent 6 posts
+                        $args = array(
+                              'post_type' => 'post',
+                              'post_status' => 'publish',
+                              'category_name' => 'interviews',
+                              'category__not_in' => array(14),
+                              'orderby' => 'date',
+                              'posts_per_page' => 6
+                        );
 
-                  $arr_posts = new WP_Query($args);
+                        $arr_posts = new WP_Query($args);
 
-                  if ($arr_posts->have_posts()) :
-                  ?>
-                        <?php
-                        //$counter = 0;
-                        while ($arr_posts->have_posts()) :
-                              $arr_posts->the_post();
-                              //$counter = $counter + 1;
+                        if ($arr_posts->have_posts()) :
                         ?>
-                              <div class="interview-slide">
-                                    
-                                    <div class="interview-picture">
-                                          <?php echo wp_get_attachment_image( get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
-                                    </div>      
-                                    <div class="interview-text-content">
-                                          <a class="interview-title"href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
-                                          <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "..." ?></span>
-                                    </div>
+                              <?php
+                              //$counter = 0;
+                              while ($arr_posts->have_posts()) :
+                                    $arr_posts->the_post();
+                                    //$counter = $counter + 1;
+                              ?>
+                                    <div class="interview-slide">
                                           
-                              </div>
-                        <?php endwhile; ?>
-                  
-                  <?php endif; wp_reset_postdata(); ?>
-            </div> 
+                                          <div class="interview-picture">
+                                                <?php echo wp_get_attachment_image( get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
+                                          </div>      
+                                          <div class="interview-text-content">
+                                                <a class="interview-title"href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
+                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "..." ?></span>
+                                          </div>
+                                                
+                                    </div>
+                              <?php endwhile; ?>
+                        
+                        <?php endif; wp_reset_postdata(); ?>
+                  </div> 
+            </div>
       </div>
-      
 
       <!-- Milo: 從這裡開始是links的內容 -->
       <div class="Links-container">
-            <div class="block-title" id="links_title">
+            <div class="block-title links_title">
                   <img  class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-links.svg">
                   <span class="ch-title">相關連結<br></span>
                   <span class="en-title">Links</span>
@@ -429,7 +429,7 @@
       
       <!-- Jenny: Contact Us block start-->
       <div class="ContactUs-container"> 
-            <div class="block-title" id="ContactUS_title">
+            <div class="block-title contactUS_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-contact.svg">
                   <span class="ch-title">聯絡我們<br></span>
                   <span class="en-title">Contact us</span>
@@ -541,17 +541,11 @@
             </div>
             
       </div>
-      <div class="deco_waves" id="footer_wave">
-            <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
-      </div>
-      <div class="block-title" id="back_to_top" onclick="topFunction()">
-            <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
-            <span class="en-title">back to top</span>
-      </div>
-      <?php get_footer(); ?>
-      
+
+      <?php get_template_part( 'template-parts/backtoTOP');?>
+
       <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
       <script src="<?php bloginfo('template_url') ?>/js/draggable-slides.js"></script>
 </div>
 
-
+<?php get_footer(); ?>

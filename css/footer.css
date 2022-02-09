@@ -1,46 +1,65 @@
 .Footer-container {
-    width: 100%;
-    min-height: 95%;
+    width: 100vw;
+    min-height: 56.25vw;
     background-color: #162a47;
     position: relative;
     z-index: 2;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     transition: .6s;
-    top: 64%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: -6vw;
 }
+
 .footer-margin {
-    padding: 7% 9%;
-    padding-bottom: 0%;
+    width: 82vw;
+    /*padding: 7% 9%;
+    padding-bottom: 0%;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10.39vw 8.95vw 0 8.95vw;
 }
+
 .footer-exclam {
-    width: 64.6%;
+    width: 53vw;
     opacity: 0.7;
     font-family:  'Noto Sans TC', sans-serif;
-    font-size: 3rem;
+    font-size: 3.04725rem;
     font-weight: bold;
-    line-height: 1.32;
+    line-height: 1.38;
     letter-spacing: 6.5px;
     color: #efeee4;
 }
+
 .footer-divider {
+    position: relative;
     width: 100%;
     height: 1px;
     background-color: #d9e0e2;
-    z-index: 3;
-    margin-top: 5.03%;
+    z-index: 5;
+    margin-top: 5vw;
     opacity: 0.7;
 }
-.footer-pic img{
-    transform: translate3d(200%, -60%, 0);
-    background-color: #162a47;
-    width: 25rem;
-    height: 14.09rem;
 
-}
-.footer-info {
+.footer-pic img{
     position: absolute;
-    bottom: 4.3%;
+    /*transform: translate3d(200%, -60%, 0);*/
+    top: 8.5vw;
+    left: 53vw;
+    background-color: #162a47;
+    width: 26.9vw;
+    height: 15.15rem;
+    z-index: 5;
+}
+
+.footer-info {
+    /*bottom: 4.3%;*/
+    position: relative;
+    margin-top: 5vw;
     opacity: 0.7;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.79725rem; 
@@ -52,17 +71,18 @@
 
 .footer-statement {
     position: absolute;
+    bottom: 0;
+    right: 0;
     opacity: 0.7;
     font-family: NotoSansTC;
     font-size: 0.79725rem;
     font-weight: 300;
     line-height: 1.76;
     letter-spacing: 2.55px;
-    bottom: 4.3%;
-    right: 9%;
     color: #efeee4;
     text-align: right;
 }
+
 .footer-iconscout-link {
     color: #6c63ff;
     cursor: pointer;

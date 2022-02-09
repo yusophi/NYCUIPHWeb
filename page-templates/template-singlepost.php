@@ -5,16 +5,13 @@
  */
 ?>
 <?php get_header(); ?>
-<link href="css/singlepost.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
-
 
 <div class="single_post">
     <div class="banner">
         <span class="post_title"><p><?php the_title(); ?></p></span>
         <div id="circle"></div>
         <div class="banner_article_meta">
-            <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+            <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
             <div class="banner_post_category"><?php the_category(' , '); ?></div>
         </div>      
