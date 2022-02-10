@@ -70,9 +70,11 @@
   //enqueue the stylesheet
   function mytheme_style_files() { 
     wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
+    wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
-    wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
+    wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
+    //wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
 
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');

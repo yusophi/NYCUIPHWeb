@@ -145,23 +145,21 @@ body::-webkit-scrollbar {
 }
 
 .web_name{
-    
     margin-left: 1.8%;
     color: #374a73;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    line-height: 1.6rem;
-    /*border: solid 2px #2e4565;*/
 }
 .Name {
     
-    font-size: 1.3rem;
+    font-size: 1.3125rem;
     letter-spacing: 3.5px;
+    line-height: 1.18;
 }
 .enName
 {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 0.84375rem;
+    letter-spacing: 0.18px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
@@ -241,7 +239,32 @@ body::-webkit-scrollbar {
   }
 
 #logo {
-    transition: 0.3s;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    width: 3.75vw;
+    height: 3.75vw;
+    margin: 0.57vw 1.5vw 0.57vw 0;
+    border-radius: 1.5vw;
+    box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
+    background-color: #2e4565;
+}
+
+#logo > span{
+    position: relative;
+    top: 1.15vw ;
+    left: 1.15vw;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    text-align: left;
+    color: #e4dfd2;
+}
+
+#logo:hover{
+    border-radius: 3vw;
 }
 
 #mark {
@@ -288,37 +311,18 @@ body::-webkit-scrollbar {
     transition: 0.3s;
 }
 
-
 #nav-menu li a{
     display: block;
     min-height: 2rem;
-    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.2rem;
-    /*font-size: 1.15rem;
-    font-weight: normal;
-    letter-spacing: 4px;
-    line-height: 0.05;
-    color: #2e4565;
-    text-decoration: none;*/
-    /*font-weight: bold;*/
-    letter-spacing: 4px;
+    font-size: 0.9375rem;
+    letter-spacing: 3px;
     color: #2e4565;
 }
 
 #nav-menu li a:hover{
     font-weight: bold;
 }
-
-/*div ul li{
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.25rem;
-    letter-spacing: 4px;
-    color:#2e4565;
-    list-style: none;
-    text-decoration: none;
-    opacity: 0.5;
-}*/
 
 #nav-hr.none-display {
     transform: translateY(-30px);
@@ -358,25 +362,22 @@ body::-webkit-scrollbar {
     cursor: pointer;
     display: block;
     text-decoration: none;
-
 }
 
 .dropdown-menu ul li {
-    margin-top: 1.563rem;
+    margin-top: 1rem;
     max-width: 6rem;
     cursor: pointer;
     width: 100%;
     height: 100%;
-  
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.12rem;
-    letter-spacing: 4px;
+    font-size: 0.9375rem;
+    letter-spacing: 3px;
     color:#2e4565;
     list-style: none;
     text-decoration: none;
-    opacity: 0.5;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 2;
 }
 
 #slider-section {
@@ -389,76 +390,3 @@ body::-webkit-scrollbar {
     place-items: center;
     padding: 5.188rem 10.75rem 7.938rem 10.75rem
 }
-
-/* Milo: Start of footer part */
-/*.Footer-container {
-    width: 100%;
-    min-height: 95%;
-    background-color: #162a47;
-    position: fixed;
-    z-index: 2;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    transition: .6s;
-    bottom: 0%;
-}
-.footer-margin {
-    padding: 7% 9%;
-    padding-bottom: 0%;
-}
-.footer-exclam {
-    width: 64.6%;
-    opacity: 0.7;
-    font-family:  'Noto Sans TC', sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.32;
-    letter-spacing: 6.5px;
-    color: #efeee4;
-}
-.footer-divider {
-    width: 100%;
-    height: 1px;
-    background-color: #d9e0e2;
-    z-index: 3;
-    margin-top: 5.03%;
-    opacity: 0.7;
-}
-.footer-pic img{
-    transform: translate3d(200%, -60%, 0);
-    background-color: #162a47;
-    width: 25rem;
-    height: 14.09rem;
-
-}
-.footer-info {
-    position: absolute;
-    bottom: 4.3%;
-    opacity: 0.7;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.79725rem; 
-    font-weight: 300;
-    line-height: 1.66; 
-    letter-spacing: 2.55px;
-    color: #efeee4;
-}
-
-.footer-statement {
-    position: absolute;
-    opacity: 0.7;
-    font-family: NotoSansTC;
-    font-size: 0.79725rem;
-    font-weight: 300;
-    line-height: 1.76;
-    letter-spacing: 2.55px;
-    bottom: 4.3%;
-    right: 9%;
-    color: #efeee4;
-    text-align: right;
-}
-.footer-iconscout-link {
-    color: #6c63ff;
-    cursor: pointer;
-    text-decoration: none;
-}*/
-/* Milo: End of footer part */

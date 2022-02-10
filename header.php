@@ -29,7 +29,10 @@
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
                     <div id="upper-nav">
-                        <div id="logo"><img src="<?php bloginfo('template_url')?>/images/icon/LOGO.png" width="72" /></div>
+                        <div id="logo">
+                            <span>iPH.</span>
+                            <!--<img src="<?php //bloginfo('template_url')?>/images/icon/LOGO.png" width="72" />-->
+                        </div>
                         <!--<div id="mark"><img src="<?php bloginfo('template_url')?>/images/icon/MARK.png" width="205.5" /></div>
                         -->
                         <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
@@ -37,13 +40,6 @@
                             <span class="enName">Institute of Public Health, NYCU</span>
                         </a>
                     </div>
-                    <!--<div class="title">
-                        <div class="logo"></div>
-                        <a class="web_name" href="<?php //bloginfo('url'); ?>">
-                            <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
-                            <span class="enName">Institute of Public Health, NYCU</span>
-                        </a>
-                    </div>-->
                     <div id="nav-toolbar">
                         <div id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></div>
                         <div id="icon-search"><img src="<?php bloginfo('template_url')?>/images/icon/icon-search.png"></div>
@@ -59,8 +55,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="">系所簡介</a></li>
-                                <li class="nav-list-item-1"><a href="">師資陣容</a></li>
-                                <li class="nav-list-item-1"><a href="">行政助教</a></li>
+                                <li class="nav-list-item-1"><a href="">系所成員</a></li>
                             </ul>
                         </div>
                     </li>
@@ -68,8 +63,9 @@
                         <a class="menu-list nav-list-item-2" href="<?php echo site_url(); ?>/news/">最新消息</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-2"><a href="">系所公告</a></li>
-                                <li class="nav-list-item-2"><a href="">公衛所新聞</a></li>
+                                <li class="nav-list-item-2"><a href="">總覽</a></li>
+                                <li class="nav-list-item-2"><a href="">公告</a></li>
+                                <li class="nav-list-item-2"><a href="">獎學金</a></li>
                                 <li class="nav-list-item-2"><a href="">COVID-19</a></li>
                             </ul>
                         </div>
@@ -114,13 +110,6 @@
                             </ul>
                         </div>
                     </li>
-                    <li id="nav-main-list-item-7">
-                        <a class="menu-list nav-list-item-7">相關資源</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                            </ul>
-                        </div>
-                    </li>
                     <li id="nav-main-list-item-8">
                         <a class="menu-list nav-list-item-8">公衛學科</a>
                         <div class="dropdown-menu">
@@ -130,6 +119,14 @@
                         <a class="menu-list nav-list-item-9">醫人暨教育學科</a>
                         <div class="dropdown-menu"></div>
                     </li>
+                    <li id="nav-main-list-item-7">
+                        <a class="menu-list nav-list-item-7">相關資源</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                            </ul>
+                        </div>
+                    </li>
+                    
                 </ul>
                 </div>
             </nav>

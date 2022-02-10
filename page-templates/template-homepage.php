@@ -99,24 +99,25 @@
                                     <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
                                     <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
                                     <div class="border-anim">
-                                          <div class="inner-box"></div>
+                                                <div class="inner-box"></div>
                                     </div>
                                     <div class="article-meta">
-                                          <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                          <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                                          <span class="post_category"><?php the_category(' , '); ?></span>
-                                          <!--<span><?php //the_tags('', ' , ', ''); 
-                                                      ?></span>-->
+                                                <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                                <span class="post_time"><?php the_time('Y.m.j'); ?></span>
+                                                <!--<div class="post_category"><?php //the_category(''); ?></div>
+                                                <span><?php //the_tags('', ' , ', ''); 
+                                                            ?></span>-->
                                     </div>
+                                    <div class="post_category"><?php the_category(''); ?></div>
                                     <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
+                                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
                                     <div class="clearfix"></div>
                               </div>
                         <?php endwhile; ?>
                   </div>
             <?php endif; wp_reset_postdata(); ?>
             <div class="bt-readmore news_readmore_btn">
-                  <a class="readmore">read more</a>
+                  <a class="readmore" href="<?php echo site_url(); ?>/news/">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
             </div> 
@@ -164,14 +165,12 @@
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
                                                                         <div class="event-date"><?php the_field('event_date')?> </div>
-                                                                        <div class="event-tags">
-                                                                              <span class="event-tag-mask"><?php the_field('event_category')?></span>
-                                                                              <span class="event-tag-mask"><?php the_field('location')?></span>
-                                                                        </div>
+                                                                        <div class="event-categories"><?php the_category(''); ?></div>
+                                                                        <div class="event-location"><?php the_field('location')?></div>
                                                                   </div>
                                                             </div>
-                                                            <div class="event-name"><?php the_title(); ?></div>
-                                                            <div class="event-intro"><?php the_excerpt(); ?></div>
+                                                            <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                                            <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."?></div>
                                                       </div>
                                                 </div>
                                           </div>

@@ -72,44 +72,28 @@
                     $counter = $counter + 1;
             ?>
                 <div class="article-content num-<?php echo $counter ?>">
-                        <div class="post_counter <?php echo $counter ?>">
-                            <?php if($counter >= 10){
+                    <div class="post_counter <?php echo $counter ?>">
+                        <?php if($counter >= 10){
                                 echo $counter . ".";
-                            }
-                                else
-                                {echo "0" . $counter . ".";} ?>&nbsp;&nbsp;
-                        </div>
-                        <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
-                        <div class="border-anim">
-                                <div class="inner-box"></div>
-                        </div>
-                        <div class="article-meta">
+                            }else{
+                                echo "0" . $counter . ".";} ?>&nbsp;&nbsp;
+                    </div>
+                    <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
+                    <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                    <div class="border-anim">
+                            <div class="inner-box"></div>
+                    </div>
+                    <div class="article-meta">
                             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                             <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                            <div class="post_categories">
-                                <?php 
-                                    /*$args_cate = array(
-                                        'order'   => 'ASC'
-                                    );*/
-                                   
-                                    $categories = get_the_category();
-                                    //echo $categories;
-                                    //var_dump($categories);
-                                    if ( ! empty( $categories ) ) {
-                                        foreach( $categories as $category ) {
-                                            //echo $category->name;
-                                            echo '<div class="post_category"><p>'. $category->name . '</p></div>';
-                                        }
-                                    }
-                                ?>
-                            </div>
-                            <!--<span><?php //the_tags('', ' , ', ''); 
+                            <!--<div class="post_category"><?php //the_category(''); ?></div>
+                            <span><?php //the_tags('', ' , ', ''); 
                                         ?></span>-->
-                        </div>
-                        <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
-                        <div class="clearfix"></div>
+                    </div>
+                    <div class="post_category"><?php the_category(''); ?></div>
+                    <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
+                    <div class="clearfix"></div>
                 </div>
             <?php endwhile; ?>
         </div>
