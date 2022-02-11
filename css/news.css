@@ -95,15 +95,24 @@
     border: solid 2px #2e4565;
     border-radius: 50%;
 }
+
+/*.checkmark-hover{
+    position: absolute;
+    top: 0.28vw;
+    left: 0.275vw;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #2e4565;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+}*/
+
+
 #selection_all{
     margin-left: 0;
 }
-#selection_general{
-    margin-left: 7%;
-}
-#selection_covid19{
-    margin-left: 7%;
-}
+
 /* On mouse-over, add a grey background color */
 .select_container:hover input ~ .checkmark {
     background-color: #2e4565;
@@ -113,6 +122,10 @@
 .select_container input:checked ~ .checkmark {
     background-color: #2e4565;
 }
+
+/*.select_container:hover input ~ .checkmark-hover {
+    opacity: 1;
+}*/
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -133,8 +146,35 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-/*background: white;*/
 }
+
+.sdg-dropdown{
+    width: 9.47vw;
+    height: 2.1875vw;
+    position: absolute;
+    right: 0;
+    border: solid 2px #2e4565;
+    background-color: #e4dfd2;
+    color: #2e4565;
+    font-size: 0.84375rem;
+    font-weight: bold;
+    letter-spacing: 0.04vw;
+    padding-left: 1vw;
+}
+
+.sdg-dropdown option{
+    color: #2e4565;
+    font-size: 0.84375rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    border: solid 2px #2e4565;
+    background-color: #e4dfd2;
+    padding: 0.5vw;
+    font-weight: bold;
+    letter-spacing: 0.04vw;
+    padding-left: 1vw;
+}
+
+
 
 /*the News_block */
 .news_block{

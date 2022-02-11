@@ -29,9 +29,23 @@
             <input type="radio" name="radio">
             <span class="checkmark"></span>
         </label>
-        <ul>
+
+        <select class="sdg-dropdown" name="event-dropdown"> 
+            <option value=""><?php echo esc_attr_e( 'SDG', 'textdomain' ); ?></option> 
             <?php 
-                $categories = get_terms( array(
+            $categories = get_categories( array( 'child_of' => 25 ) ); 
+            foreach ( $categories as $category ) {
+                printf( '<option value="%1$s">%2$s</option>',
+                    esc_attr( '/category/archives/' . $category->category_nicename ),
+                    esc_html( $category->cat_name )
+                    //esc_html( $category->category_count )
+                );
+            }
+            ?>
+        </select>
+        <!--<ul>
+            <?php 
+                /*$categories = get_terms( array(
                     'taxonomy' => 'category',
                     'orderby'    => 'name',
                     'include' => '20,21,22,23,24',
@@ -41,9 +55,9 @@
                     foreach ( $categories as $category ) {
                         echo $category->name;
                     }
-                }
+                }*/
             ?> 
-        </ul>
+        </ul>-->
 
     </div>
 
