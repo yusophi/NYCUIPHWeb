@@ -1,10 +1,10 @@
-
 /* the waves decorations */
 .deco_waves{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 /* let waves have spacing*/
 .deco_waves img{
     width: 100vw;
@@ -13,11 +13,14 @@
 
 .footer-back-to-top{
     position: relative;
-    background-color: #e4dfd2;
     width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.back_to_top .whitetext{
+    color: #efeee4;
 }
 
 .back_to_top{

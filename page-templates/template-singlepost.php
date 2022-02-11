@@ -13,7 +13,7 @@
         <div class="banner_article_meta">
             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
-            <div class="banner_post_category"><?php the_category(' , '); ?></div>
+            <div class="banner_post_category"><?php the_category(''); ?></div>
         </div>      
     </div>
     <div class="single_post_info">
@@ -27,8 +27,8 @@
                     <p class="sidebar_title_ch">相關資訊</p>
                 </div>  
                 <div class="sidebar_content">
-                    <p class="_content">類別:<?php the_category(','); ?></p>
-                    <p class="_content">發布日期:<?php the_time('Y.m.j'); ?></p>
+                    <div class="_content" id="sidebar_content-category">類別&nbsp;:<?php the_category(''); ?></div>
+                    <p class="_content">發布日期&nbsp;:&nbsp;<?php the_time('Y.m.j'); ?></p>
                 </div>
             </div>
             <div class="sidebar_block" id="author">
@@ -59,7 +59,6 @@
         <div class="next_news_title">
             <span>下則新聞</span>
             <span id="next_news_title_eg">Next</span>
-            
         </div>
         <div class="the_next3_news">
             <?php
@@ -81,34 +80,29 @@
                             $counter = $counter + 1;
                             setup_postdata( $post );
                     ?>
-                    <!--<div> <?php //echo the_title() ?></div>-->
-                        <div class="article-content num-<?php echo $counter ?>">
-                            <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                            <div class="border-anim"></div>
-                            <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                            <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
-                            <div class="article-meta">
-                                <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                                <span class="post_category"><?php the_category(' , '); ?></span>
-                            </div>
-                            <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                            <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                    <div class="article-content whiteText num-<?php echo $counter ?>">
+                        <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
+                        <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
+                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                        <div class="border-anim">
+                            <div class="inner-box"></div>
                         </div>
+                        <div class="article-meta">
+                            <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
+                            <div class="post_time"><?php the_time('Y.m.j'); ?></div>
+                        </div>
+                        <div class="post_category"><?php the_category(''); ?></div>
+                        <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                        <div class="clearfix"></div>
+                    </div>
                     <?php endforeach; wp_reset_postdata();?>
                 <?php endif; ?>
         </div>
     </div>
 
-    <div class="deco_waves" id="footer_wave">
-        <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
-    </div>
-    <div class="back_to_top" onclick="topFunction()">
-            <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/back_to_top.svg">
-            <span class="en-title">back to top</span>
-    </div>
+    <?php get_template_part( 'template-parts/backtoTOP','whiteText');?>
 
-    <?php get_footer(); ?>
     <script>
         function topFunction() {
             document.body.scrollTop = 0;
@@ -117,3 +111,4 @@
     </script>
     
 </div>
+<?php get_footer(); ?>

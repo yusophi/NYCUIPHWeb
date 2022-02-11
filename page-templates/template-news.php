@@ -92,7 +92,7 @@
                     </div>
                     <div class="post_category"><?php the_category(''); ?></div>
                     <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_excerpt(); ?> </div>
+                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
                     <div class="clearfix"></div>
                 </div>
             <?php endwhile; ?>

@@ -74,6 +74,8 @@
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
     wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
+    wp_enqueue_style('mytheme_singlepost_style', get_theme_file_uri('css/singlepost.css'));
+
     //wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
 
   } 

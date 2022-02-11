@@ -78,7 +78,7 @@
     left: 80vw;
    
 }
-.next{
+.next-slide{
     position: absolute;
     top:51vw;
     left: 83.5vw;
@@ -984,7 +984,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #e4dfd2;
 }
 /* let waves have spacing*/
 .deco_waves img{

@@ -51,7 +51,7 @@
             <a class="previous" onclick="plusImage(-1)">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
             </a>
-            <a class="next" onclick="plusImage(1)">
+            <a class="next-slide" onclick="plusImage(1)">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
             </a>
 
