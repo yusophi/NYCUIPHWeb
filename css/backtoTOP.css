@@ -19,6 +19,10 @@
     flex-direction: column;
 }
 
+.whitetext-style{
+    background-color: none;
+}
+
 .back_to_top .whitetext{
     color: #efeee4;
 }

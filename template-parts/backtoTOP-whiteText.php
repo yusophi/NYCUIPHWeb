@@ -1,4 +1,4 @@
-<div class="footer-back-to-top">
+<div class="footer-back-to-top whitetext-style">
       <div class="deco_waves">
             <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
       </div>
