@@ -237,7 +237,7 @@
     width: 1.55rem;
     height: 1.55rem;
     font-size: 0;
-    background-image: url("../images/page_News/next_page.svg");
+    background-image: url("../images/page_news/next_page.svg");
     background-repeat:no-repeat;
     background-size: contain;
     border-radius:0;
@@ -250,7 +250,7 @@
     width: 1.55rem;
     height: 1.55rem;
     font-size: 0;
-    background-image: url("../images/page_News/prev_page.svg");
+    background-image: url("../images/page_news/prev_page.svg");
     background-repeat:no-repeat;
     background-size: contain;
     border-radius:0;

@@ -118,7 +118,6 @@
     <!--<div class="news_block" id="new_bkg"></div>-->
 
     <div class="pagination">
-        <!--<img class="icon-paging prev_page" src="<?php// bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
             
                 <?PHP
                     $big = 999999999; // need an unlikely integer
@@ -137,7 +136,7 @@
                         );
                     echo paginate_links($args);
                 ?>
-            
+        <!--<img class="icon-paging prev_page" src="<?php// bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
         <!--<img class="icon-paging next_page" src="<?php //bloginfo('template_url') ?>/images/page_news/next_page.svg">-->
         
     </div>
