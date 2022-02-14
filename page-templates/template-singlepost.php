@@ -82,8 +82,8 @@
                     ?>
                     <div class="article-content whiteText num-<?php echo $counter ?>">
                         <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                        <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                        <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-newspaper.svg">
+                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-news-more.svg">
                         <div class="border-anim">
                             <div class="inner-box"></div>
                         </div>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <g transform="translate(26.972 13.056)">
+        <rect data-name="矩形 38" width="64" height="64" rx="32" transform="translate(-26.972 -13.056)" style="fill:#efeee4"/>
+        <g transform="translate(-15.53 15.028)">
+            <circle data-name="椭圆 147" cx="4" cy="4" r="4" transform="translate(33.558 -.084)" style="fill:#2e4565"/>
+            <circle data-name="椭圆 148" cx="4" cy="4" r="4" transform="translate(16.558 -.084)" style="fill:#2e4565"/>
+            <circle data-name="椭圆 149" cx="4" cy="4" r="4" transform="translate(-.441 -.084)" style="fill:#2e4565"/>
+        </g>
+    </g>
+</svg>
