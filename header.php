@@ -54,7 +54,7 @@
                         <a class="menu-list nav-list-item-1" href="<?php echo site_url(); ?>/homepage/">關於我們</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-1"><a href="">系所簡介</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about/">系所簡介</a></li>
                                 <li class="nav-list-item-1"><a href="">系所成員</a></li>
                             </ul>
                         </div>
