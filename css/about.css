@@ -1,0 +1,272 @@
+.page_about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: #e4dfd2;
+}
+
+.page-about-banner{
+    position: relative;
+    width: 82%;
+    height: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 16vw;
+    margin-left: 9%;
+    margin-right: 9%;
+
+}
+
+.about_banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.875rem; 
+    font-weight: bold;
+    line-height: 3.047rem;
+    letter-spacing: 6px;
+    text-align: left;
+    color: #2e4565;
+}
+
+.about_banner > .circle{
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 1.4rem;
+    box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
+    background-color: #2e4565;
+}
+
+.video-module {
+    width: 16.67vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    align-items: flex-start;
+}
+
+.right{
+    align-items: flex-end;
+}
+
+.left > img{
+    width: 16.67vw;
+}
+
+.right > img{
+    width: 16.67vw;
+}
+
+.bt-left{
+    margin-left: 0;
+}
+
+.bt-right{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.information-block{
+    position: relative;
+    width: 82%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    margin-top: 8vw;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.info-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-title span{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.2;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: left;
+    color: #2e4565;
+}
+
+.ch-title{
+    font-size: 3.04725rem;
+    font-weight: bold;
+    letter-spacing: 0.5vw;
+}
+
+.en-title{
+    font-size: 1.266rem;
+    font-weight: 900;
+    letter-spacing: 0.07vw
+}
+
+.block-deco{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px rgba(46, 69, 101, 0.7);
+    margin: 3.32vw 0;
+    padding-top: 1.041vw;
+}
+
+.deco-dot{
+    width: 0.989vw;
+    height: 0.989vw;
+    border: solid 1.5px #2e4565;
+    background-color: #2e4565;
+    border-radius: 45%;
+}
+
+.deco-arrow{
+    width: 0.5vw;
+    height: 0.5vw;
+    border: solid #2e4565;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.deco-section{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.84375rem;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    text-align: center;
+    color: #2e4565;
+}
+
+.block-content{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.IPH-introduction .image{
+    position: relative;
+    border-radius: 2.5vw;
+    margin-left: 5vw;
+}
+
+.IPH-introduction img{
+    width: 34.8vw;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.texts p{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.875rem;
+    text-align: left;
+    color: #2e4565;
+    font-size: 1.03125rem;
+    letter-spacing: 0.23vw;
+}
+
+.texts-title div{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #2e4565;
+    font-size: 1.266rem;
+    font-weight: bold;
+    letter-spacing: 0.28vw;
+    margin-bottom: 1vw;
+}
+
+/*****/
+
+.IPH-purposeANDgoal .block-content{
+    justify-content: space-between;
+}
+
+.IPH-purposeANDgoal .image{
+    border-radius: 0;
+}
+.IPH-purposeANDgoal img{
+    width: 26.19vw;
+    height: 26.19vw;
+}
+
+.subject-introduction .block-content{
+    align-items: flex-end;
+}
+
+.subject-introduction .image{
+    position: relative;
+    margin-left: 7vw;
+    border-radius: 0;
+}
+.subject-introduction img{
+    width: 29.0vw;
+    height: 25.5vw;
+}
+
+
+
+/**past-supervisor**/
+
+.supervisor{
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 7.8125vw;
+}
+
+.supervisor-title{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.supervisor-title span{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.05;
+    text-align: left;
+    color: #2e4565;
+}
+
+.unit-title{
+    font-size: 1.875rem;
+    letter-spacing: 0.3125vw;
+}
+
+.super-title{
+    position: relative;
+    margin-left: 0.5vw;
+    font-size: 1.17225rem;
+    letter-spacing: 0.195vw;
+}
+
+.supervisor .texts p{
+    width: 14.573vw;
+    font-size: 1.17225rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0.26vw;
+    text-align: left;
+    color: #2e4565;
+}
+
