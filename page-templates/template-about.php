@@ -51,10 +51,10 @@
             </div>
         </div>
     </div>
-    <?php get_template_part('page-templates/template-about','introduction');?>
-    <?php get_template_part('page-templates/template-about','purposeANDgoal');?>
-    <?php get_template_part('page-templates/template-about','subject_Intro');?>
-    <?php get_template_part('page-templates/template-about','past_supervisor');?>
+    <?php get_template_part('template-parts/page_about','introduction');?>
+    <?php get_template_part('template-parts/page_about','purposeANDgoal');?>
+    <?php get_template_part('template-parts/page_about','subject_Intro');?>
+    <?php get_template_part('template-parts/page_about','past_supervisor');?>
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
 <?php get_footer(); ?>

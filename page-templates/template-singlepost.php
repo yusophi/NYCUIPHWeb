@@ -101,14 +101,6 @@
         </div>
     </div>
 
-    <?php get_template_part( 'template-parts/backtoTOP','whiteText');?>
-
-    <script>
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-    
+    <?php get_template_part( 'template-parts/backtoTOP','whiteText');?>    
 </div>
 <?php get_footer(); ?>
