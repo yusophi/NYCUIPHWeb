@@ -1,0 +1,44 @@
+.page_admission{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: #e4dfd2;
+}
+
+.s1-content{
+    width: 82vw;
+    margin-left: 9%;
+    margin-right: 9%;
+    display: flex;
+    border: solid 2px #2e4565;
+    justify-content: space-between;
+}
+
+.content{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.82;
+    text-align: left;
+    color: #2e4565;
+}
+
+.content span{
+    font-size: 1.875rem;
+    font-weight: bold;
+    letter-spacing: 0.3125vw;
+}
+
+.content p{
+    margin-top: 2vw;
+    font-size: 1.03125rem;  
+    letter-spacing: 0.1718vw;
+}
+
+.s1-deco-img{
+    border: solid 2px salmon;
+    width: 11.5625vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}

@@ -71,7 +71,7 @@
                         </div>
                     </li>
                     <li id="nav-main-list-item-3">
-                        <a class="menu-list nav-list-item-3">招生專區</a>
+                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-3"><a href="">博士班招生(不分組)</a></li>
