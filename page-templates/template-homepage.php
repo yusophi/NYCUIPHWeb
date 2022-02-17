@@ -542,7 +542,6 @@
       </div>
 
       <?php get_template_part( 'template-parts/backtoTOP');?>
-
       <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
       <script src="<?php bloginfo('template_url') ?>/js/draggable-slides.js"></script>
 </div>
