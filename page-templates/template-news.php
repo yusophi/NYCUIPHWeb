@@ -4,7 +4,6 @@
  */
 ?>
 
-<?php get_header(); ?>
 
 <div class="page_News">
     <div class="banner">
