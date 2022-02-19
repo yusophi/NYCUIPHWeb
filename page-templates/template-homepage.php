@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_footer(); ?>
 <link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
