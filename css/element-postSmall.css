@@ -16,7 +16,7 @@
 
 .post_counter{
     font-family: 'TimesNewRoman';
-    font-size: 2.718rem;
+    font-size: 2.9rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -75,7 +75,7 @@
     margin-left: 0.5vw; 
     color: rgba(46, 69, 101, 0.7);
     font-family: 'TimesNewRoman';
-    font-size: 1.0785rem;
+    font-size: 1.1504rem;
     line-height: 1.67;
     text-align: left;
     font-weight: bold;
@@ -105,7 +105,7 @@
     color: #ffbb00;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    font-size: 0.84375rem;
+    font-size: 0.9rem;
     line-height: 1.57;
     letter-spacing: 2px;
     font-weight: bold;
@@ -125,7 +125,7 @@
     color: #374a73;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    font-size: 1.17225rem;
+    font-size: 1.2504rem;
     line-height: 1.28;
     letter-spacing: 0.2vw;
     font-weight: bold;
@@ -135,7 +135,7 @@
     position: absolute;
     margin-top:13vw;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: normal;
     line-height: 1.17225rem;
     letter-spacing: 0.104vw;

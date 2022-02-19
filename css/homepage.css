@@ -89,7 +89,7 @@
 /* icon and title */
 .block-title{
     position: relative;
-    width: 9.5vw;
+    width: 15vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,13 +110,13 @@
 
 .ch-title{
     margin-top: 0.5vw;
-    font-size: 1.875rem;
+    font-size: 2rem;
     letter-spacing: 0.3125vw;
 }
 
 .en-title{
     margin-top: 0.5vw;
-    font-size: 1.40625rem;
+    font-size: 1.5rem;
     letter-spacing: 0.078vw;
 }
 
@@ -134,13 +134,14 @@
     border-top-right-radius: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* Posts */
 .news_title{
     position: relative;
     top: 6.09vw;
-    left: 45.9vw;
+    /*left: 45.9vw;*/
 }
 
 .news-article
@@ -223,7 +224,7 @@
     width: 5.10vw;
     margin: 0.625rem 0.625rem 0 1.2rem;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.7;
     text-align: left;
@@ -452,7 +453,7 @@
 }
 .event-ch-title {
     margin-top: 0.618rem;
-    font-size: 1.875rem;
+    font-size: 2rem;
     line-height: 1.13;
     letter-spacing: 5px;
 }
@@ -505,7 +506,7 @@
 .event-date-words {
     padding-left: 0.538rem;
     font-family: "TimesNewRoman";
-    font-size: 1.0785rem;
+    font-size: 1.1504rem;
     font-weight: bold;
     line-height: 1.3;
     color: #2e4565;
@@ -535,22 +536,22 @@
 }
 
 .event-categories > .post-categories > li{
-    background-color: #ffbb00;
-    border-radius: 0.885vw;
-    margin-left: 0;
-    margin-top: 0.5vw;
-    min-height: 1.7vw;
+    background-color: #efeee4;
 }
 
 .event-categories > .post-categories > li > a{
     color: #2e4565;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    font-size: 0.84375rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     line-height: 1.57;
     font-weight: bold;
     padding: 0.15vw 0.833vw;
+    background-color: #ffbb00;
+    border-radius: 0.885vw;
+    min-height: 1.7vw;
+
 }
 
 .event-location{
@@ -560,7 +561,7 @@
     color: #2e4565;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    font-size: 0.84375rem;
+    font-size: 0.9rem;
     line-height: 1.57;
     letter-spacing: 2px;
     font-weight: bold;
@@ -571,7 +572,7 @@
 
 .event-date {
     font-family: "TimesNewRoman";
-    font-size: 1.1785rem;
+    font-size: 1.5rem;
     font-weight: bold;
     line-height: 0.86;
     text-align: left;
@@ -582,7 +583,7 @@
     color: #374a73;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    font-size: 1.17225rem;
+    font-size: 1.2504rem;
     line-height: 1.28;
     letter-spacing: 0.195vw;
     font-weight: bold;
@@ -590,7 +591,7 @@
 
 .event-intro {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -799,7 +800,7 @@
     align-items: flex-start;
 }
 .iph_ch{
-    font-size: 3.047rem;
+    font-size: 3.2504rem;
     font-weight: bold;
     line-height: 0.65;
     letter-spacing: 9.75px;
@@ -808,7 +809,7 @@
 }
 
 .iph_en{
-    font-size: 1.172rem;
+    font-size: 1.2504rem;
     font-weight: 900;
     line-height: 1.4;
     letter-spacing: 1.25px;
@@ -817,7 +818,7 @@
 
 .iph_intro{
     width: 40.6vw;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: normal;
     line-height: 2;
     letter-spacing: 3px;
@@ -843,7 +844,7 @@
 
 .bk_num{
     font-family: 'TimesNewRoman';
-    font-size: 3rem;
+    font-size: 2.8504rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -860,7 +861,7 @@
 
 .video_title{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2504rem;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 3.75px;
@@ -921,7 +922,7 @@
     position: absolute;
     margin: 0.7rem 0 0 1.2rem;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.7;
     text-align: left;
@@ -1091,7 +1092,7 @@
 .interview-text-content > a{
     position: relative;
     margin-top: 2.5%;
-    font-size: 1rem;
+    font-size: 1.2504rem;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 3.75px;
@@ -1103,7 +1104,7 @@
 .interview-text-content > span{
     position: relative;
     margin-top: 6.5%;
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.1rem;
     text-align: left;
@@ -1171,7 +1172,7 @@
 
 .SP_ch_title{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2504rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -1185,7 +1186,7 @@
 
 .SP_en_title{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2504rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -1288,7 +1289,7 @@
 }
 .links-item-title {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.563rem;
+    font-size: 1.2504rem;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 3.75px; 
@@ -1309,7 +1310,7 @@
 }
 .links-item {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2;
     letter-spacing: 3px;
     text-align: left;
@@ -1405,25 +1406,33 @@
     margin-top: 10%;
 }
 
-.staff_name, .work_respon, .contact_title, .email, .phone_num, #profile_text, .self_intro, .profile_num{
+.contact_text{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.1rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    letter-spacing: 3.75px;
     text-align: center;
     color: #2e4565;
 }
 
+/*.staff_name, .work_respon, .contact_title, .email, .phone_num, #profile_text, .self_intro, .profile_num{
+    font-size: 1.2504rem;
+    letter-spacing: 3.75px;
+}*/
+
+.staff_name{
+    font-size: 1.2504rem;
+    letter-spacing: 3.75px;
+}
+
 #out_WR{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     padding-top: 2%;    
 }
 
 .contact_title, .email, .phone_num, .self_intro{
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: normal;
     letter-spacing: 1.3px;
     text-align: left;
@@ -1480,12 +1489,12 @@
     border-bottom: solid 1.5px rgba(46,69,101,0.2);
     z-index: 3;
 }
-#profile_text{
-    font-size: 0.8rem;
+.profile_text{
+    font-size: 0.9rem;
     letter-spacing: 2px;
 }
 #overlay_WR{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;      
@@ -1519,7 +1528,7 @@
 
 .profile_post_num p{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -1542,9 +1551,9 @@
     align-items:flex-start;
 }
 
-#overlay_SN{
+.overlay_staff_name{
     width: 100%;
-    font-size: 2.7rem;
+    font-size: 3.2504rem;
     padding-top: 10%;
     padding-bottom: 13%;
     text-align: left;
@@ -1564,6 +1573,7 @@
     padding-bottom: 8%;
     border-bottom: solid 1.5px rgba(46,69,101,0.2);
 }
+
 
 #overlay_phone, #overlay_mail{
     margin-left: 4%;
