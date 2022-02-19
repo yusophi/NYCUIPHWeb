@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
       <!-- the slideshoe block-->
