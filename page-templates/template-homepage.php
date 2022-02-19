@@ -357,7 +357,7 @@
                   <span class="links-flex-col">
                         <div class="links-category-item">
                               <div class="links-upper-item">
-                                    <span class="links-item-title">資料庫</span>
+                                    <span class="links-item-title">學術資源</span>
                                     <span class="links-icon-more-item">+</span>
                               </div>
                               <div class="links-items">
@@ -468,15 +468,15 @@
                               </div>
                               <div class="profile_content">
                                     <div class="profile_p1">
-                                          <p class="staff_name"><?php the_field('staff_name') ?></p>
+                                          <p class="contact_text staff_name"><?php the_field('staff_name') ?></p>
                                           <p class="work_respon" id="out_WR"><?php the_field('work_group') ?></p>
                                     </div>
                                     <div class="profile_p2" id="out_profile_p2">
-                                          <p class="contact_title">電話:</p>
+                                          <p class="contact_text contact_title">電話:</p>
                                           <p class="phone_num"><?php the_field('phone_number') ?> </p>
                                     </div>
                                     <div class="profile_p3">
-                                          <p class="contact_title">信箱:</p>
+                                          <p class="contact_text contact_title">信箱:</p>
                                           <p class="email"><?php the_field('email') ?> </p>
                                     </div>
                               </div> 
@@ -489,8 +489,8 @@
                                     </div>
                                     <div class="overlay_profile_content">
                                           <div class="overlay_title">
-                                                <p id="profile_text">(Profile)</p>
-                                                <p class="work_respon" id="overlay_WR"><?php the_field('work_group') ?> </p>
+                                                <p class="contact_text profile_text">(Profile)</p>
+                                                <p class="contact_text work_respon" id="overlay_WR"><?php the_field('work_group') ?> </p>
                                                 <img src="<?php bloginfo('template_url')?>/images/icon/overlay_Contactus_icon.svg">
                                           </div>
                                           <div class="overlay_middle">
@@ -508,7 +508,7 @@
                                                       </div>
                                                 </div>
                                                 <div class="overlay_self_info">
-                                                      <p class="staff_name" id="overlay_SN"><?php the_field('staff_name') ?></p>
+                                                      <p class="contact_text overlay_staff_name" id="overlay_SN"><?php the_field('staff_name') ?></p>
                                                       <div class="profile_p2" id="overlay_pro_p2">
                                                             <p class="contact_title">電話:</p>
                                                             <p class="phone_num" id="overlay_phone"><?php the_field('phone_number') ?> </p>
@@ -519,7 +519,7 @@
                                                       </div>
                                                       <!--<p class="phone_num"><?php //the_field('phone_number') ?> </p>
                                                       <p class="email"><?php //the_field('email') ?> </p>-->
-                                                      <p class="self_intro"><?php the_field('self_introduction') ?> </p>
+                                                      <p class="contact_text self_intro"><?php the_field('self_introduction') ?> </p>
                                                 </div>
                                           </div>
                                           <div class="ovetlay_bottom">
