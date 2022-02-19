@@ -1,0 +1,701 @@
+
+.page_News{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    background-color: #e4dfd2;
+    z-index: -1;
+}
+
+.banner{
+    position: relative;
+    width: 82%;
+    height: auto;
+    margin-top: 20%;
+    margin-left: 9%;
+    margin-right: 9%;
+    background-color: #e4dfd2;
+}
+
+.page_name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2rem; /*2.5rem*/
+    font-weight: bold;
+    line-height: 1.45;
+    letter-spacing: 6px;
+    text-align: left;
+    color: #2e4565;
+}
+
+#eg{
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+#circle{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    right: 0%;
+    top: 23%;
+    bottom: 23%;
+    border-radius: 27px;
+    box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
+    background-color: #2e4565;
+}
+
+.class_selector{
+    position: relative;
+    width: 82%;
+    height: 5vh;
+    margin-top: 15%;
+    margin-left: 9%;
+    margin-right: 9%;
+    padding-bottom: 0.8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e4dfd2;
+    border-bottom: solid 2px #2e4565;
+}
+
+/***********/
+.select_container {
+    display: block;
+    position: relative;
+    padding-left: 5%;
+    margin-left: 3.5%;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    color: #2e4565;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.select_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border: solid 2px #2e4565;
+    border-radius: 50%;
+}
+#selection_all{
+    margin-left: 0;
+}
+#selection_general{
+    margin-left: 7%;
+}
+#selection_covid19{
+    margin-left: 7%;
+}
+/* On mouse-over, add a grey background color */
+.select_container:hover input ~ .checkmark {
+    background-color: #2e4565;
+}
+
+/* When the radio button is checked, add a blue background */
+.select_container input:checked ~ .checkmark {
+    background-color: #2e4565;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.select_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.select_container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+/*background: white;*/
+}
+
+/*the News_block */
+.events_block{
+    position: relative;
+    width: 100%;
+    margin-top: 9.375rem;
+    height: auto;
+    background-color: #e4dfd2;
+}
+/*#new_bkg{
+    margin-top: 120%;
+    z-index: -1;
+}*/
+/*** the post style ***/
+/* Posts */
+.news-article
+{
+    width: 100vw;
+    min-height: auto;
+    display: inline-block;
+    background-color: #e4dfd2;
+    padding: 0 10.26vw 0;
+}
+
+.article-content {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 33.23vw;
+    min-height: 26.09vw;
+    /*min-width: 22.8vw;
+    max-height: 46.6vh;*/
+    left: 1.5%;
+    right: 1.9%;
+    background-color: #efeee4;
+    /*border: solid 2px #2e4565;*/
+    /*margin: 1.7%;*/
+    /*margin: 5.625rem 0 0 6.313rem;
+    padding: 0 0 1.188rem;*/
+    margin-right: 8.33vw;
+    margin-bottom: 6.25rem;
+    border-radius: 60px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1);
+}
+.article-padding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-content p {
+    
+    /*color: #374a73;*/
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+.post_counter{
+    width: 4.563rem;
+    height: 4.063rem;
+    margin: 0 7.125rem 4.063rem 0;
+    font-family: 'TimesNewRoman';
+    font-size: 3rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.03;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e4565;
+}
+
+.thumbnail_icon
+{   
+    position:absolute;
+    top: 30%;
+    left: 42%;
+    width: 15.1%;
+    height: 12.6%;
+    opacity: 1;
+    transition: 400ms ease-in-out;/*cubic-bezier(.52,.06,.42,.86);*/
+}
+
+.thumbnail_icon_hover{
+    position:absolute;
+    top: 21.1%;
+    right: 10.5%;
+    width: 14.6%;
+    height: 15%;
+    opacity: 0;
+    transition: 450ms ease-in-out;/*cubic-bezier(.52,.06,.42,.86);*/
+}
+
+.border-anim{
+    position: absolute;
+    top:11.2%;
+    right: 0;
+    width: 24.4%;
+    height: 22.5%;
+    border-top-right-radius: 5px;
+    border-top: solid 2px #2e4565;
+    border-right: solid 2px #2e4565;
+    transition: width 800ms, height 800ms ease-in-out;
+
+}
+
+.article-meta{
+    position: absolute;
+    top: 58.7%;
+    width: 7rem;
+    height: 1.5rem;
+    transition: 500ms cubic-bezier(.52,.06,.42,.86);
+
+}
+
+.post_time{
+    position: absolute;
+    margin-left: 8.4%;    
+    color: rgba(46, 69, 101, 0.7);
+    font-family: 'TimesNewRoman';
+    font-size: 1rem;
+    line-height: 1.67;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+/*
+.icon-clock
+{
+    position: absolute;
+    width: 19.2%;
+    height: 18.8%;
+    border: solid 2px #ffbb00;
+}
+*/
+.post_category{
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    padding: 0.251rem 0.813rem 0.374rem;
+    border-radius: 15px;
+    background-color: #374a73;
+    text-align: center;
+}
+.post_category a{
+    color: #ffbb00;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    font-size: 0.47rem;
+    line-height: 1.57;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.event-tag-mask a{
+    color: #2e4565;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    font-size: 0.47rem;
+    line-height: 1.57;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+.article-title
+{
+    position: absolute;
+    top: 79.5%;
+    width: 100%;
+    transition: 500ms cubic-bezier(.52,.06,.42,.86);
+    /*border: solid 2px #2e4565;*/
+    padding-bottom: 6.9%;;
+}
+
+.article-title a{
+    
+    color: #374a73;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1.28;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+.excerpt{
+    position: absolute;
+    top: 75.4%;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.47;
+    letter-spacing: 1.53px;
+    text-align: left;
+    color: rgba(46, 69, 101, 0.7);
+    opacity: 0;
+    transition: 480ms cubic-bezier(.52,.06,.42,.86);
+
+}
+
+
+/***** hover effect ****/
+.article-content:hover .border-anim{
+    width: 70.2%;
+    height: 17.5%;   
+}
+
+.article-content:hover .thumbnail_icon_hover{
+   opacity: 1;
+   
+}
+.article-content:hover .thumbnail_icon{
+    left: 74.9%;
+    top: 21.1%;
+    opacity: 0;
+    /*right: 10.5%;*/
+ }
+
+ .article-content:hover .article-meta{
+    top: 22.2%;
+ }
+
+ .article-content:hover .article-title{
+    top: 45.2%;
+    border-bottom: solid 2px #2e4565;
+ }
+
+ .article-content:hover .excerpt{
+    opacity: 1;
+ }
+ /*********************************/
+
+.pagination{
+    position: relative;
+    width: 82%;
+    margin-left: 9%;
+    margin-right: 9%;
+    height: 10vh;
+    margin-top: 13%;
+}
+
+.page-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.page-numbers > li{
+    margin-left: 2vw;
+    color: #2e4565;
+    font-size: 1rem;
+}
+.page-numbers > li > a{
+    text-decoration: none;
+    color: #2e4565;
+    border-radius: 50%;
+    padding: 0.6rem 0.8rem 0.6rem;
+}
+
+.page-numbers .current{
+    color: #e4dfd2;
+    background-color: #2e4565;
+    border-radius: 50%;
+    padding: 0.6rem 0.8rem 0.6rem;
+}
+
+.pagination .next{
+    position: relative;
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: 0;
+    background-image: url("../images/page_News/next_page.svg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    border-radius:0;
+    left: 33rem;
+}
+
+.pagination .prev{
+    position: relative;
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: 0;
+    background-image: url("../images/page_News/prev_page.svg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    border-radius:0;
+    right: 35rem;
+}
+
+ /*** back to top btn ***/
+.deco_waves{
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*z-index: -1;*/
+}
+/* let waves have spacing*/
+.deco_waves img{
+    margin-top: 2%;
+}
+
+.block-title{
+    width: 15.5%;
+    height: 13.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -26.5vh;
+} 
+
+.block-title span{
+    color: #374a73;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#back_to_top{
+    position: relative;
+    top: -10%;
+    left: 45%;
+    width: 10.5%;
+    height: 9.5%;
+}
+
+#back_to_top .en-title{
+    font-size: 1rem;
+    line-height: 0.05;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+#back_to_top .icon{
+    margin-bottom: 8%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+ /***********************/
+
+ .Footer-container {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    background-color: #162a47;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: .6s;
+    margin-top: 15vh;
+    z-index: 1;
+}
+.footer-margin {
+    padding: 7% 9%;
+    padding-bottom: 0%;
+    position: relative;
+}
+.footer-exclam {
+    width: 64.6%;
+    opacity: 0.7;
+    font-family:  'Noto Sans TC', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.32;
+    letter-spacing: 6.5px;
+    color: #efeee4;
+}
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #d9e0e2;
+    z-index: 3;
+    margin-top: 5.03%;
+    opacity: 0.7;
+}
+.footer-pic img{
+    transform: translate3d(200%, -65%, 0);
+    background-color: #162a47;
+    width: 25rem;
+    height: 14.09rem;
+
+}
+.footer-info {
+    position: absolute;
+    top: 75%;
+    opacity: 0.7;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.79725rem; 
+    font-weight: 300;
+    line-height: 1.66; 
+    letter-spacing: 2.55px;
+    color: #efeee4;
+}
+
+.footer-statement {
+    position: absolute;
+    opacity: 0.7;
+    font-family: NotoSansTC;
+    font-size: 0.79725rem;
+    font-weight: 300;
+    line-height: 1.76;
+    letter-spacing: 2.55px;
+    bottom: -27%;
+    right: 9%;
+    color: #efeee4;
+    text-align: right;
+}
+
+.footer-iconscout-link {
+    color: #6c63ff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.paging ul {
+    float:right;
+}
+.paging ul li {
+    float:left;
+    margin:0px 0px 2px 0px;
+}
+.paging ul li a{
+    background-color:#000;
+    color:#FFF;
+    padding:7px 11px 7px 11px;
+    font-size:12px;
+    border:solid 2px #000;
+    margin-left:1px;
+}
+.paging ul li .current, .paging ul li .dots  {
+    background-color:#FFF;
+    color:#000;
+    padding:7px 11px 7px 11px;
+    font-size:12px;
+    border:solid 2px #000;
+    margin-left:1px;
+}
+.paging ul li a:hover {
+    background-color:#333;
+}
+
+
+
+/******pagination *******/
+
+.event-main-margin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100vw * 0.2615 * 0.9);
+    padding: 3% 12.5%;
+}
+.event-date-title {
+    display: flex;
+    place-items: center;
+    justify-content: flex-start;
+}
+.event-date-words {
+    padding-left: 0.538rem;
+    font-family: "TimesNewRoman";
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #2e4565;
+}
+.event-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 8%;
+    padding-left: 2.295rem;
+}
+.event-main-slide-upper {
+    display: flex;
+    min-height: 40%;
+}
+.event-main-slide-upper img {
+    max-width: 100%;
+    height: auto;
+}
+.event-tags span {
+    margin-right: 3px;
+    margin-bottom: 4px;
+    padding: 4px 10px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 0.675rem;
+    font-weight: bold;
+    letter-spacing: 2.1px;
+    text-align: left;
+    color: #2e4565;
+    background-color: #ffbb00;
+    border-radius: 15px;
+    display: inline-block;
+}
+.event-date {
+    font-family: "TimesNewRoman";
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 0.86;
+    text-align: left;
+    color: #2e4565;
+}
+.event-name {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.28;
+    letter-spacing: 2.5px;
+    color: #2e4565;
+}
+.event-intro {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 0.71rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 1.53px;
+    text-align: left;
+    color: rgba(46, 69, 101, 0.7);
+    text-indent: 2em;
+}
+
+.event-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SDG_selector {
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    border: #000;
+    background-color: #e4dfd2;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    color: #2e4565;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#SDG_container {
+    margin-left: auto;
+    margin-right: 3.5%;
+    border: #2e4565 solid 2px;
+    width: 135px;
+    height: 30px;
+}
