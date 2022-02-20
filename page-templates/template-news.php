@@ -4,6 +4,7 @@
  */
 ?>
 
+<?php get_header(); ?>
 
 <div class="page_News">
     <div class="banner">
@@ -117,7 +118,6 @@
     <!--<div class="news_block" id="new_bkg"></div>-->
 
     <div class="pagination">
-            
                 <?PHP
                     $big = 999999999; // need an unlikely integer
                     $args = array(
@@ -142,4 +142,11 @@
     
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+
+<script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+</script>
 <?php get_footer(); ?>
