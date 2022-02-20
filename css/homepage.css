@@ -85,6 +85,7 @@
 
 }
 
+
 /* icon and title */
 .block-title{
     position: relative;
@@ -102,14 +103,9 @@
     text-align: center;
 }
 
-.icon
-{
-    position:absolute;
-    width: 2.505rem;
-    height: 2.505rem;
-    left: 42.6%;
-    top: 12.4%;
-    
+.icon{
+    width: auto;
+    height: auto; 
 }
 
 .ch-title{
@@ -117,6 +113,7 @@
     font-size: 2rem;
     letter-spacing: 0.3125vw;
 }
+
 .en-title{
     margin-top: 0.5vw;
     font-size: 1.5rem;
@@ -155,6 +152,7 @@
     margin-top: 6.8vw;
     display: inline-block;
 }
+
 
 /*** the readmore button*****/
 .news_readmore_btn{
@@ -238,7 +236,7 @@
     width: 0.833vw;
     height: 0.833vw;
     top: 23%;
-    left: 69%;
+    left: 70.5%;
     margin: 0.438rem 1.375rem 1.5rem 0.625rem;
     object-fit: contain;
 
@@ -294,7 +292,9 @@
     visibility: hidden;
 }
 
+
 /* Milo: start of event part */
+
 .events{
     width: 100vw;
     height: 56.25vw;
@@ -309,6 +309,7 @@
     overflow-x: hidden;
     margin-top:-2vw;
 }
+
 
 #event-slider-container-outer {
     transform: translateX(-56.35%);
@@ -358,9 +359,10 @@
 #event-data {
     display: none;
 }
+
 .event-data-item {
-    min-width: 100%;
-    width: 100%;
+    min-width: 20%;
+    width: 40%;
 }
 .event-container {
     width: 100%;
@@ -381,7 +383,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 60px;
-    overflow: hidden;
 }
 .event-mask {
     position: relative;
@@ -418,6 +419,8 @@
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 60px;
+
 }
 .main-event .event-mask::after {
     background-color: rgba(0, 0, 0, 0);
@@ -597,6 +600,9 @@
     text-align: left;
     color: rgba(46, 69, 101, 0.7);
 }
+
+/****** Milo: readmore botton ****/
+
 #btn-event-readmore-container {
     cursor: pointer;
     position: absolute;
@@ -621,6 +627,7 @@
 #btn-event-readmore-container:hover a {
     color: #2e4565;
 }
+
 /* #btn-event-readmore-container::after {
     content: '';
     width: 100%;
@@ -663,6 +670,7 @@
     opacity: 0;
     transform: rotate(90deg);
 }
+
 .event-layered {
     display: grid;
     height: 16px;
@@ -674,7 +682,6 @@
     grid-row-start: 1;
 }
 /* Milo: end of event part */
-
 /*****************/
 .event-layered {
     display: grid;
@@ -1206,9 +1213,9 @@
     margin-top: -2vw;
 }
 
-/*.Links-container.expanded {
-    height: 141%;
-}*/
+.Links-container.expanded {
+    /*height: 141%;*/
+}
 
 /* Jenny: change start */
 .links_title{
