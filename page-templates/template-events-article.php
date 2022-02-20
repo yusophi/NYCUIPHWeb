@@ -1,6 +1,7 @@
 <?php
 /*
- * Template Name: events-article
+ * Template Name: 學術活動模板
+ * Template Post Type: post
  */
 ?>
 
@@ -108,57 +109,8 @@
             <div class="ch_next_title">下則活動</div>
             <div class="en_next_title">Next</div>
         </div>
-        <span class="next_event_content">
-            <div class="next_event">
-                <div class="event-main-margin">
-                    <div class="event-main-slide-upper">
-                        <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                        <div class="event-info">
-                            <div class="event-date-title">
-                                <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                <span class="event-date-words">Date</span>
-                            </div>
-                            <div class="event-date">2020.10.12 (Mon.)</div>
-                            <div class="event-tags">
-                                <span class="event-tag-mask">讀書會</span>
-                                <span class="event-tag-mask">醫學二館221室</span>
-                                <span class="event-tag-mask">SDG2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-name">優雅的老年：678位修女揭開大腦健康之鑰（莊宜芳老師）</div>
-                    <div class="event-intro">這不只是一本突破性的健康與科學書籍，更是一個感動人心的故事，因為眾多高齡修女們的慷慨奉獻，我們才能活得更久、活得更好。老年如何過得填充……</div>
-                </div>
-            </div>
-            <div class="next_event">
-            <div class="event-main-margin">
-                    <div class="event-main-slide-upper">
-                        <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                        <div class="event-info">
-                            <div class="event-date-title">
-                                <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                <span class="event-date-words">Date</span>
-                            </div>
-                            <div class="event-date">2020.10.12 (Mon.)</div>
-                            <div class="event-tags">
-                                <span class="event-tag-mask">讀書會</span>
-                                <span class="event-tag-mask">醫學二館221室</span>
-                                <span class="event-tag-mask">SDG2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-name">優雅的老年：678位修女揭開大腦健康之鑰（莊宜芳老師）</div>
-                    <div class="event-intro">這不只是一本突破性的健康與科學書籍，更是一個感動人心的故事，因為眾多高齡修女們的慷慨奉獻，我們才能活得更久、活得更好。老年如何過得填充……</div>
-                </div>
-            </div>
-        </span>
+        
     </div>
 </div>
-<div class="deco_waves" id="footer_wave">
-    <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/footer_wave_light.svg">
-</div>
-<div class="block-title" id="back_to_top" onclick="topFunction()">
-    <img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/back_to_top_white.svg">
-    <span class="en-title">back to top</span>
-</div>
+
 <?php get_footer(); ?>

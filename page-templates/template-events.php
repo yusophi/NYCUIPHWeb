@@ -59,18 +59,52 @@
                 <div class="event-cards-mask">
                     <div class="event-main-margin">
                         <div class="event-main-slide-upper">
-                                <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
-                                <div class="event-info">
-                                    <div class="event-date-title">
-                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"">
-                                        <span class="event-date-words">Date</span>
-                                    </div>
-                                    <div class="event-date"><?php the_field('event_date')?> </div>
-                                    <div class="event-categories"><?php the_category(''); ?>
-                                    <div class="event-location"><?php the_field('location')?></div>
-                                    </div>
-                                    
+                            <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
+                            <div class="event-info">
+                                <div class="event-date-title">
+                                    <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"">
+                                    <span class="event-date-words">Date</span>
                                 </div>
+                                <?php if( get_field('event_item') == 'study_group' ): ?>
+                                    <?php
+                                        if( have_rows('study_group_info')): 
+                                    ?>
+                                        <?php while( have_rows('study_group_info') ): the_row(); ?>
+                                            <div class="event-date"><?php the_sub_field('event_date')?> </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                <?php elseif(get_field('event_item') == 'academic_seminar'):?>
+                                    <?php
+                                        if( have_rows('academic_seminar_info')): 
+                                    ?>
+                                        <?php while( have_rows('academic_seminar_info') ): the_row(); ?>
+                                            <div class="event-date"><?php the_sub_field('event_date')?> </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                                <!--<div class="event-date"><?php //the_field('event_date')?> </div>-->
+                                <div class="event-categories"><?php the_category(''); ?></div>
+                                <div class="event-location"><?php //get_sub_field('event_location'); ?>
+                                    <?php if( get_field('event_item') == 'study_group' ): ?>
+                                        <?php
+                                            if( have_rows('study_group_info')): 
+                                        ?>
+                                            <?php while( have_rows('study_group_info') ): the_row(); ?>
+                                                <?php the_sub_field('event_location'); ?>
+                                            <?php endwhile; ?>
+                                        <?php endif; ?>
+                                        
+                                    <?php elseif(get_field('event_item') == 'academic_seminar'):?>
+                                        <?php
+                                            if( have_rows('academic_seminar_info')): 
+                                        ?>
+                                            <?php while( have_rows('academic_seminar_info') ): the_row(); ?>
+                                                <?php the_sub_field('event_location'); ?>
+                                            <?php endwhile; ?>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
                         <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                         <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."?></div>
@@ -78,9 +112,7 @@
                 </div>
                 <?php endwhile; ?>
             </div>
-
-        <?php endif;
-        wp_reset_postdata(); ?>
+        <?php endif; wp_reset_postdata(); ?>
     </div>
 
     <div class="pagination">

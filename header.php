@@ -166,11 +166,11 @@
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo'/mobile-css/events-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
         }
-        if(is_page_template( 'page-templates/template-singlepost.php' )){ /*文章模板*/
-            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+        /*if(is_page_template( 'page-templates/template-singlepost.php' )){ /*文章模板*/
+            /*echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
-            /*************/
-         }
+            /************
+         }*/
          /*if(is_page_template( 'page-templates/template-events-article.php' )){ /*文章模板*/
             /*echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo '/css/events-article.css" type="text/css" media="screen and (min-width: 701px)" />';

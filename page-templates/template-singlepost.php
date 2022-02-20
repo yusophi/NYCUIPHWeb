@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: 純文字
+ * Template Name: 最新消息模板
  * Template Post Type: post
  */
 ?>

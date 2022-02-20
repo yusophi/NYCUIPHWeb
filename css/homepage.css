@@ -491,7 +491,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    /*align-items: center;*/
     height: calc(100vw * 0.2615 * 0.9);
     padding: 0 12.5%;
 }
@@ -542,7 +542,7 @@
 
 .event-categories > .post-categories > li{
     background-color: #efeee4;
-    margin-top: 0.5vw;
+    margin-top: 0.6vw;
     margin-left: 0;
 }
 
@@ -563,7 +563,7 @@
 .event-location{
     position: relative;
     left: 6.5vw;
-    top: -3.5vw;
+    top: -3.7vw;
     color: #2e4565;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
