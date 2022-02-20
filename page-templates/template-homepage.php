@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
       <!-- the slideshoe block-->
@@ -67,9 +66,8 @@
       </script>
       <!-- the News block -->
       <div class="News-container">
-
-            <div class="block-title news_title">
-                  <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
+            <div class="news-title">
+                  <img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-News_icon.svg">
                   <span class="ch-title">最新消息<br></span>
                   <span class="en-title">News</span>
             </div>
@@ -120,28 +118,24 @@
                   <a class="readmore" href="<?php echo site_url(); ?>/news/">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-            </div> 
+            </div>
       </div>
-
       <div class="events">
             <div class="event-title">
                   <div class="event-icon-container"><img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg"></div>
                   <div class="event-ch-title">學術活動<br></div>
                   <div class="event-en-title">Events</div>
             </div>
-            
             <div id="event-slides">
-                  <!--<img id="event-icon-prev" src="<?php //bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
-                  <img id="event-icon-next" src="<?php //bloginfo('template_url') ?>/images/icon/icon-next_white.svg">-->
                   <div id="event-data">
-                        <?php /*query the recent 6 posts*/
-                              $args = array(
-                                    'post_type' => 'post',
-                                    'post_status' => 'publish',
-                                    'category_name' => 'event',
-                                    'orderby' => 'date',
-                                    'posts_per_page' => 6
-                              );
+                        <?php //query the recent 6 posts
+                        $args = array(
+                              'post_type' => 'post',
+                              'post_status' => 'publish',
+                              'category_name' => 'event',
+                              'orderby' => 'date',
+                              'posts_per_page' => 6
+                        );
 
                         $arr_posts = new WP_Query($args);
 
@@ -168,6 +162,8 @@
                                                                         <div class="event-categories"><?php the_category(''); ?></div>
                                                                         <div class="event-location"><?php the_field('location')?></div>
                                                                   </div>
+                                                                  <div class="event-name"><?php the_title(); ?></div>
+                                                                  <div class="event-intro"><?php the_excerpt(); ?></div>
                                                             </div>
                                                             <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                                                             <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."?></div>
@@ -175,13 +171,11 @@
                                                 </div>
                                           </div>
                                     </div>
-                              </div>
-                              
+
                               <?php endwhile; ?>
                         <?php endif;
                         wp_reset_postdata(); ?>
                   </div>
-
                   <div id="event-slider-container-outer">
                         <div id="event-slider-container" class="event-slider-container-transition">
                               <div class="event-slider-item"></div>
@@ -547,3 +541,4 @@
 </div>
 
 <?php get_footer(); ?>
+
