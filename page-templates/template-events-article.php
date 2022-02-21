@@ -110,10 +110,10 @@
                                     <div class="event-categories"><?php the_category(''); ?></div>
                                     <div class="event-location"><?php the_field('event_location'); ?></div>
                                 </div>
-                            </div>  
+                            </div>
+                            <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                            <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."?></div>
                         </div>
-                        <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."?></div>
                     </div>
                     <?php endforeach; wp_reset_postdata();?>
                 <?php endif; ?>

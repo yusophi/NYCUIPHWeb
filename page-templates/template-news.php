@@ -104,9 +104,21 @@
                             <span><?php //the_tags('', ' , ', ''); 
                                         ?></span>-->
                     </div>
-                    <div class="post_category"><?php the_category(''); ?></div>
+                    <!--<div class="post_category"><?php //the_category(''); ?></div>-->
+                    <div class="post_tags">
+                        <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                        <?php
+                        $sdgs = get_field('sdg');
+                        if( $sdgs ): ?>
+                            <ul class="sdg-tag">
+                                    <?php foreach( $sdgs as $sdg ): ?>
+                                        <li><?php echo $sdg; ?></li>
+                                    <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
                     <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt');?><?php echo "..."?> </div>
                     <div class="clearfix"></div>
                 </div>
             <?php endwhile; ?>
