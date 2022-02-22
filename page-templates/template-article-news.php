@@ -81,7 +81,7 @@
             <span>下則新聞</span>
             <span id="next_news_title_eg">Next</span>
         </div>
-        <div class="the_next3_news">
+        <div class="the_next3_block">
             <?php
                 global $post;
                 $myposts = get_posts( array(

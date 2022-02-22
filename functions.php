@@ -79,7 +79,7 @@
     wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
     wp_enqueue_style('mytheme_singlepost_style', get_theme_file_uri('css/singlepost.css'));
     wp_enqueue_style('mytheme_post_event_style', get_theme_file_uri('css/events-article.css')); 
-
+    wp_enqueue_style('mytheme_post_interview_style', get_theme_file_uri('css/article-interview.css')); 
 
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');

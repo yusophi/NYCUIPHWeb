@@ -90,7 +90,7 @@
             <span>下則活動</span>
             <span id="next_news_title_eg">Next</span>
         </div>
-        <div class="the_next3_event">
+        <div class="the_next3_block the_next3_event">
             <?php
                 global $post;
                 $myposts = get_posts( array(

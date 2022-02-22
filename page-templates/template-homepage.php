@@ -349,13 +349,12 @@
                                     //$counter = $counter + 1;
                               ?>
                                     <div class="interview-slide">
-                                          
                                           <div class="interview-picture">
                                                 <?php echo wp_get_attachment_image( get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
                                           </div>      
                                           <div class="interview-text-content">
-                                                <a class="interview-title"href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
-                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "..." ?></span>
+                                                <a class="interview-title" href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
+                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "...";?></span>
                                           </div>
                                                 
                                     </div>

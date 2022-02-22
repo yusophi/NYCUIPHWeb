@@ -10,7 +10,7 @@
     <div class="banner">
         <span class="page_name" id="zh">最新消息<br></span>
         <span class="page_name" id="eg">News</span>
-        <div id="circle"></div>
+        <div class="circle"></div>
     </div>
     <div class="class_selector">
         <label class="select_container" id="selection_all">總覽

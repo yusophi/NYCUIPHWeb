@@ -7,13 +7,16 @@
     background-color: #2e4565;
 }
 
-.banner{
+.single_post > .banner{
     position: relative;
     width: 82%;
-    height: auto;
-    margin-top: 18%;
+    height: 26vw;
+    margin-top: 17%;
     margin-left: 9%;
     margin-right: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .post_title p{
@@ -48,7 +51,6 @@
     display: flex;
     flex-direction: row;
     border-bottom: solid 2px #efeee4;
-    margin-top: 27%;
     padding-bottom: 1.3%;
 }
 
@@ -103,13 +105,11 @@
 }*/
 
 
-
-
 .single_post_info{
     /*position: absolute;*/
     width: 82%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 9%;
     margin-right: 9%;
     display: flex;
@@ -293,10 +293,9 @@
 
 /*** the post style ***/
 /* Posts */
-.the_next3_news
+.the_next3_block
 {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: row;
     margin-top: 5vw;
