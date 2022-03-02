@@ -30,7 +30,7 @@
         <div class="about_banner">
             <span class="page-name" >系所簡介<br></span>
             <span class="page-name" >About</span>
-            <div class="circle"></div>
+            <!--<div class="circle"></div>-->
         </div>
         <div class="video-module-container">
             <div class="video-module right">
