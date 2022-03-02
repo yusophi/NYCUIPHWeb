@@ -52,7 +52,7 @@
 ?>
 
 <?php
-  add_image_size( 'hp-interview-img-thumb', 200, 200, array( 'center', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'hp-interview-img-thumb', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
   
   function my_custom_sizes( $sizes ) {
