@@ -8,7 +8,7 @@
 
 <div class="page_News">
     <div class="banner">
-        <span class="page_name" id="zh">最新消息<br></span>
+        <span class="page_name" >最新消息<br></span>
         <span class="page_name" id="eg">News</span>
         <div class="circle"></div>
     </div>

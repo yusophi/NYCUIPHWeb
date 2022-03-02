@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <div class="page_events">
     <div class="banner">
-        <span class="page_name" id="zh">學術活動<br></span>
+        <span class="page_name" >學術活動<br></span>
         <span class="page_name" id="eg">Events</span>
         <div class="circle"></div>
     </div>
