@@ -367,7 +367,7 @@
                                           </div>      
                                           <div class="interview-text-content">
                                                 <a class="interview-title" href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
-                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "...";?></span>
+                                                <span class="interview-excerpt"><?php the_field('interview-excerpt'); ?><?php echo "...";?></span>
                                           </div>
                                                 
                                     </div>
