@@ -28,19 +28,17 @@
             <span class="checkmark"></span>
         </label>
 
-        <select class="sdg-dropdown" name="event-dropdown"> 
-            <option value=""><?php echo esc_attr_e( 'SDG', 'textdomain' ); ?></option> 
-            <?php 
-            $categories = get_categories( array( 'child_of' => 25 ) ); 
-            foreach ( $categories as $category ) {
-                printf( '<option value="%1$s">%2$s</option>',
-                    esc_attr( '/category/archives/' . $category->category_nicename ),
-                    esc_html( $category->cat_name )
-                    //esc_html( $category->category_count )
-                );
-            }
-            ?>
-        </select>
+        <div id="SDG_container">
+            <select id="SDG_selector">
+                <option>SDG1</option>
+                <option>SDG2</option>
+                <option>SDG3</option>
+                <option>SDG4</option>
+                <option>SDG5</option>
+                <option>SDG6</option>
+                <option>SDG7</option>
+            </select>
+        </div>
         <!--<ul>
             <?php 
                 /*$categories = get_terms( array(
