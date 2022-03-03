@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
       <!-- the slideshoe block-->
@@ -96,10 +95,19 @@
                         ?>
                               <div class="article-content num-<?php echo $counter ?>">
                                     <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                                    <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                                    <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                                    <!--<img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
+                                    <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">-->
+                                    <div class="post_icon">
+                                          <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
+                                          <div>
+                                          <p class="post_icon_hover_dots"></p>
+                                          <p class="post_icon_hover_dots"></p>
+                                          <p class="post_icon_hover_dots"></p>
+                                          </div>
+                                    </div>
+                                   
                                     <div class="border-anim">
-                                                <div class="inner-box"></div>
+                                          <div class="inner-box"></div>
                                     </div>
                                     <div class="article-meta">
                                                 <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
@@ -109,7 +117,10 @@
                                                             ?></span>-->
                                     </div>
                                     <div class="post_category"><?php the_category(''); ?></div>
-                                    <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                    <div class="article-title">
+                                          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                          <div class="article-title_bottom_line"></div>
+                                    </div>
                                     <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
                                     <div class="clearfix"></div>
                               </div>
@@ -117,6 +128,7 @@
                   </div>
             <?php endif; wp_reset_postdata(); ?>
             <div class="bt-readmore news_readmore_btn">
+                  <div class="bt-readmore_hover_bk"></div>
                   <a class="readmore" href="<?php echo site_url(); ?>/news/">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">

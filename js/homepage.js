@@ -24,7 +24,7 @@ function displayImage(n){
     for(var i=0;i<allDots.length;i++){
         allDots[i].className = allDots[i].className.replace("active"," ");
     }
-    availableImages[imagesIndex-1].style.display="block";
+    availableImages[imagesIndex-1].style.display = "block";
     allDots[imagesIndex-1].className +=" active";
 }
 
