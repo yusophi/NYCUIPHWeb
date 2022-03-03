@@ -239,9 +239,10 @@ body::-webkit-scrollbar {
     border-radius: 1.5vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
+    text-decoration: none;
 }
 
-#logo > a{
+#logo > span{
     position: relative;
     top: 1.15vw ;
     left: 1.15vw;
@@ -253,7 +254,6 @@ body::-webkit-scrollbar {
     letter-spacing: normal;
     text-align: left;
     color: #e4dfd2;
-    text-decoration: none;
 }
 
 #logo:hover{

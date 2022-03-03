@@ -940,6 +940,13 @@
     position: relative;
     top: 5vw;
 }
+.aboutUS_intro_btn > a:visited {
+    color: #2e4565;
+}
+
+.aboutUS_intro_btn:hover > a:visited {
+    color: #efeee4;
+}
 
 /* the waves decorations */
 .deco_waves{

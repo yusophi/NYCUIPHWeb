@@ -253,7 +253,7 @@
                                     -->
                         </div>
                         <div class="bt-readmore aboutUS_intro_btn">
-                              <a class="readmore">read more</a>
+                              <a class="readmore" href="<?php echo site_url(); ?>/about/">read more</a>
                               <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
                               <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
                         </div>

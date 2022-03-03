@@ -29,12 +29,9 @@
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
                     <div id="upper-nav">
-                        <div id="logo">
-                            <a href="<?php echo site_url(); ?>/homepage/" >iPH.</a>
-                            <!--<img src="<?php //bloginfo('template_url')?>/images/icon/LOGO.png" width="72" />-->
-                        </div>
-                        <!--<div id="mark"><img src="<?php //bloginfo('template_url')?>/images/icon/MARK.png" width="205.5" /></div>
-                        -->
+                        <a id="logo" href="<?php echo site_url(); ?>/homepage/">
+                           <span>iPH.</span>
+                        </a>
                         <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
                             <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
                             <span class="enName">Institute of Public Health, NYCU</span>
