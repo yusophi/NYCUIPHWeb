@@ -179,9 +179,7 @@
 .news_block{
     position: relative;
     width: 100vw;
-    margin-top: 5%;
     height: auto;
-    background-color: #e4dfd2;
 }
 
 .news-article
@@ -190,6 +188,7 @@
     min-height: auto;
     display: inline-block;
     background-color: #e4dfd2;
+    margin-left: -1.5vw;
 }
 
 
