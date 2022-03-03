@@ -95,8 +95,8 @@
                         ?>
                               <div class="article-content num-<?php echo $counter ?>">
                                     <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                                    <!--<img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                                    <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">-->
+                                    <!--<img class="thumbnail_icon" src="<?php// bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
+                                    <img class="thumbnail_icon_hover" src="<?php// bloginfo('template_url') ?>/images/icon/icon-news-more.svg">-->
                                     <div class="post_icon">
                                           <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
                                           <div>
@@ -110,18 +110,27 @@
                                           <div class="inner-box"></div>
                                     </div>
                                     <div class="article-meta">
-                                                <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                                <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                                                <!--<div class="post_category"><?php //the_category(''); ?></div>
-                                                <span><?php //the_tags('', ' , ', ''); 
-                                                            ?></span>-->
+                                          <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                          <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                                     </div>
-                                    <div class="post_category"><?php the_category(''); ?></div>
+                                    <div class="post_tags">
+                                          <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                                          <?php
+                                          $sdgs = get_field('sdg');
+                                          if( $sdgs ): ?>
+                                                <ul class="sdg-tag">
+                                                      <?php foreach( $sdgs as $sdg ): ?>
+                                                            <li><?php echo $sdg; ?></li>
+                                                      <?php endforeach; ?>
+                                                </ul>
+                                          <?php endif; ?>
+                                    </div>
+                                    <!--div class="article-title"><a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a></div>-->
                                     <div class="article-title">
                                           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                           <div class="article-title_bottom_line"></div>
                                     </div>
-                                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..."?> </div>
                                     <div class="clearfix"></div>
                               </div>
                         <?php endwhile; ?>
@@ -173,12 +182,24 @@
                                                                   <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                                   <div class="event-info">
                                                                         <div class="event-date-title">
-                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg" style="z-index: -1;">
+                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"">
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
-                                                                        <div class="event-date"><?php the_field('event_date')?> </div>
-                                                                        <div class="event-categories"><?php the_category(''); ?></div>
-                                                                        <div class="event-location"><?php the_field('location')?></div>
+                                                                        <div class="event-date"><?php the_field('event_date');?> </div>
+                                                                        <!--<div class="event-categories"><?php //the_category(''); ?></div>-->
+                                                                        <div class="hp_event_tag">
+                                                                              <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
+                                                                              <div class="event-location"><?php the_field('event_location'); ?></div>
+                                                                        </div>
+                                                                        <?php
+                                                                              $sdgs = get_field('sdg');
+                                                                              if( $sdgs ): ?>
+                                                                                    <ul class="sdg-tag ">
+                                                                                          <?php foreach( $sdgs as $sdg ): ?>
+                                                                                                <li><?php echo $sdg; ?></li>
+                                                                                          <?php endforeach; ?>
+                                                                                    </ul>
+                                                                        <?php endif; ?>
                                                                   </div>
                                                             </div>
                                                             <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
@@ -341,13 +362,12 @@
                                     //$counter = $counter + 1;
                               ?>
                                     <div class="interview-slide">
-                                          
                                           <div class="interview-picture">
                                                 <?php echo wp_get_attachment_image( get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
                                           </div>      
                                           <div class="interview-text-content">
-                                                <a class="interview-title"href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
-                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "..." ?></span>
+                                                <a class="interview-title" href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
+                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "...";?></span>
                                           </div>
                                                 
                                     </div>

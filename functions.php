@@ -52,7 +52,7 @@
 ?>
 
 <?php
-  add_image_size( 'hp-interview-img-thumb', 200, 200, array( 'center', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'hp-interview-img-thumb', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
   
   function my_custom_sizes( $sizes ) {
@@ -74,9 +74,13 @@
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
     wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
-    wp_enqueue_style('mytheme_singlepost_style', get_theme_file_uri('css/singlepost.css'));
     wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
     wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
+    wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
+    wp_enqueue_style('mytheme_singlepost_style', get_theme_file_uri('css/singlepost.css'));
+    wp_enqueue_style('mytheme_post_event_style', get_theme_file_uri('css/events-article.css')); 
+    wp_enqueue_style('mytheme_post_interview_style', get_theme_file_uri('css/article-interview.css')); 
+
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>

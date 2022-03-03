@@ -61,7 +61,6 @@ table {
 }
 
 /*@media screen and (min-width: 701px) {
-
     li li,
     li p,
     li span,
@@ -69,7 +68,6 @@ table {
     p span {
         font-size: 1em
     }
-
     /* 歸零 */
     /* * {
         font-family: 'Noto Sans TC', sans-serif;
@@ -78,7 +76,6 @@ table {
         padding: 0;
         -webkit-font-smoothing: antialiased;
     }
-
     body {
         overflow: hidden;
         font-family: 'Noto Sans TC', sans-serif;
@@ -87,17 +84,14 @@ table {
         padding: 0;
         -webkit-font-smoothing: antialiased;
     }
-
     img {
         border: none;
     }
-
     a {
         font-family: 'Noto Sans TC', sans-serif;
         text-decoration: none;
         color: #646464;
     }
-
     .clear_both {
         clear: both;
     }
@@ -128,7 +122,6 @@ body::-webkit-scrollbar {
     background-color: #f2e7ce;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-
 }*/
 
 .title {

@@ -1,9 +1,11 @@
 const container = document.querySelector(".Interview-container");
 const cards = document.querySelector(".cards");
+var interview_slides = document.querySelector(".interview-slide");
+
 
 let cards_margin = 0;
 let isAnimate = false;
-let movelen = 0;
+
 function animate(){
   int = setInterval(function() {
     cards_margin++;
@@ -35,14 +37,16 @@ container.addEventListener("mousedown", (e) => {
   /*the 'e' means event*/
   /*按下 mouse*/
   isPressedDown = true;
-  cursorXSpace = e.offsetX - cards.offsetLeft; 
+  cursorXSpace = e.offsetX - cards.offsetLeft;
   container.style.cursor = "grabbing";
+  for(var i=0; i<interview_slides.length; i++){
+    interview_slides[i].style.pointerEvents = "none";
+  }
 });
 
 container.addEventListener("mouseup", () => {
   /*放開 mouse*/
   container.style.cursor = "grab";
-  
 });
 
 window.addEventListener("mouseup", () => {

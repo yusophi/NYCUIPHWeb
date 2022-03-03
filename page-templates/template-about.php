@@ -27,9 +27,9 @@
                 </div>-->
             </div>
         </div>
-        <div class="about_banner">
-            <span class="page-name" >系所簡介<br></span>
-            <span class="page-name" >About</span>
+        <div class="banner about_banner">
+            <span class="page_name">系所簡介<br></span>
+            <span class="page_name" id="eg">About</span>
             <div class="circle"></div>
         </div>
         <div class="video-module-container">

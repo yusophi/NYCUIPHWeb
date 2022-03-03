@@ -14,30 +14,25 @@
     display: flex;
     flex-direction:row;
     justify-content: space-between;
+    align-items: center;
     margin-top: 16vw;
     margin-left: 9%;
     margin-right: 9%;
-
 }
 
 .about_banner{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.page-name{
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.875rem; 
-    font-weight: bold;
-    line-height: 3.047rem;
-    letter-spacing: 6px;
-    text-align: left;
-    color: #2e4565;
+    margin: 0;
 }
 
 .about_banner > .circle{
+    position: relative;
+    left: 0;
+    margin-top: 2.5%;
+    right: 0;
+    bottom: 0;
     width: 2.65rem;
     height: 2.65rem;
     border-radius: 1.4rem;

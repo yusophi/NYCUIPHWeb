@@ -3,12 +3,12 @@
  * Template Name: news
  */
 ?>
-
+<?php get_header(); ?>
 <div class="page_News">
     <div class="banner">
-        <span class="page_name" id="zh">最新消息<br></span>
+        <span class="page_name" >最新消息<br></span>
         <span class="page_name" id="eg">News</span>
-        <div id="circle"></div>
+        <div class="circle"></div>
     </div>
     <div class="class_selector">
         <label class="select_container" id="selection_all">總覽
@@ -90,21 +90,39 @@
                             }else{
                                 echo "0" . $counter . ".";} ?>&nbsp;&nbsp;
                     </div>
-                    <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                    <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                    <div class="post_icon">
+                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
+                        <div>
+                            <p class="post_icon_hover_dots"></p>
+                            <p class="post_icon_hover_dots"></p>
+                            <p class="post_icon_hover_dots"></p>
+                        </div>
+                    </div>
                     <div class="border-anim">
                             <div class="inner-box"></div>
                     </div>
                     <div class="article-meta">
-                            <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                            <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                            <!--<div class="post_category"><?php //the_category(''); ?></div>
-                            <span><?php //the_tags('', ' , ', ''); 
-                                        ?></span>-->
+                        <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                        <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                     </div>
-                    <div class="post_category"><?php the_category(''); ?></div>
-                    <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                    <div class="post_tags">
+                            <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                            <?php
+                            $sdgs = get_field('sdg');
+                            if( $sdgs ): ?>
+                                <ul class="sdg-tag">
+                                        <?php foreach( $sdgs as $sdg ): ?>
+                                            <li><?php echo $sdg; ?></li>
+                                        <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+                    </div>
+                    <!--div class="article-title"><a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a></div>-->
+                    <div class="article-title">
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <div class="article-title_bottom_line"></div>
+                    </div>
+                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..."?> </div>
                     <div class="clearfix"></div>
                 </div>
             <?php endwhile; ?>
@@ -116,7 +134,6 @@
     <!--<div class="news_block" id="new_bkg"></div>-->
 
     <div class="pagination">
-            
                 <?PHP
                     $big = 999999999; // need an unlikely integer
                     $args = array(
@@ -141,4 +158,11 @@
     
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+
+<script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+</script>
 <?php get_footer(); ?>
