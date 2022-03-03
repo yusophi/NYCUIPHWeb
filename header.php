@@ -30,7 +30,7 @@
                 <div class="cf nav-disappearable">
                     <div id="upper-nav">
                         <div id="logo">
-                            <span>iPH.</span>
+                            <a href="<?php echo site_url(); ?>/homepage/" >iPH.</a>
                             <!--<img src="<?php //bloginfo('template_url')?>/images/icon/LOGO.png" width="72" />-->
                         </div>
                         <!--<div id="mark"><img src="<?php //bloginfo('template_url')?>/images/icon/MARK.png" width="205.5" /></div>

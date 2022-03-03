@@ -635,7 +635,7 @@
     letter-spacing: 1.25px;
     font-weight: bold;
     text-align: left;
-    
+
 }
 
 .event-intro {
@@ -648,99 +648,6 @@
     letter-spacing: 0.104vw;
     text-align: left;
     color: rgba(46, 69, 101, 0.7);
-}
-
-/****** Milo: readmore botton ****/
-
-#btn-event-readmore-container {
-    cursor: pointer;
-    position: absolute;
-    bottom: 4.563rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8.8%;
-    height: 5.236%;
-    border-radius: 25px;
-    border: #efeee4 solid 1.5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background: linear-gradient(to top, #efeee4 60%, #2e4565 40%);
-    background-size: 100% 250%;
-    background-position: left 0%;
-    transition: all 0.6s ease;
-}
-#btn-event-readmore-container:hover {
-    background-position: 0% 90%;
-}
-#btn-event-readmore-container:hover a {
-    color: #2e4565;
-}
-
-/* #btn-event-readmore-container::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    background: #efeee4;
-    z-index: -1;
-    transform:;
-    transition: 0.6s;
-}
-#btn-event-readmore-container:hover:after {
-    transform: translateY(0%);
-} */
-#btn-event-readmore-container a {
-    font-weight: 500;
-    color: #efeee4;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: 0.6s ease;
-}
-#event-icon-plus-blue {
-    opacity: 0;
-    transition: 0.6s ease;
-    transform: rotate(0deg);
-}
-#event-icon-plus-white {
-    opacity: 1;
-    transition: 0.6s ease;
-    transform: rotate(0deg);
-}
-#btn-event-readmore-container:hover #event-icon-plus-blue {
-    transform: rotate(90deg);
-    opacity: 1;
-}
-#btn-event-readmore-container:hover #event-icon-plus-white {
-    opacity: 0;
-    transform: rotate(90deg);
-}
-
-.event-layered {
-    display: grid;
-    height: 16px;
-    width: 16px;
-    transform: translate3d(-2px, 1.2px, 0);
-}
-.event-layered > * {
-    grid-column-start: 1;
-    grid-row-start: 1;
-}
-/* Milo: end of event part */
-/*****************/
-.event-layered {
-    display: grid;
-    height: 16px;
-    width: 16px;
-    transform: translate3d(-2px, 1.2px, 0);
-}
-.event-layered > * {
-    grid-column-start: 1;
-    grid-row-start: 1;
 }
 
 .event_readmore_btn{
@@ -785,7 +692,13 @@
 }
 
 
+.event_readmore_btn > a:visited {
+    color: #efeee4;
+}
 
+.event_readmore_btn:hover > a:visited {
+    color: #2e4565;
+}
 /************************************/
 /* Jennt: About us Block */
 .About-container

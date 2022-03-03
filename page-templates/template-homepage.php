@@ -231,7 +231,7 @@
                   <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
             </div>
             <div class="bt-readmore event_readmore_btn">
-                  <a class="readmore">read more</a>
+                  <a class="readmore" href="<?php echo site_url(); ?>/events/">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
             </div>

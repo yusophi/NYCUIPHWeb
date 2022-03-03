@@ -241,7 +241,7 @@ body::-webkit-scrollbar {
     background-color: #2e4565;
 }
 
-#logo > span{
+#logo > a{
     position: relative;
     top: 1.15vw ;
     left: 1.15vw;
@@ -253,6 +253,7 @@ body::-webkit-scrollbar {
     letter-spacing: normal;
     text-align: left;
     color: #e4dfd2;
+    text-decoration: none;
 }
 
 #logo:hover{
