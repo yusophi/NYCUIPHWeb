@@ -43,6 +43,15 @@
                     <div class="_content" id="sidebar_content-category">類別&nbsp;:&nbsp;<?php the_field('event_item'); ?></div>
                     <p class="_content">活動日期&nbsp;:&nbsp;<?php the_field('event_date'); ?></p>
                     <p class="_content">活動時間&nbsp;:&nbsp;<?php the_field('event_time_start'); ?><?php echo "~";?><?php the_field('event_time_end');?></p>
+                    <?php
+                    $sdgs = get_field('sdg');
+                    if( $sdgs ): ?>
+                        <ul>
+                            <?php foreach( $sdgs as $sdg ): ?>
+                                <li><?php echo $sdg; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php if( get_field('event_item') == '讀書會' ): ?>

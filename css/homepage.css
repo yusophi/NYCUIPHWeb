@@ -217,35 +217,33 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -0.1rem;
+    right: 0;
+    top: 0;
+    bottom: 0;
     border-radius: 40px;
     background-color: #2e4565;
-    height: calc(100% + 0.2rem);
-    width: 100%;
-    /*-webkit-transform: translateY(3.2vw);
-    transform: translateY(3.2vw);
-    -webkit-transform-origin: 50% 105%;
-    transform-origin: 50% 105%;
+
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     -webkit-transition-property: transform;
     transition-property: transform;
     -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    transition-duration: 0.5;
     -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);*/
-    transform: translate3d(0,100%,0);
-    transition: transform 0.3s ease-in-out;
-    z-index: -1;
-    opacity: 0;
+    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
 }
 
+.bt-readmore:hover::before{
+    -webkit-transform: scale(1.05,1.05);
+    transform: scale(1.05,1.05);
+}
 /*.bt-readmore:hover .bt-readmore_hover_bk{
     top: -0.1vw;
     opacity: 1;
 }*/
-.bt-readmore:not(:disabled):hover:before{
-    transform: translateZ(0);
-    opacity: 1;
-}
+
 .readmore{
     position: absolute;
     width: 5.10vw;
@@ -844,12 +842,12 @@
     z-index: 2;
 }
 
-
 .intro_content-text{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .iph_ch{
     font-size: 3.2504rem;
     font-weight: bold;
@@ -1027,7 +1025,7 @@
 /*define the read-more botton in aboutUs block*/
 .aboutUS_intro_btn{
     position: relative;
-    margin: 5.2vw 0;
+    top: 5vw;
 }
 
 /* the waves decorations */
@@ -1530,8 +1528,8 @@
 }
 
 .cls_btn{
-    width: 1.2rem;
-    height: 1.2rem;
+    /*width: 1.2rem;
+    height: 1.2rem;*/
     margin-left: 33%;
     margin-top: 2%;
     cursor: pointer;

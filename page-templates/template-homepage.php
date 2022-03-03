@@ -250,7 +250,7 @@
                               <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
                               <div class="iph_en"> <?php the_field('iph_en') ?></div>
                               <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
-                        <!--<img class="icon_aboutus_1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
+                        <!--<img class="icon_aboutus_1" src="<?php //bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
                                     -->
                         </div>
                         <div class="bt-readmore aboutUS_intro_btn">
@@ -514,7 +514,7 @@
                               </div> 
                         </div>
 
-                        <div class="overlayinContact" id="profile_overlay<?php echo $counter ?>">
+                        <div class="overlayinContact" id="profile_overlay<?php echo $counter ?>" onclick="closeProfile(<?php echo $counter; ?>)">
                               <div class="overlay_wapper">
                                     <div class="cls_btn">
                                           <img onclick="closeProfile(<?php echo $counter; ?>)" src="<?php bloginfo('template_url')?>/images/icon/profile_back.svg">
