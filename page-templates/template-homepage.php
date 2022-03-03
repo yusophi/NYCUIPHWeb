@@ -77,7 +77,6 @@
                   'post_type' => 'post',
                   'post_status' => 'publish',
                   'category_name' => 'news',
-                  'category__not_in' => array(14),
                   'orderby' => 'date',
                   'posts_per_page' => 6
             );
@@ -346,7 +345,6 @@
                               'post_type' => 'post',
                               'post_status' => 'publish',
                               'category_name' => 'interviews',
-                              'category__not_in' => array(14),
                               'orderby' => 'date',
                               'posts_per_page' => 6
                         );
