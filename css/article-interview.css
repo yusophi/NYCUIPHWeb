@@ -1,0 +1,19 @@
+.interview-circle{
+    position: absolute;
+    right: 0%;
+    bottom: 30%;
+    width: 1.614vw;
+    height: 1.614vw;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
+    background-color: #efeee4;
+}
+
+.the_next3_interview .interview-text-content > a, .the_next3_interview .interview-text-content > span{
+    color: #efeee4;
+}
+
+
+/*.the_next3_interview .interview-slide{
+    pointer-events: none;
+}*/

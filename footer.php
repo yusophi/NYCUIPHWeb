@@ -28,7 +28,7 @@
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link_white.svg">&nbsp;&nbsp;&nbsp;
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link_white.svg">
                   <div style="padding-top: 1.875rem;">
-                        © 國立陽明交通大學公共衛生研究所 2021&nbsp;&nbsp;&nbsp;illustration by&nbsp;
+                        © 國立陽明交通大學公共衛生研究所 <?php echo date('Y') ?> &nbsp;&nbsp;&nbsp;illustration by&nbsp;
                         <a class="footer-iconscout-link" href="https://iconscout.com/">iconscout</a>
                   </div>
             </div>

@@ -29,12 +29,9 @@
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
                     <div id="upper-nav">
-                        <div id="logo">
-                            <span>iPH.</span>
-                            <!--<img src="<?php //bloginfo('template_url')?>/images/icon/LOGO.png" width="72" />-->
-                        </div>
-                        <!--<div id="mark"><img src="<?php bloginfo('template_url')?>/images/icon/MARK.png" width="205.5" /></div>
-                        -->
+                        <a id="logo" href="<?php echo site_url(); ?>/homepage/">
+                           <span>iPH.</span>
+                        </a>
                         <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
                             <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
                             <span class="enName">Institute of Public Health, NYCU</span>
@@ -81,11 +78,11 @@
                         </div>
                     </li>
                     <li id="nav-main-list-item-4">
-                        <a class="menu-list nav-list-item-4">學術活動</a>
+                        <a class="menu-list nav-list-item-4" href="<?php echo site_url(); ?>/events/">學術活動</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-4"><a href="">學術演講</a></li>
                                 <li class="nav-list-item-4"><a href="">學術資源</a></li>
+                                <li class="nav-list-item-4"><a href="">學術演講</a></li>
                                 <li class="nav-list-item-4"><a href="">讀書會</a></li>
                             </ul>
                         </div>
@@ -156,11 +153,25 @@
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo'/mobile-css/news-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
         }
-        if(is_page_template( 'page-templates/template-singlepost.php' )){ /*文章模板*/
+        if(is_page('events')){ /*學術活動頁面*/
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
-            echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
+            echo '/css/events.css" type="text/css" media="screen and (min-width: 701px)" />';
             /*************/
-         }
+            echo '<script src="';bloginfo('template_url');
+            echo '/js/events.js" type="text/javascript" media="screen and (min-width: 701px)"></script>';
+            /*************/
+            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo'/mobile-css/events-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
+        }
+        /*if(is_page_template( 'page-templates/template-singlepost.php' )){ /*文章模板*/
+            /*echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
+            /************
+         }*/
+         /*if(is_page_template( 'page-templates/template-events-article.php' )){ /*文章模板*/
+            /*echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo '/css/events-article.css" type="text/css" media="screen and (min-width: 701px)" />';
+         }*/
 
     ?>
     </head>

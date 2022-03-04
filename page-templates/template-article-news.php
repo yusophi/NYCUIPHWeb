@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: 純文字
+ * Template Name: 最新消息模板
  * Template Post Type: post
  */
 ?>
@@ -13,7 +13,19 @@
         <div class="banner_article_meta">
             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
-            <div class="banner_post_category"><?php the_category(''); ?></div>
+            <!--<div class="banner_post_category"><?php the_category(''); ?></div>-->
+            <div class="post_tags tags_in_page_banner">
+                <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                <?php
+                $sdgs = get_field('sdg');
+                if( $sdgs ): ?>
+                    <ul class="sdg-tag">
+                            <?php foreach( $sdgs as $sdg ): ?>
+                                <li><?php echo $sdg; ?></li>
+                            <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
         </div>      
     </div>
     <div class="single_post_info">
@@ -27,8 +39,17 @@
                     <p class="sidebar_title_ch">相關資訊</p>
                 </div>  
                 <div class="sidebar_content">
-                    <div class="_content" id="sidebar_content-category">類別&nbsp;:<?php the_category(''); ?></div>
+                    <div class="_content" id="sidebar_content-category">類別&nbsp;:&nbsp;<?php the_field('news_item'); ?></div>
                     <p class="_content">發布日期&nbsp;:&nbsp;<?php the_time('Y.m.j'); ?></p>
+                    <?php
+                    $sdgs = get_field('sdg');
+                    if( $sdgs ): ?>
+                        <ul>
+                            <?php foreach( $sdgs as $sdg ): ?>
+                                <li><?php echo $sdg; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="sidebar_block" id="author">
@@ -60,14 +81,13 @@
             <span>下則新聞</span>
             <span id="next_news_title_eg">Next</span>
         </div>
-        <div class="the_next3_news">
+        <div class="the_next3_block">
             <?php
                 global $post;
                 $myposts = get_posts( array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
                     'category_name' => 'news',
-                    'category__not_in' => array(14),
                     'orderby' => 'date',
                     'posts_per_page' => 3
                     ) 
@@ -82,8 +102,17 @@
                     ?>
                     <div class="article-content whiteText num-<?php echo $counter ?>">
                         <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                        <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-newspaper.svg">
-                        <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-news-more.svg">
+                        <!--<img class="thumbnail_icon" src="<?php //bloginfo('template_url') ?>/images/page_news/icon-white-newspaper.svg">
+                        <img class="thumbnail_icon_hover" src="<?php //bloginfo('template_url') ?>/images/page_news/icon-white-news-more.svg">
+                        -->
+                        <div class="post_icon tmp_arti_news">
+                            <img src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-newspaper.svg">
+                            <div>
+                                <p class="post_icon_hover_dots"></p>
+                                <p class="post_icon_hover_dots"></p>
+                                <p class="post_icon_hover_dots"></p>
+                            </div>
+                        </div>
                         <div class="border-anim">
                             <div class="inner-box"></div>
                         </div>
@@ -91,9 +120,24 @@
                             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
                             <div class="post_time"><?php the_time('Y.m.j'); ?></div>
                         </div>
-                        <div class="post_category"><?php the_category(''); ?></div>
-                        <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                        <!--<div class="post_category"><?php //the_category(''); ?></div>-->
+                        <div class="post_tags">
+                            <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                            <?php
+                            $sdgs = get_field('sdg');
+                            if( $sdgs ): ?>
+                                <ul class="sdg-tag">
+                                        <?php foreach( $sdgs as $sdg ): ?>
+                                            <li><?php echo $sdg; ?></li>
+                                        <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+                        </div>
+                        <div class="article-title">
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <div class="article-title_bottom_line"></div>
+                        </div>
+                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..."?> </div>
                         <div class="clearfix"></div>
                     </div>
                     <?php endforeach; wp_reset_postdata();?>

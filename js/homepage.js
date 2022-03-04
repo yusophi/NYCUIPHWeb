@@ -24,7 +24,7 @@ function displayImage(n){
     for(var i=0;i<allDots.length;i++){
         allDots[i].className = allDots[i].className.replace("active"," ");
     }
-    availableImages[imagesIndex-1].style.display="block";
+    availableImages[imagesIndex-1].style.display = "block";
     allDots[imagesIndex-1].className +=" active";
 }
 
@@ -191,37 +191,6 @@ FlexSlider = {
 FlexSlider.init();
 
 // Milo: End of event part
-
-// Jenny: overlay in video block
-/*this is for the overlay block*/
-function on(n) {
-    if(n == 1)
-    {
-        document.getElementById("overlay1").style.display = "block";
-        /*document.getElementById("main-nav").style.backgroundColor = "block";*/
-
-
-    }
-    else if (n == 2)
-    {
-        document.getElementById("overlay2").style.display = "block";
-    }
-}
-  
-function off(n) {
-
-    /*document.getElementById("overlay").style.display = "none";*/
-    if(n == 1)
-    {
-        document.getElementById("overlay1").style.display = "none";
-
-    }
-    else if (n == 2)
-    {
-        document.getElementById("overlay2").style.display = "none";
-    }
-}
-// end of overaly
 
 
 // Milo: JS code for links part

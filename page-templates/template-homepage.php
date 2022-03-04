@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 <div class="homepage">
       <!-- the slideshoe block-->
@@ -78,7 +77,6 @@
                   'post_type' => 'post',
                   'post_status' => 'publish',
                   'category_name' => 'news',
-                  'category__not_in' => array(14),
                   'orderby' => 'date',
                   'posts_per_page' => 6
             );
@@ -96,27 +94,49 @@
                         ?>
                               <div class="article-content num-<?php echo $counter ?>">
                                     <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                                    <img class="thumbnail_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
-                                    <img class="thumbnail_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-news-more.svg">
+                                    <!--<img class="thumbnail_icon" src="<?php// bloginfo('template_url') ?>/images/icon/icon-newspaper-new.svg">
+                                    <img class="thumbnail_icon_hover" src="<?php// bloginfo('template_url') ?>/images/icon/icon-news-more.svg">-->
+                                    <div class="post_icon">
+                                          <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
+                                          <div>
+                                          <p class="post_icon_hover_dots"></p>
+                                          <p class="post_icon_hover_dots"></p>
+                                          <p class="post_icon_hover_dots"></p>
+                                          </div>
+                                    </div>
+                                   
                                     <div class="border-anim">
-                                                <div class="inner-box"></div>
+                                          <div class="inner-box"></div>
                                     </div>
                                     <div class="article-meta">
-                                                <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                                                <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                                                <!--<div class="post_category"><?php //the_category(''); ?></div>
-                                                <span><?php //the_tags('', ' , ', ''); 
-                                                            ?></span>-->
+                                          <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                          <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                                     </div>
-                                    <div class="post_category"><?php the_category(''); ?></div>
-                                    <div class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?> </div>
+                                    <div class="post_tags">
+                                          <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                                          <?php
+                                          $sdgs = get_field('sdg');
+                                          if( $sdgs ): ?>
+                                                <ul class="sdg-tag">
+                                                      <?php foreach( $sdgs as $sdg ): ?>
+                                                            <li><?php echo $sdg; ?></li>
+                                                      <?php endforeach; ?>
+                                                </ul>
+                                          <?php endif; ?>
+                                    </div>
+                                    <!--div class="article-title"><a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a></div>-->
+                                    <div class="article-title">
+                                          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                          <div class="article-title_bottom_line"></div>
+                                    </div>
+                                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..."?> </div>
                                     <div class="clearfix"></div>
                               </div>
                         <?php endwhile; ?>
                   </div>
             <?php endif; wp_reset_postdata(); ?>
             <div class="bt-readmore news_readmore_btn">
+                  <div class="bt-readmore_hover_bk"></div>
                   <a class="readmore" href="<?php echo site_url(); ?>/news/">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
@@ -161,12 +181,24 @@
                                                                   <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                                   <div class="event-info">
                                                                         <div class="event-date-title">
-                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg" style="z-index: -1;">
+                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"">
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
-                                                                        <div class="event-date"><?php the_field('event_date')?> </div>
-                                                                        <div class="event-categories"><?php the_category(''); ?></div>
-                                                                        <div class="event-location"><?php the_field('location')?></div>
+                                                                        <div class="event-date"><?php the_field('event_date');?> </div>
+                                                                        <!--<div class="event-categories"><?php //the_category(''); ?></div>-->
+                                                                        <div class="hp_event_tag">
+                                                                              <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
+                                                                              <div class="event-location"><?php the_field('event_location'); ?></div>
+                                                                        </div>
+                                                                        <?php
+                                                                              $sdgs = get_field('sdg');
+                                                                              if( $sdgs ): ?>
+                                                                                    <ul class="sdg-tag ">
+                                                                                          <?php foreach( $sdgs as $sdg ): ?>
+                                                                                                <li><?php echo $sdg; ?></li>
+                                                                                          <?php endforeach; ?>
+                                                                                    </ul>
+                                                                        <?php endif; ?>
                                                                   </div>
                                                             </div>
                                                             <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
@@ -199,7 +231,7 @@
                   <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
             </div>
             <div class="bt-readmore event_readmore_btn">
-                  <a class="readmore">read more</a>
+                  <a class="readmore" href="<?php echo site_url(); ?>/events/">read more</a>
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
             </div>
@@ -217,11 +249,11 @@
                               <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
                               <div class="iph_en"> <?php the_field('iph_en') ?></div>
                               <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
-                        <!--<img class="icon_aboutus_1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
+                        <!--<img class="icon_aboutus_1" src="<?php //bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
                                     -->
                         </div>
                         <div class="bt-readmore aboutUS_intro_btn">
-                              <a class="readmore">read more</a>
+                              <a class="readmore" href="<?php echo site_url(); ?>/about/">read more</a>
                               <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
                               <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
                         </div>
@@ -313,7 +345,6 @@
                               'post_type' => 'post',
                               'post_status' => 'publish',
                               'category_name' => 'interviews',
-                              'category__not_in' => array(14),
                               'orderby' => 'date',
                               'posts_per_page' => 6
                         );
@@ -329,13 +360,12 @@
                                     //$counter = $counter + 1;
                               ?>
                                     <div class="interview-slide">
-                                          
                                           <div class="interview-picture">
                                                 <?php echo wp_get_attachment_image( get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
                                           </div>      
                                           <div class="interview-text-content">
-                                                <a class="interview-title"href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
-                                                <span class="interview-excerpt"><?php the_field('excerpt'); ?><?php echo "..." ?></span>
+                                                <a class="interview-title" href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─"?> <?php the_field('alumni_name'); ?></a>
+                                                <span class="interview-excerpt"><?php the_field('interview-excerpt'); ?><?php echo "...";?></span>
                                           </div>
                                                 
                                     </div>
@@ -357,7 +387,7 @@
                   <span class="links-flex-col">
                         <div class="links-category-item">
                               <div class="links-upper-item">
-                                    <span class="links-item-title">資料庫</span>
+                                    <span class="links-item-title">學術資源</span>
                                     <span class="links-icon-more-item">+</span>
                               </div>
                               <div class="links-items">
@@ -468,29 +498,29 @@
                               </div>
                               <div class="profile_content">
                                     <div class="profile_p1">
-                                          <p class="staff_name"><?php the_field('staff_name') ?></p>
+                                          <p class="contact_text staff_name"><?php the_field('staff_name') ?></p>
                                           <p class="work_respon" id="out_WR"><?php the_field('work_group') ?></p>
                                     </div>
                                     <div class="profile_p2" id="out_profile_p2">
-                                          <p class="contact_title">電話:</p>
+                                          <p class="contact_text contact_title">電話:</p>
                                           <p class="phone_num"><?php the_field('phone_number') ?> </p>
                                     </div>
                                     <div class="profile_p3">
-                                          <p class="contact_title">信箱:</p>
+                                          <p class="contact_text contact_title">信箱:</p>
                                           <p class="email"><?php the_field('email') ?> </p>
                                     </div>
                               </div> 
                         </div>
 
-                        <div class="overlayinContact" id="profile_overlay<?php echo $counter ?>">
+                        <div class="overlayinContact" id="profile_overlay<?php echo $counter ?>" onclick="closeProfile(<?php echo $counter; ?>)">
                               <div class="overlay_wapper">
                                     <div class="cls_btn">
                                           <img onclick="closeProfile(<?php echo $counter; ?>)" src="<?php bloginfo('template_url')?>/images/icon/profile_back.svg">
                                     </div>
                                     <div class="overlay_profile_content">
                                           <div class="overlay_title">
-                                                <p id="profile_text">(Profile)</p>
-                                                <p class="work_respon" id="overlay_WR"><?php the_field('work_group') ?> </p>
+                                                <p class="contact_text profile_text">(Profile)</p>
+                                                <p class="contact_text work_respon" id="overlay_WR"><?php the_field('work_group') ?> </p>
                                                 <img src="<?php bloginfo('template_url')?>/images/icon/overlay_Contactus_icon.svg">
                                           </div>
                                           <div class="overlay_middle">
@@ -508,7 +538,7 @@
                                                       </div>
                                                 </div>
                                                 <div class="overlay_self_info">
-                                                      <p class="staff_name" id="overlay_SN"><?php the_field('staff_name') ?></p>
+                                                      <p class="contact_text overlay_staff_name" id="overlay_SN"><?php the_field('staff_name') ?></p>
                                                       <div class="profile_p2" id="overlay_pro_p2">
                                                             <p class="contact_title">電話:</p>
                                                             <p class="phone_num" id="overlay_phone"><?php the_field('phone_number') ?> </p>
@@ -519,7 +549,7 @@
                                                       </div>
                                                       <!--<p class="phone_num"><?php //the_field('phone_number') ?> </p>
                                                       <p class="email"><?php //the_field('email') ?> </p>-->
-                                                      <p class="self_intro"><?php the_field('self_introduction') ?> </p>
+                                                      <p class="contact_text self_intro"><?php the_field('self_introduction') ?> </p>
                                                 </div>
                                           </div>
                                           <div class="ovetlay_bottom">

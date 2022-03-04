@@ -1,6 +1,6 @@
 .Footer-container {
     width: 100vw;
-    min-height: 56.25vw;
+    height: 100vh;
     background-color: #162a47;
     position: relative;
     z-index: 2;
@@ -10,25 +10,25 @@
     display: flex;
     flex-direction:column;
     align-items: center;
+    justify-content: center;
     margin-top: -6vw;
+    overflow: hidden;
 }
 
 .footer-margin {
     width: 82vw;
-    /*padding: 7% 9%;
-    padding-bottom: 0%;*/
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10.39vw 8.95vw 0 8.95vw;
+    margin: 5vh 8.95vw 0 8.95vw;
 }
 
 .footer-exclam {
     width: 53vw;
     opacity: 0.7;
     font-family:  'Noto Sans TC', sans-serif;
-    font-size: 3.04725rem;
+    font-size: 3.2504rem;
     font-weight: bold;
     line-height: 1.38;
     letter-spacing: 6.5px;
@@ -57,12 +57,11 @@
 }
 
 .footer-info {
-    /*bottom: 4.3%;*/
     position: relative;
     margin-top: 5vw;
     opacity: 0.7;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.79725rem; 
+    font-size: 0.8504rem; 
     font-weight: 300;
     line-height: 1.66; 
     letter-spacing: 2.55px;
@@ -75,7 +74,7 @@
     right: 0;
     opacity: 0.7;
     font-family: NotoSansTC;
-    font-size: 0.79725rem;
+    font-size: 0.8504rem;
     font-weight: 300;
     line-height: 1.76;
     letter-spacing: 2.55px;
