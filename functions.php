@@ -54,6 +54,8 @@
 <?php
   add_image_size( 'hp-interview-img-thumb', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'pie_chart', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'ad_poster_size', 599, 835, array( 'left', 'top' ) ); // Hard crop x:center y:top
   
   function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
@@ -76,12 +78,28 @@
     wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
     wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
     wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-    wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
     wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
     wp_enqueue_style('mytheme_singlepost_style', get_theme_file_uri('css/singlepost.css'));
     wp_enqueue_style('mytheme_post_event_style', get_theme_file_uri('css/events-article.css')); 
     wp_enqueue_style('mytheme_post_interview_style', get_theme_file_uri('css/article-interview.css')); 
     wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
+    wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
+
+    /*if(is_page('homepage')){
+      wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
+    }
+    elseif(is_page('news')){
+      wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
+    }
+    elseif(is_page('events')){
+      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
+    }
+    elseif(is_page('about')){
+      wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
+    }
+    elseif(is_page('admission')){
+      wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
+    }*/
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>

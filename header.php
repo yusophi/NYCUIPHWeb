@@ -66,17 +66,7 @@
                                 <li class="nav-list-item-2"><a href="">COVID-19</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li id="nav-main-list-item-3">
-                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li class="nav-list-item-3"><a href="">博士班招生(不分組)</a></li>
-                                <li class="nav-list-item-3"><a href="">碩士班招生考試</a></li>
-                                <li class="nav-list-item-3"><a href="">碩博班甄試入學考試</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    </li>   
                     <li id="nav-main-list-item-4">
                         <a class="menu-list nav-list-item-4" href="<?php echo site_url(); ?>/events/">學術活動</a>
                         <div class="dropdown-menu">
@@ -106,6 +96,16 @@
                                 <li class="nav-list-item-6"><a href="">行政資源</a></li>
                             </ul>
                         </div>
+                    </li>
+                    <li id="nav-main-list-item-3">
+                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
+                        <!--<div class="dropdown-menu">
+                            <ul>
+                                <li class="nav-list-item-3"><a href="">博士班招生(不分組)</a></li>
+                                <li class="nav-list-item-3"><a href="">碩士班招生考試</a></li>
+                                <li class="nav-list-item-3"><a href="">碩博班甄試入學考試</a></li>
+                            </ul>
+                        </div>-->
                     </li>
                     <li id="nav-main-list-item-8">
                         <a class="menu-list nav-list-item-8">公衛學科</a>
@@ -163,6 +163,7 @@
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo'/mobile-css/events-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
         }
+        
         /*if(is_page_template( 'page-templates/template-singlepost.php' )){ /*文章模板*/
             /*echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
