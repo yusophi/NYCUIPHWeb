@@ -27,13 +27,13 @@
     );
     $argsss = array(
       'labels'        => $labelsss,
-      'description'   => '實驗室成員資料',
+      'description'   => '師資陣容資料',
       'public'        => true,
-      'taxonomies'    => array('recordings', 'category'),
+      'taxonomies'    => array('recordings', 'category', 'post_tag'),
       'menu_position' => 5,
       'reweite'       => false,
       'has_archive'   => false,
-      'supports'      => array( 'title', 'editor', 'thumbnail')
+      'supports'      => array( 'title', 'thumbnail')
     );
     register_post_type( 'Staff', $argsss );
   }
@@ -56,6 +56,7 @@
   add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'pie_chart', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'ad_poster_size', 599, 835, array( 'left', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'member_picture', 1268, 1024, array( 'left', 'center' ) ); // Hard crop x:center y:top
   
   function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
@@ -100,6 +101,9 @@
     elseif(is_page('admission')){
       wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
     }*/
+    if(is_page('member')){
+      wp_enqueue_style('mytheme_page-member_style', get_theme_file_uri('css/member.css')); 
+    }
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
