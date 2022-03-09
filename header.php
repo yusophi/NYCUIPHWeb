@@ -161,7 +161,11 @@
             echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
             /*************/
          }
-
+         if(is_page_template( 'page-templates/template-epid.php' )){ /*流行病學模板*/
+            echo '<link rel="stylesheet" href="';bloginfo('template_url');
+            echo '/css/epid.css" type="text/css" media="screen and (min-width: 701px)" />';
+            /*************/
+         }
     ?>
     </head>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
