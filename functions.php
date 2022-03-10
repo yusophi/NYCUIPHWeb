@@ -56,7 +56,7 @@
   add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'pie_chart', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'ad_poster_size', 599, 835, array( 'left', 'top' ) ); // Hard crop x:center y:top
-  add_image_size( 'member_picture', 1268, 1024, array( 'left', 'center' ) ); // Hard crop x:center y:top
+  add_image_size( 'member_picture', 376, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   
   function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(

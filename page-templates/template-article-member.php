@@ -51,7 +51,7 @@
             </div>
             <div class="right_block">
                 <p class="right_block_title">教師個人CV</p>
-                <a class="CV_link" href="<?php echo esc_url($regular_staff['CV']);?>">[連結]</a>
+                <a class="CV_link" href="<?php echo esc_url($regular_staff['CV']);?>" target="_blank">[連結]</a>
             </div>
             <div class="right_block works">
                 <p class="right_block_title">代表著作</p>

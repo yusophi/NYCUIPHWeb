@@ -20,6 +20,18 @@
             <input type="radio" name="radio">
             <span class="checkmark"></span>
         </label>
+        <label class="select_container" id="selection_speech">兼任教師
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="select_container" id="selection_speech">醫學人文教師
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="select_container" id="selection_speech">系所主管
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
     </div>
     <?php
         $args = array(
@@ -39,22 +51,84 @@
                     $counter = $counter + 1;?>
                     <?php
                     $regular_staff = get_field('regular_staff');
-                    if( $regular_staff): ?>
-                        <div class="member_card">
-                            <div class="member_picture">
-                                <?php echo wp_get_attachment_image( $regular_staff['picture'], 'full'); ?>
-                            </div>
-                            <a class="name" href="<?php the_permalink(); ?>"><?php echo $regular_staff['name']; ?><span class="title"><?php echo $regular_staff['title']; ?></span></a>
-                            <div class="education">
-                                <p>學歷｜</p>
-                                <p><?php echo $regular_staff['h_education'];?></p>
-                            </div>
-                            <div class="expertise">
-                                <p>專長領域｜</p>
-                                <p><?php echo $regular_staff['academic_expertise'];?></p>
-                            </div>
-                        </div>
+                    $co_staff = get_field('co_staff');
+                    $co_staff = get_field('co_staff');
+                    $concurrent_staff = get_field('concurrent_staff');
+                    $medical_staff = get_field('medical_staff');
+                    
+                    $picture = 0;
+                    $title = ""; $name = "";
+                    $edu = ""; $exp = ""; $link = ""; $CV = "";
+                    ?>
+                    <?php if( $regular_staff): 
+                        $picture = $regular_staff['picture'];
+                        $name = $regular_staff['name'];
+                        $title = $regular_staff['title'];
+                        $edu = $regular_staff['h_education'];
+                        $exp = $regular_staff['academic_expertise'];
+                    ?>
+                    <?php elseif( $co_staff): 
+                        $picture = $co_staff['picture'];
+                        $name = $co_staff['name'];
+                        $title = $co_staff['title'];
+                        $edu = $co_staff['h_education'];
+                        $exp = $co_staff['academic_expertise'];
+                        if( $co_staff['link'] ){
+                            $link = $co_staff['link'];
+                        }
+                        elseif($co_staff['CV']){
+                            $link = $co_staff['CV'];
+                        }
+                    ?>
+                    <?php elseif( $concurrent_staff): 
+                        $picture = $concurrent_staff['picture'];
+                        $name = $concurrent_staff['name'];
+                        $title = $concurrent_staff['title'];
+                        $edu = $concurrent_staff['h_education'];
+                        $exp = $concurrent_staff['academic_expertise'];
+                        if( $concurrent_staff['link'] ){
+                            $link = $concurrent_staff['link'];
+                        }
+                        elseif($concurrent_staff['CV']){
+                            $link = $concurrent_staff['CV'];
+                        }
+                    ?>
+                     <?php elseif( $medical_staff): 
+                        $picture = $medical_staff['picture'];
+                        $name = $medical_staff['name'];
+                        $title = $medical_staff['title'];
+                        $edu = $medical_staff['h_education'];
+                        $exp = $medical_staff['academic_expertise'];
+                        if( $medical_staff['link'] ){
+                            $link = $medical_staff['link'];
+                        }
+                        elseif($medical_staff['CV']){
+                            $link = $medical_staff['CV'];
+                        }
+                    ?>
                     <?php endif; ?>
+                    <div class="member_card">
+                        <div class="member_picture">
+                            <?php echo wp_get_attachment_image( $picture, 'full'); ?>
+                        </div>
+
+                        <?php if( $link ): ?>
+                            <a class="name" href="<?php echo esc_url( $link ); ?>" target="_blank"><?php echo $name; ?><span class="title"><?php echo $title; ?></span></a>
+                        <?php elseif( $CV ): ?>
+                            <a class="name" href="<?php echo esc_url( $CV ); ?>" target="_blank"><?php echo $name; ?><span class="title"><?php echo $title; ?></span></a>
+                        <?php else: ?>
+                            <a class="name" href="<?php the_permalink(); ?>"><?php echo $name; ?><span class="title"><?php echo $title; ?></span></a>
+                        <?php endif; ?>
+
+                        <div class="education">
+                            <p>學歷｜</p>
+                            <p><?php echo $edu;?></p>
+                        </div>
+                        <div class="expertise">
+                            <p>專長領域｜</p>
+                            <p><?php echo $exp;?></p>
+                        </div>
+                    </div>
             <?php endwhile; ?> 
         </div>
     <?php endif;
