@@ -163,7 +163,7 @@
          }
          if(is_page_template( 'page-templates/template-epid.php' )){ /*流行病學模板*/
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
-            echo '/css/epid.css" type="text/css" media="screen and (min-width: 701px)" />';
+            echo '/css/epid.css" type="text/css" />';
             /*************/
          }
     ?>

@@ -8,14 +8,23 @@ var thoughts_data = document.querySelector("#thoughts_data");
 
 btn_classes.addEventListener("click", function () {
     changing_content.innerHTML = classes_data.innerHTML;
+    btn_classes.classList.add('checked');
+    btn_teachers.classList.remove('checked');
+    btn_thoughts.classList.remove('checked');
 });
 
 btn_teachers.addEventListener("click", function () {
     changing_content.innerHTML = teachers_data.innerHTML;
+    btn_teachers.classList.add('checked');
+    btn_classes.classList.remove('checked');
+    btn_thoughts.classList.remove('checked');
 });
 
 btn_thoughts.addEventListener("click", function () {
     changing_content.innerHTML = thoughts_data.innerHTML;
+    btn_thoughts.classList.add('checked');
+    btn_classes.classList.remove('checked');
+    btn_teachers.classList.remove('checked');
 });
 
 color = [228, 223, 210];
