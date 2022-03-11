@@ -84,11 +84,18 @@
     wp_enqueue_style('mytheme_post_interview_style', get_theme_file_uri('css/article-interview.css')); 
     wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
     wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
+    wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
 
-    /*if(is_page('homepage')){
-      wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
+    if(is_page('course_architecture')){
+      wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum_arch.css')); 
     }
-    elseif(is_page('news')){
+    elseif(is_page('degree_regulation')){
+      wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
+    }
+    elseif(is_page('course_schedule')){
+      wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
+    }
+    /*elseif(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
     }
     elseif(is_page('events')){
