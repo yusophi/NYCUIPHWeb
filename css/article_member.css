@@ -1,0 +1,142 @@
+.article_member_container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    background: #e4dfd2;
+}
+
+.article_content{
+    width: 82%;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-top: 17.23vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left{
+    width: 23.38vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.left div{
+    margin-bottom: 0.7vw;
+}
+
+.right{
+    width: 49.8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.member_picture{
+    width: 23.38vw;
+    height: 14.84vw;
+    overflow: hidden;
+    border-radius: 1.302vw;
+}
+
+.short{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: none;
+    border-bottom: solid 2px rgba(46, 69, 101, 0.7);
+    margin: 0;
+}
+
+.staff_name{
+    margin-top: 2.1vw;
+}
+
+.staff_name > p, .staff_name > p > span{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    text-align: left;
+    color: #2e4565;
+}
+
+.staff_name > .staff_en_name{
+    letter-spacing: 2px;
+}
+.staff_name > p > span{
+    font-size: 1.2504rem;
+    letter-spacing: 3.75px;
+    margin-left: 0.8vw;
+}
+
+.contact{
+    margin-top: 2.8vw;
+}
+.contact > p{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.82;
+    letter-spacing: 3.3px;
+    text-align: left;
+    color: #2e4565;
+}
+.contact > p > span{
+    letter-spacing: 1.1px;
+}
+
+.right_block{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.82;
+    letter-spacing: 3px;
+    text-align: left;
+    color: #647386;
+    margin-bottom: 2.2vw;
+}
+
+.right_block_title{
+    font-size: 1.3504rem;
+    font-weight: bold;
+    letter-spacing: 4.05px;
+    line-height: 1;
+    color: #2e4565;
+    margin-bottom: 2.8vw;
+}
+
+.right > .block-deco{
+    width: 100%;
+}
+
+.CV_link{
+    font-weight: bold;
+    letter-spacing: 3.3px;
+    color: #4f5ab8;
+    text-decoration: none;
+}
+
+.right_block > ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 1.8vw;
+}
+
+.works > ol > li {
+    margin-bottom: 1.5vw;
+}
+
+.works > ol > li, .works > ol > li > div{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 1.35px;
+}
