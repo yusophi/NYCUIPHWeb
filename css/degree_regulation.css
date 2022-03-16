@@ -1,0 +1,17 @@
+.course_outline {
+    border-bottom: 1px solid #647386;
+    width: 82vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.course_outline hr{
+    display: none;
+}
+
+.course_outline > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: seagreen;
+}
