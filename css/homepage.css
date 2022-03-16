@@ -1129,6 +1129,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 3vw;
+    text-decoration: none;
 }
 
 .SP_img{

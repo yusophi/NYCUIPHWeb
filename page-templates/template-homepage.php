@@ -308,13 +308,13 @@
                   </div>
 
                   <div id="SP_content_container">
-                        <div id="SP_1" class="SP_content">
+                        <a id="SP_1" class="SP_content" href="<?php echo site_url(); ?>/epidemiology/">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
                               </div>
                               <span class="SP_ch_title">流行病學<br></span>
                               <span class="SP_en_title">Epidemiology</span>
-                        </div>
+                        </a>
                         <div id="SP_2" class="SP_content">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
