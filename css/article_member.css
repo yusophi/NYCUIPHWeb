@@ -111,14 +111,22 @@
     letter-spacing: 4.05px;
     line-height: 1;
     color: #2e4565;
-    margin-bottom: 2.8vw;
+    margin-bottom: 2.3vw;
 }
 
 .right > .block-deco{
     width: 100%;
 }
 
+.staff_CV{
+    flex-direction: row;  
+    justify-content: center;
+    line-height: 1.2;
+}
+
 .CV_link{
+    position: relative;
+    margin-left: 1vw;
     font-weight: bold;
     letter-spacing: 3.3px;
     color: #4f5ab8;

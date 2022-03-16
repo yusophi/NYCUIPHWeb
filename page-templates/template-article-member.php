@@ -49,7 +49,7 @@
                 <div class="deco-arrow"></div>
                 <div class="deco-section">s2</div>
             </div>
-            <div class="right_block">
+            <div class="right_block staff_CV">
                 <p class="right_block_title">教師個人CV</p>
                 <a class="CV_link" href="<?php echo esc_url($regular_staff['CV']);?>" target="_blank">[連結]</a>
             </div>
