@@ -1,0 +1,18 @@
+.curriculum_arch{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3.125vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-top:solid 2px #2e4565;
+}
+
+.arch_picture{
+    width: 67.135vw;
+    height: 37.7083vw;
+    overflow: hidden;
+    margin-top: 4.166vw;
+}

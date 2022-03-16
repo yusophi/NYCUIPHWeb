@@ -18,17 +18,17 @@
 
 .page_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2rem; /*2.5rem*/
+    font-size: 2.083vw; /*2.5rem*/
     font-weight: bold;
     line-height: 1.45;
-    letter-spacing: 6px;
+    letter-spacing: 0.3125vw;
     text-align: left;
     color: #2e4565;
 }
 
 #eg{
-    font-size: 2rem;
-    letter-spacing: 2px;
+    font-size: 1.5265vw;
+    letter-spacing: 0.078125vw;
 }
 
 .circle{

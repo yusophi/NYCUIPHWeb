@@ -78,12 +78,12 @@
                         </div>
                     </li>
                     <li id="nav-main-list-item-5">
-                        <a class="menu-list nav-list-item-5">課程規劃</a>
+                        <a class="menu-list nav-list-item-5" href="<?php echo site_url(); ?>/curriculum_mapping/">課程規劃</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-5"><a href="">修課架構</a></li>
-                                <li class="nav-list-item-5"><a href="">修業規定</a></li>
-                                <li class="nav-list-item-5"><a href="">課表及大綱</a></li>
+                                <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_architecture/">修課架構</a></li>
+                                <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/degree_regulation/">修業規定</a></li>
+                                <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_schedule/">學期課表</a></li>
                             </ul>
                         </div>
                     </li>
