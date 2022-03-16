@@ -48,7 +48,7 @@
                 <div class="nav-container">
                 <ul id="nav-menu">
                     <li id="nav-main-list-item-1">
-                        <a class="menu-list nav-list-item-1" href="<?php echo site_url(); ?>/homepage/">關於我們</a>
+                        <a class="menu-list nav-list-item-1">關於我們</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about/">系所簡介</a></li>
@@ -57,13 +57,13 @@
                         </div>
                     </li>
                     <li id="nav-main-list-item-2">
-                        <a class="menu-list nav-list-item-2" href="<?php echo site_url(); ?>/news/">最新消息</a>
+                        <a class="menu-list nav-list-item-2">最新消息</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-2"><a href="">總覽</a></li>
-                                <li class="nav-list-item-2"><a href="">公告</a></li>
-                                <li class="nav-list-item-2"><a href="">獎學金</a></li>
-                                <li class="nav-list-item-2"><a href="">COVID-19</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">總覽</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">公告</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">獎學金</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">COVID-19</a></li>
                             </ul>
                         </div>
                     </li>   
