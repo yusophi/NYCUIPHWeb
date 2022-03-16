@@ -78,7 +78,7 @@
                         </div>
                     </li>
                     <li id="nav-main-list-item-5">
-                        <a class="menu-list nav-list-item-5" href="<?php echo site_url(); ?>/curriculum_mapping/">課程規劃</a>
+                        <a class="menu-list nav-list-item-5">課程規劃</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_architecture/">修課架構</a></li>
