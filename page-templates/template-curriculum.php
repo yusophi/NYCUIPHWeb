@@ -12,9 +12,9 @@
         <div class="circle"></div>
     </div>
     <div class="curriculum_buttons">
-        <div class="curriculum_btn"><p class="_font18">修課架構</p></div>
-        <div class="curriculum_btn"><p class="_font18">修業規定</p></div>
-        <div class="curriculum_btn"><p class="_font18">學期課表</p></div>
+        <a class="curriculum_btn" id="btn-arch" href="<?php echo site_url(); ?>/course_architecture/"><p class="_font18">修課架構</p></a>
+        <a class="curriculum_btn" id="btn-degree" href="<?php echo site_url(); ?>/degree_regulation/"><p class="_font18">修業規定</p></a>
+        <a class="curriculum_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule/"><p class="_font18">學期課表</p></a>
     </div>
     <?php
         if(is_page('course_architecture')){

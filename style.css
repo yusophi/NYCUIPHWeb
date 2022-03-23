@@ -124,18 +124,6 @@ body::-webkit-scrollbar {
     border-bottom-right-radius: 2rem;
 }*/
 
-.title {
-    position: relative;
-    width: 85%;
-    left: 5rem;
-    top: 1rem;
-    right: 5rem;
-    padding-left: 7rem;
-    /*padding-bottom: 1rem;*/
-    border-bottom: solid 2px #374a73;
-    /*border: solid 2px #374a73;*/
-
-}
 
 .web_name{
     margin-left: 1.8%;

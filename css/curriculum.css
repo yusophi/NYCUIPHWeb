@@ -49,12 +49,14 @@
     border-radius: 1.5625vw;
     border: solid 1.5px #2e4565;
     color: #2e4565;
+    text-decoration: none;
 }
 
 ._font18{
     font-size: 0.9375vw;
     font-weight: bold;
-    letter-spacing: 0.140625vw;
+    /*letter-spacing: 0.140625vw;*/
+    letter-spacing: 2.7px;
     text-align: left;
 }
 
