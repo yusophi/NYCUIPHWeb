@@ -17,16 +17,29 @@
         <a class="curriculum_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule/"><p class="_font18">學期課表</p></a>
     </div>
     <?php
-        if(is_page('course_architecture')){
-            get_template_part('template-parts/curriculum','arch');
-        }
-        elseif(is_page('degree_regulation')){
-            get_template_part('template-parts/curriculum','degree_regulation');
-        }
-        elseif(is_page('course_schedule')){
-            get_template_part('template-parts/curriculum','course_schedule');
-        }
-    ?>
+        if(is_page('course_architecture')):?>
+            <?php get_template_part('template-parts/curriculum','arch');?>
+            <script>
+                var animation_btn = document.getElementsByClassName("curriculum_btn");
+                animation_btn[1].className += " animation1_btn";
+                animation_btn[2].className += " animation1_btn";
+            </script>
+        <?php elseif(is_page('degree_regulation')):?>
+            <?php get_template_part('template-parts/curriculum','degree_regulation');?>
+            <script>
+                var animation_btn = document.getElementsByClassName("curriculum_btn");
+                animation_btn[0].className += " animation1_btn";
+                animation_btn[2].className += " animation1_btn";
+            </script>
+        <?php elseif(is_page('course_schedule')):?>
+            <?php get_template_part('template-parts/curriculum','course_schedule');?>
+            <script>
+                var animation_btn = document.getElementsByClassName("curriculum_btn");
+                animation_btn[0].className += " animation1_btn";
+                animation_btn[1].className += " animation1_btn";
+            </script>
+        <?php endif;?>
+    
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 
 </div>

@@ -1,19 +1,116 @@
-.course_outline {
-    border-bottom: 1px solid #647386;
+.degree_regulation{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3.125vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.regulation_block{
     width: 82vw;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3.125vw;
 }
 
-.course_outline hr{
-    display: none;
-}
-
-.course_outline > p {
+.item_titles{
+    width: 82vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    color: seagreen;
+    align-items: center;
+    color: #2e4565;
+    border-bottom: solid 2px #647386;
+    margin-top: 3.125vw;
+    padding-bottom: 2.084vw;
+}
+.item_title1{
+    margin-left: 15.5vw;
+}
+
+.item_title2{
+    margin-left: 15.9vw;
+}
+
+.regulation_rows{
+    width: 82vw;
+    display: inline-flex;
+    flex-direction: row;
+    border-bottom: solid 2px #647386;
+    padding-top: 2.084vw;
+    padding-bottom: 2.084vw;
+    display: none;
+}
+.shown, .phdshown{
+    display: inline-flex;
+}
+
+.year{
+    font-weight: 500;
+    line-height: 1.59;
+    letter-spacing: 1.1px;
+    text-align: left;
+    color: #2e4565;
+}
+
+.item1, .item2{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.item1{
+    margin-left: 11vw;
+}
+
+.item2{
+    margin-left: 3.5vw;
+}
+
+.link_block{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1vw;
+}
+
+.file_title{
+    color: #4f5ab8;
+    font-weight: 500;
+    line-height: 1.94;
+    letter-spacing: 2.7px;
+}
+
+/*read more btn*/
+.bt-readmore{
+    cursor: pointer;
+    position: relative;
+    top: 3.15vw;
+    left: 73.3vw;
+}
+
+.bt-readmore > a:visited {
+    color: #2e4565;
+}
+
+.bt-readmore:hover > a:visited {
+    color: #efeee4;
+}
+
+.others_regu_rows{
+    width: 63.64vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1vw;
+    margin-top: 3.2291vw;
+}
+
+.others_regu_rows > .link_block{
+    margin-bottom: 1.3vw;
 }
 
 #btn-degree{

@@ -93,6 +93,7 @@
     }
     elseif(is_page('degree_regulation')){
       wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
+      wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
     elseif(is_page('course_schedule')){
       wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
