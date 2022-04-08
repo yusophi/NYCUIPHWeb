@@ -1,0 +1,37 @@
+#btn-scholar{
+    color: #efeee4;
+    background-color: #2e4565;
+}
+
+.student_scholar{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3.125vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    border-top:solid 2px #2e4565;
+}
+
+.block_title, .links{
+    margin-top: 3vw;
+}
+
+.links{
+    margin-left: 1.5vw;
+}
+
+.links > ul{
+    list-style-type: disc;
+    color: #4f5ab8;
+}
+
+.link_block{
+    text-decoration: none;
+    color: #4f5ab8;
+    font-weight: 500;
+    line-height: 1.94;
+    letter-spacing: 2.7px;
+}
