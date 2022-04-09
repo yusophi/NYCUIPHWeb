@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+#btn-application{
+    color: #efeee4;
+    background-color: #2e4565;
+}
+
+.student_applications{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3.125vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    border-top:solid 2px #2e4565;
+}
+
+.content_group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5.2083vw;
+}
+
+.group_content > h3{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    letter-spacing: 2.7px;
+    color: #2e4565;
+    margin: 3vw 0;
+}
+
+.group_content p{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.14583vw;
+    color:#2e4565;
+    line-height: 1.82;
+    letter-spacing: 3.3px;
+    text-align: left;
+}
+
+.group_content a{
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.14583vw;
+    color: #4f5ab8;
+}
+
+.Phd_paper_form{
+    width: 44.895vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 1px 1px 15px 0 rgba(255, 111, 0, 0.3);
+    background-color: #efeee4;
+    margin-top: 3.125vw;
+    padding: 2.60416vw 0;
+}
+
+._font27{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.40625vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: 5.4px;
+    text-align: center;
+}
+
+.orange_text{
+    color: #ffa975;
+}
+
+.Phd_paper_form p{
+    font-weight: 500;
+    color: #2e4565;
+    margin-top: 2.0833vw;
+}
+.list{
+    width: 33.75vw;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+.note{
+    width: 37.39583vw;
+    line-height: 1.75;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #2e4565;
+    border-top: solid 3px #e4dfd2;
+    border-bottom: solid 3px #e4dfd2;
+    padding: 0.9635vw 0;
+    margin-top: 2.005vw;
+}
+
+.realted_files{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.005vw;
+}
+
+.realted_files a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #4f5ab8;
+    line-height: 1.75;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.files_table{
+    margin-top: 3.125vw;
+}
+
+.file_group_content{
+    display: flex;
+    width: 44.895vw;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(46, 69, 101, 0.7);
+    padding: 2.2135vw 0;
+}
+
+.filename{
+    font-weight: bold;
+    line-height: 2.22;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: #2e4565;
+}
+
+.file_group_content a, .other_forms a{
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.171875vw;
+    text-align: left;
+    color: #4f5ab8;
+}
+
+.other_forms{
+    margin-top: 3.125vw;
+    display: flex;
+    flex-direction: column;
+}
+

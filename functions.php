@@ -87,6 +87,7 @@
     wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
     wp_enqueue_style('mytheme_article_member_style', get_theme_file_uri('css/article_member.css')); 
     wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
+    wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
 
     if(is_page('course_architecture')){
       wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum_arch.css')); 
@@ -97,6 +98,13 @@
     }
     elseif(is_page('course_schedule')){
       wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
+    }
+
+    if(is_page('applications')){
+      wp_enqueue_style('student_appli_style', get_theme_file_uri('css/student-applications.css')); 
+    }
+    elseif(is_page('scholarships')){
+      wp_enqueue_style('curriculum_scholar_style', get_theme_file_uri('css/student-scholarships.css')); 
     }
     /*elseif(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 

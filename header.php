@@ -91,9 +91,10 @@
                         <a class="menu-list nav-list-item-6">學生園地</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-6"><a href="">相關申請與辦法</a></li>
-                                <li class="nav-list-item-6"><a href="">獎助學金</a></li>
-                                <li class="nav-list-item-6"><a href="">行政資源</a></li>
+                                <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/applications/">各類申請</a></li>
+                                <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/scholarships/">獎助學金</a></li>
+                                <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/honor/">榮譽榜單</a></li>
+                                <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/past_papers/">歷屆論文</a></li>
                             </ul>
                         </div>
                     </li>

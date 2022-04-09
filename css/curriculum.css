@@ -28,7 +28,7 @@
 }
 
 
-.curriculum_buttons{
+.subpage_buttons{
     width: 82vw;
     margin-top: 5vw;
     margin-left: 9vw;
@@ -39,7 +39,7 @@
     justify-content: space-evenly;
 }
 
-.curriculum_btn{
+.subpage_btn{
     width: 8.75vw;
     height: 3.125vw;
     display: flex;
@@ -75,7 +75,6 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.9375vw;
     font-weight: bold;
-    /*letter-spacing: 0.140625vw;*/
     letter-spacing: 2.7px;
     text-align: left;
 }

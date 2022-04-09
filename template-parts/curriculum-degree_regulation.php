@@ -67,7 +67,7 @@
         </div>
         <div class="whole_regulation_files">
             <?php $PhD_regulation = get_field('PhD_regulation');?>
-            <?php if($master_regulation): ?>
+            <?php if($PhD_regulation): ?>
                 <?php 
                     $count = 1;
                     while($count < 9 ):?>
