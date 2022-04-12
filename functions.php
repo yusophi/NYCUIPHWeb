@@ -73,6 +73,7 @@
   //enqueue the stylesheet
   function mytheme_style_files() { 
     wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
+    wp_enqueue_style('mytheme_rm_btn_style', get_theme_file_uri('css/read_more_btn.css')); 
     wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
