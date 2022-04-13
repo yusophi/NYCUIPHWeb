@@ -161,9 +161,9 @@
             echo '/css/singlepost.css" type="text/css" media="screen and (min-width: 701px)" />';
             /*************/
          }
-         if(is_page_template( 'page-templates/template-epid.php' )){ /*流行病學模板*/
+         if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
-            echo '/css/epid.css" type="text/css" />';
+            echo '/css/pro_division.css" type="text/css" />';
             /*************/
          }
     ?>
