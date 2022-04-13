@@ -37,7 +37,7 @@
         $args = array(
                 'post_type' => 'Staff', 
                 'post_status' => 'publish',
-                'category__not_in' => array(16)
+                'category__not_in' => array(12)
         );
         $the_query = new WP_Query($args);
         //echo $the_query->max_num_pages;
