@@ -109,7 +109,7 @@
                     <?php endif; ?>
                     <div class="member_card">
                         <div class="member_picture">
-                            <?php echo wp_get_attachment_image( $picture, 'full'); ?>
+                            <?php echo wp_get_attachment_image( $picture, 'member_picture'); ?>
                         </div>
 
                         <?php if( $link ): ?>
