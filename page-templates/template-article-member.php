@@ -13,7 +13,7 @@
     <div class="article_content">
         <div class="left">
             <div class="member_picture">
-                <?php echo wp_get_attachment_image( $regular_staff['picture'], 'full'); ?>
+                <?php echo wp_get_attachment_image( $regular_staff['picture'], 'member_picture1'); ?>
             </div>
             <div class="block-deco short">
                 <div class="deco-dot"></div>

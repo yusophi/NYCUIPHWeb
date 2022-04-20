@@ -1,0 +1,138 @@
+.bt-readmore{
+    position:  relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 6.25vw;
+    height: 3.125vw;
+    border: solid 1.5px #2e4565;
+    border-radius: 40px;
+    padding: 0 1.5vw 0 1.3vw;
+    
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.0416666vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    text-decoration: none; 
+    text-align: left;
+    color: #2e4565;
+}
+
+.animation1_btn {
+    color: #2e4565;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    background: linear-gradient(to top, #2e4565 50%, #e4dfd2 50%);
+    background-size: 100% 250%;
+    background-position: left 0%;
+    transition: all 0.6s ease;
+}
+
+.animation1_btn:hover {
+    background-position: 0% 90%;
+    color: #e4dfd2;
+}
+
+.plus_icon{
+    position: absolute;
+    width: 0.833vw;
+    height: 0.833vw;
+    margin-left: 5.8vw;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.plus_icon_hover{
+    width: 0.833vw;
+    height: 0.833vw;
+    position: absolute;
+    margin-left: 5.8vw;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.bt-readmore:hover .plus_icon{
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.bt-readmore:hover .plus_icon_hover{
+    opacity: 1;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.animation2_btn {
+    color: #efeee4;
+    border: solid 1.5px #efeee4;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    background: linear-gradient(to top, #efeee4 50%, #2e4565 50%);
+    background-size: 100% 250%;
+    background-position: left 0%;
+    transition: all 0.6s ease;
+}
+
+.animation2_btn:hover {
+    background-position: 0% 90%;
+    color: #2e4565;
+}
+
+
+/*watch more button*/
+
+.bt-watchmore{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 5.34vw;
+    height: 3.125vw;
+    border: solid 1.5px #2e4565;
+    border-radius: 35px;
+    padding: 0 1vw 0;
+    color: #2e4565;
+}
+
+.watch_icon{
+    position: absolute;
+    width: 2rem;
+    height: 1.5rem;
+    margin-left: 3.3vw;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.watch_icon_hover{
+    position: absolute;
+    width: 2rem;
+    height: 1.5rem;
+    margin-left: 3.3vw;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.bt-watchmore:hover .watch_icon{
+    opacity: 0;
+}
+
+.bt-watchmore:hover .watch_icon_hover{
+    opacity: 1;
+}

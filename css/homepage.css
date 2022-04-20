@@ -165,158 +165,9 @@
 
 
 /*** the readmore button*****/
-.news_readmore_btn{
-    position: relative;
-    top: 74.5vw;
-    left: 45.9vw;
+#news_readmore_btn{
+    margin-top: 5.9vw;
 }
-
-.news_readmore_btn > a:visited {
-    color: #2e4565;
-}
-
-.news_readmore_btn:hover > a:visited {
-    color: #efeee4;
-}
-
-.bt-readmore{
-    position:  absolute;
-    width: 8.75vw;
-    height: 3.125vw;
-    border: solid 2px #2e4565;
-    border-radius: 40px;
-    color: #2e4565;
-
-    -webkit-transition-property: color;
-    transition-property: color;
-    
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-    z-index: 1;
-}
-
-.bt-readmore:hover{
-    color: #efeee4;
-}
-
-/*.bt-readmore .bt-readmore_hover_bk{
-    position:  absolute;
-    top: 3.2vw;
-    width: 8.75vw;
-    height: 3.125vw;
-    border-radius: 40px;
-    background-color: #2e4565;
-    border: solid 2px #2e4565;
-    transition: 0.6s linear;
-    z-index: -1;
-}*/
-
-.bt-readmore:before{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: 40px;
-    background-color: #2e4565;
-
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-}
-
-.bt-readmore:hover::before{
-    -webkit-transform: scale(1.05,1.05);
-    transform: scale(1.05,1.05);
-}
-/*.bt-readmore:hover .bt-readmore_hover_bk{
-    top: -0.1vw;
-    opacity: 1;
-}*/
-
-.readmore{
-    position: absolute;
-    width: 5.10vw;
-    margin: 0.625rem 0.625rem 0 1.2rem;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.7;
-    text-align: left;
-    text-decoration: none;  
-}
-
-.plus_icon{
-    position: absolute;
-    width: 0.833vw;
-    height: 0.833vw;
-    top: 23%;
-    left: 70.5%;
-    margin: 0.438rem 1.375rem 1.5rem 0.625rem;
-    object-fit: contain;
-
-   
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-    opacity: 1;
-}
-
-.plus_icon_hover{
-    position: absolute;
-    width: 0.833vw;
-    height: 0.833vw;
-    top: 23%;
-    left: 69%;
-    margin: 0.438rem 1.375rem 1.5rem 0.625rem;
-    object-fit: contain;
-
-    
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-    opacity: 0;
-}
-
-.bt-readmore:hover .plus_icon{
-    opacity: 0;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-
-.bt-readmore:hover .plus_icon_hover{
-    opacity: 1;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-.clearfix {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
 
 /* Milo: start of event part */
 
@@ -325,6 +176,9 @@
     height: 56.25vw;
     background-color: #2e4565;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /*top: 85%;*/
     z-index: 1;
     border-top-left-radius: 2rem;
@@ -359,8 +213,7 @@
     z-index: 10;
 }
 #event-slides {
-    position: absolute;
-    top: 30%;
+    position: relative;
     min-height: 50%;
     height: 50%;
     width: 100%;
@@ -465,10 +318,10 @@
 .event-title {
     width: 15.5%;
     height: 20%;
-    position: absolute;
-    top: 3.125rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: 6.09vw;
+    /*left: 50%;
+    transform: translateX(-50%);*/
     min-width: 140px;
 }
 .event-title div {
@@ -650,55 +503,10 @@
     color: rgba(46, 69, 101, 0.7);
 }
 
-.event_readmore_btn{
-    position: absolute;
-    left: 46%;
-    top: 85%;
-    background-color: transparent;
-    color: #efeee4;
-    border: solid 2px #efeee4;
+#event_readmore_btn{
+    margin-top: 3.27vw;
 }
 
-.event_readmore_btn:hover{
-    color: #2e4565;
-}
-
-.event_readmore_btn::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 40px;
-    background-color: #efeee4;
-
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-}
-
-
-.event_readmore_btn:hover::before{
-    -webkit-transform: scale(1.05,1.05);
-    transform: scale(1.05,1.05);
-}
-
-
-.event_readmore_btn > a:visited {
-    color: #efeee4;
-}
-
-.event_readmore_btn:hover > a:visited {
-    color: #2e4565;
-}
 /************************************/
 /* Jennt: About us Block */
 .About-container
@@ -823,7 +631,7 @@
 
 .video_title{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.2504rem;
+    font-size: 1.302084vw;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 3.75px;
@@ -833,120 +641,13 @@
     margin-bottom: 8%;
 }
 
-.bt-watchmore{
-    width: 7.34vw;
-    height: 3.125vw;
-    border: solid 2px #2e4565;
-    border-radius: 35px;
-    color: #2e4565;
-    position: relative;
-    margin: 5% 25% 13%;
-
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-}
-
-.bt-watchmore:hover{
-    color: #ffbb00;
-    cursor: pointer;
-}
-
-.bt-watchmore::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 7.34vw;
-    height: 3.185vw;
-    border-radius: 35px;
-    background-color: #2e4565;
-
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin:  50% 100%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-}
-
-
-.watchmore{
-    position: absolute;
-    margin: 0.7rem 0 0 1.2rem;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.7;
-    text-align: left;
-    text-decoration: none; 
-}
-
-.bt-watchmore:hover::before{
-    -webkit-transform: scale(1.05,1.05);
-    transform: scale(1.05,1.05);
-}
-
-.watch_icon{
-    position: absolute;
-    width: 2rem;
-    height: 1.5rem;
-    margin: 0.755rem 0.625rem 0 4.2rem;
-   
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-    opacity: 1;
-}
-
-.watch_icon_hover{
-    position: absolute;
-    width: 2rem;
-    height: 1.5rem;
-    margin: 0.755rem 0.625rem 0 4.2rem;
-    
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(.86,.01,.15,.99);
-    opacity: 0;
-}
-
-.bt-watchmore:hover .watch_icon{
-    opacity: 0;
-}
-
-.bt-watchmore:hover .watch_icon_hover{
-    opacity: 1;
-}
-
 
 /*define the read-more botton in aboutUs block*/
-.aboutUS_intro_btn{
+#aboutUS_intro_btn{
     position: relative;
-    top: 5vw;
-}
-.aboutUS_intro_btn > a:visited {
-    color: #2e4565;
+    margin-top: 5.2083vw;
 }
 
-.aboutUS_intro_btn:hover > a:visited {
-    color: #efeee4;
-}
 
 /* the waves decorations */
 .deco_waves{

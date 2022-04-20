@@ -135,12 +135,11 @@
                         <?php endwhile; ?>
                   </div>
             <?php endif; wp_reset_postdata(); ?>
-            <div class="bt-readmore news_readmore_btn">
-                  <div class="bt-readmore_hover_bk"></div>
-                  <a class="readmore" href="<?php echo site_url(); ?>/news/">read more</a>
+            <a class="bt-readmore animation1_btn" id="news_readmore_btn" href="<?php echo site_url(); ?>/news/">
+                  read more
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-            </div> 
+            </a> 
       </div>
 
       <div class="events">
@@ -149,7 +148,6 @@
                   <div class="event-ch-title">學術活動<br></div>
                   <div class="event-en-title">Events</div>
             </div>
-            
             <div id="event-slides">
                   <!--<img id="event-icon-prev" src="<?php //bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
                   <img id="event-icon-next" src="<?php //bloginfo('template_url') ?>/images/icon/icon-next_white.svg">-->
@@ -230,11 +228,11 @@
                   <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
                   <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
             </div>
-            <div class="bt-readmore event_readmore_btn">
-                  <a class="readmore" href="<?php echo site_url(); ?>/events/">read more</a>
-                  <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+            <a class="bt-readmore animation2_btn" id="event_readmore_btn" href="<?php echo site_url(); ?>/events/">
+                  read more
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-            </div>
+                  <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+            </a>
       </div>
       <!-- Jenny: About Us block-->
       <div class="About-container">
@@ -252,23 +250,23 @@
                         <!--<img class="icon_aboutus_1" src="<?php //bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
                                     -->
                         </div>
-                        <div class="bt-readmore aboutUS_intro_btn">
-                              <a class="readmore" href="<?php echo site_url(); ?>/about/">read more</a>
-                              <img class="plus_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_blue.svg">
-                              <img class="plus_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-plus_white.svg">
-                        </div>
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/about/">
+                              read more
+                              <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
+                              <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+                        </a>
                   </div>
 
                   <div class="videos">
                         <div class="module video1">
                               <span class="bk_num video1">01.</span> 
                               <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
-                              <div class="video_title video1"> <?php the_field('video_title1') ?></div>    
-                              <div class="bt-watchmore video1" onclick="on(1)">
-                                    <a class="watchmore">watch</a>
+                              <div class="video_title video1"> <?php the_field('video_title1') ?></div>  
+                              
+                              <div class="bt-watchmore animation1_btn" onclick="on(1)">watch
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
-                              </div>
+                              </div>  
                               <div id="overlay1"  class="overlay" onclick="off(1)">
                                     <div class="overlay_content">
                                           <img class="closebtn" onclick="off(1)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">
@@ -280,8 +278,7 @@
                               <span class="bk_num video2">02.</span> 
                               <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
                               <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
-                              <div class="bt-watchmore video2" onclick="on(2)">
-                                    <a class="watchmore">watch</a>
+                              <div class="bt-watchmore animation1_btn" onclick="on(2)">watch
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                               </div>

@@ -10,12 +10,11 @@
 
     <div class="page-about-banner">
         <div class="video-module-container">
-            <div class="video-module left">
+            <div class="video-module banr_left">
                 <span class="bk_num">01.</span> 
                 <img class="icon_aboutus_2 img-left" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
                 <div class="video_title"> <?php the_field('video_title1') ?></div>    
-                <div class="bt-watchmore bt-left" onclick="on(1)">
-                    <a class="watchmore">watch</a>
+                <div class="bt-watchmore animation1_btn" id="bt-left" onclick="on(1)">watch
                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                 </div>
@@ -33,15 +32,16 @@
             <div class="circle"></div>
         </div>
         <div class="video-module-container">
-            <div class="video-module right">
+            <div class="video-module banr_right">
                 <span class="bk_num">02.</span> 
                 <img class="icon_aboutus_2 img-right" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
-                <div class="video_title"> <?php the_field('video_title2') ?></div>    
-                <div class="bt-watchmore bt-right" onclick="on(2)">
-                    <a class="watchmore">watch</a>
+                <div class="video_title"> <?php the_field('video_title2') ?></div>   
+
+                <div class="bt-watchmore animation1_btn" id="bt-right" onclick="on(2)">watch
                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                 </div>
+                
                 <div id="overlay1"  class="overlay" onclick="off(2)">
                     <div class="overlay_content">
                             <img class="closebtn" onclick="off(2)" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg">

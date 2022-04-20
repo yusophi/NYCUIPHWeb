@@ -52,12 +52,12 @@
 ?>
 
 <?php
-  add_image_size( 'hp-interview-img-thumb', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
-  add_image_size( 'hp-interview-img-thumb1', 250, 250, array( 'left', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'hp-interview-img-thumb', 200, 250, array( 'center', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'hp-interview-img-thumb1', 350, 250, array( 'center', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'pie_chart', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'ad_poster_size', 599, 835, array( 'left', 'top' ) ); // Hard crop x:center y:top
-  add_image_size( 'member_picture', 376, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
-  
+  add_image_size( 'member_picture', 1500, 500,array( 'left', 'top' )); // Hard crop x:center y:top
+  add_image_size( 'member_picture1', 1550, 500, array( 'left', 'top' ) );
   function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
     'hp-interview-img-thumb' => __( 'Homepage-interview-picture' ),
@@ -73,6 +73,7 @@
   //enqueue the stylesheet
   function mytheme_style_files() { 
     wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
+    wp_enqueue_style('mytheme_rm_btn_style', get_theme_file_uri('css/read_more_btn.css')); 
     wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));

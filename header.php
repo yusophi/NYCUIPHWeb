@@ -68,12 +68,12 @@
                         </div>
                     </li>   
                     <li id="nav-main-list-item-4">
-                        <a class="menu-list nav-list-item-4" href="<?php echo site_url(); ?>/events/">學術活動</a>
+                        <a class="menu-list nav-list-item-4">學術活動</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-4"><a href="">學術資源</a></li>
-                                <li class="nav-list-item-4"><a href="">學術演講</a></li>
-                                <li class="nav-list-item-4"><a href="">讀書會</a></li>
+                                <!--<li class="nav-list-item-4"><a href="">學術資源</a></li>-->
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">學術演講</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">讀書會</a></li>
                             </ul>
                         </div>
                     </li>
