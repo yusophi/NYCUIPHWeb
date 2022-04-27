@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <g data-name="组 1076">
+        <g data-name="椭圆 205" style="stroke:#2e4565;stroke-width:1.5px;fill:none">
+            <circle cx="20" cy="20" r="20" style="stroke:none"/>
+            <circle cx="20" cy="20" r="19.25" style="fill:none"/>
+        </g>
+        <path data-name="路径 206" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2z" transform="translate(8 8)" style="fill:#2e4565"/>
+    </g>
+</svg>
