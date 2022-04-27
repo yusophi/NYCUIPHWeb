@@ -7,7 +7,6 @@
 <?php get_header(); ?>
 
 <div class="page_about">
-
     <div class="page-about-banner">
         <div class="video-module-container">
             <div class="video-module banr_left">
@@ -51,10 +50,10 @@
             </div>
         </div>
     </div>
-    <?php get_template_part('template-parts/page_about','introduction');?>
-    <?php get_template_part('template-parts/page_about','purposeANDgoal');?>
-    <?php get_template_part('template-parts/page_about','subject_Intro');?>
-    <?php get_template_part('template-parts/page_about','past_supervisor');?>
+    <?php get_template_part('template-parts/about','introduction');?>
+    <?php get_template_part('template-parts/about','purposeANDgoal');?>
+    <?php get_template_part('template-parts/about','subject_Intro');?>
+    <?php get_template_part('template-parts/about','past_supervisor');?>
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
 <?php get_footer(); ?>

@@ -14,7 +14,7 @@
             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
             <!--<div class="banner_post_category"><?php //the_category(''); ?></div>-->
-            <div class="post_tags tags_in_page_banner">
+            <div class="banner_post_tags">
                 <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
                 <?php
                 $sdgs = get_field('sdg');
@@ -127,8 +127,6 @@
                                         <span class="event-date-words">Date</span>
                                     </div>
                                     <div class="event-date"><?php the_field('event_date');?> </div>
-                                    <!--<div class="event-categories"><?php //the_category(''); ?></div>
-                                    <div class="event-location"><?php //the_field('event_location'); ?></div>-->
                                     <div class="hp_event_tag">
                                         <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
                                         <div class="event-location"><?php the_field('event_location'); ?></div>

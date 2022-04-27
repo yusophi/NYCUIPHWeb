@@ -20,6 +20,40 @@
     background-color: #e4dfd2;
 }
 
+/* icon and title */
+.block-title{
+    position: relative;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.block-title span{
+    color: #374a73;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon{
+    width: auto;
+    height: auto; 
+}
+
+.ch-title{
+    margin-top: 0.5vw;
+    font-size: 2rem;
+    letter-spacing: 0.3125vw;
+}
+
+.en-title{
+    margin-top: 0.5vw;
+    font-size: 1.5rem;
+    letter-spacing: 0.078vw;
+}
+
 .whitetext-style{
     background-color: #2e4565;
 }

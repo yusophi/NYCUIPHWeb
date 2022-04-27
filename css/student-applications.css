@@ -13,7 +13,6 @@
     flex-direction: column;
     display: flex;
     align-items: flex-start;
-    border-top:solid 2px #2e4565;
 }
 
 .content_group{

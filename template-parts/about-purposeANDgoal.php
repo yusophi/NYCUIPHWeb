@@ -7,7 +7,7 @@
 <div class="information-block IPH-purposeANDgoal">
 <div class="info-title">
         <span class="ch-title">成立宗旨與教育目標</span>
-        <span class="en-title">Purpose and Goal</span>
+        <span class="en_title">Purpose and Goal</span>
     </div>
     <div class="block-deco">
         <div class="deco-dot"></div>

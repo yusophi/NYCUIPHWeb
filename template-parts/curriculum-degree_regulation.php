@@ -1,12 +1,21 @@
 <div class="degree_regulation">
     <div class="regulation_block" id="master_regulation">
-        <div class="degree_title _font40">碩士班</div>
+        <div class="degree_block_title">
+            <span class="_font40">碩士班</span>
+            <a class="more_btn" onclick="showing_more('regu_block1','regulation_rows')">
+                <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
+                <div class="more_btn_hover">
+                    <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
+                    <span class="more_btn_text _font18">展開</span>
+                </div>  
+            </a>
+        </div>
         <div class="item_titles _font18">
             <span>學年</span>
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
         </div>
-        <div class="whole_regulation_files">
+        <div class="whole_regulation_files" id="regu_block1">
             <?php $master_regulation = get_field('master_regulation');?>
             <?php if($master_regulation): ?>
                 <?php 
@@ -18,7 +27,7 @@
                             $year = $group_data['year'];
                         ?>
                         <?php if( $year ):?>
-                            <div class="regulation_rows ms_field">
+                            <div class="regulation_rows">
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
@@ -51,21 +60,24 @@
                     <?php endwhile; ?>
             <?php endif; ?>
         </div>
-        <div class="bt-readmore mst_btn" onclick="read_more(1)">
-            <div class="bt-readmore_hover_bk"></div>
-            <a class="readmore" id="master_regu_btn" href="#!">read more</a>
-            <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-            <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-        </div>
     </div> 
-    <div class="regulation_block" id="phd_regultation">
-        <div class="degree_title _font40">博士班</div>
+    <div class="regulation_block">
+        <div class="degree_block_title">
+            <span class="_font40">博士班</span>
+            <a class="more_btn" onclick="showing_more('regu_block2','regulation_rows')">
+                <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
+                <div class="more_btn_hover">
+                    <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
+                    <span class="more_btn_text _font18">展開</span>
+                </div>  
+            </a>
+        </div>
         <div class="item_titles _font18">
             <span>學年</span>
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
         </div>
-        <div class="whole_regulation_files">
+        <div class="whole_regulation_files" id="regu_block2">
             <?php $PhD_regulation = get_field('PhD_regulation');?>
             <?php if($PhD_regulation): ?>
                 <?php 
@@ -77,7 +89,7 @@
                             $year = $group_data['year'];
                         ?>
                         <?php if( $year ):?>
-                            <div class="regulation_rows phd_field">
+                            <div class="regulation_rows">
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
@@ -110,12 +122,6 @@
                     <?php endwhile; ?>
             <?php endif; ?>
         </div>
-        <div class="bt-readmore phd_btn" onclick="read_more(2)">
-            <div class="bt-readmore_hover_bk"></div>
-            <a class="readmore" id="phd_regu_btn" href="#!">read more</a>
-            <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-            <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-        </div>
     </div> 
     <div class="regulation_block" id="others_regu">
         <div class="degree_title _font40">其他</div>
@@ -140,18 +146,18 @@
     </div>
 </div>
 <script>
-    const regu_row_mst = document.getElementsByClassName("ms_field");
-    const regu_row_phd = document.getElementsByClassName("phd_field");
+    const regu1_whole_rows = document.getElementById("regu_block1").getElementsByClassName("regulation_rows");
+    const regu2_whole_rows = document.getElementById("regu_block2").getElementsByClassName("regulation_rows");
 
     //console.log(regu_row_mst.length);
-    if(regu_row_mst.length >= 3){
+    if(regu1_whole_rows.length >= 3){
         for(var i = 0; i < 3; i++){
-            regu_row_mst[i].className += " shown";   
+            regu1_whole_rows[i].className += " shown";   
         }
     }
-    if(regu_row_phd.length >= 3){
+    if(regu2_whole_rows.length >= 3){
         for(var i = 0; i < 3; i++){
-            regu_row_phd[i].className += " phdshown";   
+            regu2_whole_rows[i].className += " shown";   
         }
     }
 </script>

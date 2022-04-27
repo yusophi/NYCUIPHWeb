@@ -17,6 +17,55 @@
     margin-top: 3.125vw;
 }
 
+.degree_block_title{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more_btn{
+    width: 2.084vw;
+    height: 2.084vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.more_btn_hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#more_white{
+    transition: 0.3s ease-in;
+}
+
+.more_btn:hover{
+    width: 5vw;
+}
+
+.more_btn:hover #more_white{
+    display: none;
+}
+
+.more_icon{
+    width: 2.084vw;
+    height: 2.084vw;
+}
+
+.more_btn_text{
+    line-height: 0.06;
+    letter-spacing: 0.140625vw;
+    text-align: left;
+    color: #2e4565;
+    margin-left: 0.52083vw;
+}
+
 .item_titles{
     width: 82vw;
     display: flex;
@@ -44,8 +93,10 @@
     padding-bottom: 2.084vw;
     display: none;
 }
-.shown, .phdshown{
+
+.shown{
     display: inline-flex;
+    transition: display 0.3s ease-in;
 }
 
 .year{

@@ -39,22 +39,6 @@
                 <option>SDG7</option>
             </select>
         </div>
-        <!--<ul>
-            <?php 
-                /*$categories = get_terms( array(
-                    'taxonomy' => 'category',
-                    'orderby'    => 'name',
-                    'include' => '20,21,22,23,24',
-                    'hide_empty' => 0,
-                ) );
-                if ( ! empty( $categories ) && ! is_wp_error( $categories ) ){
-                    foreach ( $categories as $category ) {
-                        echo $category->name;
-                    }
-                }*/
-            ?> 
-        </ul>-->
-
     </div>
 
     <div class="news_block">

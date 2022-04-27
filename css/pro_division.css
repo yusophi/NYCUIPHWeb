@@ -106,11 +106,12 @@
 }
 
 .down_arrow {
-    /*temporary*/
-    width: 19px;
-    height: 19px;
-    background-color: #2e4565;
-    border-radius: 19px;
+    width: 0.5vw;
+    height: 0.5vw;
+    border: solid #2e4565;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .section_indicator {

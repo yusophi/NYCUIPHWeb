@@ -13,8 +13,7 @@
         <div class="banner_article_meta">
             <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
-            <!--<div class="banner_post_category"><?php the_category(''); ?></div>-->
-            <div class="post_tags tags_in_page_banner">
+            <div class="banner_post_tags">
                 <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
                 <?php
                 $sdgs = get_field('sdg');

@@ -69,8 +69,8 @@
                                 <!--<div class="event-categories"><?php //the_category(''); ?></div>
                                 <div class="event-location"><?php //the_field('event_location'); ?></div>-->
                                 <div class="hp_event_tag">
-                                        <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
-                                        <div class="event-location"><?php the_field('event_location'); ?></div>
+                                    <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
+                                    <div class="event-location"><?php the_field('event_location'); ?></div>
                                 </div>
                                 <?php
                                         $sdgs = get_field('sdg');

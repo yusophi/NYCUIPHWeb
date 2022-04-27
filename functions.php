@@ -74,47 +74,83 @@
   function mytheme_style_files() { 
     wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
     wp_enqueue_style('mytheme_rm_btn_style', get_theme_file_uri('css/read_more_btn.css')); 
-    wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
+    wp_enqueue_style('mytheme_page_banner_style', get_theme_file_uri('css/page_banner.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
-    wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
-    wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
-    wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-    wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
-    wp_enqueue_style('mytheme_singlepost_style', get_theme_file_uri('css/singlepost.css'));
-    wp_enqueue_style('mytheme_post_event_style', get_theme_file_uri('css/events-article.css')); 
-    wp_enqueue_style('mytheme_post_interview_style', get_theme_file_uri('css/article-interview.css')); 
-    wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
-    wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
-    wp_enqueue_style('mytheme_article_member_style', get_theme_file_uri('css/article_member.css')); 
-    wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
-    wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
 
+
+    if(is_page('homepage')){
+      wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
+      wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
+      wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
+      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
+    }
+    if(is_page('about')){
+      wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
+      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
+      
+    }
+    if(is_page('news')){
+      wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
+      wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
+    }
+    if(is_page('events')){
+      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
+      wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
+    }
+    if(is_page('member')){
+      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/member.css')); 
+    }
+    if(is_page('admission')){
+      wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
+    }
+
+    if(is_page_template( 'page-templates/template-article-news.php')){
+      wp_enqueue_style('mytheme_article_general_style', get_theme_file_uri('css/article_general_style.css'));
+      wp_enqueue_style('mytheme_article_news_style', get_theme_file_uri('css/article_news.css'));
+      wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
+    }
+    if(is_page_template( 'page-templates/template-article-event.php')){
+      wp_enqueue_style('mytheme_article_general_style', get_theme_file_uri('css/article_general_style.css'));
+      wp_enqueue_style('mytheme_article_event_style', get_theme_file_uri('css/article_event.css'));
+      wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
+    }
+    if(is_page_template( 'page-templates/template-article-interview.php')){
+      wp_enqueue_style('mytheme_article_general_style', get_theme_file_uri('css/article_general_style.css'));
+      wp_enqueue_style('mytheme_post_interview_style', get_theme_file_uri('css/article_interview.css')); 
+    }
+    if(is_page_template( 'page-templates/template-article-member.php')){
+      wp_enqueue_style('mytheme_article_member_style', get_theme_file_uri('css/article_member.css')); 
+    }
+    
     if(is_page('course_architecture')){
+      wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum_arch.css')); 
     }
     elseif(is_page('degree_regulation')){
+      wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
     elseif(is_page('course_schedule')){
+      wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
     }
 
     if(is_page('applications')){
+      wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
       wp_enqueue_style('student_appli_style', get_theme_file_uri('css/student-applications.css')); 
     }
     elseif(is_page('scholarships')){
+      wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
       wp_enqueue_style('student_scholar_style', get_theme_file_uri('css/student-scholarships.css')); 
     }
     elseif(is_page('honor')){
+      wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-honor.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
-    if(is_page('member')){
-      wp_enqueue_style('mytheme_page-member_style', get_theme_file_uri('css/member.css')); 
-    }
-    
+   
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>

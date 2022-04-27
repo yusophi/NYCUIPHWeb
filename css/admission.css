@@ -7,6 +7,44 @@
     background-color: #e4dfd2;
 }
 
+.block-deco{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px rgba(46, 69, 101, 0.7);
+    margin: 3.32vw 0;
+    padding-top: 1.041vw;
+}
+
+.deco-dot{
+    width: 0.989vw;
+    height: 0.989vw;
+    border: solid 1.5px #2e4565;
+    background-color: #2e4565;
+    border-radius: 45%;
+}
+
+.deco-arrow{
+    width: 0.5vw;
+    height: 0.5vw;
+    border: solid #2e4565;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.deco-section{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.84375rem;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    text-align: center;
+    color: #2e4565;
+}
+
 .scetion1{
     width: 82vw;
     margin-left: 9%;
@@ -151,4 +189,3 @@
     border-radius: 15px;
     overflow: hidden;
 }
-

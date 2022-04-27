@@ -7,7 +7,7 @@
 <div class="information-block IPH-introduction">
     <div class="info-title">
         <span class="ch-title">公共衛生研究所</span>
-        <span class="en-title">Institute of Public Health</span>
+        <span class="en_title">Institute of Public Health</span>
     </div>
     <div class="block-deco">
         <div class="deco-dot"></div>

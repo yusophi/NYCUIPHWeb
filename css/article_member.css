@@ -23,9 +23,9 @@
     flex-direction: column;
 }
 
-.left div{
+/*.left div{
     margin-bottom: 0.7vw;
-}
+}*/
 
 .right{
     width: 49.8vw;
@@ -41,19 +41,55 @@
     border-radius: 1.302vw;
 }
 
-.short{
-    width: 100%;
+
+.block-deco{
+    width: 82vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-top: solid 2px rgba(46, 69, 101, 0.7);
+    margin: 3.32vw 0;
+    padding-top: 1.041vw;
+}
+
+.short{
+    width: 100%;
     border-top: none;
     border-bottom: solid 2px rgba(46, 69, 101, 0.7);
     margin: 0;
+    padding-bottom: 1.041vw;
+}
+
+.deco-dot{
+    width: 0.989vw;
+    height: 0.989vw;
+    border: solid 1.5px #2e4565;
+    background-color: #2e4565;
+    border-radius: 45%;
+}
+
+.deco-section{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.84375rem;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    text-align: center;
+    color: #2e4565;
+}
+
+.deco-arrow{
+    width: 0.5vw;
+    height: 0.5vw;
+    border: solid #2e4565;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .staff_name{
-    margin-top: 2.1vw;
+    margin-top: 1vw;
 }
 
 .staff_name > p, .staff_name > p > span{
@@ -76,7 +112,7 @@
 }
 
 .contact{
-    margin-top: 2.8vw;
+    margin-top: 0.5vw;
 }
 .contact > p{
     font-family: 'Noto Sans TC', sans-serif;
@@ -93,6 +129,26 @@
     letter-spacing: 1.1px;
 }
 
+.staff_CV{
+    display: flex;
+    flex-direction: row;  
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 1vw;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.22;
+    letter-spacing: 2.7px;
+    color: #4f5ab8;
+    text-decoration: none;
+}
+.icon_download{
+    margin-left: 0.5vw;
+}
 .right_block{
     display: flex;
     flex-direction: column;
@@ -118,21 +174,11 @@
     width: 100%;
 }
 
-.staff_CV{
+/*.staff_CV{
+    display: flex;
     flex-direction: row;  
     justify-content: center;
-    line-height: 1.2;
-}
-
-.CV_link{
-    position: relative;
-    margin-left: 1vw;
-    font-weight: bold;
-    letter-spacing: 3.3px;
-    color: #4f5ab8;
-    text-decoration: none;
-}
-
+}*/
 .right_block > ol {
     list-style-type: decimal;
     list-style-position: outside;

@@ -64,7 +64,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_PhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_PhD['ad_poster'], 'ad_poster_size'); ?>
+                        <?php echo wp_get_attachment_image( $ad_PhD['ad_poster']); ?>
                     </div>
                 </div>
             </div>

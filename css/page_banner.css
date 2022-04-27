@@ -1,0 +1,181 @@
+
+.banner{
+    position: relative;
+    width: 82%;
+    height: auto;
+    margin-top: 20%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.page_name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2.083vw; /*2.5rem*/
+    font-weight: bold;
+    line-height: 1.45;
+    letter-spacing: 0.3125vw;
+    text-align: left;
+    color: #2e4565;
+}
+
+#eg{
+    font-size: 1.5265vw;
+    letter-spacing: 0.078125vw;
+}
+
+.circle{
+    width: 2.65rem;
+    height: 2.65rem;
+    position: absolute;
+    right: 0%;
+    top: 23%;
+    bottom: 23%;
+    border-radius: 1.4rem;
+    box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
+    background-color: #2e4565;
+}
+
+.class_selector{
+    position: relative;
+    width: 82%;
+    height: 5vh;
+    margin-top: 15%;
+    margin-left: 9%;
+    margin-right: 9%;
+    padding-bottom: 0.8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e4dfd2;
+    border-bottom: solid 2px #2e4565;
+}
+
+/***********/
+.select_container {
+    display: block;
+    position: relative;
+    padding-left: 5%;
+    margin-left: 3.5%;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    color: #2e4565;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.select_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border: solid 2px #2e4565;
+    border-radius: 50%;
+}
+
+
+#selection_all{
+    margin-left: 0;
+}
+
+/* On mouse-over, add a grey background color */
+.select_container:hover input ~ .checkmark {
+    background-color: #2e4565;
+}
+
+/* When the radio button is checked, add a blue background */
+.select_container input:checked ~ .checkmark {
+    background-color: #2e4565;
+}
+
+/*.select_container:hover input ~ .checkmark-hover {
+    opacity: 1;
+}*/
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.select_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.select_container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.sdg-dropdown{
+    width: 9.47vw;
+    height: 2.1875vw;
+    position: absolute;
+    right: 0;
+    border: solid 2px #2e4565;
+    background-color: #e4dfd2;
+    color: #2e4565;
+    font-size: 0.84375rem;
+    font-weight: bold;
+    letter-spacing: 0.04vw;
+    padding-left: 1vw;
+}
+
+.sdg-dropdown option{
+    color: #2e4565;
+    font-size: 0.84375rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    border: solid 2px #2e4565;
+    background-color: #e4dfd2;
+    padding: 0.5vw;
+    font-weight: bold;
+    letter-spacing: 0.04vw;
+    padding-left: 1vw;
+}
+
+#SDG_selector {
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    border: #000;
+    background-color: #e4dfd2;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    color: #2e4565;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#SDG_container {
+    margin-left: auto;
+    margin-right: 3.5%;
+    border: #2e4565 solid 2px;
+    width: 135px;
+    height: 30px;
+}

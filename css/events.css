@@ -28,7 +28,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+/*
 .event-cards-mask{
     width: 35.57vw;
     height: 26.09vw;
@@ -47,7 +47,7 @@
     justify-content: space-around;
     align-items: flex-start;
 }
-
+*/
 /*.event-main-slide-upper, .event-name, .event-intro{
     border: solid 2px #2e4565;
 }*/
@@ -140,7 +140,7 @@
     justify-content: center;
     align-items: center;
 }*/
-
+/*
 #SDG_selector {
     padding-left: 10px;
     width: 100%;
@@ -166,4 +166,4 @@
     border: #2e4565 solid 2px;
     width: 135px;
     height: 30px;
-}
+}*/

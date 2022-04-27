@@ -7,7 +7,7 @@
 <div class="information-block IPH-past-supervisors">
     <div class="info-title">
         <span class="ch-title">歷屆主管</span>
-        <span class="en-title">Past-Supervisors</span>
+        <span class="en_title">Past-Supervisors</span>
     </div>
     <div class="block-deco">
         <div class="deco-dot"></div>

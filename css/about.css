@@ -57,6 +57,102 @@
     width: 16.67vw;
 }
 
+/*** video module style ***/
+
+.bk_num{
+    font-family: 'TimesNewRoman';
+    font-size: 2.8504rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.03;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e4565;
+}
+
+.icon_aboutus_2{
+    margin-top: 17%;
+}
+
+.video_title{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.302084vw;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 3.75px;
+    text-align: left;
+    color: #2e4565;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+/*video overlay*/
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.65);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    /*overflow-y: hidden;
+    overflow-x: hidden;*/
+    transition: 0.5s ease-in-out;
+}
+
+.overlay_content
+{
+    display: flex;
+    flex-direction: row;
+    width: 72%;
+    height: 69%;
+    margin: 10% 14% 0%;
+    
+}
+
+.closebtn{
+    width: 2.78rem;
+    height: 5rem;
+    margin-top: -1.2%;
+    cursor: pointer;
+}
+
+.video_content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: 2.6%;
+}
+
+.video_content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .information-block{
     position: relative;
@@ -89,7 +185,7 @@
     letter-spacing: 0.5vw;
 }
 
-.en-title{
+.en_title{
     font-size: 1.266rem;
     font-weight: 900;
     letter-spacing: 0.07vw

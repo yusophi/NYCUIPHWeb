@@ -27,6 +27,10 @@
                 <p>電子郵件&nbsp;:&nbsp;<span><?php echo $regular_staff['email_address'];?></span></p>
                 <p>連絡電話&nbsp;:&nbsp;<span><?php echo $regular_staff['phone'];?></span></p>
             </div>
+            <a class="staff_CV" href="<?php echo esc_url($regular_staff['CV']);?>" target="_blank">教師個人CV
+                <!--<a class="CV_link" href="<?php// echo esc_url($regular_staff['CV']);?>" target="_blank">教師個人CV</a>
+    -->         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+            </a>
             <div class="block-deco short"></div>
         </div> 
         <div class="right">
@@ -48,10 +52,6 @@
                 <div class="deco-dot"></div>
                 <div class="deco-arrow"></div>
                 <div class="deco-section">s2</div>
-            </div>
-            <div class="right_block staff_CV">
-                <p class="right_block_title">教師個人CV</p>
-                <a class="CV_link" href="<?php echo esc_url($regular_staff['CV']);?>" target="_blank">[連結]</a>
             </div>
             <div class="right_block works">
                 <p class="right_block_title">代表著作</p>
