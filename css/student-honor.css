@@ -1,0 +1,133 @@
+#btn-honor{
+    color: #efeee4;
+    background-color: #2e4565;
+}
+
+
+.student_honor{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3.125vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+
+.honor_block{
+    width: 82vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3.125vw;
+}
+
+.honor_block_title{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more_btn{
+    width: 2.084vw;
+    height: 2.084vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.more_btn_hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#more_white{
+    transition: 0.3s ease-in;
+}
+
+.more_btn:hover{
+    width: 5vw;
+}
+
+.more_btn:hover #more_white{
+    display: none;
+}
+
+/*.more_btn_active{
+    width: 5vw;
+}
+
+.more_btn_active > #more_white{
+    display: none;
+}*/
+/*.more_btn:active{
+    width: 5vw;
+    background-color: #2e4565;
+}
+.more_btn:active #more_white{
+    display: none;
+}*/
+
+.more_icon{
+    width: 2.084vw;
+    height: 2.084vw;
+}
+
+.more_btn_text{
+    line-height: 0.06;
+    letter-spacing: 0.140625vw;
+    text-align: left;
+    color: #2e4565;
+    margin-left: 0.52083vw;
+}
+
+.item_titles{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #2e4565;
+    border-bottom: solid 2px #647386;
+    margin-top: 3.125vw;
+    padding-bottom: 2.084vw;
+}
+
+.name_col{
+    width: 17.03125vw;
+}
+
+.honor_rows{
+    width: 82vw;
+    display: inline-flex;
+    flex-direction: row;
+    border-bottom: solid 2px #647386;
+    padding-top: 2.084vw;
+    padding-bottom: 2.084vw;
+    display: none;
+}
+
+.shown{
+    display: inline-flex;
+    transition: display 0.3s ease-in;
+}
+
+.honor_rows > span{
+    color: #2e4565;
+    text-align: left;
+    line-height: 1.59;
+}
+
+.honor_rows > .name{
+    width: 17.03125vw;
+    letter-spacing: 0.0573vw;
+}
+
+.honor_title{
+    letter-spacing: 0.171875vw;
+}

@@ -105,7 +105,11 @@
       wp_enqueue_style('student_appli_style', get_theme_file_uri('css/student-applications.css')); 
     }
     elseif(is_page('scholarships')){
-      wp_enqueue_style('curriculum_scholar_style', get_theme_file_uri('css/student-scholarships.css')); 
+      wp_enqueue_style('student_scholar_style', get_theme_file_uri('css/student-scholarships.css')); 
+    }
+    elseif(is_page('honor')){
+      wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-honor.css')); 
+      wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
     /*elseif(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
