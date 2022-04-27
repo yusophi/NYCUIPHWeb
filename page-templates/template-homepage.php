@@ -312,20 +312,20 @@
                               <span class="SP_ch_title">流行病學<br></span>
                               <span class="SP_en_title">Epidemiology</span>
                         </a>
-                        <div id="SP_2" class="SP_content">
+                        <a id="SP_2" class="SP_content" href="<?php echo site_url(); ?>/bio_and_datascience/">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
                               </div>
                               <span class="SP_ch_title">生物統計與資料科學<br></span>
                               <span class="SP_en_title">Biostatistics and Data Science</span>
-                        </div>
-                        <div id="SP_3" class="SP_content">
+                        </a>
+                        <a id="SP_3" class="SP_content" href="<?php echo site_url(); ?>/policy_and_law/">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
                               </div>
                               <span class="SP_ch_title">健康政策與法律<br></span>
                               <span class="SP_en_title">Policy and Law</span>
-                        </div>
+                        </a>
                   </div>
             </div>
             
