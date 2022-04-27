@@ -111,18 +111,6 @@
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-honor.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
-    /*elseif(is_page('news')){
-      wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
-    }
-    elseif(is_page('events')){
-      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
-    }
-    elseif(is_page('about')){
-      wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-    }
-    elseif(is_page('admission')){
-      wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
-    }*/
     if(is_page('member')){
       wp_enqueue_style('mytheme_page-member_style', get_theme_file_uri('css/member.css')); 
     }

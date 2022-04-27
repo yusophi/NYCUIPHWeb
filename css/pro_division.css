@@ -1,4 +1,4 @@
-.epid_page {
+.pro_page {
     max-width: 100vw;
     width: 100vw;
     background-color: #e4dfd2;
@@ -17,14 +17,14 @@
     font-size: 1.5625vw;
     font-weight: bold;
     line-height: 1.5;
-    letter-spacing: .078125vw;
+    letter-spacing: 0.078125vw;
     text-align: left;
     color: #2e4565;
 }
 
 #ch_title {
     font-size: 2.0833333vw;
-    letter-spacing: .3125vw;
+    letter-spacing: 0.3125vw;
 }
 
 #instruction {
@@ -50,6 +50,17 @@
     letter-spacing: 4.4px;
     text-align: left;
     color: #2e4565;
+}
+
+#instru_content .img_container {
+    width: 31.770833vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#instru_content .img_container img {
+    height: auto;
+    width: 100%;
 }
 
 .black_circle {
@@ -113,7 +124,7 @@
     height: 27px;
 }
 
-.epid_buttons {
+.pro_buttons {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -121,7 +132,7 @@
     width: 69.1667vw;
 }
 
-.epid_btn {
+.pro_btn {
     cursor: pointer;
     width: 8.75vw;
     height: 3.125vw;
@@ -139,138 +150,29 @@
     align-items: center;
 }
 
-/* wave part */
-/*
-.deco_waves {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-    max-width: 100%;
-    background: #e4dfd2;
-}
-
-.deco_waves img {
-    background: #e4dfd2;
-    margin-top: 7.8125vw;
-}
-
-.block-title {
-    width: 15.5%;
-    height: 13.5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: -26.5vh;
-}
-
-.block-title span {
+.pro_btn.checked {
+    transition: all 0s;
+    background: #2e4565;
     color: #efeee4;
-    font-family: "Noto Sans TC", sans-serif;
-    font-weight: bold;
-    text-align: center;
 }
 
-#back_to_top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-#back_to_top .en-title {
-    font-size: 1rem;
-    line-height: 0.05;
-    letter-spacing: 1.5px;
-    text-align: left;
+.animation1_btn {
     color: #2e4565;
-}
-
-#back_to_top .icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-bottom: 17px;
-}
-*/
-/*wave part end*/
-
-/*footer part*/
-/*.Footer-container {
+    transition: all 0.3s;
     position: relative;
-    width: 100%;
-    min-height: 105vh;
-    background-color: #162a47;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    transition: 0.6s;
-    margin-top: 15vh;
+    overflow: hidden;
     z-index: 1;
-}
-.footer-margin {
-    padding: 7% 9%;
-    padding-bottom: 0%;
-    position: relative;
-}
-.footer-exclam {
-    width: 64.6%;
-    opacity: 0.7;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.32;
-    letter-spacing: 6.5px;
-    color: #efeee4;
-}
-.footer-divider {
-    width: 100%;
-    height: 1px;
-    background-color: #d9e0e2;
-    z-index: 3;
-    margin-top: 5.03%;
-    opacity: 0.7;
-}
-.footer-pic img {
-    transform: translate3d(200%, -65%, 0);
-    background-color: #162a47;
-    width: 25rem;
-    height: 14.09rem;
-}
-.footer-info {
-    position: absolute;
-    top: 75%;
-    opacity: 0.7;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 0.79725rem;
-    font-weight: 300;
-    line-height: 1.66;
-    letter-spacing: 2.55px;
-    color: #efeee4;
-}
-
-.footer-statement {
-    position: absolute;
-    opacity: 0.7;
-    font-family: NotoSansTC;
-    font-size: 0.79725rem;
-    font-weight: 300;
-    line-height: 1.76;
-    letter-spacing: 2.55px;
-    bottom: -27%;
-    right: 9%;
-    color: #efeee4;
-    text-align: right;
-}
-
-.footer-iconscout-link {
-    color: #6c63ff;
     cursor: pointer;
-    text-decoration: none;
+    background: linear-gradient(to top, #2e4565 50%, #e4dfd2 50%);
+    background-size: 100% 250%;
+    background-position: left 0%;
+    transition: all 0.6s ease;
 }
-*/
-/*footer part end*/
+
+.animation1_btn:hover {
+    background-position: 0% 90%;
+    color: #efeee4;
+}
 
 /* changing content part*/
 
@@ -298,10 +200,10 @@
     align-items: center;
     border-radius: 25px;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 2rem;
+    font-size: 2.083333vw;
     font-weight: bold;
     line-height: 1.13;
-    letter-spacing: 6px;
+    letter-spacing: 0.3125vw;
     color: #2e4565;
 }
 
@@ -318,7 +220,7 @@
     max-height: auto;
 }
 
-.required_ls {
+.column_2_ls {
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -337,7 +239,7 @@
     justify-content: center;
     align-items: center;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.2504rem;
+    font-size: 1.5625vw;
     font-weight: bold;
     line-height: 1.2;
     letter-spacing: 3.75px;
@@ -355,20 +257,20 @@
     justify-content: center;
 }
 
-.required_ls .ls_content_container {
+.column_2_ls .ls_content_container {
     padding: 2.864583vw 0;
 }
 
-.required_ls .ls_content {
+.column_2_ls .ls_content {
     min-width: 24.21875vw;
 }
 
 .ls_content {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1rem;
+    font-size: 1.041666vw;
     font-weight: 500;
-    line-height: 2rem;
-    letter-spacing: 3px;
+    line-height: 2.083333vw;
+    letter-spacing: 0.15625vw;
     text-align: left;
     color: #2e4565;
     display: flex;
@@ -377,7 +279,7 @@
     flex-direction: column;
 }
 
-.selective_ls {
+.column_1_ls {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -387,7 +289,7 @@
     margin-top: 96px;
 }
 
-.selective_ls .ls_content_container {
+.column_1_ls .ls_content_container {
     width: 100%;
     height: 100%;
     box-shadow: 3px 3px 15px 0 rgba(255, 111, 0, 0.3);
@@ -398,19 +300,42 @@
     flex-direction: column;
 }
 
+#law_required_ls {
+    margin-top: 6.97916vw;
+    align-items: flex-start;
+}
+
+#law_required_ls .ls_content_container {
+    padding: 0;
+}
+
+.ls_notes {
+    border-top: #e4dfd2 solid 3px;
+    border-bottom: #e4dfd2 solid 3px;
+    object-fit: contain;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1.04166vw;
+    line-height: 2;
+    letter-spacing: 3px;
+    text-align: left;
+    color: #2e4565;
+    width: 64.73118%;
+    margin-top: 2.005208vw
+}
+
 .ls_lr_content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 35.572916vw;
+    width: 36vw;
     margin-bottom: 50px;
 }
 
 .ls_title {
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 2.604166vw;
+    margin-bottom: 2.08333vw;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.3504rem;
+    font-size: 1.406666vw;
     font-weight: bold;
     line-height: 1.3;
     letter-spacing: 5.4px;
@@ -420,7 +345,10 @@
 
 .ls_lr_content .ls_content {
     flex: 1;
-    text-align: center;
+}
+
+.ls_lr_content.bios_component {
+    margin-bottom: 41.5px;
 }
 
 .ls_content.align_right {
@@ -438,6 +366,29 @@
     margin: 60px auto 0 auto;
 }
 
+.ls_remark {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1.041666vw;
+    line-height: 1.75;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #2e4565;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ls_hr.btm_margined {
+    margin-bottom: 50px;
+}
+
+.ls_notes.btm_margined {
+    margin-bottom: 50px;
+}
+
+.ls_content.btm_padding {
+    padding-bottom: 50px;
+}
+
 .info_img_container {
     width: 28px;
     height: 28px;
@@ -452,7 +403,7 @@
 .ls_instru_text {
     margin-top: 30px;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1rem;
+    font-size: 1.041666vw;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 3px;
@@ -463,24 +414,6 @@
 .ls_instru_text a {
     text-decoration: none;
     color: #4f5ab8;
-}
-
-.animation1_btn {
-    color: #2e4565;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    cursor: pointer;
-    background: linear-gradient(to top, #2e4565 50%, #e4dfd2 50%);
-    background-size: 100% 250%;
-    background-position: left 0%;
-    transition: all 0.6s ease;
-}
-
-.animation1_btn:hover {
-    background-position: 0% 90%;
-    color: #efeee4;
 }
 
 .ls_sub_title {
@@ -497,16 +430,23 @@
     margin-bottom: 20px;
 }
 
-#tmp_selective_container {
-    margin-top: 6.97916vw;
-}
-
-.selective_ls .ls_content {
-    line-height: 2.5rem;
-}
-
 .data.invisible {
     display: none;
+}
+
+@keyframes changing-animate {
+    from {
+        transform: scale(0);
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.changing_animation {
+    animation: changing-animate 0.5s linear;
 }
 
 #changing_content {
@@ -532,7 +472,7 @@
     letter-spacing: 0.2109375vw;
 }
 
-.tgh_title.margin_top {
+.tgh_title.top_mr {
     margin-top: 5.208333vw;
 }
 
