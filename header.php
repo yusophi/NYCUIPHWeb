@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 </head>
 
 <body>
@@ -142,16 +143,7 @@
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo'/mobile-css/homepage-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
         }*/
-        if(is_page('news')){ /*首頁*/
-            echo '<link rel="stylesheet" href="';bloginfo('template_url');
-            echo '/css/news.css" type="text/css" media="screen and (min-width: 701px)" />';
-            /*************/
-            echo '<script src="';bloginfo('template_url');
-            echo '/js/news.js" type="text/javascript" media="screen and (min-width: 701px)"></script>';
-            /*************/
-            echo '<link rel="stylesheet" href="';bloginfo('template_url');
-            echo'/mobile-css/news-mobile.css" type="text/css" media="screen and (max-width: 700px)" />';
-        }
+        
         /*if(is_page('events')){
             echo '<link rel="stylesheet" href="';bloginfo('template_url');
             echo '/css/events.css" type="text/css" media="screen and (min-width: 701px)" />';

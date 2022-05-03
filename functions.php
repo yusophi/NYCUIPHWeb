@@ -78,6 +78,8 @@
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
 
+    wp_enqueue_script('ajax', get_template_directory_uri() . '/js/post_filter.js', array('jquery'), 1.1, true);
+    wp_localize_script('ajax', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
 
     if(is_page('homepage')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
@@ -93,6 +95,8 @@
     if(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
+      wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+      wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('events')){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
@@ -153,4 +157,74 @@
    
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
+?>
+
+<?php
+// include custom jQuery
+/*function shapeSpace_include_custom_jquery() {
+
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+
+}
+add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');*/
+?>
+
+<?php
+//require_once('include/load_script.php');
+  //   require_once('include/ajax.php');
+      ?>
+
+<?php
+  /*function load_script(){
+    //wp_enqueue_script('ajax', get_template_directory_uri() . '/js/post_filter.js', array('jquery'), 1.1, true);
+   // wp_localize_script('ajax', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+   wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+   wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+  }
+  add_action('wp_enqueue_scripts','load_script');*/
+?>      
+
+<?php
+// post filter function
+add_action('wp_ajax_filter', 'filter_ajax');
+add_action('wp_ajax_nopriv_filter', 'filter_ajax');
+
+function filter_ajax() {
+  $category = $_POST['category'];
+
+  $args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'category_name' => $category,
+    'order' => 'desc'
+  );
+  $response = '';
+  /*if(isset($category)){
+    $args['category__in'] = array($category);
+  }*/
+
+  $query = new WP_Query($args);
+
+  if($query->have_posts()){
+    $counter = 1;
+    while($query->have_posts()) : $query->the_post();
+      echo '<div class="article-content">';
+      echo '<div class="post_counter">';
+      if($counter >= 10){
+        echo $counter . ".";
+      }else{
+        echo "0" . $counter . ".";} 
+      echo '</div>';
+      get_template_part('template-parts/post_news_card');
+      echo '</div>';
+      $counter = $counter + 1;
+    endwhile;
+  }
+
+  wp_reset_postdata();
+  //echo $response;
+  //exit;
+  die();
+} 
 ?>
