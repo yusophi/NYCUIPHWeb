@@ -1,0 +1,232 @@
+.dep_ph_page {
+    padding-top: 18.8020833vw;
+    padding-left: 8.9583333vw;
+    padding-right: 8.9583333vw;
+    background-color: #e4dfd2;
+}
+
+.dep_title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 2.083333vw;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-align: left;
+    color: #2e4565;
+}
+
+.dep_title .dep_en_title {
+    font-size: 1.5625vw;
+}
+
+.top_margined_s {
+    margin-top: 3.0989583vw;
+}
+
+.top_margined {
+    margin-top: 5.208333vw;
+}
+
+.dep_title_s {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.82;
+    font-size: 1.4066666vw;
+    font-weight: bold;
+    letter-spacing: 0.2109375vw;
+    color: #2e4565;
+}
+
+.dep_circle {
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 1.4rem;
+    box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
+    background-color: #2e4565;
+}
+
+.dep_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11.4322916vw;
+}
+
+.dep_hr {
+    width: 82.083333vw;
+    background-color: #2e4565;
+    height: 1px;
+}
+
+.dep_passage {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1.1458333vw;
+    line-height: 1.82;
+    letter-spacing: 0.171875vw;
+    text-align: left;
+    color: #2e4565;
+}
+
+.dep_passage .img_container {
+    margin-top: 4.1666666vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 38.90625vw;
+}
+
+.dep_passage .img_container_s {
+    margin-top: 4.1666666vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 17.083333333vw;
+}
+
+.dep_passage .img_container img {
+    width: 100%;
+    height: auto;
+}
+
+.dep_passage .img_container_s img {
+    width: 100%;
+    height: auto;
+}
+
+.img_instru {
+    width: 100%;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 0.9375vw;
+    line-height: 2.22;
+    letter-spacing: 0.140625vw;
+    color: #647386;
+}
+
+.dep_table {
+    width: 100%;
+    margin-top: 3.125vw;
+    position: relative;
+}
+
+.table_heads span {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 0.140625vw;
+    text-align: left;
+    color: #2e4565;
+}
+
+.table_heads :nth-child(2) {
+    position: absolute;
+    left: 25.260416vw;
+}
+
+.table_heads :nth-child(3) {
+    position: absolute;
+    left: 52.708333vw;
+}
+
+.table_heads :nth-child(4) {
+    float: right;
+    text-align: right;
+}
+
+.table_hr {
+    margin-top: 2.0572916vw;
+    height: 0.052083333vw;
+    width: 82.083333vw;
+    background-color: #647386;
+}
+
+.table_row {
+    margin-top: 2.0572916vw;
+    margin-right: 0.4166666vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table_row div {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1.1458333vw;
+    font-weight: 500;
+    line-height: 1.59;
+    letter-spacing: 0.05729166vw;
+    text-align: left;
+    color: #2e4565;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table_row :nth-child(2) {
+    position: absolute;
+    left: 25.2604166vw;
+}
+
+.table_row :nth-child(3) {
+    position: absolute;
+    left: 53.90625vw;
+}
+
+.table_row :nth-child(4) {
+    float: right;
+    text-align: right;
+}
+
+.mhe_video_title {
+    margin-top: 1.5625vw;
+    width: 17.083333333vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1.3025vw;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 0.1953125vw;
+    color: #2e4565;
+}
+
+.bt-text {
+    font-size: 1.041666666vw;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    line-height: 1.45;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.bt-watchmore {
+    margin-top: 2.083333333vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.deco_waves {
+    margin-top: calc(7.83854166vw - 2%);
+}
+
+.curri_table_row {
+    margin-top: 2.0572916vw;
+    display: flex;
+    align-items: center;
+}
+
+.curri_table_row a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: .9375vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.94;
+    letter-spacing: .140625vw;
+    text-align: left;
+    color: #4f5ab8;
+}

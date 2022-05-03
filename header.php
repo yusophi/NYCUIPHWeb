@@ -180,6 +180,8 @@
             echo '/css/epid.css" type="text/css" media="screen and (min-width: 701px)" />';
             /*************/
          }
+
+
     ?>
     </head>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>

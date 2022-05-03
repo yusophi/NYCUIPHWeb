@@ -107,6 +107,10 @@
     elseif(is_page('scholarships')){
       wp_enqueue_style('curriculum_scholar_style', get_theme_file_uri('css/student-scholarships.css')); 
     }
+
+    if(is_page('dep_ph') || is_page('dep_mhe')) {
+      wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));
+    }
     /*elseif(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
     }
