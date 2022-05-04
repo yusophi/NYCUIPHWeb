@@ -179,3 +179,59 @@
     width: 135px;
     height: 30px;
 }
+
+
+
+/* new design for filter*/
+/*.select_bar_container{
+    width: 82vw;
+    display: block;
+    position: relative;
+    margin-top: 11.458vw;
+}
+
+.cat-list{
+    width: 33.28vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-list > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cat-list_item_dot{
+    width: 1vw;
+    height: 1vw;
+    border: solid 2px #2e4565;
+    border-radius: 50%;
+}
+
+.cat_active > .cat-list_item_dot{
+    background-color: #2e4565;
+}
+
+.cat-list_item:hover .cat-list_item_dot{
+    background-color: #2e4565;
+}
+
+.cat-list_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cat-list_item_name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    color: #2e4565;
+    margin-left: 1.3vw;
+}*/

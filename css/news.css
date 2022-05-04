@@ -8,7 +8,7 @@
 }
 
 /*the News_block */
-.news_block{
+.post_block{
     position: relative;
     width: 100vw;
     height: auto;
@@ -77,6 +77,7 @@
     color: #2e4565;
     margin-left: 1.3vw;
 }
+
 /*************************/
 .pagination{
     position: relative;

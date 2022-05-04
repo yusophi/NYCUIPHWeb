@@ -11,7 +11,24 @@
         <span class="page_name" id="eg">Events</span>
         <div class="circle"></div>
     </div>
-    <div class="class_selector">
+    <?php $categories = get_categories(array(
+            'parent' => 10,
+            'orderby' => 'slug',
+            'order'   => 'ASC'
+        ) ); ?>
+    <div class="select_bar_container">
+    <ul class="cat-list">
+        <?php foreach($categories as $category) : ?>
+            <li>
+                <a class="cat-list_item" href="#!" data-category="<?= $category->term_id; ?>" data-slug="<?= $category->slug; ?>">
+                    <span class="cat-list_item_dot"></span>    
+                    <span class="cat-list_item_name"><?= $category->name; ?></span>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    </div>
+    <!--<div class="class_selector">
         <label class="select_container" id="selection_studies">讀書會
             <input type="radio" checked="checked" name="radio">
             <span class="checkmark"></span>
@@ -31,9 +48,9 @@
                 <option>SDG7</option>
             </select>
         </div>
-    </div>
+    </div>-->
 
-    <div class="events_block">
+    <div class="post_block">
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(

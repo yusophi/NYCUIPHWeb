@@ -63,7 +63,7 @@
             </select>
         </div>
     </div>-->
-    <div class="news_block">
+    <div class="post_block">
         <?php 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $args = array(
@@ -131,10 +131,7 @@
         </div>
        
         <?php endif; wp_reset_postdata(); ?>
-
-    </div>
-
-    <div class="pagination">
+        <div class="pagination">
         <?PHP
             $big = 999999999; // need an unlikely integer
             $args = array(
@@ -154,7 +151,10 @@
         ?>
         <!--<img class="icon-paging prev_page" src="<?php// bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
         <!--<img class="icon-paging next_page" src="<?php //bloginfo('template_url') ?>/images/page_news/next_page.svg">-->
+        </div>
     </div>
+
+    
     
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>

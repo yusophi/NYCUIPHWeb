@@ -13,7 +13,7 @@
         type: 'POST',
         data: { action: 'filter', category: category },
         success: function(result) {
-          $('.news_block').html(result);
+          $('.post_block').html(result);
         },
         error: function(result) {
           console.log(result);
