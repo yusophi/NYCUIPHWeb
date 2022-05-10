@@ -77,9 +77,11 @@
     wp_enqueue_style('mytheme_page_banner_style', get_theme_file_uri('css/page_banner.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
-
-    wp_enqueue_script('ajax', get_template_directory_uri() . '/js/post_filter.js', array('jquery'), 1.1, true);
-    wp_localize_script('ajax', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+    //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+    //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+    wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+    wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
 
     if(is_page('homepage')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
@@ -95,14 +97,14 @@
     if(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
-      wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-      wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+      //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('events')){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
-      wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-      wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+      //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('member')){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/member.css')); 
@@ -156,7 +158,6 @@
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-honor.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
-   
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
@@ -193,12 +194,13 @@ add_action('wp_ajax_filter', 'filter_ajax');
 add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 
 function filter_ajax() {
+  $postType = $_POST['type'];
   $category = $_POST['category'];
 
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
   //echo $paged;
   $args = array(
-    'post_type' => 'post',
+    'post_type' => $postType,
     'post_status' => 'publish',
     'category_name' => $category,
     'orderby' => 'date',
@@ -212,34 +214,115 @@ function filter_ajax() {
   }*/
 
   $query = new WP_Query($args);
-  $cat_parent_is_news = 1;
+  if($postType == 'Staff'){
+    if($query->have_posts())
+    {
+      $regular_staff = get_field('regular_staff');
+      $co_staff = get_field('co_staff');
+      $co_staff = get_field('co_staff');
+      $concurrent_staff = get_field('concurrent_staff');
+      $medical_staff = get_field('medical_staff');
+      
+      $picture = 0;
+      $title = ""; $name = "";
+      $edu = ""; $exp = ""; $link = ""; $CV = "";
 
-  if( $category == '1-academy_lectures' || $category == '2-study_group'){
-    if($query->have_posts()){
-      echo '<div class="event-cards">'; 
+      if( $regular_staff){
+        $picture = $regular_staff['picture'];
+        $name = $regular_staff['name'];
+        $title = $regular_staff['title'];
+        $edu = $regular_staff['h_education'];
+        $exp = $regular_staff['academic_expertise'];
+      }
+      elseif( $co_staff){
+        $picture = $co_staff['picture'];
+        $name = $co_staff['name'];
+        $title = $co_staff['title'];
+        $edu = $co_staff['h_education'];
+        $exp = $co_staff['academic_expertise'];
+        if( $co_staff['link'] ){
+            $link = $co_staff['link'];
+        }
+        elseif($co_staff['CV']){
+            $link = $co_staff['CV'];
+        }
+      }
+      elseif( $concurrent_staff){
+        $picture = $concurrent_staff['picture'];
+        $name = $concurrent_staff['name'];
+        $title = $concurrent_staff['title'];
+        $edu = $concurrent_staff['h_education'];
+        $exp = $concurrent_staff['academic_expertise'];
+        if( $concurrent_staff['link'] ){
+            $link = $concurrent_staff['link'];
+        }
+        elseif($concurrent_staff['CV']){
+            $link = $concurrent_staff['CV'];
+        }
+      }
+      elseif( $medical_staff){
+        $picture = $medical_staff['picture'];
+        $name = $medical_staff['name'];
+        $title = $medical_staff['title'];
+        $edu = $medical_staff['h_education'];
+        $exp = $medical_staff['academic_expertise'];
+        if( $medical_staff['link'] ){
+            $link = $medical_staff['link'];
+        }
+        elseif($medical_staff['CV']){
+            $link = $medical_staff['CV'];
+        }
+      }
       while($query->have_posts()) : $query->the_post();
-        get_template_part('template-parts/post_events_card');
+        echo '<div class="member_card">';
+        echo '<div class="member_picture">';
+        echo wp_get_attachment_image( $picture, 'member_picture'); echo '</div>';
+        if( $link ):
+          echo '<a class="name" href="' . esc_url( $link ).'; ?>" target="_blank">' . $name . '<span class="title">' . $title . '</span></a>';
+        elseif( $CV ):
+          echo '<a class="name" href="' . esc_url( $CV ) . '; ?>" target="_blank">' . $name . '<span class="title">' . $title . '</span></a>';
+        else:
+          echo '<a class="name" href="' . the_permalink() . '; ?>" target="_blank">' . $name . '<span class="title">' . $title . '</span></a>';
+        endif;
+        echo '<div class="education">
+        <p>學歷｜</p>
+        <p>' . $edu . '</p></div>';
+        echo '<div class="expertise">
+        <p>專長領域｜</p>
+        <p>' . $exp . '</p></div>';
+        //get_template_part('template-parts/post_member_card');
       endwhile;
-      echo '</div>';
     }
   }
+  //$cat_parent_is_news = 1;
   else{
-    if($query->have_posts()){
-      $counter = 1;
-      echo '<div class="news-article">';
-      while($query->have_posts()) : $query->the_post();
-        echo '<div class="article-content">';
-        echo '<div class="post_counter">';
-        if($counter >= 10){
-          echo $counter . ".";
-        }else{
-          echo "0" . $counter . ".";} 
+    if( $category == '1-academy_lectures' || $category == '2-study_group'){
+      if($query->have_posts()){
+        echo '<div class="event-cards">'; 
+        while($query->have_posts()) : $query->the_post();
+          get_template_part('template-parts/post_events_card');
+        endwhile;
         echo '</div>';
-        get_template_part('template-parts/post_news_card');
+      }
+    }
+    else{
+      if($query->have_posts()){
+        $counter = 1;
+        echo '<div class="news-article">';
+        while($query->have_posts()) : $query->the_post();
+          echo '<div class="article-content">';
+          echo '<div class="post_counter">';
+          if($counter >= 10){
+            echo $counter . ".";
+          }else{
+            echo "0" . $counter . ".";} 
+          echo '</div>';
+          get_template_part('template-parts/post_news_card');
+          echo '</div>';
+          $counter = $counter + 1;
+        endwhile;
         echo '</div>';
-        $counter = $counter + 1;
-      endwhile;
-      echo '</div>';
+      }
     }
   }
   

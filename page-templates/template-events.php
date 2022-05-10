@@ -20,7 +20,7 @@
     <ul class="cat-list">
         <?php foreach($categories as $category) : ?>
             <li>
-                <a class="cat-list_item" href="#!" data-category="<?= $category->term_id; ?>" data-slug="<?= $category->slug; ?>">
+                <a class="cat-list_item" href="#!" data-type="post" data-slug="<?= $category->slug; ?>">
                     <span class="cat-list_item_dot"></span>    
                     <span class="cat-list_item_name"><?= $category->name; ?></span>
                 </a>

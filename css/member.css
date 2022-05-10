@@ -6,7 +6,7 @@
     align-items: center;
     background-color: #e4dfd2;
 }
-
+/*
 .banner{
     position: relative;
     width: 82%;
@@ -18,7 +18,7 @@
 
 .page_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2rem; /*2.5rem*/
+    font-size: 2rem; 
     font-weight: bold;
     line-height: 1.45;
     letter-spacing: 6px;
@@ -41,9 +41,9 @@
     border-radius: 1.4rem;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
-}
+}*/
 
-.member_block{
+.post_block{
     display: grid;
     grid-template-columns: 19.583vw 19.583vw 19.583vw;
     column-gap: 5.208vw;
@@ -61,6 +61,7 @@
     height: 12.5vw;
     overflow: hidden;
     border-radius: 1.302vw;
+    border: solid 2px #2e4565;
 }
 
 .name, .title{
@@ -95,4 +96,84 @@
     text-align: left;
     color: #647386;
     margin-top: 1vw;
+}
+
+
+/* new filter bar design */
+.select_bar_container{
+    width: 82vw;
+    display: block;
+    position: relative;
+    margin-top: 11.458vw;
+}
+
+.cat-list_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.041vw;
+}
+
+.cat-list_container > p{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    color: #2e4565;
+    margin-right: 2.604vw;
+}
+
+.cat-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cat_area{
+    width: 32.34375vw;
+}
+
+#cat_prof{
+    width: 43.07vw;
+}
+
+.cat-list > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cat-list_item_dot{
+    width: 1vw;
+    height: 1vw;
+    border: solid 2px #2e4565;
+    border-radius: 50%;
+}
+
+.cat_active > .cat-list_item_dot{
+    background-color: #2e4565;
+}
+
+.cat-list_item:hover .cat-list_item_dot{
+    background-color: #2e4565;
+}
+
+.cat-list_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cat-list_item_name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    color: #2e4565;
+    margin-left: 1.3vw;
 }
