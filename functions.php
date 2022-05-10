@@ -158,6 +158,12 @@
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-honor.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
+    if(is_page('dep_ph') || is_page('dep_mhe')) {
+      wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));
+    }
+    if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/
+      wp_enqueue_style('pro_division_style', get_theme_file_uri('css/pro_division.css'));
+    }
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
