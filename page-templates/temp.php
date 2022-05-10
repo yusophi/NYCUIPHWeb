@@ -1,75 +1,11 @@
-<?php
-/*
- * Template Name: news
- */
-?>
-<?php get_header(); ?>
-<div class="page_News">
-    <div class="banner">
-        <span class="page_name" >最新消息<br></span>
-        <span class="page_name" id="eg">News</span>
-        <div class="circle"></div>
-    </div>
-    <?php $categories = get_categories(array(
-            'parent' => 6,
-            'orderby' => 'slug',
-            'order'   => 'ASC'
-        ) ); ?>
-    <div class="select_bar_container">
-    <ul class="cat-list">
-        <li>
-            <a class="cat-list_item cat_active" href="#!" data-type="post" data-slug="news">
-                <span class="cat-list_item_dot"></span>
-                <span class="cat-list_item_name">總覽</span>
-            </a>
-        </li>
-        <?php foreach($categories as $category) : ?>
-            <li>
-                <a class="cat-list_item" href="#!" data-type="post" data-slug="<?= $category->slug; ?>">
-                    <span class="cat-list_item_dot"></span>    
-                    <span class="cat-list_item_name"><?= $category->name; ?></span>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    </div>
-    <!--<div class="class_selector">
-        <label class="select_container" id="selection_all">總覽
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_general">公告
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container">獎學金
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_covid19">covid-19
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-
-        <div id="SDG_container">
-            <select id="SDG_selector">
-                <option>SDG1</option>
-                <option>SDG2</option>
-                <option>SDG3</option>
-                <option>SDG4</option>
-                <option>SDG5</option>
-                <option>SDG6</option>
-                <option>SDG7</option>
-            </select>
-        </div>
-    </div>-->
-    <div class="post_block">
+<div class="news_block">
         <?php 
+            $cat_slug = 'a1-normal_news';
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'news',
+                'category_name' =>  $cat_slug,
                 'orderby' => 'date',
                 'paged' => $paged,
                 'posts_per_page' => 15
@@ -77,7 +13,8 @@
 
             $arr_posts = new WP_Query($args);
             if ($arr_posts->have_posts()) :
-        ?> 
+        ?>
+
         <div class="news-article">
             <?php
             $counter = 0;
@@ -90,7 +27,7 @@
                         <?php if($counter >= 10){
                                 echo $counter . ".";
                             }else{
-                                echo "0" . $counter . ".";} ?><!--&nbsp;&nbsp;-->
+                                echo "0" . $counter . ".";} ?>&nbsp;&nbsp;
                     </div>
                     <div class="post_icon">
                         <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
@@ -131,7 +68,11 @@
         </div>
        
         <?php endif; wp_reset_postdata(); ?>
-        <div class="pagination">
+
+    </div>
+    <!--<div class="news_block" id="new_bkg"></div>-->
+
+    <div class="pagination">
         <?PHP
             $big = 999999999; // need an unlikely integer
             $args = array(
@@ -151,18 +92,7 @@
         ?>
         <!--<img class="icon-paging prev_page" src="<?php// bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
         <!--<img class="icon-paging next_page" src="<?php //bloginfo('template_url') ?>/images/page_news/next_page.svg">-->
-        </div>
+        
     </div>
-
-    
     
     <?php get_template_part( 'template-parts/backtoTOP');?>    
-</div>
-
-<script>
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-</script>
-<?php get_footer(); ?>

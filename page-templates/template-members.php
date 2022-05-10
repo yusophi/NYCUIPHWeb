@@ -10,8 +10,50 @@
         <span class="page_name" id="eg">Members</span>
         <div class="circle"></div>
     </div>
-    <div class="class_selector">
-        <!--<span>職稱｜</span>-->
+    <?php $areas_categories = get_categories(array(
+                'parent' => 33,
+                'orderby' => 'slug',
+                'hide_empty' => false,
+                'order'   => 'ASC'
+            ) );
+          $prof_categories = get_categories(array(
+                'parent' => 27,
+                'orderby' => 'slug',
+                'hide_empty' => false,
+                'order'   => 'ASC'
+            ) );
+    ?>
+    <div class="select_bar_container">
+        <div class="cat-list_container">
+            <p>領域｜</p>
+            <ul class="cat-list" id="cat_area">
+                <?php foreach($areas_categories as $area_category) : ?>
+                    <li>
+                        <a class="cat-list_item" href="#!" data-type="Staff" data-slug="<?= $area_category->slug; ?>">
+                            <span class="cat-list_item_dot"></span>    
+                            <span class="cat-list_item_name"><?= $area_category->name; ?></span>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="cat-list_container">
+            <p>職稱｜</p>
+            <ul class="cat-list" id="cat_prof">
+                <?php foreach($prof_categories as $prof_category) : ?>
+                    <li>
+                        <a class="cat-list_item" href="#!" data-type="Staff" data-slug="<?= $prof_category->slug; ?>">
+                            <span class="cat-list_item_dot"></span>    
+                            <span class="cat-list_item_name"><?= $prof_category->name; ?></span>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+
+<!--    <div class="class_selector">
+        <span>職稱｜</span>
         <label class="select_container" id="selection_studies">專任教師
             <input type="radio" checked="checked" name="radio">
             <span class="checkmark"></span>
@@ -32,42 +74,42 @@
             <input type="radio" name="radio">
             <span class="checkmark"></span>
         </label>
-    </div>
+    </div>-->
     <?php
         $args = array(
-                'post_type' => 'Staff', 
+                'post_type' => 'Staff',
+                'category_name' => 'professor_class',
                 'post_status' => 'publish',
-                'category__not_in' => array(12)
         );
         $the_query = new WP_Query($args);
         //echo $the_query->max_num_pages;
         if($the_query->have_posts()):
     ?>
-        <div class="member_block">
+        <div class="post_block">
             <?php
             $counter = 0;
             while ($the_query->have_posts()) :
                     $the_query->the_post();
                     $counter = $counter + 1;?>
                     <?php
-                    $regular_staff = get_field('regular_staff');
-                    $co_staff = get_field('co_staff');
-                    $co_staff = get_field('co_staff');
-                    $concurrent_staff = get_field('concurrent_staff');
-                    $medical_staff = get_field('medical_staff');
-                    
-                    $picture = 0;
-                    $title = ""; $name = "";
-                    $edu = ""; $exp = ""; $link = ""; $CV = "";
+                        /*$regular_staff = get_field('regular_staff');
+                        $co_staff = get_field('co_staff');
+                        $co_staff = get_field('co_staff');
+                        $concurrent_staff = get_field('concurrent_staff');
+                        $medical_staff = get_field('medical_staff');*/
+                        
+                        $picture = get_field('picture');
+                        $title =  get_field('prof_class'); $name = get_field('name');
+                        $edu = get_field('h_edu'); $exp = get_field('academic_expertise'); $link = ""; $CV = "";
                     ?>
-                    <?php if( $regular_staff): 
+                    <?php /*if( $regular_staff): 
                         $picture = $regular_staff['picture'];
                         $name = $regular_staff['name'];
                         $title = $regular_staff['title'];
                         $edu = $regular_staff['h_education'];
-                        $exp = $regular_staff['academic_expertise'];
+                        $exp = $regular_staff['academic_expertise'];*/
                     ?>
-                    <?php elseif( $co_staff): 
+                    <?php /*elseif( $co_staff): 
                         $picture = $co_staff['picture'];
                         $name = $co_staff['name'];
                         $title = $co_staff['title'];
@@ -78,9 +120,9 @@
                         }
                         elseif($co_staff['CV']){
                             $link = $co_staff['CV'];
-                        }
+                        }*/
                     ?>
-                    <?php elseif( $concurrent_staff): 
+                    <?php /*elseif( $concurrent_staff): 
                         $picture = $concurrent_staff['picture'];
                         $name = $concurrent_staff['name'];
                         $title = $concurrent_staff['title'];
@@ -91,9 +133,9 @@
                         }
                         elseif($concurrent_staff['CV']){
                             $link = $concurrent_staff['CV'];
-                        }
+                        }*/
                     ?>
-                     <?php elseif( $medical_staff): 
+                     <?php /*elseif( $medical_staff): 
                         $picture = $medical_staff['picture'];
                         $name = $medical_staff['name'];
                         $title = $medical_staff['title'];
@@ -104,21 +146,21 @@
                         }
                         elseif($medical_staff['CV']){
                             $link = $medical_staff['CV'];
-                        }
+                        }*/
                     ?>
-                    <?php endif; ?>
+                    <?php //endif; ?>
                     <div class="member_card">
                         <div class="member_picture">
                             <?php echo wp_get_attachment_image( $picture, 'member_picture'); ?>
                         </div>
 
-                        <?php if( $link ): ?>
-                            <a class="name" href="<?php echo esc_url( $link ); ?>" target="_blank"><?php echo $name; ?><span class="title"><?php echo $title; ?></span></a>
-                        <?php elseif( $CV ): ?>
-                            <a class="name" href="<?php echo esc_url( $CV ); ?>" target="_blank"><?php echo $name; ?><span class="title"><?php echo $title; ?></span></a>
-                        <?php else: ?>
-                            <a class="name" href="<?php the_permalink(); ?>"><?php echo $name; ?><span class="title"><?php echo $title; ?></span></a>
-                        <?php endif; ?>
+                        <?php //if( $link ): ?>
+                            <!--<a class="name" href="<?php //echo esc_url( $link ); ?>" target="_blank"><?php //echo $name; ?><span class="title"><?php //echo $title; ?></span></a>
+                        <?php //elseif( $CV ): ?>
+                            <a class="name" href="<?php //echo esc_url( $CV ); ?>" target="_blank"><?php //echo $name; ?><span class="title"><?php //echo $title; ?></span></a>-->
+                        <?php //else: ?>
+                        <a class="name" href="<?php the_permalink(); ?>"><?= $name; ?><span class="title"><?= $title; ?></span></a>
+                        <?php //endif; ?>
 
                         <div class="education">
                             <p>學歷｜</p>
