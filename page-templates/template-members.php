@@ -24,12 +24,14 @@
             ) );
     ?>
     <div class="select_bar_container">
+        <input type="hidden" id="filters-field" value="" />
+        <input type="hidden" id="filters-title" value="" />
         <div class="cat-list_container">
             <p>領域｜</p>
             <ul class="cat-list" id="cat_area">
                 <?php foreach($areas_categories as $area_category) : ?>
                     <li>
-                        <a class="cat-list_item" href="#!" data-type="Staff" data-slug="<?= $area_category->slug; ?>">
+                        <a class="<?= "cat-list_item " . $area_category->slug; ?>" href="#!" data-filter-type="field" data-type="Staff" data-slug="<?= $area_category->slug; ?>">
                             <span class="cat-list_item_dot"></span>    
                             <span class="cat-list_item_name"><?= $area_category->name; ?></span>
                         </a>
@@ -42,7 +44,7 @@
             <ul class="cat-list" id="cat_prof">
                 <?php foreach($prof_categories as $prof_category) : ?>
                     <li>
-                        <a class="cat-list_item" href="#!" data-type="Staff" data-slug="<?= $prof_category->slug; ?>">
+                        <a class="<?= "cat-list_item " . $prof_category->slug; ?>" href="#!" data-filter-type="title" data-type="Staff" data-slug="<?= $prof_category->slug; ?>">
                             <span class="cat-list_item_dot"></span>    
                             <span class="cat-list_item_name"><?= $prof_category->name; ?></span>
                         </a>

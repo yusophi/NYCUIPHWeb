@@ -202,106 +202,76 @@ add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 function filter_ajax() {
   $postType = $_POST['type'];
   $category = $_POST['category'];
-
-  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-  //echo $paged;
+  $cat_field = $_POST['cat_field'];
+	$cat_title = $_POST['cat_title'];
+  
   $args = array(
     'post_type' => $postType,
     'post_status' => 'publish',
-    'category_name' => $category,
+    'orderby' => 'date',
+    'order' => 'desc',
+    'posts_per_page' => 15
+  );
+
+  if(count($cat_field) > 0 &&  strlen($cat_field[0]) > 0){
+    //echo "there is field_category.";
+
+    //$multi_cat = $cat_field . "," . $cat_title;
+    $args['tax_query'][] = [
+      'taxonomy'      => 'category',
+      'field'		=> 'slug',
+      'terms'         => $cat_field,
+      'operator'      => 'IN'
+    ];
+    if(count($cat_title) > 0 &&  strlen($cat_title[0]) > 0){
+      //echo "also there is title_category.";
+      $args['tax_query']['relation'] = 'AND';
+      $args['tax_query'][] = [
+        'taxonomy'      => 'category',
+        'field'		=> 'slug',
+        'terms'         => $cat_title,
+        'operator'      => 'IN'
+      ];
+    }
+  }
+  else if(count($cat_title) > 0 &&  strlen($cat_title[0]) > 0){
+    //echo "there is title_categry.";
+    $args['tax_query'][] = [
+      'taxonomy'      => 'category',
+      'field'		=> 'slug',
+      'terms'         => $cat_title,
+      'operator'      => 'IN'
+    ];
+  }
+  else{ // if none category is selected, then show the default value
+    $args['category_name'] = 'professor_class';
+  }
+  //echo "\n" . "multi_cat: " . $multi_cat;
+  //$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+  //echo $paged;
+  /*$args = array(
+    'post_type' => $postType,
+    'post_status' => 'publish',
+    'category_name' => $cat_title,
     'orderby' => 'date',
     'paged' => $paged,
     'order' => 'desc',
     'posts_per_page' => 15
-  );
+  );*/
+
+  
   $response = '';
   /*if(isset($category)){
     $args['category__in'] = array($category);
   }*/
 
   $query = new WP_Query($args);
-  if($postType == 'Staff'){
-    if($query->have_posts())
-    {
-      $regular_staff = get_field('regular_staff');
-      $co_staff = get_field('co_staff');
-      $co_staff = get_field('co_staff');
-      $concurrent_staff = get_field('concurrent_staff');
-      $medical_staff = get_field('medical_staff');
-      
-      $picture = 0;
-      $title = ""; $name = "";
-      $edu = ""; $exp = ""; $link = ""; $CV = "";
-
-      if( $regular_staff){
-        $picture = $regular_staff['picture'];
-        $name = $regular_staff['name'];
-        $title = $regular_staff['title'];
-        $edu = $regular_staff['h_education'];
-        $exp = $regular_staff['academic_expertise'];
-      }
-      elseif( $co_staff){
-        $picture = $co_staff['picture'];
-        $name = $co_staff['name'];
-        $title = $co_staff['title'];
-        $edu = $co_staff['h_education'];
-        $exp = $co_staff['academic_expertise'];
-        if( $co_staff['link'] ){
-            $link = $co_staff['link'];
-        }
-        elseif($co_staff['CV']){
-            $link = $co_staff['CV'];
-        }
-      }
-      elseif( $concurrent_staff){
-        $picture = $concurrent_staff['picture'];
-        $name = $concurrent_staff['name'];
-        $title = $concurrent_staff['title'];
-        $edu = $concurrent_staff['h_education'];
-        $exp = $concurrent_staff['academic_expertise'];
-        if( $concurrent_staff['link'] ){
-            $link = $concurrent_staff['link'];
-        }
-        elseif($concurrent_staff['CV']){
-            $link = $concurrent_staff['CV'];
-        }
-      }
-      elseif( $medical_staff){
-        $picture = $medical_staff['picture'];
-        $name = $medical_staff['name'];
-        $title = $medical_staff['title'];
-        $edu = $medical_staff['h_education'];
-        $exp = $medical_staff['academic_expertise'];
-        if( $medical_staff['link'] ){
-            $link = $medical_staff['link'];
-        }
-        elseif($medical_staff['CV']){
-            $link = $medical_staff['CV'];
-        }
-      }
+  if($postType == 'Staff'){ //staff member
       while($query->have_posts()) : $query->the_post();
-        echo '<div class="member_card">';
-        echo '<div class="member_picture">';
-        echo wp_get_attachment_image( $picture, 'member_picture'); echo '</div>';
-        if( $link ):
-          echo '<a class="name" href="' . esc_url( $link ).'; ?>" target="_blank">' . $name . '<span class="title">' . $title . '</span></a>';
-        elseif( $CV ):
-          echo '<a class="name" href="' . esc_url( $CV ) . '; ?>" target="_blank">' . $name . '<span class="title">' . $title . '</span></a>';
-        else:
-          echo '<a class="name" href="' . the_permalink() . '; ?>" target="_blank">' . $name . '<span class="title">' . $title . '</span></a>';
-        endif;
-        echo '<div class="education">
-        <p>學歷｜</p>
-        <p>' . $edu . '</p></div>';
-        echo '<div class="expertise">
-        <p>專長領域｜</p>
-        <p>' . $exp . '</p></div>';
-        //get_template_part('template-parts/post_member_card');
+        get_template_part('template-parts/post_member_card');
       endwhile;
     }
-  }
-  //$cat_parent_is_news = 1;
-  else{
+  else{ // post 
     if( $category == '1-academy_lectures' || $category == '2-study_group'){
       if($query->have_posts()){
         echo '<div class="event-cards">'; 
