@@ -32,10 +32,12 @@
                 <p>電子郵件&nbsp;:&nbsp;<span><?php echo $email;?></span></p>
                 <p>連絡電話&nbsp;:&nbsp;<span><?php echo $phone;?></span></p>
             </div>
+            <?php if( $CV ): ?>
             <a class="staff_CV" href="<?php echo esc_url($CV);?>" target="_blank">教師個人CV
                 <!--<a class="CV_link" href="<?php// echo esc_url($regular_staff['CV']);?>" target="_blank">教師個人CV</a>
     -->         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
+            <?php endif; ?>
             <div class="block-deco short"></div>
         </div> 
         <div class="right">

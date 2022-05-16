@@ -80,8 +80,26 @@
     <?php
         $args = array(
                 'post_type' => 'Staff',
-                'category_name' => 'professor_class',
+                'category_name' => '1-regular',
                 'post_status' => 'publish',
+                /*'meta_key'   => 'admin_for_sorting',
+                'orderby'    => 'meta_value_num',
+                'order'      => 'ASC'*/
+                'meta_query' => array(
+                    'relation' => 'AND',
+                    'admin' => array(
+                        'key' => 'admin_for_sorting',
+                        'compare' => 'EXISTS',
+                    ),
+                    'prof' => array(
+                        'key' => 'prof_class_for_sorting',
+                        'compare' => 'EXISTS',
+                    ), 
+                ),
+                'orderby' => array( 
+                    'admin' => 'ASC',
+                    'prof' => 'ASC',
+                ),
         );
         $the_query = new WP_Query($args);
         //echo $the_query->max_num_pages;

@@ -217,9 +217,10 @@ function filter_ajax() {
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'orderby' => 'date',
-      'order' => 'desc',
-      'posts_per_page' => 15
+      'meta_key'   => 'prof_class_for_sorting',
+      'orderby'    => 'meta_value_num',
+      'order'      => 'ASC',
+      'posts_per_page' => 15,
     );
 
     if(count($cat_field) > 0 &&  strlen($cat_field[0]) > 0){
