@@ -61,7 +61,7 @@
     height: 12.5vw;
     overflow: hidden;
     border-radius: 1.302vw;
-    border: solid 2px #2e4565;
+    /*border: solid 2px #2e4565;*/
 }
 
 .name, .title{

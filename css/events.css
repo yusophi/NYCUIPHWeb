@@ -177,7 +177,8 @@
 }
 
 .cat-list{
-    width: 16.09375vw;
+    /*width: 16.09375vw;*/
+    width: 25vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
