@@ -170,6 +170,9 @@
     if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/
       wp_enqueue_style('pro_division_style', get_theme_file_uri('css/pro_division.css'));
     }
+    if(is_page('links')) {
+      wp_enqueue_style('dep_style', get_theme_file_uri('css/links.css'));
+    }
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>

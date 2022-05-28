@@ -206,9 +206,7 @@ var links_upper_items = document.getElementsByClassName(
 var Links_container = document.getElementsByClassName('Links-container');
 
 for (var i = 0; i < links_upper_items.length; i++) {
-    console.log("adding events");
     links_upper_items[i].addEventListener("click", function () {
-        console.log("running")
         var toExpand = true;
         if (this.parentElement.classList.contains("expanded")) toExpand = false;
         for (var j = 0; j < links_category_items.length; j++) {
