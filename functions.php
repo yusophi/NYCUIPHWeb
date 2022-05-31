@@ -252,7 +252,7 @@ function filter_ajax() {
       ];
     }
     else{ // if none category is selected, then show the default value
-      $args['category_name'] = 'professor_class';
+      $args['category_name'] = '1-regular';
     }
   }
   else{//news or events
