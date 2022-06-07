@@ -11,13 +11,13 @@
         <div class="circle"></div>
     </div>
     <?php $areas_categories = get_categories(array(
-                'parent' => 33,
+                'parent' => 21,
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
           $prof_categories = get_categories(array(
-                'parent' => 27,
+                'parent' => 25,
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
