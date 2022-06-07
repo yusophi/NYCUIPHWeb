@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+#btn-papers{
+    color: #efeee4;
+    background-color: #2e4565;
+}
+
+.student_paper{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 6.25vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* selection bar*/
+.select_bar_container{
+    width: 82vw;
+    display: block;
+    position: relative;
+}
+
+.cat_list_container{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.041vw;
+}
+
+.cat_list_container > p{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    color: #2e4565;
+}
+
+.cat_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 78vw;
+}
+
+.cat_list > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.97916vw;
+}
+
+.cat_list_item_dot{
+    width: 1vw;
+    height: 1vw;
+    border: solid 2px #2e4565;
+    border-radius: 50%;
+}
+
+.cat_active > .cat_list_item_dot{
+    background-color: #2e4565;
+}
+
+.cat_list_item:hover .cat_list_item_dot{
+    background-color: #2e4565;
+}
+
+.cat_list_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cat_list_item_name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    line-height: 0.06;
+    letter-spacing: 2.7px;
+    color: #2e4565;
+    margin-left: 1.3vw;
+}
+
+.item_titles{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #2e4565;
+    border-bottom: solid 2px #647386;
+    margin-top: 3.125vw;
+    padding-bottom: 2.084vw;
+}
+
+.name_col{
+    margin-left: 7.8125vw;
+}
+
+/* block of papaers*/
+.block_papers{
+    width: 82vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.row_paper{
+    width: 82vw;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 2px #647386;
+    padding-top: 3.021vw;
+    padding-bottom: 3.021vw;
+}
+
+.row_paper > span{
+    font-weight: 500;
+    letter-spacing: 0.05729vw;
+    text-align: left;
+    color: #2e4565;
+    line-height: 1.59;
+}
+
+.row_paper > .name{
+    width: 3.8vw;
+    margin-left: 7.85vw;
+}
+
+.row_paper > .degree{
+    width: 2.6vw;
+    margin-left: 6.3vw;
+}
+
+.row_paper > .advisor{
+    width: 3.8vw;
+    margin-left: 9.85vw;
+}
+
+.row_paper > .paper{
+    width: 38.4375vw;
+    margin-left: 8.5vw;
+    letter-spacing: 0.171875vw;
+}

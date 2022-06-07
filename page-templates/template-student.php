@@ -17,8 +17,7 @@
         <a class="subpage_btn" id="btn-honor" href="<?php echo site_url(); ?>/honor/"><p class="_font18">榮譽榜單</p></a>
         <a class="subpage_btn" id="btn-papers" href="<?php echo site_url(); ?>/past_papers/"><p class="_font18">歷屆論文</p></a>
     </div>
-    <?php
-        if(is_page('applications')):?>
+    <?php if(is_page('applications')):?>
             <?php get_template_part('template-parts/student','applications');?>
             <script>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
