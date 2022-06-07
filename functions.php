@@ -23,15 +23,15 @@
       'not_found'          => __( '没有找到該成員資料' ),
       'not_found_in_trash' => __( '回收站里面没有相关成員資料' ),
       'parent_item_colon'  => '',
-      'menu_name'          => '師資陣容'
+      'menu_name'          => '系所成員'
     );
     $argsss = array(
       'labels'        => $labelsss,
-      'description'   => '師資陣容資料',
+      'description'   => '系所成員資料',
       'public'        => true,
       'taxonomies'    => array('recordings', 'category', 'post_tag'),
       'menu_position' => 5,
-      'reweite'       => false,
+      'rewrite'       => false,
       'has_archive'   => false,
       'supports'      => array( 'title', 'thumbnail')
     );
@@ -39,7 +39,6 @@
   }
   add_action( 'init', 'my_custom_post_staff' );
 ?>
-
 
 <?php
   function wpb_image_editor_default_to_gd( $editors ) {
@@ -163,6 +162,10 @@
       wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-honor.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
+    }
+    elseif(is_page('past_papers')){
+      wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
+      wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-past_paper.css')); 
     }
     if(is_page('dep_ph') || is_page('dep_mhe')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));
@@ -329,3 +332,77 @@ function filter_ajax() {
 } 
 ?>
 
+
+<?php /* create custom post type called "papers"*/
+
+// Creating a Deals Custom Post Type
+function paper_custom_post_type() {
+	$labels = array(
+		'name'                => __( 'Papers' ),
+		'singular_name'       => __( 'Paper'),
+		'menu_name'           => __( '歷屆論文'),
+		'parent_item_colon'   => __( 'parent Paper'),
+		'all_items'           => __( '所有論文'),
+		'view_item'           => __( 'View Paper'),
+		'add_new_item'        => __( 'Add New Paper'),
+		'add_new'             => __( '新建歷屆論文'),
+		'edit_item'           => __( 'Edit Paper'),
+		'update_item'         => __( 'Update Paper'),
+		'search_items'        => __( 'Search Paper'),
+		'not_found'           => __( 'Not Found'),
+		'not_found_in_trash'  => __( 'Not found in Trash')
+	);
+	$args = array(
+		'label'               => __( 'papers'),
+		'description'         => __( '歷屆論文資料'),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'author', 'thumbnail', 'custom-fields'),
+		'public'              => true,
+		'hierarchical'        => false,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+    'menu_position' => 5,
+		'has_archive'         => true,
+		'can_export'          => true,
+		'exclude_from_search' => false,
+	        'yarpp_support'       => true,
+		/*'taxonomies' 	      => array('post_tag'),*/
+		'publicly_queryable'  => true,
+);
+	register_post_type( 'papers', $args );
+}
+add_action( 'init', 'paper_custom_post_type', 0 );
+
+
+?>
+
+<?php // Let us create Taxonomy for Custom Post Type
+add_action( 'init', 'create_paper_custom_taxonomy', 0 );
+ 
+//create a custom taxonomy name it "type" for your posts
+function create_paper_custom_taxonomy() {
+  $labels = array(
+    'name' => _x( '論文分類', 'taxonomy general name' ),
+    'singular_name' => _x( '論文分類', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Types' ),
+    'all_items' => __( '所有分類' ),
+    'parent_item' => __( '上層分類' ),
+    'parent_item_colon' => __( 'Parent Type:' ),
+    'edit_item' => __( '編輯分類' ), 
+    'update_item' => __( '更新分類' ),
+    'add_new_item' => __( '新增分類' ),
+    'new_item_name' => __( 'New Type Name' ),
+    'menu_name' => __( '論文分類' ),
+  ); 	
+ 
+  register_taxonomy('papers_cat',array('papers'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+  ));
+}
+?>
