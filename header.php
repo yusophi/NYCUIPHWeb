@@ -119,7 +119,7 @@
                         <div class="dropdown-menu"></div>
                     </li>
                     <li id="nav-main-list-item-7">
-                        <a class="menu-list nav-list-item-7">相關資源</a>
+                        <a class="menu-list nav-list-item-7" href="<?php echo site_url(); ?>/links/">相關資源</a>
                         <div class="dropdown-menu">
                             <ul>
                             </ul>
