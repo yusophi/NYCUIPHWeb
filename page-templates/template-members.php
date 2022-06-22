@@ -53,30 +53,6 @@
             </ul>
         </div>
     </div>
-
-<!--    <div class="class_selector">
-        <span>職稱｜</span>
-        <label class="select_container" id="selection_studies">專任教師
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">合聘教師
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">兼任教師
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">醫學人文教師
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">系所主管
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-    </div>-->
     <?php
         $args = array(
                 'post_type' => 'Staff',

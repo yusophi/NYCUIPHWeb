@@ -166,6 +166,9 @@
     elseif(is_page('past_papers')){
       wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-past_paper.css')); 
+      wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+      wp_enqueue_script('paper_filter', get_theme_file_uri('js/paper_filter.js'),true);
+      wp_localize_script('paper_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('dep_ph') || is_page('dep_mhe')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));
@@ -213,10 +216,10 @@ add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 
 function filter_ajax() {
   $postType = $_POST['type'];
-  $filter_type = $POST['filter_type'];
   $category = $_POST['category'];
-  echo $filter_type;
-  if($postType == 'Staff' && isset($_POST['cat_field']) && isset($_POST['cat_title'])){ //staff member
+
+  if($postType == 'Staff' && isset($_POST['cat_field']) && isset($_POST['cat_title'])){ 
+    //post_type: Staff
     $cat_field = $_POST['cat_field'];
 	  $cat_title = $_POST['cat_title'];
     
@@ -253,7 +256,7 @@ function filter_ajax() {
       $args['tax_query'][] = [
         'taxonomy'      => 'category',
         'field'		=> 'slug',
-        'terms'         => $cat_title,
+        'terms'        => $cat_title,
         'operator'      => 'IN'
       ];
     }
@@ -261,7 +264,56 @@ function filter_ajax() {
       $args['category_name'] = '1-regular';
     }
   }
-  else{//news or events
+  else if($postType == 'papers' /*&& isset($_POST['cat_year']) && isset($_POST['cat_division'])*/){ 
+    //post_type: papers
+    $cat_year = $_POST['cat_year'];
+	  $cat_division = $_POST['cat_division'];
+    $keyword = $_POST['keyword'];
+
+    $args = array(
+      'post_type' => $postType,
+      'post_status' => 'publish',
+      'orderby' => 'meta_value_num',
+      'meta_key' => 'year',
+      'order' => 'DESC',
+    );
+    if(isset($keyword))
+    {
+      $args['s'] = esc_attr($keyword);
+    }
+    else if(count($cat_year) > 0 &&  strlen($cat_year[0]) > 0){
+      //echo "there is year cat.";
+      $args['tax_query'][] = [
+        'taxonomy'      => 'papers_cat',
+        'field'		=> 'slug',
+        'terms'         => $cat_year,
+        'operator'      => 'IN'
+      ];
+      if(count($cat_division) > 0 &&  strlen($cat_division[0]) > 0){
+        //echo "also there is title_category.";
+        $args['tax_query']['relation'] = 'AND';
+        $args['tax_query'][] = [
+          'taxonomy'      => 'papers_cat',
+          'field'		=> 'slug',
+          'terms'         => $cat_division,
+          'operator'      => 'IN'
+        ];
+      }
+    }
+    else if(count($cat_division) > 0 &&  strlen($cat_division[0]) > 0){
+      //echo "there is title_categry.";
+      $args['tax_query'][] = [
+        'taxonomy'      => 'papers_cat',
+        'field'		=> 'slug',
+        'terms'         => $cat_division,
+        'operator'      => 'IN'
+      ];
+    }
+    /*else{ // if none category is selected, then show the default value
+      $args['category_name'] = '1-regular';
+    }*/
+  }
+  else{//post type: news or events
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
@@ -272,14 +324,29 @@ function filter_ajax() {
     );
   }
 
-  $query = new WP_Query($args);
+  $query = new WP_Query($args); //create a query
 
-  if($postType == 'Staff'){ //staff member
+  if($postType == 'Staff'){ //post type: Staff
       while($query->have_posts()) : $query->the_post();
         get_template_part('template-parts/post_member_card');
       endwhile;
   }
-  else{ // post 
+  else if($postType == 'papers'){ //post type: Staff
+    echo '<div class="item_titles _font18">';
+    echo ' <span>年份</span>
+    <span class="name_col">姓名</span>
+    <span class="name_col">畢業學位</span>
+    <span class="name_col">指導教授</span>
+    <span class="name_col">論文名稱</span>';
+    echo '</div>';
+    echo '<div class="block_paper_posts">';
+    while($query->have_posts()) : $query->the_post();
+      get_template_part('template-parts/post_paper_card');
+    endwhile;
+    echo '</div>';
+    
+  }
+  else{ // post category: event 
     if( $category == '1-academy_lectures' || $category == '2-study_group' || $category == 'event'){
       if($query->have_posts()){
         echo '<div class="event-cards">'; 
@@ -289,7 +356,7 @@ function filter_ajax() {
         echo '</div>';
       }
     }
-    else{
+    else{ //post category: news
       if($query->have_posts()){
         $counter = 1;
         echo '<div class="news-article">';
@@ -370,8 +437,8 @@ function paper_custom_post_type() {
 		'has_archive'         => true,
 		'can_export'          => true,
 		'exclude_from_search' => false,
-	        'yarpp_support'       => true,
-		/*'taxonomies' 	      => array('post_tag'),*/
+	  'yarpp_support'       => true,
+		'taxonomies' 	      => array('papers_cat'),
 		'publicly_queryable'  => true,
 );
 	register_post_type( 'papers', $args );
@@ -408,4 +475,82 @@ function create_paper_custom_taxonomy() {
     'query_var' => true,
   ));
 }
+?>
+
+<?php
+/**
+ * This function modifies the main WordPress query to include an array of 
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query The main WordPress query.
+ */
+/*function tg_include_custom_post_types_in_search_results( $query ) {
+    if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
+        $query->set( 'post_type', array( 'post', 'papers') );
+    }
+}
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' ); */
+?>
+
+<?php
+/**
+ * Extend WordPress search to include custom fields
+ *
+ * https://adambalee.com
+ */
+
+/**
+ * Join posts and postmeta tables
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_join
+ */
+function cf_search_join( $join ) {
+    global $wpdb;
+
+   /* if ( is_search() ) {    
+      $join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
+    }*/
+    $join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
+    //echo $join;
+    return $join;
+}
+add_filter('posts_join', 'cf_search_join' );
+
+/**
+ * Modify the search query with posts_where
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
+ */
+function cf_search_where( $where ) {
+    global $pagenow, $wpdb;
+
+    /*if (  is_main_query() && is_search() ) {
+        $where = preg_replace(
+            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
+            "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );
+        //echo $where;
+    }*/
+    $where = preg_replace(
+      "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
+      "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );
+    //echo $where;
+    return $where;
+}
+add_filter( 'posts_where', 'cf_search_where' );
+
+/**
+ * Prevent duplicates
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
+ */
+function cf_search_distinct( $where ) {
+    global $wpdb;
+
+    if ( is_search() ) {
+        return "DISTINCT";
+    }
+    return "DISTINCT";
+    //return $where;
+}
+add_filter( 'posts_distinct', 'cf_search_distinct' );
 ?>
