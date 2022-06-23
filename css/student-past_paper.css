@@ -129,9 +129,9 @@ input[type=text]{
     border: 0px;
 }
 
-#search_btn img{
+#search_btn > img{
     width: 2.03125vw;
-    height: 1.5104vw;
+    height: 2.03125vw;
     margin-right: 1.5625vw;
 }
 

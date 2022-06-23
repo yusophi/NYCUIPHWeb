@@ -52,10 +52,11 @@
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">
         </button>
     </form>
-    <div id="search_hint">
-        <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
-    </div>
+    
     <div class="block_papers"> 
+        <div id="search_hint">
+            <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
+        </div>
        <!-- the result from ajax request in paper_filter.js-->
        <?php 
            /*$args = array(
@@ -69,7 +70,7 @@
             $arr_posts = new WP_Query($args);
             if($arr_posts->have_posts()):*/
         ?>
-            <div class="block_paper_posts">
+            <!--<div class="block_paper_posts">-->
                     <?php
                     /*while ($arr_posts->have_posts()) :
                             $arr_posts->the_post();*/
@@ -90,7 +91,7 @@
                             <?php //the_title(); ?>
                         </div>-->
                     <?php //endwhile;?>
-            </div>
+            <!--</div>-->
             <?php //endif; wp_reset_postdata(); ?>
     </div>
 </div>
