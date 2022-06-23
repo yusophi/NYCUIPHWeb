@@ -110,12 +110,12 @@
                         </div>-->
                     </li>
                     <li id="nav-main-list-item-8">
-                        <a class="menu-list nav-list-item-8">公衛學科</a>
+                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a>
                         <div class="dropdown-menu">
                         </div>
                     </li>
                     <li id="nav-main-list-item-9">
-                        <a class="menu-list nav-list-item-9">醫人暨教育學科</a>
+                        <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">醫人暨教育學科</a>
                         <div class="dropdown-menu"></div>
                     </li>
                     <li id="nav-main-list-item-7">
