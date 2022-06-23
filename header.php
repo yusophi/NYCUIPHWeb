@@ -20,6 +20,7 @@
     <?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/images/logo2.png">
     <link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 </head>
