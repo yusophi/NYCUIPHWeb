@@ -25,12 +25,17 @@
                   </div>
             </div>
             <div class="footer-statement">
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link_white.svg">&nbsp;&nbsp;&nbsp;
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link_white.svg">
-                  <div style="padding-top: 1.875rem;">
+                  <div id="statement_block1">
+                        <a id="info_open" class="statement">網站資訊開放宣告</a>
+                        <a id="privacy" class="statement">隱私權及資訊安全政策</a>     
+                        <img id="icon_yt" src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link_white.svg">
+                        <img id="icon_fb" src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link_white.svg">
+                  </div>
+                  <div>
                         © 國立陽明交通大學公共衛生研究所 <?php echo date('Y') ?> &nbsp;&nbsp;&nbsp;illustration by&nbsp;
                         <a class="footer-iconscout-link" href="https://iconscout.com/">iconscout</a>
                   </div>
+                  
             </div>
       </div>
 </div>
