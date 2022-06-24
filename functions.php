@@ -217,7 +217,7 @@ add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 function filter_ajax() {
   $postType = $_POST['type'];
   $category = $_POST['category'];
-
+  $check = 1;
   if($postType == 'Staff' && isset($_POST['cat_field']) && isset($_POST['cat_title'])){ 
     //post_type: Staff
     $cat_field = $_POST['cat_field'];
@@ -309,9 +309,9 @@ function filter_ajax() {
         'operator'      => 'IN'
       ];
     }
-    /*else{ // if none category is selected, then show the default value
-      $args['category_name'] = '1-regular';
-    }*/
+    else{ // if none category is selected, then show the default value
+      $check = 0;
+    }
   }
   else{//post type: news or events
     $args = array(
@@ -323,28 +323,35 @@ function filter_ajax() {
       'posts_per_page' => 15
     );
   }
-
-  $query = new WP_Query($args); //create a query
-
+  if($check){
+    $query = new WP_Query($args); //create a query
+  }
+  
   if($postType == 'Staff'){ //post type: Staff
       while($query->have_posts()) : $query->the_post();
         get_template_part('template-parts/post_member_card');
       endwhile;
   }
   else if($postType == 'papers'){ //post type: Staff
-    echo '<div class="item_titles _font18">';
-    echo ' <span>年份</span>
-    <span class="name_col">姓名</span>
-    <span class="name_col">畢業學位</span>
-    <span class="name_col">指導教授</span>
-    <span class="name_col">論文名稱</span>';
-    echo '</div>';
-    echo '<div class="block_paper_posts">';
-    while($query->have_posts()) : $query->the_post();
-      get_template_part('template-parts/post_paper_card');
-    endwhile;
-    echo '</div>';
-    
+    if($check){
+      echo '<div class="item_titles _font18">';
+      echo ' <span>年份</span>
+      <span class="name_col">姓名</span>
+      <span class="name_col">畢業學位</span>
+      <span class="name_col">指導教授</span>
+      <span class="name_col">論文名稱</span>';
+      echo '</div>';
+      echo '<div class="block_paper_posts">';
+      while($query->have_posts()) : $query->the_post();
+        get_template_part('template-parts/post_paper_card');
+      endwhile;
+      echo '</div>';
+    }
+    else{
+      echo '<div id="search_hint">
+        <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
+      </div>';
+    }
   }
   else{ // post category: event 
     if( $category == '1-academy_lectures' || $category == '2-study_group' || $category == 'event'){
