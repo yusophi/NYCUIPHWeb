@@ -1,15 +1,32 @@
 // Jenny: slide show block
 var imagesIndex = 1;
+var refreshIntervalId;
 displayImage(imagesIndex);
 
 function currentImage(n){
     imagesIndex =n;
+    clearInterval(refreshIntervalId);
     displayImage(imagesIndex);
+    refreshIntervalId = setInterval(() => {
+        displayImage(imagesIndex);
+        imagesIndex++;
+        if(imagesIndex > 8){
+          imagesIndex = 1;
+        }
+    }, 2500); 
 }
 
 function plusImage(n){
     imagesIndex = imagesIndex+n;
+    clearInterval(refreshIntervalId);
     displayImage(imagesIndex);
+    refreshIntervalId = setInterval(() => {
+        displayImage(imagesIndex);
+        imagesIndex++;
+        if(imagesIndex > 8){
+          imagesIndex = 1;
+        }
+    }, 2500); 
 }
 
 function displayImage(n){
@@ -27,6 +44,14 @@ function displayImage(n){
     availableImages[imagesIndex-1].style.display = "block";
     allDots[imagesIndex-1].className +=" active";
 }
+
+refreshIntervalId = setInterval(() => {
+    displayImage(imagesIndex);
+    imagesIndex++;
+    if(imagesIndex > 8){
+      imagesIndex = 1;
+    }
+}, 2500); 
 
 
 // Milo: JS code for event part

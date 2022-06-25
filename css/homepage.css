@@ -86,15 +86,16 @@
     position: absolute;
     top: 43vw;
     left: 78.5vw;
-   
+    border: none;
+    background-color: transparent;
 }
 .next-slide{
     position: absolute;
     top: 43vw;
     left: 82vw;
-
+    border: none;
+    background-color: transparent;
 }
-
 
 /* icon and title */
 .block-title{
@@ -948,7 +949,7 @@
     margin-top: 3.5%;
 
 }
-#out_profile_p2{
+.profile_p2{
     margin-top: 10%;
 }
 
@@ -971,7 +972,7 @@
     letter-spacing: 3.75px;
 }
 
-#out_WR{
+.work_respon{
     font-size: 0.9rem;
     letter-spacing: 2px;
     padding-top: 2%;    
@@ -1107,21 +1108,21 @@
 
 }
 
-#overlay_pro_p2, #overlay_pro_p3{
+.profile_p2, .profile_p3{
     width: 100%;
     justify-content: flex-start;
 }
-#overlay_pro_p2{
+.profile_p2{
     padding-top: 5%;
 }
 
-#overlay_pro_p3{
+.profile_p3{
     padding-bottom: 8%;
     border-bottom: solid 1.5px rgba(46,69,101,0.2);
 }
 
 
-#overlay_phone, #overlay_mail{
+.overlay_phone_num, .overlay_mail{
     margin-left: 4%;
 }
 

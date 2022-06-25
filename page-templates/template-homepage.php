@@ -29,7 +29,7 @@
                               $arr_posts->the_post();
                               $counter = $counter + 1;
                         ?>
-                              <div class="imagesSlide thumb-image <?php echo $counter ?>">
+                              <div class="imagesSlide" id="thumb-image-<?php echo $counter; ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                                 <?php the_post_thumbnail(); ?>
@@ -47,12 +47,12 @@
                   <?php endfor; ?>
             </div>
 
-            <a class="previous" onclick="plusImage(-1)">
+            <button class="previous" onclick="plusImage(-1)">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
-            </a>
-            <a class="next-slide" onclick="plusImage(1)">
+            </button>
+            <button class="next-slide" onclick="plusImage(1)">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
-            </a>
+            </button>
 
             <div class="social_media_links">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link.svg">
@@ -60,10 +60,6 @@
             </div>
 
       </div>
-      <script>
-            var imagesIndex = 1;
-            displayImage(imagesIndex);
-      </script>
       <!-- the News block -->
       <div class="News-container">
 
@@ -179,7 +175,7 @@
                                                                   <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                                                   <div class="event-info">
                                                                         <div class="event-date-title">
-                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"">
+                                                                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
                                                                         <div class="event-date"><?php the_field('event_date');?> </div>
@@ -495,9 +491,9 @@
                               <div class="profile_content">
                                     <div class="profile_p1">
                                           <p class="contact_text staff_name"><?php the_field('staff_name') ?></p>
-                                          <p class="work_respon" id="out_WR"><?php the_field('work_group') ?></p>
+                                          <p class="work_respon"><?php the_field('work_group') ?></p>
                                     </div>
-                                    <div class="profile_p2" id="out_profile_p2">
+                                    <div class="profile_p2">
                                           <p class="contact_text contact_title">電話:</p>
                                           <p class="phone_num"><?php the_field('phone_number') ?> </p>
                                     </div>
@@ -534,17 +530,15 @@
                                                       </div>
                                                 </div>
                                                 <div class="overlay_self_info">
-                                                      <p class="contact_text overlay_staff_name" id="overlay_SN"><?php the_field('staff_name') ?></p>
-                                                      <div class="profile_p2" id="overlay_pro_p2">
+                                                      <p class="contact_text overlay_staff_name"><?php the_field('staff_name') ?></p>
+                                                      <div class="profile_p2">
                                                             <p class="contact_title">電話:</p>
-                                                            <p class="phone_num" id="overlay_phone"><?php the_field('phone_number') ?> </p>
+                                                            <p class="phone_num overlay_phone_num"><?php the_field('phone_number') ?> </p>
                                                       </div>
                                                       <div class="profile_p3" id="overlay_pro_p3">
                                                             <p class="contact_title" >信箱:</p>
-                                                            <p class="email" id="overlay_mail"><?php the_field('email') ?> </p>
+                                                            <p class="email overlay_mail"><?php the_field('email') ?> </p>
                                                       </div>
-                                                      <!--<p class="phone_num"><?php //the_field('phone_number') ?> </p>
-                                                      <p class="email"><?php //the_field('email') ?> </p>-->
                                                       <p class="contact_text self_intro"><?php the_field('self_introduction') ?> </p>
                                                 </div>
                                           </div>
@@ -566,10 +560,8 @@
             </div>
             
       </div>
-
       <?php get_template_part( 'template-parts/backtoTOP');?>
       <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
-      <script src="<?php bloginfo('template_url') ?>/js/draggable-slides.js"></script>
+      <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/draggable-slides.js"></script>
 </div>
-
 <?php get_footer(); ?>
