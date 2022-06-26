@@ -182,14 +182,9 @@ body::-webkit-scrollbar {
 #nav-toolbar {
     float: right;
     display: flex;
+    flex-direction: row;
     align-items: center;
-
-    /*height: 129.39px;*/
-    width: 130px;
-    /*padding-right: 4.438rem;
-    padding-top: 2.625rem;
-    padding-bottom: 1.891rem;*/
-    
+    width: 10vw;
     margin-right: 4.5%;
     margin-top: 3.5%;
     justify-content: space-between;
@@ -200,6 +195,12 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 21.7%;
     right: 5.2%;*/
+}
+
+#nav-toolbar > botton{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 #nav-toolbar.pulldown {
@@ -370,4 +371,125 @@ body::-webkit-scrollbar {
     display: grid;
     place-items: center;
     padding: 5.188rem 10.75rem 7.938rem 10.75rem
+}
+
+#search_overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #162a47;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 10;
+}
+
+#search_overlay_closebtn{
+    cursor: pointer;
+    position: relative;
+    top: 2.6041vw;
+    left: 2.6041vw;
+}
+
+#search_request_form{
+    width: 34.27vw;
+    height: 3.125vw;
+    position: relative;
+    left: 32.91vw;
+    top: 8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 3px #ffbb00;
+}
+
+#yellow_search_btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: 0px;
+}
+
+#site_search_keyword{
+    width: 70vw;
+    border: 0px;
+    background-color: transparent;
+    margin-left: 2.5vw;
+}
+
+input.site_search_input::focus{
+    outline: none;
+}
+
+input.site_search_input::placeholder{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: #ffbb00;
+}
+
+input.site_search_input[type=text]{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: #ffbb00;
+}
+
+#site_search_result{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 34.27vw;
+    left: 35vw;
+    top: 12vw;
+    color: #ffbb00;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+}
+
+#site_search_result > a{
+    text-decoration: underline;
+    color: #e4dfd2;
+    margin-top: 1vw;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    letter-spacing: 0.6px;
+}
+
+.icon_toolbar_hover{
+    display: none;
+}
+
+#icon-search:hover #site_search{
+    display: none;
+}
+
+#icon-search:hover #site_search_hover{
+    display: block;
+}
+
+#icon-calendar:hover #calendar{
+    display: none;
+}
+
+#icon-calendar:hover #calendar_hover{
+    display: block;
+}
+
+#icon-alumni_entry:hover #alumni_entry{
+    display: none;
+}
+
+#icon-alumni_entry:hover #alumni_entry_hover{
+    display: block;
 }

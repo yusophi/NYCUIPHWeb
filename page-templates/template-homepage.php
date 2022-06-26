@@ -62,7 +62,6 @@
       </div>
       <!-- the News block -->
       <div class="News-container">
-
             <div class="block-title news_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
                   <span class="ch-title">最新消息<br></span>

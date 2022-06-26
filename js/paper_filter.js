@@ -41,19 +41,6 @@
     $(document).ready(function(){
       $(document).on('click', '#search_btn', function(e){
         e.preventDefault();
-  
-        //editFilterInputs($('#filters-' + $(this).data('filter-type')), $(this).data('slug'));
-
-        //const year_slugs = $('#filters-year').val().split(','); // an array
-        //const division_slugs = $('#filters-division').val().split(','); // an array
-  
-        //$('.cat-list_item').removeClass('cat_active'); //remove the active class, reset later
-        //adding_active_class(year_slugs,division_slugs);
-
-        //const type = $(this).data('type'); //get the post type
-        //const category = $(this).data('slug'); 
-        //console.log("year: ",year_slugs);
-        //console.log("division: ",division_slugs);
         const search_str = $('#keyword').val();
         console.log(search_str);
         $.ajax({

@@ -3,10 +3,6 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
-
-<!--<html <?php //language_attributes(); ?> style="margin:0!important; >
-    <head>
-    <meta charset="<?php bloginfo('charset');?>" />-->
     <title><?php
             if (is_home()) {
                 bloginfo('name');
@@ -22,7 +18,6 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/images/logo2.png">
     <link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 </head>
 
 <body>
@@ -40,12 +35,22 @@
                         </a>
                     </div>
                     <div id="nav-toolbar">
-                        <div id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></div>
-                        <div id="icon-search"><img src="<?php bloginfo('template_url')?>/images/icon/icon-search.png"></div>
-                        <div id="icon-calendar"><img src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png"></div>
+                        <botton id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></botton>
+                        <botton id="icon-search">
+                            <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/icon/icon-search.png">
+                            <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">
+                        </botton>
+                        <botton id="icon-calendar">
+                            <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png">
+                            <img class="icon_toolbar_hover" id="calendar_hover" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar_hover.svg">
+                        </botton>
+                        <botton id="icon-alumni_entry">
+                            <img claee="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
+                            <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
+                        </botton>
                     </div>
                 </div>
-                 
+        
                 <div id="nav-hr" class="nav-disappearable"></div>
                 <div class="nav-container">
                 <ul id="nav-menu">
@@ -131,6 +136,17 @@
                 </div>
             </nav>
         </div>
+        <div id="search_overlay">
+            <img id="search_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
+                <form id="search_request_form" action="/" method="get" autocomplete="off">
+                    <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
+                    <input type="text" name="s" placeholder="輸入搜尋關鍵字" id="site_search_keyword" class="site_search_input" style="outline: none;">
+                    <button id="yellow_search_btn">
+                        <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
+                    </button>
+                </form>
+            <div id="site_search_result"></div>
+        </div> 
     </div>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
 

@@ -161,3 +161,21 @@ nav_main_list_item_9.addEventListener("mouseleave", function() {
     nav_list_item_9[i].classList.remove('visible');
   }
 });
+
+
+var header_search_btn = document.getElementById("icon-search");
+var search_overlay = document.getElementById("search_overlay");
+var search_overlay_close_btn = document.getElementById("search_overlay_closebtn");
+
+header_search_btn.addEventListener("click", function() {
+  search_overlay.style.display = "block";
+  document.getElementById("main-nav").style.display = "none";
+});
+
+function close_search_overlay(){
+  search_overlay.style.display = "none";
+  document.getElementById("main-nav").style.display = "block";
+  document.getElementById("site_search_result").innerHTML = "";
+}
+
+search_overlay_close_btn.addEventListener("click",close_search_overlay);

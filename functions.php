@@ -82,6 +82,10 @@
     wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
     wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
 */
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+    wp_enqueue_script('site_search', get_theme_file_uri('js/site_search.js'),true);
+    wp_localize_script('site_search', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+
     if(is_page('homepage')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
@@ -313,6 +317,21 @@ function filter_ajax() {
       $check = 0;
     }
   }
+  else if($postType == 'all'){
+    $keyword = $_POST['keyword'];
+    $args = array(
+      'post_type' => array('post'),
+      'post_status' => 'publish',
+      'orderby' => 'date',
+      'order' => 'DESC',
+    );
+    if(!empty($keyword)){
+      $args['s'] = esc_attr($keyword);
+    }
+    else{
+      $check = 0;
+    }
+  }
   else{//post type: news or events
     $args = array(
       'post_type' => $postType,
@@ -323,6 +342,7 @@ function filter_ajax() {
       'posts_per_page' => 15
     );
   }
+  
   if($check){
     $query = new WP_Query($args); //create a query
   }
@@ -333,7 +353,7 @@ function filter_ajax() {
       endwhile;
   }
   else if($postType == 'papers'){ //post type: Staff
-    if($check){
+    if($query->have_posts()){
       echo '<div class="item_titles _font18">';
       echo ' <span>年份</span>
       <span class="name_col">姓名</span>
@@ -347,10 +367,26 @@ function filter_ajax() {
       endwhile;
       echo '</div>';
     }
-    else{
+    else if(!$check){
       echo '<div id="search_hint">
         <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
       </div>';
+    }
+    else{
+      echo '<div id="search_hint">
+        <p>查詢不到相關資訊，請重新輸入關鍵字。</p>
+      </div>';
+    }
+  }
+  else if ($postType == 'all'){
+    if($query->have_posts()){
+      while($query->have_posts()) : $query->the_post();
+        echo '<a href="'; the_permalink(); echo '">'; the_title();
+        echo '</a>';
+      endwhile;
+    }
+    else{
+      echo "查詢不到相關資訊，請重新輸入關鍵字。";
     }
   }
   else{ // post category: event 
@@ -514,10 +550,10 @@ add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );
 function cf_search_join( $join ) {
     global $wpdb;
 
-   /* if ( is_search() ) {    
+    if (is_search()) {    
       $join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
-    }*/
-    $join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
+    }
+    //$join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
     //echo $join;
     return $join;
 }
@@ -531,15 +567,15 @@ add_filter('posts_join', 'cf_search_join' );
 function cf_search_where( $where ) {
     global $pagenow, $wpdb;
 
-    /*if (  is_main_query() && is_search() ) {
+    if (is_main_query() && is_search()) {
         $where = preg_replace(
             "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
             "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );
         //echo $where;
-    }*/
-    $where = preg_replace(
+    }
+    /*$where = preg_replace(
       "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
-      "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );
+      "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );*/
     //echo $where;
     return $where;
 }
@@ -553,11 +589,11 @@ add_filter( 'posts_where', 'cf_search_where' );
 function cf_search_distinct( $where ) {
     global $wpdb;
 
-    if ( is_search() ) {
+    if (is_search() ) {
         return "DISTINCT";
     }
-    return "DISTINCT";
-    //return $where;
+    //return "DISTINCT";
+    return $where;
 }
 add_filter( 'posts_distinct', 'cf_search_distinct' );
 ?>
