@@ -82,19 +82,22 @@
     margin-left: 1.5vw;
 }
 
-.previous{
+#btn_pre_img{
     position: absolute;
     top: 43vw;
     left: 78.5vw;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
-.next-slide{
+
+#btn_next_img{
     position: absolute;
     top: 43vw;
     left: 82vw;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 /* icon and title */

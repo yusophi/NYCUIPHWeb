@@ -42,7 +42,7 @@ function displayImage(n){
         allDots[i].className = allDots[i].className.replace("active"," ");
     }
     availableImages[imagesIndex-1].style.display = "block";
-    allDots[imagesIndex-1].className +=" active";
+    allDots[imagesIndex-1].className += " active";
 }
 
 refreshIntervalId = setInterval(() => {

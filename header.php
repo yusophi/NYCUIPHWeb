@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src https:">-->
     <title><?php
             if (is_home()) {
                 bloginfo('name');
@@ -13,11 +14,11 @@
                 bloginfo('name');
             } ?>
     </title>
-    <?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/images/logo2.png">
-    <link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <?php wp_head(); ?>
+    <!--<link href="<?php //bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />-->
 </head>
 
 <body>
