@@ -222,6 +222,7 @@ function filter_ajax() {
   $postType = $_POST['type'];
   $category = $_POST['category'];
   $check = 1;
+  
   if($postType == 'Staff' && isset($_POST['cat_field']) && isset($_POST['cat_title'])){ 
     //post_type: Staff
     $cat_field = $_POST['cat_field'];
@@ -336,15 +337,20 @@ function filter_ajax() {
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'category_name' => $category,
       'orderby' => 'date',
       'order' => 'desc',
       'posts_per_page' => 15
     );
+    $args['tax_query'][] = [
+      'taxonomy'      => 'category',
+      'field'		=> 'slug',
+      'terms'        => $category,
+      'operator'      => 'IN'
+    ];
   }
   
   if($check){
-    $query = new WP_Query($args); //create a query
+    $query = new WP_Query($args); // if have query condition, create a query
   }
   
   if($postType == 'Staff'){ //post type: Staff
@@ -352,7 +358,7 @@ function filter_ajax() {
         get_template_part('template-parts/post_member_card');
       endwhile;
   }
-  else if($postType == 'papers'){ //post type: Staff
+  else if($postType == 'papers'){ //post type: papers
     if($query->have_posts()){
       echo '<div class="item_titles _font18">';
       echo ' <span>年份</span>
@@ -379,6 +385,7 @@ function filter_ajax() {
     }
   }
   else if ($postType == 'all'){
+    // for full-site search
     if($query->have_posts()){
       while($query->have_posts()) : $query->the_post();
         echo '<a href="'; the_permalink(); echo '">'; the_title();
@@ -390,7 +397,7 @@ function filter_ajax() {
     }
   }
   else{ // post category: event 
-    if( $category == '1-academy_lectures' || $category == '2-study_group' || $category == 'event'){
+    if( $category[0] == '1-academy_lectures' || $category[0] == '2-study_group' || $category[0] == 'event'){
       if($query->have_posts()){
         echo '<div class="event-cards">'; 
         while($query->have_posts()) : $query->the_post();
@@ -419,35 +426,12 @@ function filter_ajax() {
       }
     }
   }
-  
-  //echo $response;
-  //exit;
-
-  /*echo '<div class="pagination">';
-  $big = 999999999; // need an unlikely integer
-  $arg = array(
-      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-      'format' => '?page=%#%',
-      'total' => $query->max_num_pages,
-      'current' => max( 1, get_query_var( 'paged') ),
-      'show_all' => false,
-      'end_size' => 3,
-      'mid_size' => 2,
-      'prev_next' => True,
-      'prev_text' => __('<'),
-      'next_text' => __('>'),
-      'type' => 'list',
-      );
-  echo paginate_links($arg);
-  echo '</div>';*/
   wp_reset_postdata();
   die();
 } 
 ?>
 
-
 <?php /* create custom post type called "papers"*/
-
 // Creating a Deals Custom Post Type
 function paper_custom_post_type() {
 	$labels = array(
@@ -487,8 +471,6 @@ function paper_custom_post_type() {
 	register_post_type( 'papers', $args );
 }
 add_action( 'init', 'paper_custom_post_type', 0 );
-
-
 ?>
 
 <?php // Let us create Taxonomy for Custom Post Type

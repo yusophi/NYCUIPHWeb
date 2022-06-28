@@ -16,53 +16,25 @@
             'order'   => 'ASC'
         ) ); ?>
     <div class="select_bar_container">
-    <ul class="cat-list">
-        <li>
-            <a class="cat-list_item cat_active" href="#!" data-type="post" data-slug="news">
-                <span class="cat-list_item_dot"></span>
-                <span class="cat-list_item_name">總覽</span>
-            </a>
-        </li>
-        <?php foreach($categories as $category) : ?>
+        <input type="hidden" id="filters-news" value="" />
+        <ul class="cat-list">
             <li>
-                <a class="cat-list_item" href="#!" data-type="post" data-slug="<?= $category->slug; ?>">
-                    <span class="cat-list_item_dot"></span>    
-                    <span class="cat-list_item_name"><?= $category->name; ?></span>
+                <a class="cat-list_item news cat_active" href="#!" data-filter-type="news" data-type="post" data-slug="news">
+                    <span class="cat-list_item_dot"></span>
+                    <span class="cat-list_item_name">總覽</span>
                 </a>
             </li>
-        <?php endforeach; ?>
-    </ul>
+            <?php foreach($categories as $category) : ?>
+                <li>
+                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="#!" data-filter-type="news" data-type="post" data-slug="<?= $category->slug; ?>">
+                        <span class="cat-list_item_dot"></span>    
+                        <span class="cat-list_item_name"><?= $category->name; ?></span>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
-    <!--<div class="class_selector">
-        <label class="select_container" id="selection_all">總覽
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_general">公告
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container">獎學金
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_covid19">covid-19
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-
-        <div id="SDG_container">
-            <select id="SDG_selector">
-                <option>SDG1</option>
-                <option>SDG2</option>
-                <option>SDG3</option>
-                <option>SDG4</option>
-                <option>SDG5</option>
-                <option>SDG6</option>
-                <option>SDG7</option>
-            </select>
-        </div>
-    </div>-->
+   
     <div class="post_block">
         <?php 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;

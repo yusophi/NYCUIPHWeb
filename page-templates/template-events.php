@@ -17,16 +17,17 @@
             'order'   => 'ASC'
         ) ); ?>
     <div class="select_bar_container">
+        <input type="hidden" id="filters-event" value="" />
         <ul class="cat-list">
             <li>
-                <a class="cat-list_item cat_active" href="#!"  data-type="post" data-slug="event">
+                <a class="cat-list_item event cat_active" href="#!"  data-filter-type="event" data-type="post" data-slug="event">
                     <span class="cat-list_item_dot"></span>
                     <span class="cat-list_item_name">所有活動</span>
                 </a>
             </li>
             <?php foreach($categories as $category) : ?>
                 <li>
-                    <a class="cat-list_item" href="#!" data-type="post"  data-slug="<?= $category->slug; ?>">
+                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="#!" data-filter-type="event" data-type="post"  data-slug="<?= $category->slug; ?>">
                         <span class="cat-list_item_dot"></span>    
                         <span class="cat-list_item_name"><?= $category->name; ?></span>
                     </a>
@@ -34,27 +35,6 @@
             <?php endforeach; ?>
         </ul>
     </div>
-    <!--<div class="class_selector">
-        <label class="select_container" id="selection_studies">讀書會
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">學術演講
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <div id="SDG_container">
-            <select id="SDG_selector">
-                <option>SDG1</option>
-                <option>SDG2</option>
-                <option>SDG3</option>
-                <option>SDG4</option>
-                <option>SDG5</option>
-                <option>SDG6</option>
-                <option>SDG7</option>
-            </select>
-        </div>
-    </div>-->
 
     <div class="post_block">
         <?php 
