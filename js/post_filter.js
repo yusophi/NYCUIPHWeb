@@ -6,8 +6,6 @@
         editFilterInputs($('#filters-' + $(this).data('filter-type')), $(this).data('slug'));
         const post_cat_slug = $('#filters-' + $(this).data('filter-type')).val().split(','); // an array
         
-        console.log(post_cat_slug);
-
         $('.cat-list_item').removeClass('cat_active');
         adding_active_class(post_cat_slug);
         

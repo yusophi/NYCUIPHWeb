@@ -47,10 +47,10 @@
                   <?php endfor; ?>
             </div>
 
-            <button class="previous" onclick="plusImage(-1)">
+            <button id="btn_pre_img" onclick="plusImage(-1)">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
             </button>
-            <button class="next-slide" onclick="plusImage(1)">
+            <button id="btn_next_img" onclick="plusImage(1)">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
             </button>
 

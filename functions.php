@@ -9,6 +9,15 @@
 ?>
 
 <?php
+remove_action('wp_head', 'wp_generator');
+header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
+header('X-Content-Type-Options: nosniff');
+@ini_set('session.cookie_httponly', true);
+@ini_set('session.cookie_secure', true);
+@ini_set('session.use_only_cookies', true);
+?>
+
+<?php
   function my_custom_post_staff() {
     $labelsss = array(
       'name'               => _x( 'Staff', 'post type 名称' ),
