@@ -1,21 +1,25 @@
-<?php get_header(); ?>
-    <div class="content">
+<?php //get_header(); ?>
+<?php /*if(is_singular('post')){
+       get_template_part( 'page-templates/template-article', 'news' );
+       echo "singulear news"; 
+    }*/?>
+   <!-- <div class="content">
         <div class="article">
-            <?php while ( have_posts() ) : the_post(); ?>
+            <?php //while ( have_posts() ) : the_post(); ?>
                 <article class="article-content">
-                    <h1 class="article-title"><?php the_title(); ?></h1>
+                    <h1 class="article-title"><?php //the_title(); ?></h1>
                     <div class="article-meta">
-                        <span><?php the_time('n / j, Y'); ?></span><span> / </span>
-                        <span><?php the_category(' , '); ?></span><span> / </span>
-                        <span><?php the_tags('', ' , ', ''); ?></span>
+                        <span><?php //the_time('n / j, Y'); ?></span><span> / </span>
+                        <span><?php //the_category(' , '); ?></span><span> / </span>
+                        <span><?php //the_tags('', ' , ', ''); ?></span>
                     </div>
-                    <?php the_content(); ?>
+                    <?php //the_content(); ?>
                     <div class="clearfix"></div>
                 </article>
-            <?php endwhile; ?>
+            <?php //endwhile; ?>
         </div>
         <div class="sidebar">
-            <?php get_sidebar(); ?>
+            <?php //get_sidebar(); ?>
         </div>
-    </div>
-<?php get_footer(); ?>
+    </div>-->
+<?php //get_footer(); ?>
