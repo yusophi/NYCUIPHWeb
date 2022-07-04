@@ -495,6 +495,7 @@ input.site_search_input[type=text]{
     display: block;
 }
 
+/* style of search.php*/ 
 .result_content{
     width: 100%;
     height: auto;
@@ -531,12 +532,12 @@ article.article-content{
 h1.article-title > a{
     color: #4f5ab8;
     text-decoration: none;
+    font-size: 1.3vw;
 }
 
 h1.article-title{
     margin-bottom: 0.5vw;
 }
-
 
 #searchsubmit{
     background-color: transparent;

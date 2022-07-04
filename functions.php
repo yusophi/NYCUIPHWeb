@@ -85,15 +85,6 @@ header('X-Content-Type-Options: nosniff');
     wp_enqueue_style('mytheme_page_banner_style', get_theme_file_uri('css/page_banner.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
-    //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-    //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-    /*wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-    wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-    wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-
-    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-    wp_enqueue_script('site_search', get_theme_file_uri('js/site_search.js'),true);
-    wp_localize_script('site_search', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));*/
 
     if(is_page('homepage')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
@@ -194,32 +185,6 @@ header('X-Content-Type-Options: nosniff');
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
-
-<?php
-// include custom jQuery
-/*function shapeSpace_include_custom_jquery() {
-
-	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-
-}
-add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');*/
-?>
-
-<?php
-//require_once('include/load_script.php');
-  //   require_once('include/ajax.php');
-      ?>
-
-<?php
-  /*function load_script(){
-    //wp_enqueue_script('ajax', get_template_directory_uri() . '/js/post_filter.js', array('jquery'), 1.1, true);
-   // wp_localize_script('ajax', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-   wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-   wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-  }
-  add_action('wp_enqueue_scripts','load_script');*/
-?>      
 
 <?php
 // post filter function
@@ -326,21 +291,6 @@ function filter_ajax() {
       $check = 0;
     }
   }
-  else if($postType == 'all'){
-    $keyword = $_POST['keyword'];
-    $args = array(
-      'post_type' => array('post'),
-      'post_status' => 'publish',
-      'orderby' => 'date',
-      'order' => 'DESC',
-    );
-    if(!empty($keyword)){
-      $args['s'] = esc_attr($keyword);
-    }
-    else{
-      $check = 0;
-    }
-  }
   else{//post type: news or events
     $args = array(
       'post_type' => $postType,
@@ -390,18 +340,6 @@ function filter_ajax() {
       echo '<div id="search_hint">
         <p>查詢不到相關資訊，請重新輸入關鍵字。</p>
       </div>';
-    }
-  }
-  else if ($postType == 'all'){
-    // for full-site search
-    if($query->have_posts()){
-      while($query->have_posts()) : $query->the_post();
-        echo '<a href="'; the_permalink(); echo '">'; the_title();
-        echo '</a>';
-      endwhile;
-    }
-    else{
-      echo "查詢不到相關資訊，請重新輸入關鍵字。";
     }
   }
   else{ // post category: event 
@@ -543,8 +481,6 @@ function cf_search_join( $join ) {
     if (is_search()) {    
       $join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
     }
-    //$join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
-    //echo $join;
     return $join;
 }
 add_filter('posts_join', 'cf_search_join' );
@@ -561,12 +497,7 @@ function cf_search_where( $where ) {
         $where = preg_replace(
             "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
             "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );
-        //echo $where;
     }
-    /*$where = preg_replace(
-      "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
-      "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );*/
-    //echo $where;
     return $where;
 }
 add_filter( 'posts_where', 'cf_search_where' );
@@ -582,7 +513,6 @@ function cf_search_distinct( $where ) {
     if (is_search() ) {
         return "DISTINCT";
     }
-    //return "DISTINCT";
     return $where;
 }
 add_filter( 'posts_distinct', 'cf_search_distinct' );

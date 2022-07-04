@@ -37,15 +37,15 @@
                     </div>
                     <div id="nav-toolbar">
                         <botton id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></botton>
-                        <botton id="icon-search">
+                        <botton id="icon-search" title="全站搜尋">
                             <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/icon/icon-search.png">
                             <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">
                         </botton>
-                        <botton id="icon-calendar">
+                        <botton id="icon-calendar" title="行事曆">
                             <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png">
                             <img class="icon_toolbar_hover" id="calendar_hover" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar_hover.svg">
                         </botton>
-                        <botton id="icon-alumni_entry">
+                        <botton id="icon-alumni_entry" title="校友E化系統">
                             <img claee="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
                             <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
                         </botton>
