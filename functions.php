@@ -90,10 +90,10 @@ header('X-Content-Type-Options: nosniff');
     /*wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
     wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
     wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-*/
+
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
     wp_enqueue_script('site_search', get_theme_file_uri('js/site_search.js'),true);
-    wp_localize_script('site_search', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+    wp_localize_script('site_search', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));*/
 
     if(is_page('homepage')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
@@ -130,7 +130,6 @@ header('X-Content-Type-Options: nosniff');
     if(is_page('admission')){
       wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
     }
-
     if(is_page_template( 'page-templates/template-article-news.php')){
       wp_enqueue_style('mytheme_article_general_style', get_theme_file_uri('css/article_general_style.css'));
       wp_enqueue_style('mytheme_article_news_style', get_theme_file_uri('css/article_news.css'));
@@ -463,7 +462,7 @@ function paper_custom_post_type() {
 		'description'         => __( '歷屆論文資料'),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'author', 'thumbnail', 'custom-fields'),
-		'public'              => true,
+		'public'              => false,
 		'hierarchical'        => false,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
@@ -472,10 +471,10 @@ function paper_custom_post_type() {
     'menu_position' => 5,
 		'has_archive'         => true,
 		'can_export'          => true,
-		'exclude_from_search' => false,
+		'exclude_from_search' => true,
 	  'yarpp_support'       => true,
 		'taxonomies' 	      => array('papers_cat'),
-		'publicly_queryable'  => true,
+		'publicly_queryable'  => false,
 );
 	register_post_type( 'papers', $args );
 }

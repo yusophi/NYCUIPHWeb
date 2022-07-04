@@ -101,14 +101,15 @@ html{
     margin: 0;
     padding: 0;
     border: 0;
-    
 }
 
 body {
-    background: #FAFAFA;
+    background: #e4dfd2;
     font-family: 'Noto Sans TC', sans-serif;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column;
 }
 
 body::-webkit-scrollbar {
@@ -492,4 +493,57 @@ input.site_search_input[type=text]{
 
 #icon-alumni_entry:hover #alumni_entry_hover{
     display: block;
+}
+
+.result_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #e4dfd2;
+    position: relative;
+    top: 18vw;
+    margin-bottom: 16vw;
+}
+
+#search_keyword{
+    width: 82vw;
+    height: auto;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-bottom: 5vw;
+    color: #2e4565;
+    font-weight: bold;
+    font-size: 3.125vw;
+    letter-spacing: 0.2vw;
+}
+
+article.article-content{
+    width: 82vw;
+    height: auto;
+    margin: 2vw 9vw;
+    padding-bottom: 2vw;
+    color: grey;
+    letter-spacing: 0.1vw;
+    border-bottom: solid 0.15vw #2e4565; 
+}
+
+h1.article-title > a{
+    color: #4f5ab8;
+    text-decoration: none;
+}
+
+h1.article-title{
+    margin-bottom: 0.5vw;
+}
+
+
+#searchsubmit{
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
