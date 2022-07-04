@@ -7,7 +7,6 @@
             <p>您可經由<a href="<?php bloginfo('url');?>" title="回到首頁">回到首頁</a>
             或以下分類及時間找到您所要的內容，或以下搜尋框：</p>
             <?php get_search_form(); ?>
-
             </article>
         </div>
         <?php get_template_part( 'template-parts/backtoTOP');?>    

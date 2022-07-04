@@ -139,13 +139,6 @@
         </div>
         <div id="search_overlay">
             <img id="search_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
-                <!--<form id="search_request_form" action="/" method="get" autocomplete="off">
-                    <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
-                    <input type="text" name="s" placeholder="全站搜尋" id="site_search_keyword" class="site_search_input" style="outline: none;">
-                    <button id="yellow_search_btn">
-                        <img alt="搜尋按鈕" src="<?php //bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
-                    </button>
-                </form>-->
                 <form role="search" method="get" id="search_request_form" action="<?php echo home_url( '/' ); ?>">
                     <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
                     <input type="text" value="" name="s" class="site_search_input" id="site_search_keyword" placeholder="全站搜尋"/>
