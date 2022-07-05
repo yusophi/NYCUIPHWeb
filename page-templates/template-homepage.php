@@ -47,10 +47,10 @@
                   <?php endfor; ?>
             </div>
 
-            <button id="btn_pre_img" onclick="plusImage(-1)">
+            <button id="btn_pre_img" onclick="plusImage(-1)" type="button" title="前一張">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
             </button>
-            <button id="btn_next_img" onclick="plusImage(1)">
+            <button id="btn_next_img" onclick="plusImage(1)" type="button" title="後一張">
                   <img src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
             </button>
 
@@ -511,7 +511,7 @@
                                     <div class="overlay_profile_content">
                                           <div class="overlay_title">
                                                 <p class="contact_text profile_text">(Profile)</p>
-                                                <p class="contact_text work_respon" id="overlay_WR"><?php the_field('work_group') ?> </p>
+                                                <p class="contact_text work_respon"><?php the_field('work_group') ?> </p>
                                                 <img src="<?php bloginfo('template_url')?>/images/icon/overlay_Contactus_icon.svg">
                                           </div>
                                           <div class="overlay_middle">
@@ -534,7 +534,7 @@
                                                             <p class="contact_title">電話:</p>
                                                             <p class="phone_num overlay_phone_num"><?php the_field('phone_number') ?> </p>
                                                       </div>
-                                                      <div class="profile_p3" id="overlay_pro_p3">
+                                                      <div class="profile_p3">
                                                             <p class="contact_title" >信箱:</p>
                                                             <p class="email overlay_mail"><?php the_field('email') ?> </p>
                                                       </div>

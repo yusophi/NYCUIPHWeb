@@ -979,6 +979,7 @@
     font-size: 0.9rem;
     letter-spacing: 2px;
     padding-top: 2%;    
+    padding-bottom: 2.5%;  
 }
 
 .contact_title, .email, .phone_num, .self_intro{
@@ -1042,12 +1043,6 @@
 .profile_text{
     font-size: 0.9rem;
     letter-spacing: 2px;
-}
-#overlay_WR{
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;      
 }
 
 .overlay_title img{

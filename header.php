@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> style="margin:0!important">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
@@ -37,15 +37,15 @@
                     </div>
                     <div id="nav-toolbar">
                         <botton id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></botton>
-                        <botton id="icon-search" title="全站搜尋">
+                        <botton id="icon-search" title="全站搜尋" type="button">
                             <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/icon/icon-search.png">
                             <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">
                         </botton>
-                        <botton id="icon-calendar" title="行事曆">
+                        <botton id="icon-calendar" title="行事曆" type="button">
                             <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png">
                             <img class="icon_toolbar_hover" id="calendar_hover" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar_hover.svg">
                         </botton>
-                        <botton id="icon-alumni_entry" title="校友E化系統">
+                        <botton id="icon-alumni_entry" title="校友E化系統" type="button">
                             <img claee="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
                             <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
                         </botton>
@@ -143,7 +143,7 @@
                     <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
                     <input type="text" value="" name="s" class="site_search_input" id="site_search_keyword" placeholder="全站搜尋"/>
                     <input type="submit" id="searchsubmit"/>
-                    <button id="yellow_search_btn">
+                    <button id="yellow_search_btn" type="button">
                         <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
                     </button>
                 </form>
