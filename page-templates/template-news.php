@@ -11,7 +11,7 @@
         <div class="circle"></div>
     </div>
     <?php $categories = get_categories(array(
-            'parent' => 6,
+            'parent' => 2,
             'orderby' => 'slug',
             'order'   => 'ASC'
         ) ); ?>
