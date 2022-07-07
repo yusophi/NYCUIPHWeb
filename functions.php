@@ -104,24 +104,23 @@ function custom_nonce_value () {
 
 add_filter( 'script_loader_tag', 'add_nonce_to_script', 10, 3 );
 function add_nonce_to_script( $tag, $handle, $source ) {
-
     //custom_nonce_value();
-    $val_nonce = custom_nonce_value(); //NONCE_RANDVALUE;
+    $val_nonce = wp_create_nonce(); //NONCE_RANDVALUE;
 
     $search = "type='text/javascript'";
     $replace = "type='text/javascript' nonce='".$val_nonce."' ";
     $subject = $tag;
 
     $output = str_replace($search, $replace, $subject);
+   
     return $output;
 }
 
 function pagely_security_headers($headers) {
   //custom_nonce_value();
-  $val_nonce = custom_nonce_value();//NONCE_RANDVALUE;
-  $headers['X-Content-Security-Policy'] = "default-src 'self'; script-src unsafe-hashes 'self' 'nonce-" . $val_nonce . "' https:; object-src 'none';base-uri 'none';img-src https: data:; style-src 'self' 'unsafe-inline' https:;";
+  $val_nonce = wp_create_nonce();//NONCE_RANDVALUE;
+  $headers['X-Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $val_nonce . "' https:; object-src 'none';base-uri 'none';img-src https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
   return $headers;
-
 }
 add_filter( 'wp_headers', 'pagely_security_headers' );
 ?>
