@@ -7,9 +7,3 @@
             <span class="en-title">back to top</span>
       </button>
 </div>
-<!--<script>
-      function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-      }
-</script>-->

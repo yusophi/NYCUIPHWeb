@@ -87,10 +87,41 @@ add_filter( 'rest_authentication_errors', function( $result ) {
   remove_action('wp_head', 'wp_generator');
   header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
   header('X-Content-Type-Options: nosniff');
-  header("Content-Security-Policy: frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;");
+  //header("Content-Security-Policy: frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;");
   @ini_set('session.cookie_httponly', true);
   @ini_set('session.cookie_secure', true);
   @ini_set('session.use_only_cookies', true);
+?>
+
+<?php
+add_action( 'run_custom_nonce_value', 'custom_nonce_value' );
+function custom_nonce_value () {
+    $created_nonce = wp_create_nonce();
+    define( 'NONCE_RANDVALUE', $created_nonce ); 
+}
+
+add_filter( 'script_loader_tag', 'add_nonce_to_script', 10, 3 );
+function add_nonce_to_script( $tag, $handle, $source ) {
+
+    custom_nonce_value();
+    $val_nonce = NONCE_RANDVALUE;
+
+    $search = "type='text/javascript'";
+    $replace = "type='text/javascript' nonce='".$val_nonce."' ";
+    $subject = $tag;
+
+    $output = str_replace($search, $replace, $subject);
+    return $output;
+}
+
+function pagely_security_headers($headers) {
+  custom_nonce_value();
+  $val_nonce = NONCE_RANDVALUE;
+  $headers['X-Content-Security-Policy'] = "default-src 'self'; script-src unsafe-hashes 'self' 'nonce-" . $val_nonce . "' https:; object-src 'none';base-uri 'none';img-src https: data:; style-src 'self' 'unsafe-inline' https:;";
+  return $headers;
+
+}
+add_filter( 'wp_headers', 'pagely_security_headers' );
 ?>
 
 <?php

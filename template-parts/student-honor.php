@@ -213,7 +213,7 @@
     </div>
 </div>
 
-<script>
+<script type='text/javascript'>
     //const regu_row_mst = document.getElementsByClassName("ms_field");
     //const regu_row_phd = document.getElementsByClassName("phd_field");
     const h1_whole_rows = document.getElementById("honor_block1").getElementsByClassName("honor_rows");

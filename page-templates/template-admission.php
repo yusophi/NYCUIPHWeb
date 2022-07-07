@@ -78,7 +78,7 @@
                 </div>
             </div>
         
-        <script>
+        <script type='text/javascript'>
             var btns = document.getElementsByClassName("ad_icon");
 
             for (var i = 0; i < btns.length; i++) {

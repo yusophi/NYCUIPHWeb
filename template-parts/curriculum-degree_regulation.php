@@ -145,7 +145,7 @@
         </div>
     </div>
 </div>
-<script>
+<script type='text/javascript'>
     const regu1_whole_rows = document.getElementById("regu_block1").getElementsByClassName("regulation_rows");
     const regu2_whole_rows = document.getElementById("regu_block2").getElementsByClassName("regulation_rows");
 

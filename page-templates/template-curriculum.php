@@ -19,21 +19,21 @@
     <?php
         if(is_page('course_architecture')):?>
             <?php get_template_part('template-parts/curriculum','arch');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[1].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
             </script>
         <?php elseif(is_page('degree_regulation')):?>
             <?php get_template_part('template-parts/curriculum','degree_regulation');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
             </script>
         <?php elseif(is_page('course_schedule')):?>
             <?php get_template_part('template-parts/curriculum','course_schedule');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[1].className += " animation1_btn";
