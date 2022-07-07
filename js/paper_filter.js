@@ -13,8 +13,8 @@
 
         const type = $(this).data('type'); //get the post type
         const category = $(this).data('slug'); 
-        console.log("year: ",year_slugs);
-        console.log("division: ",division_slugs);
+        //console.log("year: ",year_slugs);
+        //console.log("division: ",division_slugs);
   
         $.ajax({
           url: wpAjax.ajaxUrl,
@@ -42,7 +42,7 @@
       $(document).on('click', '#search_btn', function(e){
         e.preventDefault();
         const search_str = $('#keyword').val();
-        console.log(search_str);
+        //console.log(search_str);
         $.ajax({
           url: wpAjax.ajaxUrl,
           type: 'POST',
