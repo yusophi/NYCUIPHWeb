@@ -45,13 +45,14 @@
         </div>
     </div>
     
-    <form class="request_form" action="/" method="get" autocomplete="off">
+    <div class="request_form">
         <img id="search_svg" src="<?php bloginfo('template_url')?>/images/page_student/search.svg">
         <input type="text" name="s" placeholder="搜尋歷屆學位論文" id="keyword" class="input_search" style="outline: none;">
+        <?php //wp_nonce_field( 'get_paper_search', 'paper_search_nonce' ); ?>
         <button id="search_btn">
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">
         </button>
-    </form>
+    </div>
     
     <div class="block_papers"> 
         <div id="search_hint">

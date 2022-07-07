@@ -58,6 +58,8 @@
 
 .footer-info {
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin-top: 5vw;
     opacity: 0.7;
     font-family: 'Noto Sans TC', sans-serif;
@@ -110,4 +112,8 @@ a.statement:before {
     color: #6c63ff;
     cursor: pointer;
     text-decoration: none;
+}
+
+#footer-info-d2, #footer-info-d3{
+    margin-top: 1.5vw;
 }

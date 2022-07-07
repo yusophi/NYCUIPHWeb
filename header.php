@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> style="margin:0!important">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
-    <!--<meta http-equiv="Content-Security-Policy" content="default-src https:">-->
     <title><?php
             if (is_home()) {
                 bloginfo('name');
@@ -18,7 +17,6 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/images/logo2.png">
     <?php wp_head(); ?>
-    <!--<link href="<?php //bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />-->
 </head>
 
 <body>
@@ -143,11 +141,11 @@
                     <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
                     <input type="text" value="" name="s" class="site_search_input" id="site_search_keyword" placeholder="全站搜尋"/>
                     <input type="submit" id="searchsubmit"/>
+                    <?php wp_nonce_field( 'get_site_search', 'site_search_nonce' ); ?>
                     <button id="yellow_search_btn" type="button">
                         <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
                     </button>
                 </form>
-            <div id="site_search_result"></div>
         </div> 
     </div>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>

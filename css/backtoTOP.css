@@ -82,3 +82,9 @@
     height: 40px;
     cursor: pointer;
 }
+
+#back_to_top_btn{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}

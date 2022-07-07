@@ -175,7 +175,6 @@ header_search_btn.addEventListener("click", function() {
 function close_search_overlay(){
   search_overlay.style.display = "none";
   document.getElementById("main-nav").style.display = "block";
-  document.getElementById("site_search_result").innerHTML = "";
 }
 
 search_overlay_close_btn.addEventListener("click",close_search_overlay);

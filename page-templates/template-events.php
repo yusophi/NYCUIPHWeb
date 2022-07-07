@@ -117,12 +117,4 @@
 
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
-
-<script>
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
-
 <?php get_footer(); ?>

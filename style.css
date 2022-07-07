@@ -12,8 +12,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 /*reset the style of css*/
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans: 300,400);*/
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap');
 
 /*initialize*/
@@ -98,7 +96,7 @@ table {
 */
 /***header***/
 html{
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     border: 0;
 }
@@ -442,29 +440,6 @@ input.site_search_input[type=text]{
     letter-spacing: 2.7px;
     text-align: left;
     color: #ffbb00;
-}
-
-#site_search_result{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 34.27vw;
-    left: 35vw;
-    top: 12vw;
-    color: #ffbb00;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1vw;
-    font-weight: 500;
-    letter-spacing: 2.7px;
-}
-
-#site_search_result > a{
-    text-decoration: underline;
-    color: #e4dfd2;
-    margin-top: 1vw;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1vw;
-    letter-spacing: 0.6px;
 }
 
 .icon_toolbar_hover{

@@ -87,6 +87,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
   remove_action('wp_head', 'wp_generator');
   header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
   header('X-Content-Type-Options: nosniff');
+  header("Content-Security-Policy: default-src 'self'; frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;");
   @ini_set('session.cookie_httponly', true);
   @ini_set('session.cookie_secure', true);
   @ini_set('session.use_only_cookies', true);
@@ -155,6 +156,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 <?php
   //enqueue the stylesheet
   function mytheme_style_files() { 
+    wp_dequeue_style( 'global-styles' );
     wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
     wp_enqueue_style('mytheme_rm_btn_style', get_theme_file_uri('css/read_more_btn.css')); 
     wp_enqueue_style('mytheme_page_banner_style', get_theme_file_uri('css/page_banner.css')); 
@@ -165,12 +167,11 @@ add_filter( 'rest_authentication_errors', function( $result ) {
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
-      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
+      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
     if(is_page('about')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
-      
+      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
     if(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
