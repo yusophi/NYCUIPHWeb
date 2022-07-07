@@ -87,7 +87,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
   remove_action('wp_head', 'wp_generator');
   header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
   header('X-Content-Type-Options: nosniff');
-  header("Content-Security-Policy: default-src 'self'; frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;");
+  header("Content-Security-Policy: frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;  img-src 'self';");
   @ini_set('session.cookie_httponly', true);
   @ini_set('session.cookie_secure', true);
   @ini_set('session.use_only_cookies', true);
