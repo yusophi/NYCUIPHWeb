@@ -6,6 +6,7 @@
 
 <?php get_header(); ?>
 
+<?php $cur_lang = get_locale();?>
 <div class="page_about">
     <div class="page-about-banner">
         <div class="video-module-container">

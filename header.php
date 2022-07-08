@@ -34,7 +34,9 @@
                         </a>
                     </div>
                     <div id="nav-toolbar">
-                        <botton id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></botton>
+                        <ul><?php pll_the_languages(array('show_names' => 0, 'hide_current' => 1 )); ?> </ul>
+                        <botton id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png">
+                        </botton>
                         <botton id="icon-search" title="全站搜尋" type="button">
                             <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/icon/icon-search.png">
                             <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">

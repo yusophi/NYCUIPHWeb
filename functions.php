@@ -201,7 +201,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' );
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
       //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
-    if(is_page('about')){
+    if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
       //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }

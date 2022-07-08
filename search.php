@@ -1,6 +1,6 @@
 <?php 
-    if ( ! isset( $_GET['site_search_nonce'] ) 
-    || ! wp_verify_nonce( $_GET['site_search_nonce'], 'get_site_search' ) 
+    if ( ! isset( $_POST['site_search_nonce'] ) 
+    || ! wp_verify_nonce( $_POST['site_search_nonce'], 'get_site_search' ) 
     ) {
         print 'Sorry, your nonce did not verify.';
         exit;
@@ -24,7 +24,7 @@
                     <article class="article-content">
                         <h1>搜尋結果</h1>
                         <p>很抱歉，找不到你所搜尋的文章，你可以試著用其他關鍵字再次搜尋。</p>
-                        <?php get_search_form(); ?>
+                        <?php //get_search_form(); ?>
                     </article>
                 <?php endif; ?>
             </div>
