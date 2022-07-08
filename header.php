@@ -139,11 +139,18 @@
         </div>
         <div id="search_overlay">
             <img id="search_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
-                <form role="search" method="get" id="search_request_form" action="<?php echo home_url( '/' ); ?>">
+                <?php
+                    $nonce= wp_create_nonce('test-nonce');
+                    $home_url = home_url( '/' );
+                    $nonce_url = wp_nonce_url( $home_url, 'get_site_search' );
+                    //echo $nonce_url;
+                ?>
+                <form role="search" method="POST" id="search_request_form" action="<?php echo home_url( '/' ); ?>">
                     <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
                     <input type="text" value="" name="s" class="site_search_input" id="site_search_keyword" placeholder="全站搜尋"/>
                     <input type="submit" id="searchsubmit"/>
-                    <?php wp_nonce_field( 'get_site_search', 'site_search_nonce' ); ?>
+                    <input name="wpnonce" type="hidden" value="<?php echo wp_create_nonce('test-nonce1');?>"/>
+                    <?php //wp_nonce_field( 'get_site_search', 'site_search_nonce' ); ?>
                     <button id="yellow_search_btn" type="button">
                         <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
                     </button>

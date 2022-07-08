@@ -119,7 +119,7 @@ function add_nonce_to_script( $tag, $handle, $source ) {
 function pagely_security_headers($headers) {
   //custom_nonce_value();
   $val_nonce = wp_create_nonce();//NONCE_RANDVALUE;
-  $headers['X-Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $val_nonce . "' https:; object-src 'none';base-uri 'none';img-src https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
+  $headers['X-Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $val_nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
   return $headers;
 }
 add_filter( 'wp_headers', 'pagely_security_headers' );
@@ -150,7 +150,8 @@ add_filter( 'wp_headers', 'pagely_security_headers' );
       'menu_position' => 5,
       'rewrite'       => false,
       'has_archive'   => false,
-      'supports'      => array( 'title', 'thumbnail')
+      'supports'      => array( 'title', 'thumbnail'),
+      'publicly_queryable'  => true
     );
     register_post_type( 'Staff', $argsss );
   }
@@ -562,13 +563,13 @@ function create_paper_custom_taxonomy() {
  * post types instead of the default 'post' post type.
  *
  * @param object $query The main WordPress query.
- */
-/*function tg_include_custom_post_types_in_search_results( $query ) {
+ *//*
+function tg_include_custom_post_types_in_search_results( $query ) {
     if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
-        $query->set( 'post_type', array( 'post', 'papers') );
+        $query->set( 'post_type', array( 'post', 'Staff', 'page') );
     }
 }
-add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' ); */
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );*/
 ?>
 
 <?php
