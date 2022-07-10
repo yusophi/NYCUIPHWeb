@@ -34,7 +34,7 @@
                         </a>
                     </div>
                     <div id="nav-toolbar">
-                       <!-- <ul><?php //pll_the_languages(array('show_names' => 0, 'hide_current' => 1 )); ?> </ul>-->
+                        <ul><?php pll_the_languages(array('show_flags' => 1,'show_names' => 0 , 'hide_current' => 1 )); ?> </ul>
                         <botton id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png">
                         </botton>
                         <botton id="icon-search" title="全站搜尋" type="button">
