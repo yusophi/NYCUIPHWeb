@@ -163,7 +163,8 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       'rewrite'       => false,
       'has_archive'   => false,
       'supports'      => array( 'title', 'thumbnail'),
-      'publicly_queryable'  => true
+      'publicly_queryable'  => true,
+      'exclude_from_search' => false
     );
     register_post_type( 'Staff', $argsss );
   }
@@ -208,7 +209,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
 
-    if(is_page('homepage')){
+    if(is_page('homepage') || is_page('homepage-en')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
@@ -638,3 +639,17 @@ function cf_search_distinct( $where ) {
 }
 add_filter( 'posts_distinct', 'cf_search_distinct' );
 ?>
+
+<?php
+add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
+ 
+function add_cpt_to_pll( $post_types, $is_settings ) {
+    if ( $is_settings ) {
+        // hides 'my_cpt' from the list of custom post types in Polylang settings
+        unset( $post_types['Staff'] );
+    } else {
+        // enables language and translation management for 'my_cpt'
+        $post_types['Staff'] = 'Staff';
+    }
+    return $post_types;
+}?>

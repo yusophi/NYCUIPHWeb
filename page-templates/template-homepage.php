@@ -5,7 +5,7 @@
 ?>
 
 <?php get_header(); ?>
-
+<?php $locale = get_locale();?>
 <div class="homepage">
       <!-- the slideshoe block-->
       <div class="slideshow-container">
@@ -64,18 +64,33 @@
       <div class="News-container">
             <div class="block-title news_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/hp-News_icon.svg">
+                  <?php if($locale == "zh_TW"):?>
                   <span class="ch-title">最新消息<br></span>
+                  <?php endif; ?>
                   <span class="en-title">News</span>
             </div>
             <?php //query the recent 6 posts
-            $args = array(
-                  'post_type' => 'post',
-                  'post_status' => 'publish',
-                  'category_name' => 'news',
-                  'orderby' => 'date',
-                  'posts_per_page' => 6
-            );
-
+            $locale = get_locale();
+            //echo $locale;
+            if($locale == 'en_US'){
+                  $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'category_name' => 'news-en',
+                        'orderby' => 'date',
+                        'posts_per_page' => 6
+                  );
+            }
+            else{
+                  $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'category_name' => 'news',
+                        'orderby' => 'date',
+                        'posts_per_page' => 6
+                  );
+            }
+            
             $arr_posts = new WP_Query($args);
 
             if ($arr_posts->have_posts()) :
@@ -140,21 +155,37 @@
       <div class="events">
             <div class="event-title">
                   <div class="event-icon-container"><img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg"></div>
+                  <?php if($locale == "zh_TW"):?>
                   <div class="event-ch-title">學術活動<br></div>
+                  <?php endif; ?>
                   <div class="event-en-title">Events</div>
+                  
             </div>
             <div id="event-slides">
                   <!--<img id="event-icon-prev" src="<?php //bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
                   <img id="event-icon-next" src="<?php //bloginfo('template_url') ?>/images/icon/icon-next_white.svg">-->
                   <div id="event-data">
                         <?php /*query the recent 6 posts*/
-                              $args = array(
-                                    'post_type' => 'post',
-                                    'post_status' => 'publish',
-                                    'category_name' => 'event',
-                                    'orderby' => 'date',
-                                    'posts_per_page' => 6
-                              );
+                              $locale = get_locale();
+                              //echo $locale;
+                              if($locale == 'en_US'){
+                                    $args = array(
+                                          'post_type' => 'post',
+                                          'post_status' => 'publish',
+                                          'category_name' => 'event-en',
+                                          'orderby' => 'date',
+                                          'posts_per_page' => 6
+                                    );
+                              }
+                              else{
+                                    $args = array(
+                                          'post_type' => 'post',
+                                          'post_status' => 'publish',
+                                          'category_name' => 'event',
+                                          'orderby' => 'date',
+                                          'posts_per_page' => 6
+                                          );
+                              }
 
                         $arr_posts = new WP_Query($args);
 
@@ -232,17 +263,22 @@
       <div class="About-container">
             <div class="block-title abouttitle">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-about.svg">
+                  <?php if($locale == "zh_TW"):?>
                   <span class="ch-title">關於我們<br></span>
-                  <span class="en-title">About</span>
+                  <?php endif; ?>
+                  <span class="en-title">About IPH</span>
             </div>
             <div class="Aboutus-content-container">
                   <div class="intro_content">
-                        <div class="intro_content-text">
-                              <div class="iph_ch"> <?php the_field('iph_ch') ?></div>
-                              <div class="iph_en"> <?php the_field('iph_en') ?></div>
-                              <div class="iph_intro"> <?php the_field('iph_intro') ?></div>
-                        <!--<img class="icon_aboutus_1" src="<?php //bloginfo('template_url')?>/images/icon/icon-aboutus-1.svg">
-                                    -->
+                        <div class="intro_content-text <?php if($locale == "en_US"){echo 'intro_content-text-en';} ?>">
+                              <?php if($locale == "zh_TW"):?>
+                              <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
+                              <div class="iph_en"> <?php the_field('iph_en'); ?></div>
+                              <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
+                              <?php else: ?>
+                              <div class="iph_en"> <?php the_field('iph_en'); ?></div>
+                              <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>
+                              <?php endif; ?>
                         </div>
                         <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/about/">
                               read more
@@ -255,7 +291,7 @@
                         <div class="module video1">
                               <span class="bk_num video1">01.</span> 
                               <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
-                              <div class="video_title video1"> <?php the_field('video_title1') ?></div>  
+                              <div class="video_title video1 <?php if($locale == "en_US"){echo 'video_title-en';} ?>"> <?php the_field('video_title1') ?></div>  
                               
                               <div class="bt-watchmore animation1_btn" id="hp-watchmore-1">watch
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
@@ -271,7 +307,7 @@
                         <div class="module video2">
                               <span class="bk_num video2">02.</span> 
                               <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
-                              <div class="video_title video2"> <?php the_field('video_title2') ?></div>    
+                              <div class="video_title video2 <?php if($locale == "en_US"){echo 'video_title-en';} ?>"> <?php the_field('video_title2') ?></div>    
                               <div class="bt-watchmore animation1_btn" id="hp-watchmore-2">watch
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
@@ -294,8 +330,10 @@
             <div class="Specialization-container"> 
                   <div class="block-title" id="Specialization_title">
                         <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-SP.svg">
+                        <?php if($locale == "zh_TW"):?>
                         <span class="ch-title">專業領域<br></span>
-                        <span class="en-title">Specialization</span>
+                        <?php endif; ?>
+                        <span class="en-title">Divisions</span>
                   </div>
 
                   <div id="SP_content_container">
@@ -303,22 +341,28 @@
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
                               </div>
+                              <?php if($locale == "zh_TW"):?>
                               <span class="SP_ch_title">流行病學<br></span>
-                              <span class="SP_en_title">Epidemiology</span>
+                              <?php endif; ?>
+                              <span class="SP_en_title <?php if($locale == "en_US"){echo 'SP_title-en_margin';}?>">Epidemiology</span>
                         </a>
                         <a id="SP_2" class="SP_content" href="<?php echo site_url(); ?>/bio_and_datascience/">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
                               </div>
+                              <?php if($locale == "zh_TW"):?>
                               <span class="SP_ch_title">生物統計與資料科學<br></span>
-                              <span class="SP_en_title">Biostatistics and Data Science</span>
+                              <?php endif; ?>
+                              <span class="SP_en_title <?php if($locale == "en_US"){echo 'SP_title-en_margin';}?>">Biostatistics and Data Science</span>
                         </a>
                         <a id="SP_3" class="SP_content" href="<?php echo site_url(); ?>/policy_and_law/">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
                               </div>
+                              <?php if($locale == "zh_TW"):?>
                               <span class="SP_ch_title">健康政策與法律<br></span>
-                              <span class="SP_en_title">Policy and Law</span>
+                              <?php endif; ?>
+                              <span class="SP_en_title <?php if($locale == "en_US"){echo 'SP_title-en_margin';}?>">Policy and Law</span>
                         </a>
                   </div>
             </div>
@@ -332,14 +376,23 @@
             <div class="Interview-container">
                   <div class="cards">
                         <?php //query the recent 6 posts
-                        $args = array(
-                              'post_type' => 'post',
-                              'post_status' => 'publish',
-                              'category_name' => 'interviews',
-                              'orderby' => 'date',
-                              'posts_per_page' => 6
-                        );
-
+                        if($locale == "en_US"){
+                              $args = array(
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'category_name' => 'interviews-en',
+                                    'orderby' => 'date',
+                                    'posts_per_page' => 6
+                              );
+                        }else{
+                              $args = array(
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'category_name' => 'interviews',
+                                    'orderby' => 'date',
+                                    'posts_per_page' => 6
+                              );
+                        }
                         $arr_posts = new WP_Query($args);
 
                         if ($arr_posts->have_posts()) :
@@ -368,6 +421,7 @@
       </div>
 
       <!-- Milo: 從這裡開始是links的內容 -->
+      <?php if($locale == "zh_TW"):?> 
       <div class="Links-container">
             <div class="block-title links_title">
                   <img  class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-links.svg">
@@ -445,13 +499,16 @@
                   </span>
             </div>
       </div>
+      <?php endif; ?>
       <!-- Milo: links結束 -->
       
       <!-- Jenny: Contact Us block start-->
-      <div class="ContactUs-container"> 
+      <div class="ContactUs-container <?php if($locale == 'en_US'){echo 'ContactUs-container-en';} ?>"> 
             <div class="block-title contactUS_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-contact.svg">
+                  <?php if($locale == "zh_TW"):?>
                   <span class="ch-title">聯絡我們<br></span>
+                  <?php endif; ?>
                   <span class="en-title">Contact us</span>
             </div>
             <div id=administor_profile_block>
@@ -459,12 +516,22 @@
                   <?php
                         //$i=1;
                         //$b1_page=0;
-                        $args = array(
+                        if($locale == "en_US"){
+                              $args = array(
+                              'post_type' => 'Staff', 
+                              'post_status' => 'publish',
+                              'category_name' => 'administrator-en', 
+                              'orderby'=>'date',
+                              'order'=>'ASC');
+                        }
+                        else{
+                              $args = array(
                               'post_type' => 'Staff', 
                               'post_status' => 'publish',
                               'category_name' => 'administrator', 
                               'orderby'=>'date',
                               'order'=>'ASC');
+                        }
                         $the_query = new WP_Query($args);
                         //echo $the_query->max_num_pages;
                         if($the_query->have_posts()):
@@ -493,11 +560,19 @@
                                           <p class="work_respon"><?php the_field('work_group') ?></p>
                                     </div>
                                     <div class="profile_p2">
+                                          <?php if($locale == "zh_TW"):?>
                                           <p class="contact_text contact_title">電話:</p>
+                                          <?php else: ?>
+                                          <p class="contact_text contact_title">TEL:</p>
+                                          <?php endif; ?>
                                           <p class="phone_num"><?php the_field('phone_number') ?> </p>
                                     </div>
                                     <div class="profile_p3">
+                                          <?php if($locale == "zh_TW"):?>
                                           <p class="contact_text contact_title">信箱:</p>
+                                          <?php else: ?>
+                                          <p class="contact_text contact_title">E-mail:</p>
+                                          <?php endif; ?>
                                           <p class="email"><?php the_field('email') ?> </p>
                                     </div>
                               </div> 
@@ -531,11 +606,19 @@
                                                 <div class="overlay_self_info">
                                                       <p class="contact_text overlay_staff_name"><?php the_field('staff_name') ?></p>
                                                       <div class="profile_p2">
+                                                            <?php if($locale == "zh_TW"):?>
                                                             <p class="contact_title">電話:</p>
+                                                            <?php else: ?>
+                                                            <p class="contact_title">TEL:</p>
+                                                            <?php endif; ?>
                                                             <p class="phone_num overlay_phone_num"><?php the_field('phone_number') ?> </p>
                                                       </div>
                                                       <div class="profile_p3">
+                                                            <?php if($locale == "zh_TW"):?>
                                                             <p class="contact_title" >信箱:</p>
+                                                            <?php else: ?>
+                                                            <p class="contact_title" >E-mail:</p>
+                                                            <?php endif; ?>
                                                             <p class="email overlay_mail"><?php the_field('email') ?> </p>
                                                       </div>
                                                       <p class="contact_text self_intro"><?php the_field('self_introduction') ?> </p>

@@ -432,6 +432,10 @@
     align-items: flex-start;
 }
 
+.intro_content-text-en{
+    margin-top: 3vw;
+}
+
 .iph_ch{
     font-size: 3.2504rem;
     font-weight: bold;
@@ -455,6 +459,16 @@
     font-weight: normal;
     line-height: 2;
     letter-spacing: 3px;
+    color: #647386;
+    margin-top: 2.3vw;
+}
+
+.iph_intro_en{
+    width: 40.6vw;
+    font-size: 1vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05vw;
     color: #647386;
     margin-top: 2.3vw;
 }
@@ -504,6 +518,11 @@
     margin-bottom: 8%;
 }
 
+.video_title-en{
+    font-size: 1.1vw;
+    line-height: 1.2;
+    letter-spacing: 3px;
+}
 
 /*define the read-more botton in aboutUs block*/
 #aboutUS_intro_btn{
@@ -731,7 +750,7 @@
     text-align: center;
     color: #2e4565;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 3vw;
 }
 
 .SP_en_title{
@@ -740,13 +759,16 @@
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.4;
     letter-spacing: 1.2px;
     text-align: center;
     color: #2e4565;
     text-align: center;
+    margin-top: 0.5vw;
 }
 
+.SP_title-en_margin{
+    margin-top: 1.8vw;
+}
 /* More resource part */
 /* Milo: links開始 */
 .Links-container {
@@ -885,13 +907,13 @@
 /* Jenny: Contact us block start*/
 .ContactUs-container{
     width: 100vw;
-    height: 60.73vw;
+    height: 52vw;
     background-color: #e4dfd2;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -2vw;
+    margin-top: -15vw;
 }
 
 .contactUS_title{
@@ -950,8 +972,8 @@
     flex-direction: row;
     color: #2e4565;
     margin-top: 3.5%;
-
 }
+
 .profile_p2{
     margin-top: 10%;
 }
@@ -1106,15 +1128,15 @@
 
 }
 
-.profile_p2, .profile_p3{
+.overlay_self_info > .profile_p2, .overlay_self_info > .profile_p3{
     width: 100%;
     justify-content: flex-start;
 }
-.profile_p2{
+.overlay_self_info > .profile_p2{
     padding-top: 5%;
 }
 
-.profile_p3{
+.overlay_self_info > .profile_p3{
     padding-bottom: 8%;
     /*border-bottom: solid 1.5px rgba(46,69,101,0.2);*/
 }

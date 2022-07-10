@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <?php $hd_locale = get_locale();?>
     <div class="container">
         <div class="header">
             <nav id="main-nav">
@@ -56,6 +57,7 @@
                 <div class="nav-container">
                 <ul id="nav-menu">
                     <li id="nav-main-list-item-1">
+                        <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-1">關於我們</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -63,8 +65,18 @@
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member/">系所成員</a></li>
                             </ul>
                         </div>
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-1">About IPH</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about-en/">Introduction</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">People</a></li>
+                            </ul>
+                        </div>
+                        <?php endif; ?>
                     </li>
                     <li id="nav-main-list-item-2">
+                        <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-2">最新消息</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -74,18 +86,38 @@
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">COVID-19</a></li>
                             </ul>
                         </div>
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-2">News</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">All</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">Announcements</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">COVID-19</a></li>
+                            </ul>
+                        </div>
+                        <?php endif; ?>
                     </li>   
                     <li id="nav-main-list-item-4">
+                        <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-4">學術活動</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <!--<li class="nav-list-item-4"><a href="">學術資源</a></li>-->
                                 <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">學術演講</a></li>
                                 <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">讀書會</a></li>
                             </ul>
                         </div>
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-4">Events</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">Seminars</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">學術資源</a></li>
+                            </ul>
+                        </div>
+                        <?php endif; ?>
                     </li>
                     <li id="nav-main-list-item-5">
+                        <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-5">課程規劃</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -94,7 +126,17 @@
                                 <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_schedule/">學期課表</a></li>
                             </ul>
                         </div>
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-5">Academics</a>
+                        <div class="dropdown-menu">
+                        <ul>
+                            <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/degree_regulation/">Regulation</a></li>
+                            <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_schedule/">Timetable</a></li>
+                        </ul>
+                        </div>
+                        <?php endif; ?>  
                     </li>
+                    <?php if($hd_locale == "zh_TW"): ?>
                     <li id="nav-main-list-item-6">
                         <a class="menu-list nav-list-item-6">學生園地</a>
                         <div class="dropdown-menu">
@@ -106,33 +148,37 @@
                             </ul>
                         </div>
                     </li>
+                    <?php else: ?>
+                    <li id="nav-main-list-item-6">
+                        <a class="menu-list nav-list-item-8" href="https://oia.nycu.edu.tw/en/degree-seeking/international-students/scholarship/">Scholarships</a>
+                    </li>
+                    <?php endif; ?>
                     <li id="nav-main-list-item-3">
+                        <?php if($hd_locale == "zh_TW"): ?> 
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
-                        <!--<div class="dropdown-menu">
-                            <ul>
-                                <li class="nav-list-item-3"><a href="">博士班招生(不分組)</a></li>
-                                <li class="nav-list-item-3"><a href="">碩士班招生考試</a></li>
-                                <li class="nav-list-item-3"><a href="">碩博班甄試入學考試</a></li>
-                            </ul>
-                        </div>-->
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">Admission</a>
+                        <?php endif; ?>
                     </li>
                     <li id="nav-main-list-item-8">
+                        <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a>
-                        <div class="dropdown-menu">
-                        </div>
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">About DPH</a>
+                        <?php endif;?>
                     </li>
                     <li id="nav-main-list-item-9">
+                        <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">醫人暨教育學科</a>
-                        <div class="dropdown-menu"></div>
+                        <?php else: ?>
+                        <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">About MH&E</a>
+                        <?php endif; ?>
                     </li>
+                    <?php if($hd_locale == "zh_TW"): ?>
                     <li id="nav-main-list-item-7">
                         <a class="menu-list nav-list-item-7" href="<?php echo site_url(); ?>/links/">相關資源</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                            </ul>
-                        </div>
                     </li>
-                    
+                    <?php endif; ?>
                 </ul>
                 </div>
             </nav>
