@@ -1,8 +1,6 @@
 <?php 
     //$nonce = $_POST['wpnonce'];
-    if ( ! isset( $_POST['wpnonce']) || ! wp_verify_nonce($_POST['wpnonce'], 'test-nonce1')):?>
-    <?php /*if ( ! isset( $_REQUEST['_wpnonce'] ) 
-    || ! wp_verify_nonce( $_REQUEST['form_nonce'], 'test-nonce' ) ):*/?>
+    if ( ! isset( $_POST['csrf_token ']) || ! wp_verify_nonce($_POST['csrf_token '], 'test-nonce1')):?>
     <?php echo  'Sorry, your nonce did not verify.';
         exit;
     ?>

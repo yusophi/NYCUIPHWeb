@@ -95,34 +95,46 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 ?>
 
 <?php
-add_action( 'run_custom_nonce_value', 'custom_nonce_value' );
-function custom_nonce_value () {
-    $created_nonce = wp_create_nonce();
-    return $created_nonce;
-    //define( 'NONCE_RANDVALUE', $created_nonce ); 
-}
-
+$nonce = wp_create_nonce();
+//header("Content-Security-Policy: script-src 'nonce-$nonce'");
+/*
 add_filter( 'script_loader_tag', 'add_nonce_to_script', 10, 3 );
 function add_nonce_to_script( $tag, $handle, $source ) {
     //custom_nonce_value();
-    $val_nonce = wp_create_nonce(); //NONCE_RANDVALUE;
-
+    //$val_nonce = wp_create_nonce(); //NONCE_RANDVALUE;
+    global $nonce;
     $search = "type='text/javascript'";
-    $replace = "type='text/javascript' nonce='".$val_nonce."' ";
+    $replace = "type='text/javascript' nonce='".$nonce."' ";
     $subject = $tag;
 
     $output = str_replace($search, $replace, $subject);
    
     return $output;
+}*/
+function add_nonce_to_script_tag($html) {
+  global $nonce;
+  return str_replace('<script', "<script nonce='$nonce'", $html);
 }
+add_filter('script_loader_tag', 'add_nonce_to_script_tag');
 
-function pagely_security_headers($headers) {
+add_theme_support( 'html5', 'script' );
+function add_nonce_to_inline_script($attr) {
+  global $nonce;
+  if (!isset($attr['nonce']) ) {
+      $attr['nonce'] = $nonce;
+  }
+  return $attr;
+}
+add_filter('wp_inline_script_attributes', 'add_nonce_to_inline_script');
+
+
+/*function pagely_security_headers($headers) {
   //custom_nonce_value();
-  $val_nonce = wp_create_nonce();//NONCE_RANDVALUE;
-  $headers['X-Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $val_nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
+  //$val_nonce = wp_create_nonce();//NONCE_RANDVALUE;
+  $headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
   return $headers;
 }
-add_filter( 'wp_headers', 'pagely_security_headers' );
+add_filter( 'wp_headers', 'pagely_security_headers' )*/
 ?>
 
 <?php
@@ -200,11 +212,11 @@ add_filter( 'wp_headers', 'pagely_security_headers' );
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
-      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
+      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'),true);
     }
     if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
+      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
     if(is_page('news')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
