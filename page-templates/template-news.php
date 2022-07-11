@@ -4,24 +4,42 @@
  */
 ?>
 <?php get_header(); ?>
+<?php $locale = get_locale();?>
 <div class="page_News">
     <div class="banner">
+        <?php if($locale == "zh_TW"):?>
         <span class="page_name" >最新消息<br></span>
+        <?php else: ?>
         <span class="page_name" id="eg">News</span>
+        <?php endif; ?>
         <div class="circle"></div>
     </div>
-    <?php $categories = get_categories(array(
-            'parent' => 2,
-            'orderby' => 'slug',
-            'order'   => 'ASC'
-        ) ); ?>
+    <?php 
+        if($locale == "zh_TW"){
+            $categories = get_categories(array(
+                'parent' => 6,
+                'orderby' => 'slug',
+                'order'   => 'ASC'
+                ) );
+        }else{
+            $categories = get_categories(array(
+                'parent' => 93,
+                'orderby' => 'slug',
+                'order'   => 'ASC'
+            ) );
+        }
+    ?>
     <div class="select_bar_container">
         <input type="hidden" id="filters-news" value="" />
         <ul class="cat-list">
             <li>
                 <a class="cat-list_item news cat_active" href="#!" data-filter-type="news" data-type="post" data-slug="news">
                     <span class="cat-list_item_dot"></span>
+                    <?php if($locale == "zh_TW"):?>
                     <span class="cat-list_item_name">總覽</span>
+                    <?php else: ?>
+                    <span class="cat-list_item_name">All</span>
+                    <?php endif; ?>
                 </a>
             </li>
             <?php foreach($categories as $category) : ?>

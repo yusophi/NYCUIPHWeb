@@ -219,28 +219,28 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
       wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
-    if(is_page('news')){
+    if(is_page('news') || is_page('news-en')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('events')){
+    if(is_page('events')|| is_page('events-en')){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('member')){
+    if(is_page('member')|| is_page('member-en')){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/member.css')); 
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('staff_filter', get_theme_file_uri('js/staff_filter.js'),true);
       wp_localize_script('staff_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
   
     }
-    if(is_page('admission')){
+    if(is_page('admission')|| is_page('admission-en')){
       wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
     }
     if(is_page_template( 'page-templates/template-article-news.php')){
@@ -265,12 +265,12 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum_arch.css')); 
     }
-    elseif(is_page('degree_regulation')){
+    elseif(is_page('degree_regulation') || is_page('degree_regulation-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
-    elseif(is_page('course_schedule')){
+    elseif(is_page('course_schedule') || is_page('course_schedule-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
     }

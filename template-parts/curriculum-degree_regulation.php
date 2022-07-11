@@ -126,19 +126,19 @@
     <div class="regulation_block" id="others_regu">
         <div class="degree_title _font40">其他</div>
         <div class="others_regu_rows">
-            <a class="link_block">
+            <a class="link_block" href="<?php echo esc_url(the_field('phd_program_regu'));?>" target="_blank">
                 <span class="file_title _font18">逕修讀博士學位甄選辦法&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
-            <a class="link_block">
+            <a class="link_block" href="<?php echo esc_url(the_field('pre_master_program_regu'));?>" target="_blank">
                 <span class="file_title _font18">碩士班預備研究生甄選規定&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
-            <a class="link_block">
+            <a class="link_block" href="<?php echo esc_url(the_field('transfer_ragu'));?>" target="_blank">
                 <span class="file_title _font18">博士班研究生申請轉入公共衛生研究所辦法&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
-            <a class="link_block">
+            <a class="link_block" href="<?php echo esc_url(the_field('paper_investigate'));?>" target="_blank">
                 <span class="file_title _font18">博、碩士班「論文研究進度審查」施行辦法&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>

@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<?php $cur_lang = get_locale();?>
+<?php $locale = get_locale();?>
 <div class="page_about">
     <div class="page-about-banner">
         <div class="video-module-container">
@@ -27,8 +27,11 @@
             </div>
         </div>
         <div class="banner about_banner">
+            <?php if($locale == 'zh_TW'):?>
             <span class="page_name">系所簡介<br></span>
+            <?php else: ?>
             <span class="page_name" id="eg">About</span>
+            <?php endif; ?>
             <div class="circle"></div>
         </div>
         <div class="video-module-container">

@@ -3,11 +3,14 @@
  * Template Name: about-introduction
  */
 ?>
-
+<?php $locale = get_locale();?>
 <div class="information-block IPH-introduction">
     <div class="info-title">
+        <?php if($locale == "zh_TW"): ?>
         <span class="ch-title">公共衛生研究所</span>
+        <?php else: ?>
         <span class="en_title">Institute of Public Health</span>
+        <?php endif; ?>
     </div>
     <div class="block-deco">
         <div class="deco-dot"></div>

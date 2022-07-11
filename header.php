@@ -90,9 +90,9 @@
                         <a class="menu-list nav-list-item-2">News</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">All</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">Announcements</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">COVID-19</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">All</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">Announcements</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">COVID-19</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>
@@ -110,7 +110,7 @@
                         <a class="menu-list nav-list-item-4">Events</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">Seminars</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events-en/">Seminars</a></li>
                                 <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">學術資源</a></li>
                             </ul>
                         </div>
@@ -130,8 +130,8 @@
                         <a class="menu-list nav-list-item-5">Academics</a>
                         <div class="dropdown-menu">
                         <ul>
-                            <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/degree_regulation/">Regulation</a></li>
-                            <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_schedule/">Timetable</a></li>
+                            <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/degree_regulation-en/">Regulation</a></li>
+                            <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_schedule-en/">Timetable</a></li>
                         </ul>
                         </div>
                         <?php endif; ?>  

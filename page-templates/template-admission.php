@@ -5,11 +5,15 @@
 ?>
 
 <?php get_header(); ?>
+<?php $locale = get_locale();?>
 
 <div class="page_admission">
     <div class="banner">
+        <?php if($locale == "zh_TW"):?>
         <span class="page_name" id="zh">招生訊息<br></span>
+        <?php else: ?>
         <span class="page_name" id="eg">Admission Information</span>
+        <?php endif; ?>
         <div class="circle"></div>
     </div>
     <div class="scetion1">
@@ -55,7 +59,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_MsPhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'ad_poster_size'); ?>
+                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'large'); ?>
                     </div>
                 </div>
             </div>
@@ -92,7 +96,7 @@
                 });
             }
             function show(n){
-                console.log(n);
+                //console.log(n);
                 var current_block = document.getElementsByClassName("shown");
                 var blocks = document.getElementsByClassName("ad_whole_block");
                 current_block[0].className = current_block[0].className.replace(" shown", "");
