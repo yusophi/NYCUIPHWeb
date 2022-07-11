@@ -32,8 +32,7 @@
                               <div class="imagesSlide thumb-image <?php echo $counter ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                                <?php the_post_thumbnail(); ?>
-                                                <img width="1566" height="620" src="<?php bloginfo('template_url') ?>/images/should_delete/img_mountain.jpg">
+                                                <?php the_post_thumbnail(); ?>      
                                           </a>
                                     <?php endif; ?>
                               </div>
