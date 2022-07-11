@@ -9,8 +9,9 @@
     <div class="banner">
         <?php if($locale == "zh_TW"):?>
         <span class="page_name" >最新消息<br></span>
-        <?php else: ?>
         <span class="page_name" id="eg">News</span>
+        <?php else: ?>
+        <span class="page_name" id="page_name-en">News</span>
         <?php endif; ?>
         <div class="circle"></div>
     </div>

@@ -11,8 +11,9 @@
     <div class="banner">
         <?php if($locale == "zh_TW"):?>
         <span class="page_name" id="zh">招生訊息<br></span>
-        <?php else: ?>
         <span class="page_name" id="eg">Admission Information</span>
+        <?php else: ?>
+        <span class="page_name" id="page_nanme-en">Admission Information</span>
         <?php endif; ?>
         <div class="circle"></div>
     </div>

@@ -10,8 +10,9 @@
     <div class="banner curriculum_banner">
         <?php if($locale == "zh_TW"): ?>
         <span class="page_name" >課程規劃<br></span>
-        <?php else: ?>
         <span class="page_name" id="eg">Academics</span>
+        <?php else: ?>
+        <span class="page_name" id="page_name-en">Academics</span>
         <?php endif; ?>
         <div class="circle"></div>
     </div>

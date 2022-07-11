@@ -11,8 +11,9 @@
     <div class="banner">
         <?php if($locale == "zh_TW"):?>
         <span class="page_name" >學術活動<br></span>
-        <?php else: ?>
         <span class="page_name" id="eg">Events</span>
+        <?php else: ?>
+        <span class="page_name" id="page_name-en">Events</span>
         <?php endif; ?>
         <div class="circle"></div>
     </div>

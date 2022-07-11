@@ -128,22 +128,24 @@
 .cat-list{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    width: 72vw;
+    margin-left: -1.5vw;
 }
 
-#cat_area{
+/*#cat_area{
     width: 32.34375vw;
 }
 
 #cat_prof{
     width: 43.07vw;
-}
+}*/
 
 .cat-list > li{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 1.5vw;
 }
 
 .cat-list_item_dot{

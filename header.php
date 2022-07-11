@@ -26,10 +26,10 @@
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
                     <div id="upper-nav">
-                        <a id="logo" href="<?php echo site_url(); ?>/homepage/">
+                        <a id="logo" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                            <span>iPH.</span>
                         </a>
-                        <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
+                        <a class="web_name" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                             <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
                             <span class="enName">Institute of Public Health, NYCU</span>
                         </a>
@@ -177,6 +177,9 @@
                     <?php if($hd_locale == "zh_TW"): ?>
                     <li id="nav-main-list-item-7">
                         <a class="menu-list nav-list-item-7" href="<?php echo site_url(); ?>/links/">相關資源</a>
+                    </li>
+                    <?php else: ?>
+                    <li id="nav-main-list-item-7">
                     </li>
                     <?php endif; ?>
                 </ul>

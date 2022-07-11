@@ -29,8 +29,9 @@
         <div class="banner about_banner">
             <?php if($locale == 'zh_TW'):?>
             <span class="page_name">系所簡介<br></span>
-            <?php else: ?>
             <span class="page_name" id="eg">About</span>
+            <?php else: ?>
+            <span class="page_name" id="page_name-en">About</span>
             <?php endif; ?>
             <div class="circle"></div>
         </div>
