@@ -295,7 +295,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       wp_enqueue_script('paper_filter', get_theme_file_uri('js/paper_filter.js'),true);
       wp_localize_script('paper_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('dep_ph') || is_page('dep_mhe')) {
+    if(is_page('dep_ph') || is_page('dep_mhe') || is_page('dep_mhe-en') || is_page('dep_ph-en')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));
     }
     if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/

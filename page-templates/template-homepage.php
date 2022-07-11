@@ -310,7 +310,7 @@
                   </div>
 
                   <div id="SP_content_container">
-                        <a id="SP_1" class="SP_content" href="<?php echo site_url(); ?>/epidemiology/">
+                        <a id="SP_1" class="SP_content" href="<?php echo site_url(); ?><?php if($locale == "zh_TW"){echo "/epidemiology/";}else{echo "/division-epidemiology/"}?>">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_Epide.png">
                               </div>
@@ -319,7 +319,7 @@
                               <?php endif; ?>
                               <span class="SP_en_title <?php if($locale == "en_US"){echo 'SP_title-en_margin';}?>">Epidemiology</span>
                         </a>
-                        <a id="SP_2" class="SP_content" href="<?php echo site_url(); ?>/bio_and_datascience/">
+                        <a id="SP_2" class="SP_content" href="<?php echo site_url(); ?><?php if($locale == "zh_TW"){echo "/bio_and_datascience/";}else{echo "/division-biostatisticsandddatasscience/"}?>">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_data.png">
                               </div>
@@ -328,7 +328,7 @@
                               <?php endif; ?>
                               <span class="SP_en_title <?php if($locale == "en_US"){echo 'SP_title-en_margin';}?>">Biostatistics and Data Science</span>
                         </a>
-                        <a id="SP_3" class="SP_content" href="<?php echo site_url(); ?>/policy_and_law/">
+                        <a id="SP_3" class="SP_content" href="<?php echo site_url(); ?><?php if($locale == "zh_TW"){echo "/policy_and_law/";}else{echo "/division-healthpolicyandlaw/";}?>">
                               <div class="SP_img_shadow">
                                     <img class="SP_img" src="<?php bloginfo('template_url')?>/images/icon/SP_law.png">
                               </div>
