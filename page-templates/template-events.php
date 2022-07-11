@@ -66,6 +66,26 @@
     <div class="post_block">
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            /*if($locale == "zh_TW"){
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'event',
+                    'orderby' => 'date',
+                    'paged' => $paged,
+                    'posts_per_page' => 15
+                );
+
+            }else{
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'event-en',
+                    'orderby' => 'date',
+                    'paged' => $paged,
+                    'posts_per_page' => 15
+                );
+            }*/
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
@@ -74,7 +94,6 @@
                 'paged' => $paged,
                 'posts_per_page' => 15
             );
-
             $arr_posts = new WP_Query($args);
             if ($arr_posts->have_posts()) :
         ?>

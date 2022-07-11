@@ -70,26 +70,13 @@
                   <span class="en-title">News</span>
             </div>
             <?php //query the recent 6 posts
-            $locale = get_locale();
-            //echo $locale;
-            if($locale == 'en_US'){
-                  $args = array(
-                        'post_type' => 'post',
-                        'post_status' => 'publish',
-                        'category_name' => 'news-en',
-                        'orderby' => 'date',
-                        'posts_per_page' => 6
-                  );
-            }
-            else{
-                  $args = array(
-                        'post_type' => 'post',
-                        'post_status' => 'publish',
-                        'category_name' => 'news',
-                        'orderby' => 'date',
-                        'posts_per_page' => 6
-                  );
-            }
+            $args = array(
+                  'post_type' => 'post',
+                  'post_status' => 'publish',
+                  'category_name' => 'news',
+                  'orderby' => 'date',
+                  'posts_per_page' => 6
+            );
             
             $arr_posts = new WP_Query($args);
 
@@ -166,28 +153,14 @@
                   <img id="event-icon-next" src="<?php //bloginfo('template_url') ?>/images/icon/icon-next_white.svg">-->
                   <div id="event-data">
                         <?php /*query the recent 6 posts*/
-                              $locale = get_locale();
-                              //echo $locale;
-                              if($locale == 'en_US'){
-                                    $args = array(
-                                          'post_type' => 'post',
-                                          'post_status' => 'publish',
-                                          'category_name' => 'event-en',
-                                          'orderby' => 'date',
-                                          'posts_per_page' => 6
+                              $args = array(
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'category_name' => 'event',
+                                    'orderby' => 'date',
+                                    'posts_per_page' => 6
                                     );
-                              }
-                              else{
-                                    $args = array(
-                                          'post_type' => 'post',
-                                          'post_status' => 'publish',
-                                          'category_name' => 'event',
-                                          'orderby' => 'date',
-                                          'posts_per_page' => 6
-                                          );
-                              }
-
-                        $arr_posts = new WP_Query($args);
+                              $arr_posts = new WP_Query($args);
 
                         if ($arr_posts->have_posts()) :                
                         ?>    
