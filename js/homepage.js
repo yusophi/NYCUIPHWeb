@@ -2,32 +2,35 @@
 var imagesIndex = 1;
 displayImage(imagesIndex);
 
-function currentImage(n){
-    imagesIndex =n;
+function currentImage(n) {
+    imagesIndex = n;
     displayImage(imagesIndex);
 }
 
-function plusImage(n){
-    imagesIndex = imagesIndex+n;
+function plusImage(n) {
+    imagesIndex = imagesIndex + n;
     displayImage(imagesIndex);
 }
 
-function displayImage(n){
+function displayImage(n) {
     var availableImages = document.getElementsByClassName("imagesSlide");
     var allDots = document.getElementsByClassName("dot");
-    if( n > availableImages.length) { imagesIndex = 1; }
-    if( n < 1) { imagesIndex = availableImages.length; }
-    for(var i=0; i<availableImages.length; i++){
+    if (n > availableImages.length) {
+        imagesIndex = 1;
+    }
+    if (n < 1) {
+        imagesIndex = availableImages.length;
+    }
+    for (var i = 0; i < availableImages.length; i++) {
         availableImages[i].style.display = "none";
     }
 
-    for(var i=0;i<allDots.length;i++){
-        allDots[i].className = allDots[i].className.replace("active"," ");
+    for (var i = 0; i < allDots.length; i++) {
+        allDots[i].className = allDots[i].className.replace("active", " ");
     }
-    availableImages[imagesIndex-1].style.display = "block";
-    allDots[imagesIndex-1].className +=" active";
+    availableImages[imagesIndex - 1].style.display = "block";
+    allDots[imagesIndex - 1].className += " active";
 }
-
 
 // Milo: JS code for event part
 
@@ -113,12 +116,17 @@ FlexSlider = {
     },
 
     gotoNext: function () {
+        var win = window,
+            doc = document,
+            docElem = doc.documentElement,
+            body = doc.getElementsByTagName("body")[0],
+            x = win.innerWidth || docElem.clientWidth || body.clientWidth;
         this.next = true;
         document
             .querySelector("#event-slider-container")
             .classList.add("event-slider-container-transition");
-        document.querySelector("#event-slider-container").style.transform =
-            "translateX(-44.11%)";
+        document.querySelector("#event-slider-container").style.transform = x > 960?
+            "translateX(-44.11%)":"translateX(calc(-400px - 8.7%))";
         document
             .querySelector(".main-event .single-event")
             .classList.add("event-to-smaller");
@@ -142,12 +150,17 @@ FlexSlider = {
     },
 
     gotoPrev: function () {
+        var win = window,
+        doc = document,
+        docElem = doc.documentElement,
+        body = doc.getElementsByTagName("body")[0],
+        x = win.innerWidth || docElem.clientWidth || body.clientWidth;
         this.next = false;
         document
             .querySelector("#event-slider-container")
             .classList.add("event-slider-container-transition");
-        document.querySelector("#event-slider-container").style.transform =
-            "translateX(44.11%)";
+        document.querySelector("#event-slider-container").style.transform = x > 960?
+        "translateX(44.11%)":"translateX(calc(400px + 8.7%))";
         document
             .querySelector(".main-event .single-event")
             .classList.add("event-to-smaller");
@@ -192,18 +205,15 @@ FlexSlider.init();
 
 // Milo: End of event part
 
-
 // Milo: JS code for links part
 
 var links_category_items = document.getElementsByClassName(
     "links-category-item"
 );
 
-var links_upper_items = document.getElementsByClassName(
-    "links-upper-item"
-);
+var links_upper_items = document.getElementsByClassName("links-upper-item");
 
-var Links_container = document.getElementsByClassName('Links-container');
+var Links_container = document.getElementsByClassName("Links-container");
 
 for (var i = 0; i < links_upper_items.length; i++) {
     links_upper_items[i].addEventListener("click", function () {
@@ -212,52 +222,59 @@ for (var i = 0; i < links_upper_items.length; i++) {
         for (var j = 0; j < links_category_items.length; j++) {
             links_category_items[j].classList.remove("expanded");
         }
-        if (toExpand) this.parentElement.classList.add('expanded');
-        Links_container[0].classList.toggle('expanded', toExpand);
+        if (toExpand) this.parentElement.classList.add("expanded");
+        Links_container[0].classList.toggle("expanded", toExpand);
     });
 }
 
 // Milo: End of links part
 
-
 /* Jenny: contactUs block js*/
 var ProfileIndex = 1;
-function currentProfile(n){
+function currentProfile(n) {
     ProfileIndex = n;
     displayProfile(ProfileIndex);
 }
 
-function plusProfile(n){
-    ProfileIndex = ProfileIndex+n;
+function plusProfile(n) {
+    ProfileIndex = ProfileIndex + n;
     displayProfile(ProfileIndex);
 }
 
-function displayProfile(n){
+function displayProfile(n) {
     var availableProfiles = document.getElementsByClassName("overlayinContact");
-    if( n > availableProfiles.length) { ProfileIndex = 1; }
-    if( n < 1) { ProfileIndex = availableProfiles.length; }
+    if (n > availableProfiles.length) {
+        ProfileIndex = 1;
+    }
+    if (n < 1) {
+        ProfileIndex = availableProfiles.length;
+    }
 
-    for(var i=0; i < availableProfiles.length; i++){
+    for (var i = 0; i < availableProfiles.length; i++) {
         availableProfiles[i].style.display = "none";
     }
 
-    availableProfiles[ProfileIndex-1].style.display="block";
+    availableProfiles[ProfileIndex - 1].style.display = "block";
     document.getElementById("main-nav").style.display = "none";
     /*document.getElementsByClassName("Links-container").style.zIndex = "-1";*/
 
     /*allDots[ProfileIndex-1].className +=" active";*/
 }
 
-function closeProfile(n){
+function closeProfile(n) {
     var availableProfiles = document.getElementsByClassName("overlayinContact");
-    if( n > availableProfiles.length) { ProfileIndex = 1; }
-    if( n < 1) { ProfileIndex = availableProfiles.length; }
+    if (n > availableProfiles.length) {
+        ProfileIndex = 1;
+    }
+    if (n < 1) {
+        ProfileIndex = availableProfiles.length;
+    }
 
-    for(var i=0; i < availableProfiles.length; i++){
+    for (var i = 0; i < availableProfiles.length; i++) {
         availableProfiles[i].style.display = "none";
     }
 
-    availableProfiles[ProfileIndex-1].style.display="none";
+    availableProfiles[ProfileIndex - 1].style.display = "none";
     document.getElementById("main-nav").style.display = "block";
     /*allDots[ProfileIndex-1].className +=" active";*/
 }

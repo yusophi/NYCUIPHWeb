@@ -29,26 +29,28 @@
         <div class="header">
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
-                    <div id="upper-nav">
-                        <a id="logo" href="<?php echo site_url(); ?>/homepage/">
-                           <span>iPH.</span>
-                        </a>
-                        <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
-                            <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
-                            <span class="enName">Institute of Public Health, NYCU</span>
-                        </a>
-                    </div>
-                    <div id="nav-toolbar">
-                        <div id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></div>
-                        <div id="icon-search"><img src="<?php bloginfo('template_url')?>/images/icon/icon-search.png"></div>
-                        <div id="icon-calendar"><img src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png"></div>
+                    <div class="upper-nav-flex">
+                        <div id="upper-nav">
+                            <a id="logo" href="<?php echo site_url(); ?>/homepage/">
+                               <span>iPH.</span>
+                            </a>
+                            <a class="web_name" href="<?php echo site_url(); ?>/homepage/">
+                                <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
+                                <span class="enName">Institute of Public Health, NYCU</span>
+                            </a>
+                        </div>
+                        <div id="nav-toolbar">
+                            <div id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></div>
+                            <div id="icon-search"><img src="<?php bloginfo('template_url')?>/images/icon/icon-search.png"></div>
+                            <div id="icon-calendar"><img src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png"></div>
+                        </div>
                     </div>
                 </div>
                  
                 <div id="nav-hr" class="nav-disappearable"></div>
                 <div class="nav-container">
                 <ul id="nav-menu">
-                    <li id="nav-main-list-item-1">
+                    <li id="nav-main-list-item-1" class="nav-item">
                         <a class="menu-list nav-list-item-1">關於我們</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -57,8 +59,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li id="nav-main-list-item-2">
-                        <a class="menu-list nav-list-item-2">最新消息</a>
+                    <li id="nav-main-list-item-2" class="nav-item">
+                        <a class="menu-list nav-list-item-2">最新消息&nbsp;&nbsp;&nbsp;</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">總覽</a></li>
@@ -68,7 +70,7 @@
                             </ul>
                         </div>
                     </li>   
-                    <li id="nav-main-list-item-4">
+                    <li id="nav-main-list-item-4" class="nav-item">
                         <a class="menu-list nav-list-item-4">學術活動</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -78,7 +80,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li id="nav-main-list-item-5">
+                    <li id="nav-main-list-item-5" class="nav-item">
                         <a class="menu-list nav-list-item-5">課程規劃</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -88,7 +90,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li id="nav-main-list-item-6">
+                    <li id="nav-main-list-item-6" class="nav-item">
                         <a class="menu-list nav-list-item-6">學生園地</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -99,7 +101,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li id="nav-main-list-item-3">
+                    <li id="nav-main-list-item-3" class="nav-item">
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
                         <!--<div class="dropdown-menu">
                             <ul>
@@ -109,16 +111,16 @@
                             </ul>
                         </div>-->
                     </li>
-                    <li id="nav-main-list-item-8">
+                    <li id="nav-main-list-item-8" class="nav-item">
                         <a class="menu-list nav-list-item-8">公衛學科</a>
                         <div class="dropdown-menu">
                         </div>
                     </li>
-                    <li id="nav-main-list-item-9">
+                    <li id="nav-main-list-item-9" class="nav-item">
                         <a class="menu-list nav-list-item-9">醫人暨教育學科</a>
                         <div class="dropdown-menu"></div>
                     </li>
-                    <li id="nav-main-list-item-7">
+                    <li id="nav-main-list-item-7" class="nav-item">
                         <a class="menu-list nav-list-item-7">相關資源</a>
                         <div class="dropdown-menu">
                             <ul>
