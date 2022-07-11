@@ -520,7 +520,7 @@
                               $args = array(
                               'post_type' => 'Staff', 
                               'post_status' => 'publish',
-                              'category_name' => 'administrator-en', 
+                              'category_name' => 'staff-en', 
                               'orderby'=>'date',
                               'order'=>'ASC');
                         }
@@ -528,7 +528,7 @@
                               $args = array(
                               'post_type' => 'Staff', 
                               'post_status' => 'publish',
-                              'category_name' => 'administrator', 
+                              'category_name' => 'staff', 
                               'orderby'=>'date',
                               'order'=>'ASC');
                         }

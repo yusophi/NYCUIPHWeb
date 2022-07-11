@@ -157,21 +157,21 @@
                         <?php if($hd_locale == "zh_TW"): ?> 
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">Admission</a>
+                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission-en/">Admission</a>
                         <?php endif; ?>
                     </li>
                     <li id="nav-main-list-item-8">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">About DPH</a>
+                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph-en/">About DPH</a>
                         <?php endif;?>
                     </li>
                     <li id="nav-main-list-item-9">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">醫人暨教育學科</a>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">About MH&E</a>
+                        <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe-en/">About MH&E</a>
                         <?php endif; ?>
                     </li>
                     <?php if($hd_locale == "zh_TW"): ?>

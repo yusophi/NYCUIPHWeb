@@ -24,20 +24,20 @@
             ) );
 
             $prof_categories = get_categories(array(
-                    'parent' => 27,
+                    'parent' => 25,
                     'orderby' => 'slug',
                     'hide_empty' => false,
                     'order'   => 'ASC'
                 ) );
         }else{
             $areas_categories = get_categories(array(
-                'parent' => 21,
+                'parent' => 112,
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
             $prof_categories = get_categories(array(
-                'parent' => 114,
+                'parent' => 120,
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'

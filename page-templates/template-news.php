@@ -17,13 +17,13 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 6,
+                'parent' => 2,
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
         }else{
             $categories = get_categories(array(
-                'parent' => 93,
+                'parent' => 132,
                 'orderby' => 'slug',
                 'order'   => 'ASC'
             ) );
