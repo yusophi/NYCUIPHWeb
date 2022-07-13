@@ -25,6 +25,7 @@
         <div class="header">
             <nav id="main-nav">
                 <div class="cf nav-disappearable">
+                <div class="upper-nav-flex">
                     <div id="upper-nav">
                         <a id="logo" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                            <span>iPH.</span>
@@ -56,7 +57,7 @@
                 <div id="nav-hr" class="nav-disappearable"></div>
                 <div class="nav-container">
                 <ul id="nav-menu">
-                    <li id="nav-main-list-item-1">
+                    <li id="nav-main-list-item-1" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-1">關於我們</a>
                         <div class="dropdown-menu">
@@ -66,7 +67,7 @@
                             </ul>
                         </div>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-1">About IPH</a>
+                        <a class="menu-list nav-list-item-1" class="nav-item">About IPH</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about-en/">Introduction</a></li>
@@ -75,9 +76,9 @@
                         </div>
                         <?php endif; ?>
                     </li>
-                    <li id="nav-main-list-item-2">
+                    <li id="nav-main-list-item-2" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
-                        <a class="menu-list nav-list-item-2">最新消息</a>
+                        <a class="menu-list nav-list-item-2">最新消息&nbsp;&nbsp;&nbsp;</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">總覽</a></li>
@@ -97,7 +98,7 @@
                         </div>
                         <?php endif; ?>
                     </li>   
-                    <li id="nav-main-list-item-4">
+                    <li id="nav-main-list-item-4" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-4">學術活動</a>
                         <div class="dropdown-menu">
@@ -116,7 +117,7 @@
                         </div>
                         <?php endif; ?>
                     </li>
-                    <li id="nav-main-list-item-5">
+                    <li id="nav-main-list-item-5" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-5">課程規劃</a>
                         <div class="dropdown-menu">
@@ -137,7 +138,7 @@
                         <?php endif; ?>  
                     </li>
                     <?php if($hd_locale == "zh_TW"): ?>
-                    <li id="nav-main-list-item-6">
+                    <li id="nav-main-list-item-6" class="nav-item">
                         <a class="menu-list nav-list-item-6">學生園地</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -149,38 +150,45 @@
                         </div>
                     </li>
                     <?php else: ?>
-                    <li id="nav-main-list-item-6">
-                        <a class="menu-list nav-list-item-8" href="https://oia.nycu.edu.tw/en/degree-seeking/international-students/scholarship/">Scholarships</a>
+                    <li id="nav-main-list-item-6" class="nav-item">
+                        <a class="menu-list nav-list-item-6" href="https://oia.nycu.edu.tw/en/degree-seeking/international-students/scholarship/">Scholarships</a>
                     </li>
                     <?php endif; ?>
-                    <li id="nav-main-list-item-3">
+
+                    <li id="nav-main-list-item-3" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?> 
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
                         <?php else: ?>
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission-en/">Admission</a>
                         <?php endif; ?>
                     </li>
-                    <li id="nav-main-list-item-8">
+
+                    <li id="nav-main-list-item-8" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a>
                         <?php else: ?>
                         <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph-en/">About DPH</a>
                         <?php endif;?>
                     </li>
-                    <li id="nav-main-list-item-9">
+
+                    <li id="nav-main-list-item-9" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">醫人暨教育學科</a>
                         <?php else: ?>
                         <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe-en/">About MH&E</a>
                         <?php endif; ?>
                     </li>
+
                     <?php if($hd_locale == "zh_TW"): ?>
-                    <li id="nav-main-list-item-7">
+                    <li id="nav-main-list-item-7" class="nav-item">
                         <a class="menu-list nav-list-item-7" href="<?php echo site_url(); ?>/links/">相關資源</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                            </ul>
+                        </div>
                     </li>
                     <?php else: ?>
-                    <li id="nav-main-list-item-7">
-                    </li>
+                    <li id="nav-main-list-item-7" class="nav-item"></li>
                     <?php endif; ?>
                 </ul>
                 </div>
@@ -199,7 +207,6 @@
                     <input type="text" value="" name="s" class="site_search_input" id="site_search_keyword" placeholder="全站搜尋"/>
                     <input type="submit" id="searchsubmit"/>
                     <input name="csrf_token" type="hidden" value="<?php echo wp_create_nonce('test-nonce');?>"/>
-                    <?php //wp_nonce_field( 'get_site_search', 'site_search_nonce' ); ?>
                     <button id="yellow_search_btn" type="button">
                         <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
                     </button>
