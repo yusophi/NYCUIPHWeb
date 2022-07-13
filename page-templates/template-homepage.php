@@ -41,24 +41,27 @@
             <?php endif;
             wp_reset_postdata(); ?>
 
-            <div class="image-bar">
+            <div class="click_btn_bar">
+                  <div id="social_btn">
+                        <a><img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link.svg"></a>
+                        <a><img src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link.svg"></a>
+                  </div>
+                  <div class="image-bar">
                   <?php for ($i = 0; $i < $counter ; $i++) : ?>
                         <div class="dot" onclick="currentImage(<?php echo $i + 1; ?>)"></div>
                   <?php endfor; ?>
+                  </div>
+                  <div id="slide_btn">
+                        <button id="btn_pre_img" onclick="plusImage(-1)" type="button" title="前一張">
+                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
+                        </button>
+                        <button id="btn_next_img" onclick="plusImage(1)" type="button" title="後一張">
+                              <img src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
+                        </button>
+                  </div>
             </div>
-
-            <button id="btn_pre_img" onclick="plusImage(-1)" type="button" title="前一張">
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-pre.svg">
-            </button>
-            <button id="btn_next_img" onclick="plusImage(1)" type="button" title="後一張">
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-next.svg">
-            </button>
-
-            <div class="social_media_links">
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link.svg">
-                  <img src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link.svg">
             </div>
-
+            <div class="rounded_border"></div>
       </div>
       <!-- the News block -->
       <div class="News-container">
@@ -476,7 +479,7 @@
       <!-- Milo: links結束 -->
       
       <!-- Jenny: Contact Us block start-->
-      <div class="ContactUs-container <?php if($locale == 'en_US'){echo 'ContactUs-container-en';} ?>"> 
+      <div class="ContactUs-container <?php if($locale == 'en_US'){echo 'ContactUs-container-en';} ?>" > 
             <div class="block-title contactUS_title">
                   <img class="icon" src="<?php bloginfo('template_url')?>/images/icon/icon-contact.svg">
                   <?php if($locale == "zh_TW"):?>
@@ -516,11 +519,8 @@
                               $the_query->the_post();
                   ?>
                         <div class="profile">
-                              <div class="profile-header" onclick="currentProfile(<?php echo $counter; ?>)" >
-                                    <!--<?php //$imageQ = wp_get_attachment_image_src(get_field('staff_photo'), 'custom size'); ?>-->
-                                    <!--<img src="<?php //echo $imageQ[0]; ?>" alt="<?php// echo get_the_title(get_field('staff_photo')) ?>" >-->
+                              <div class="profile-header" id="profile-<?php echo $counter;?>" >
                                     <?php echo wp_get_attachment_image( get_field('staff_photo'), 'medium' ); ?>
-
                                     <?php 
                                     $image = get_field('staff_photo');
                                     if( !empty( $image ) ): ?>

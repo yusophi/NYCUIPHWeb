@@ -21,12 +21,9 @@
 
 .images-container{
     position: relative;
-    /*left: 9vw;
-    top: 16vw;
-    right: 9vw;*/
     margin-top: 13vw;
-    width: 73.8vw;
-    height: 29.061vw; /* x0.9 */
+    width: 82.083vw;
+    height: 32.29vw;
 }
 
 .imagesSlide{
@@ -37,12 +34,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 0.78152vw;
 }
 
-.image-bar{
-    position: relative;
-    margin-top: 2vw;
+#social_btn, #slide_btn, .image-bar{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -69,32 +64,26 @@
     border-radius: 134px;
 }
 
-.social_media_links{
-    position:  absolute;
-    width: 10vw;
-    top: 43vw;
-    left: 15vw;
+.click_btn_bar{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 82.083vw;
+    margin-top: 1vw;
 }
 
-.social_media_links img{
-    margin-left: 1.5vw;
+#social_btn > a{
+    margin-left: 1vw;
 }
 
 #btn_pre_img{
-    position: absolute;
-    top: 43vw;
-    left: 78.5vw;
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
 #btn_next_img{
-    position: absolute;
-    top: 43vw;
-    left: 82vw;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -135,7 +124,13 @@
 }
 
 /***********************/
-
+.rounded_border{
+    width: 100vw;
+    height: 2vw;
+    background-color: #e4dfd2;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
 /***** the News block ******/
 .News-container
 {
@@ -913,6 +908,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -2vw;
+}
+
+.ContactUs-container-en{
     margin-top: -15vw;
 }
 
@@ -987,11 +986,6 @@
     color: #2e4565;
 }
 
-/*.staff_name, .work_respon, .contact_title, .email, .phone_num, #profile_text, .self_intro, .profile_num{
-    font-size: 1.2504rem;
-    letter-spacing: 3.75px;
-}*/
-
 .staff_name{
     font-size: 1.2504rem;
     letter-spacing: 3.75px;
@@ -1005,17 +999,18 @@
 }
 
 .contact_title, .email, .phone_num, .self_intro{
-    font-size: 1rem;
+    font-size: 1.0416vw;
     font-weight: normal;
-    letter-spacing: 1.3px;
+    letter-spacing: 0.15625vw;
+    line-height: 1.2vw;
     text-align: left;
 }
 
 .overlayinContact{
     position: fixed;
     display: none;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vw;
     top: 0;
     left: 0;
     right: 0;
@@ -1030,9 +1025,8 @@
 .overlay_wapper{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
-    /*background-color: aliceblue;*/
 }
 
 .cls_btn{
@@ -1044,27 +1038,25 @@
 }
 
 .overlay_profile_content{
-    width: 60%;
+    width: 60vw;
     background-color: #efeee4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     z-index: 2;
 }
 
 .overlay_title, .overlay_middle, .ovetlay_bottom{
+    width: 58vw;
     display: flex;
-    width: 90%;
     flex-direction: row;
     align-items:center;
     justify-content: space-between;
     border-bottom: solid 1.5px rgba(46,69,101,0.2);
-    z-index: 3;
 }
 .profile_text{
-    font-size: 0.9rem;
-    letter-spacing: 2px;
+    font-size: 0.9375vw;
+    letter-spacing: 0.104vw;
 }
 
 .overlay_title img{
@@ -1111,8 +1103,8 @@
 }   
 
 .overlay_self_info{
-    width: 50%;
-    margin-left: 4%;
+    width: 35vw;
+    margin-left: 2vw;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -1120,12 +1112,11 @@
 
 .overlay_staff_name{
     width: 100%;
-    font-size: 3.2504rem;
+    font-size: 3.3854vw;
     padding-top: 10%;
     padding-bottom: 13%;
     text-align: left;
     border-bottom: solid 1.5px rgba(46,69,101,0.2);
-
 }
 
 .overlay_self_info > .profile_p2, .overlay_self_info > .profile_p3{
@@ -1141,7 +1132,6 @@
     /*border-bottom: solid 1.5px rgba(46,69,101,0.2);*/
 }
 
-
 .overlay_phone_num, .overlay_mail{
     margin-left: 4%;
 }
@@ -1150,14 +1140,6 @@
     border-bottom: none;
     padding-top: 3%;
     padding-bottom: 3%;
-}
-
-.self_intro{
-    line-height: 2;
-    letter-spacing: 3px;
-    text-align: left;
-    padding-bottom: 8%;
-    padding-top: 8%;
 }
 
 .overlay_profile_left_pointer, .overlay_profile_right_pointer{

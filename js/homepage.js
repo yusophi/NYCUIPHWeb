@@ -246,7 +246,7 @@ for (var i = 0; i < links_upper_items.length; i++) {
 
 
 /* Jenny: contactUs block js*/
-var ProfileIndex = 1;
+var ProfileIndex = 0;
 function currentProfile(n){
     ProfileIndex = n;
     displayProfile(ProfileIndex);
@@ -268,9 +268,6 @@ function displayProfile(n){
 
     availableProfiles[ProfileIndex-1].style.display="block";
     document.getElementById("main-nav").style.display = "none";
-    /*document.getElementsByClassName("Links-container").style.zIndex = "-1";*/
-
-    /*allDots[ProfileIndex-1].className +=" active";*/
 }
 
 function closeProfile(n){
@@ -284,6 +281,16 @@ function closeProfile(n){
 
     availableProfiles[ProfileIndex-1].style.display="none";
     document.getElementById("main-nav").style.display = "block";
-    /*allDots[ProfileIndex-1].className +=" active";*/
 }
 
+var staff_profiles = document.getElementsByClassName("profile-header");
+
+for (var i = 0; i < staff_profiles.length; i++)
+{   
+    const idx = i;
+    console.log(idx);
+    staff_profiles[idx].addEventListener("click",function(){
+        currentProfile(idx);   
+    }
+    );
+}

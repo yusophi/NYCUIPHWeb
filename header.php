@@ -29,7 +29,7 @@
                         <a id="logo" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                            <span>iPH.</span>
                         </a>
-                        <a class="web_name" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
+                        <a class="web_name" title="國立陽明交通大學公共衛生研究所"href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                             <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
                             <span class="enName">Institute of Public Health, NYCU</span>
                         </a>
@@ -189,7 +189,7 @@
         <div id="search_overlay">
             <img id="search_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
                 <?php
-                    $nonce= wp_create_nonce('test-nonce');
+                    $nonce= wp_create_nonce('test-nonce1');
                     $home_url = home_url( '/' );
                     $nonce_url = wp_nonce_url( $home_url, 'get_site_search' );
                     //echo $nonce_url;
@@ -198,7 +198,7 @@
                     <img id="search_svg" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search.svg">
                     <input type="text" value="" name="s" class="site_search_input" id="site_search_keyword" placeholder="全站搜尋"/>
                     <input type="submit" id="searchsubmit"/>
-                    <input name="csrf_token" type="hidden" value="<?php echo wp_create_nonce('test-nonce1');?>"/>
+                    <input name="csrf_token" type="hidden" value="<?php echo wp_create_nonce('test-nonce');?>"/>
                     <?php //wp_nonce_field( 'get_site_search', 'site_search_nonce' ); ?>
                     <button id="yellow_search_btn" type="button">
                         <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
