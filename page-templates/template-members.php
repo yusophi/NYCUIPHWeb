@@ -18,14 +18,14 @@
     <?php 
         if($locale == "zh_TW"){
             $areas_categories = get_categories(array(
-                'parent' => 21,
+                'parent' => 33, /*21*/
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
 
             $prof_categories = get_categories(array(
-                    'parent' => 25,
+                    'parent' => 27, /*25*/
                     'orderby' => 'slug',
                     'hide_empty' => false,
                     'order'   => 'ASC'

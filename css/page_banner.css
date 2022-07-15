@@ -24,8 +24,8 @@
 }
 
 .circle{
-    width: 2.65rem;
-    height: 2.65rem;
+    width: 2.65625vw;
+    height: 2.65625vw;
     position: absolute;
     right: 0%;
     top: 23%;
