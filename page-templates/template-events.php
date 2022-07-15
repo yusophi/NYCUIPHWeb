@@ -20,7 +20,7 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 8,
+                'parent' => 10, /*8 */
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
@@ -95,8 +95,6 @@
                                     <span class="event-date-words">Date</span>
                                 </div>
                                 <div class="event-date"><?php the_field('event_date');?> </div>
-                                <!--<div class="event-categories"><?php //the_category(''); ?></div>
-                                <div class="event-location"><?php //the_field('event_location'); ?></div>-->
                                 <div class="hp_event_tag">
                                     <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
                                     <div class="event-location"><?php the_field('event_location'); ?></div>

@@ -215,7 +215,7 @@
                                                                         <?php endif; ?>
                                                                   </div>
                                                                   <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                                                                  <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..." ?></div>
+                                                                  <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."; ?></div>
                                                             </div>
                                                       </div>
                                                 </div>

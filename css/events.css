@@ -1,5 +1,5 @@
 .page_events{
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction:column;
@@ -7,16 +7,14 @@
     background-color: #e4dfd2;
 }
 
-#selection_studies{
-    margin-left: 0;
-}
-
 /*the events block */
 .post_block{
-    position: relative;
-    width: 100vw;
-    margin-top: 7%;
+    width: 82vw;
+    margin-top: 7.8125vw;;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .event-cards
@@ -27,147 +25,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-/*
-.event-cards-mask{
-    width: 35.57vw;
-    height: 26.09vw;
-    border-radius: 60px;
-    background-color: #efeee4;
-    box-shadow: 6px 6px 15px 0 rgba(0, 0, 0, 0.1);
-    margin: 0 2.5vw 4vw 2.5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.event-cards-mask > .event-main-margin{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-*/
-/*.event-main-slide-upper, .event-name, .event-intro{
-    border: solid 2px #2e4565;
-}*/
-
-
-/** event card **/
-/*.event-main-margin {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: calc(100vw * 0.2615 * 0.9);
-    padding: 3% 12.5%;
-    border: solid 2px #2e4565
-}
-.event-date-title {
-    display: flex;
-    place-items: center;
-    justify-content: flex-start;
-}
-.event-date-words {
-    padding-left: 0.538rem;
-    font-family: "TimesNewRoman";
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 1.3;
-    color: #2e4565;
-}
-.event-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-top: 8%;
-    padding-left: 2.295rem;
-}
-.event-main-slide-upper {
-    display: flex;
-    min-height: 40%;
-}
-.event-main-slide-upper img {
-    max-width: 100%;
-    height: auto;
-}
-.event-tags span {
-    margin-right: 3px;
-    margin-bottom: 4px;
-    padding: 4px 10px;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 0.675rem;
-    font-weight: bold;
-    letter-spacing: 2.1px;
-    text-align: left;
-    color: #2e4565;
-    background-color: #ffbb00;
-    border-radius: 15px;
-    display: inline-block;
-}
-.event-date {
-    font-family: "TimesNewRoman";
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 0.86;
-    text-align: left;
-    color: #2e4565;
-}
-.event-name {
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.1rem;
-    font-weight: bold;
-    line-height: 1.28;
-    letter-spacing: 2.5px;
-    color: #2e4565;
-}
-.event-intro {
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 0.71rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.47;
-    letter-spacing: 1.53px;
-    text-align: left;
-    color: rgba(46, 69, 101, 0.7);
-    text-indent: 2em;
-}
-
-.event-img-container{
-    display: flex;
     justify-content: center;
-    align-items: center;
-}*/
-/*
-#SDG_selector {
-    padding-left: 10px;
-    width: 100%;
-    height: 100%;
-    border: #000;
-    background-color: #e4dfd2;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    text-align: left;
-    color: #2e4565;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    border: solid 2px #2e4565;
 }
-
-#SDG_container {
-    margin-left: auto;
-    margin-right: 3.5%;
-    border: #2e4565 solid 2px;
-    width: 135px;
-    height: 30px;
-}*/
-
 
 .select_bar_container{
     width: 82vw;
@@ -177,7 +37,6 @@
 }
 
 .cat-list{
-    /*width: 16.09375vw;*/
     width: 25vw;
     display: flex;
     flex-direction: row;
@@ -222,3 +81,17 @@
     color: #2e4565;
     margin-left: 1.3vw;
 }
+
+/*
+@media (max-width: 1024px){
+   
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 480px){
+   
+
+}*/
