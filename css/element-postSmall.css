@@ -1,18 +1,15 @@
 .article-content {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     width: 22.8125vw;
     height: 22.1875vw;
     border-bottom: solid 2px #2e4565;
-    margin: 4.8vw 2.26vw 0 2.26vw;
-    
+    /*margin: 4.8vw 2.26vw 0 2.26vw;*/
 }
 
 .article-content p {
     font-family: 'Noto Sans TC', sans-serif;
 }
-
-
 
 .post_counter{
     font-family: 'TimesNewRoman';
@@ -25,28 +22,6 @@
     text-align: left;
     color: #2e4565;
 }
-
-/*.thumbnail_icon
-{   
-    position:absolute;
-    top: 30%;
-    left: 42%;
-    width: 15.1%;
-    height: 12.6%;
-    opacity: 1;
-    transition: 0.8s ease;/*cubic-bezier(.52,.06,.42,.86);
-}*/
-
-
-/*.thumbnail_icon_hover{
-    position:absolute;
-    top: 30%;
-    left: 42%;
-    width: 14.6%;
-    height: 15%;
-    opacity: 0;
-    transition: 0.8s ease;/*cubic-bezier(.52,.06,.42,.86);
-}*/
 
 .post_icon{
     position:absolute;
@@ -162,36 +137,6 @@
     border-radius: 0.885vw;  
 }
 
-/*.post_category{
-    position: absolute;
-    left: -0.5vw;
-    margin-top: 12vw;
-    transition: 450ms ease-in-out;
-}
-
-.post-categories{
-    display: inline-flex;
-    flex-direction: row-reverse;
-}
-
-.post-categories > li{
-    position: relative;
-    margin-left: 0.5vw;
-    background-color: #2e4565;
-    border-radius: 0.885vw;
-}
-
-.post-categories > li > a{
-    color: #ffbb00;
-    font-family: 'Noto Sans TC', sans-serif;
-    text-decoration: none;
-    font-size: 0.9rem;
-    line-height: 1.57;
-    letter-spacing: 2px;
-    font-weight: bold;
-    padding: 0.15vw 0.833vw;
-}
-*/
 .article-title
 {
     position: relative;
@@ -227,7 +172,7 @@
 
 .excerpt{
     position: relative;
-    margin-top:13vw;
+    margin-top:5vw;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.04166666667vw;
     font-weight: normal;

@@ -147,18 +147,15 @@
 
 /* Posts */
 .news_title {
-    position: relative;
-    top: 6.09vw;
-    /*left: 45.9vw;*/
+    margin-top: 6.09375vw;
 }
 
 .news-article {
-    width: 100vw;
-    position: relative;
-    margin-top: 6.8vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 82vw;
+    margin-top: 5.885vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 6.875vw;
 }
 
 /*** the readmore button*****/

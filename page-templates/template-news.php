@@ -18,7 +18,7 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 2,
+                'parent' => 6, /*2*/
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
@@ -77,45 +77,49 @@
                     $counter = $counter + 1;
             ?>
                 <div class="article-content num-<?php echo $counter ?>">
-                    <div class="post_counter <?php echo $counter ?>">
-                        <?php if($counter >= 10){
+                    <div class="post_counter">
+                    <?php if($counter >= 10){
                                 echo $counter . ".";
                             }else{
-                                echo "0" . $counter . ".";} ?><!--&nbsp;&nbsp;-->
+                                echo "0" . $counter . ".";} ?>
                     </div>
                     <div class="post_icon">
-                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
-                        <div>
-                            <p class="post_icon_hover_dots"></p>
-                            <p class="post_icon_hover_dots"></p>
-                            <p class="post_icon_hover_dots"></p>
-                        </div>
+                            <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
+                            <div>
+                                <p class="post_icon_hover_dots"></p>
+                                <p class="post_icon_hover_dots"></p>
+                                <p class="post_icon_hover_dots"></p>
+                            </div>
                     </div>
+
                     <div class="border-anim">
                             <div class="inner-box"></div>
                     </div>
                     <div class="article-meta">
-                        <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
-                        <span class="post_time"><?php the_time('Y.m.j'); ?></span>
+                            <img class="icon-clock" src="<?php bloginfo('template_url'); ?>/images/icon/icon-clock.svg">
+                            <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                     </div>
                     <div class="post_tags">
-                            <div class="post_category"><?php the_field('news_item');//the_category(''); ?></div>
+                            <div class="post_category"><?php the_field('news_item');?></div>
                             <?php
                             $sdgs = get_field('sdg');
-                            if( $sdgs ): ?>
+                            if ($sdgs) : ?>
                                 <ul class="sdg-tag">
-                                        <?php foreach( $sdgs as $sdg ): ?>
+                                        <?php foreach ($sdgs as $sdg) : ?>
                                             <li><?php echo $sdg; ?></li>
                                         <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>
                     </div>
-                    <!--div class="article-title"><a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a></div>-->
-                    <div class="article-title">
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <div class="article-passage">
+                            <div class="article-excerpt_bottom_line"></div>
+                            <div class="article-title">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </div>
                             <div class="article-title_bottom_line"></div>
+                            <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
+                            <div class="article-excerpt_bottom_line"></div>
                     </div>
-                    <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..."?> </div>
                     <div class="clearfix"></div>
                 </div>
             <?php endwhile; ?>
@@ -140,8 +144,6 @@
                 );
             echo paginate_links($args);
         ?>
-        <!--<img class="icon-paging prev_page" src="<?php// bloginfo('template_url') ?>/images/page_news/prev_page.svg">-->
-        <!--<img class="icon-paging next_page" src="<?php //bloginfo('template_url') ?>/images/page_news/next_page.svg">-->
         </div>
     </div>
 

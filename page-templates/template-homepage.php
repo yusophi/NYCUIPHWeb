@@ -111,10 +111,6 @@
                         ?>
                               <div class="article-content num-<?php echo $counter ?>">
                                     <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                                    <!--<img class="thumbnail_icon" src="<?php // bloginfo('template_url') 
-                                                                              ?>/images/icon/icon-newspaper-new.svg">
-                                    <img class="thumbnail_icon_hover" src="<?php // bloginfo('template_url') 
-                                                                              ?>/images/icon/icon-news-more.svg">-->
                                     <div class="post_icon">
                                           <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
                                           <div>
@@ -128,12 +124,11 @@
                                           <div class="inner-box"></div>
                                     </div>
                                     <div class="article-meta">
-                                          <img class="icon-clock" src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
+                                          <img class="icon-clock" src="<?php bloginfo('template_url'); ?>/images/icon/icon-clock.svg">
                                           <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                                     </div>
                                     <div class="post_tags">
-                                          <div class="post_category"><?php the_field('news_item'); //the_category(''); 
-                                                                        ?></div>
+                                          <div class="post_category"><?php the_field('news_item');?></div>
                                           <?php
                                           $sdgs = get_field('sdg');
                                           if ($sdgs) : ?>
@@ -144,9 +139,6 @@
                                                 </ul>
                                           <?php endif; ?>
                                     </div>
-                                    <!--div class="article-title"><a href="<?php //the_permalink(); 
-                                                                              ?>"><?php //the_title(); 
-                                                                                    ?></a></div>-->
                                     <div class="article-passage">
                                           <div class="article-excerpt_bottom_line"></div>
                                           <div class="article-title">
