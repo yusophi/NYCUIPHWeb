@@ -111,9 +111,9 @@
                         ?>
                               <div class="article-content num-<?php echo $counter ?>">
                                     <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                                    <!--<img class="thumbnail_icon" src="<? php // bloginfo('template_url') 
+                                    <!--<img class="thumbnail_icon" src="<?php // bloginfo('template_url') 
                                                                               ?>/images/icon/icon-newspaper-new.svg">
-                                    <img class="thumbnail_icon_hover" src="<? php // bloginfo('template_url') 
+                                    <img class="thumbnail_icon_hover" src="<?php // bloginfo('template_url') 
                                                                               ?>/images/icon/icon-news-more.svg">-->
                                     <div class="post_icon">
                                           <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">

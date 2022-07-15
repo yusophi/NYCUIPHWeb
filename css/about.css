@@ -32,9 +32,9 @@
     margin-top: 2.5%;
     right: 0;
     bottom: 0;
-    width: 2.65rem;
-    height: 2.65rem;
-    border-radius: 1.4rem;
+    width: 2.65625vw;
+    height: 2.65625vw;
+    border-radius: 1.465vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
 }
@@ -61,7 +61,7 @@
 
 .bk_num{
     font-family: 'TimesNewRoman';
-    font-size: 2.8504rem;
+    font-size: 3.02083vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -80,7 +80,7 @@
     font-size: 1.302084vw;
     font-weight: bold;
     line-height: 1.4;
-    letter-spacing: 3.75px;
+    letter-spacing: 0.195vw;
     text-align: left;
     color: #2e4565;
     margin-top: 8%;
@@ -135,25 +135,6 @@
     height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .information-block{
     position: relative;
     width: 82%;
@@ -172,6 +153,7 @@
 
 .info-title span{
     font-family: 'Noto Sans TC', sans-serif;
+    font-size: 3.38541vw;
     line-height: 1.2;
     font-stretch: normal;
     font-style: normal;
@@ -221,10 +203,10 @@
 
 .deco-section{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.84375rem;
+    font-size: 0.9375vw;
     font-weight: bold;
     line-height: 0.06;
-    letter-spacing: 2.7px;
+    letter-spacing: 0.140625vw;
     text-align: center;
     color: #2e4565;
 }
@@ -254,18 +236,19 @@
 
 .texts p{
     font-family: 'Noto Sans TC', sans-serif;
-    line-height: 1.875rem;
+    line-height: 1.82;
     text-align: left;
     color: #2e4565;
-    font-size: 1.03125rem;
+    font-size: 1.14583vw;
     letter-spacing: 0.23vw;
 }
 
 .texts-title div{
     font-family: 'Noto Sans TC', sans-serif;
     color: #2e4565;
-    font-size: 1.266rem;
+    font-size: 1.40625vw;
     font-weight: bold;
+    line-height: 1.82;
     letter-spacing: 0.28vw;
     margin-bottom: 1vw;
 }
@@ -325,14 +308,14 @@
 }
 
 .unit-title{
-    font-size: 1.875rem;
+    font-size: 2.0833vw;
     letter-spacing: 0.3125vw;
 }
 
 .super-title{
     position: relative;
     margin-left: 0.5vw;
-    font-size: 1.17225rem;
+    font-size: 1.302083vw;
     letter-spacing: 0.195vw;
 }
 
@@ -341,7 +324,7 @@
 }
 
 .supervisor .texts p{
-    font-size: 1.17225rem;
+    font-size: 1.302083vw;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -351,3 +334,36 @@
     color: #2e4565;
 }
 
+#watchmore-1, #watchmore-2{
+    font-size: 1.04167vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+@media (max-width: 1024px){
+    .page-about-banner {
+        margin-top: 20vw;
+    }
+    .supervisor .texts{
+        width: 15.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-about-banner {
+        margin-top: 25vw;
+    }
+    .supervisor .texts{
+        width: 17.5vw;
+    }
+}
+
+@media (max-width: 480px){
+    .page-about-banner {
+        margin-top: 40vw;
+    }
+    .supervisor .texts{
+        width: 30.5vw;
+    }
+}
