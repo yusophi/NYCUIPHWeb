@@ -10,7 +10,7 @@
                 </div>  
             </a>
         </div>
-        <div class="item_titles _font18">
+        <div class="item_titles">
             <span class="name_col">姓名</span>
             <span>獎項</span>
         </div>
