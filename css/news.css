@@ -17,10 +17,9 @@
 .news-article
 {
     width: 100%;
-    min-height: auto;
-    display: inline-block;
-    background-color: #e4dfd2;
-    margin-left: -1.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .select_bar_container{

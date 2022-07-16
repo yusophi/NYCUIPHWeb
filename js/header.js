@@ -25,12 +25,15 @@ var nav_list_item_8 = document.getElementsByClassName('nav-list-item-8');
 var nav_list_item_9 = document.getElementsByClassName('nav-list-item-9');
 var menu_lists = document.getElementsByClassName("menu-list");
 var dropdown_menus = document.getElementsByClassName("dropdown-menu");
+var nav_hamburger = document.getElementById("nav-hamburger");
 
+
+nav_hamburger.addEventListener("click", function () {
+  main_nav.classList.toggle("sm-nav-strech");
+})
 
 
 window.addEventListener("scroll", function () {
-  nav_disappearable[0].classList.toggle("none-display", scrollY > 0);
-  nav_disappearable[1].classList.toggle("none-display", scrollY > 0);
   main_nav.classList.toggle("nav-menu-pullup", scrollY > 0);
   logo.classList.toggle("stay", scrollY > 0);
   nav_toolbar.classList.toggle("pulldown", scrollY > 0);

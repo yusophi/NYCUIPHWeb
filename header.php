@@ -43,6 +43,7 @@
                             <div id="icon-en"><img src="<?php bloginfo('template_url')?>/images/icon/icon-en.png"></div>
                             <div id="icon-search"><img src="<?php bloginfo('template_url')?>/images/icon/icon-search.png"></div>
                             <div id="icon-calendar"><img src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png"></div>
+                            <div id="nav-hamburger"></div>
                         </div>
                     </div>
                 </div>
@@ -113,19 +114,13 @@
                     </li>
                     <li id="nav-main-list-item-8" class="nav-item">
                         <a class="menu-list nav-list-item-8">公衛學科</a>
-                        <div class="dropdown-menu">
-                        </div>
+
                     </li>
                     <li id="nav-main-list-item-9" class="nav-item">
                         <a class="menu-list nav-list-item-9">醫人暨教育學科</a>
-                        <div class="dropdown-menu"></div>
                     </li>
                     <li id="nav-main-list-item-7" class="nav-item">
                         <a class="menu-list nav-list-item-7">相關資源</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                            </ul>
-                        </div>
                     </li>
                     
                 </ul>
