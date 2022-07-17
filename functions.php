@@ -441,11 +441,11 @@ function filter_ajax() {
   else if($postType == 'papers'){ //post type: papers
     if($query->have_posts()){
       echo '<div class="item_titles _font18">';
-      echo ' <span>年份</span>
-      <span class="name_col">姓名</span>
-      <span class="name_col">畢業學位</span>
-      <span class="name_col">指導教授</span>
-      <span class="name_col">論文名稱</span>';
+      echo ' <span class="year">年份</span>
+      <span class="name">姓名</span>
+      <span class="degree">畢業學位</span>
+      <span class="advisor">指導教授</span>
+      <span class="paper">論文名稱</span>';
       echo '</div>';
       echo '<div class="block_paper_posts">';
       while($query->have_posts()) : $query->the_post();
