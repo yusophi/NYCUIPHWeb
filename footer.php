@@ -39,6 +39,7 @@
             </div>
       </div>
 </div>
-      <!-- Milo: End of footer part -->
+<!-- Milo: End of footer part -->
 </body>
+
 </html>
