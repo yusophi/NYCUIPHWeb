@@ -217,7 +217,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
     }
     if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
+      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
     if(is_page('news') || is_page('news-en')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
@@ -304,6 +304,8 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
     if(is_page('links')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/links.css'));
     }
+    //wp_enqueue_script('backtoTOP_script', get_theme_file_uri('js/back_to_top.js'), true);
+
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>

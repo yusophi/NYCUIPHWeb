@@ -162,13 +162,13 @@
       </div>
 
       <div class="events">
-            <div class="event-title">
-                  <div class="event-icon-container"><img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg"></div>
-                  <?php if($locale == "zh_TW"):?>
-                  <div class="event-ch-title">學術活動<br></div>
+            <div class="block-title events_title">
+                  <img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg">                  <?php if($locale == "zh_TW"):?>
+                  <span class="ch-title">學術活動<br></span>
                   <?php endif; ?>
-                  <div class="event-en-title">Events</div>
+                  <span class="en-title">Events</span>
             </div>
+
             <div id="event-slides">
                   <div id="event-data">
                         <?php /*query the recent 6 posts*/
@@ -537,7 +537,7 @@
                                                 <?php 
                                                 $image = get_field('staff_photo');
                                                 if( !empty( $image ) ): ?>
-                                                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                                                      <img class="staff_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
                                                 <?php endif; ?>
                                           </div>
                                           <div class="profile_content">
@@ -570,10 +570,9 @@
                                                 </div>
                                                 <div class="overlay_profile_content">
                                                       <div class="overlay_title">
-                                                            <p class="contact_text profile_text">(Profile)</p>
+                                                            <p class="contact_text profile_text">Profile</p>
                                                             <p class="contact_text work_respon"><?php the_field('work_group') ?> </p>
                                                             <img src="<?php bloginfo('template_url')?>/images/icon/overlay_Contactus_icon.svg">
-                                                            <img src="<?php bloginfo('template_url') ?>/images/icon/overlay_Contactus_icon.svg">
                                                       </div>
                                                       <div class="overlay_middle">
                                                             <div class="overlay_img">
@@ -611,14 +610,14 @@
                                                             </div>
                                                             
                                                       </div>
-                                                      <div class="ovetlay_bottom">
-                                                            <div class="overlay_profile_left_pointer" onclick="plusProfile(-1)">
-                                                                  <img src="<?php bloginfo('template_url') ?>/images/icon/overlay_left_pointer.svg">
+                                                      <!--<div class="overlay_bottom">
+                                                            <div class="overlay_profile_pointer" onclick="plusProfile(-1)">
+                                                                  <img src="<?php// bloginfo('template_url') ?>/images/icon/overlay_left_pointer.svg">
                                                             </div>
-                                                            <div class="overlay_profile_right_pointer" onclick="plusProfile(1)">
-                                                                  <img src="<?php bloginfo('template_url') ?>/images/icon/overlay_right_pointer.svg">
+                                                            <div class="overlay_profile_pointer" onclick="plusProfile(1)">
+                                                                  <img src="<?php// bloginfo('template_url') ?>/images/icon/overlay_right_pointer.svg">
                                                             </div>
-                                                      </div>
+                                                      </div>-->
                                                 </div>
                                           </div>
                                     </div>

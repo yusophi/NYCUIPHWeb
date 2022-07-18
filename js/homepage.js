@@ -251,18 +251,22 @@ for (var i = 0; i < links_upper_items.length; i++) {
 
 /* Jenny: contactUs block js*/
 var ProfileIndex = 1;
+
 function currentProfile(n) {
     ProfileIndex = n;
     displayProfile(ProfileIndex);
 }
 
 function plusProfile(n) {
+    console.log("plus",n);
     ProfileIndex = ProfileIndex + n;
     displayProfile(ProfileIndex);
 }
 
 function displayProfile(n) {
-    var availableProfiles = document.getElementsByClassName("overlayinContact");
+    const availableProfiles = document.getElementsByClassName("overlayinContact");
+    const mainnav = document.getElementById("main-nav");
+
     if (n > availableProfiles.length) {
         ProfileIndex = 1;
     }
@@ -273,9 +277,8 @@ function displayProfile(n) {
     for (var i = 0; i < availableProfiles.length; i++) {
         availableProfiles[i].style.display = "none";
     }
-
     availableProfiles[ProfileIndex - 1].style.display = "block";
-    document.getElementById("main-nav").style.display = "none";
+    mainnav.style.display = "none";
 }
 
 function closeProfile(n) {
@@ -294,3 +297,11 @@ function closeProfile(n) {
     availableProfiles[ProfileIndex - 1].style.display = "none";
     document.getElementById("main-nav").style.display = "block";
 }
+
+const availableProfiles = document.getElementsByClassName("overlayinContact");
+
+window.addEventListener("scroll", function (){
+    for (var i = 0; i < availableProfiles.length; i++) {
+        availableProfiles[i].style.display = "none";
+    }
+})

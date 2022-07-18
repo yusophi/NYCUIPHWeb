@@ -65,7 +65,7 @@
 .back_to_top{
     position: relative;
     top: -12.5vw;
-    width: 10.5vw;
+    width: 12.5vw;
     height: 9.5vh;
 }
 
@@ -87,4 +87,17 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 480px){
+    .back_to_top{
+        width: 30.5vw;
+    }
+
+    .back_to_top .icon{
+        width: 30px;
+        height: 30px;
+    }
 }

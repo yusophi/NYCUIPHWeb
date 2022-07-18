@@ -14,7 +14,7 @@
                 <span class="bk_num">01.</span> 
                 <img class="icon_aboutus_2 img-left" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
                 <div class="video_title"> <?php the_field('video_title1') ?></div>    
-                <div class="bt-watchmore animation1_btn" id="watchmore-1">watch
+                <div class="bt-watchmore animation1_btn" id="hp-watchmore-1">watch
                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                 </div>
@@ -41,7 +41,7 @@
                 <img class="icon_aboutus_2 img-right" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
                 <div class="video_title"> <?php the_field('video_title2') ?></div>   
 
-                <div class="bt-watchmore animation1_btn" id="watchmore-2">watch
+                <div class="bt-watchmore animation1_btn" id="hp-watchmore-2">watch
                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                 </div>
@@ -60,6 +60,7 @@
     <?php get_template_part('template-parts/about','subject_Intro');?>
     <?php get_template_part('template-parts/about','past_supervisor');?>
     <?php get_template_part( 'template-parts/backtoTOP');?>  
-    <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/show_video.js"></script>
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/show_video.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>    
 <?php get_footer(); ?>

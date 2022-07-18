@@ -20,7 +20,7 @@
     flex-direction: column;
 }
 
-.member_picture{
+.member_picture img{
     width: 19.583vw;
     height: 12.5vw;
     overflow: hidden;
@@ -161,6 +161,20 @@
     .cat-list > li{
         margin-top: 1vw;
     }
+
+    .post_block{
+        grid-template-columns: 24vw 24vw 24vw;
+        column-gap: 5vw;
+    }
+
+    .member_picture img{
+        width: 23.5vw;
+        height: 15vw;
+    }
+
+    .name{
+        font-size: 2.30208vw;
+    }
 }
 
 @media (max-width: 480px){
@@ -179,5 +193,25 @@
 
     .cat-list > li{
         margin-top: 1.5vw;
+    }
+
+    .cat-list_item_name{
+        letter-spacing: 0.5vw;
+    }
+
+    .post_block{
+        grid-template-columns: 50vw;
+    }
+
+    .member_picture img{
+        width: 39.166vw;
+        height: 25vw;
+    }
+    .name{
+        font-size: 4.30208vw;
+    }
+
+    .title{
+        font-size: 3vw;
     }
 }

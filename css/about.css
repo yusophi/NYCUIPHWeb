@@ -343,7 +343,7 @@
 
 @media (max-width: 1024px){
     .page-about-banner {
-        margin-top: 20vw;
+        margin-top: 15vw;
     }
     .supervisor .texts{
         width: 15.5vw;
@@ -352,7 +352,7 @@
 
 @media (max-width: 768px) {
     .page-about-banner {
-        margin-top: 25vw;
+        margin-top: 20vw;
     }
     .supervisor .texts{
         width: 17.5vw;
@@ -361,9 +361,35 @@
 
 @media (max-width: 480px){
     .page-about-banner {
-        margin-top: 40vw;
+        margin-top: 30vw;
     }
+    
+    .information-block{
+        margin-top: 25vw;
+    }
+
+    .block-content{
+        width: auto;
+        flex-direction: column;
+    }
+
+    .texts{
+        width: auto;
+    }
+
+    .texts p{
+        margin-top: 2vw;
+    }
+
     .supervisor .texts{
-        width: 30.5vw;
+        width: 32.5vw;
+    }
+
+    .overlay_content{
+        flex-direction: column;
+    }
+
+    .bk_num{
+        font-size: 5vw;
     }
 }

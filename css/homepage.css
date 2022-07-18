@@ -314,34 +314,18 @@
 .event-indent {
     min-width: 8.7%;
 }
-.event-title {
-    margin-top: 4.427083333vw;
+
+.events_title{
+    margin-top: 2.6041vw;
 }
-.event-title div {
+
+.events_title > .ch-title, .events_title > .en-title{
     color: #ffbb00;
     text-align: center;
 }
-.event-ch-title {
-    margin-top: 0.618rem;
-    font-size: 2rem;
-    line-height: 1.13;
-    letter-spacing: 5px;
-}
-.event-en-title {
-    margin-top: 0.618rem;
-    font-size: 1.5rem;
-    line-height: 1.13;
-    letter-spacing: 1.8px;
-}
-.event-icon-container {
-    height: 50px;
-    width: 100%;
-}
-.event-icon-container img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
+
+
 .single-event.event-to-bigger {
     transition: 0.7s;
     height: calc(100vw * 0.2615);
@@ -475,7 +459,7 @@
 
 .bk_num {
     font-family: "TimesNewRoman";
-    font-size: 2..969166666vw;
+    font-size: 2.969166666vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -886,13 +870,12 @@
 /* Jenny: Contact us block start*/
 .ContactUs-container {
     width: 100vw;
-    height: 52vw;
     background-color: #e4dfd2;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -2vw;
+    margin-top: -1vw;
 }
 
 .ContactUs-container-en{
@@ -907,12 +890,12 @@
 #administor_profile_block {
     position: relative;
     width: 82.08333vw;  
-    margin-top: 6.09vw;
+    margin-top: 2vw;
     display: flex;
     align-items: flex-start;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 5vw;
 }
 
 #administor_profile_block .profile:first-child {
@@ -935,8 +918,8 @@
 }
 
 .profile-header img {
-    width: 20.833333333vw;
-    height: 22.135416666vw;
+    width: 20.83vw;
+    height: 22.14vw;
     border-radius: 6%;
     transition-timing-function: ease-out;
     transition-duration: 0.5s;
@@ -950,24 +933,23 @@
 .profile_content {
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 1vw;
 }
 
 .profile_p1, .profile_p2, .profile_p3 {
-    line-height: 1.823333333vw;
+    line-height: 1.82vw;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
-    /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
     flex-direction: row;
     color: #2e4565;
-    margin-top: 3.5%;
+    margin-top: 1vw;
 }
 
-.profile_p2{
-    margin-top: 10%;
-}
+/*.profile_p2{
+    margin-top: 2vw;
+}*/
 
 .contact_text {
     font-family: "Noto Sans TC", sans-serif;
@@ -979,7 +961,7 @@
 }
 
 .work_respon{
-    font-size: 0.9rem;
+    font-size: 0.9375vw;
     letter-spacing: 2px;
     padding-top: 2%;    
     padding-bottom: 2.5%;  
@@ -1031,6 +1013,7 @@
 
 .overlay_profile_content{
     width: 60vw;
+    height: 100vw;
     background-color: #efeee4;
     display: flex;
     flex-direction: column;
@@ -1038,7 +1021,7 @@
     z-index: 2;
 }
 
-.overlay_title, .overlay_middle, .ovetlay_bottom{
+.overlay_title, .overlay_middle, .overlay_bottom{
     width: 58vw;
     display: flex;
     flex-direction: row;
@@ -1050,8 +1033,6 @@
 .profile_text{
     font-size: 0.9375vw;
     letter-spacing: 0.104vw;
-    border-bottom: solid 1.5px rgba(46, 69, 101, 0.2);
-    z-index: 3;
 }
 
 .overlay_title img {
@@ -1060,8 +1041,8 @@
 }
 
 .overlay_middle {
-    margin-top: 5%;
-    padding-bottom: 2.5%;
+    margin-top: 3vw;
+    padding-bottom: 0.5vw;
     align-items: flex-start;
 }
 
@@ -1099,7 +1080,7 @@
 
 .overlay_self_info{
     width: 35vw;
-    margin-left: 2vw;
+    margin-left: 3vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1124,17 +1105,16 @@
 
 .overlay_self_info > .profile_p3{
     padding-bottom: 8%;
-    /*border-bottom: solid 1.5px rgba(46,69,101,0.2);*/
 }
 
 .overlay_phone_num, .overlay_mail{
     margin-left: 4%;
 }
 
-.ovetlay_bottom {
+.overlay_bottom {
     border-bottom: none;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    margin-top: 0.5vw;
+    margin-bottom: 3vw;
 }
 
 .self_intro {
@@ -1145,7 +1125,7 @@
     padding-top: 8%;
 }
 
-.overlay_profile_left_pointer, .overlay_profile_right_pointer {
+.overlay_profile_pointer{
     cursor: pointer;
     z-index: inherit;
 }
@@ -1231,9 +1211,6 @@
         font-size: 1.04166666667vw;
         transform: translateX(22.5px);
     }
-    .profile_p1, .profile_p2, .profile_p3 {
-        line-height: 17.5px;
-    }
 
     .SP_ch_title, .SP_en_title {
         font-size: 12.504px;
@@ -1292,6 +1269,16 @@
         margin-left: 12.5px;
         width: 15px;
     }
+    
+    .profile_p1, .profile_p2, .profile_p3 {
+        line-height: 17.5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact_title, .email, .phone_num, .self_intro{
+        line-height: 2.2vw;
+    }
 }
 
 @media (max-width: 800px) {
@@ -1328,5 +1315,30 @@
         width: 241px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+}
+
+@media (max-width: 480px){
+    #administor_profile_block{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile{
+        margin-left: 0;
+        width: auto;
+        align-items: center;
+        margin-top: 2vw;
+    }
+
+    .profile_p1, .profile_p2, .profile_p3 {
+        margin-top: 2vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact_title, .email, .phone_num, .self_intro{
+        line-height: 4.2vw;
     }
 }

@@ -94,7 +94,7 @@
 
 .staff_name > p, .staff_name > p > span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2rem;
+    font-size: 2.083vw;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 6px;
@@ -106,7 +106,7 @@
     letter-spacing: 2px;
 }
 .staff_name > p > span{
-    font-size: 1.2504rem;
+    font-size: 1.302vw;
     letter-spacing: 3.75px;
     margin-left: 0.8vw;
 }
@@ -114,19 +114,23 @@
 .contact{
     margin-top: 0.5vw;
 }
+
 .contact > p{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.contact > p > span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.14583vw;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.82;
-    letter-spacing: 3.3px;
+    letter-spacing: 1.7px;
     text-align: left;
     color: #2e4565;
-}
-.contact > p > span{
-    letter-spacing: 1.1px;
 }
 
 .staff_CV{
@@ -135,7 +139,7 @@
     justify-content: flex-start;
     position: relative;
     margin-top: 1vw;
-
+    align-items: center;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.9375vw;
     font-weight: 500;
@@ -146,23 +150,25 @@
     color: #4f5ab8;
     text-decoration: none;
 }
+
 .icon_download{
     margin-left: 0.5vw;
 }
+
 .right_block{
     display: flex;
     flex-direction: column;
+    margin-bottom: 2.2vw;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.14583vw;
     line-height: 1.82;
     letter-spacing: 3px;
     text-align: left;
     color: #647386;
-    margin-bottom: 2.2vw;
 }
 
 .right_block_title{
-    font-size: 1.3504rem;
+    font-size: 1.40625vw;
     font-weight: bold;
     letter-spacing: 4.05px;
     line-height: 1;
@@ -190,7 +196,116 @@
 }
 
 .works > ol > li, .works > ol > li > div{
-    font-size: 1.1rem;
+    font-size: 1.40625vw;
     line-height: 1.5;
     letter-spacing: 1.35px;
+}
+
+
+
+@media (max-width: 1024px){
+
+    .right_block{
+        font-size: 1.5vw;
+    }
+
+    .right_block_title{
+        font-size: 1.8vw;
+    }
+
+    .contact > p{
+        flex-direction: column;
+    }
+
+    .staff_name > p, .staff_name > p > span{
+        font-size: 2vw;
+    }
+
+}
+
+@media (max-width: 768px){
+    .right_block{
+        font-size: 1.8vw;
+    }
+
+    .right_block_title{
+        font-size: 2vw;
+    }
+    
+    .article_content{
+        margin-top: 20.23vw;
+    }
+
+    .contact > p{
+        flex-direction: column;
+    }
+
+    .short{
+        margin-top: 1.5vw;
+    }
+
+    .staff_name {
+        margin-top: 2.2vw;
+    }
+
+    .staff_name > p, .staff_name > p > span{
+        font-size: 2.2vw;
+    }
+}
+
+@media (max-width: 480px){
+    .article_content{
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    .left, .right{
+        width: auto;
+        margin-top: 5vw;
+    }
+
+    .member_picture{
+        width: auto;
+        height: 44vw;
+    }
+
+    .short{
+        margin-top: 4.5vw;
+        padding-bottom: 2.041vw;
+    }
+
+    .contact > p{
+        flex-direction: row;
+    }
+
+    .contact > p > span, .staff_CV{
+        font-size: 3.8vw;
+    }
+   
+    .staff_name {
+        margin-top: 5.2vw;
+    }
+    
+    .staff_name > p, .staff_name > p > span{
+        font-size: 5.8vw;
+    }
+
+    .right_block{
+        font-size: 3.8vw;
+        margin-bottom: 6vw;
+    }
+
+    .right_block_title{
+        font-size: 5vw;
+    }
+
+    .block-deco{
+        padding-top: 2.041vw;
+    }
+
+    .works{
+        margin-top: 4vw;
+    }
+    
 }
