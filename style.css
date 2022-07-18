@@ -185,9 +185,11 @@ body::-webkit-scrollbar {
     /* margin-right: 3.64583333vw;
     margin-top: 2.86458333vw; */
     justify-content: space-between;
+    align-items: center;
     transition: 0.3s;
     transform: translateY(0px);
     min-width: 100px;
+    border: solid 2px #162a47;
 }
 
 #nav-toolbar > botton{
@@ -326,14 +328,6 @@ body::-webkit-scrollbar {
 #nav-menu li a:hover{
     font-weight: bold;
 }
-
-/*#nav-hr.none-display {
-    /*transform: translateY(-30px);
-}
-
-.none-display {
-    /*transform: translateY(-30px);
-}*/
 
 .nav-menu-pullup {
     transform: translateY(-8vw);

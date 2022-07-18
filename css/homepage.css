@@ -153,9 +153,12 @@
 .news-article {
     width: 82vw;
     margin-top: 5.885vw;
-    display: grid;
+    /*display: grid;
     grid-template-columns: auto auto auto;
-    gap: 6.875vw;
+    gap: 6.875vw;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*** the readmore button*****/
