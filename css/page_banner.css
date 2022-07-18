@@ -24,8 +24,8 @@
 }
 
 .circle{
-    width: 2.65rem;
-    height: 2.65rem;
+    width: 2.65625vw;
+    height: 2.65625vw;
     position: absolute;
     right: 0%;
     top: 23%;
@@ -235,3 +235,20 @@
     color: #2e4565;
     margin-left: 1.3vw;
 }*/
+
+
+
+@media (max-width:960px) {
+    .circle {
+        width: 25.5px;
+        height: 25.5px;
+    }
+
+    .page_name {
+        font-size: 20px;
+    }
+
+    #eg {
+        font-size: 15px;
+    }
+}

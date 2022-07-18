@@ -101,6 +101,7 @@
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('events')){
+      wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);

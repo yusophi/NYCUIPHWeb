@@ -86,7 +86,7 @@
 .hp_event_tag{
     display: flex;
     flex-direction: row;
-    width: 18vw;
+    width: 18.5vw;
 }
 
 .sdg-tag{
@@ -159,15 +159,23 @@
     .event-main-margin {
         padding: 12px 39.432px;
     }
+
+    .event-cards-mask {
+        min-width: 400px;
+    }
 }
 
 @media (max-width:960px) {
+    .event-cards-mask {
+        height: 251px;
+    }
+
     .event-main-margin {
         height: 226px;
     }
 
     .hp_event_tag {
-        width: 172.8px;
+        min-width: 172.8px;
     }
 
     .event-intro {

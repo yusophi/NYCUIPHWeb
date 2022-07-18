@@ -21,8 +21,9 @@
 
 .event-cards
 {
-    width: 82vw;
-    margin: 0 9vw;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
     min-height: auto;
     display: flex;
     flex-direction: row;
@@ -221,4 +222,32 @@
     letter-spacing: 2.7px;
     color: #2e4565;
     margin-left: 1.3vw;
+}
+
+.event-space {
+    width: 35.57vw;
+    min-width: 400px;
+    margin: 0 2.5vw 4vw 2.5vw;
+}
+
+
+@media (max-width: 1130px) {
+    #event-slider-container-outer {
+        transform: translateX(calc(-1000px + 32.6vw));
+    }
+    .event-slider-item {
+        min-width: 400px;
+    }
+    #event-icon-prev {
+        left: calc(45.65vw - 215px);
+    }
+    #event-icon-next {
+        left: calc(54.35vw + 215px);
+    }
+}
+
+@media (max-width: 960px) {
+    .cat-list_item_name{
+        font-size: 9px;
+    }
 }
