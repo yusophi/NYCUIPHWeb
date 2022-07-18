@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="event-date"><?php the_field('event_date');?> </div>
                                 <div class="hp_event_tag">
-                                    <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
+                                    <div class="post_category"><?php the_field('event_item');?></div>
                                     <div class="event-location"><?php the_field('event_location'); ?></div>
                                 </div>
                                 <?php
@@ -115,6 +115,9 @@
                     </div>
                 </div>
                 <?php endwhile; ?>
+                <?php if ($counter == 5) : ?>
+                    <div class="event-space"></div>
+                <?php endif; ?>
             </div>
         <?php endif; wp_reset_postdata(); ?>
     </div>

@@ -65,8 +65,8 @@
 
 .black_circle {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 2.083vw;
+    height: 2.083vw;
     border-radius: 27px;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
@@ -502,4 +502,72 @@
     bottom: 0;
     left: 0;
     background-color: attr(data-before);
+}
+
+
+@media (max-width: 480px){
+
+    .pro_page{
+        padding-top: 13.802vw;
+    }
+
+    .black_circle{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .upper_instruction{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #title{
+        width: auto;
+        margin-left: 0;
+    }
+
+    .instru_img_container{
+        width: auto;
+    }
+
+    #instruction{
+        width: 82vw;
+        margin: 12vw 9vw;
+    }
+
+    .black_circle1{
+        margin: 14.03125vw 0 0 -3.0417vw;
+    }
+
+    .black_circle2{
+        margin: 16.75vw 0 0 -2.78125vw
+    }
+
+    #instru_img{
+        border-radius: 25px;
+    }
+
+    #ch_title{
+        font-size: 5vw;
+    }
+
+    #title{
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    #instru_content{
+        font-size: 3.5vw;
+    }
+
+    .pro_btn{
+        width: 18.75vw;
+        height: 6.125vw;
+        font-size: 3vw;
+    }
+
+    .ls_logo{
+        width: 12vw;
+        height: 12vw;
+    }
 }

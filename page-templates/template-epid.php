@@ -8,8 +8,10 @@
 <?php $locale = get_locale();?>
 <div class="pro_page">
     <div class="upper_instruction">
-        <div class="black_circle1 black_circle"></div>
-        <div class="black_circle2 black_circle"></div>
+        <div id="division_circle">
+            <div class="black_circle1 black_circle"></div>
+            <div class="black_circle2 black_circle"></div>
+        </div>
         <div id="title">
             <?php if($locale == "zh_TW"):?>
             <div id="ch_title">流行病學領域</div>
