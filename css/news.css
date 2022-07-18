@@ -25,6 +25,9 @@
     grid-template-columns: auto auto auto;
     gap: 6.875vw;
     background-color: #e4dfd2;
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: center;*/
 }
 
 .select_bar_container{

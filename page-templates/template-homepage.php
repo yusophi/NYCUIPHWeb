@@ -283,9 +283,9 @@
                               <img class="icon_aboutus_2 video1" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-2.svg">
                               <div class="video_title video1 <?php if($locale == "en_US"){echo 'video_title-en';} ?>"> <?php the_field('video_title1') ?></div>  
                               
-                              <div class="bt-watchmore animation1_btn" id="hp-watchmore-1">
-                                    <div class="watch_space"></div>
-                                    <div class="watch_text">watch</div>
+                              <div class="bt-watchmore animation1_btn" id="hp-watchmore-1">watch
+                                    <!--<div class="watch_space"></div>
+                                    <div class="watch_text">watch</div>-->
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                               </div>  
@@ -300,9 +300,9 @@
                               <span class="bk_num video2">02.</span> 
                               <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
                               <div class="video_title video2 <?php if($locale == "en_US"){echo 'video_title-en';} ?>"> <?php the_field('video_title2') ?></div>    
-                              <div class="bt-watchmore animation1_btn" id="hp-watchmore-2">
-                                    <div class="watch_space"></div>
-                                    <div class="watch_text">watch</div>
+                              <div class="bt-watchmore animation1_btn" id="hp-watchmore-2">watch
+                                    <!--<div class="watch_space"></div>
+                                    <div class="watch_text">watch</div>-->
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                               </div>
