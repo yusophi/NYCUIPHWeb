@@ -106,6 +106,12 @@
     position: relative;
 }
 
+.table_heads{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .table_heads span {
     font-family: "Noto Sans TC", sans-serif;
     font-size: 0.9375vw;
@@ -229,4 +235,15 @@
     letter-spacing: .140625vw;
     text-align: left;
     color: #4f5ab8;
+}
+
+@media (max-width: 480px){
+    .dep_ph_page{
+        padding-top: 30vw;
+    }
+
+    .dep_circle{
+        width: 2.65625vw;
+        height: 2.65625vw;
+    }
 }

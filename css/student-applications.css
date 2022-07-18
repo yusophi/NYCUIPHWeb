@@ -57,7 +57,7 @@
     box-shadow: 1px 1px 15px 0 rgba(255, 111, 0, 0.3);
     background-color: #efeee4;
     margin-top: 3.125vw;
-    padding: 2.60416vw 0;
+    padding: 2.60416vw;
 }
 
 ._font27{
@@ -75,17 +75,27 @@
     color: #ffa975;
 }
 
-.Phd_paper_form p{
+.list > p, .appendix_text, .note, .realted_files a{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.041667vw;
     font-weight: 500;
-    color: #2e4565;
-    margin-top: 2.0833vw;
 }
+
 .list{
     width: 33.75vw;
-    font-weight: 500;
     line-height: 2;
     letter-spacing: 1px;
+    margin-top: 2.0833vw;
+    color: #2e4565;
 }
+
+.appendix_text{
+    line-height: 2;
+    letter-spacing: 1px;
+    margin-top: 2.0833vw;
+    text-align: center;
+}
+
 .note{
     width: 37.39583vw;
     line-height: 1.75;
@@ -96,6 +106,7 @@
     border-bottom: solid 3px #e4dfd2;
     padding: 0.9635vw 0;
     margin-top: 2.005vw;
+    color: #2e4565;
 }
 
 .realted_files{
@@ -127,6 +138,8 @@
 }
 
 .filename{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
     font-weight: bold;
     line-height: 2.22;
     letter-spacing: 2.7px;
@@ -135,6 +148,8 @@
 }
 
 .file_group_content a, .other_forms a{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.14583vw;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -150,3 +165,37 @@
     flex-direction: column;
 }
 
+
+@media (max-width: 480px){
+    
+    .content_group{
+        margin-top: 8vw;
+    }
+
+    .group_title {
+        font-size: 2.5vw;
+    }
+
+    .group_content p{
+        font-size: 1vw;
+        line-height: 1.5;
+    }
+
+    .Phd_paper_form{
+        width: 82vw;
+        padding: 2.5vw;
+        margin-left: -1.5vw;
+    }
+
+    .list {
+        width: auto;
+    }
+
+    .list > p{
+        font-size: 0.8vw;
+    }
+
+    .file_group_content{
+        width: auto;
+    }
+}

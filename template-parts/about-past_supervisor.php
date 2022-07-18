@@ -3,11 +3,14 @@
  * Template Name: about-past_supervisor
  */
 ?>
-
+<?php $locale = get_locale();?>
 <div class="information-block IPH-past-supervisors">
     <div class="info-title">
+        <?php if($locale == "zh_TW"): ?>
         <span class="ch-title">歷屆主管</span>
+        <?php else: ?>
         <span class="en_title">Past-Supervisors</span>
+        <?php endif; ?>
     </div>
     <div class="block-deco">
         <div class="deco-dot"></div>

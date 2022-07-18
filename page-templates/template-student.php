@@ -19,7 +19,7 @@
     </div>
     <?php if(is_page('applications')):?>
             <?php get_template_part('template-parts/student','applications');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[1].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
@@ -27,7 +27,7 @@
             </script>
         <?php elseif(is_page('scholarships')):?>
             <?php get_template_part('template-parts/student','scholarships');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
@@ -35,7 +35,7 @@
             </script>
         <?php elseif(is_page('honor')):?>
             <?php get_template_part('template-parts/student','honor');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[1].className += " animation1_btn";
@@ -43,7 +43,7 @@
             </script>
         <?php elseif(is_page('past_papers')):?>
             <?php get_template_part('template-parts/student','past_papers');?>
-            <script>
+            <script type='text/javascript'>
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[1].className += " animation1_btn";

@@ -1,39 +1,59 @@
 // Jenny: slide show block
 var imagesIndex = 1;
+var refreshIntervalId;
 displayImage(imagesIndex);
 
 function currentImage(n) {
     imagesIndex = n;
     displayImage(imagesIndex);
+    refreshIntervalId = setInterval(() => {
+        displayImage(imagesIndex);
+        imagesIndex++;
+        if(imagesIndex > 8){
+          imagesIndex = 1;
+        }
+    }, 2500); 
 }
 
-function plusImage(n) {
-    imagesIndex = imagesIndex + n;
+function plusImage(n){
+    imagesIndex = imagesIndex+n;
+    clearInterval(refreshIntervalId);
     displayImage(imagesIndex);
+    refreshIntervalId = setInterval(() => {
+        displayImage(imagesIndex);
+        imagesIndex++;
+        if(imagesIndex > 8){
+          imagesIndex = 1;
+        }
+    }, 2500); 
 }
 
 function displayImage(n) {
     var availableImages = document.getElementsByClassName("imagesSlide");
     var allDots = document.getElementsByClassName("dot");
-    if (n > availableImages.length) {
-        imagesIndex = 1;
-    }
-    if (n < 1) {
-        imagesIndex = availableImages.length;
-    }
-    for (var i = 0; i < availableImages.length; i++) {
+    if (n > availableImages.length) { imagesIndex = 1;}
+    if (n < 1) { imagesIndex = availableImages.length;}
+
+    for (var i = 0; i < availableImages.length; i++){
         availableImages[i].style.display = "none";
     }
 
     for (var i = 0; i < allDots.length; i++) {
         allDots[i].className = allDots[i].className.replace("active", " ");
     }
-    availableImages[imagesIndex - 1].style.display = "block";
-    allDots[imagesIndex - 1].className += " active";
+    availableImages[imagesIndex-1].style.display = "block";
+    allDots[imagesIndex-1].className += " active";
 }
 
-// Milo: JS code for event part
+refreshIntervalId = setInterval(() => {
+    displayImage(imagesIndex);
+    imagesIndex++;
+    if(imagesIndex > 8){
+      imagesIndex = 1;
+    }
+}, 2500); 
 
+// Milo: JS code for event part
 FlexSlider = {
     num_items: document.querySelectorAll(".event-data-item").length,
 
@@ -256,9 +276,6 @@ function displayProfile(n) {
 
     availableProfiles[ProfileIndex - 1].style.display = "block";
     document.getElementById("main-nav").style.display = "none";
-    /*document.getElementsByClassName("Links-container").style.zIndex = "-1";*/
-
-    /*allDots[ProfileIndex-1].className +=" active";*/
 }
 
 function closeProfile(n) {
@@ -276,11 +293,4 @@ function closeProfile(n) {
 
     availableProfiles[ProfileIndex - 1].style.display = "none";
     document.getElementById("main-nav").style.display = "block";
-    /*allDots[ProfileIndex-1].className +=" active";*/
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
 }

@@ -5,14 +5,18 @@
 ?>
 
 <?php get_header(); ?>
-
+<?php $locale = get_locale();?>
 <div class="pro_page">
     <div class="upper_instruction">
         <div class="black_circle1 black_circle"></div>
         <div class="black_circle2 black_circle"></div>
         <div id="title">
+            <?php if($locale == "zh_TW"):?>
             <div id="ch_title">流行病學領域</div>
             <div id="en_title">Division of Epidemiology</div>
+            <?php else: ?>
+            <div id="en_title">Division of Epidemiology</div>
+            <?php endif; ?>
         </div>
         <div id="instruction">
             <div class="instru_img_container"><img id="instru_img" src="<?php bloginfo('template_url') ?>/images/page_pro_division/epid_key_vision.png"></div>

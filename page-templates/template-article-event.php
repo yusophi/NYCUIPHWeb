@@ -123,7 +123,7 @@
                                 <div class="event-img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/pic-seminar.svg"></div>
                                 <div class="event-info">
                                     <div class="event-date-title">
-                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"">
+                                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg">
                                         <span class="event-date-words">Date</span>
                                     </div>
                                     <div class="event-date"><?php the_field('event_date');?> </div>

@@ -22,8 +22,8 @@
       adding_active_class(filed_slugs,title_slugs);
       const type = $(this).data('type');
       const category = $(this).data('slug');
-      console.log("field: ",filed_slugs);
-      console.log("title: ",title_slugs);
+      //console.log("field: ",filed_slugs);
+      //console.log("title: ",title_slugs);
 
       $.ajax({
         url: wpAjax.ajaxUrl,

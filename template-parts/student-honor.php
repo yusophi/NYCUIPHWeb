@@ -10,7 +10,7 @@
                 </div>  
             </a>
         </div>
-        <div class="item_titles _font18">
+        <div class="item_titles">
             <span class="name_col">姓名</span>
             <span>獎項</span>
         </div>
@@ -213,7 +213,7 @@
     </div>
 </div>
 
-<script>
+<script type='text/javascript'>
     //const regu_row_mst = document.getElementsByClassName("ms_field");
     //const regu_row_phd = document.getElementsByClassName("phd_field");
     const h1_whole_rows = document.getElementById("honor_block1").getElementsByClassName("honor_rows");

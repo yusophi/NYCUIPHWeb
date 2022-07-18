@@ -4,30 +4,56 @@
  */
 ?>
 <?php get_header(); ?>
+<?php $locale = get_locale();?>
 <div class="page_member">
     <div class="banner">
+        <?php if($locale == "zh_TW"):?>
         <span class="page_name" >系所成員<br></span>
         <span class="page_name" id="eg">Members</span>
+        <?php else: ?>
+        <span class="page_name" id="page_name-en">Members</span>
+        <?php endif; ?>
         <div class="circle"></div>
     </div>
-    <?php $areas_categories = get_categories(array(
-                'parent' => 21,
+    <?php 
+        if($locale == "zh_TW"){
+            $areas_categories = get_categories(array(
+                'parent' => 33, /*21*/
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
-          $prof_categories = get_categories(array(
-                'parent' => 25,
+
+            $prof_categories = get_categories(array(
+                    'parent' => 27, /*25*/
+                    'orderby' => 'slug',
+                    'hide_empty' => false,
+                    'order'   => 'ASC'
+                ) );
+        }else{
+            $areas_categories = get_categories(array(
+                'parent' => 112,
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
+            $prof_categories = get_categories(array(
+                'parent' => 120,
+                'orderby' => 'slug',
+                'hide_empty' => false,
+                'order'   => 'ASC'
+            ) );
+        }
     ?>
     <div class="select_bar_container">
         <input type="hidden" id="filters-field" value="" />
         <input type="hidden" id="filters-title" value="" />
         <div class="cat-list_container">
-            <p>領域｜</p>
+            <?php if($locale == "zh_TW"):?>
+            <p>領域&#124;</p>
+            <?php else: ?>
+            <p>Division&#124;</p>
+            <?php endif; ?>
             <ul class="cat-list" id="cat_area">
                 <?php foreach($areas_categories as $area_category) : ?>
                     <li>
@@ -40,7 +66,11 @@
             </ul>
         </div>
         <div class="cat-list_container">
-            <p>職稱｜</p>
+            <?php if($locale == "zh_TW"):?>
+            <p>職稱&#124;</p>
+            <?php else: ?>
+            <p>Position&#124;</p>
+            <?php endif; ?>
             <ul class="cat-list" id="cat_prof">
                 <?php foreach($prof_categories as $prof_category) : ?>
                     <li>
@@ -53,30 +83,6 @@
             </ul>
         </div>
     </div>
-
-<!--    <div class="class_selector">
-        <span>職稱｜</span>
-        <label class="select_container" id="selection_studies">專任教師
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">合聘教師
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">兼任教師
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">醫學人文教師
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="select_container" id="selection_speech">系所主管
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-    </div>-->
     <?php
         $args = array(
                 'post_type' => 'Staff',

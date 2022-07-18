@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.arch_picture{
+.arch_picture img{
     width: 67.135vw;
     height: 37.7083vw;
     overflow: hidden;
@@ -20,3 +20,4 @@
     color: #efeee4;
     background-color: #2e4565;
 }
+

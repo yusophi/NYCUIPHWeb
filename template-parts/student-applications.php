@@ -27,12 +27,12 @@
         <div class="group_content"><?php the_field('content8'); ?></div>
         <div class="Phd_paper_form">
             <div class="orange_text _font27">博士班論文格式，請依照以下內容依序撰寫</div>
-            <div class="list _font20"><?php the_field('PhD_paper_form');?></div>
-            <div class="list orange_text _font20">Appendix.&nbsp;Published papers&nbsp;(全文若非open access，可放摘要)</div>
-            <div class="note _font20">*論文內容若需引用已發表期刊內容應尊受相關版權規定。</div>
+            <div class="list"><?php the_field('PhD_paper_form');?></div>
+            <div class="appendix_text orange_text">Appendix.&nbsp;Published papers&nbsp;(全文若非open access，可放摘要)</div>
+            <div class="note">*論文內容若需引用已發表期刊內容應尊受相關版權規定。</div>
             <div class="realted_files">
-                <a class="_font20" href="<?php echo esc_url(the_field('application_form1')); ?>" target="_blank">．國立陽明交通大學碩博士學位【延後公開】申請書</a>
-                <a class="_font20" href="<?php echo esc_url(the_field('application_form2')); ?>" target="_blank">．國立陽明交通大學碩博士學位論文格式</a>
+                <a href="<?php echo esc_url(the_field('application_form1')); ?>" target="_blank">．國立陽明交通大學碩博士學位【延後公開】申請書</a>
+                <a href="<?php echo esc_url(the_field('application_form2')); ?>" target="_blank">．國立陽明交通大學碩博士學位論文格式</a>
             </div>
         </div>
     </div><div class="content_group">
@@ -50,13 +50,13 @@
                 $pdf_file = $file_group_content['pdf_file'];
             ?>
             <div class="file_group_content">
-                <span class="filename _font18"><?php echo $filename; ?></span>
+                <span class="filename"><?php echo $filename; ?></span>
                 <div>
                 <?php if($word_file):?>
-                    <a class="_font22" href="<?php echo esc_url($word_file); ?>" target="_blank">【word】</a>
+                    <a href="<?php echo esc_url($word_file); ?>" target="_blank">【word】</a>
                 <?php endif; ?>
                 <?php if($pdf_file):?>
-                    <a class="_font22" href="<?php echo esc_url($pdf_file); ?>" target="_blank">【PDF】</a>
+                    <a href="<?php echo esc_url($pdf_file); ?>" target="_blank">【PDF】</a>
                 <?php endif; $count = $count + 1;?>
                 </div>
             </div>

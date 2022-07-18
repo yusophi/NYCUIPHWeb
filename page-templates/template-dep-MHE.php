@@ -5,12 +5,16 @@
 ?>
 
 <?php get_header(); ?>
-
+<?php $locale = get_locale();?>
 <div class="dep_ph_page">
     <div class="dep_info">
         <div class="dep_title">
+            <?php if($locale == "zh_TW"): ?>
             <div>醫學人文暨教育學科</div>
             <div class="dep_en_title">Department of Medical Humanities and Education</div>
+            <?php else: ?>
+            <div class="dep_en_title">Department of Medical Humanities and Education</div>
+            <?php endif; ?>
         </div>
         <div class="dep_circle"></div>
     </div>

@@ -76,12 +76,21 @@
     margin-top: 3.125vw;
     padding-bottom: 2.084vw;
 }
+
+.item_titles span, span.file_title{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: 500;
+    letter-spacing: 0.140625vw;
+    text-align: left;
+}
+
 .item_title1{
     margin-left: 15.5vw;
 }
 
 .item_title2{
-    margin-left: 15.9vw;
+    margin-left: 14.5vw;
 }
 
 .regulation_rows{
@@ -108,8 +117,9 @@
 }
 
 .item1, .item2{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .item1{
@@ -167,4 +177,75 @@
 #btn-degree{
     color: #efeee4;
     background-color: #2e4565;
+}
+
+
+img.icon_download{
+    width: 3.3854vw;
+    height: 1.71875vw;
+}
+
+@media (max-width: 768px) {
+    .year{
+        width: 12vw;
+    }
+
+    .item_title1{
+        margin-left: 17.5vw;
+    }
+
+    .item_title2{
+        margin-left: 9.5vw;
+    }
+   
+}
+
+@media (max-width: 480px){
+    .item_titles span{
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 0.5375vw;
+        font-weight: 500;
+        letter-spacing: 0.0625vw;
+        text-align: left;
+    }
+    
+    .item_title1{
+        margin-left: 3.5vw;
+    }
+
+    .item_title2{
+        margin-left: 4.5vw;
+    }
+
+    .link_block{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .others_regu_rows{
+        width: 70vw;
+    }
+    
+    .others_regu_rows > .link_block{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item1, .item2{
+        margin-left: 0;
+    }
+
+    .item2{
+        width: 58vw
+    }
+
+    img.icon_download{
+        width: 7vw;
+        height: 4.5vw;
+    }
+
+    .regulation_block{
+        margin-top: 6.125vw;
+    }
 }
