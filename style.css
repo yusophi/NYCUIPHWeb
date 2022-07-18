@@ -189,7 +189,6 @@ body::-webkit-scrollbar {
     transition: 0.3s;
     transform: translateY(0px);
     min-width: 100px;
-    border: solid 2px #162a47;
 }
 
 #nav-toolbar > botton{
