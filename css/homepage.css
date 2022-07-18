@@ -314,18 +314,34 @@
 .event-indent {
     min-width: 8.7%;
 }
-
-.events_title{
-    margin-top: 2.6041vw;
+.event-title {
+    margin-top: 4.427083333vw;
 }
-
-.events_title > .ch-title, .events_title > .en-title{
+.event-title div {
     color: #ffbb00;
     text-align: center;
 }
-
-
-
+.event-ch-title {
+    margin-top: 0.618rem;
+    font-size: 2rem;
+    line-height: 1.13;
+    letter-spacing: 5px;
+}
+.event-en-title {
+    margin-top: 0.618rem;
+    font-size: 1.5rem;
+    line-height: 1.13;
+    letter-spacing: 1.8px;
+}
+.event-icon-container {
+    height: 50px;
+    width: 100%;
+}
+.event-icon-container img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .single-event.event-to-bigger {
     transition: 0.7s;
     height: calc(100vw * 0.2615);
@@ -339,6 +355,8 @@
     margin-top: 3.27vw;
     margin-bottom: 3.27vw;
 }
+
+/************************************/
 
 /************************************/
 /* Jennt: About us Block */

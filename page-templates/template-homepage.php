@@ -162,11 +162,10 @@
       </div>
 
       <div class="events">
-            <div class="block-title events_title">
-                  <img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg">                  <?php if($locale == "zh_TW"):?>
-                  <span class="ch-title">學術活動<br></span>
-                  <?php endif; ?>
-                  <span class="en-title">Events</span>
+            <div class="event-title">
+                  <div class="event-icon-container"><img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg"></div>
+                  <div class="ch-title">學術活動<br></div>
+                  <div class="en-title">Events</div>
             </div>
 
             <div id="event-slides">
@@ -200,28 +199,30 @@
                                                                               <div class="img-container"><img src="<?php bloginfo('template_url') ?>/images/icon/icon-clock.svg"></div>
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
-                                                                        <div class="event-date"><?php the_field('event_date'); ?></div>
+                                                                        <div class="event-date"><?php the_field('event_date'); ?> </div>
                                                                         <div class="hp_event_tag">
-                                                                              <div class="post_category"><?php the_field('event_item');?></div>
+                                                                              <div class="post_category"><?php the_field('event_item'); //the_category(''); 
+                                                                                                            ?></div>
                                                                               <div class="event-location"><?php the_field('event_location'); ?></div>
                                                                         </div>
-                                                                        <?php $sdgs = get_field('sdg');
-                                                                              if ($sdgs) : ?>
-                                                                                    <ul class="sdg-tag">
-                                                                                          <?php foreach ($sdgs as $sdg) : ?>
-                                                                                                <li><?php echo $sdg; ?></li>
-                                                                                          <?php endforeach; ?>
-                                                                                    </ul>
+                                                                        <?php
+                                                                        $sdgs = get_field('sdg');
+                                                                        if ($sdgs) : ?>
+                                                                              <ul class="sdg-tag">
+                                                                                    <?php foreach ($sdgs as $sdg) : ?>
+                                                                                          <li><?php echo $sdg; ?></li>
+                                                                                    <?php endforeach; ?>
+                                                                              </ul>
                                                                         <?php endif; ?>
                                                                   </div>
-                                                                  <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                                                                  <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."; ?></div>
                                                             </div>
+                                                            <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                                            <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..." ?></div>
                                                       </div>
                                                 </div>
                                           </div>
                                     </div>
-                              </div>                                                                 
+                              </div>
                               <?php endwhile; ?>
                         <?php endif;
                         wp_reset_postdata(); ?>
