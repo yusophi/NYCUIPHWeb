@@ -8,8 +8,8 @@
 <?php $locale = get_locale();?>
 <div class="pro_page">
     <div class="upper_instruction">
-        <div class="black_circle1 black_circle"></div>
-        <div class="black_circle2 black_circle"></div>
+        <div class="black_circle1 black_circle bio_circle1"></div>
+        <div class="black_circle2 black_circle bio_circle2"></div>
         <div id="title">
             <?php if($locale == "zh_TW"): ?>
             <div id="ch_title">生物統計<br>與資料科學領域 </div>

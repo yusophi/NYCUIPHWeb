@@ -550,6 +550,7 @@
         margin: 0 9vw;
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 10vw;
     }
 
     #title{
@@ -669,6 +670,14 @@
 
     .electives > p{
         width: auto;
+    }
+
+    .bio_circle1{
+        margin: 25.03125vw 0 0 0.9583vw;
+    }
+
+    .bio_circle2{
+        margin: 28.75vw 0 0 1.51875vw;
     }
 }
 
