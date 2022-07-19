@@ -45,10 +45,10 @@
     transition: 0.4s ease-in-out;
 }
 
-.tmp_arti_news > img{
+/* .tmp_arti_news > img{
     width: auto;
     margin: auto;
-}
+} */
 
 .post_icon > div{
     position: absolute;
@@ -267,9 +267,6 @@
 
 .whiteText{
     border-bottom: solid 2px #efeee4;
-    margin: 0;
-    left: 0;
-    right: 0;
 }
 
 .whiteText div, .whiteText div a{
@@ -308,9 +305,7 @@
     border-right: solid 2px #efeee4;
 }
 
-.whiteText:hover .article-title{
-    margin-top: 6vw;
-}
+
 
 
 @media (max-width:960px) {

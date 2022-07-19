@@ -65,7 +65,7 @@
 .back_to_top{
     position: relative;
     top: -12.5vw;
-    width: 12.5vw;
+    width: 100px;
     height: 9.5vh;
 }
 
