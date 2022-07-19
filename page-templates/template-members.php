@@ -18,14 +18,14 @@
     <?php 
         if($locale == "zh_TW"){
             $areas_categories = get_categories(array(
-                'parent' => 21,
+                'parent' => 33, /*21*/
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
 
             $prof_categories = get_categories(array(
-                    'parent' => 25,
+                    'parent' => 27, /*25*/
                     'orderby' => 'slug',
                     'hide_empty' => false,
                     'order'   => 'ASC'
@@ -179,12 +179,6 @@
                         <div class="member_picture">
                             <?php echo wp_get_attachment_image( $picture, 'member_picture'); ?>
                         </div>
-
-                        <?php //if( $link ): ?>
-                            <!--<a class="name" href="<?php //echo esc_url( $link ); ?>" target="_blank"><?php //echo $name; ?><span class="title"><?php //echo $title; ?></span></a>
-                        <?php //elseif( $CV ): ?>
-                            <a class="name" href="<?php //echo esc_url( $CV ); ?>" target="_blank"><?php //echo $name; ?><span class="title"><?php //echo $title; ?></span></a>-->
-                        <?php //else: ?>
                         <a class="name" href="<?php the_permalink(); ?>"><?= $name; ?><span class="title"><?= $title; ?></span></a>
                         <?php //endif; ?>
 
@@ -202,6 +196,7 @@
     <?php endif;
         wp_reset_postdata(); 
     ?>
-    <?php get_template_part( 'template-parts/backtoTOP');?>    
+    <?php get_template_part( 'template-parts/backtoTOP');?> 
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>
 <?php get_footer();?>

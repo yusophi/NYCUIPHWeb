@@ -47,7 +47,7 @@
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1.14583333vw;
     line-height: 1.82;
-    letter-spacing: 4.4px;
+    letter-spacing: 3.3px;
     text-align: left;
     color: #2e4565;
 }
@@ -65,8 +65,8 @@
 
 .black_circle {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 2.083vw;
+    height: 2.083vw;
     border-radius: 27px;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
@@ -428,11 +428,8 @@
     text-align: center;
     border-radius: 10px;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
-}
-
-.data.invisible {
-    display: none;
+    margin-bottom: 10px;
+    margin-top: 1.5vw;
 }
 
 @keyframes changing-animate {
@@ -473,7 +470,7 @@
     letter-spacing: 0.2109375vw;
 }
 
-.tgh_title.top_mr {
+.margin_top {
     margin-top: 5.208333vw;
 }
 
@@ -503,3 +500,184 @@
     left: 0;
     background-color: attr(data-before);
 }
+
+.data.invisible {
+    display: none;
+}
+
+.subclass{
+    text-align: center;
+}
+
+.tgh_passage p, #instru_content p{
+    margin-top: 1.8vw;
+}
+
+.staff_block{
+    width: 69vw;
+    margin: 5vw 15vw;
+    display: grid;
+    grid-template-columns: 19.583vw 19.583vw 19.583vw;
+    column-gap: 5.208vw;
+    row-gap: 5.208vw;	
+}
+
+.electives{
+    width: 24.21vw;
+}
+
+.electives > p{
+    width: 15.5vw;
+}
+
+.tgh_group{
+    margin-top: 5vw;
+}
+
+@media (max-width: 480px){
+
+    .pro_page{
+        padding-top: 13.802vw;
+    }
+
+    .black_circle{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .upper_instruction{
+        width: 82vw;
+        margin: 0 9vw;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10vw;
+    }
+
+    #title{
+        width: auto;
+        margin-left: 0;
+    }
+
+    .instru_img_container{
+        width: auto;
+        margin-top: 8vw;
+    }
+
+    #instruction{
+        width: auto;
+        margin: 6vw 0 0;
+    }
+
+    .black_circle1{
+        margin: 13.03125vw 0 0 0.9583vw;
+    }
+
+    .black_circle2{
+        margin: 16.75vw 0 0 1.51875vw;
+    }
+
+    #instru_img{
+        border-radius: 25px;
+    }
+
+    #ch_title{
+        font-size: 5vw;
+    }
+
+    #title{
+        font-size: 3vw;
+    }
+
+    #instru_content{
+        font-size: 3.5vw;
+    }
+
+    .tgh_passage p, #instru_content p{
+        margin-top: 6.5vw;
+    }
+
+    .pro_btn{
+        width: 18.75vw;
+        height: 6.125vw;
+        font-size: 3vw;
+    }
+
+    .ls_logo{
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .staff_block{
+        width: 50vw;
+        grid-template-columns: 50vw;
+        margin: 8vw 25vw;
+        column-gap: 0;
+        row-gap: 6vw;
+    }
+
+    .member_picture img{
+        width: auto;
+        height: auto;
+    }
+
+    .column_2_ls .ls_content_container{
+        padding: 3.864583vw 5vw;
+        margin-left: 2vw;
+    }
+
+    .ls_content, ls_content p{
+        line-height: 5vw;
+    }
+
+    .column_2_ls{
+        margin-left: -11vw;
+    }
+
+    .column_1_ls{
+        width: 73vw;
+        margin-top: 10vw;
+        margin-left: -11vw;
+    }
+
+    .ls_lr_content{
+        width: auto;
+    }
+
+    .ls_sub_title{
+        width: 25vw;
+        height: 12vw;
+        margin-top: 5vw;
+        border-radius: 13px;
+    }
+
+    .elective_class1{
+        margin: 5vw 3vw 0;
+    }
+
+    .ls_instru{
+        width: 73vw;
+        margin-left: -11vw;
+    }
+
+    .ls_remark{
+        margin: 5vw 3vw;
+    }
+
+    .electives{
+        width: 30vw;
+        padding: 5vw 3vw;
+    }
+
+    .electives > p{
+        width: auto;
+    }
+
+    .bio_circle1{
+        margin: 25.03125vw 0 0 0.9583vw;
+    }
+
+    .bio_circle2{
+        margin: 28.75vw 0 0 1.51875vw;
+    }
+}
+

@@ -1,14 +1,14 @@
 <div class="student_paper">
     <?php $years = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 31,
+                'parent' => 40, /*31 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'DSEC'
             ) );
           $divisions = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 33,
+                'parent' => 41, /*33 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'

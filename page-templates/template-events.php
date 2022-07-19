@@ -20,7 +20,7 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 8,
+                'parent' => 10, /*8 */
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
@@ -95,10 +95,8 @@
                                     <span class="event-date-words">Date</span>
                                 </div>
                                 <div class="event-date"><?php the_field('event_date');?> </div>
-                                <!--<div class="event-categories"><?php //the_category(''); ?></div>
-                                <div class="event-location"><?php //the_field('event_location'); ?></div>-->
                                 <div class="hp_event_tag">
-                                    <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
+                                    <div class="post_category"><?php the_field('event_item');?></div>
                                     <div class="event-location"><?php the_field('event_location'); ?></div>
                                 </div>
                                 <?php
@@ -117,6 +115,9 @@
                     </div>
                 </div>
                 <?php endwhile; ?>
+                <?php if ($counter == 5) : ?>
+                    <div class="event-space"></div>
+                <?php endif; ?>
             </div>
         <?php endif; wp_reset_postdata(); ?>
     </div>
@@ -143,4 +144,5 @@
 
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>
 <?php get_footer(); ?>

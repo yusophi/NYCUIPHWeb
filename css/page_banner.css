@@ -24,8 +24,8 @@
 }
 
 .circle{
-    width: 2.65rem;
-    height: 2.65rem;
+    width: 2.65625vw;
+    height: 2.65625vw;
     position: absolute;
     right: 0%;
     top: 23%;
@@ -183,4 +183,26 @@
 .page_name-en{
     font-size: 1.8vw;
     letter-spacing: 0.078125vw;
+}
+
+
+
+@media (max-width: 768px){
+    .page_name{
+        font-size: 3.083vw;
+    }
+
+    #eg{
+        font-size: 2.5625vw;
+    }
+}
+
+@media (max-width: 480px){
+    .page_name{
+        font-size: 5vw;
+    }
+
+    #eg{
+        font-size: 3vw;
+    }
 }

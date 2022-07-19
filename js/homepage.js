@@ -3,9 +3,8 @@ var imagesIndex = 1;
 var refreshIntervalId;
 displayImage(imagesIndex);
 
-function currentImage(n){
-    imagesIndex =n;
-    clearInterval(refreshIntervalId);
+function currentImage(n) {
+    imagesIndex = n;
     displayImage(imagesIndex);
     refreshIntervalId = setInterval(() => {
         displayImage(imagesIndex);
@@ -29,17 +28,18 @@ function plusImage(n){
     }, 2500); 
 }
 
-function displayImage(n){
+function displayImage(n) {
     var availableImages = document.getElementsByClassName("imagesSlide");
     var allDots = document.getElementsByClassName("dot");
-    if( n > availableImages.length) { imagesIndex = 1; }
-    if( n < 1) { imagesIndex = availableImages.length; }
-    for(var i=0; i<availableImages.length; i++){
+    if (n > availableImages.length) { imagesIndex = 1;}
+    if (n < 1) { imagesIndex = availableImages.length;}
+
+    for (var i = 0; i < availableImages.length; i++){
         availableImages[i].style.display = "none";
     }
 
-    for(var i=0;i<allDots.length;i++){
-        allDots[i].className = allDots[i].className.replace("active"," ");
+    for (var i = 0; i < allDots.length; i++) {
+        allDots[i].className = allDots[i].className.replace("active", " ");
     }
     availableImages[imagesIndex-1].style.display = "block";
     allDots[imagesIndex-1].className += " active";
@@ -53,9 +53,7 @@ refreshIntervalId = setInterval(() => {
     }
 }, 2500); 
 
-
 // Milo: JS code for event part
-
 FlexSlider = {
     num_items: document.querySelectorAll(".event-data-item").length,
 
@@ -138,12 +136,17 @@ FlexSlider = {
     },
 
     gotoNext: function () {
+        var win = window,
+            doc = document,
+            docElem = doc.documentElement,
+            body = doc.getElementsByTagName("body")[0],
+            x = win.innerWidth || docElem.clientWidth || body.clientWidth;
         this.next = true;
         document
             .querySelector("#event-slider-container")
             .classList.add("event-slider-container-transition");
-        document.querySelector("#event-slider-container").style.transform =
-            "translateX(-44.11%)";
+        document.querySelector("#event-slider-container").style.transform = x > 960?
+            "translateX(-44.11%)":"translateX(calc(-400px - 8.7%))";
         document
             .querySelector(".main-event .single-event")
             .classList.add("event-to-smaller");
@@ -167,12 +170,17 @@ FlexSlider = {
     },
 
     gotoPrev: function () {
+        var win = window,
+        doc = document,
+        docElem = doc.documentElement,
+        body = doc.getElementsByTagName("body")[0],
+        x = win.innerWidth || docElem.clientWidth || body.clientWidth;
         this.next = false;
         document
             .querySelector("#event-slider-container")
             .classList.add("event-slider-container-transition");
-        document.querySelector("#event-slider-container").style.transform =
-            "translateX(44.11%)";
+        document.querySelector("#event-slider-container").style.transform = x > 960?
+        "translateX(44.11%)":"translateX(calc(400px + 8.7%))";
         document
             .querySelector(".main-event .single-event")
             .classList.add("event-to-smaller");
@@ -217,18 +225,15 @@ FlexSlider.init();
 
 // Milo: End of event part
 
-
 // Milo: JS code for links part
 
 var links_category_items = document.getElementsByClassName(
     "links-category-item"
 );
 
-var links_upper_items = document.getElementsByClassName(
-    "links-upper-item"
-);
+var links_upper_items = document.getElementsByClassName("links-upper-item");
 
-var Links_container = document.getElementsByClassName('Links-container');
+var Links_container = document.getElementsByClassName("Links-container");
 
 for (var i = 0; i < links_upper_items.length; i++) {
     links_upper_items[i].addEventListener("click", function () {
@@ -237,60 +242,66 @@ for (var i = 0; i < links_upper_items.length; i++) {
         for (var j = 0; j < links_category_items.length; j++) {
             links_category_items[j].classList.remove("expanded");
         }
-        if (toExpand) this.parentElement.classList.add('expanded');
-        Links_container[0].classList.toggle('expanded', toExpand);
+        if (toExpand) this.parentElement.classList.add("expanded");
+        Links_container[0].classList.toggle("expanded", toExpand);
     });
 }
 
 // Milo: End of links part
 
-
 /* Jenny: contactUs block js*/
-var ProfileIndex = 0;
-function currentProfile(n){
+var ProfileIndex = 1;
+
+function currentProfile(n) {
     ProfileIndex = n;
     displayProfile(ProfileIndex);
 }
 
-function plusProfile(n){
-    ProfileIndex = ProfileIndex+n;
+function plusProfile(n) {
+    console.log("plus",n);
+    ProfileIndex = ProfileIndex + n;
     displayProfile(ProfileIndex);
 }
 
-function displayProfile(n){
-    var availableProfiles = document.getElementsByClassName("overlayinContact");
-    if( n > availableProfiles.length) { ProfileIndex = 1; }
-    if( n < 1) { ProfileIndex = availableProfiles.length; }
+function displayProfile(n) {
+    const availableProfiles = document.getElementsByClassName("overlayinContact");
+    const mainnav = document.getElementById("main-nav");
 
-    for(var i=0; i < availableProfiles.length; i++){
-        availableProfiles[i].style.display = "none";
+    if (n > availableProfiles.length) {
+        ProfileIndex = 1;
+    }
+    if (n < 1) {
+        ProfileIndex = availableProfiles.length;
     }
 
-    availableProfiles[ProfileIndex-1].style.display="block";
-    document.getElementById("main-nav").style.display = "none";
+    for (var i = 0; i < availableProfiles.length; i++) {
+        availableProfiles[i].style.display = "none";
+    }
+    availableProfiles[ProfileIndex - 1].style.display = "block";
+    mainnav.style.display = "none";
 }
 
-function closeProfile(n){
+function closeProfile(n) {
     var availableProfiles = document.getElementsByClassName("overlayinContact");
-    if( n > availableProfiles.length) { ProfileIndex = 1; }
-    if( n < 1) { ProfileIndex = availableProfiles.length; }
+    if (n > availableProfiles.length) {
+        ProfileIndex = 1;
+    }
+    if (n < 1) {
+        ProfileIndex = availableProfiles.length;
+    }
 
-    for(var i=0; i < availableProfiles.length; i++){
+    for (var i = 0; i < availableProfiles.length; i++) {
         availableProfiles[i].style.display = "none";
     }
 
-    availableProfiles[ProfileIndex-1].style.display="none";
+    availableProfiles[ProfileIndex - 1].style.display = "none";
     document.getElementById("main-nav").style.display = "block";
 }
 
-var staff_profiles = document.getElementsByClassName("profile-header");
+const availableProfiles = document.getElementsByClassName("overlayinContact");
 
-for (var i = 0; i < staff_profiles.length; i++)
-{   
-    const idx = i;
-    console.log(idx);
-    staff_profiles[idx].addEventListener("click",function(){
-        currentProfile(idx);   
+window.addEventListener("scroll", function (){
+    for (var i = 0; i < availableProfiles.length; i++) {
+        availableProfiles[i].style.display = "none";
     }
-    );
-}
+})

@@ -18,8 +18,10 @@
 /* selection bar*/
 .select_bar_container{
     width: 82vw;
-    display: block;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .cat-list_container{
@@ -190,6 +192,8 @@ input[type=text]{
 }
 
 .row_paper > span{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.14583vw;
     font-weight: 500;
     letter-spacing: 0.05729vw;
     text-align: left;
@@ -197,23 +201,113 @@ input[type=text]{
     line-height: 1.59;
 }
 
-.row_paper > .name{
-    width: 3.8vw;
-    margin-left: 7.85vw;
+span.year{
+    width: 4.5vw;   
 }
 
-.row_paper > .degree{
-    width: 2.6vw;
+span.name{
+    width: 5.5vw;
+    margin-left: 6vw;
+}
+
+span.degree{
+    width: 10vw;
     margin-left: 6.3vw;
 }
 
-.row_paper > .advisor{
-    width: 3.8vw;
-    margin-left: 9.85vw;
+span.advisor{
+    width: 10.5vw;
+    margin-left: 5vw;
 }
 
-.row_paper > .paper{
+span.paper{
     width: 38.4375vw;
     margin-left: 8.5vw;
     letter-spacing: 0.171875vw;
+}
+
+@media (max-width: 768px){
+    span.year{
+        width: 6vw;
+    }
+
+    span.name{
+        width: 7vw;
+    }
+
+    span.degree{
+        width: 10vw;
+        margin-left: 6.3vw;
+    }
+
+    span.advisor{
+        width: 6vw;
+    }
+}
+
+@media (max-width: 480px){
+    .cat-list_container{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 6.041vw;
+    }
+
+    .cat-list{
+        width: 84vw;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 2vw;
+    }
+
+    .cat-list > li{
+        margin-top: 2.5vw;
+    }
+
+    .request_form{
+        height: 6.5vw;
+        border-radius: 3.5vw;
+    }
+
+    #keyword{
+        margin-left: 1.5vw;
+    }
+    
+    #search_btn > img{
+        width: 5vw;
+        height: 5vw;
+        margin-right: 1.5vw;
+    }
+
+    #search_svg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 2vw;
+    }
+
+    #search_hint > p{
+        font-size: 6vw;
+    }
+
+    .row_paper > span{
+        font-size: 1vw;
+    }
+
+    span.year{
+        width: 14vw;
+    }
+    span.name{
+        width: 18vw;
+        margin-left: 4vw;
+    }
+    span.degree{
+        width: 14vw;
+        margin-left: 5vw;
+    }
+    span.advisor{
+        width: 16vw;
+        margin-left: 5vw;
+    }
+    span.paper{
+        margin-left: 4vw;
+    }
 }

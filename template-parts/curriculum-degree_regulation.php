@@ -10,17 +10,18 @@
                 </div>  
             </a>
         </div>
-        <div class="item_titles _font18">
+        <div class="item_titles">
             <span>學年</span>
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
         </div>
         <div class="whole_regulation_files" id="regu_block1">
             <?php $master_regulation = get_field('master_regulation');?>
+            <?php $more_master_regulation = get_field('more_master_regulation');?>
             <?php if($master_regulation): ?>
                 <?php 
                     $count = 1;
-                    while($count < 9 ):?>
+                    while($count < 11 ):?>
                         <?php
                             $name = "year_group_" . $count; 
                             $group_data = $master_regulation[$name];
@@ -31,25 +32,65 @@
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
-                                    <span class="file_title _font18">修業辦法&nbsp;</span>
+                                    <span class="file_title">修業辦法&nbsp;</span>
                                     <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                     </a>
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_rules']);?>" target="_blank">
-                                        <span class="file_title _font18">修業要則&nbsp;</span>
+                                        <span class="file_title">修業要則&nbsp;</span>
                                         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                     </a>
                                 </div>
                                 <div class="item2">
                                     <a class="link_block" href="<?php echo esc_url($group_data['course_rules']);?>" target="_blank">
-                                        <span class="file_title _font18">修課規定&nbsp;</span>
+                                        <span class="file_title">修課規定&nbsp;</span>
                                         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                     </a>
                                     <a class="link_block" href="<?php echo esc_url($group_data['mandatory_course']);?>" target="_blank">
-                                        <span class="file_title _font18">所必選課程（核心三選二）</span>
+                                        <span class="file_title">所必選課程（核心三選二）</span>
                                         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                     </a>
                                     <a class="link_block" href="<?php echo esc_url($group_data['domain_mandatory_course']);?>" target="_blank">
-                                        <span class="file_title _font18">領域必選課程&nbsp;</span>
+                                        <span class="file_title">領域必選課程&nbsp;</span>
+                                        <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endif; 
+                            $count =  $count + 1;
+                        ?>
+                    <?php endwhile; ?>
+            <?php elseif($more_master_regulation):?>
+                <?php $count = 1;
+                    while($count < 21 ):?>
+                    <?php
+                        $name = "year_group_" . $count; 
+                        $group_data = $more_master_regulation[$name];
+                        $year = $group_data['year'];
+                    ?>
+                        <?php if( $year ):?>
+                            <div class="regulation_rows">
+                                <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
+                                <div class="item1">
+                                    <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
+                                    <span class="file_title">修業辦法&nbsp;</span>
+                                    <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                                    </a>
+                                    <a class="link_block" href="<?php echo esc_url($group_data['program_rules']);?>" target="_blank">
+                                        <span class="file_title">修業要則&nbsp;</span>
+                                        <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                                    </a>
+                                </div>
+                                <div class="item2">
+                                    <a class="link_block" href="<?php echo esc_url($group_data['course_rules']);?>" target="_blank">
+                                        <span class="file_title">修課規定&nbsp;</span>
+                                        <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                                    </a>
+                                    <a class="link_block" href="<?php echo esc_url($group_data['mandatory_course']);?>" target="_blank">
+                                        <span class="file_title">所必選課程（核心三選二）</span>
+                                        <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                                    </a>
+                                    <a class="link_block" href="<?php echo esc_url($group_data['domain_mandatory_course']);?>" target="_blank">
+                                        <span class="file_title">領域必選課程&nbsp;</span>
                                         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                     </a>
                                 </div>
@@ -68,7 +109,7 @@
                 <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
-                    <span class="more_btn_text _font18">展開</span>
+                    <p class="more_btn_text _font18">展開</p>
                 </div>  
             </a>
         </div>
@@ -150,12 +191,12 @@
     const regu2_whole_rows = document.getElementById("regu_block2").getElementsByClassName("regulation_rows");
 
     //console.log(regu_row_mst.length);
-    if(regu1_whole_rows.length >= 3){
+    if(regu1_whole_rows.length > 0){
         for(var i = 0; i < 3; i++){
             regu1_whole_rows[i].className += " shown";   
         }
     }
-    if(regu2_whole_rows.length >= 3){
+    if(regu2_whole_rows.length > 0){
         for(var i = 0; i < 3; i++){
             regu2_whole_rows[i].className += " shown";   
         }

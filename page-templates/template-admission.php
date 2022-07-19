@@ -8,7 +8,7 @@
 <?php $locale = get_locale();?>
 
 <div class="page_admission">
-    <div class="banner">
+    <div class="banner admission_banner">
         <?php if($locale == "zh_TW"):?>
         <span class="page_name" id="zh">招生訊息<br></span>
         <span class="page_name" id="eg">Admission Information</span>
@@ -60,7 +60,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_MsPhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'large'); ?>
+                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'medium'); ?>
                     </div>
                 </div>
             </div>
@@ -107,4 +107,5 @@
     </div>  
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>    
 <?php get_footer(); ?>

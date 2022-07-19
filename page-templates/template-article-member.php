@@ -29,13 +29,12 @@
                 <p class="staff_en_name"><?php echo $en_name; ?></p>
             </div>
             <div class="contact">
-                <p>電子郵件&nbsp;:&nbsp;<span><?php echo $email;?></span></p>
-                <p>連絡電話&nbsp;:&nbsp;<span><?php echo $phone;?></span></p>
+                <p><span>電子郵件&nbsp;:&nbsp;</span><span><?php echo $email;?></span></p>
+                <p><span>連絡電話&nbsp;:&nbsp;</span><span><?php echo $phone;?></span></p>
             </div>
             <?php if( $CV ): ?>
             <a class="staff_CV" href="<?php echo esc_url($CV);?>" target="_blank">教師個人CV
-                <!--<a class="CV_link" href="<?php// echo esc_url($regular_staff['CV']);?>" target="_blank">教師個人CV</a>
-    -->         <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+            <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
             <?php endif; ?>
             <div class="block-deco short"></div>
@@ -92,4 +91,5 @@
     </div>
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>    
 <?php get_footer(); ?>

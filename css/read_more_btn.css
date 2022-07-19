@@ -1,16 +1,16 @@
 .bt-readmore{
+    box-sizing: border-box;
     position:  relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     cursor: pointer;
-    width: 6.25vw;
     height: 3.125vw;
     border: solid 1.5px #2e4565;
     border-radius: 40px;
-    padding: 0 1.5vw 0 1.3vw;
-    
+    padding: 0 1.145833333vw;
+    min-width: 8.75vw;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.0416666vw;
     font-weight: 500;
@@ -41,23 +41,26 @@
 }
 
 .plus_icon{
-    position: absolute;
     width: 0.833vw;
     height: 0.833vw;
-    margin-left: 5.8vw;
     object-fit: contain;
     transition: all 0.3s ease-in-out;
     opacity: 1;
+    min-width: 8px;
+    min-height: 8px;
+    margin-left: .520833333vw;
 }
 
 .plus_icon_hover{
+    position: absolute;
+    right: 1.145833333vw;
     width: 0.833vw;
     height: 0.833vw;
-    position: absolute;
-    margin-left: 5.8vw;
     object-fit: contain;
     transition: all 0.3s ease-in-out;
     opacity: 0;
+    min-width: 8px;
+    min-height: 8px;
 }
 
 .bt-readmore:hover .plus_icon{
@@ -109,22 +112,31 @@
     border-radius: 35px;
     padding: 0 1vw 0;
     color: #2e4565;
+    font-size: 1.041666666vw;
 }
 
+.watch_text {
+    font-size: 1.041666666vw;
+}
+
+.watch_space {
+    min-width: 2.046875vw;
+    min-height: 1px;
+}
+
+
 .watch_icon{
-    position: absolute;
-    width: 2rem;
-    height: 1.5rem;
-    margin-left: 3.3vw;
+    margin-left: 10px;
+    width: 2.046875vw;
+    height: 1.536458333vw;
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
 .watch_icon_hover{
-    position: absolute;
-    width: 2rem;
-    height: 1.5rem;
-    margin-left: 3.3vw;
+    transform: translateX(-100%);
+    width: 2.046875vw;
+    height: 1.536458333vw;
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
@@ -135,4 +147,37 @@
 
 .bt-watchmore:hover .watch_icon_hover{
     opacity: 1;
+}
+
+@media (max-width:960px) {
+    .bt-readmore {
+        min-width: 90.43px;
+        min-height: 30px;
+        padding: 0 11.008px;
+    }
+
+    .watch_icon{
+        margin-left: 3.8px;
+        width: 19.65px;
+        height: 14.75px;
+    }
+
+    .watch_space {
+        min-width: 19.65px;
+    }
+    
+    .watch_icon_hover{
+        transform: translateX(-100%);
+        width: 19.65px;
+        height: 14.75px;
+    }
+
+    .bt-watchmore {
+        width: 70.5px;
+        height: 30px;
+    }
+
+    .plus_icon_hover {
+        right: 11.008px;
+    }
 }

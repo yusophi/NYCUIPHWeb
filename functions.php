@@ -217,7 +217,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
     }
     if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
+      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
     if(is_page('news') || is_page('news-en')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
@@ -234,7 +234,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('member')|| is_page('member-en')){
-      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/member.css')); 
+      wp_enqueue_style('mytheme_page-mamber_style', get_theme_file_uri('css/member.css')); 
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('staff_filter', get_theme_file_uri('js/staff_filter.js'),true);
       wp_localize_script('staff_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
@@ -300,10 +300,13 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
     }
     if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/
       wp_enqueue_style('pro_division_style', get_theme_file_uri('css/pro_division.css'));
+      wp_enqueue_style('mytheme_page-member_style', get_theme_file_uri('css/member.css')); 
     }
     if(is_page('links')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/links.css'));
     }
+    //wp_enqueue_script('backtoTOP_script', get_theme_file_uri('js/back_to_top.js'), true);
+
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
@@ -441,11 +444,11 @@ function filter_ajax() {
   else if($postType == 'papers'){ //post type: papers
     if($query->have_posts()){
       echo '<div class="item_titles _font18">';
-      echo ' <span>年份</span>
-      <span class="name_col">姓名</span>
-      <span class="name_col">畢業學位</span>
-      <span class="name_col">指導教授</span>
-      <span class="name_col">論文名稱</span>';
+      echo ' <span class="year">年份</span>
+      <span class="name">姓名</span>
+      <span class="degree">畢業學位</span>
+      <span class="advisor">指導教授</span>
+      <span class="paper">論文名稱</span>';
       echo '</div>';
       echo '<div class="block_paper_posts">';
       while($query->have_posts()) : $query->the_post();

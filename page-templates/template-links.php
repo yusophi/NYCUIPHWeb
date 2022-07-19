@@ -82,7 +82,7 @@
     <?php endif ?>
     <div class="links-block"></div>
     <?php get_template_part('template-parts/backtoTOP-whiteText'); ?>
-    <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/links.js"></script>
 </div>
-
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/links.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>
 <?php get_footer(); ?>
