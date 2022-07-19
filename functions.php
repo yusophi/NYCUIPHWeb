@@ -234,7 +234,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('member')|| is_page('member-en')){
-      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/member.css')); 
+      wp_enqueue_style('mytheme_page-mamber_style', get_theme_file_uri('css/member.css')); 
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('staff_filter', get_theme_file_uri('js/staff_filter.js'),true);
       wp_localize_script('staff_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
@@ -300,6 +300,7 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
     }
     if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/
       wp_enqueue_style('pro_division_style', get_theme_file_uri('css/pro_division.css'));
+      wp_enqueue_style('mytheme_page-member_style', get_theme_file_uri('css/member.css')); 
     }
     if(is_page('links')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/links.css'));
