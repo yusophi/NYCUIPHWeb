@@ -20,12 +20,17 @@
     flex-direction: column;
 }
 
-.member_picture img{
-    width: 19.583vw;
+.member_picture{
+   width: 19.583vw;
     height: 12.5vw;
     overflow: hidden;
     border-radius: 1.302vw;
     /*border: solid 2px #2e4565;*/
+}
+
+.member_picture img{
+    width: 376px;
+    height: 240px;
 }
 
 .name, .title{

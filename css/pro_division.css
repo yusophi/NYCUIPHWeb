@@ -47,7 +47,7 @@
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1.14583333vw;
     line-height: 1.82;
-    letter-spacing: 4.4px;
+    letter-spacing: 3.3px;
     text-align: left;
     color: #2e4565;
 }
@@ -428,11 +428,8 @@
     text-align: center;
     border-radius: 10px;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
-}
-
-.data.invisible {
-    display: none;
+    margin-bottom: 10px;
+    margin-top: 1.5vw;
 }
 
 @keyframes changing-animate {
@@ -473,7 +470,7 @@
     letter-spacing: 0.2109375vw;
 }
 
-.tgh_title.top_mr {
+.margin_top {
     margin-top: 5.208333vw;
 }
 
@@ -504,6 +501,38 @@
     background-color: attr(data-before);
 }
 
+.data.invisible {
+    display: none;
+}
+
+.subclass{
+    text-align: center;
+}
+
+.tgh_passage p, #instru_content p{
+    margin-top: 1.8vw;
+}
+
+.staff_block{
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
+    column-gap: 5vw;
+    row-gap: 3vw;	
+    margin: 5.2vw 15vw 0;
+}
+
+.electives{
+    width: 24.21vw;
+}
+
+.electives > p{
+    width: 15.5vw;
+}
+
+.tgh_group{
+    margin-top: 5vw;
+}
 
 @media (max-width: 480px){
 
