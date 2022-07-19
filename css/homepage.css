@@ -254,8 +254,8 @@
 }
 .single-event {
     width: 100%;
-    min-height: calc(100vw * 0.2344);
-    height: calc(100vw * 0.2344);
+    min-height: 23.44vw;
+    height: 23.44vw;
     background-color: #efeee4;
     display: flex;
     justify-content: center;
@@ -268,7 +268,7 @@
     left: 0;
     width: 100%;
     z-index: 5;
-    height: calc(100vw * 0.2344);
+    height: 23.44vw;
     border-radius: 60px;
     display: flex;
     flex-direction: column;
@@ -276,21 +276,21 @@
     justify-content: center;
 }
 .main-event .single-event {
-    height: calc(100vw * 0.2615);
+    height: 26.15vw;
 }
 .main-event .event-mask {
     top: calc((100% - 100vw * 0.2615) / 2);
-    height: calc(100vw * 0.2615);
+    height: 26.15vw;
 }
 .event-mask.event-to-brighter {
     transition: 0.7s;
     top: calc((100% - 100vw * 0.2615) / 2);
-    height: calc(100vw * 0.2615);
+    height: 26.15vw;
 }
 .main-event .event-mask.event-to-darker {
     transition: 0.7s;
     top: calc((100% - 100vw * 0.2344) / 2);
-    height: calc(100vw * 0.2344);
+    height: 23.44vw;
 }
 .event-mask::after {
     transition: 0.7s;
@@ -345,11 +345,11 @@
 }
 .single-event.event-to-bigger {
     transition: 0.7s;
-    height: calc(100vw * 0.2615);
+    height: 26.15vw;
 }
 .single-event.event-to-smaller {
     transition: 0.7s;
-    height: calc(100vw * 0.2344);
+    height: 23.44vw;
 }
 
 #event_readmore_btn {
