@@ -179,8 +179,14 @@
                         <div class="member_picture">
                             <?php echo wp_get_attachment_image( $picture, 'member_picture'); ?>
                         </div>
+                        <?php if ($locale == "zh_TW"): ?>
                         <a class="name" href="<?php the_permalink(); ?>"><?= $name; ?><span class="title"><?= $title; ?></span></a>
-                        <?php //endif; ?>
+                        <?php else: ?>
+                            <a class="en_name_link" href="<?php the_permalink(); ?>">
+                                <span class="en_title"><?= $title; ?></span>
+                                <span class="en_name"><?= $name; ?></span>
+                            </a>
+                        <?php endif; ?>
 
                         <div class="education">
                             <p>學歷｜</p>

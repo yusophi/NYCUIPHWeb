@@ -213,11 +213,9 @@ add_filter( 'wp_headers', 'pagely_security_headers' )*/
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
-      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'),true);
     }
     if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-      //wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), array(), false, true);
     }
     if(is_page('news') || is_page('news-en')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 

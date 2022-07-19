@@ -18,7 +18,7 @@
         <div class="deco-section">s2</div>
     </div>  
     <div class="block-content">
-        <div class="texts">
+        <div class="<?php if($locale == "en_US"){ echo "en_text"; }else{echo "texts";};?>">
             <div class="texts-title">
                 <div>
                     <?php if($locale == 'zh_TW'){
