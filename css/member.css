@@ -172,7 +172,7 @@
         column-gap: 5vw;
     }
 
-    .member_picture img{
+    .member_picture{
         width: 23.5vw;
         height: 15vw;
     }
@@ -206,12 +206,15 @@
 
     .post_block{
         grid-template-columns: 50vw;
+        row-gap: 6vw;
     }
 
-    .member_picture img{
-        width: 39.166vw;
-        height: 25vw;
+    .member_picture{
+        width: 50vw;
+        height: 30vw;
+        border-radius: 3vw;
     }
+
     .name{
         font-size: 4.30208vw;
     }
