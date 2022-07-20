@@ -56,6 +56,10 @@
     margin-left: 0.2vw;
 }
 
+.en_name{
+    font-size: 1.5vw;
+}
+
 .en_title{
     font-size: 1.1vw;
     letter-spacing: 0.140625vw;
@@ -80,6 +84,10 @@
     text-align: left;
     color: #647386;
     margin-top: 1vw;
+}
+
+.en-education, .en-expertise{
+    letter-spacing: 0.12vw;
 }
 
 /* new filter bar design */
@@ -236,5 +244,13 @@
 
     .title{
         font-size: 3vw;
+    }
+
+    .en_name_link span{
+        font-size: 4vw;
+    }
+
+    .education, .expertise{
+        margin-top: 2vw;
     }
 }

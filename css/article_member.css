@@ -179,6 +179,7 @@
     text-align: left;
     color: #647386;
     margin-bottom: 2vw;
+    overflow-wrap: break-word;
 }
 
 .en_right_block{
@@ -191,6 +192,10 @@
     text-align: left;
     color: #647386;
     margin-bottom: 2vw;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .right_block_title{
@@ -219,10 +224,10 @@
     margin-left: 1.8vw;
 }
 
-.works > ol > li{
+.works > ol > li, .en_right_block ol li{
     font-size: 1.14583vw;
     line-height: 1.5;
-    letter-spacing: 0.15vw;
+    letter-spacing: 0.12vw;
     margin-bottom: 1.5vw;
 }
 
@@ -315,11 +320,11 @@
     }
 
     .right_block{
-        font-size: 3.8vw;
+        font-size: 3.5vw;
         margin-bottom: 6vw;
     }
 
-    .right_block_title{
+    .right_block_title, #en_staff_name > span{
         font-size: 5vw;
     }
 
@@ -328,6 +333,18 @@
     }
 
     .works{
+        margin-top: 4vw;
+    }
+
+    .right_block_content > p{
+        margin-bottom: 3vw;
+    }
+
+    .works > ol > li, .en_right_block ol li{
+        margin-bottom: 3.5vw;
+    }
+
+    .right_block_content{
         margin-top: 4vw;
     }
     
