@@ -396,7 +396,7 @@
     }
 
     .supervisor .texts{
-        width: 17.5vw;
+        width: auto;
     }
 
     .supervisor > .en_text{
