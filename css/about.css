@@ -227,7 +227,7 @@
     width: 34.8vw;
 }
 
-.texts{
+.texts, .en_text{
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -241,6 +241,17 @@
     color: #2e4565;
     font-size: 1.14583vw;
     letter-spacing: 0.23vw;
+    margin-bottom: 1.5vw;
+}
+
+.en_text p{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.82;
+    text-align: left;
+    color: #2e4565;
+    font-size: 1.14583vw;
+    letter-spacing: 0.15vw;
+    margin-bottom: 1.5vw;
 }
 
 .texts-title div{
@@ -321,6 +332,11 @@
 
 .supervisor .texts{
     width: 14.5vw;
+}
+
+
+.supervisor .en_text{
+    width: auto;
 }
 
 .supervisor .texts p{

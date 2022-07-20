@@ -15,19 +15,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: warp;
 }
 
 .news-article
 {
     width: 100%;
     min-height: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 6.875vw;
-    background-color: #e4dfd2;
-    /*display: flex;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;*/
+    justify-content: center;
+    background-color: #e4dfd2;
 }
 
 .select_bar_container{

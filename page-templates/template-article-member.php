@@ -6,6 +6,8 @@
 ?>
 
 <?php get_header(); ?>
+<?php $locale = get_locale();?>
+
 <div class="article_member_container">
     <?php
         $picture = get_field('picture');
@@ -25,15 +27,22 @@
                 <div class="deco-section">s1</div>
             </div>
             <div class="staff_name">
-                <p><?php echo $name; ?><span><?php echo $title; ?></span></p>
-                <p class="staff_en_name"><?php echo $en_name; ?></p>
+                <?php if ($locale == "zh_TW"): ?>
+                    <p><?php echo $name; ?><span><?php echo $title; ?></span></p>
+                <?php else: ?>
+                    <p id="en_staff_name">
+                        <span><?php echo $title; ?></span>
+                        <span><?php echo $name; ?></span>
+                    </p>
+                <?php endif; ?>
+                <?php if( $en_name ): ?><p class="staff_en_name"><?php echo $en_name; ?></p> <?php endif; ?>
             </div>
             <div class="contact">
-                <p><span>電子郵件&nbsp;:&nbsp;</span><span><?php echo $email;?></span></p>
-                <p><span>連絡電話&nbsp;:&nbsp;</span><span><?php echo $phone;?></span></p>
+                <p><span><?php if($locale == "zh_TW"){echo "電子郵件"; }else{echo "Mail"; } ?>&nbsp;:&nbsp;</span><span><?php echo $email;?></span></p>
+                <p><span><?php if($locale == "zh_TW"){echo "連絡電話"; }else{echo "Tel"; } ?>&nbsp;:&nbsp;</span><span><?php echo $phone;?></span></p>
             </div>
             <?php if( $CV ): ?>
-            <a class="staff_CV" href="<?php echo esc_url($CV);?>" target="_blank">教師個人CV
+            <a class="staff_CV" href="<?php echo esc_url($CV);?>" target="_blank"><?php if($locale == "zh_TW"){echo "教師個人CV"; }else{echo "CV"; } ?>
             <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
             <?php endif; ?>
@@ -41,30 +50,30 @@
         </div> 
         <div class="right">
             <?php if( $abuot_me ): ?>
-            <div class="right_block">
-                <p class="right_block_title">關於我</p>
-                <p><?php echo $abuot_me; ?></p>
+            <div class="right_block <?php if($locale == "en_US"){echo "en_right_block";} ?>">
+                <span class="right_block_title"><?php if($locale == "zh_TW"){echo "關於我"; }else{echo "About me"; } ?></span>
+                <div class="right_block_content"><?php echo $abuot_me; ?></div>
             </div>
             <?php endif; ?>
 
             <?php if( $edu ): ?>
-            <div class="right_block">
-                <p class="right_block_title">學歷</p>
-                <p><?php echo $edu; ?></p>
+            <div class="right_block <?php if($locale == "en_US"){echo "en_right_block";} ?>">
+                <span class="right_block_title"><?php if($locale == "zh_TW"){echo "學歷"; }else{echo "Education"; } ?></span>
+                <div class="right_block_content"><?php echo $edu; ?></div>
             </div>
             <?php endif; ?>
             
             <?php if( $experience ): ?>
-            <div class="right_block">
-                <p class="right_block_title">經歷</p>
-                <p><?php echo $experience; ?></p>
+            <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
+                <span class="right_block_title"><?php if($locale == "zh_TW"){echo "經歷"; }else{echo "Experience"; } ?></span>
+                <div class="right_block_content"><?php echo $experience; ?></div>
             </div>
             <?php endif; ?>
             
             <?php if( $academy ): ?>
             <div class="right_block">
-                <p class="right_block_title">學術專長</p>
-                <p><?php echo $academy; ?></p>
+                <span class="right_block_title"><?php if($locale == "zh_TW"){echo "學術專長"; }else{echo "Professional Specialty"; } ?></span>
+                <div class="right_block_content"><?php echo $academy; ?></div>
             </div>
             <?php endif; ?>
 
@@ -75,16 +84,16 @@
             </div>
 
             <?php if( $works ): ?>
-            <div class="right_block works">
-                <p class="right_block_title">代表著作</p>
-                <p><?php echo $works; ?></p>
+            <div class="right_block">
+                <span class="right_block_title"><?php if($locale == "zh_TW"){echo "代表著作"; }else{echo "Selected Publication"; } ?></span>
+                <div class="right_block_content works"><?php echo $works; ?></div>
             </div>
             <?php endif; ?>
 
             <?php if( $guide_essay ): ?>
             <div class="right_block">
-                <p class="right_block_title">公衛所指導學生論文</p>
-                <p><?php echo $guide_essay; ?></p>
+                <span class="right_block_title"><?php if($locale == "zh_TW"){echo "公衛所指導學生論文"; }else{echo "Selected Advisee Thesis"; } ?></span>
+                <div class="right_block_content"><?php echo $guide_essay; ?></div>
             </div>
             <?php endif; ?>
         </div>  
