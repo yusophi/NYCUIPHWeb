@@ -114,7 +114,6 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events-en/">Seminars</a></li>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">學術資源</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>

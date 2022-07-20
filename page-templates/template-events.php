@@ -72,7 +72,7 @@
                 'category_name' => 'event',
                 'orderby' => 'date',
                 'paged' => $paged,
-                'posts_per_page' => 15
+                'posts_per_page' => 15,
             );
             $arr_posts = new WP_Query($args);
             if ($arr_posts->have_posts()) :

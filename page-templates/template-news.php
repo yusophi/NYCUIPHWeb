@@ -63,7 +63,7 @@
             'category_name' => 'news',
             'orderby' => 'date',
             'paged' => $paged,
-            'posts_per_page' => 15
+            'posts_per_page' => 15.
         );
 
         $arr_posts = new WP_Query($args);

@@ -1,4 +1,5 @@
 <?php
+    $locale = get_locale();
     $picture = get_field('picture');
     $title =  get_field('prof_class'); $name = get_field('name');
     $edu = get_field('h_edu'); $exp = get_field('academic_expertise'); $link = ""; $CV = "";

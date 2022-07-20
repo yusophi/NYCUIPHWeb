@@ -149,8 +149,9 @@
 .article a {
     font-weight: 500;
     letter-spacing: 1.1px;
-    color: #efeee4;
+    color: #fb0;
     text-decoration: underline;
+    overflow-wrap: anywhere
 }
 
 .article strong{
