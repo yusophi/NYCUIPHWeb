@@ -42,7 +42,7 @@
                     <span class="cat-list_item_name">所有活動</span>
                 </a>
             </li>
-            <?php foreach($categories as $category) : ?>
+            <?php foreach ($categories as $category) : ?>
                 <li>
                     <a class="<?= "cat-list_item " . $category->slug; ?>" href="#!" data-filter-type="event" data-type="post"  data-slug="<?= $category->slug; ?>">
                         <span class="cat-list_item_dot"></span>    
@@ -100,36 +100,37 @@
                                     <div class="event-location"><?php the_field('event_location'); ?></div>
                                 </div>
                                 <?php
-                                        $sdgs = get_field('sdg');
-                                        if( $sdgs ): ?>
-                                            <ul class="sdg-tag ">
-                                                    <?php foreach( $sdgs as $sdg ): ?>
-                                                        <li><?php echo $sdg; ?></li>
-                                                    <?php endforeach; ?>
-                                            </ul>
+                                    $sdgs = get_field('sdg');
+                                    if ($sdgs) : ?>
+                                        <ul class="sdg-tag ">
+                                            <?php foreach ($sdgs as $sdg) : ?>
+                                                <li><?php echo $sdg; ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                 <?php endif; ?>
                             </div>
                         </div>
                         <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..."?></div>
+                        <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..." ?></div>
                     </div>
                 </div>
                 <?php endwhile; ?>
-                <?php if ($counter == 5) : ?>
-                    <div class="event-space"></div>
-                <?php endif; ?>
+            <?php if ($counter == 5) : ?>
+                <div class="event-space"></div>
+            <?php endif; ?>
             </div>
-        <?php endif; wp_reset_postdata(); ?>
+        <?php endif;
+        wp_reset_postdata(); ?>
     </div>
 
     <div class="pagination">
-    <?PHP
+        <?PHP
         $big = 999999999; // need an unlikely integer
         $args = array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
             'format' => '?page=%#%',
             'total' => $arr_posts->max_num_pages,
-            'current' => max( 1, get_query_var( 'paged') ),
+            'current' => max(1, get_query_var('paged')),
             'show_all' => false,
             'end_size' => 3,
             'mid_size' => 2,
@@ -137,12 +138,12 @@
             'prev_text' => __('<'),
             'next_text' => __('>'),
             'type' => 'list',
-            );
+        );
         echo paginate_links($args);
-    ?>
+        ?>
     </div>
 
-    <?php get_template_part( 'template-parts/backtoTOP');?>    
+    <?php get_template_part('template-parts/backtoTOP'); ?>
 </div>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>
 <?php get_footer(); ?>
