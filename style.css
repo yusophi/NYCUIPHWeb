@@ -492,8 +492,6 @@ input.site_search_input[type=text]{
     flex-direction: column;
     background-color: #e4dfd2;
     position: relative;
-    top: 18vw;
-    margin-bottom: 16vw;
 }
 
 #search_keyword{
@@ -506,6 +504,10 @@ input.site_search_input[type=text]{
     font-weight: bold;
     font-size: 3.125vw;
     letter-spacing: 0.2vw;
+}
+
+.article{
+    margin-top: 15vw;
 }
 
 article.article-content{

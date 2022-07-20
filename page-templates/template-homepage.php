@@ -59,26 +59,6 @@
                         </button>
                   </div>
             </div>
-<!--            <div class="imgslide-bar">
-                  <div class="social_media_links">
-                        <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-youtube_link.svg">
-                        <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-FB_link.svg">
-                  </div>
-                  <div class="image-bar">
-                        <?php // for ($i = 0; $i < $counter; $i++) : ?>
-                              <div class="dot" onclick="currentImage(<?php //echo $i + 1; ?>)"></div>
-                        <?php //endfor; ?>
-                  </div>
-                  <div class="img-slide-btn">
-                        <a class="previous" onclick="plusImage(-1)">
-                              <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-pre.svg">
-                        </a>
-                        <a class="next-slide" onclick="plusImage(1)">
-                              <img src="<?php //bloginfo('template_url') ?>/images/icon/icon-next.svg">
-                        </a>
-                  </div>
-            </div>-->
-            <!--<div class="rounded_border"></div>-->
       </div>
       <!-- the News block -->
       <div class="News-container">

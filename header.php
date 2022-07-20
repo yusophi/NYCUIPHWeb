@@ -169,7 +169,7 @@
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph-en/">About DPH</a>
+                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_dph-en/">About DPH</a>
                         <?php endif;?>
                     </li>
 

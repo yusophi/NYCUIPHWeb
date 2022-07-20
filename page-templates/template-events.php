@@ -20,7 +20,7 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 10, /*8 */
+                'parent' => 8, /* 10 */
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );

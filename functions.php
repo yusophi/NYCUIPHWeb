@@ -327,10 +327,22 @@ function filter_ajax() {
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'meta_key'   => 'prof_class_for_sorting',
+      /*'meta_key'   => 'prof_class_for_sorting',
       'orderby'    => 'meta_value_num',
-      'order'      => 'ASC',
-      'posts_per_page' => 15,
+      'order'      => 'ASC',*/
+      'meta_query' => array(
+          'relation' => 'AND',
+          'admin' => array(
+              'key' => 'admin_for_sorting',
+              'compare' => 'EXISTS',),
+          'prof' => array(
+              'key' => 'prof_class_for_sorting',
+              'compare' => 'EXISTS',), 
+          ),
+      'orderby' => array( 
+        'admin' => 'ASC',
+        'prof' => 'ASC',
+      ),
     );
 
     if(count($cat_field) > 0 &&  strlen($cat_field[0]) > 0){

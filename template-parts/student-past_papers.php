@@ -1,14 +1,14 @@
 <div class="student_paper">
     <?php $years = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 40, /*31 */
+                'parent' => 31, /* 40 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'DSEC'
             ) );
           $divisions = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 41, /*33 */
+                'parent' => 33, /* 41 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
@@ -58,41 +58,5 @@
         <div id="search_hint">
             <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
         </div>
-       <!-- the result from ajax request in paper_filter.js-->
-       <?php 
-           /*$args = array(
-                'post_type' => 'papers',
-                'post_status' => 'publish',
-                's' => '陳瓊梅',
-                'orderby' => 'meta_value_num',
-                'meta_key' => 'year',
-                'order' => 'DESC',
-            );
-            $arr_posts = new WP_Query($args);
-            if($arr_posts->have_posts()):*/
-        ?>
-            <!--<div class="block_paper_posts">-->
-                    <?php
-                    /*while ($arr_posts->have_posts()) :
-                            $arr_posts->the_post();*/
-                    ?>
-                        <?php
-                           /* $year = get_field('year');
-                            $name = get_field('name');
-                            $degree = get_field('degree');
-                            $advisor = get_field('advisors');
-                            $paper = get_field('paper');*/
-                        ?>
-                        <!--<div class="row_paper">
-                            <span class="year _font22"><?php //echo $year;?></span>
-                            <span class="name _font22"><?php //echo $name;?></span>
-                            <span class="degree _font22"><?php //echo $degree;?></span>
-                            <span class="advisor _font22"><?php //echo $advisor;?></span>
-                            <span class="paper _font22"><?php //echo $paper;?></span>
-                            <?php //the_title(); ?>
-                        </div>-->
-                    <?php //endwhile;?>
-            <!--</div>-->
-            <?php //endif; wp_reset_postdata(); ?>
     </div>
 </div>
