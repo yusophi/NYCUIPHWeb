@@ -50,14 +50,14 @@
         </div> 
         <div class="right">
             <?php if( $abuot_me ): ?>
-            <div class="right_block <?php if($locale == "en_US"){echo "en_right_block";} ?>">
+            <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
                 <span class="right_block_title"><?php if($locale == "zh_TW"){echo "關於我"; }else{echo "About me"; } ?></span>
                 <div class="right_block_content"><?php echo $abuot_me; ?></div>
             </div>
             <?php endif; ?>
 
             <?php if( $edu ): ?>
-            <div class="right_block <?php if($locale == "en_US"){echo "en_right_block";} ?>">
+            <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
                 <span class="right_block_title"><?php if($locale == "zh_TW"){echo "學歷"; }else{echo "Education"; } ?></span>
                 <div class="right_block_content"><?php echo $edu; ?></div>
             </div>
@@ -71,7 +71,7 @@
             <?php endif; ?>
             
             <?php if( $academy ): ?>
-            <div class="right_block">
+            <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
                 <span class="right_block_title"><?php if($locale == "zh_TW"){echo "學術專長"; }else{echo "Professional Specialty"; } ?></span>
                 <div class="right_block_content"><?php echo $academy; ?></div>
             </div>
@@ -84,14 +84,14 @@
             </div>
 
             <?php if( $works ): ?>
-            <div class="right_block">
+            <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
                 <span class="right_block_title"><?php if($locale == "zh_TW"){echo "代表著作"; }else{echo "Selected Publication"; } ?></span>
                 <div class="right_block_content works"><?php echo $works; ?></div>
             </div>
             <?php endif; ?>
 
             <?php if( $guide_essay ): ?>
-            <div class="right_block">
+            <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
                 <span class="right_block_title"><?php if($locale == "zh_TW"){echo "公衛所指導學生論文"; }else{echo "Selected Advisee Thesis"; } ?></span>
                 <div class="right_block_content"><?php echo $guide_essay; ?></div>
             </div>

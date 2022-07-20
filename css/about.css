@@ -242,6 +242,7 @@
     font-size: 1.14583vw;
     letter-spacing: 0.23vw;
     margin-bottom: 1.5vw;
+    overflow-wrap: break-word;
 }
 
 .en_text p{
@@ -252,6 +253,10 @@
     font-size: 1.14583vw;
     letter-spacing: 0.15vw;
     margin-bottom: 1.5vw;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .texts-title div{
@@ -264,7 +269,12 @@
     margin-bottom: 1vw;
 }
 
-/*****/
+.iph-intro > .en_text{
+    width: 40vw;
+}
+
+
+/* block 2 */
 
 .IPH-purposeANDgoal .block-content{
     justify-content: space-between;
@@ -278,6 +288,7 @@
     height: 26.19vw;
 }
 
+/* block 3 */
 .subject-introduction .block-content{
     align-items: flex-end;
 }
@@ -292,7 +303,9 @@
     height: 25.5vw;
 }
 
-
+.subject-intro > .en_text{
+    width: 50vw;
+}
 
 /**past-supervisor**/
 
@@ -330,13 +343,18 @@
     letter-spacing: 0.195vw;
 }
 
+.en-supervisor-title{
+    width: 55vw;
+    font-size: 1.8vw;
+    letter-spacing: 0.1vw;
+}
+
 .supervisor .texts{
     width: 14.5vw;
 }
 
-
 .supervisor .en_text{
-    width: auto;
+    margin-left: 7vw;
 }
 
 .supervisor .texts p{
@@ -370,8 +388,26 @@
     .page-about-banner {
         margin-top: 20vw;
     }
+    
+    .supervisor{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
     .supervisor .texts{
         width: 17.5vw;
+    }
+
+    .supervisor > .en_text{
+        margin-left: 0;
+        margin-top: 3vw;
+        width: auto;
+    }
+    
+    .en-supervisor-title{
+        width: auto;
+        font-size: 2vw;
     }
 }
 
@@ -389,7 +425,7 @@
         flex-direction: column;
     }
 
-    .texts{
+    .texts, .en_text, .iph-intro > .en_text, .subject-intro > .en_text{
         width: auto;
     }
 
@@ -407,5 +443,18 @@
 
     .bk_num{
         font-size: 5vw;
+    }
+
+    .supervisor > .en_text{
+        margin-top: 3vw;
+        margin-left: 0;
+    }
+
+    .en-supervisor-title{
+        font-size: 2.5vw;
+    }
+
+    .IPH-introduction .image{
+        margin-left: 0;
     }
 }

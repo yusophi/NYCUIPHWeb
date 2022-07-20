@@ -17,7 +17,7 @@
         <div class="deco-arrow"></div>
         <div class="deco-section">s3</div>
     </div>  
-    <div class="block-content">
+    <div class="block-content subject-intro">
         <div class="<?php if($locale == "en_US"){ echo "en_text"; }else{echo "texts";};?>"><?php the_field('subject-intro') ?></div>
         <div class="image"><img src="<?php bloginfo('template_url')?>/images/page_about/icon-s3.svg"></div>
     </div> 
