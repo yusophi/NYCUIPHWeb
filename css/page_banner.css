@@ -206,3 +206,19 @@
         font-size: 3vw;
     }
 }
+
+
+@media (max-width:960px) {
+    .circle {
+        width: 25.5px;
+        height: 25.5px;
+    }
+
+    .page_name {
+        font-size: 20px;
+    }
+
+    #eg {
+        font-size: 15px;
+    }
+}

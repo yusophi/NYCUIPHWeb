@@ -5,9 +5,12 @@
     overflow: hidden;
 }
 
-.interview-picture > img{
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+
+.interview-picture > img {
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    width: 10.41vw;
+    height: auto;
 }
 
 .interview-circle{
@@ -24,30 +27,41 @@
 /*** next interview style ***/
 .interview-slide{
     position: relative;
-    height: 15vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 3.5vw;
     margin-right: 3.5vw;
     pointer-events: auto;
+    margin-bottom: 30px;
+}
+
+.interview-text-content > span {
+    position: relative;
+    margin-top: 6.5%;
+    font-size: 1.0416666667vw;
+    line-height: 1.25;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    color: #647386;
 }
 
 .interview-text-content{
-    width: 21vw;
+    width: 20.520833vw;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin:  1.5vw;
+    margin: 1.5vw;
 }
+
 
 .interview-text-content > a{
     position: relative;
     margin-top: 2.5%;
-    font-size: 1.2504rem;
+    font-size: 1.3025vw;
     font-weight: bold;
     line-height: 1.4;
-    letter-spacing: 3.75px;
+    letter-spacing: .1953125vw;
     text-align: left;
     color: #efeee4;
     text-decoration: none;
@@ -57,9 +71,53 @@
 .interview-text-content > span{
     position: relative;
     margin-top: 6.5%;
-    font-size: 1rem;
+    font-size: 1.0416666667vw;
     line-height: 1.25;
     letter-spacing: 0.1rem;
     text-align: left;
     color: #b5bbbe;
+}
+
+
+
+
+.the_next3_block {
+    flex-wrap: nowrap;
+}
+
+.article li {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.14583333vw;
+    line-height: 2.0833333vw;
+    letter-spacing: 3px;
+    color: #efeee4;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:960px) {
+    .article li {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .interview-picture > img {
+        width: 99.936px;
+        height: 99.936px;
+    }
+
+    .interview-picture {
+        min-width: 99.936px;
+        height: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .the_next3_block {
+        flex-wrap: wrap;
+    }
+
+    .interview-text-content {
+        width: unset;
+    }
 }

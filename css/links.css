@@ -88,12 +88,14 @@
     color: #2e4565;
     transform: translateX(2.344166vw);
     border-bottom: #707070 solid 1px;
-    transform: translateX(2.344166vw);
+    width: calc(100% - 4.688332vw);
 }
+
 .links-items .links-item:last-child {
     padding-bottom: 30px;
     border-bottom: none;
 }
+
 .links-upper-item {
     min-height: 4.479166666vw;
     width: 25.104166vw;
