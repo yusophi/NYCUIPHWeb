@@ -94,7 +94,6 @@ add_filter( 'rest_authentication_errors', function( $result ) {
     header('X-Content-Type-Options: nosniff');
     header('X-Frame-Options: SAMEORIGIN');
     header('Set-Cookie: cross-site-cookie=name; SameSite=Lax;');
-    //header("Content-Security-Policy: frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;");
     @ini_set('session.cookie_httponly', true);
     @ini_set('session.cookie_secure', true);
     @ini_set('session.use_only_cookies', true);
@@ -103,8 +102,9 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 <?php
 $nonce = wp_create_nonce('nonce');
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
-header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+
+//header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
 add_filter( 'script_loader_tag', 'add_nonce_to_script', 10, 3 );
 function add_nonce_to_script( $tag, $handle, $source ) {
@@ -153,6 +153,18 @@ function login_extra_note() {
   </p>
   <?php
   }
+
+add_action( 'lostpassword_form', 'lostpassword_extra_field' );
+function lostpassword_extra_field() {
+  //Get and set any values already sent
+  global $login_nonce;
+  ?><p>
+    <input name="csrf_token" type="hidden" value="<?php echo $login_nonce; ?>"/>
+  </p>
+  <?php
+}
+
+add_filter( 'login_display_language_dropdown', '__return_false' );
 
 /*add_action( 'login_head', 'wpdocs_ref_access' );
 function wpdocs_ref_access() {

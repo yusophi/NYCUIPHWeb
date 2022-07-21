@@ -41,11 +41,11 @@
                             <!--<botton id="icon-en"><img src="<?php// bloginfo('template_url')?>/images/icon/icon-en.png">
                             </botton>-->
                             <div id="icon-search" title="全站搜尋" type="button">
-                                <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/icon/icon-search.png">
+                                <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/search.svg">
                                 <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">
                             </div>
                             <div id="icon-calendar" title="行事曆" type="button">
-                                <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/icon/icon-calendar.png">
+                                <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar.svg">
                                 <img class="icon_toolbar_hover" id="calendar_hover" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar_hover.svg">
                             </div>
                             <div id="icon-alumni_entry" title="校友E化系統" type="button">
