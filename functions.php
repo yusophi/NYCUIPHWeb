@@ -84,19 +84,27 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 ?>
 
 <?php
-  remove_action('wp_head', 'wp_generator');
-  header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
-  header('X-Content-Type-Options: nosniff');
-  header('Set-Cookie: cross-site-cookie=name; SameSite=Lax;');
-  //header("Content-Security-Policy: frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com;");
-  @ini_set('session.cookie_httponly', true);
-  @ini_set('session.cookie_secure', true);
-  @ini_set('session.use_only_cookies', true);
+  remove_action('init', 'wp_admin_bar_init');
+  add_action('get_header', 'my_filter_head');
+  function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+    remove_action('wp_head', 'wp_admin_bar_header');
+    remove_action('wp_head', 'wp_generator');
+    header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
+    header('X-Content-Type-Options: nosniff');
+    header('X-Frame-Options: SAMEORIGIN');
+    header('Set-Cookie: cross-site-cookie=name; SameSite=Lax;');
+    @ini_set('session.cookie_httponly', true);
+    @ini_set('session.cookie_secure', true);
+    @ini_set('session.use_only_cookies', true);
+  } 
 ?>
 
 <?php
-$nonce = wp_create_nonce();
-//header("Content-Security-Policy: script-src 'nonce-$nonce'");
+$nonce = wp_create_nonce('nonce');
+header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+
+//header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
 add_filter( 'script_loader_tag', 'add_nonce_to_script', 10, 3 );
 function add_nonce_to_script( $tag, $handle, $source ) {
@@ -117,7 +125,6 @@ function add_nonce_to_script_tag($html) {
 }
 add_filter('script_loader_tag', 'add_nonce_to_script_tag');
 
-add_theme_support( 'html5', 'script' );
 function add_nonce_to_inline_script($attr) {
   global $nonce;
   if (!isset($attr['nonce']) ) {
@@ -127,14 +134,47 @@ function add_nonce_to_inline_script($attr) {
 }
 add_filter('wp_inline_script_attributes', 'add_nonce_to_inline_script');
 
-
-/*function pagely_security_headers($headers) {
+/*
+function pagely_security_headers($headers) {
   //custom_nonce_value();
   //$val_nonce = wp_create_nonce();//NONCE_RANDVALUE;
   $headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
   return $headers;
 }
 add_filter( 'wp_headers', 'pagely_security_headers' )*/
+
+$login_nonce = wp_create_nonce('login-nonce');
+add_action( 'login_form', 'login_extra_note' );
+function login_extra_note() {
+  //Get and set any values already sent
+  global $login_nonce;
+  ?><p>
+    <input name="csrf_token" type="hidden" value="<?php echo $login_nonce; ?>"/>
+  </p>
+  <?php
+  }
+
+add_action( 'lostpassword_form', 'lostpassword_extra_field' );
+function lostpassword_extra_field() {
+  //Get and set any values already sent
+  global $login_nonce;
+  ?><p>
+    <input name="csrf_token" type="hidden" value="<?php echo $login_nonce; ?>"/>
+  </p>
+  <?php
+}
+
+add_filter( 'login_display_language_dropdown', '__return_false' );
+
+/*add_action( 'login_head', 'wpdocs_ref_access' );
+function wpdocs_ref_access() {
+  global $error;
+  if ( ! wp_verify_nonce($_POST['csrf_token'], 'login-nonce') ) {
+      $error  = 'Restricted area, please login to continue.';
+  }
+}
+*/
+
 ?>
 
 <?php
@@ -666,3 +706,33 @@ function add_cpt_to_pll( $post_types, $is_settings ) {
     }
     return $post_types;
 }?>
+
+<?php
+  function custom_polylang_languages_switcher( $class = '' ) {
+    if ( ! function_exists( 'pll_the_languages' ) ) return;
+
+    // Gets the pll_the_languages() raw code
+    $languages = pll_the_languages(array(
+        'hide_current' => 1, 
+        'raw' => 1
+    ));
+    
+    $output = '';
+
+    // Checks if the $languages is not empty
+    if ( ! empty( $languages ) ) {
+      // Runs the loop through all languages
+      foreach ( $languages as $language ) {
+        // Variables containing language data
+        $url = $language['url'];
+        //$baseurl = str(bloginfo('template_url')) . "/images/icon/icon-en.png";
+        //echo $baseurl;
+        echo "<a href=\"$url\">";
+        echo "<img src=\"" . get_bloginfo('template_url') . "/images/icon/icon-en.png\">";
+        echo "</a>";
+        //$output .= "<a href=\"$url\" id=\"lang_switcher\"></a>";
+      }
+    //return $output;
+  }
+}
+?>
