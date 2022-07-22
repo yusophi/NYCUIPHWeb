@@ -23,7 +23,6 @@
 /* icon and title */
 .block-title{
     position: relative;
-    width: 15vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,4 +80,11 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+
+@media (max-width: 960px) {
+    .back_to_top .en-title {
+        font-size: 10px;
+    }
 }

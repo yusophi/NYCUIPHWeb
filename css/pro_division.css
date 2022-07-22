@@ -65,9 +65,9 @@
 
 .black_circle {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 27px;
+    width: 2.083333vw;
+    height: 2.083333vw;
+    border-radius: 1.40625vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
 }
@@ -99,10 +99,10 @@
 }
 
 .small_black_circle {
-    width: 19px;
-    height: 19px;
+    width: 0.989583vw;
+    height: 0.989583vw;
     background-color: #2e4565;
-    border-radius: 19px;
+    border-radius: 0.989583vw;
 }
 
 .down_arrow {
@@ -116,13 +116,11 @@
 
 .section_indicator {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 0.9rem;
+    font-size: .9375vw;
     font-weight: bold;
     letter-spacing: 2.7px;
     text-align: center;
     color: #2e4565;
-    width: 22px;
-    height: 27px;
 }
 
 .pro_buttons {
@@ -138,7 +136,7 @@
     width: 8.75vw;
     height: 3.125vw;
     border: solid 1.5px #2e4565;
-    border-radius: 40px;
+    border-radius: 2.083333vw;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1.0416666vw;
     font-weight: 500;
@@ -199,7 +197,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 1.302083vw;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 2.083333vw;
     font-weight: bold;
@@ -502,4 +500,133 @@
     bottom: 0;
     left: 0;
     background-color: attr(data-before);
+}
+
+
+
+@media (max-width: 960px) {
+    .black_circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 13.5px;
+    }
+    
+    .black_circle1 {
+        margin: 115.5px 0 0 8.9583vw;
+        z-index: 2;
+    }
+    
+    .black_circle2 {
+        margin: 132px 0 0 9.21875vw;
+    }
+
+    #ch_title {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    #instru_content {
+        margin-top: 30px;
+        font-size: 11px;
+    }
+
+    .small_black_circle {
+        width: 9.5px;
+        height: 9.5px;
+        border-radius: 9.5px;
+    }
+
+    .section_indicator {
+        font-size: 9px;
+    }
+
+    .pro_btn {
+        width: 84px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+
+    #title {
+        font-size: 15px;
+        letter-spacing: 0.75px;
+    }
+
+    #divider {
+        margin: 50px auto 0 auto;
+    }
+
+    .std_cls {
+        width: 119px;
+        height: 69.5px;
+        border-radius: 12.5px;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .std_clss {
+        width: 345px;
+    }
+
+    .ls_segment {
+        margin: 50px auto 0 auto;
+        width: 490px;
+    }
+
+    .bubbles {
+        margin: 15px auto 15px auto;
+        width: 337.5px;
+    }
+
+    .column_2_ls {
+        width: 488.5px;
+    }
+
+    .ls_logo {
+        width: 65.5px;
+        height: 65.5px;
+        border-radius: 65.5px;
+        font-size: 15px;
+    }
+
+    .column_2_ls .ls_content_container {
+        padding: 27.5px 0;
+    }
+
+    .column_1_ls {
+        width: 490px;
+    }
+
+    .ls_title {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        font-size: 13.504px;
+    }
+
+    .ls_lr_content {
+        width: 345.6px;
+    }
+
+    .ls_hr {
+        width: 408px;
+    }
+
+    .ls_content {
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: 1.5px;
+    }
+
+    .ls_sub_title {
+        width: 158.635352px;
+        min-height: 23.5px;
+    }
+
+    .column_2_ls .ls_content {
+        min-width: 232.5px;
+    }
+
+    .ls_instru_text {
+        font-size: 10px;
+    }
 }

@@ -253,11 +253,7 @@ body::-webkit-scrollbar {
 #logo > span{
     font-family: jf-openhuninn-1.0;
     font-size: .8333333vw;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.09416666vw;
-    letter-spacing: normal;
     text-align: left;
     color: #e4dfd2;
 }
@@ -432,6 +428,15 @@ body::-webkit-scrollbar {
 
     #logo.stay {
         transform: translateY(80px);
+    }
+
+    #nav-menu li a{
+        font-size: 10px;
+    }
+
+    #logo > span{
+        font-size: 8px;
+        line-height: 10.504px;
     }
 }
 

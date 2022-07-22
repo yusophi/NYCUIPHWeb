@@ -143,4 +143,16 @@ a.statement:before {
     #footer-info-d3 {
         margin-top: 35px;
     }
+
+    .footer-exclam {
+        font-size: 32.504px;
+    }
+
+    .footer-info {
+        font-size: 8.504px;
+    }
+
+    .footer-statement {
+        font-size: 8.504px;
+    }
 }
