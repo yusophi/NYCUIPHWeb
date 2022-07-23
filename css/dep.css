@@ -167,6 +167,11 @@
     align-items: center;
 }
 
+.table_row :nth-child(1) {
+    width: 20vw;
+    justify-content: flex-start;
+}
+
 .table_row :nth-child(2) {
     position: absolute;
     left: 25.2604166vw;
