@@ -70,7 +70,9 @@
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'event',
-                'orderby' => 'date',
+                'meta_key' => 'event_date',
+                'orderby' => 'meta_value_num',
+                'order' => 'DSEC',
                 'paged' => $paged,
                 'posts_per_page' => 15,
             );
@@ -142,7 +144,6 @@
         echo paginate_links($args);
         ?>
     </div>
-
     <?php get_template_part('template-parts/backtoTOP'); ?>
 </div>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>

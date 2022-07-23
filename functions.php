@@ -102,7 +102,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 <?php
 $nonce = wp_create_nonce('nonce');
-header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+//header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 
 //header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
@@ -355,7 +355,9 @@ add_action('wp_ajax_filter', 'filter_ajax');
 add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 
 function filter_ajax() {
+  $locale = get_locale();
   $postType = $_POST['type'];
+  $filterType = $_POST['filter_type'];
   $category = $_POST['category'];
   $check = 1;
   
@@ -416,6 +418,7 @@ function filter_ajax() {
     else{ // if none category is selected, then show the default value
       $args['category_name'] = '1-regular';
     }
+    
   }
   else if($postType == 'papers' /*&& isset($_POST['cat_year']) && isset($_POST['cat_division'])*/){ 
     //post_type: papers
@@ -470,8 +473,6 @@ function filter_ajax() {
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'orderby' => 'date',
-      'order' => 'desc',
       'posts_per_page' => 15
     );
     $args['tax_query'][] = [
@@ -480,6 +481,16 @@ function filter_ajax() {
       'terms'        => $category,
       'operator'      => 'IN'
     ];
+    if($filterType == 'event'){
+      $args['meta_key'] = 'event_date';
+      $arge['orederby'] = 'meta_value_num';
+      $args['order'] = 'DESC';
+    }
+    else{
+      $arge['orderby'] = 'date';
+      $args['order'] = 'desc';
+    }
+    
   }
   
   if($check){

@@ -46,7 +46,7 @@
 }
 
 .more_btn:hover{
-    width: 5vw;
+    width: 5.5vw;
 }
 
 .more_btn:hover #more_white{
@@ -183,6 +183,10 @@
 img.icon_download{
     width: 3.3854vw;
     height: 1.71875vw;
+}
+
+.en_title{
+    letter-spacing: 2.5px;
 }
 
 @media (max-width: 768px) {

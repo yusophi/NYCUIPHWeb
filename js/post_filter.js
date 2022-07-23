@@ -10,13 +10,15 @@
         adding_active_class(post_cat_slug);
         
         const type = $(this).data('type');
+        const filter_type = $(this).data('filter-type');
 
         $.ajax({
           url: wpAjax.ajaxUrl,
           type: 'POST',
           data: { action: 'filter', 
                   category: post_cat_slug,
-                  type: type
+                  type: type,
+                  filter_type: filter_type
           },
           success: function(result) {
             $('.post_block').html(result);

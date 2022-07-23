@@ -74,7 +74,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about-en/">Introduction</a></li>
-                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">People</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">Faculty</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>

@@ -134,7 +134,7 @@
                   </div>
             <?php endif;
             wp_reset_postdata(); ?>
-            <a class="bt-readmore animation1_btn" id="news_readmore_btn" href="<?php echo site_url(); ?>/news/">
+            <a class="bt-readmore animation1_btn" id="news_readmore_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "news";}else{echo "news-en";}?>/">
                   read more
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
@@ -224,7 +224,7 @@
                   <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
                   <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
             </div>
-            <a class="bt-readmore animation2_btn" id="event_readmore_btn" href="<?php echo site_url(); ?>/events/">
+            <a class="bt-readmore animation2_btn" id="event_readmore_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "events";}else{echo "events-en";}?>/">
                   read more
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
@@ -251,7 +251,7 @@
                               <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>
                               <?php endif; ?>
                         </div>
-                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/about/">
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
                               read more
                               <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                               <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">

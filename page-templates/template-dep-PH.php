@@ -19,15 +19,22 @@
         <div class="dep_circle"></div>
     </div>
     <div class="dep_hr"></div>
-    <div class="dep_title top_margined_s">簡介<br><br></div>
+    <div class="dep_title top_margined_s"><?php if($locale == "zh_TW"){echo "簡介";}else{echo "Introduction";}?><br><br></div>
     <div class="dep_passage"><?php the_field('dep_ph_intro'); ?></div>
-    <div class="dep_title top_margined">課程設計<br><br></div>
+    <div class="dep_title top_margined"><?php if($locale == "zh_TW"){echo "課程設計";}else{echo "Content of Course";}?><br><br></div>
     <div class="dep_table">
         <div class="table_heads">
+            <?php if($locale == "zh_TW"): ?>
             <span>學系</span>
             <span>課程名稱</span>
             <span>學分數</span>
             <span>選別</span>
+            <?php else: ?>
+            <span>Year</span>
+            <span>Course title</span>
+            <span>Credit</span>
+            <span>Compulsory/ Elective</span>
+            <?php endif; ?>
         </div>
         <div class="table_hr"></div>
 

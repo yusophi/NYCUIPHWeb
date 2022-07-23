@@ -12,10 +12,10 @@
         <div class="black_circle2 black_circle"></div>
         <div id="title">
             <?php if($locale == "zh_TW"):?>
-            <div id="ch_title">流行病學領域</div>
-            <div id="en_title">Division of Epidemiology</div>
+            <div id="ch_title">健康政策與法律組</div>
+            <div id="en_title">Division of Policy and Law</div>
             <?php else: ?>
-            <div id="en_title">Division of Epidemiology</div>
+            <div id="en_title">Division of Policy and Law</div>
             <?php endif; ?>
         </div>
         <div id="instruction">

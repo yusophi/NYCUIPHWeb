@@ -26,11 +26,19 @@
         <div class="s1_content">
             <div class="text_content">
                 <div class="content">
+                    <?php if($locale == "zh_TW"):?>
                     <span>教育目標之內容與特色</span>
+                    <?php else: ?>
+                    <span class="en_title">Educational Objectives</span>
+                    <?php endif; ?>
                     <div><?php the_field('edu_goals')?></div>
                 </div>
                 <div class="content career">
+                    <?php if($locale == "zh_TW"):?>
                     <span>未來就業發展</span>
+                    <?php else: ?>
+                    <span class="en_title">Future Prospect After Graduation</span>
+                    <?php endif; ?>
                     <div><?php the_field('career') ?></div>
                 </div>
             </div>

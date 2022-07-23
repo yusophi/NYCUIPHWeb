@@ -1,8 +1,13 @@
+<?php $locale = get_locale();?>
 <div class="course_schedule">
     <div class="course_outline">
         <?php $course_content= get_field('course_outline');?>
         <div class="file_content ">
+            <?php if($locale == "zh_TW"): ?>    
             <div class="file_title _font40">國立陽明大學公共衛生研究所課程 授課大綱</div>
+            <?php else: ?>
+            <div class="file_title _font40">Syllabus</div>
+            <?php endif; ?>
             <div class="links">
                 <?php if($course_content['file_name_1'] && $course_content['file1']): ?>
                 <div class="file_link">

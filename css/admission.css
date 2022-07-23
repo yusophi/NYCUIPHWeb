@@ -195,6 +195,9 @@
     overflow: hidden;
 }
 
+.en_title{
+    letter-spacing: 2.5px;
+}
 
 @media (max-width: 768px){
 
