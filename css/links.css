@@ -90,10 +90,12 @@
     border-bottom: #707070 solid 1px;
     width: calc(100% - 4.688332vw);
 }
+
 .links-items .links-item:last-child {
     padding-bottom: 30px;
     border-bottom: none;
 }
+
 .links-upper-item {
     min-height: 4.479166666vw;
     width: 25.104166vw;
@@ -119,7 +121,6 @@
 .links-item a {
     text-decoration: none;
 }
-
 
 @media (max-width:960px) {
     .links_title {
@@ -175,4 +176,4 @@
     .links-upper-item {
         width: 37.65625vw;
     }
-}
+} 

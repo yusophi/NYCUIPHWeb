@@ -9,6 +9,175 @@
 ?>
 
 <?php
+// Disable wp-embed
+function disable_embed_feature(){
+    wp_deregister_script( 'wp-embed' );
+}
+add_action('wp_footer', 'disable_embed_feature');
+
+// Disable wp-emoji
+function disable_emoji_feature()
+{
+    // Prevent Emoji from loading on the front-end
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+
+    // Remove from admin area also
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+
+    // Remove from RSS feeds also
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+
+    // Remove from Embeds
+    remove_filter('embed_head', 'print_emoji_detection_script');
+
+    // Remove from emails
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+
+    // Disable from TinyMCE editor. Currently disabled in block editor by default
+    add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
+
+    /** Finally, prevent character conversion too
+     ** without this, emojis still work
+    ** if it is available on the user's device
+    */
+
+    add_filter('option_use_smilies', '__return_false');
+}
+
+// Disables emojis in WYSIWYG editor
+function disable_emojis_tinymce($plugins)
+{
+    if (is_array($plugins)) {
+        $plugins = array_diff($plugins, array('wpemoji'));
+    }
+    return $plugins;
+}
+add_action('init', 'disable_emoji_feature');
+
+?>
+
+<?php
+// Require Authentication for All Requests (REST API)
+add_filter( 'rest_authentication_errors', function( $result ) {
+    // If a previous authentication check was applied,
+    // pass that result along without modification.
+    if ( true === $result || is_wp_error( $result ) ) {
+        return $result;
+    }
+ 
+    // No authentication has been performed yet.
+    // Return an error if user is not logged in.
+    if ( ! is_user_logged_in() ) {
+        return new WP_Error(
+            'rest_not_logged_in',
+            __( 'You are not currently logged in.' ),
+            array( 'status' => 401 )
+        );
+    }
+    // Our custom authentication check should have no effect
+    // on logged-in requests
+    return $result;
+});
+?>
+
+<?php
+  remove_action('init', 'wp_admin_bar_init');
+  add_action('get_header', 'my_filter_head');
+  function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+    remove_action('wp_head', 'wp_admin_bar_header');
+    remove_action('wp_head', 'wp_generator');
+    header('Strict-Transport-Security:max-age=31536000; includeSubdomains; preload');
+    header('X-Content-Type-Options: nosniff');
+    header('X-Frame-Options: SAMEORIGIN');
+    header('Set-Cookie: cross-site-cookie=name; SameSite=Lax;');
+    @ini_set('session.cookie_httponly', true);
+    @ini_set('session.cookie_secure', true);
+    @ini_set('session.use_only_cookies', true);
+  } 
+?>
+
+<?php
+$nonce = wp_create_nonce('nonce');
+header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+
+//header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+/*
+add_filter( 'script_loader_tag', 'add_nonce_to_script', 10, 3 );
+function add_nonce_to_script( $tag, $handle, $source ) {
+    //custom_nonce_value();
+    //$val_nonce = wp_create_nonce(); //NONCE_RANDVALUE;
+    global $nonce;
+    $search = "type='text/javascript'";
+    $replace = "type='text/javascript' nonce='".$nonce."' ";
+    $subject = $tag;
+
+    $output = str_replace($search, $replace, $subject);
+   
+    return $output;
+}*/
+function add_nonce_to_script_tag($html) {
+  global $nonce;
+  return str_replace('<script', "<script nonce='$nonce'", $html);
+}
+add_filter('script_loader_tag', 'add_nonce_to_script_tag');
+
+function add_nonce_to_inline_script($attr) {
+  global $nonce;
+  if (!isset($attr['nonce']) ) {
+      $attr['nonce'] = $nonce;
+  }
+  return $attr;
+}
+add_filter('wp_inline_script_attributes', 'add_nonce_to_inline_script');
+
+/*
+function pagely_security_headers($headers) {
+  //custom_nonce_value();
+  //$val_nonce = wp_create_nonce();//NONCE_RANDVALUE;
+  $headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com;";
+  return $headers;
+}
+add_filter( 'wp_headers', 'pagely_security_headers' )*/
+
+$login_nonce = wp_create_nonce('login-nonce');
+add_action( 'login_form', 'login_extra_note' );
+function login_extra_note() {
+  //Get and set any values already sent
+  global $login_nonce;
+  ?><p>
+    <input name="csrf_token" type="hidden" value="<?php echo $login_nonce; ?>"/>
+  </p>
+  <?php
+  }
+
+add_action( 'lostpassword_form', 'lostpassword_extra_field' );
+function lostpassword_extra_field() {
+  //Get and set any values already sent
+  global $login_nonce;
+  ?><p>
+    <input name="csrf_token" type="hidden" value="<?php echo $login_nonce; ?>"/>
+  </p>
+  <?php
+}
+
+add_filter( 'login_display_language_dropdown', '__return_false' );
+
+/*add_action( 'login_head', 'wpdocs_ref_access' );
+function wpdocs_ref_access() {
+  global $error;
+  if ( ! wp_verify_nonce($_POST['csrf_token'], 'login-nonce') ) {
+      $error  = 'Restricted area, please login to continue.';
+  }
+}
+*/
+
+?>
+
+<?php
   function my_custom_post_staff() {
     $labelsss = array(
       'name'               => _x( 'Staff', 'post type 名称' ),
@@ -33,7 +202,9 @@
       'menu_position' => 5,
       'rewrite'       => false,
       'has_archive'   => false,
-      'supports'      => array( 'title', 'thumbnail')
+      'supports'      => array( 'title', 'thumbnail'),
+      'publicly_queryable'  => true,
+      'exclude_from_search' => false
     );
     register_post_type( 'Staff', $argsss );
   }
@@ -71,54 +242,45 @@
 <?php
   //enqueue the stylesheet
   function mytheme_style_files() { 
+    wp_dequeue_style( 'global-styles' );
     wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
     wp_enqueue_style('mytheme_rm_btn_style', get_theme_file_uri('css/read_more_btn.css')); 
     wp_enqueue_style('mytheme_page_banner_style', get_theme_file_uri('css/page_banner.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
-    //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-    //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-    /*wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-    wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-    wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-*/
-    if(is_page('homepage')){
+
+    if(is_page('homepage') || is_page('homepage-en')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css')); 
-      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
     }
-    if(is_page('about')){
+    if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
-      wp_enqueue_script('show_video_script', get_theme_file_uri('js/show_video.js'), true);
-      
     }
-    if(is_page('news')){
+    if(is_page('news') || is_page('news-en')){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('events')){
-      wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
+    if(is_page('events')|| is_page('events-en')){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
       wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('member')){
-      wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/member.css')); 
+    if(is_page('member')|| is_page('member-en')){
+      wp_enqueue_style('mytheme_page-mamber_style', get_theme_file_uri('css/member.css')); 
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('staff_filter', get_theme_file_uri('js/staff_filter.js'),true);
       wp_localize_script('staff_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
   
     }
-    if(is_page('admission')){
+    if(is_page('admission')|| is_page('admission-en')){
       wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
     }
-
     if(is_page_template( 'page-templates/template-article-news.php')){
       wp_enqueue_style('mytheme_article_general_style', get_theme_file_uri('css/article_general_style.css'));
       wp_enqueue_style('mytheme_article_news_style', get_theme_file_uri('css/article_news.css'));
@@ -141,12 +303,12 @@
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum_arch.css')); 
     }
-    elseif(is_page('degree_regulation')){
+    elseif(is_page('degree_regulation') || is_page('degree_regulation-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
-    elseif(is_page('course_schedule')){
+    elseif(is_page('course_schedule') || is_page('course_schedule-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
     }
@@ -167,45 +329,25 @@
     elseif(is_page('past_papers')){
       wp_enqueue_style('mytheme_page-student_style', get_theme_file_uri('css/student.css')); 
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-past_paper.css')); 
+      wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+      wp_enqueue_script('paper_filter', get_theme_file_uri('js/paper_filter.js'),true);
+      wp_localize_script('paper_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('dep_ph') || is_page('dep_mhe')) {
+    if(is_page('dep_ph') || is_page('dep_mhe') || is_page('dep_mhe-en') || is_page('dep_ph-en')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));
     }
     if(is_page_template( 'page-templates/template-epid.php' ) || is_page_template( 'page-templates/template-bios.php' ) || is_page_template( 'page-templates/template-law.php' )){ /*流行病學模板*/
       wp_enqueue_style('pro_division_style', get_theme_file_uri('css/pro_division.css'));
+      wp_enqueue_style('mytheme_page-member_style', get_theme_file_uri('css/member.css')); 
     }
     if(is_page('links')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/links.css'));
     }
+    //wp_enqueue_script('backtoTOP_script', get_theme_file_uri('js/back_to_top.js'), true);
+
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
-
-<?php
-// include custom jQuery
-/*function shapeSpace_include_custom_jquery() {
-
-	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-
-}
-add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');*/
-?>
-
-<?php
-//require_once('include/load_script.php');
-  //   require_once('include/ajax.php');
-      ?>
-
-<?php
-  /*function load_script(){
-    //wp_enqueue_script('ajax', get_template_directory_uri() . '/js/post_filter.js', array('jquery'), 1.1, true);
-   // wp_localize_script('ajax', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-   wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-   wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-  }
-  add_action('wp_enqueue_scripts','load_script');*/
-?>      
 
 <?php
 // post filter function
@@ -214,20 +356,33 @@ add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 
 function filter_ajax() {
   $postType = $_POST['type'];
-  $filter_type = $POST['filter_type'];
   $category = $_POST['category'];
-  echo $filter_type;
-  if($postType == 'Staff' && isset($_POST['cat_field']) && isset($_POST['cat_title'])){ //staff member
+  $check = 1;
+  
+  if($postType == 'Staff' && isset($_POST['cat_field']) && isset($_POST['cat_title'])){ 
+    //post_type: Staff
     $cat_field = $_POST['cat_field'];
 	  $cat_title = $_POST['cat_title'];
     
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'meta_key'   => 'prof_class_for_sorting',
+      /*'meta_key'   => 'prof_class_for_sorting',
       'orderby'    => 'meta_value_num',
-      'order'      => 'ASC',
-      'posts_per_page' => 15,
+      'order'      => 'ASC',*/
+      'meta_query' => array(
+          'relation' => 'AND',
+          'admin' => array(
+              'key' => 'admin_for_sorting',
+              'compare' => 'EXISTS',),
+          'prof' => array(
+              'key' => 'prof_class_for_sorting',
+              'compare' => 'EXISTS',), 
+          ),
+      'orderby' => array( 
+        'admin' => 'ASC',
+        'prof' => 'ASC',
+      ),
     );
 
     if(count($cat_field) > 0 &&  strlen($cat_field[0]) > 0){
@@ -254,7 +409,7 @@ function filter_ajax() {
       $args['tax_query'][] = [
         'taxonomy'      => 'category',
         'field'		=> 'slug',
-        'terms'         => $cat_title,
+        'terms'        => $cat_title,
         'operator'      => 'IN'
       ];
     }
@@ -262,26 +417,108 @@ function filter_ajax() {
       $args['category_name'] = '1-regular';
     }
   }
-  else{//news or events
+  else if($postType == 'papers' /*&& isset($_POST['cat_year']) && isset($_POST['cat_division'])*/){ 
+    //post_type: papers
+    $cat_year = $_POST['cat_year'];
+	  $cat_division = $_POST['cat_division'];
+    $keyword = $_POST['keyword'];
+
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'category_name' => $category,
+      'orderby' => 'meta_value_num',
+      'meta_key' => 'year',
+      'order' => 'DESC',
+    );
+    if(isset($keyword))
+    {
+      $args['s'] = esc_attr($keyword);
+    }
+    else if(count($cat_year) > 0 &&  strlen($cat_year[0]) > 0){
+      //echo "there is year cat.";
+      $args['tax_query'][] = [
+        'taxonomy'      => 'papers_cat',
+        'field'		=> 'slug',
+        'terms'         => $cat_year,
+        'operator'      => 'IN'
+      ];
+      if(count($cat_division) > 0 &&  strlen($cat_division[0]) > 0){
+        //echo "also there is title_category.";
+        $args['tax_query']['relation'] = 'AND';
+        $args['tax_query'][] = [
+          'taxonomy'      => 'papers_cat',
+          'field'		=> 'slug',
+          'terms'         => $cat_division,
+          'operator'      => 'IN'
+        ];
+      }
+    }
+    else if(count($cat_division) > 0 &&  strlen($cat_division[0]) > 0){
+      //echo "there is title_categry.";
+      $args['tax_query'][] = [
+        'taxonomy'      => 'papers_cat',
+        'field'		=> 'slug',
+        'terms'         => $cat_division,
+        'operator'      => 'IN'
+      ];
+    }
+    else{ // if none category is selected, then show the default value
+      $check = 0;
+    }
+  }
+  else{//post type: news or events
+    $args = array(
+      'post_type' => $postType,
+      'post_status' => 'publish',
       'orderby' => 'date',
       'order' => 'desc',
       'posts_per_page' => 15
     );
+    $args['tax_query'][] = [
+      'taxonomy'      => 'category',
+      'field'		=> 'slug',
+      'terms'        => $category,
+      'operator'      => 'IN'
+    ];
   }
-
-  $query = new WP_Query($args);
-
-  if($postType == 'Staff'){ //staff member
+  
+  if($check){
+    $query = new WP_Query($args); // if have query condition, create a query
+  }
+  
+  if($postType == 'Staff'){ //post type: Staff
       while($query->have_posts()) : $query->the_post();
         get_template_part('template-parts/post_member_card');
       endwhile;
   }
-  else{ // post 
-    if( $category == '1-academy_lectures' || $category == '2-study_group' || $category == 'event'){
+  else if($postType == 'papers'){ //post type: papers
+    if($query->have_posts()){
+      echo '<div class="item_titles _font18">';
+      echo ' <span class="year">年份</span>
+      <span class="name">姓名</span>
+      <span class="degree">畢業學位</span>
+      <span class="advisor">指導教授</span>
+      <span class="paper">論文名稱</span>';
+      echo '</div>';
+      echo '<div class="block_paper_posts">';
+      while($query->have_posts()) : $query->the_post();
+        get_template_part('template-parts/post_paper_card');
+      endwhile;
+      echo '</div>';
+    }
+    else if(!$check){
+      echo '<div id="search_hint">
+        <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
+      </div>';
+    }
+    else{
+      echo '<div id="search_hint">
+        <p>查詢不到相關資訊，請重新輸入關鍵字。</p>
+      </div>';
+    }
+  }
+  else{ // post category: event 
+    if( $category[0] == '1-academy_lectures' || $category[0] == '2-study_group' || $category[0] == 'event'){
       if($query->have_posts()){
         echo '<div class="event-cards">'; 
         while($query->have_posts()) : $query->the_post();
@@ -290,7 +527,7 @@ function filter_ajax() {
         echo '</div>';
       }
     }
-    else{
+    else{ //post category: news
       if($query->have_posts()){
         $counter = 1;
         echo '<div class="news-article">';
@@ -310,35 +547,12 @@ function filter_ajax() {
       }
     }
   }
-  
-  //echo $response;
-  //exit;
-
-  /*echo '<div class="pagination">';
-  $big = 999999999; // need an unlikely integer
-  $arg = array(
-      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-      'format' => '?page=%#%',
-      'total' => $query->max_num_pages,
-      'current' => max( 1, get_query_var( 'paged') ),
-      'show_all' => false,
-      'end_size' => 3,
-      'mid_size' => 2,
-      'prev_next' => True,
-      'prev_text' => __('<'),
-      'next_text' => __('>'),
-      'type' => 'list',
-      );
-  echo paginate_links($arg);
-  echo '</div>';*/
   wp_reset_postdata();
   die();
 } 
 ?>
 
-
 <?php /* create custom post type called "papers"*/
-
 // Creating a Deals Custom Post Type
 function paper_custom_post_type() {
 	$labels = array(
@@ -361,7 +575,7 @@ function paper_custom_post_type() {
 		'description'         => __( '歷屆論文資料'),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'author', 'thumbnail', 'custom-fields'),
-		'public'              => true,
+		'public'              => false,
 		'hierarchical'        => false,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
@@ -370,16 +584,14 @@ function paper_custom_post_type() {
     'menu_position' => 5,
 		'has_archive'         => true,
 		'can_export'          => true,
-		'exclude_from_search' => false,
-	        'yarpp_support'       => true,
-		/*'taxonomies' 	      => array('post_tag'),*/
-		'publicly_queryable'  => true,
+		'exclude_from_search' => true,
+	  'yarpp_support'       => true,
+		'taxonomies' 	      => array('papers_cat'),
+		'publicly_queryable'  => false,
 );
 	register_post_type( 'papers', $args );
 }
 add_action( 'init', 'paper_custom_post_type', 0 );
-
-
 ?>
 
 <?php // Let us create Taxonomy for Custom Post Type
@@ -408,5 +620,119 @@ function create_paper_custom_taxonomy() {
     'show_admin_column' => true,
     'query_var' => true,
   ));
+}
+?>
+
+<?php
+/**
+ * This function modifies the main WordPress query to include an array of 
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query The main WordPress query.
+ *//*
+function tg_include_custom_post_types_in_search_results( $query ) {
+    if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
+        $query->set( 'post_type', array( 'post', 'Staff', 'page') );
+    }
+}
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );*/
+?>
+
+<?php
+/**
+ * Extend WordPress search to include custom fields
+ *
+ * https://adambalee.com
+ */
+
+/**
+ * Join posts and postmeta tables
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_join
+ */
+function cf_search_join( $join ) {
+    global $wpdb;
+
+    if (is_search()) {    
+      $join .= ' LEFT JOIN '. $wpdb->postmeta . ' AS post_metas ON ' . $wpdb->posts . '.ID = post_metas.post_id ';
+    }
+    return $join;
+}
+add_filter('posts_join', 'cf_search_join' );
+
+/**
+ * Modify the search query with posts_where
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
+ */
+function cf_search_where( $where ) {
+    global $pagenow, $wpdb;
+
+    if (is_main_query() && is_search()) {
+        $where = preg_replace(
+            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
+            "(".$wpdb->posts.".post_title LIKE $1) OR (post_metas.meta_value LIKE $1)", $where );
+    }
+    return $where;
+}
+add_filter( 'posts_where', 'cf_search_where' );
+
+/**
+ * Prevent duplicates
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
+ */
+function cf_search_distinct( $where ) {
+    global $wpdb;
+
+    if (is_search() ) {
+        return "DISTINCT";
+    }
+    return $where;
+}
+add_filter( 'posts_distinct', 'cf_search_distinct' );
+?>
+
+<?php
+add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
+ 
+function add_cpt_to_pll( $post_types, $is_settings ) {
+    if ( $is_settings ) {
+        // hides 'my_cpt' from the list of custom post types in Polylang settings
+        unset( $post_types['Staff'] );
+    } else {
+        // enables language and translation management for 'my_cpt'
+        $post_types['Staff'] = 'Staff';
+    }
+    return $post_types;
+}?>
+
+<?php
+  function custom_polylang_languages_switcher( $class = '' ) {
+    if ( ! function_exists( 'pll_the_languages' ) ) return;
+
+    // Gets the pll_the_languages() raw code
+    $languages = pll_the_languages(array(
+        'hide_current' => 1, 
+        'raw' => 1
+    ));
+    
+    $output = '';
+
+    // Checks if the $languages is not empty
+    if ( ! empty( $languages ) ) {
+      // Runs the loop through all languages
+      foreach ( $languages as $language ) {
+        // Variables containing language data
+        $url = $language['url'];
+        //$baseurl = str(bloginfo('template_url')) . "/images/icon/icon-en.png";
+        //echo $baseurl;
+        echo "<a href=\"$url\">";
+        echo "<img src=\"" . get_bloginfo('template_url') . "/images/icon/icon-en.png\">";
+        echo "</a>";
+        //$output .= "<a href=\"$url\" id=\"lang_switcher\"></a>";
+      }
+    //return $output;
+  }
 }
 ?>

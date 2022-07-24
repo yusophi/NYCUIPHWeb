@@ -8,16 +8,15 @@
 
 <div class="single_post">
     <div class="banner">
-        <span class="post_title">
+        <div class="post_title">
             <p><?php the_title(); ?></p>
             <div id="circle"></div>
-        </span>
+        </div>
         <div class="banner_article_meta">
             <img class="icon-clock" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
             <div class="banner_post_tags">
-                <div class="post_category"><?php the_field('news_item'); //the_category(''); 
-                                            ?></div>
+                <div class="post_category"><?php the_field('news_item');?> </div>
                 <?php
                 $sdgs = get_field('sdg');
                 if ($sdgs) : ?>
@@ -105,12 +104,8 @@
                 ?>
                     <div class="article-content num-<?php echo $counter ?>">
                         <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
-                        <!--<img class="thumbnail_icon" src="<? php // bloginfo('template_url') 
-                                                                ?>/images/icon/icon-newspaper-new.svg">
-                                    <img class="thumbnail_icon_hover" src="<? php // bloginfo('template_url') 
-                                                                            ?>/images/icon/icon-news-more.svg">-->
-                        <div class="post_icon">
-                            <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
+                        <div class="post_icon tmp_arti_news">
+                            <img src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-newspaper.svg">
                             <div>
                                 <p class="post_icon_hover_dots"></p>
                                 <p class="post_icon_hover_dots"></p>
@@ -126,8 +121,7 @@
                             <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                         </div>
                         <div class="post_tags">
-                            <div class="post_category"><?php the_field('news_item'); //the_category(''); 
-                                                        ?></div>
+                            <div class="post_category"><?php the_field('news_item');?> </div>
                             <?php
                             $sdgs = get_field('sdg');
                             if ($sdgs) : ?>

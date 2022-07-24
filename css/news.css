@@ -9,24 +9,35 @@
 
 /*the News_block */
 .post_block{
-    position: relative;
-    width: 100vw;
+    width: 82vw;
     height: auto;
+    margin-top: 7.8125vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: warp;
 }
 
 .news-article
 {
     width: 100%;
+    min-height: auto;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #e4dfd2;
 }
 
 .select_bar_container{
     width: 82vw;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: relative;
     margin-top: 11.458vw;
+    padding-bottom: 1vw;
+    border-bottom: solid 0.052vw #2e4565;
 }
 
 .cat-list{
@@ -35,14 +46,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /*margin-left: -5vw;*/
 }
 
 .cat-list > li{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*margin-left: 4.16vw;*/
 }
 
 .cat-list_item_dot{
@@ -83,9 +92,8 @@
     width: 82vw;
     margin-left: 9vw;
     margin-right: 9vw;
-    margin-top: 11.9vw;
-    margin-top: 11.9vw;
-    margin-bottom: 8.69vw;
+    margin-top: 12.76vw;
+    margin-bottom: 2vw;
 }
 
 .page-numbers {
@@ -98,7 +106,7 @@
 .page-numbers > li{
     margin-left: 2vw;
     color: #2e4565;
-    font-size: 0.9375rem;
+    font-size: 1.0416vw;
 }
 
 .page-numbers > li > a{
@@ -125,7 +133,7 @@
     background-repeat:no-repeat;
     background-size: contain;
     border-radius:0;
-    margin-left: 32rem;
+    margin-left: 30vw;
     margin-top: -1.5rem;
 }
 
@@ -138,9 +146,8 @@
     background-repeat:no-repeat;
     background-size: contain;
     border-radius:0;
-    margin-left: -36rem;
+    margin-left: -35vw;
     margin-top: -1.5rem;
-    /*right: 35rem;*/
 }
 
 
@@ -156,9 +163,129 @@
     padding: 0.6rem 0.8rem 0.6rem;
 }
 
+
+
+@media (max-width: 1024px){
+    .select_bar_container{
+        padding-bottom: 2vw;
+    }
+
+    .cat-list{
+        width: 48vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: -3.5vw;
+    }
+
+    .pagination{
+        margin-bottom: 5vw;
+    }
+
+    .pagination .next{
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: 28vw;
+        margin-top: -2.5vw;
+    }
+
+    .pagination .prev{
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: -32vw;
+        margin-top: -2.5vw;
+    }
+    
+    
+}
+
+@media (max-width: 970px) {
+    /*since most device from 768px to 970px will get wrong layout,
+    increase the breakpoint in the page*/
+    .select_bar_container{
+        padding-bottom: 3vw;
+    }
+
+    .cat-list{
+        width: 57vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: -4.5vw;
+    }
+
+    .news-article{
+        grid-template-columns: none;
+        gap: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pagination{
+        margin-bottom: 5vw;
+    }
+
+    .pagination .next{
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: 28vw;
+        margin-top: -2.5vw;
+    }
+
+    .pagination .prev{
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: -32vw;
+        margin-top: -2.5vw;
+    }
+    
+}
+
 @media (max-width: 960px) {
     .cat-list_item_name {
         font-size: 9px;
         margin-left: 12.48px;
     }
+}
+
+@media (max-width: 480px){
+   
+    .select_bar_container{
+        padding-bottom: 2vw;
+    }
+
+    .cat-list{
+        width: 82vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: -2vw;
+    }
+    
+    .news-article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: none;
+        gap: 0;
+        margin: 0;
+    }
+
+    .pagination{
+        margin-bottom: 5vw;
+    }
+
+    .pagination .next{
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: 12vw;
+        margin-top: -3.5vw;
+    }
+
+    .pagination .prev{
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: -18vw;
+        margin-top: -3.5vw;
+    }
+
 }

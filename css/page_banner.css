@@ -180,62 +180,32 @@
     height: 30px;
 }
 
-
-
-/* new design for filter*/
-/*.select_bar_container{
-    width: 82vw;
-    display: block;
-    position: relative;
-    margin-top: 11.458vw;
+.page_name-en{
+    font-size: 1.8vw;
+    letter-spacing: 0.078125vw;
 }
 
-.cat-list{
-    width: 33.28vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+
+@media (max-width: 768px){
+    .page_name{
+        font-size: 3.083vw;
+    }
+
+    #eg{
+        font-size: 2.5625vw;
+    }
 }
 
-.cat-list > li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+@media (max-width: 480px){
+    .page_name{
+        font-size: 5vw;
+    }
+
+    #eg{
+        font-size: 3vw;
+    }
 }
-
-.cat-list_item_dot{
-    width: 1vw;
-    height: 1vw;
-    border: solid 2px #2e4565;
-    border-radius: 50%;
-}
-
-.cat_active > .cat-list_item_dot{
-    background-color: #2e4565;
-}
-
-.cat-list_item:hover .cat-list_item_dot{
-    background-color: #2e4565;
-}
-
-.cat-list_item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-decoration: none;
-}
-
-.cat-list_item_name{
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
-    font-weight: bold;
-    line-height: 0.06;
-    letter-spacing: 2.7px;
-    color: #2e4565;
-    margin-left: 1.3vw;
-}*/
-
 
 
 @media (max-width:960px) {

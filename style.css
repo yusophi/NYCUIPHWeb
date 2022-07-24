@@ -12,9 +12,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 /*reset the style of css*/
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans: 300,400);*/
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
 
 /*initialize*/
 html, body, div, span, applet, object, iframe,
@@ -98,17 +97,18 @@ table {
 */
 /***header***/
 html{
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     border: 0;
-    
 }
 
 body {
-    background: #FAFAFA;
+    background: #2e4565;
     font-family: 'Noto Sans TC', sans-serif;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column;
 }
 
 body::-webkit-scrollbar {
@@ -154,9 +154,6 @@ body::-webkit-scrollbar {
     color: #2e4565;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
-
-
 #main-nav {
     position: fixed;
     width: 100vw;
@@ -184,27 +181,46 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 11.30208333vw;
+   /* width: 11.30208333vw;
     /* margin-right: 3.64583333vw;
     margin-top: 2.86458333vw; */
     justify-content: space-between;
+    align-items: center;
     transition: 0.3s;
     transform: translateY(0px);
     min-width: 100px;
+}
+
+#nav-toolbar > botton{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 #nav-toolbar.pulldown {
     transform: translateY(calc(50% + 4vw));
     transition: 0.3s;
 }
+/*
+#icon-en{
+    width: 5vw;
+    height: 2vw;
+}*/
 
 #nav-toolbar div {
-    width: 1.666666vw;
-    height: 1.666666vw;
+   /* width: 1.666666vw;
+    height: 1.666666vw;*/
     transform: translateY(-50%);
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+
+li.lang-item > a{
+    color: #2e4565;
+    font-size: 20px;
 }
 
 #nav-toolbar div img {
@@ -378,9 +394,167 @@ body::-webkit-scrollbar {
     padding: 5.188rem 10.75rem 7.938rem 10.75rem
 }
 
+#search_overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #162a47;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 10;
+}
+
+#search_overlay_closebtn{
+    cursor: pointer;
+    position: relative;
+    top: 2.6041vw;
+    left: 2.6041vw;
+}
+
+#search_request_form{
+    width: 34.27vw;
+    height: 3.125vw;
+    position: relative;
+    left: 32.91vw;
+    top: 8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 3px #ffbb00;
+}
+
+#yellow_search_btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: 0px;
+}
+
+#site_search_keyword{
+    width: 70vw;
+    border: 0px;
+    background-color: transparent;
+    margin-left: 2.5vw;
+}
+
+input.site_search_input::focus{
+    outline: none;
+}
+
+input.site_search_input::placeholder{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: #ffbb00;
+}
+
+input.site_search_input[type=text]{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: #ffbb00;
+}
+
+.icon_toolbar_hover{
+    display: none;
+}
+
+#icon-search:hover #site_search{
+    display: none;
+}
+
+#icon-search:hover #site_search_hover{
+    display: block;
+}
+
+#icon-calendar:hover #calendar{
+    display: none;
+}
+
+#icon-calendar:hover #calendar_hover{
+    display: block;
+}
+
+#icon-alumni_entry:hover #alumni_entry{
+    display: none;
+}
+
+#icon-alumni_entry:hover #alumni_entry_hover{
+    display: block;
+}
+
+/* style of search.php*/ 
+.result_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #e4dfd2;
+    position: relative;
+}
+
+#search_keyword{
+    width: 82vw;
+    height: auto;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-bottom: 5vw;
+    color: #2e4565;
+    font-weight: bold;
+    font-size: 3.125vw;
+    letter-spacing: 0.2vw;
+}
+
+.article{
+    margin-top: 15vw;
+}
+
+article.article-content{
+    width: 82vw;
+    height: auto;
+    margin: 2vw 9vw;
+    padding-bottom: 2vw;
+    color: grey;
+    letter-spacing: 0.1vw;
+    border-bottom: solid 0.15vw #2e4565; 
+}
+
+h1.article-title > a{
+    color: #4f5ab8;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+
+h1.article-title{
+    margin-bottom: 0.5vw;
+}
+
+#searchsubmit{
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 #nav-toolbar #nav-hamburger {
     background-color: aqua;
     display: none;
+}
+
+#icon-en a{
+    position: relative;
 }
 
 @media (max-width:960px) {
@@ -406,13 +580,13 @@ body::-webkit-scrollbar {
         letter-spacing: 0.25px;
     }
 
-    #nav-toolbar {
+    /*#nav-toolbar {
         width: 108.5px;
     }
     #nav-toolbar div {
         width: 16px;
         height: 16px;
-    }
+    }*/
 
     .nav-menu-pullup {
         transform: translateY(-80px);
@@ -443,6 +617,11 @@ body::-webkit-scrollbar {
 @media (max-width:700px) {
     #nav-toolbar #nav-hamburger {
         display: block;
+    }
+    
+    #nav-hamburger{
+        width: 16px;
+        height: 16px;
     }
 
     #nav-hr {
@@ -508,6 +687,10 @@ body::-webkit-scrollbar {
 
     #nav-menu.shorten {
         padding: 1.458333333vw 9.010416666vw;
+    }
+
+    li.lang-item > a{
+        font-size: 15px;
     }
 }
 

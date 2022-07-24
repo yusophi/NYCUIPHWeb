@@ -18,11 +18,13 @@
 /* selection bar*/
 .select_bar_container{
     width: 82vw;
-    display: block;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.cat_list_container{
+.cat-list_container{
     width: 82vw;
     display: flex;
     flex-direction: row;
@@ -30,7 +32,7 @@
     margin-bottom: 1.041vw;
 }
 
-.cat_list_container > p{
+.cat-list_container > p{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.9375vw;
     font-weight: bold;
@@ -39,43 +41,43 @@
     color: #2e4565;
 }
 
-.cat_list{
+.cat-list{
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 78vw;
 }
 
-.cat_list > li{
+.cat-list > li{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 1.97916vw;
 }
 
-.cat_list_item_dot{
+.cat-list_item_dot{
     width: 1vw;
     height: 1vw;
     border: solid 2px #2e4565;
     border-radius: 50%;
 }
 
-.cat_active > .cat_list_item_dot{
+.cat_active > .cat-list_item_dot{
     background-color: #2e4565;
 }
 
-.cat_list_item:hover .cat_list_item_dot{
+.cat-list_item:hover .cat-list_item_dot{
     background-color: #2e4565;
 }
 
-.cat_list_item{
+.cat-list_item{
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
 }
 
-.cat_list_item_name{
+.cat-list_item_name{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.9375vw;
     font-weight: bold;
@@ -83,6 +85,77 @@
     letter-spacing: 2.7px;
     color: #2e4565;
     margin-left: 1.3vw;
+}
+
+/* keyword search bar */
+.request_form{
+    width: 82vw;
+    height: 3.125vw;
+    margin-top: 3.125vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1.5px #b5bbbe;
+    border-radius: 1.5625vw;
+}
+
+#keyword{
+    width: 70vw;
+    border: 0px;
+    background-color: transparent;
+    margin-left: -2.5vw;
+}
+
+input::focus{
+    outline: none;
+}
+
+input[type=text]{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: #647386;
+}
+
+#search_svg{ /*the svg image*/
+    width: 1.71875vw;
+    height: 1.71875vw;
+    margin-left: 1.5625vw;
+}
+#search_btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+}
+
+#search_btn > img{
+    width: 2.03125vw;
+    height: 2.03125vw;
+    margin-right: 1.5625vw;
+}
+
+#search_hint{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#search_hint > p{
+    width: 40vw;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 3.3854vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.5078125vw;
+    text-align: left;
+    color: #b5bbbe;
+    margin-top: 4.167vw;
 }
 
 .item_titles{
@@ -119,6 +192,8 @@
 }
 
 .row_paper > span{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.14583vw;
     font-weight: 500;
     letter-spacing: 0.05729vw;
     text-align: left;
@@ -126,23 +201,113 @@
     line-height: 1.59;
 }
 
-.row_paper > .name{
-    width: 3.8vw;
-    margin-left: 7.85vw;
+span.year{
+    width: 4.5vw;   
 }
 
-.row_paper > .degree{
-    width: 2.6vw;
+span.name{
+    width: 5.5vw;
+    margin-left: 6vw;
+}
+
+span.degree{
+    width: 10vw;
     margin-left: 6.3vw;
 }
 
-.row_paper > .advisor{
-    width: 3.8vw;
-    margin-left: 9.85vw;
+span.advisor{
+    width: 10.5vw;
+    margin-left: 5vw;
 }
 
-.row_paper > .paper{
+span.paper{
     width: 38.4375vw;
     margin-left: 8.5vw;
     letter-spacing: 0.171875vw;
+}
+
+@media (max-width: 768px){
+    span.year{
+        width: 6vw;
+    }
+
+    span.name{
+        width: 7vw;
+    }
+
+    span.degree{
+        width: 10vw;
+        margin-left: 6.3vw;
+    }
+
+    span.advisor{
+        width: 6vw;
+    }
+}
+
+@media (max-width: 480px){
+    .cat-list_container{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 6.041vw;
+    }
+
+    .cat-list{
+        width: 84vw;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 2vw;
+    }
+
+    .cat-list > li{
+        margin-top: 2.5vw;
+    }
+
+    .request_form{
+        height: 6.5vw;
+        border-radius: 3.5vw;
+    }
+
+    #keyword{
+        margin-left: 1.5vw;
+    }
+    
+    #search_btn > img{
+        width: 5vw;
+        height: 5vw;
+        margin-right: 1.5vw;
+    }
+
+    #search_svg {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 2vw;
+    }
+
+    #search_hint > p{
+        font-size: 6vw;
+    }
+
+    .row_paper > span{
+        font-size: 1vw;
+    }
+
+    span.year{
+        width: 14vw;
+    }
+    span.name{
+        width: 18vw;
+        margin-left: 4vw;
+    }
+    span.degree{
+        width: 14vw;
+        margin-left: 5vw;
+    }
+    span.advisor{
+        width: 16vw;
+        margin-left: 5vw;
+    }
+    span.paper{
+        margin-left: 4vw;
+    }
 }

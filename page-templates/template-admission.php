@@ -5,11 +5,16 @@
 ?>
 
 <?php get_header(); ?>
+<?php $locale = get_locale();?>
 
 <div class="page_admission">
-    <div class="banner">
+    <div class="banner admission_banner">
+        <?php if($locale == "zh_TW"):?>
         <span class="page_name" id="zh">招生訊息<br></span>
         <span class="page_name" id="eg">Admission Information</span>
+        <?php else: ?>
+        <span class="page_name" id="page_nanme-en">Admission Information</span>
+        <?php endif; ?>
         <div class="circle"></div>
     </div>
     <div class="scetion1">
@@ -55,7 +60,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_MsPhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'ad_poster_size'); ?>
+                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'medium'); ?>
                     </div>
                 </div>
             </div>
@@ -78,7 +83,7 @@
                 </div>
             </div>
         
-        <script>
+        <script type='text/javascript'>
             var btns = document.getElementsByClassName("ad_icon");
 
             for (var i = 0; i < btns.length; i++) {
@@ -92,7 +97,7 @@
                 });
             }
             function show(n){
-                console.log(n);
+                //console.log(n);
                 var current_block = document.getElementsByClassName("shown");
                 var blocks = document.getElementsByClassName("ad_whole_block");
                 current_block[0].className = current_block[0].className.replace(" shown", "");
@@ -102,4 +107,5 @@
     </div>  
     <?php get_template_part( 'template-parts/backtoTOP');?>    
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>    
 <?php get_footer(); ?>

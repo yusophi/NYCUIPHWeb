@@ -32,9 +32,9 @@
     margin-top: 2.5%;
     right: 0;
     bottom: 0;
-    width: 2.65rem;
-    height: 2.65rem;
-    border-radius: 1.4rem;
+    width: 2.65625vw;
+    height: 2.65625vw;
+    border-radius: 1.465vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
 }
@@ -61,7 +61,7 @@
 
 .bk_num{
     font-family: 'TimesNewRoman';
-    font-size: 2.8504rem;
+    font-size: 3.02083vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -80,7 +80,7 @@
     font-size: 1.302084vw;
     font-weight: bold;
     line-height: 1.4;
-    letter-spacing: 3.75px;
+    letter-spacing: 0.195vw;
     text-align: left;
     color: #2e4565;
     margin-top: 8%;
@@ -135,25 +135,6 @@
     height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .information-block{
     position: relative;
     width: 82%;
@@ -172,6 +153,7 @@
 
 .info-title span{
     font-family: 'Noto Sans TC', sans-serif;
+    font-size: 3.38541vw;
     line-height: 1.2;
     font-stretch: normal;
     font-style: normal;
@@ -180,13 +162,13 @@
 }
 
 .ch-title{
-    font-size: 3.04725rem;
+    font-size: 3.385vw;
     font-weight: bold;
     letter-spacing: 0.5vw;
 }
 
 .en_title{
-    font-size: 1.266rem;
+    font-size: 1.40625vw;
     font-weight: 900;
     letter-spacing: 0.07vw
 }
@@ -221,10 +203,10 @@
 
 .deco-section{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.84375rem;
+    font-size: 0.9375vw;
     font-weight: bold;
     line-height: 0.06;
-    letter-spacing: 2.7px;
+    letter-spacing: 0.140625vw;
     text-align: center;
     color: #2e4565;
 }
@@ -245,7 +227,7 @@
     width: 34.8vw;
 }
 
-.texts{
+.texts, .en_text{
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -254,23 +236,45 @@
 
 .texts p{
     font-family: 'Noto Sans TC', sans-serif;
-    line-height: 1.875rem;
+    line-height: 1.82;
     text-align: left;
     color: #2e4565;
-    font-size: 1.03125rem;
+    font-size: 1.14583vw;
     letter-spacing: 0.23vw;
+    margin-bottom: 1.5vw;
+    overflow-wrap: break-word;
+}
+
+.en_text p{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.82;
+    text-align: left;
+    color: #2e4565;
+    font-size: 1.14583vw;
+    letter-spacing: 0.15vw;
+    margin-bottom: 1.5vw;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .texts-title div{
     font-family: 'Noto Sans TC', sans-serif;
     color: #2e4565;
-    font-size: 1.266rem;
+    font-size: 1.40625vw;
     font-weight: bold;
+    line-height: 1.82;
     letter-spacing: 0.28vw;
     margin-bottom: 1vw;
 }
 
-/*****/
+.iph-intro > .en_text{
+    width: 40vw;
+}
+
+
+/* block 2 */
 
 .IPH-purposeANDgoal .block-content{
     justify-content: space-between;
@@ -284,6 +288,7 @@
     height: 26.19vw;
 }
 
+/* block 3 */
 .subject-introduction .block-content{
     align-items: flex-end;
 }
@@ -298,7 +303,9 @@
     height: 25.5vw;
 }
 
-
+.subject-intro > .en_text{
+    width: 50vw;
+}
 
 /**past-supervisor**/
 
@@ -325,23 +332,33 @@
 }
 
 .unit-title{
-    font-size: 1.875rem;
+    font-size: 2.0833vw;
     letter-spacing: 0.3125vw;
 }
 
 .super-title{
     position: relative;
     margin-left: 0.5vw;
-    font-size: 1.17225rem;
+    font-size: 1.302083vw;
     letter-spacing: 0.195vw;
+}
+
+.en-supervisor-title{
+    width: 55vw;
+    font-size: 1.8vw;
+    letter-spacing: 0.1vw;
 }
 
 .supervisor .texts{
     width: 14.5vw;
 }
 
+.supervisor .en_text{
+    margin-left: 7vw;
+}
+
 .supervisor .texts p{
-    font-size: 1.17225rem;
+    font-size: 1.302083vw;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -351,3 +368,162 @@
     color: #2e4565;
 }
 
+#watchmore-1, #watchmore-2{
+    font-size: 1.04167vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+@media (max-width: 1024px){
+    .page-about-banner {
+        margin-top: 15vw;
+    }
+    .supervisor .texts{
+        width: 15.5vw;
+    }
+}
+
+@media (max-width: 960px) {
+    .bk_num {
+        font-size: 29px;
+    }
+
+    .video_title {
+        font-size: 12.5px;
+        letter-spacing: 1.872px;
+    }
+
+    .about_banner > .circle {
+        width: 25.5px;
+        height: 25.5px;
+        border-radius: 12.75px;
+    }
+
+    .info-title span {
+        font-size: 32.5px;
+    }
+
+    .texts p {
+        font-size: 11px;
+        letter-spacing: 2.208px;
+        margin-bottom: 14.4px;
+    }
+
+    .IPH-introduction img {
+        width: 334.08px;
+    }
+
+    .texts-title div {
+        font-size: 13.5px;
+        letter-spacing: 2.688px;
+        margin-bottom: 9.6px;
+    }
+
+    .IPH-purposeANDgoal img {
+        width: 251.424px;
+        height: 251.424px;
+    }
+
+    .subject-introduction img {
+        width: 278.4px;
+        height: 244.8px;
+    }
+
+    .unit-title {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .super-title {
+        font-size: 12.5px;
+        letter-spacing: 1.872px;
+    }
+
+    .supervisor .texts p {
+        font-size: 12.5px;
+        letter-spacing: 2.5px;
+    }
+    
+    .deco-section {
+        font-size: 9px;
+        letter-spacing: 1.35px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .page-about-banner {
+        margin-top: 20vw;
+    }
+    
+    .supervisor{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .supervisor .texts{
+        width: auto;
+    }
+
+    .supervisor > .en_text{
+        margin-left: 0;
+        margin-top: 3vw;
+        width: auto;
+    }
+    
+    .en-supervisor-title{
+        width: auto;
+        font-size: 2vw;
+    }
+
+    .block-content{
+        width: auto;
+        flex-direction: column;
+    }
+
+    .texts, .en_text, .iph-intro > .en_text, .subject-intro > .en_text{
+        width: auto;
+    }
+
+    .texts p{
+        margin-top: 2vw;
+    }
+
+    .IPH-introduction .image{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .page-about-banner {
+        margin-top: 30vw;
+    }
+    
+    .information-block{
+        margin-top: 25vw;
+    }
+
+    .supervisor .texts{
+        width: 32.5vw;
+    }
+
+    .overlay_content{
+        flex-direction: column;
+    }
+
+    .bk_num{
+        font-size: 5vw;
+    }
+
+    .supervisor > .en_text{
+        margin-top: 3vw;
+        margin-left: 0;
+    }
+
+    .en-supervisor-title{
+        font-size: 2.5vw;
+    }
+}

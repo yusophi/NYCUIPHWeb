@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap");
-
 .homepage {
     width: 100%;
     display: flex;
@@ -13,17 +11,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0.5vw;
 }
 
 .images-container {
     position: relative;
-    /*left: 9vw;
-    top: 16vw;
-    right: 9vw;*/
     margin-top: 13vw;
     width: 82.083333vw;
-    height: 29.061vw; /* x0.9 */
+    height: 32.29vw;
 }
 
 .imagesSlide {
@@ -34,11 +28,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 0.78152vw;
 }
 
-.image-bar {
-    position: relative;
+#social_btn, #slide_btn, .image-bar{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,37 +59,34 @@
     border-radius: 134px;
 }
 
-.social_media_links {
+.click_btn_bar{
     display: flex;
     flex-direction: row;
-    width: 7.96875vw;
-}
-
-.social_media_links img {
-    margin-right: 1.5vw;
-    width: 1.5625vw;
-    height: auto;
-}
-
-.imgslide-bar {
-    margin-bottom: 2.6041666vw;
-    display: flex;
-    width: 75vw;
     justify-content: space-between;
-    margin-top: 1.875vw;
     align-items: center;
+    width: 82.083vw;
+    margin: 1.875vw 3.541666vw 3.177083vw 3.541666vw;
 }
 
-.img-slide-btn {
-    width: 7.96875vw;
-    display: flex;
-    justify-content: flex-end;
+.click_btn_bar img{
+    width: 2vw;
+    height: 2vw;
+    margin-left: 0.65104vw;
+    margin-right: 0.65104vw;
 }
 
-.img-slide-btn img {
-    margin-left: 1.3020833vw;
-    width: 1.5625vw;
-    height: auto;
+#btn_pre_img{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+#btn_next_img{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
 }
 
 /* icon and title */
@@ -137,6 +127,13 @@
 }
 
 /***********************/
+.rounded_border{
+    width: 100vw;
+    height: 2vw;
+    background-color: #e4dfd2;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
 
 /***** the News block ******/
 .News-container {
@@ -153,15 +150,15 @@
 
 /* Posts */
 .news_title {
-    position: relative;
-    top: 6.09vw;
-    /*left: 45.9vw;*/
+    margin-top: 6.09375vw;
 }
 
 .news-article {
-    width: 100vw;
-    position: relative;
-    margin-top: 6.8vw;
+    width: 82vw;
+    margin-top: 5.885vw;
+    /*display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 6.875vw;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -357,6 +354,8 @@
 }
 
 /************************************/
+
+/************************************/
 /* Jennt: About us Block */
 .About-container {
     width: 100vw;
@@ -416,6 +415,10 @@
     align-items: flex-start;
 }
 
+.intro_content-text-en{
+    margin-top: 3vw;
+}
+
 .iph_ch {
     width: 40.6vw;
     font-size: 3.385833333vw;
@@ -444,7 +447,17 @@
     margin-top: 2.3vw;
 }
 
-.icon_aboutus_1 {
+.iph_intro_en{
+    width: 40.6vw;
+    font-size: 1vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05vw;
+    color: #647386;
+    margin-top: 2.3vw;
+}
+
+.icon_aboutus_1{
     width: 6.618rem;
     height: 10.683rem;
     position: absolute;
@@ -488,6 +501,12 @@
     color: #2e4565;
     margin-top: 8%;
     margin-bottom: 8%;
+}
+
+.video_title-en{
+    font-size: 1.1vw;
+    line-height: 1.2;
+    letter-spacing: 3px;
 }
 
 /*define the read-more botton in aboutUs block*/
@@ -714,7 +733,7 @@
     text-align: center;
     color: #2e4565;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 3vw;
 }
 
 .SP_en_title {
@@ -723,13 +742,16 @@
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.4;
     letter-spacing: 1.2px;
     text-align: center;
     color: #2e4565;
     text-align: center;
+    margin-top: 0.5vw;
 }
 
+.SP_title-en_margin{
+    margin-top: 1.8vw;
+}
 /* More resource part */
 /* Milo: links開始 */
 .Links-container {
@@ -871,7 +893,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -2vw;
+    margin-top: -1vw;
+}
+
+.ContactUs-container-en{
+    margin-top: -15vw;
 }
 
 .contactUS_title {
@@ -887,7 +913,7 @@
     align-items: flex-start;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 5vw;
 }
 
 #administor_profile_block .profile:first-child {
@@ -910,8 +936,8 @@
 }
 
 .profile-header img {
-    width: 20.833333333vw;
-    height: 22.135416666vw;
+    width: 20.83vw;
+    height: 22.14vw;
     border-radius: 6%;
     transition-timing-function: ease-out;
     transition-duration: 0.5s;
@@ -925,25 +951,23 @@
 .profile_content {
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 1vw;
 }
 
-.profile_p1,
-.profile_p2,
-.profile_p3 {
-    line-height: 1.823333333vw;
+.profile_p1, .profile_p2, .profile_p3 {
+    line-height: 1.823333vw;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
-    /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
     flex-direction: row;
     color: #2e4565;
-    margin-top: 3.5%;
+    margin-top: 1vw;
 }
-#out_profile_p2 {
-    margin-top: 10%;
-}
+
+/*.profile_p2{
+    margin-top: 2vw;
+}*/
 
 .contact_text {
     font-family: "Noto Sans TC", sans-serif;
@@ -964,26 +988,32 @@
     letter-spacing: 3.75px;
 }
 
-#out_WR {
+
+.work_respon{
     font-size: 0.9375vw;
     letter-spacing: 2px;
+    padding-top: 2%;    
+    padding-bottom: 2.5%;  
 }
 
-.contact_title,
-.email,
-.phone_num,
-.self_intro {
-    font-size: 1.041666666vw;
+.contact_title, .email, .phone_num, .self_intro{
+    font-size: 1.0416vw;
     font-weight: normal;
-    letter-spacing: 1.3px;
+    letter-spacing: 0.15625vw;
+    line-height: 1.2vw;
     text-align: left;
+}
+
+.staff_name {
+    font-size: 1.3025vw;
+    letter-spacing: 3.75px;
 }
 
 .overlayinContact {
     position: fixed;
     display: none;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vw;
     top: 0;
     left: 0;
     right: 0;
@@ -998,9 +1028,8 @@
 .overlay_wapper {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
-    /*background-color: aliceblue;*/
 }
 
 .cls_btn {
@@ -1011,36 +1040,28 @@
     cursor: pointer;
 }
 
-.overlay_profile_content {
-    width: 60%;
+.overlay_profile_content{
+    width: 60vw;
+    height: 100vw;
     background-color: #efeee4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     z-index: 2;
 }
 
-.overlay_title,
-.overlay_middle,
-.ovetlay_bottom {
+.overlay_title, .overlay_middle, .overlay_bottom{
+    width: 58vw;
     display: flex;
-    width: 90%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid 1.5px rgba(46, 69, 101, 0.2);
-    z-index: 3;
+    border-bottom: solid 1.5px rgba(46,69,101,0.2);
 }
-.profile_text {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-}
-#overlay_WR {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+
+.profile_text{
+    font-size: 0.9375vw;
+    letter-spacing: 0.104vw;
 }
 
 .overlay_title img {
@@ -1049,8 +1070,8 @@
 }
 
 .overlay_middle {
-    margin-top: 5%;
-    padding-bottom: 2.5%;
+    margin-top: 3vw;
+    padding-bottom: 0.5vw;
     align-items: flex-start;
 }
 
@@ -1086,9 +1107,9 @@
     object-fit: fill;
 }
 
-.overlay_self_info {
-    width: 50%;
-    margin-left: 4%;
+.overlay_self_info{
+    width: 35vw;
+    margin-left: 3vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1096,36 +1117,33 @@
 
 .overlay_staff_name {
     width: 100%;
-    font-size: 3.2504rem;
+    font-size: 3.3854vw;
     padding-top: 10%;
     padding-bottom: 13%;
     text-align: left;
-    border-bottom: solid 1.5px rgba(46, 69, 101, 0.2);
+    border-bottom: solid 1.5px rgba(46,69,101,0.2);
 }
 
-#overlay_pro_p2,
-#overlay_pro_p3 {
+.overlay_self_info > .profile_p2, .overlay_self_info > .profile_p3{
     width: 100%;
     justify-content: flex-start;
 }
-#overlay_pro_p2 {
+.overlay_self_info > .profile_p2{
     padding-top: 5%;
 }
 
-#overlay_pro_p3 {
+.overlay_self_info > .profile_p3{
     padding-bottom: 8%;
-    border-bottom: solid 1.5px rgba(46, 69, 101, 0.2);
 }
 
-#overlay_phone,
-#overlay_mail {
+.overlay_phone_num, .overlay_mail{
     margin-left: 4%;
 }
 
-.ovetlay_bottom {
+.overlay_bottom {
     border-bottom: none;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    margin-top: 0.5vw;
+    margin-bottom: 3vw;
 }
 
 .self_intro {
@@ -1136,8 +1154,7 @@
     padding-top: 8%;
 }
 
-.overlay_profile_left_pointer,
-.overlay_profile_right_pointer {
+.overlay_profile_pointer{
     cursor: pointer;
     z-index: inherit;
 }
@@ -1222,11 +1239,6 @@
     .links-item {
         font-size: 10px;
         transform: translateX(22.5px);
-    }
-    .profile_p1,
-    .profile_p2,
-    .profile_p3 {
-        line-height: 17.5px;
     }
 
     .SP_ch_title,
@@ -1325,6 +1337,25 @@
     .contact_title, .email, .phone_num, .self_intro {
         font-size: 10px;
     }
+
+    .profile_p1, .profile_p2, .profile_p3 {
+        line-height: 17.5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .click_btn_bar img{
+        width: 19.2px;
+        height: 19.2px;
+        margin-left: 6.25px;
+        margin-right: 6.25px;
+    }
+
+    .dot {
+        width: 22.08px;
+        height: 3px;
+        margin: 0 9.6px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -1361,5 +1392,30 @@
         width: 241px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+}
+
+@media (max-width: 480px){
+    #administor_profile_block{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile{
+        margin-left: 0;
+        width: auto;
+        align-items: center;
+        margin-top: 2vw;
+    }
+
+    .profile_p1, .profile_p2, .profile_p3 {
+        margin-top: 2vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact_title, .email, .phone_num, .self_intro{
+        line-height: 4.2vw;
     }
 }
