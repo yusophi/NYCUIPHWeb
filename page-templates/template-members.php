@@ -32,13 +32,13 @@
                 ) );
         }else{
             $areas_categories = get_categories(array(
-                'parent' => 134, /*112 */
+                'parent' => 112, /*112 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
             $prof_categories = get_categories(array(
-                'parent' => 114, /*120 */
+                'parent' => 120, /*120 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'

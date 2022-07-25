@@ -131,6 +131,7 @@
                     'admin' => 'ASC',
                     'prof' => 'ASC',
                 ),
+                'posts_per_page' => -1
         );
         $the_query = new WP_Query($args);
         if($the_query->have_posts()):

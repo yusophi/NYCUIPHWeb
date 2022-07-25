@@ -44,7 +44,11 @@
                         ?>
                         <?php if( $year ):?>
                             <div class="regulation_rows">
+                                <?php if($locale == "zh_TW"): ?>    
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
+                                <?php else: ?>
+                                <span class="year _font22"><?php echo $group_data['year'];?></span>
+                                <?php endif; ?>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
                                     <span class="file_title">修業辦法&nbsp;</span>
@@ -85,7 +89,11 @@
                     ?>
                         <?php if( $year ):?>
                             <div class="regulation_rows">
+                                <?php if($locale == "zh_TW"): ?>    
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
+                                <?php else: ?>
+                                <span class="year _font22"><?php echo $group_data['year'];?></span>
+                                <?php endif; ?>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
                                     <span class="file_title">修業辦法&nbsp;</span>
