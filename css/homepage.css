@@ -1090,9 +1090,15 @@
     color: #2e4565;
 }
 
+.img_block {
+    width: 30.26vw;
+    height: 42.76vw;
+    overflow: hidden;
+}
+
 .img_block img {
-    width: 21.23rem;
-    height: 30rem;
+    width: 30.26vw;
+    height: 42.76vw;
     object-fit: fill;
 }
 
