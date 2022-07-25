@@ -102,7 +102,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 <?php
 $nonce = wp_create_nonce('nonce');
-//header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src *; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 
 //header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
