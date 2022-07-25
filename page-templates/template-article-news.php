@@ -36,7 +36,7 @@
         <div class="sidebar">
             <div class="sidebar_block" id="info">
                 <div class="sidebar_title">
-                    <p class="sidebar_title_en">Infoo</p>
+                    <p class="sidebar_title_en">Info</p>
                     <p class="sidebar_title_ch">相關資訊</p>
                 </div>
                 <div class="sidebar_content">
@@ -60,9 +60,9 @@
                 </div>
                 <div class="sidebar_content">
                     <p class="_content"><?php
-                                        global $post;
-                                        $author_id = $post->post_author;
-                                        echo get_the_author_meta('display_name', $author_id); ?></p>
+                        global $post;
+                        $author_id = $post->post_author;
+                        echo get_the_author_meta('display_name', $author_id); ?></p>
                 </div>
             </div>
             <div class="sidebar_block" id="share">
@@ -102,7 +102,7 @@
                     $counter = $counter + 1;
                     setup_postdata($post);
                 ?>
-                    <div class="article-content num-<?php echo $counter ?>">
+                    <div class="article-content whiteText num-<?php echo $counter ?>">
                         <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
                         <div class="post_icon tmp_arti_news">
                             <img src="<?php bloginfo('template_url') ?>/images/page_news/icon-white-newspaper.svg">
@@ -132,13 +132,38 @@
                                 </ul>
                             <?php endif; ?>
                         </div>
-                        <!--div class="article-title"><a href="<?php //the_permalink(); 
-                                                                ?>"><?php //the_title(); 
-                                                                                    ?></a></div>-->
                         <div class="article-passage">
                             <div class="article-excerpt_bottom_line"></div>
                             <div class="article-title">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>"><?php $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
+                                if($locale == "en_US"){
+                                    if($mb_strlen >= 50){
+                                            echo mb_substr(get_the_title(), 0, 48) . "...";
+                                    }
+                                    else{
+                                            echo the_title();
+                                    }
+                                }
+                                else{if($mb_strlen == $strlen){
+                                    /*there is no mandarin*/
+                                    if($mb_strlen >= 50){
+                                            echo mb_substr(get_the_title(), 0, 48) . "...";
+                                    }
+                                    else{
+                                            echo the_title();
+                                    }
+                                }
+                                else{ 
+                                    /* in mandarin */
+                                    if($mb_strlen >= 30){
+                                            echo mb_substr(get_the_title(), 0, 28) . "...";
+                                    }
+                                    else{
+                                            echo the_title();
+                                    }
+                                } }
+                                ?>
+                                </a>
                             </div>
                             <div class="article-title_bottom_line"></div>
                             <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
@@ -151,7 +176,7 @@
             <?php endif; ?>
         </div>
     </div>
-
     <?php get_template_part('template-parts/backtoTOP', 'whiteText'); ?>
 </div>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>
 <?php get_footer(); ?>

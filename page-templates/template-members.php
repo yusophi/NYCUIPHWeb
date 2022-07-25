@@ -18,7 +18,7 @@
     <?php 
         if($locale == "zh_TW"){
             $areas_categories = get_categories(array(
-                'parent' => 21, /*33*/
+                'parent' => 21, /*21*/
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
@@ -57,7 +57,8 @@
             <ul class="cat-list" id="cat_area">
                 <?php foreach($areas_categories as $area_category) : ?>
                     <li>
-                        <a class="<?= "cat-list_item " . $area_category->slug; ?>" href="#!" data-filter-type="field" data-type="Staff" data-slug="<?= $area_category->slug; ?>">
+                        <a class="<?= "cat-list_item " . $area_category->slug; ?>" href="#!" data-filter-type="field" data-type="Staff" data-slug="<?= $area_category->slug; ?>"
+                            data-lang="<?php if($locale=="zh_TW"){echo "zh";}else{echo "en";} ?>">
                             <span class="cat-list_item_dot"></span>    
                             <span class="cat-list_item_name"><?= $area_category->name; ?></span>
                         </a>
@@ -74,7 +75,8 @@
             <ul class="cat-list" id="cat_prof">
                 <?php foreach($prof_categories as $prof_category) : ?>
                     <li>
-                        <a class="<?= "cat-list_item " . $prof_category->slug; ?>" href="#!" data-filter-type="title" data-type="Staff" data-slug="<?= $prof_category->slug; ?>">
+                        <a class="<?= "cat-list_item " . $prof_category->slug; ?>" href="#!" data-filter-type="title" data-type="Staff" data-slug="<?= $prof_category->slug; ?>"
+                            data-lang="<?php if($locale=="zh_TW"){echo "zh";}else{echo "en";} ?>">
                             <span class="cat-list_item_dot"></span>    
                             <span class="cat-list_item_name"><?= $prof_category->name; ?></span>
                         </a>
@@ -86,7 +88,7 @@
     <?php
         $args = array(
                 'post_type' => 'Staff',
-                'category_name' => '1-regular',
+                'category_name' => '1-fulltime',
                 'post_status' => 'publish',
                 /*'meta_key'   => 'admin_for_sorting',
                 'orderby'    => 'meta_value_num',

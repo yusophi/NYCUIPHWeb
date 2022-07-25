@@ -513,10 +513,10 @@
                                           <div class="profile-header" onclick="currentProfile(<?php echo $counter; ?>)" >
                                                 <?php echo wp_get_attachment_image( get_field('staff_photo'), 'medium' ); ?>
                                                 <?php 
-                                                $image = get_field('staff_photo');
-                                                if( !empty( $image ) ): ?>
-                                                      <img class="staff_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
-                                                <?php endif; ?>
+                                                /*$image = get_field('staff_photo');
+                                                if( !empty( $image ) ): */?>
+                                                      <!--<img class="staff_image" src="<?php //echo esc_url($image['url']); ?>" alt="<?php// echo esc_attr($image['alt']); ?>"/>-->
+                                                <?php //endif; ?>
                                           </div>
                                           <div class="profile_content">
                                                 <div class="profile_p1">
@@ -559,11 +559,12 @@
                                                                         <p><?php echo "/0" . $the_query->found_posts; ?></p>
                                                                   </div>
                                                                   <div class="img_block">
+                                                                        <?php echo wp_get_attachment_image( get_field('staff_photo'), 'medium' ); ?>
                                                                         <?php
-                                                                        $image = get_field('staff_photo');
-                                                                        if (!empty($image)) : ?>
-                                                                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                                                                        <?php endif; ?>
+                                                                        /*$image = get_field('staff_photo');
+                                                                        if (!empty($image)) :*/ ?>
+                                                                              <!--<img src="<?php //echo esc_url($image['url']); ?>" alt="<?php //echo esc_attr($image['alt']); ?>" />-->
+                                                                        <?php //endif; ?>
                                                                   </div>
                                                             </div>
                                                             <div class="overlay_self_info">

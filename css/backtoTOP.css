@@ -64,8 +64,10 @@
 .back_to_top {
     position: relative;
     top: -12.5vw;
-    width: 100px;
     height: 9.5vh;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .back_to_top .en-title {

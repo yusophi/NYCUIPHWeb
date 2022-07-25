@@ -59,9 +59,9 @@
             $ad_Ms = get_field('ad_infomations_Ms');
         ?>
         <div class="three_ad_icon">
-            <a href="#!" class="ad_icon actived"><?php echo $ad_MsPhD['ad_year']; ?><?php echo "碩博班甄試入學考試"; ?></a>
-            <a href="#!" class="ad_icon"><?php echo $ad_PhD['ad_year']; ?><?php echo "博士班招生(不分組)"; ?></a>
-            <a href="#!" class="ad_icon"><?php echo $ad_Ms['ad_year']; ?><?php echo "碩士班招生考試"; ?></a>        
+            <a href="#!" class="ad_icon actived"><?php echo $ad_MsPhD['ad_year'];?></a>
+            <a href="#!" class="ad_icon"><?php echo $ad_PhD['ad_year'];?></a>
+            <a href="#!" class="ad_icon"><?php echo $ad_Ms['ad_year'];?></a>        
         </div>
         
             <div class="ad_whole_block shown">

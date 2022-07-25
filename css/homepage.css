@@ -1102,15 +1102,22 @@
 }
 
 .img_block {
-    width: 30.26vw;
+    /*width: 30.26vw;
     height: 42.76vw;
+    overflow: hidden;*/
+    width: 25.26vw;
+    height: 32.76vw;
+    border-radius: 6%;
     overflow: hidden;
+    object-fit: fill;
 }
 
 .img_block img {
-    width: 30.26vw;
+    /*width: 30.26vw;
     height: 42.76vw;
-    object-fit: fill;
+    object-fit: fill;*/
+    width: 25.26vw;
+    height: 32.76vw;
 }
 
 .overlay_self_info{

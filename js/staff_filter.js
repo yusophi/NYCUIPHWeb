@@ -24,6 +24,7 @@
       const category = $(this).data('slug');
       //console.log("field: ",filed_slugs);
       //console.log("title: ",title_slugs);
+      const lang = $(this).data('lang');
 
       $.ajax({
         url: wpAjax.ajaxUrl,
@@ -33,6 +34,7 @@
                 cat_field: filed_slugs,
                 cat_title: title_slugs,
                 type: type,
+                lang: lang
         },
         success: function(result) {
           $('.post_block').html(result);
