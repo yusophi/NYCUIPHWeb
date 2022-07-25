@@ -1,17 +1,17 @@
 /* the waves decorations */
-.deco_waves{
+.deco_waves {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 /* let waves have spacing*/
-.deco_waves img{
+.deco_waves img {
     width: 100vw;
     margin-top: 2%;
 }
 
-.footer-back-to-top{
+.footer-back-to-top {
     position: relative;
     width: 100vw;
     display: flex;
@@ -21,82 +21,85 @@
 }
 
 /* icon and title */
-.block-title{
+.block-title {
     position: relative;
-    width: 15vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-} 
+}
 
-.block-title span{
+.block-title span {
     color: #374a73;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
-.icon{
+.icon {
     width: auto;
-    height: auto; 
+    height: auto;
 }
 
-.ch-title{
+.ch-title {
     margin-top: 0.5vw;
     font-size: 2rem;
     letter-spacing: 0.3125vw;
 }
 
-.en-title{
+.en-title {
     margin-top: 0.5vw;
     font-size: 1.5rem;
     letter-spacing: 0.078vw;
 }
 
-.whitetext-style{
+.whitetext-style {
     background-color: #2e4565;
 }
 
-.back_to_top .whitetext{
+.back_to_top .whitetext {
     color: #efeee4;
 }
 
-.back_to_top{
+.back_to_top {
     position: relative;
     top: -12.5vw;
     width: 100px;
     height: 9.5vh;
 }
 
-.back_to_top .en-title{
+.back_to_top .en-title {
     font-size: 1.041666666vw;
     line-height: 1;
     letter-spacing: 1.5px;
     text-align: left;
 }
 
-.back_to_top .icon{
+.back_to_top .icon {
     margin-bottom: 8%;
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
-#back_to_top_btn{
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
+@media (max-width: 960px) {
+    .back_to_top .en-title {
+        font-size: 10px;
+    }
+
+    #back_to_top_btn {
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
 }
 
-
-
-@media (max-width: 480px){
-    .back_to_top{
+@media (max-width: 480px) {
+    .back_to_top {
         width: 30.5vw;
     }
 
-    .back_to_top .icon{
+    .back_to_top .icon {
         width: 30px;
         height: 30px;
     }

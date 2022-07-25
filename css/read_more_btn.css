@@ -8,7 +8,7 @@
     cursor: pointer;
     height: 3.125vw;
     border: solid 1.5px #2e4565;
-    border-radius: 40px;
+    border-radius: 2.0833333vw;
     padding: 0 1.145833333vw;
     min-width: 8.75vw;
     font-family: 'Noto Sans TC', sans-serif;
@@ -154,6 +154,8 @@
         min-width: 90.43px;
         min-height: 30px;
         padding: 0 11.008px;
+        border-radius: 20px;
+        font-size: 10px;
     }
 
     .watch_icon{
@@ -179,5 +181,24 @@
 
     .plus_icon_hover {
         right: 11.008px;
+    }
+
+    .watch_text {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bt-readmore {
+        min-width: 18.83958vw;
+        min-height: 6.25vw;
+        padding: 0 2.29333vw;
+        border-radius: 4.166666vw;
+        font-size: 2.083333vw;
+    }
+    
+    .bt-watchmore {
+        width: 14.6875vw;
+        height: 6.25vw;
     }
 }
