@@ -141,7 +141,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.82;
-    letter-spacing: 1.7px;
+    letter-spacing: 0.15vw;
     text-align: left;
     color: #2e4565;
 }
@@ -278,6 +278,11 @@
     .staff_name > p, .staff_name > p > span{
         font-size: 2.2vw;
     }
+
+    .member_picture img{
+        width: 23.38vw;
+        height: 14.84vw;
+    }
 }
 
 @media (max-width: 480px){
@@ -293,8 +298,9 @@
     }
 
     .member_picture{
-        width: auto;
-        height: 44vw;
+        width: 82vw;
+        height: 50vw;
+        border-radius: 3vw;
     }
 
     .short{

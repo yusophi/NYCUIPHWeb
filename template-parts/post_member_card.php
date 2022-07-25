@@ -1,8 +1,11 @@
 <?php
+    //$en_post =  pll_get_post_language($post->ID, 'en_US');
+    //echo $en_post;
     $locale = get_locale();//pll_the_languages( array( 'post_id' => $post->ID ) );
     $picture = get_field('picture');
     $title =  get_field('prof_class'); $name = get_field('name');
     $edu = get_field('h_edu'); $exp = get_field('academic_expertise'); $link = ""; $CV = "";
+    //echo $post->ID;
 ?>
 <div class="member_card">
     <div class="member_picture">

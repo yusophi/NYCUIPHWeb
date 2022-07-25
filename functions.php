@@ -365,6 +365,9 @@ function filter_ajax() {
     //post_type: Staff
     $cat_field = $_POST['cat_field'];
 	  $cat_title = $_POST['cat_title'];
+    $lang = $_POST['lang'];
+    //echo $cat_field[0];
+    //echo $cat_title[0];
 
     $args = array(
       'post_type' => $postType,
@@ -387,7 +390,9 @@ function filter_ajax() {
       ),
       'posts_per_page' => -1
     );
-
+    if($lang == "en"){
+      $args['lang'] = 'en';
+    }
     if(count($cat_field) > 0 &&  strlen($cat_field[0]) > 0){
       //echo "there is field_category.";
       $args['tax_query'][] = [
@@ -417,7 +422,7 @@ function filter_ajax() {
       ];
     }
     else{ // if none category is selected, then show the default value
-      $args['category_name'] = '1-regular';
+      $args['category_name'] = '1-fulltime';
     }
     
   }

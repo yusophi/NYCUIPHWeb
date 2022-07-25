@@ -240,6 +240,11 @@
         border-radius: 3vw;
     }
 
+    .member_picture img{
+        width: 50vw;
+        height: 30vw;
+    }
+
     .name{
         font-size: 4.30208vw;
     }
