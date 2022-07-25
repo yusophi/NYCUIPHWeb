@@ -11,7 +11,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0.5vw;
 }
 
 .images-container {
@@ -66,35 +65,33 @@
     justify-content: space-between;
     align-items: center;
     width: 82.083vw;
-    height: 3vw;
-    margin-top: 1vw;
+    margin: 1.875vw 3.541666vw 3.177083vw 3.541666vw;
 }
 
 .click_btn_bar img{
     width: 2vw;
     height: 2vw;
-}
-
-#social_btn > a{
-    margin-left: 1vw;
+    margin-left: 0.65104vw;
+    margin-right: 0.65104vw;
 }
 
 #btn_pre_img{
     border: none;
     background-color: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 #btn_next_img{
     border: none;
     background-color: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 /* icon and title */
 .block-title {
     position: relative;
-    width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,7 +180,7 @@
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    border-radius: 1.302083333vw;   
+    border-radius: 1.302083333vw;
     overflow-x: hidden;
     margin-top: -2vw;
 }
@@ -387,7 +384,7 @@
     margin-left: 9vw;
     width: 55.3vw;
     background-color: #e4dfd2;
-    border-radius: 60px;
+    border-radius: 3.125vw;
     box-shadow: 25px 25px 65px 0 rgba(255, 111, 0, 0.3);
     font-family: "Noto Sans TC", sans-serif;
     color: #2e4565;
@@ -422,16 +419,17 @@
     margin-top: 3vw;
 }
 
-.iph_ch{
+.iph_ch {
+    width: 40.6vw;
     font-size: 3.385833333vw;
     font-weight: bold;
-    line-height: 0.65;
     letter-spacing: 9.75px;
     text-align: left;
     margin-top: 4.5vw;
 }
 
 .iph_en {
+    width: 40.6vw;
     font-size: 1.3025vw;
     font-weight: 900;
     line-height: 1.4;
@@ -488,6 +486,8 @@
 }
 
 .icon_aboutus_2 {
+    width: 100%;
+    height: auto;
     margin-top: 17%;
 }
 
@@ -646,7 +646,7 @@
     font-size: 1.3025vw;
     font-weight: bold;
     line-height: 1.4;
-    letter-spacing: .1953125vw;
+    letter-spacing: 0.1953125vw;
     text-align: left;
     color: #2e4565;
     text-decoration: none;
@@ -907,8 +907,8 @@
 
 #administor_profile_block {
     position: relative;
-    width: 82.08333vw;  
-    margin-top: 2vw;
+    width: 82.08333vw;
+    margin-top: 6.09vw;
     display: flex;
     align-items: flex-start;
     flex-direction: row;
@@ -955,7 +955,7 @@
 }
 
 .profile_p1, .profile_p2, .profile_p3 {
-    line-height: 1.82vw;
+    line-height: 1.823333vw;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
@@ -977,6 +977,17 @@
     text-align: center;
     color: #2e4565;
 }
+
+/*.staff_name, .work_respon, .contact_title, .email, .phone_num, #profile_text, .self_intro, .profile_num{
+    font-size: 1.2504rem;
+    letter-spacing: 3.75px;
+}*/
+
+.staff_name {
+    font-size: 1.3025vw;
+    letter-spacing: 3.75px;
+}
+
 
 .work_respon{
     font-size: 0.9375vw;
@@ -1226,11 +1237,12 @@
         right: 17.5px;
     }
     .links-item {
-        font-size: 1.04166666667vw;
+        font-size: 10px;
         transform: translateX(22.5px);
     }
 
-    .SP_ch_title, .SP_en_title {
+    .SP_ch_title,
+    .SP_en_title {
         font-size: 12.504px;
     }
 
@@ -1250,13 +1262,13 @@
         filter: grayscale(0%);
         width: 99.936px;
         height: auto;
-    }  
+    }
     .interview-picture > img {
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
         width: 99.936px;
         height: auto;
-    }   
+    }
     .interview-picture {
         width: 99.936px;
         height: 99.936px;
@@ -1266,9 +1278,14 @@
 
     .ch-title {
         margin-top: 4.8px;
+        letter-spacing: 3px;
+        font-size: 20px;
+        line-height: 22.504px;
     }
     .en-title {
         margin-top: 4.8px;
+        font-size: 15px;
+        letter-spacing: 0.75px;
     }
 
     .Links-container {
@@ -1283,19 +1300,61 @@
         margin-top: 16vw;
     }
 
-    .img-slide-btn img, .social_media_links img {
+    .img-slide-btn img,
+    .social_media_links img {
         margin-left: 12.5px;
         width: 15px;
     }
+
+    .iph_ch {
+        font-size: 32.504px;
+    }
     
+    .iph_en {
+        font-size: 12.504px;
+    }
+
+    .iph_intro {
+        font-size: 10px;
+    }
+
+    .bk_num {
+        font-size: 28.504px;
+    }
+
+    .video_title {
+        font-size: 12.5px;
+    }
+
+    .staff_name {
+        font-size: 12.504px;
+    }
+
+    #out_WR {
+        font-size: 9px;
+    }
+
+    .contact_title, .email, .phone_num, .self_intro {
+        font-size: 10px;
+    }
+
     .profile_p1, .profile_p2, .profile_p3 {
         line-height: 17.5px;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .contact_title, .email, .phone_num, .self_intro{
-        line-height: 2.2vw;
+    .click_btn_bar img{
+        width: 19.2px;
+        height: 19.2px;
+        margin-left: 6.25px;
+        margin-right: 6.25px;
+    }
+
+    .dot {
+        width: 22.08px;
+        height: 3px;
+        margin: 0 9.6px;
     }
 }
 
@@ -1313,7 +1372,7 @@
     }
     #SP_content_container {
         flex-wrap: wrap;
-        padding-bottom: 30px;;
+        padding-bottom: 30px;
     }
     .interview-text-content {
         width: 197px;

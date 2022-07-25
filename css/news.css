@@ -72,7 +72,7 @@
 .cat-list_item{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     text-decoration: none;
 }
 
@@ -164,6 +164,7 @@
 }
 
 
+
 @media (max-width: 1024px){
     .select_bar_container{
         padding-bottom: 2vw;
@@ -238,6 +239,13 @@
         margin-top: -2.5vw;
     }
     
+}
+
+@media (max-width: 960px) {
+    .cat-list_item_name {
+        font-size: 9px;
+        margin-left: 12.48px;
+    }
 }
 
 @media (max-width: 480px){
