@@ -3,6 +3,7 @@
     height: 10.41vw;
     border-radius: 50%;
     overflow: hidden;
+    margin-bottom: 4.1666vw;
 }
 
 
@@ -17,9 +18,9 @@
     position: absolute;
     right: 0%;
     bottom: 30%;
-    width: 1.614vw;
-    height: 1.614vw;
-    border-radius: 10px;
+    width: 2.65625vw;
+    height: 2.65625vw;
+    border-radius: 1.328125vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #efeee4;
 }
@@ -109,6 +110,25 @@
     .interview-picture {
         min-width: 99.936px;
         height: auto;
+    }
+
+    .interview-picture{
+        margin-bottom: 40px;
+    }
+
+    .interview-circle{
+        width: 25.5px;
+        height: 25.5px;
+        border-radius: 12.75px;
+    }
+    
+    .interview-text-content > a {
+        font-size: 12.504px;
+        letter-spacing: 1.875px;
+    }
+
+    .interview-text-content > span {
+        font-size: 10px;
     }
 }
 

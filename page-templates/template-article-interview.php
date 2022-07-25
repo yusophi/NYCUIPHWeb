@@ -15,7 +15,7 @@
         <span class="post_title interview_title"><p><?php the_title(); ?></p></span>
         <div class="interview-circle"></div>
         <div class="banner_article_meta">
-            <img class="icon-clock>" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
+            <img class="icon-clock" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
         </div>      
     </div>

@@ -36,7 +36,7 @@
         <div class="sidebar">
             <div class="sidebar_block" id="info">
                 <div class="sidebar_title">
-                    <p class="sidebar_title_en">Info</p>
+                    <p class="sidebar_title_en">Infoo</p>
                     <p class="sidebar_title_ch">相關資訊</p>
                 </div>
                 <div class="sidebar_content">

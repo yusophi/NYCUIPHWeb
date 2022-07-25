@@ -37,9 +37,9 @@
 }
 
 .dep_circle {
-    width: 2.65rem;
-    height: 2.65rem;
-    border-radius: 1.4rem;
+    width: 2.65625vw;
+    height: 2.65625vw;
+    border-radius: 1.328125vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
 }
@@ -242,17 +242,77 @@
     color: #4f5ab8;
 }
 
-.font40{
-    font-size: 2.083vw;
+@media (max-width: 960px) {
+    .dep_title .dep_en_title {
+        font-size: 15px;
+    }
+
+    .dep_circle{
+        width: 25.5px;
+        height: 25.5px;
+        border-radius: 12.75px;
+    }
+
+    .dep_info {
+        margin-bottom: 109.75px;
+    }
+
+    .top_margined_s {
+        margin-top: 29.75px;
+    }
+
+    .dep_title {
+        font-size: 20px;
+    }
+
+    .top_margined {
+        margin-top: 50px;
+    }
+
+    .table_heads span {
+        font-size: 9px;
+        letter-spacing: 1.35px;
+    }
+
+    .table_row div {
+        font-size: 11px;
+        letter-spacing: 0.55px;
+    }
+
+    .dep_passage {
+        font-size: 11px;
+        letter-spacing: 1.65px;
+    }
+
+    .dep_title_s {
+        font-size: 13.504px;
+        letter-spacing: 2.025px;
+    }
+
+    .dep_passage .img_container {
+        margin-top: 40px;
+        max-width: 373.5px;
+    }
+
+    .mhe_video_title {
+        margin-top: 15px;
+        width: 164px;
+        font-size: 12.504px;
+        letter-spacing: 1.875px;
+    }
+
+    .bt-text {
+        font-size: 10px;
+    }
+
+    .curri_table_row a {
+        font-size: 9px;
+        letter-spacing: 1.35px;
+    }
 }
 
 @media (max-width: 480px){
     .dep_ph_page{
         padding-top: 30vw;
-    }
-
-    .dep_circle{
-        width: 2.65625vw;
-        height: 2.65625vw;
     }
 }

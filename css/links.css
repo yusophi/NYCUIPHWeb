@@ -157,10 +157,28 @@
     .links-item {
         transform: translateX(22.5px);
         width: calc(100% - 45px);
+        font-size: 8px;
     }
 
     .links-category-item.expanded .links-item-title {
         left: 22.5px;
+    }
+
+    .links_title {
+        font-size: 20px;
+        line-height: 22.504px;
+        letter-spacing: 3px;
+    }
+    
+    .en_links_title {
+        font-size: 15px;
+        letter-spacing: 0.75px;
+    }
+
+    .dec_dot {
+        width: 25.5px;
+        height: 25.5px;
+        border-radius: 12.75px;
     }
 }
 

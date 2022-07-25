@@ -51,6 +51,7 @@ img.icon_download{
     height: 1.71875vw;
 }
 
+
 @media (max-width: 768px){
     .file_title{
         line-height: 1.5;
@@ -69,11 +70,9 @@ img.icon_download{
 
     .file_title{
         line-height: 1.5;
-        font-size: 1.8vw;
     }
 
     a.file_name{
-        font-size: 0.6vw;
         line-height: 1.4;
     }
 
