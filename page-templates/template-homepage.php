@@ -609,7 +609,7 @@
       <?php get_template_part( 'template-parts/backtoTOP');?>
 </div>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/draggable-slides.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/show_video.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/homepage.js"></script>
 <?php get_footer(); ?>
