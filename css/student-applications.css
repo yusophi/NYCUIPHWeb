@@ -165,6 +165,33 @@
     flex-direction: column;
 }
 
+@media (max-width: 960px) {
+    .group_content p {
+        font-size: 11px;
+    }
+
+    .group_content > h3 {
+        font-size: 9px;
+        margin: 28.8px 0;
+    }
+
+    .group_content a {
+        font-size: 11px;
+    }
+
+    ._font27{
+        font-size: 13.5px;
+    }
+
+    .list > p, .appendix_text, .note, .realted_files a {
+        font-size: 10px;
+    }
+
+    .filename {
+        font-size: 10px;
+    }
+}
+
 
 @media (max-width: 480px){
     
@@ -172,12 +199,7 @@
         margin-top: 8vw;
     }
 
-    .group_title {
-        font-size: 2.5vw;
-    }
-
     .group_content p{
-        font-size: 1vw;
         line-height: 1.5;
     }
 

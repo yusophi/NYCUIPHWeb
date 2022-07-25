@@ -104,6 +104,28 @@
     color: #2e4565;
 }
 
+@media (max-width: 960px) {
+    ._font18{
+        font-size: 9px;
+        letter-spacing: 1.35px;
+    }
+    
+    ._font20{
+        font-size: 10px;
+    }
+    
+    ._font22{
+        font-size: 11px;
+    }
+    
+    ._font30{
+        font-size: 15px;
+    }
+    
+    ._font40{
+        font-size: 20px;
+    }
+}
 
 @media (max-width: 768px) {
     .curriculum_banner{

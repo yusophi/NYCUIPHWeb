@@ -138,6 +138,37 @@
     letter-spacing: 0.171875vw;
 }
 
+@media (max-width: 960px) {
+    .item_titles {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        font-size: 9px;
+    }
+
+    .honor_rows > .name {
+        letter-spacing: 0.55px;
+    }
+
+    .honor_title {
+        letter-spacing: 1.65px;
+    }
+
+    .more_icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .more_btn {
+        width: 20px;
+        height: 20px;
+    }
+
+    .more_btn_text {
+        letter-spacing: 1.35px;
+        margin-left: 5px;
+    }
+}
+
 @media (max-width: 768px){
     .honor_block{
         margin-top: 5vw;

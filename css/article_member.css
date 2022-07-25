@@ -231,53 +231,91 @@
     margin-bottom: 1.5vw;
 }
 
-@media (max-width: 1024px){
+@media (max-width:960px) {
 
+    .deco-section{
+        font-size: 8.18px;
+    }
+    
+    .staff_name{
+        margin-top: 9.6px;
+    }
+    
+    .staff_name > p, .staff_name > p > span{
+        font-size: 20px;
+    }
+    
+    .staff_name > p > span{
+        font-size: 12.504px;
+        letter-spacing: 3.75px;
+        margin-left: 7.68px;
+    }
+    
+    #en_staff_name{
+        margin-top: 9.6px;
+    }
+    
+    #en_staff_name > span{
+        font-size: 14.4px;
+        letter-spacing: 1.44px;
+    }
+    
+    .contact > p > span{
+        font-size: 11px;
+    }
+    
+    .staff_CV{
+        margin-top: 9.6px;
+        font-size: 9px;
+    }
+    
+    .icon_download{
+        margin-left: 4.8px;
+    }
+    
     .right_block{
-        font-size: 1.5vw;
+        font-size: 11px;
     }
-
+    
+    .en_right_block{
+        font-size: 11px;
+        letter-spacing: 1.152px;
+        margin-bottom: 19.2px;
+    }
+    
     .right_block_title{
-        font-size: 1.8vw;
+        font-size: 13.5px;
+        letter-spacing: 1.632px;
     }
+    
+    .right_block_content{
+        margin-top: 19.2px;
+    }
+    
+    .right_block_content > p{
+        margin-bottom: 14.4px;
+    }
+    
+    .right_block_content > ol {
+        margin-left: 17.28px;
+    }
+    
+    .works > ol > li, .en_right_block ol li{
+        font-size: 11px;
+        letter-spacing: 1.152px;
+        margin-bottom: 14.4px;
+    }
+}
 
+@media (max-width: 1024px){
     .contact > p{
         flex-direction: column;
     }
-
-    .staff_name > p, .staff_name > p > span{
-        font-size: 2vw;
-    }
-
 }
 
 @media (max-width: 768px){
-    .right_block{
-        font-size: 1.8vw;
-    }
-
-    .right_block_title{
-        font-size: 2vw;
-    }
-    
-    .article_content{
-        margin-top: 20.23vw;
-    }
-
     .contact > p{
         flex-direction: column;
-    }
-
-    .short{
-        margin-top: 1.5vw;
-    }
-
-    .staff_name {
-        margin-top: 2.2vw;
-    }
-
-    .staff_name > p, .staff_name > p > span{
-        font-size: 2.2vw;
     }
 }
 
@@ -290,7 +328,6 @@
 
     .left, .right{
         width: auto;
-        margin-top: 5vw;
     }
 
     .member_picture{
