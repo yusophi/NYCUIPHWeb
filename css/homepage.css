@@ -1000,7 +1000,7 @@
     font-size: 1.0416vw;
     font-weight: normal;
     letter-spacing: 0.15625vw;
-    line-height: 1.2vw;
+    line-height: 1.823333vw;
     text-align: left;
 }
 
@@ -1353,6 +1353,7 @@
 
     .contact_title, .email, .phone_num, .self_intro {
         font-size: 10px;
+        line-height: 17.504px;
     }
 
     .profile_p1, .profile_p2, .profile_p3 {

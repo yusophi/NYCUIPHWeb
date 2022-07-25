@@ -177,6 +177,7 @@
     .bt-watchmore {
         width: 70.5px;
         height: 30px;
+        font-size: 10px;
     }
 
     .plus_icon_hover {
@@ -185,6 +186,10 @@
 
     .watch_text {
         font-size: 10px;
+    }
+
+    .work_respon {
+        font-size: 9px;
     }
 }
 
@@ -200,5 +205,6 @@
     .bt-watchmore {
         width: 14.6875vw;
         height: 6.25vw;
+        font-size: 2.083333vw;
     }
 }

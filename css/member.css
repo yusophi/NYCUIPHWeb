@@ -176,6 +176,24 @@
     margin-left: 1.3vw;
 }
 
+@media (max-width: 960px) {
+    .cat-list_container>p {
+        font-size: 9px;
+        margin-right: 25px;
+    }
+
+    .cat-list_item_name {
+        font-size: 9px;
+        letter-spacing: 1.35px;
+        margin-left: 12.48px;
+    }
+
+    .member_picture img {
+        width: 188px;
+        height: 120px;
+    }
+}
+
 @media (max-width: 768px){
     .cat-list_container{
         flex-direction: column;
@@ -195,11 +213,6 @@
     .post_block{
         grid-template-columns: 24vw 24vw 24vw;
         column-gap: 5vw;
-    }
-
-    .member_picture{
-        width: 23.5vw;
-        height: 15vw;
     }
 
     .name{

@@ -260,7 +260,7 @@
     }
     
     .contact > p > span{
-        font-size: 11px;
+        font-size: 12px;
     }
     
     .staff_CV{
@@ -273,11 +273,11 @@
     }
     
     .right_block{
-        font-size: 11px;
+        font-size: 12px;
     }
     
     .en_right_block{
-        font-size: 11px;
+        font-size: 12px;
         letter-spacing: 1.152px;
         margin-bottom: 19.2px;
     }
@@ -300,7 +300,7 @@
     }
     
     .works > ol > li, .en_right_block ol li{
-        font-size: 11px;
+        font-size: 12px;
         letter-spacing: 1.152px;
         margin-bottom: 14.4px;
     }

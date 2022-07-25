@@ -125,6 +125,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 1.041666vw;
 }
 
 .page-numbers > li{
@@ -192,7 +193,11 @@
 
 @media (max-width: 960px) {
     .cat-list_item_name{
-        font-size: 9px;
+        font-size: 10px;
+    }
+
+    .page-numbers {
+        font-size: 10px;
     }
 }
 
