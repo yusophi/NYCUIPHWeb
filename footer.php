@@ -20,8 +20,8 @@
                         Address: No. 155, Sec. 2, Linong St., Beitou Dist., Taipei City 112, Taiwan (R.O.C.)<br>
                         電話TEL︰02-28267000 #65326、65225<br>
                         傳真FAX︰02-2822-1942<br>
-                        研究所Email︰iph@ym.edu.tw<br>
-                        學科Email︰dph@ym.edu.tw
+                        研究所Email︰iph@nycu.edu.tw<br>
+                        學科Email︰dph@nycu.edu.tw
                   </div>
             </div>
             <div class="footer-statement">

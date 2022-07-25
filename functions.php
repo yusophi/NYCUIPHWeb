@@ -102,7 +102,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 <?php
 $nonce = wp_create_nonce('nonce');
-header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+//header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 
 //header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
@@ -257,19 +257,19 @@ function wpdocs_ref_access() {
     if(is_page('about') || is_page('about-en')){
       wp_enqueue_style('mytheme_page-about_style', get_theme_file_uri('css/about.css')); 
     }
-    if(is_page('news') || is_page('news-en')){
+    if(is_page_template( 'page-templates/template-news.php')/*is_page('news') || is_page('news-en') || is_page('announcement')*/){
       wp_enqueue_style('mytheme_page-news_style', get_theme_file_uri('css/news.css')); 
       wp_enqueue_style('mytheme_postSmall_style', get_theme_file_uri('css/element-postSmall.css'));
-      wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-      wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-      wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      //wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+      //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+      //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
-    if(is_page('events')|| is_page('events-en')){
+    if(is_page_template( 'page-templates/template-events.php')/*is_page('events')|| is_page('events-en')*/){
       wp_enqueue_style('mytheme_page-event_style', get_theme_file_uri('css/events.css')); 
       wp_enqueue_style('mytheme_event_card_style', get_theme_file_uri('css/events_card_style.css'));
-      wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-      wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
-      wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      //wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+      //wp_enqueue_script('post_filter', get_theme_file_uri('js/post_filter.js'),true);
+      //wp_localize_script('post_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
     }
     if(is_page('member')|| is_page('member-en')){
       wp_enqueue_style('mytheme_page-mamber_style', get_theme_file_uri('css/member.css')); 
@@ -355,7 +355,9 @@ add_action('wp_ajax_filter', 'filter_ajax');
 add_action('wp_ajax_nopriv_filter', 'filter_ajax');
 
 function filter_ajax() {
+  $locale = $_POST['lang'];
   $postType = $_POST['type'];
+  $filterType = $_POST['filter_type'];
   $category = $_POST['category'];
   $check = 1;
   
@@ -363,7 +365,7 @@ function filter_ajax() {
     //post_type: Staff
     $cat_field = $_POST['cat_field'];
 	  $cat_title = $_POST['cat_title'];
-    
+
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
@@ -383,6 +385,7 @@ function filter_ajax() {
         'admin' => 'ASC',
         'prof' => 'ASC',
       ),
+      'posts_per_page' => -1
     );
 
     if(count($cat_field) > 0 &&  strlen($cat_field[0]) > 0){
@@ -416,6 +419,7 @@ function filter_ajax() {
     else{ // if none category is selected, then show the default value
       $args['category_name'] = '1-regular';
     }
+    
   }
   else if($postType == 'papers' /*&& isset($_POST['cat_year']) && isset($_POST['cat_division'])*/){ 
     //post_type: papers
@@ -429,6 +433,7 @@ function filter_ajax() {
       'orderby' => 'meta_value_num',
       'meta_key' => 'year',
       'order' => 'DESC',
+      'posts_per_page' => -1
     );
     if(isset($keyword))
     {
@@ -470,8 +475,6 @@ function filter_ajax() {
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'orderby' => 'date',
-      'order' => 'desc',
       'posts_per_page' => 15
     );
     $args['tax_query'][] = [
@@ -480,13 +483,23 @@ function filter_ajax() {
       'terms'        => $category,
       'operator'      => 'IN'
     ];
+    if($filterType == 'event'){ /* orderby the date of the event */
+      $args['meta_key'] = 'event_date';
+      $arge['orederby'] = 'meta_value_num';
+      $args['order'] = 'DESC';
+    }
+    else{ /* for news, orderby the date of thh post */
+      $arge['orderby'] = 'date';
+      $args['order'] = 'desc';
+    }
   }
   
   if($check){
     $query = new WP_Query($args); // if have query condition, create a query
   }
-  
+  global $wp_query;
   if($postType == 'Staff'){ //post type: Staff
+      //if($locale == "en_US"){echo "en_US";}else{echo $locale;}
       while($query->have_posts()) : $query->the_post();
         get_template_part('template-parts/post_member_card');
       endwhile;
@@ -530,6 +543,7 @@ function filter_ajax() {
     else{ //post category: news
       if($query->have_posts()){
         $counter = 1;
+        //echo $query->max_num_pages;
         echo '<div class="news-article">';
         while($query->have_posts()) : $query->the_post();
           echo '<div class="article-content">';
@@ -548,6 +562,29 @@ function filter_ajax() {
     }
   }
   wp_reset_postdata();
+
+  if($postType == 'post'){
+    $max_num_pages = $query->max_num_pages;
+    $paged = get_query_var( 'paged', 1 );
+    //echo $paged;
+    echo "<div class=\"pagination\">";
+    $big = 999999999; // need an unlikely integer
+    $args = array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?page=%#%',
+        'total' => $max_num_pages,
+        'current' => max(1, $paged),
+        'show_all' => false,
+        'end_size' => 3,
+        'mid_size' => 2,
+        'prev_next' => True,
+        'prev_text' => __('<'),
+        'next_text' => __('>'),
+        'type' => 'list',
+    );
+    echo paginate_links($args);
+    echo "</div>";
+  }
   die();
 } 
 ?>

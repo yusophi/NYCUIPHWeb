@@ -24,7 +24,7 @@
                 ) );
         }else{
             $categories = get_categories(array(
-                'parent' => 132,
+                'parent' => 132, /*132 */
                 'orderby' => 'slug',
                 'order'   => 'ASC'
             ) );
@@ -34,7 +34,7 @@
         <input type="hidden" id="filters-news" value="" />
         <ul class="cat-list">
             <li>
-                <a class="cat-list_item news cat_active" href="#!" data-filter-type="news" data-type="post" data-slug="news">
+                <a class="cat-list_item news <?php if(is_page('news')||is_page('news-en')){echo "cat_active";}?>" href="<?php echo site_url() . "/news\/#anchor";?>" data-filter-type="news" data-type="post" data-slug="news">
                     <span class="cat-list_item_dot"></span>
                     <?php if($locale == "zh_TW"):?>
                     <span class="cat-list_item_name">總覽</span>
@@ -43,24 +43,57 @@
                     <?php endif; ?>
                 </a>
             </li>
-            <?php foreach($categories as $category) : ?>
+            <?php 
+                if($locale == "zh_TW"){$page_name = ['announcement', 'scholarship', 'covid19'];}else{
+                    $page_name = ['announcement-en', 'covid19-en'];
+                }
+                $count = 0;
+                foreach($categories as $category) : ?>
                 <li>
-                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="#!" data-filter-type="news" data-type="post" data-slug="<?= $category->slug; ?>">
+                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="<?php echo site_url() . "/news\/" . $page_name[$count] . "/#anchor"; ?>" data-filter-type="news" data-type="post" data-slug="<?= $category->slug; ?>">
                         <span class="cat-list_item_dot"></span>    
                         <span class="cat-list_item_name"><?= $category->name; ?></span>
                     </a>
                 </li>
+                <?php $count = $count + 1;?>
             <?php endforeach; ?>
         </ul>
     </div>
-   
-    <div class="post_block">
+    <?php
+        $cat_name = 'news';
+        if(is_page('announcement') || is_page('announcement-en')):?>
+            <script type='text/javascript'>
+                var cat_list_item = document.getElementsByClassName("cat-list_item");
+                cat_list_item[1].className += " cat_active";
+            </script>
+            <?php $cat_name = '1-normal_news';?>
+        <?php elseif(is_page('scholarship')): ?>
+            <script type='text/javascript'>
+                var cat_list_item = document.getElementsByClassName("cat-list_item");
+                cat_list_item[2].className += " cat_active";
+            </script>
+            <?php $cat_name = '2-scholarship';?>
+        <?php elseif(is_page('covid19')): ?>
+            <script type='text/javascript'>
+                var cat_list_item = document.getElementsByClassName("cat-list_item");
+                cat_list_item[3].className += " cat_active";
+            </script>
+            <?php $cat_name = '3-covid-19_news';?>
+        <?php elseif(is_page('covid19-en')): ?>
+            <script type='text/javascript'>
+                var cat_list_item = document.getElementsByClassName("cat-list_item");
+                cat_list_item[2].className += " cat_active";
+            </script>
+            <?php $cat_name = '3-covid-19_news';?>
+        <?php endif; ?>
+    <div id="anchor"></div>
+    <div class="post_block" id="news_post">
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
             'post_type' => 'post',
             'post_status' => 'publish',
-            'category_name' => 'news',
+            'category_name' => $cat_name,
             'orderby' => 'date',
             'paged' => $paged,
             'posts_per_page' => 15.
@@ -115,7 +148,36 @@
                     <div class="article-passage">
                         <div class="article-excerpt_bottom_line"></div>
                         <div class="article-title">
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
+                                if($locale == "en_US"){
+                                    if($mb_strlen >= 50){
+                                            echo mb_substr(get_the_title(), 0, 48) . "...";
+                                    }
+                                    else{
+                                            echo the_title();
+                                    }
+                                }
+                                else{if($mb_strlen == $strlen){
+                                    /*there is no mandarin*/
+                                    if($mb_strlen >= 50){
+                                            echo mb_substr(get_the_title(), 0, 48) . "...";
+                                    }
+                                    else{
+                                            echo the_title();
+                                    }
+                                }
+                                else{ 
+                                    /* in mandarin */
+                                    if($mb_strlen >= 30){
+                                            echo mb_substr(get_the_title(), 0, 28) . "...";
+                                    }
+                                    else{
+                                            echo the_title();
+                                    }
+                                } }
+                            ?>
+                            </a>
                         </div>
                         <div class="article-title_bottom_line"></div>
                         <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>

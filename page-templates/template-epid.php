@@ -14,7 +14,7 @@
         </div>
         <div id="title">
             <?php if($locale == "zh_TW"):?>
-            <div id="ch_title">流行病學領域</div>
+            <div id="ch_title">流行病學組</div>
             <div id="en_title">Division of Epidemiology</div>
             <?php else: ?>
             <div id="en_title">Division of Epidemiology</div>
@@ -131,6 +131,7 @@
                     'admin' => 'ASC',
                     'prof' => 'ASC',
                 ),
+                'posts_per_page' => -1
         );
         $the_query = new WP_Query($args);
         if($the_query->have_posts()):

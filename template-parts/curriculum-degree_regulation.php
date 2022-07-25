@@ -1,19 +1,34 @@
+<?php $locale = get_locale();?>
 <div class="degree_regulation">
     <div class="regulation_block" id="master_regulation">
         <div class="degree_block_title">
+            <?php if($locale == "zh_TW"): ?>    
             <span class="_font40">碩士班</span>
+            <?php else: ?>
+            <span class="en_title _font40">Master Program</span>
+            <?php endif; ?>
             <a class="more_btn" onclick="showing_more('regu_block1','regulation_rows')">
                 <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
+                    <?php if($locale == "zh_TW"): ?>    
                     <span class="more_btn_text _font18">展開</span>
+                    <?php else: ?>
+                    <span class="more_btn_text _font18">mores</span>
+                    <?php endif; ?>
                 </div>  
             </a>
         </div>
         <div class="item_titles">
+            <?php if($locale == "zh_TW"): ?>    
             <span>學年</span>
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
+            <?php else: ?>
+            <span>Year</span>
+            <span class="item_title2">Rules & Regulations</span>
+            <span class="item_title2">Courses list</span>
+            <?php endif; ?>
         </div>
         <div class="whole_regulation_files" id="regu_block1">
             <?php $master_regulation = get_field('master_regulation');?>
@@ -29,7 +44,11 @@
                         ?>
                         <?php if( $year ):?>
                             <div class="regulation_rows">
+                                <?php if($locale == "zh_TW"): ?>    
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
+                                <?php else: ?>
+                                <span class="year _font22"><?php echo $group_data['year'];?></span>
+                                <?php endif; ?>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
                                     <span class="file_title">修業辦法&nbsp;</span>
@@ -70,7 +89,11 @@
                     ?>
                         <?php if( $year ):?>
                             <div class="regulation_rows">
+                                <?php if($locale == "zh_TW"): ?>    
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
+                                <?php else: ?>
+                                <span class="year _font22"><?php echo $group_data['year'];?></span>
+                                <?php endif; ?>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
                                     <span class="file_title">修業辦法&nbsp;</span>
@@ -105,19 +128,33 @@
     </div> 
     <div class="regulation_block">
         <div class="degree_block_title">
+            <?php if($locale == "zh_TW"): ?>    
             <span class="_font40">博士班</span>
+            <?php else: ?>
+            <span class="en_title _font40">Ph.D. Program</span>
+            <?php endif; ?>
             <a class="more_btn" onclick="showing_more('regu_block2','regulation_rows')">
                 <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
-                    <p class="more_btn_text _font18">展開</p>
+                    <?php if($locale == "zh_TW"): ?>    
+                    <span class="more_btn_text _font18">展開</span>
+                    <?php else: ?>
+                    <span class="more_btn_text _font18">mores</span>
+                    <?php endif; ?>
                 </div>  
             </a>
         </div>
         <div class="item_titles _font18">
+            <?php if($locale == "zh_TW"): ?>    
             <span>學年</span>
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
+            <?php else: ?>
+            <span>Year</span>
+            <span class="item_title2">Rules & Regulations</span>
+            <span class="item_title2">Courses list</span>
+            <?php endif; ?>
         </div>
         <div class="whole_regulation_files" id="regu_block2">
             <?php $PhD_regulation = get_field('PhD_regulation');
@@ -133,7 +170,11 @@
                         ?>
                         <?php if( $year ):?>
                             <div class="regulation_rows">
+                                <?php if($locale == "zh_TW"): ?>    
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
+                                <?php else: ?>
+                                <span class="year _font22"><?php echo $group_data['year'];?></span>
+                                <?php endif; ?>
                                 <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
                                         <span class="file_title _font18">修業辦法&nbsp;</span>
@@ -170,8 +211,11 @@
                     ?>
                         <?php if( $year ):?>
                             <div class="regulation_rows">
+                                <?php if($locale == "zh_TW"): ?>    
                                 <span class="year _font22"><?php echo $group_data['year']. "學年度";?></span>
-                                <div class="item1">
+                                <?php else: ?>
+                                <span class="year _font22"><?php echo $group_data['year'];?></span>
+                                <?php endif; ?>                                <div class="item1">
                                     <a class="link_block" href="<?php echo esc_url($group_data['program_regulation']);?>" target="_blank">
                                     <span class="file_title">修業辦法&nbsp;</span>
                                     <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
@@ -200,7 +244,11 @@
         </div>
     </div> 
     <div class="regulation_block" id="others_regu">
-        <div class="degree_title _font40">其他</div>
+        <?php if($locale == "zh_TW"): ?>    
+        <div class="_font40">其他</div>
+        <?php else: ?>
+        <span class="en_title _font40">Others</span>
+        <?php endif; ?>
         <div class="others_regu_rows">
             <a class="link_block" href="<?php echo esc_url(the_field('phd_program_regu'));?>" target="_blank">
                 <span class="file_title _font18">逕修讀博士學位甄選辦法&nbsp;</span>

@@ -26,11 +26,19 @@
         <div class="s1_content">
             <div class="text_content">
                 <div class="content">
+                    <?php if($locale == "zh_TW"):?>
                     <span>教育目標之內容與特色</span>
+                    <?php else: ?>
+                    <span class="en_title">Educational Objectives</span>
+                    <?php endif; ?>
                     <div><?php the_field('edu_goals')?></div>
                 </div>
                 <div class="content career">
+                    <?php if($locale == "zh_TW"):?>
                     <span>未來就業發展</span>
+                    <?php else: ?>
+                    <span class="en_title">Future Prospect After Graduation</span>
+                    <?php endif; ?>
                     <div><?php the_field('career') ?></div>
                 </div>
             </div>
@@ -60,7 +68,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_MsPhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'medium'); ?>
+                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'large'); ?>
                     </div>
                 </div>
             </div>
@@ -69,7 +77,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_PhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_PhD['ad_poster']); ?>
+                        <?php echo wp_get_attachment_image( $ad_PhD['ad_poster'],'large'); ?>
                     </div>
                 </div>
             </div>
@@ -78,7 +86,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_Ms['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_Ms['ad_poster'], 'ad_poster_size'); ?>
+                        <?php echo wp_get_attachment_image( $ad_Ms['ad_poster'], 'large'); ?>
                     </div>
                 </div>
             </div>

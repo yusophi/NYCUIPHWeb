@@ -74,7 +74,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about-en/">Introduction</a></li>
-                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">People</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">Faculty</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>
@@ -85,9 +85,9 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">總覽</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">公告</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">獎學金</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">COVID-19</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/announcement/">公告</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/scholarship/">獎學金</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/covid19/">COVID-19</a></li>
                             </ul>
                         </div>
                         <?php else: ?>
@@ -95,8 +95,8 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">All</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">Announcements</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">COVID-19</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/announcement-en/">Announcements</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/covid19-en/">COVID-19</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>
@@ -106,15 +106,16 @@
                         <a class="menu-list nav-list-item-4">學術活動</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">學術演講</a></li>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">讀書會</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">所有活動</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/seminars/">學術演講</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/study_group/">讀書會</a></li>
                             </ul>
                         </div>
                         <?php else: ?>
                         <a class="menu-list nav-list-item-4">Events</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events-en/">Seminars</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/seminars-en/">Seminars</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>
@@ -196,7 +197,7 @@
                 </div>
             </nav>
         </div>
-        <div id="search_overlay">
+        <div class="overlay" id="search_overlay">
             <img id="search_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
                 <?php
                     $nonce= wp_create_nonce('test-nonce1');
@@ -213,7 +214,11 @@
                         <img alt="搜尋按鈕" src="<?php bloginfo('template_url')?>/images/header/site_search/yellow_arrow.svg">
                     </button>
                 </form>
-        </div> 
+        </div>
+        <div class="overlay" id="calendar_overlay">
+            <img id="calendar_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
+            <iframe id="calendar_iframe" src="https://calendar.google.com/calendar/embed?src=jenny35006%40gmail.com&ctz=Asia%2FTaipei" scrolling="no"></iframe>
+        </div>  
     </div>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>
         

@@ -26,7 +26,7 @@
                 ) );
         }else{
             $categories = get_categories(array(
-                'parent' => 108,
+                'parent' => 108, /* 108*/
                 'orderby' => 'slug',
                 'order'   => 'ASC'
             ) );
@@ -37,23 +37,29 @@
         <ul class="cat-list">
             <?php if($locale == "zh_TW"):?>
             <li>
-                <a class="cat-list_item event cat_active" href="#!"  data-filter-type="event" data-type="post" data-slug="event">
+                <a class="cat-list_item event <?php if(is_page('events')){echo "cat_active";}?>" href="<?php echo site_url() . "/events\/#anchor";?>"  data-filter-type="event" data-type="post" data-slug="event">
                     <span class="cat-list_item_dot"></span>
                     <span class="cat-list_item_name">所有活動</span>
                 </a>
             </li>
-            <?php foreach ($categories as $category) : ?>
+            <?php
+                $page_name = ['seminars', 'study_group'];                
+                $count = 0; 
+                foreach ($categories as $category) : ?>
                 <li>
-                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="#!" data-filter-type="event" data-type="post"  data-slug="<?= $category->slug; ?>">
+                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="<?php echo site_url() . "/events\/" . $page_name[$count] . "/#anchor"; ?>" data-filter-type="event" data-type="post"  data-slug="<?= $category->slug; ?>">
                         <span class="cat-list_item_dot"></span>    
                         <span class="cat-list_item_name"><?= $category->name; ?></span>
                     </a>
                 </li>
+                <?php $count = $count + 1; ?> 
             <?php endforeach; ?>
-            <?php else: ?>
-                <?php foreach($categories as $category) : ?>
+            <?php else: /*en_version*/?>
+                <?php 
+                    $page_name = ['seminars-en'];
+                    foreach($categories as $category) : ?>
                 <li>
-                    <a class="<?= "cat-list_item cat_active " . $category->slug; ?>" href="#!" data-filter-type="event" data-type="post"  data-slug="<?= $category->slug; ?>">
+                    <a class="<?= "cat-list_item cat_active " . $category->slug; ?>" href="<?php echo site_url() . "/events\/" . $page_name[0] . "/#anchor"; ?>" data-filter-type="event" data-type="post"  data-slug="<?= $category->slug; ?>">
                         <span class="cat-list_item_dot"></span>    
                         <span class="cat-list_item_name"><?= $category->name; ?></span>
                     </a>
@@ -62,15 +68,32 @@
             <?php endif; ?>
         </ul>
     </div>
-
-    <div class="post_block">
+    <?php
+        $cat_name = 'event';
+        if(is_page('seminars') || is_page('seminars-en')):?>
+            <script type='text/javascript'>
+                var cat_list_item = document.getElementsByClassName("cat-list_item");
+                cat_list_item[1].className += " cat_active";
+            </script>
+            <?php $cat_name = '1-academy_lectures';?>
+        <?php elseif(is_page('study_group')): ?>
+            <script type='text/javascript'>
+                var cat_list_item = document.getElementsByClassName("cat-list_item");
+                cat_list_item[2].className += " cat_active";
+            </script>
+            <?php $cat_name = '2-study_group';?>
+        <?php endif; ?>
+    <div id="anchor"></div>
+    <div class="post_block" id="event_post">
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'event',
-                'orderby' => 'date',
+                'category_name' => $cat_name,
+                'meta_key' => 'event_date',
+                'orderby' => 'meta_value_num',
+                'order' => 'DSEC',
                 'paged' => $paged,
                 'posts_per_page' => 15,
             );
@@ -110,7 +133,38 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                        <div class="event-name">
+                            <a href="<?php the_permalink(); ?>">
+                            <?php $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
+                                if($locale == "en_US"){
+                                        /*there is no mandarin*/
+                                        if($mb_strlen >= 70){
+                                            echo mb_substr(get_the_title(), 0, 67) . "...";
+                                        }
+                                        else{
+                                            echo the_title();
+                                        }
+                                }else{
+                                if($mb_strlen == $strlen){
+                                        /*there is no mandarin*/
+                                        if($mb_strlen >= 70){
+                                            echo mb_substr(get_the_title(), 0, 67) . "...";
+                                        }
+                                        else{
+                                            echo the_title();
+                                        }
+                                }
+                                else{ 
+                                        /* in mandarin */
+                                        if($mb_strlen >= 40){
+                                            echo mb_substr(get_the_title(), 0, 38) . "...";
+                                        }
+                                        else{
+                                            echo the_title();
+                                        }
+                                } } ?>
+                            </a>
+                        </div>
                         <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..." ?></div>
                     </div>
                 </div>
@@ -142,7 +196,6 @@
         echo paginate_links($args);
         ?>
     </div>
-
     <?php get_template_part('template-parts/backtoTOP'); ?>
 </div>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>

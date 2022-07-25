@@ -13,27 +13,34 @@
             <div>醫學人文暨教育學科</div>
             <div class="dep_en_title">Department of Medical Humanities and Education</div>
             <?php else: ?>
-            <div class="dep_en_title">Department of Medical Humanities and Education</div>
+            <div class="font40">Department of Medical Humanities and Education</div>
             <?php endif; ?>
         </div>
         <div class="dep_circle"></div>
     </div>
     <div class="dep_hr"></div>
-    <div class="dep_title top_margined_s">簡介<br><br></div>
+    <div class="dep_title top_margined_s"><?php if($locale == "zh_TW"){echo "簡介";}else{echo "Introduction";}?><br><br></div>
     <div class="dep_passage">
         <?php echo get_field('intro')?>
         <div class="img_container"><img src="<?php echo get_field('intro_image')?>"></div>
     </div>
-    <div class="dep_title top_margined">醫學系「醫學人文與社會」課程設計及特色<br><br></div>
+    <div class="dep_title top_margined"><?php if($locale == "zh_TW"){echo "醫學系「醫學人文與社會」課程設計及特色";}else{echo "Content and features of Course";}?><br><br></div>
     <div class="dep_passage">
         <?php echo get_field('intro_curriculum')?>
     </div>
     <div class="dep_table">
         <div class="table_heads">
-            <span>年級</span>
+        <?php if($locale == "zh_TW"): ?>
+            <span>學系</span>
             <span>課程名稱</span>
             <span>學分數</span>
             <span>選別</span>
+            <?php else: ?>
+            <span>Year</span>
+            <span>Course title</span>
+            <span>Credit</span>
+            <span>Compulsory/ Elective</span>
+            <?php endif; ?>
         </div>
         <div class="table_hr"></div>
 
@@ -117,8 +124,11 @@
             </div>
         <?php endif;?>
     </div>
-
+    <?php if($locale == "zh_TW"): ?>
     <div class="dep_title top_margined">歷年課表</div>
+    <?php else: ?>
+    <div class="dep_title top_margined">Syllabus</div>
+    <?php endif; ?>
     <div class="dep_table">
         <div class="table_hr"></div>
 

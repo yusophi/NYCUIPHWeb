@@ -134,16 +134,20 @@
     color: #2e4565;
 }
 
+.event-name{
+    margin-top: 0.5vw;
+    z-index: 5;
+}
+
 .event-name a{
     color: #374a73;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
     font-size: 1.3025vw;
-    line-height: 1.823333333vw;
-    letter-spacing: .1953125vw;
+    line-height: 1.82vw;
+    letter-spacing: .1553125vw;
     font-weight: bold;
     text-align: left;
-
 }
 
 .event-intro {
@@ -153,6 +157,8 @@
     letter-spacing: .104166666vw;
     text-align: left;
     color: rgba(46, 69, 101, 0.7);
+    overflow-wrap: break-word;
+    margin-top: 1vw;
 }
 
 .event-name {

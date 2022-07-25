@@ -122,7 +122,41 @@
                                     <div class="article-passage">
                                           <div class="article-excerpt_bottom_line"></div>
                                           <div class="article-title">
-                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                <a href="<?php the_permalink(); ?>"><?php /*$strlen = mb_strlen(get_the_title()) ;
+                                                      if($strlen >= 30){ 
+                                                            $limit = 0;
+                                                            if($locale == "zh_TW"){$limit = 28; }else{$limit = 40;}
+                                                            echo mb_substr(get_the_title(), 0, $limit) . "...";} 
+                                                      else{echo the_title();}*/
+                                                      $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
+                                                      if($locale == "en_US"){
+                                                            if($mb_strlen >= 50){
+                                                                  echo mb_substr(get_the_title(), 0, 48) . "...";
+                                                            }
+                                                            else{
+                                                                  echo the_title();
+                                                            }
+                                                      }
+                                                      else{if($mb_strlen == $strlen){
+                                                            /*there is no mandarin*/
+                                                            if($mb_strlen >= 50){
+                                                                  echo mb_substr(get_the_title(), 0, 48) . "...";
+                                                            }
+                                                            else{
+                                                                  echo the_title();
+                                                            }
+                                                      }
+                                                      else{ 
+                                                            /* in mandarin */
+                                                            if($mb_strlen >= 30){
+                                                                  echo mb_substr(get_the_title(), 0, 28) . "...";
+                                                            }
+                                                            else{
+                                                                  echo the_title();
+                                                            }
+                                                      } }
+                                                ?>
+                                                </a>
                                           </div>
                                           <div class="article-title_bottom_line"></div>
                                           <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
@@ -134,7 +168,7 @@
                   </div>
             <?php endif;
             wp_reset_postdata(); ?>
-            <a class="bt-readmore animation1_btn" id="news_readmore_btn" href="<?php echo site_url(); ?>/news/">
+            <a class="bt-readmore animation1_btn" id="news_readmore_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "news";}else{echo "news-en";}?>/">
                   read more
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
@@ -196,7 +230,39 @@
                                                                         <?php endif; ?>
                                                                   </div>
                                                             </div>
-                                                            <div class="event-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                                            <div class="event-name">     
+                                                                  <a href="<?php the_permalink(); ?>"><?php 
+                                                                        $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
+                                                                        if($locale == "en_US"){
+                                                                              /*there is no mandarin*/
+                                                                              if($mb_strlen >= 70){
+                                                                                    echo mb_substr(get_the_title(), 0, 67) . "...";
+                                                                              }
+                                                                              else{
+                                                                                    echo the_title();
+                                                                              }
+                                                                        }else{
+                                                                        if($mb_strlen == $strlen){
+                                                                              /*there is no mandarin*/
+                                                                              if($mb_strlen >= 70){
+                                                                                    echo mb_substr(get_the_title(), 0, 67) . "...";
+                                                                              }
+                                                                              else{
+                                                                                    echo the_title();
+                                                                              }
+                                                                        }
+                                                                        else{ 
+                                                                              /* in mandarin */
+                                                                              if($mb_strlen >= 40){
+                                                                                    echo mb_substr(get_the_title(), 0, 38) . "...";
+                                                                              }
+                                                                              else{
+                                                                                    echo the_title();
+                                                                              }
+                                                                        } }
+                                                                  ?>
+                                                                  </a>
+                                                            </div>
                                                             <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..." ?></div>
                                                       </div>
                                                 </div>
@@ -224,7 +290,7 @@
                   <img id="event-icon-prev" src="<?php bloginfo('template_url') ?>/images/icon/icon-pre_white.svg">
                   <img id="event-icon-next" src="<?php bloginfo('template_url') ?>/images/icon/icon-next_white.svg">
             </div>
-            <a class="bt-readmore animation2_btn" id="event_readmore_btn" href="<?php echo site_url(); ?>/events/">
+            <a class="bt-readmore animation2_btn" id="event_readmore_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "events";}else{echo "events-en";}?>/">
                   read more
                   <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                   <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
@@ -251,7 +317,7 @@
                               <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>
                               <?php endif; ?>
                         </div>
-                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/about/">
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
                               read more
                               <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
                               <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
@@ -404,76 +470,7 @@
                   <span class="ch-title">相關連結<br></span>
                   <span class="en-title">Links</span>
             </div>
-            <div class="links-content">
-                  <span class="links-flex-col">
-                        <div class="links-category-item">
-                              <div class="links-upper-item">
-                                    <span class="links-item-title">學術資源</span>
-                                    <span class="links-icon-more-item">+</span>
-                              </div>
-                              <div class="links-items">
-                                    <div class="links-item">陽明大學圖書館</div>
-                                    <div class="links-item">中央研究院館藏查詢</div>
-                                    <div class="links-item">國家圖書館</div>
-                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
-                                    <div class="links-item">全國法規資料庫</div>
-                                    <div class="links-item">全民健康保險研究資料庫</div>
-                                    <div class="links-item">科技部科普知識</div>
-                                    <div class="links-item">健康數據統計研究資源中心</div>
-                              </div>
-                        </div>
-                        <div class="links-category-item">
-                              <div class="links-upper-item">
-                                    <span class="links-item-title">相關單位</span>
-                                    <span class="links-icon-more-item">+</span>
-                              </div>
-                              <div class="links-items">
-                                    <div class="links-item">陽明大學圖書館</div>
-                                    <div class="links-item">中央研究院館藏查詢</div>
-                                    <div class="links-item">國家圖書館</div>
-                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
-                                    <div class="links-item">全國法規資料庫</div>
-                                    <div class="links-item">全民健康保險研究資料庫</div>
-                                    <div class="links-item">科技部科普知識</div>
-                                    <div class="links-item">健康數據統計研究資源中心</div>
-                              </div>
-                        </div>
-                  </span>
-                  <span class="links-flex-col">
-                        <div class="links-category-item">
-                              <div class="links-upper-item">
-                                    <span class="links-item-title">政府機構</span>
-                                    <span class="links-icon-more-item">+</span>
-                              </div>
-                              <div class="links-items">
-                                    <div class="links-item">陽明大學圖書館</div>
-                                    <div class="links-item">中央研究院館藏查詢</div>
-                                    <div class="links-item">國家圖書館</div>
-                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
-                                    <div class="links-item">全國法規資料庫</div>
-                                    <div class="links-item">全民健康保險研究資料庫</div>
-                                    <div class="links-item">科技部科普知識</div>
-                                    <div class="links-item">健康數據統計研究資源中心</div>
-                              </div>
-                        </div>
-                        <div class="links-category-item">
-                              <div class="links-upper-item">
-                                    <span class="links-item-title">搜尋引擎</span>
-                                    <span class="links-icon-more-item">+</span>
-                              </div>
-                              <div class="links-items">
-                                    <div class="links-item">陽明大學圖書館</div>
-                                    <div class="links-item">中央研究院館藏查詢</div>
-                                    <div class="links-item">國家圖書館</div>
-                                    <div class="links-item">全國圖書書目資料聯合查詢</div>
-                                    <div class="links-item">全國法規資料庫</div>
-                                    <div class="links-item">全民健康保險研究資料庫</div>
-                                    <div class="links-item">科技部科普知識</div>
-                                    <div class="links-item">健康數據統計研究資源中心</div>
-                              </div>
-                        </div>
-                  </span>
-            </div>
+            <?php get_template_part('template-parts/links','content');?>
       </div>
       <?php endif; ?>
       <!-- Milo: links結束 -->

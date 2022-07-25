@@ -32,7 +32,7 @@
                 category: category,
                 cat_field: filed_slugs,
                 cat_title: title_slugs,
-                type: type
+                type: type,
         },
         success: function(result) {
           $('.post_block').html(result);
