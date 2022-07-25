@@ -68,7 +68,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_MsPhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'medium'); ?>
+                        <?php echo wp_get_attachment_image( $ad_MsPhD['ad_poster'], 'large'); ?>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_PhD['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_PhD['ad_poster']); ?>
+                        <?php echo wp_get_attachment_image( $ad_PhD['ad_poster'],'large'); ?>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                 <div class="ad_info">
                     <div class="ad_content"><?php echo $ad_Ms['ad_content']; ?></div>
                     <div class="ad_poster">
-                        <?php echo wp_get_attachment_image( $ad_Ms['ad_poster'], 'ad_poster_size'); ?>
+                        <?php echo wp_get_attachment_image( $ad_Ms['ad_poster'], 'large'); ?>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,12 @@
 <?php
-    $locale = get_locale();
+    $locale = pll_the_languages( array( 'post_id' => $post->ID ) );
     $picture = get_field('picture');
     $title =  get_field('prof_class'); $name = get_field('name');
     $edu = get_field('h_edu'); $exp = get_field('academic_expertise'); $link = ""; $CV = "";
 ?>
 <div class="member_card">
     <div class="member_picture">
-        <?php echo wp_get_attachment_image( $picture, 'member_picture'); ?>
+        <?php echo wp_get_attachment_image( $picture, 'large'); ?>
     </div>
     <?php if ($locale == "zh_TW"): ?>
     <a class="name" href="<?php the_permalink(); ?>"><?= $name; ?><span class="title"><?= $title; ?></span></a>

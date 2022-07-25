@@ -8,7 +8,7 @@
     <?php get_header(); ?>
     <div class="result_content">
         <?php if (is_search()):?>
-            <div class="article">
+            <div class="seared_article">
                 <p id="search_keyword"> <?php echo '搜尋結果: ' . esc_html( $_POST['s'] ); ?> </p>
                 <?php if ( have_posts() ) : ?>
                     <?php while ( have_posts() ) : the_post(); ?>

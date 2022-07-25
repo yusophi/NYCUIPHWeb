@@ -188,11 +188,16 @@
     text-decoration: none;
 }
 
-.ad_poster img{
+.ad_poster{
     width: 29.11vw;
     height: 43.48vw;
     border-radius: 15px;
     overflow: hidden;
+}
+
+.ad_poster img{
+    width: 29.11vw;
+    height: 43.48vw;
 }
 
 .en_title{

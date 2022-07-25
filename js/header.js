@@ -167,11 +167,21 @@ nav_main_list_item_9.addEventListener("mouseleave", function() {
 
 
 var header_search_btn = document.getElementById("icon-search");
+var header_calendar_btn = document.getElementById("icon-calendar");
+
 var search_overlay = document.getElementById("search_overlay");
 var search_overlay_close_btn = document.getElementById("search_overlay_closebtn");
 
+var calendar_overlay = document.getElementById("calendar_overlay");
+var calendar_overlay_close_btn = document.getElementById("calendar_overlay_closebtn");
+
 header_search_btn.addEventListener("click", function() {
   search_overlay.style.display = "block";
+  document.getElementById("main-nav").style.display = "none";
+});
+
+header_calendar_btn.addEventListener("click", function() {
+  calendar_overlay.style.display = "block";
   document.getElementById("main-nav").style.display = "none";
 });
 
@@ -180,4 +190,18 @@ function close_search_overlay(){
   document.getElementById("main-nav").style.display = "block";
 }
 
+function close_cal_overlay(){
+  calendar_overlay.style.display = "none";
+  document.getElementById("main-nav").style.display = "block";
+}
+
 search_overlay_close_btn.addEventListener("click",close_search_overlay);
+calendar_overlay_close_btn.addEventListener("click",close_cal_overlay);
+
+const availableVideos= document.getElementsByClassName("overlay");
+window.addEventListener("scroll", function (){
+    for (var i = 0; i < availableVideos.length; i++) {
+        availableVideos[i].style.display = "none";
+    }
+    document.getElementById("main-nav").style.display = "block";
+})

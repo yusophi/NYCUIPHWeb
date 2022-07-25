@@ -47,10 +47,10 @@ for (var i = 0 ; i < clsbtn.length ; i++){
     });
 }
 
-const availableVideos= document.getElementsByClassName("overlay");
+/*const availableVideos= document.getElementsByClassName("overlay");
 window.addEventListener("scroll", function (){
     for (var i = 0; i < availableVideos.length; i++) {
         availableVideos[i].style.display = "none";
     }
     document.getElementById("main-nav").style.display = "block";
-})
+})*/

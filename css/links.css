@@ -81,11 +81,11 @@
 }
 .links-item {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: .833333333vw;
+    font-size: 1.0416vw;
     line-height: 2;
     letter-spacing: 3px;
     text-align: left;
-    color: #2e4565;
+    color: #647386;
     transform: translateX(2.344166vw);
     border-bottom: #707070 solid 1px;
     width: calc(100% - 4.688332vw);

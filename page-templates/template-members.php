@@ -18,14 +18,14 @@
     <?php 
         if($locale == "zh_TW"){
             $areas_categories = get_categories(array(
-                'parent' => 27, /*21*/
+                'parent' => 21, /*33*/
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
 
             $prof_categories = get_categories(array(
-                    'parent' => 25, /*25*/
+                    'parent' => 25, /*27*/
                     'orderby' => 'slug',
                     'hide_empty' => false,
                     'order'   => 'ASC'
@@ -106,6 +106,7 @@
                     'admin' => 'ASC',
                     'prof' => 'ASC',
                 ),
+                'posts_per_page' => -1
         );
         $the_query = new WP_Query($args);
         if($the_query->have_posts()):
@@ -123,7 +124,7 @@
                     ?>
                     <div class="member_card">
                         <div class="member_picture">
-                            <?php echo wp_get_attachment_image( $picture, 'member_picture'); ?>
+                            <?php echo wp_get_attachment_image( $picture , 'large'); ?>
                         </div>
                         <?php if ($locale == "zh_TW"): ?>
                         <a class="name" href="<?php the_permalink(); ?>"><?= $name; ?><span class="title"><?= $title; ?></span></a>

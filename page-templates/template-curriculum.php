@@ -26,7 +26,7 @@
         <a class="subpage_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule-en/"><p class="_font18">Timetable</p></a>
         <?php endif; ?>
     </div>
-    <?php
+        <?php
         if(is_page('course_architecture')):?>
             <?php get_template_part('template-parts/curriculum','arch');?>
             <script type='text/javascript'>

@@ -1148,6 +1148,10 @@
     z-index: inherit;
 }
 
+.links-item a {
+    text-decoration: none;
+}
+
 @media (max-width: 1130px) {
     #event-slider-container-outer {
         transform: translateX(calc(-1000px + 32.6vw));

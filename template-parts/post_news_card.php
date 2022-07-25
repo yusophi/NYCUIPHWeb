@@ -29,7 +29,35 @@
 <div class="article-passage">
     <div class="article-excerpt_bottom_line"></div>
     <div class="article-title">
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <a href="<?php the_permalink(); ?>">
+        <?php $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
+            if($locale == "en_US"){
+                if($mb_strlen >= 50){
+                        echo mb_substr(get_the_title(), 0, 48) . "...";
+                }
+                else{
+                        echo the_title();
+                }
+            }
+            else{if($mb_strlen == $strlen){
+                /*there is no mandarin*/
+                if($mb_strlen >= 50){
+                        echo mb_substr(get_the_title(), 0, 48) . "...";
+                }
+                else{
+                        echo the_title();
+                }
+            }
+            else{ 
+                /* in mandarin */
+                if($mb_strlen >= 30){
+                        echo mb_substr(get_the_title(), 0, 28) . "...";
+                }
+                else{
+                        echo the_title();
+                }
+            } } ?>
+        </a>
     </div>
     <div class="article-title_bottom_line"></div>
     <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>

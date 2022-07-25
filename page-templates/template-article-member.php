@@ -20,7 +20,7 @@
     <div class="article_content">
         <div class="left">
             <div class="member_picture">
-                <?php echo wp_get_attachment_image( $picture, 'member_picture1'); ?>
+                <?php echo wp_get_attachment_image( $picture, 'large'); ?>
             </div>
             <div class="block-deco short">
                 <div class="deco-dot"></div>

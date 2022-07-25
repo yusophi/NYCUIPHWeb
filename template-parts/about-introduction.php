@@ -1,8 +1,3 @@
-<?php
-/*
- * Template Name: about-introduction
- */
-?>
 <?php $locale = get_locale();?>
 <div class="information-block IPH-introduction">
     <div class="info-title">
