@@ -41,6 +41,11 @@
     border-radius: 1.302vw;
 }
 
+.member_picture img{
+    width: 23.38vw;
+    height: 14.84vw;
+}
+
 .block-deco{
     width: 82vw;
     display: flex;
@@ -230,7 +235,7 @@
     margin-bottom: 1.5vw;
 }
 
-@media (max-width:960px) {
+@media (max-width: 1024px) {
 
     .deco-section{
         font-size: 8.18px;
@@ -240,12 +245,12 @@
         margin-top: 9.6px;
     }
     
-    .staff_name > p, .staff_name > p > span{
-        font-size: 20px;
+    .staff_name > p{
+        font-size: 22px;
     }
     
-    .staff_name > p > span{
-        font-size: 12.504px;
+    .staff_name > p > span{ 
+        font-size: 18px;
         letter-spacing: 3.75px;
         margin-left: 7.68px;
     }
@@ -255,17 +260,17 @@
     }
     
     #en_staff_name > span{
-        font-size: 14.4px;
+        font-size: 22px;
         letter-spacing: 1.44px;
     }
     
     .contact > p > span{
-        font-size: 11px;
+        font-size: 16px;
     }
     
     .staff_CV{
         margin-top: 9.6px;
-        font-size: 9px;
+        font-size: 16px;
     }
     
     .icon_download{
@@ -273,17 +278,17 @@
     }
     
     .right_block{
-        font-size: 11px;
+        font-size: 18px;
     }
     
     .en_right_block{
-        font-size: 11px;
+        font-size: 18px;
         letter-spacing: 1.152px;
         margin-bottom: 19.2px;
     }
     
     .right_block_title{
-        font-size: 13.5px;
+        font-size: 20px;
         letter-spacing: 1.632px;
     }
     
@@ -300,22 +305,37 @@
     }
     
     .works > ol > li, .en_right_block ol li{
-        font-size: 11px;
+        font-size: 18px;
         letter-spacing: 1.152px;
         margin-bottom: 14.4px;
+        overflow-wrap: anywhere;
     }
-}
 
-@media (max-width: 1024px){
-    .contact > p{
-        flex-direction: column;
+    .member_picture{
+        width: 30vw;
+        height: 20vw;
     }
+
+    .member_picture img{
+        width: 30vw;
+        height: 20vw;
+    }
+
+    .left{
+        width: 30vw;
+    }
+    .right{
+        width: 45vw;
+    }
+
 }
 
 @media (max-width: 768px){
     .contact > p{
         flex-direction: column;
     }
+
+    
 }
 
 @media (max-width: 480px){
@@ -323,6 +343,7 @@
         flex-direction: column;
         align-content: center;
         justify-content: flex-start;
+        margin-top: 30vw;
     }
 
     .left, .right{
@@ -331,7 +352,13 @@
 
     .member_picture{
         width: auto;
-        height: 44vw;
+        height: 45.56vw;
+        border-radius: 12px;
+    }
+    
+    .member_picture img{
+        width: 82vw;
+        height: 45.56vw;
     }
 
     .short{
@@ -339,11 +366,7 @@
         padding-bottom: 2.041vw;
     }
 
-    .contact > p{
-        flex-direction: row;
-    }
-
-    .contact > p > span, .staff_CV{
+    /*.contact > p > span, .staff_CV{
         font-size: 3.8vw;
     }
    
@@ -353,16 +376,16 @@
     
     .staff_name > p, .staff_name > p > span{
         font-size: 5.8vw;
+    }*/
+
+    .right_block, .en_right_block{
+        margin-top: 6vw;
+        margin-bottom: 0vw;
     }
 
-    .right_block{
-        font-size: 3.5vw;
-        margin-bottom: 6vw;
-    }
-
-    .right_block_title, #en_staff_name > span{
+    /*.right_block_title, #en_staff_name > span{
         font-size: 5vw;
-    }
+    }*/
 
     .block-deco{
         padding-top: 2.041vw;

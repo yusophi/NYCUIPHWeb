@@ -18,27 +18,27 @@
     <?php 
         if($locale == "zh_TW"){
             $areas_categories = get_categories(array(
-                'parent' => 21, /*21*/
+                'parent' => 21, /*33, 21*/
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
 
             $prof_categories = get_categories(array(
-                    'parent' => 25, /*27*/
+                    'parent' => 25, /*27, 25*/
                     'orderby' => 'slug',
                     'hide_empty' => false,
                     'order'   => 'ASC'
                 ) );
         }else{
             $areas_categories = get_categories(array(
-                'parent' => 112, /*112 */
+                'parent' => 112, /*134, 112 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
             $prof_categories = get_categories(array(
-                'parent' => 120, /*120 */
+                'parent' => 120, /*114, 120 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'

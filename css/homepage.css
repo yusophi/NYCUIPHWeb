@@ -428,6 +428,15 @@
     margin-top: 4.5vw;
 }
 
+.iph_en_title{
+    width: 40.6vw;
+    font-size: 3vw;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    text-align: left;
+    margin-top: 4.5vw;
+}
+
 .iph_en {
     width: 40.6vw;
     font-size: 1.3025vw;
@@ -449,12 +458,13 @@
 
 .iph_intro_en{
     width: 40.6vw;
-    font-size: 1vw;
+    font-size: 1.15vw;
     font-weight: normal;
     line-height: 1.5;
     letter-spacing: 0.05vw;
     color: #647386;
     margin-top: 2.3vw;
+    overflow-wrap: anywhere;
 }
 
 .icon_aboutus_1{

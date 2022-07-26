@@ -34,7 +34,7 @@
 
 .cat-list_container > p{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: min(max(18px,0.9375vw),18px);
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
@@ -78,7 +78,7 @@
 
 .cat-list_item_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    /*font-size: 0.9375vw;*/
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
@@ -112,7 +112,7 @@ input::focus{
 
 input[type=text]{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: min(max(18px,0.9375vw),18px);
     font-weight: 500;
     letter-spacing: 2.7px;
     text-align: left;
@@ -192,12 +192,13 @@ input[type=text]{
 
 .row_paper > span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.14583vw;
+    font-size: max(22px, 1.14583vw);
     font-weight: 500;
     letter-spacing: 0.05729vw;
     text-align: left;
     color: #2e4565;
     line-height: 1.59;
+    overflow-wrap: anywhere;
 }
 
 span.year{
@@ -205,7 +206,7 @@ span.year{
 }
 
 span.name{
-    width: 5.5vw;
+    width: 8vw;
     margin-left: 6vw;
 }
 
@@ -215,12 +216,12 @@ span.degree{
 }
 
 span.advisor{
-    width: 10.5vw;
+    width: 15vw;
     margin-left: 5vw;
 }
 
 span.paper{
-    width: 38.4375vw;
+    width: 40vw;
     margin-left: 8.5vw;
     letter-spacing: 0.171875vw;
 }

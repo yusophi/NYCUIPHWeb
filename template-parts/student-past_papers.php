@@ -24,7 +24,7 @@
                     <li>
                         <a class="<?= "cat-list_item " . $year->slug; ?>" href="#!" data-filter-type="year" data-type="papers" data-slug="<?= $year->slug; ?>">
                             <span class="cat-list_item_dot"></span>    
-                            <span class="cat-list_item_name"><?= $year->name; ?></span>
+                            <span class="cat-list_item_name _font18"><?= $year->name; ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>
@@ -47,7 +47,7 @@
     
     <div class="request_form">
         <img id="search_svg" src="<?php bloginfo('template_url')?>/images/page_student/search.svg">
-        <input type="text" name="s" placeholder="搜尋歷屆學位論文" id="keyword" class="input_search" style="outline: none;">
+        <input type="text" name="s" placeholder="可用研究生姓名、指導老師、論文關鍵字進行搜尋" id="keyword" class="input_search" style="outline: none;">
         <?php //wp_nonce_field( 'get_paper_search', 'paper_search_nonce' ); ?>
         <button id="search_btn">
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">
@@ -56,7 +56,7 @@
     
     <div class="block_papers"> 
         <div id="search_hint">
-            <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
+            <p>請填入欲查詢之關鍵字，如研究生姓名、指導老師、論文關鍵字，系統將協助您列出相關資料。</p>
         </div>
     </div>
 </div>

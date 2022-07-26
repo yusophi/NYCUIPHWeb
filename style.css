@@ -207,7 +207,7 @@ body::-webkit-scrollbar {
     height: 2vw;
 }*/
 
-#nav-toolbar div {
+#nav-toolbar > div, #nav-toolbar > a {
    /* width: 1.666666vw;
     height: 1.666666vw;*/
     transform: translateY(-50%);
@@ -327,7 +327,7 @@ li.lang-item > a{
     margin-right: 5px;
     display: block;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.041666666vw;
+    font-size: 1.14vw;
     letter-spacing: 3px;
     color: #2e4565;
 }
@@ -567,7 +567,6 @@ h1.article-title{
     right: 0;
     bottom: 0;
     background-color: #162a47;
-    border: solid 2px #ffbb00;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     z-index: 10;
