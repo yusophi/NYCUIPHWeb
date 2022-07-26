@@ -37,7 +37,7 @@
 
 .name, .title, .en_name, .en_title{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.30208vw;
+    font-size: 1.40625vw; /*25 -> 27*/
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -77,7 +77,7 @@
 
 .education, .expertise{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.0416vw;
+    font-size: 1.14583vw; /* 20 -> 22*/
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -113,7 +113,7 @@
 
 .cat-list_container > p{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
@@ -168,7 +168,7 @@
 
 .cat-list_item_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: bold;
     /*line-height: 0.06;*/
     letter-spacing: 0.140625vw;

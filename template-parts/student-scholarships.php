@@ -16,7 +16,7 @@
                         ?>
                             
                                 <li>
-                                    <a class="link_block _font18" href="<?php echo esc_url($file_link); ?>" target="_blank"><?php echo $file_name; ?>&nbsp;
+                                    <a class="link_block _font20" href="<?php echo esc_url($file_link); ?>" target="_blank"><?php echo $file_name; ?>&nbsp;
                                         <!--<span class="file_title _font18"><?php //echo $file_name; ?>&nbsp;</span>-->
                                     </a>
                                 </li>

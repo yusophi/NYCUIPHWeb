@@ -36,8 +36,10 @@
 .file_link > a{
     text-decoration: none;
     color: #4f5ab8;
-    font-weight: 500;
     margin-bottom: 2.083vw;
+    font-size: 1.041667vw;
+    font-weight: 500;
+    letter-spacing: 0.140625vw;
 }
 
 

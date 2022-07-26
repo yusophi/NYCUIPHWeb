@@ -72,13 +72,13 @@
 .cat-list_item{
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     text-decoration: none;
 }
 
 .cat-list_item_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
@@ -106,7 +106,7 @@
 .page-numbers > li{
     margin-left: 2vw;
     color: #2e4565;
-    font-size: 1.0416vw;
+    font-size: 1.041667vw;
 }
 
 .page-numbers > li > a{
