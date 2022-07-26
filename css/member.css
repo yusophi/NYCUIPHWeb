@@ -176,6 +176,34 @@
     margin-left: 1.3vw;
 }
 
+@media (max-width: 960px){
+    .cat-list_container > p, .cat-list_item_name{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .name, .en_name{
+        font-size: 20px;
+    }
+
+    .title, .en_title{
+        font-size: 14px;
+    }
+
+    .education, .expertise{
+        font-size: 18px;
+        letter-spacing: 2.5px;
+    }
+
+    .en-education, .en-expertise{
+        letter-spacing: 1px;
+    }
+
+    .title{
+        margin-left: 4px;
+    }
+}
+
 @media (max-width: 768px){
     .cat-list_container{
         flex-direction: column;
@@ -202,8 +230,9 @@
         height: 15vw;
     }
 
-    .name{
-        font-size: 2.30208vw;
+    .member_picture img{
+        width: 23.5vw;
+        height: 15vw;
     }
 }
 
@@ -225,34 +254,23 @@
         margin-top: 1.5vw;
     }
 
-    .cat-list_item_name{
-        letter-spacing: 0.5vw;
-    }
-
     .post_block{
-        grid-template-columns: 50vw;
+        grid-template-columns: 60vw;
         row-gap: 6vw;
     }
 
     .member_picture{
-        width: 50vw;
+        width: 55vw;
         height: 30vw;
         border-radius: 3vw;
     }
 
-    .name{
-        font-size: 4.30208vw;
-    }
-
-    .title{
-        font-size: 3vw;
-    }
-
-    .en_name_link span{
-        font-size: 4vw;
-    }
-
     .education, .expertise{
         margin-top: 2vw;
+    }
+    
+    .member_picture img{
+        width: 55vw;
+        height: 30vw;
     }
 }
