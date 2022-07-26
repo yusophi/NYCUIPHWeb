@@ -48,10 +48,10 @@
                                 <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar.svg">
                                 <img class="icon_toolbar_hover" id="calendar_hover" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar_hover.svg">
                             </div>
-                            <div id="icon-alumni_entry" title="校友E化系統" type="button">
+                            <a id="icon-alumni_entry" title="校友E化系統" type="button" href="http://iphalumni.iph.nycu.edu.tw/">
                                 <img claee="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
                                 <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
-                            </div>
+                            </a>
                             <div id="nav-hamburger"></div>
                         </div>
                     </div>  
@@ -217,7 +217,7 @@
         </div>
         <div class="overlay" id="calendar_overlay">
             <img id="calendar_overlay_closebtn" alt="關閉式搜尋視窗的按鈕" src="<?php bloginfo('template_url')?>/images/icon/ESC.svg" width="50" height="90">
-            <iframe id="calendar_iframe" src="https://calendar.google.com/calendar/embed?src=jenny35006%40gmail.com&ctz=Asia%2FTaipei" scrolling="no"></iframe>
+            <iframe id="calendar_iframe" src="https://calendar.google.com/calendar/embed?src=99ka1mnam4of6bmd74erjbbs9s%40group.calendar.google.com&ctz=Asia%2FTaipei" scrolling="no"></iframe>
         </div>  
     </div>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/header.js"></script>

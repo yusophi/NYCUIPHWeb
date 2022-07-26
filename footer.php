@@ -10,11 +10,11 @@
             <div class="footer-pic"><img src="<?php bloginfo('template_url') ?>/images/icon/icon-footer-pic.svg"></div>
             <div class="footer-info">
                   <div>國立陽明交通大學公共衛生研究所<br>
-                        Institute of Public Health, National Yang-Ming Chiao Tung University
+                        Institute of Public Health, National Yang Ming Chiao Tung University
                   </div>
-                  <div id="footer-info-d2">國立陽明交通大學醫學系公共衛生暨醫學人文學科<br>
-                        Department of Public Health & Medical Humanities, Faculty of Medicine,<br>
-                        National Yang-Ming Chiao Tung University
+                  <div id="footer-info-d2">國立陽明交通大學醫學系醫學人文暨教育學科<br>國立陽明交通大學醫學系公共衛生學科<br>
+                        Department of Medical Humanities & Education, School of Medicine, National Yang Ming Chiao Tung University<br>
+                        Department of Public Health, School of Medicine, National Yang Ming Chiao Tung University
                   </div>
                   <div id="footer-info-d3">地址：台北市北投區立農街二段155號（醫學二館）<br>
                         Address: No. 155, Sec. 2, Linong St., Beitou Dist., Taipei City 112, Taiwan (R.O.C.)<br>

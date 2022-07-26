@@ -313,7 +313,7 @@
                               <div class="iph_en"> <?php the_field('iph_en'); ?></div>
                               <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
                               <?php else: ?>
-                              <div class="iph_en"> <?php the_field('iph_en'); ?></div>
+                              <div class="iph_en_title"> <?php the_field('iph_en'); ?></div>
                               <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>
                               <?php endif; ?>
                         </div>
