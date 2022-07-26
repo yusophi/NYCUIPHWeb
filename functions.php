@@ -511,7 +511,7 @@ function filter_ajax() {
   }
   else if($postType == 'papers'){ //post type: papers
     if($query->have_posts()){
-      echo '<div class="item_titles _font18">';
+      echo '<div class="item_titles _font20">';
       echo ' <span class="year">年份</span>
       <span class="name">姓名</span>
       <span class="degree">畢業學位</span>

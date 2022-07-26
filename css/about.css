@@ -239,7 +239,7 @@
     line-height: 1.82;
     text-align: left;
     color: #2e4565;
-    font-size: 1.14583vw;
+    font-size: 1.302083333vw; /*22 -> 25*/
     letter-spacing: 0.23vw;
     margin-bottom: 1.5vw;
     overflow-wrap: break-word;
@@ -250,7 +250,7 @@
     line-height: 1.82;
     text-align: left;
     color: #2e4565;
-    font-size: 1.14583vw;
+    font-size: 1.302083333vw; /*22->25*/
     letter-spacing: 0.15vw;
     margin-bottom: 1.5vw;
     hyphens: auto;
@@ -405,13 +405,13 @@
     }
 
     .texts p {
-        font-size: 12px;
+        font-size: 12.5px;
         letter-spacing: 2.208px;
         margin-bottom: 14.4px;
     }
 
     .IPH-introduction img {
-        width: 334.08px;
+        width: 251.424px;
     }
 
     .texts-title div {
@@ -448,6 +448,10 @@
     .deco-section {
         font-size: 9px;
         letter-spacing: 1.35px;
+    }
+
+    .en_text p{
+        font-size: 12.5px;
     }
 }
 
@@ -525,5 +529,9 @@
 
     .en-supervisor-title{
         font-size: 2.5vw;
+    }
+
+    .supervisor > .texts{
+        width: auto;
     }
 }
