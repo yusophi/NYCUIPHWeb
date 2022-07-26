@@ -241,6 +241,10 @@ span.paper{
         letter-spacing: 4.875px;
         margin-top: 40px;
     }
+
+    .cat-list_item_name {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 768px){

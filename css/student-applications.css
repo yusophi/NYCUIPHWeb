@@ -167,16 +167,16 @@
 
 @media (max-width: 960px) {
     .group_content p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .group_content > h3 {
-        font-size: 9px;
+        font-size: 10px;
         margin: 28.8px 0;
     }
 
     .group_content a {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     ._font27{

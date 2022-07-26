@@ -176,6 +176,7 @@
     margin-left: 1.3vw;
 }
 
+<<<<<<< HEAD
 @media (max-width: 960px){
     .cat-list_container > p, .cat-list_item_name{
         font-size: 14px;
@@ -201,6 +202,23 @@
 
     .title{
         margin-left: 4px;
+=======
+@media (max-width: 960px) {
+    .cat-list_container>p {
+        font-size: 9px;
+        margin-right: 25px;
+    }
+
+    .cat-list_item_name {
+        font-size: 9px;
+        letter-spacing: 1.35px;
+        margin-left: 12.48px;
+    }
+
+    .member_picture img {
+        width: 188px;
+        height: 120px;
+>>>>>>> origin/develop
     }
 }
 
@@ -225,6 +243,7 @@
         column-gap: 5vw;
     }
 
+<<<<<<< HEAD
     .member_picture{
         width: 23.5vw;
         height: 15vw;
@@ -233,6 +252,10 @@
     .member_picture img{
         width: 23.5vw;
         height: 15vw;
+=======
+    .name{
+        font-size: 2.30208vw;
+>>>>>>> origin/develop
     }
 }
 
