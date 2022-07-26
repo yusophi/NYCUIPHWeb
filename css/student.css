@@ -80,31 +80,39 @@
 
 ._font20{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.041667vw;
+    font-size: min(max(1.041667vw, 20px),20px);
 }
 
 ._font22{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.14583vw;
+    font-size: min(max(1.14583vw,22px),22px);
 }
 
 ._font30{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.5625vw;
+    font-size: min(max(1.5625vw, 30px), 30px);
 }
 
 ._font40{
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bold;
-    font-size: 2.083vw;
+    font-size: min(max(2.083vw,40px),40px);
     line-height: 0.88;
     letter-spacing: 6px;
     text-align: left;
     color: #2e4565;
 }
 
+._font60{
+    font-size: min(max(3.385833333vw,60px),60px);
+}
+
+.font25{
+    font-size: min(max(25px,1.30vw),25px);
+}
+
 @media (max-width: 960px) {
-    ._font18{
+    /*._font18{
         font-size: 9px;
     }
     
@@ -122,7 +130,7 @@
     
     ._font40{
         font-size: 20px;
-    }
+    }*/
 
     .subpage_btn {
         width: 84px;
