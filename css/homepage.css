@@ -1003,7 +1003,7 @@
 }
 
 .contact_title, .email, .phone_num, .self_intro{
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: normal;
     letter-spacing: 0.15625vw;
     line-height: 1.823333vw;
@@ -1259,7 +1259,7 @@
         right: 17.5px;
     }
     .links-item {
-        font-size: 10px;
+        font-size: 11px;
         transform: translateX(22.5px);
     }
 

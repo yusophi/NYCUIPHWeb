@@ -183,6 +183,7 @@
     letter-spacing: 1.1px;
     color: #4f5ab8;
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 .ad_poster{
@@ -271,7 +272,8 @@
     }
 
     .ad_content{
-        width: auto;
+        width: 82vw;
+        overflow-wrap: anywhere;
     }
 
     .ad_poster img{

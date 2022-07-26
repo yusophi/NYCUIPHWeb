@@ -178,7 +178,9 @@
       <div class="events">
             <div class="event-title">
                   <div class="event-icon-container"><img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/hp-Events_icon.svg"></div>
+                  <?php if($locale == "zh_TW"):?>
                   <div class="ch-title">學術活動<br></div>
+                  <?php endif; ?>
                   <div class="en-title">Events</div>
             </div>
 

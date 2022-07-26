@@ -82,4 +82,7 @@ img.icon_download{
         width: 7vw;
         height: 4.5vw;
     }
+    .file_link > a{
+        font-size: 11px;
+    }
 }
