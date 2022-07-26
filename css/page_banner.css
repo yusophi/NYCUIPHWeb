@@ -10,7 +10,7 @@
 
 .page_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2.083vw; /*2.5rem*/
+    font-size: 2.083vw;
     font-weight: bold;
     line-height: 1.45;
     letter-spacing: 0.3125vw;
@@ -186,6 +186,20 @@
 }
 
 
+@media (max-width:960px) {
+    .circle {
+        width: 25.5px;
+        height: 25.5px;
+    }
+
+    .page_name {
+        font-size: 20px;
+    }
+
+    #eg {
+        font-size: 15px;
+    }
+}
 
 @media (max-width: 768px){
     .page_name{
@@ -204,21 +218,5 @@
 
     #eg{
         font-size: 3vw;
-    }
-}
-
-
-@media (max-width:960px) {
-    .circle {
-        width: 25.5px;
-        height: 25.5px;
-    }
-
-    .page_name {
-        font-size: 20px;
-    }
-
-    #eg {
-        font-size: 15px;
     }
 }

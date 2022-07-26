@@ -114,7 +114,7 @@
     margin-top: 0.5vw;
     letter-spacing: 0.3125vw;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: min(max(2.083vw,40px),40px);
+    font-size: 2.083vw;
     font-weight: bold;
     line-height: 2.344166666vw;
     letter-spacing: 0.3125vw;
@@ -122,7 +122,7 @@
 
 .en-title {
     margin-top: 0.5vw;
-    font-size: min(max(1.5625vw, 30px), 30px);
+    font-size: 1.5625vw;
     letter-spacing: 0.078125vw;
 }
 
@@ -320,13 +320,13 @@
 }
 .event-ch-title {
     margin-top: 0.618rem;
-    font-size: min(max(2.083vw,40px),40px);
+    font-size: 2.083vw;
     line-height: 1.13;
     letter-spacing: 5px;
 }
 .event-en-title {
     margin-top: 0.618rem;
-    font-size: min(max(1.5625vw, 30px), 30px);
+    font-size: 1.5625vw;
     line-height: 1.13;
     letter-spacing: 1.8px;
 }
@@ -421,7 +421,7 @@
 
 .iph_ch {
     width: 40.6vw;
-    font-size: min(max(3.385833333vw,60px),60px);
+    font-size: 60px;
     font-weight: bold;
     letter-spacing: 9.75px;
     text-align: left;
@@ -430,7 +430,7 @@
 
 .iph_en_title{
     width: 40.6vw;
-    font-size: min(max(3.385833333vw,60px),60px);
+    font-size: 60px;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: left;
@@ -439,7 +439,7 @@
 
 .iph_en {
     width: 40.6vw;
-    font-size: min(max(25px,1.3025vw),25px);
+    font-size: 1.3025vw;
     font-weight: 900;
     line-height: 1.4;
     letter-spacing: 1.25px;
@@ -448,7 +448,7 @@
 
 .iph_intro {
     width: 40.6vw;
-    font-size: min(max(1.041667vw, 20px),20px);
+    font-size: 1.041667vw;
     font-weight: normal;
     line-height: 2;
     letter-spacing: 3px;
@@ -458,7 +458,7 @@
 
 .iph_intro_en{
     width: 40.6vw;
-    font-size: min(max(1.04vw, 20px),20px);
+    font-size: 1.041667vw;
     font-weight: normal;
     line-height: 1.5;
     letter-spacing: 0.05vw;
@@ -485,7 +485,7 @@
 
 .bk_num {
     font-family: "TimesNewRoman";
-    font-size: min(max(57px,2.96vw),57px);
+    font-size: 2.96vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -503,7 +503,7 @@
 
 .video_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: min(max(1.14vw,22px),22px);
+    font-size: 1.14vw;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 3px;
@@ -514,7 +514,7 @@
 }
 
 .video_title-en{
-    font-size: min(max(1.14583vw,22px),22px);
+    font-size: 1.14583vw;
     line-height: 1.2;
     letter-spacing: 1px;
 }
@@ -653,7 +653,7 @@
 .interview-text-content > a {
     position: relative;
     margin-top: 2.5%;
-    font-size: min(max(1.041667vw, 20px),20px);
+    font-size: 1.041667vw;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 0.1953125vw;
@@ -666,7 +666,7 @@
 .interview-text-content > span {
     position: relative;
     margin-top: 6.5%;
-    font-size: min(max(18px,0.9375vw),18px);
+    font-size: 0.9375vw;
     line-height: 1.25;
     letter-spacing: 0.1rem;
     text-align: left;
@@ -734,7 +734,7 @@
 
 .SP_ch_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: min(max(25px,1.3025vw),25px);
+    font-size: 1.3025vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -748,7 +748,7 @@
 
 .SP_en_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: min(max(25px,1.3025vw),25px);
+    font-size: 1.3025vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -852,7 +852,7 @@
 }
 .links-item-title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: min(max(25px,1.3025vw),25px);
+    font-size: 1.3025vw;
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 3.75px;
@@ -874,7 +874,7 @@
 }
 .links-item {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: min(max(1.041667vw, 20px),20px);
+    font-size: 1.041667vw;
     line-height: 2;
     letter-spacing: 3px;
     text-align: left;
@@ -991,20 +991,20 @@
 
 .staff_name {
     /*font-size: min(max(25px,1.30vw),25px);*/
-    font-size: min(max(1.14583vw,22px),22px);
+    font-size: 1.14583vw;
     letter-spacing: 3px;
 }
 
 
 .work_respon{
-    font-size: min(max(18px,0.9375vw),18px);
+    font-size: 0.9375vw;
     letter-spacing: 2px;
     padding-top: 2%;    
     padding-bottom: 2.5%;  
 }
 
 .contact_title, .email, .phone_num, .self_intro{
-    font-size: min(max(18px,0.9375vw),18px);
+    font-size: 18px;
     font-weight: normal;
     letter-spacing: 0.15625vw;
     line-height: 1.823333vw;
@@ -1062,7 +1062,7 @@
 }
 
 .profile_text{
-    font-size: min(max(18px,0.9375vw),18px);
+    font-size: 0.9375vw;
     letter-spacing: 0.104vw;
 }
 
@@ -1132,7 +1132,7 @@
 
 .overlay_staff_name {
     width: 100%;
-    font-size: min(max(3.38vw,60px),60px);
+    font-size: 3.38vw;
     padding-top: 10%;
     padding-bottom: 13%;
     text-align: left;
@@ -1202,13 +1202,17 @@
         width: 492px;
     }
 
-    /*.links-item-title {
+    .links-item-title {
         font-size: 12.504px;
     }
 
     .links-item {
         font-size: 10px;
-    }*/
+    }
+
+    .work_respon{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 960px) {
@@ -1249,32 +1253,32 @@
     .links-category-item.expanded .links-item-title {
         left: 22.5px;
     }
-    /*.links-item-title {
+    .links-item-title {
         font-size: 12.504px;
-    }*/
+    }
     .links-icon-more-item {
         right: 17.5px;
     }
     .links-item {
-        /*font-size: 10px;*/
+        font-size: 10px;
         transform: translateX(22.5px);
     }
 
-    /*.SP_ch_title,
+    .SP_ch_title,
     .SP_en_title {
         font-size: 12.504px;
-    }*/
+    }
 
     .SP_ch_title {
         margin-top: 25px;
     }
 
-    /*.interview-text-content > span {
+    .interview-text-content > span {
         font-size: 10px;
     }
     .interview-text-content > a {
         font-size: 12.504px;
-    }*/
+    }
 
     .interview-slide:hover .interview-picture > img {
         -webkit-filter: grayscale(0%);
@@ -1298,12 +1302,12 @@
     .ch-title {
         margin-top: 4.8px;
         letter-spacing: 3px;
-        /*font-size: 20px;*/
+        font-size: 20px;
         line-height: 22.504px;
     }
     .en-title {
         margin-top: 4.8px;
-        /*font-size: 15px;*/
+        font-size: 15px;
         letter-spacing: 0.75px;
     }
 
@@ -1324,7 +1328,7 @@
         margin-left: 12.5px;
         width: 15px;
     }
-/*
+
     .iph_ch {
         font-size: 32.504px;
     }
@@ -1352,9 +1356,9 @@
     #out_WR {
         font-size: 9px;
     }
-*/
+
     .contact_title, .email, .phone_num, .self_intro {
-        /*font-size: 10px;*/
+        font-size: 10px;
         line-height: 17.504px;
     }
 

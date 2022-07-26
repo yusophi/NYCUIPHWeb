@@ -246,6 +246,10 @@
         font-size: 10px;
         margin-left: 12.48px;
     }
+
+    .page-numbers{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 480px){
