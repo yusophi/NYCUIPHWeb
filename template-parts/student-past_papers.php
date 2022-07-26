@@ -1,14 +1,14 @@
 <div class="student_paper">
     <?php $years = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 31, /* 40,31 */
+                'parent' => 40, /* 40,31 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'DSEC'
             ) );
           $divisions = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 33, /* 41 */
+                'parent' => 41, /* 41 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
@@ -47,7 +47,7 @@
     
     <div class="request_form">
         <img id="search_svg" src="<?php bloginfo('template_url')?>/images/page_student/search.svg">
-        <input type="text" name="s" placeholder="可用研究生姓名、指導老師、論文關鍵字進行搜尋" id="keyword" class="input_search" style="outline: none;">
+        <input type="text" name="s" placeholder="可用研究生姓名、指導老師、論文關鍵字進行搜尋" id="keyword" class="input_search">
         <?php //wp_nonce_field( 'get_paper_search', 'paper_search_nonce' ); ?>
         <button id="search_btn">
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">

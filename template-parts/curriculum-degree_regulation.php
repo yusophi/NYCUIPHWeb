@@ -269,7 +269,8 @@
         </div>
     </div>
 </div>
-<script type='text/javascript'>
+<?php global $rand;?>
+<script type='text/javascript' nonce="<?php echo $rand; ?>">
     const regu1_whole_rows = document.getElementById("regu_block1").getElementsByClassName("regulation_rows");
     const regu2_whole_rows = document.getElementById("regu_block2").getElementsByClassName("regulation_rows");
 

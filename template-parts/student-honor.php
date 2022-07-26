@@ -212,8 +212,8 @@
         </div>
     </div>
 </div>
-
-<script type='text/javascript'>
+<?php global $rand; ?>
+<script type='text/javascript' nonce="<?php echo $rand; ?>">
     //const regu_row_mst = document.getElementsByClassName("ms_field");
     //const regu_row_phd = document.getElementsByClassName("phd_field");
     const h1_whole_rows = document.getElementById("honor_block1").getElementsByClassName("honor_rows");

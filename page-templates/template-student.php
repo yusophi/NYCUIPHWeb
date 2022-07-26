@@ -17,9 +17,11 @@
         <a class="subpage_btn" id="btn-honor" href="<?php echo site_url(); ?>/honor/"><p class="_font20">榮譽榜單</p></a>
         <a class="subpage_btn" id="btn-papers" href="<?php echo site_url(); ?>/past_papers/"><p class="_font20">歷屆論文</p></a>
     </div>
-    <?php if(is_page('applications')):?>
+    <?php
+        global $rand; 
+        if(is_page('applications')):?>
             <?php get_template_part('template-parts/student','applications');?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[1].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
@@ -27,7 +29,7 @@
             </script>
         <?php elseif(is_page('scholarships')):?>
             <?php get_template_part('template-parts/student','scholarships');?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
@@ -35,7 +37,7 @@
             </script>
         <?php elseif(is_page('honor')):?>
             <?php get_template_part('template-parts/student','honor');?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[1].className += " animation1_btn";
@@ -43,7 +45,7 @@
             </script>
         <?php elseif(is_page('past_papers')):?>
             <?php get_template_part('template-parts/student','past_papers');?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[1].className += " animation1_btn";

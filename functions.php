@@ -101,8 +101,9 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 ?>
 
 <?php
+$rand = wp_rand();
 $nonce = wp_create_nonce('nonce');
-//header("Content-Security-Policy: default-src 'self'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $rand . "' 'nonce-" . $nonce . "'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com http://iphalumni.iph.nycu.edu.tw/ https://calendar.google.com/calendar/; font-src 'self' fonts.gstatic.com data:;");
 
 //header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
@@ -126,9 +127,9 @@ function add_nonce_to_script_tag($html) {
 add_filter('script_loader_tag', 'add_nonce_to_script_tag');
 
 function add_nonce_to_inline_script($attr) {
-  global $nonce;
+  global $rand;
   if (!isset($attr['nonce']) ) {
-      $attr['nonce'] = $nonce;
+      $attr['nonce'] = $rand;
   }
   return $attr;
 }
@@ -275,8 +276,9 @@ function wpdocs_ref_access() {
       wp_enqueue_style('mytheme_page-mamber_style', get_theme_file_uri('css/member.css')); 
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('staff_filter', get_theme_file_uri('js/staff_filter.js'),true);
-      wp_localize_script('staff_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
-  
+      //wp_localize_script('staff_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      wp_add_inline_script( 'staff_filter', 'var wpAjax = ' . json_encode( array(
+        'ajaxUrl' => admin_url( 'admin-ajax.php' ),) ), 'before' );
     }
     if(is_page('admission')|| is_page('admission-en')){
       wp_enqueue_style('mytheme_page-admission_style', get_theme_file_uri('css/admission.css')); 
@@ -331,7 +333,9 @@ function wpdocs_ref_access() {
       wp_enqueue_style('student_honor_style', get_theme_file_uri('css/student-past_paper.css')); 
       wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
       wp_enqueue_script('paper_filter', get_theme_file_uri('js/paper_filter.js'),true);
-      wp_localize_script('paper_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      //wp_localize_script('paper_filter', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));
+      wp_add_inline_script( 'paper_filter', 'var wpAjax = ' . json_encode( array(
+        'ajaxUrl' => admin_url( 'admin-ajax.php' ), ) ), 'before' );
     }
     if(is_page('dep_ph') || is_page('dep_mhe') || is_page('dep_mhe-en') || is_page('dep_ph-en')) {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/dep.css'));

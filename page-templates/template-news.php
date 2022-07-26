@@ -18,7 +18,7 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 2, /*6*/
+                'parent' => 6, /*6, 2*/
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
@@ -61,26 +61,27 @@
     </div>
     <?php
         $cat_name = 'news';
+        global $rand;
         if(is_page('announcement') || is_page('announcement-en')):?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[1].className += " cat_active";
             </script>
             <?php $cat_name = '1-normal_news';?>
         <?php elseif(is_page('scholarship')): ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[2].className += " cat_active";
             </script>
             <?php $cat_name = '2-scholarship';?>
         <?php elseif(is_page('covid19')): ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[3].className += " cat_active";
             </script>
             <?php $cat_name = '3-covid-19_news';?>
         <?php elseif(is_page('covid19-en')): ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[2].className += " cat_active";
             </script>

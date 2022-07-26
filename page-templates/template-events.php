@@ -20,7 +20,7 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 8, /* 10 */
+                'parent' => 10, /* 10, 8 */
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
@@ -70,14 +70,15 @@
     </div>
     <?php
         $cat_name = 'event';
+        global $rand;
         if(is_page('seminars') || is_page('seminars-en')):?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[1].className += " cat_active";
             </script>
             <?php $cat_name = '1-academy_lectures';?>
         <?php elseif(is_page('study_group')): ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[2].className += " cat_active";
             </script>

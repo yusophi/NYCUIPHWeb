@@ -90,8 +90,8 @@
                     </div>
                 </div>
             </div>
-        
-        <script type='text/javascript'>
+        <?php global $rand; ?>
+        <script type='text/javascript' nonce="<?php echo $rand; ?>">
             var btns = document.getElementsByClassName("ad_icon");
 
             for (var i = 0; i < btns.length; i++) {

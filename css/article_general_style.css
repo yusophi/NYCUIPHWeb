@@ -112,7 +112,7 @@
     flex-wrap: wrap;
 }
 
-.article {
+.article, .article div {
     width: 60.41vw;
     height: auto;
     font-family: 'Noto Sans TC', sans-serif;

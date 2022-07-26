@@ -27,9 +27,10 @@
         <?php endif; ?>
     </div>
         <?php
+        global $rand;
         if(is_page('course_architecture')):?>
             <?php get_template_part('template-parts/curriculum','arch');?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[1].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
@@ -37,13 +38,13 @@
         <?php elseif(is_page('degree_regulation') || is_page('degree_regulation-en')):?>
             <?php get_template_part('template-parts/curriculum','degree_regulation');?>
             <?php if($locale == "zh_TW"): ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[2].className += " animation1_btn";
             </script>
             <?php else: ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[1].className += " animation1_btn";
             </script>
@@ -51,13 +52,13 @@
         <?php elseif(is_page('course_schedule') || is_page('course_schedule-en')):?>
             <?php get_template_part('template-parts/curriculum','course_schedule');?>
             <?php if($locale == "zh_TW"): ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
                 animation_btn[1].className += " animation1_btn";
             </script>
             <?php else: ?>
-            <script type='text/javascript'>
+            <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var animation_btn = document.getElementsByClassName("subpage_btn");
                 animation_btn[0].className += " animation1_btn";
             </script>
