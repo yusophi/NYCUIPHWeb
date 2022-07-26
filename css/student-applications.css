@@ -24,7 +24,7 @@
 
 .group_content > h3{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: bold;
     letter-spacing: 2.7px;
     color: #2e4565;
@@ -33,7 +33,7 @@
 
 .group_content p{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.14583vw;
+    font-size: 1.302083333vw;
     color:#2e4565;
     line-height: 1.82;
     letter-spacing: 3.3px;
@@ -77,7 +77,7 @@
 
 .list > p, .appendix_text, .note, .realted_files a{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.041667vw;
+    font-size: 1.14583vw;
     font-weight: 500;
 }
 
@@ -139,7 +139,7 @@
 
 .filename{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.14583vw;
     font-weight: bold;
     line-height: 2.22;
     letter-spacing: 2.7px;
@@ -167,16 +167,16 @@
 
 @media (max-width: 960px) {
     .group_content p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .group_content > h3 {
-        font-size: 9px;
+        font-size: 10px;
         margin: 28.8px 0;
     }
 
     .group_content a {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     ._font27{
@@ -184,11 +184,11 @@
     }
 
     .list > p, .appendix_text, .note, .realted_files a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .filename {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 

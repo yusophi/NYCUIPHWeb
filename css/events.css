@@ -80,7 +80,7 @@
 
 .cat-list_item_name{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
@@ -125,6 +125,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 1.041666vw;
 }
 
 .page-numbers > li{
@@ -192,7 +193,11 @@
 
 @media (max-width: 960px) {
     .cat-list_item_name{
-        font-size: 9px;
+        font-size: 10px;
+    }
+
+    .page-numbers {
+        font-size: 10px;
     }
 }
 

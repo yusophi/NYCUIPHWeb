@@ -63,7 +63,7 @@
     margin-top: 5vw;
     opacity: 0.7;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: .88583vw; 
+    font-size: 0.9375vw;
     font-weight: 300;
     line-height: 1.76; 
     letter-spacing: 2.85px;
@@ -150,10 +150,10 @@ a.statement:before {
     }
 
     .footer-info {
-        font-size: 8.504px;
+        font-size: 10px;
     }
 
     .footer-statement {
-        font-size: 8.504px;
+        font-size: 10px;
     }
 }

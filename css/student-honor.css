@@ -97,7 +97,7 @@
     margin-top: 3.125vw;
     padding-bottom: 2.084vw;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9375vw;
+    font-size: 1.041667vw;
     font-weight: bold;
     letter-spacing: 2.7px;
     text-align: left;
@@ -142,7 +142,7 @@
     .item_titles {
         margin-top: 30px;
         padding-bottom: 20px;
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .honor_rows > .name {

@@ -7,7 +7,7 @@
 
 .dep_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 2.083333vw;
+    font-size: 2.34375vw;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 1.5px;
@@ -262,7 +262,7 @@
     }
 
     .dep_title {
-        font-size: 20px;
+        font-size: 22.5px;
     }
 
     .top_margined {
@@ -275,12 +275,12 @@
     }
 
     .table_row div {
-        font-size: 11px;
+        font-size: 12px;
         letter-spacing: 0.55px;
     }
 
     .dep_passage {
-        font-size: 11px;
+        font-size: 12px;
         letter-spacing: 1.65px;
     }
 

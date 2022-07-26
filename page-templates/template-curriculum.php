@@ -18,12 +18,12 @@
     </div>
     <div class="subpage_buttons"> 
         <?php if($locale == "zh_TW"): ?>
-        <a class="subpage_btn" id="btn-arch" href="<?php echo site_url(); ?>/course_architecture/"><p class="_font18">修課架構</p></a>
-        <a class="subpage_btn" id="btn-degree" href="<?php echo site_url(); ?>/degree_regulation/"><p class="_font18">修業規定</p></a>
-        <a class="subpage_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule/"><p class="_font18">學期課表</p></a>
+        <a class="subpage_btn" id="btn-arch" href="<?php echo site_url(); ?>/course_architecture/"><p class="_font20">修課架構</p></a>
+        <a class="subpage_btn" id="btn-degree" href="<?php echo site_url(); ?>/degree_regulation/"><p class="_font20">修業規定</p></a>
+        <a class="subpage_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule/"><p class="_font20">學期課表</p></a>
         <?php else: ?>
-        <a class="subpage_btn" id="btn-degree" href="<?php echo site_url(); ?>/degree_regulation-en/"><p class="_font18">Regulation</p></a>
-        <a class="subpage_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule-en/"><p class="_font18">Timetable</p></a>
+        <a class="subpage_btn" id="btn-degree" href="<?php echo site_url(); ?>/degree_regulation-en/"><p class="_font20">Regulation</p></a>
+        <a class="subpage_btn" id="btn-course" href="<?php echo site_url(); ?>/course_schedule-en/"><p class="_font20">Timetable</p></a>
         <?php endif; ?>
     </div>
         <?php

@@ -49,6 +49,8 @@
     border: solid 1.5px #2e4565;
     color: #2e4565;
     text-decoration: none;
+    letter-spacing: 0.15vw;
+    font-weight: bold;
 }
 
 .animation1_btn {
@@ -72,15 +74,18 @@
 
 ._font18{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: min(max(18px,0.9375vw),18px);
+    font-size: 0.9375vw;
     font-weight: bold;
-    letter-spacing: 2.7px;
+    letter-spacing: 0.145vw;
     text-align: left;
 }
 
 ._font20{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.041667vw;
+    font-weight: 500;
+    letter-spacing: 0.140625vw;
+    text-align: left;
 }
 
 ._font22{
@@ -103,17 +108,29 @@
     color: #2e4565;
 }
 
+._font60{
+    font-size: 3.385833333vw;
+}
+
+.font25{
+    font-size: 1.302083333vw;
+}
+
+._font27{
+    font-size: 1.40625vw;
+}
+
 @media (max-width: 960px) {
     ._font18{
-        font-size: 9px;
-    }
-    
-    ._font20{
         font-size: 10px;
     }
     
-    ._font22{
+    ._font20{
         font-size: 11px;
+    }
+    
+    ._font22{
+        font-size: 13px;
     }
     
     ._font30{

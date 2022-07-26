@@ -34,7 +34,7 @@
 
 .cat-list_container > p{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: min(max(18px,0.9375vw),18px);
+    /*font-size: 0.9375vw;*/
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
@@ -112,7 +112,7 @@ input::focus{
 
 input[type=text]{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: min(max(18px,0.9375vw),18px);
+    font-size: 1.041667vw;;
     font-weight: 500;
     letter-spacing: 2.7px;
     text-align: left;
@@ -166,6 +166,8 @@ input[type=text]{
     border-bottom: solid 2px #647386;
     margin-top: 3.125vw;
     padding-bottom: 2.084vw;
+    font-weight: 500;
+    letter-spacing: 2.7px;
 }
 
 .name_col{
@@ -192,7 +194,7 @@ input[type=text]{
 
 .row_paper > span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: max(22px, 1.14583vw);
+    font-size: 1.30vw;
     font-weight: 500;
     letter-spacing: 0.05729vw;
     text-align: left;
@@ -228,11 +230,11 @@ span.paper{
 
 @media (max-width: 960px) {
     .cat-list_container > p {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     input[type=text] {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     #search_hint > p {
@@ -240,6 +242,18 @@ span.paper{
         font-size: 32.5px;
         letter-spacing: 4.875px;
         margin-top: 40px;
+    }
+
+    .cat-list_item_name {
+        font-size: 11px;
+    }
+
+    .row_paper > span{
+        font-size: 14px;
+    }
+
+    .item_titles{
+        font-size: 11px;
     }
 }
 

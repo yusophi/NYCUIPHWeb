@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: column;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 2.083333vw;
+    font-size: 2.34375vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -124,8 +124,9 @@
 
 @media (max-width:960px) {
     .links_title {
-        font-size: 20px;
+        font-size: 22.5px;
         line-height: 22.5px;
+        letter-spacing: 3px;
     }
 
     .en_links_title {
@@ -162,17 +163,6 @@
 
     .links-category-item.expanded .links-item-title {
         left: 22.5px;
-    }
-
-    .links_title {
-        font-size: 20px;
-        line-height: 22.504px;
-        letter-spacing: 3px;
-    }
-    
-    .en_links_title {
-        font-size: 15px;
-        letter-spacing: 0.75px;
     }
 
     .dec_dot {

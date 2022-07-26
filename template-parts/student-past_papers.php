@@ -1,7 +1,7 @@
 <div class="student_paper">
     <?php $years = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 31, /* 40 */
+                'parent' => 40, /* 40,31 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'DSEC'
@@ -17,7 +17,7 @@
     <div class="select_bar_container">
         <input type="hidden" id="filters-year" value="" />
         <input type="hidden" id="filters-division" value="" />
-        <div class="cat-list_container">
+        <div class="cat-list_container _font20">
             <p>年份｜</p>
             <ul class="cat-list" id="cat_year">
                 <?php foreach($years as $year) : ?>

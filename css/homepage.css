@@ -114,7 +114,7 @@
     margin-top: 0.5vw;
     letter-spacing: 0.3125vw;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 2.083333333vw;
+    font-size: 2.34375vw; /* 40px -> 45px*/ 
     font-weight: bold;
     line-height: 2.344166666vw;
     letter-spacing: 0.3125vw;
@@ -122,7 +122,7 @@
 
 .en-title {
     margin-top: 0.5vw;
-    font-size: 1.5625vw;
+    font-size: 1.8229vw; /*30px -> 35px*/
     letter-spacing: 0.078125vw;
 }
 
@@ -320,13 +320,13 @@
 }
 .event-ch-title {
     margin-top: 0.618rem;
-    font-size: 2rem;
+    font-size: 2.083vw;
     line-height: 1.13;
     letter-spacing: 5px;
 }
 .event-en-title {
     margin-top: 0.618rem;
-    font-size: 1.5rem;
+    font-size: 1.5625vw;
     line-height: 1.13;
     letter-spacing: 1.8px;
 }
@@ -421,7 +421,7 @@
 
 .iph_ch {
     width: 40.6vw;
-    font-size: 3.385833333vw;
+    font-size: 3.385416666vw; /*60px -> 65px*/
     font-weight: bold;
     letter-spacing: 9.75px;
     text-align: left;
@@ -430,9 +430,9 @@
 
 .iph_en_title{
     width: 40.6vw;
-    font-size: 3vw;
+    font-size: 3.385833333vw;
     font-weight: bold;
-    letter-spacing: 1.3px;
+    letter-spacing: 1px;
     text-align: left;
     margin-top: 4.5vw;
 }
@@ -448,7 +448,7 @@
 
 .iph_intro {
     width: 40.6vw;
-    font-size: 1.041666666vw;
+    font-size: 1.14583vw;; /*20px -> 22px*/
     font-weight: normal;
     line-height: 2;
     letter-spacing: 3px;
@@ -458,7 +458,7 @@
 
 .iph_intro_en{
     width: 40.6vw;
-    font-size: 1.15vw;
+    font-size: 1.041667vw;
     font-weight: normal;
     line-height: 1.5;
     letter-spacing: 0.05vw;
@@ -485,7 +485,7 @@
 
 .bk_num {
     font-family: "TimesNewRoman";
-    font-size: 2.969166666vw;
+    font-size: 2.96vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: italic;
@@ -503,10 +503,10 @@
 
 .video_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.302084vw;
+    font-size: 1.302083333vw;
     font-weight: bold;
     line-height: 1.4;
-    letter-spacing: 3.75px;
+    letter-spacing: 3px;
     text-align: left;
     color: #2e4565;
     margin-top: 8%;
@@ -514,9 +514,9 @@
 }
 
 .video_title-en{
-    font-size: 1.1vw;
+    font-size: 1.302083333vw;
     line-height: 1.2;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 /*define the read-more botton in aboutUs block*/
@@ -653,7 +653,7 @@
 .interview-text-content > a {
     position: relative;
     margin-top: 2.5%;
-    font-size: 1.3025vw;
+    font-size: 1.14583vw; /*20px -> 22px*/
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 0.1953125vw;
@@ -666,7 +666,7 @@
 .interview-text-content > span {
     position: relative;
     margin-top: 6.5%;
-    font-size: 1.0416666667vw;
+    font-size: 1.041667vw; /* 18px -> 20px*/
     line-height: 1.25;
     letter-spacing: 0.1rem;
     text-align: left;
@@ -734,7 +734,7 @@
 
 .SP_ch_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.3025vw;
+    font-size: 1.40625vw; /*25px -> 27px*/
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -748,7 +748,7 @@
 
 .SP_en_title {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.3025vw;
+    font-size: 1.40625vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -815,7 +815,7 @@
 }*/
 
 .links-content {
-    width: 53.25vw;
+    width: 58vw;
     position: relative;
     margin-top: 6.4vw;
     display: flex;
@@ -864,6 +864,7 @@
     transform: translate(-50%, -50%);
     transition: 0.6s;
 }
+
 .links-icon-more-item {
     position: absolute;
     top: 50%;
@@ -873,7 +874,7 @@
 }
 .links-item {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 1.04166666667vw;
+    font-size: 1.041667vw;
     line-height: 2;
     letter-spacing: 3px;
     text-align: left;
@@ -988,35 +989,25 @@
     color: #2e4565;
 }
 
-/*.staff_name, .work_respon, .contact_title, .email, .phone_num, #profile_text, .self_intro, .profile_num{
-    font-size: 1.2504rem;
-    letter-spacing: 3.75px;
-}*/
-
 .staff_name {
-    font-size: 1.3025vw;
-    letter-spacing: 3.75px;
+    font-size: 1.302083333vw; /*25px*/
+    letter-spacing: 3px;
 }
 
 
 .work_respon{
-    font-size: 0.9375vw;
+    font-size: 1.041667vw; /*18px -> 20px*/
     letter-spacing: 2px;
     padding-top: 2%;    
     padding-bottom: 2.5%;  
 }
 
 .contact_title, .email, .phone_num, .self_intro{
-    font-size: 1.0416vw;
+    font-size: 0.9375vw;
     font-weight: normal;
     letter-spacing: 0.15625vw;
-    line-height: 1.2vw;
+    line-height: 1.823333vw;
     text-align: left;
-}
-
-.staff_name {
-    font-size: 1.3025vw;
-    letter-spacing: 3.75px;
 }
 
 .overlayinContact {
@@ -1140,7 +1131,7 @@
 
 .overlay_staff_name {
     width: 100%;
-    font-size: 3.3854vw;
+    font-size: 3.38vw;
     padding-top: 10%;
     padding-bottom: 13%;
     text-align: left;
@@ -1215,7 +1206,11 @@
     }
 
     .links-item {
-        font-size: 10px;
+        font-size: 11px;
+    }
+
+    .work_respon{
+        font-size: 11px;
     }
 }
 
@@ -1278,10 +1273,10 @@
     }
 
     .interview-text-content > span {
-        font-size: 10px;
+        font-size: 11px;
     }
     .interview-text-content > a {
-        font-size: 12.504px;
+        font-size: 12px;
     }
 
     .interview-slide:hover .interview-picture > img {
@@ -1342,7 +1337,7 @@
     }
 
     .iph_intro {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .bk_num {
@@ -1354,7 +1349,7 @@
     }
 
     .staff_name {
-        font-size: 12.504px;
+        font-size: 12.5px;
     }
 
     #out_WR {
@@ -1363,6 +1358,7 @@
 
     .contact_title, .email, .phone_num, .self_intro {
         font-size: 10px;
+        line-height: 17.504px;
     }
 
     .profile_p1, .profile_p2, .profile_p3 {
