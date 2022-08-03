@@ -1,3 +1,5 @@
+<?php $locale = get_locale();?>
+
 <div class="event-cards-mask">
     <div class="event-main-margin">
         <div class="event-main-slide-upper">
@@ -9,7 +11,20 @@
                 </div>
                 <div class="event-date"><?php the_field('event_date');?> </div>
                 <div class="hp_event_tag">
-                    <div class="post_category"><?php the_field('event_item');//the_category(''); ?></div>
+                    <div class="post_category">
+                        <?php $event_cat = get_field('event_item');
+                            if($locale == "en_US"){
+                                if($event_cat == "學術演講"){
+                                    echo "Seminar";
+                                }elseif($event_cat == "讀書會"){
+                                    echo "Study group";                                
+                                }
+                            }
+                            else{
+                                echo $event_cat;
+                            }
+                        ?>
+                    </div>
                     <div class="event-location"><?php the_field('event_location'); ?></div>
                 </div>
                 <?php

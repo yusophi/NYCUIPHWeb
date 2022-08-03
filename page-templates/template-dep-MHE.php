@@ -31,7 +31,7 @@
     <div class="dep_table">
         <div class="table_heads">
         <?php if($locale == "zh_TW"): ?>
-            <span>學系</span>
+            <span>年級</span>
             <span>課程名稱</span>
             <span>學分數</span>
             <span>選別</span>

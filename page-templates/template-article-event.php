@@ -15,11 +15,21 @@
         <div class="banner_article_meta">
             <img class="icon-clock" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
-            <!--<div class="banner_post_category"><?php //the_category(''); 
-                                                    ?></div>-->
             <div class="banner_post_tags">
-                <div class="post_category"><?php the_field('event_item'); //the_category(''); 
-                                            ?></div>
+                <div class="post_category">
+                    <?php $event_cat = get_field('event_item');
+                        if($locale == "en_US"){
+                            if($event_cat == "學術演講"){
+                                echo "Seminar";
+                            }elseif($event_cat == "讀書會"){
+                                echo "Study group";                                
+                            }
+                        }
+                        else{
+                            echo $event_cat;
+                        }
+                    ?>
+                </div>
                 <?php
                 $sdgs = get_field('sdg');
                 if ($sdgs) : ?>
@@ -44,13 +54,26 @@
                     <p class="sidebar_title_ch">相關資訊</p>
                 </div>
                 <div class="sidebar_content">
-                    <div class="_content" id="sidebar_content-category">類別&nbsp;:&nbsp;<?php the_field('event_item'); ?></div>
+                    <div class="_content" id="sidebar_content-category">
+                        <?php  $event_cat = get_field('event_item');
+                        if($locale == "en_US"){
+                            echo "Category : ";
+                            if($event_cat == "學術演講"){
+                                echo "Seminar";
+                            }elseif($event_cat == "讀書會"){
+                                echo "Study group";                                
+                            }
+                        }
+                        else{
+                            echo "類別 : " . $event_cat;
+                        }?> 
+                    </div>
                     <div class="_content">
-                        <span>活動日期&nbsp;:&nbsp;</span>
+                        <span><?php if($locale == "zh_TW"){echo "活動日期";}else{echo "Date";}?>&nbsp;:&nbsp;</span>
                         <span><?php the_field('event_date'); ?></span>
                     </div>
                     <div class="_content">
-                        <span>活動時間&nbsp;:&nbsp;</span>
+                        <span><?php if($locale == "zh_TW"){echo "活動時間";}else{echo "Time";}?>&nbsp;:&nbsp;</span>
                         <span><?php the_field('event_time_start'); ?><?php echo "~"; ?><?php the_field('event_time_end'); ?></span>
                     </div>
                     <?php
@@ -72,7 +95,6 @@
                                 <p class="_content">導讀人&nbsp;:<?php the_sub_field('leader'); ?></p>
                                 <p class="_content">導讀書籍&nbsp;:&nbsp;<?php the_sub_field('book'); ?></p>
                                 <p class="_content">作者&nbsp;:&nbsp;<?php the_sub_field('author'); ?></p>
-                                <p class="_content">原文作者&nbsp;:&nbsp;<?php the_sub_field('origin_author'); ?></p>
                                 <p class="_content">譯者&nbsp;:&nbsp;<?php the_sub_field('translator'); ?></p>
                                 <p class="_content">出版社&nbsp;:&nbsp;<?php the_sub_field('publisher'); ?></p>
                             </div>
@@ -139,8 +161,20 @@
                                     </div>
                                     <div class="event-date"><?php the_field('event_date'); ?> </div>
                                     <div class="hp_event_tag">
-                                        <div class="post_category"><?php the_field('event_item'); //the_category(''); 
-                                                                    ?></div>
+                                        <div class="post_category"> 
+                                            <?php $event_cat = get_field('event_item');
+                                                if($locale == "en_US"){
+                                                    if($event_cat == "學術演講"){
+                                                        echo "Seminar";
+                                                    }elseif($event_cat == "讀書會"){
+                                                        echo "Study group";                                
+                                                    }
+                                                }
+                                                else{
+                                                echo $event_cat;
+                                                }
+                                            ?>          
+                                        </div>
                                         <div class="event-location"><?php the_field('event_location'); ?></div>
                                     </div>
                                     <?php

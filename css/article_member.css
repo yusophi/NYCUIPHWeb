@@ -179,11 +179,14 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.14583vw;
     line-height: 1.82;
-    letter-spacing: 3.3px;
+    letter-spacing: 0.12vw;
     text-align: left;
     color: #647386;
     margin-bottom: 2vw;
-    overflow-wrap: break-word;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .en_right_block{

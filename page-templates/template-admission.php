@@ -43,7 +43,8 @@
                 </div>
             </div>
             <div class="s1_pie_chart">
-                <?php echo wp_get_attachment_image( get_field('pie_chart'), 'pie_chart'); ?>
+                <?php echo wp_get_attachment_image( get_field('pie_chart_1'), 'large'); ?>
+                <?php echo wp_get_attachment_image( get_field('pie_chart_2'), 'large'); ?>
             </div>
         </div>
     </div>

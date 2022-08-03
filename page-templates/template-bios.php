@@ -86,42 +86,51 @@
         </div>
     </div>
     <div id="teachers_data">
-    <?php
-        $args = array(
-                'post_type' => 'Staff',
-                'category_name' => '3-biostatistic',
-                'post_status' => 'publish',
-                'meta_query' => array(
-                    'relation' => 'AND',
-                    'admin' => array(
-                        'key' => 'admin_for_sorting',
-                        'compare' => 'EXISTS',
-                    ),
-                    'prof' => array(
-                        'key' => 'prof_class_for_sorting',
-                        'compare' => 'EXISTS',
-                    ), 
-                ),
-                'orderby' => array( 
-                    'admin' => 'ASC',
-                    'prof' => 'ASC',
-                ),
-                'posts_per_page' => -1
-            );
-        $the_query = new WP_Query($args);
-        if($the_query->have_posts()):
-    ?>
+        <?php
+            $prof_categories = get_categories(array(
+            'parent' => 27, /*27, 25*/
+            'orderby' => 'slug',
+            'hide_empty' => false,
+            'order'   => 'ASC'
+            ) );
+        ?>
         <div class="staff_block">
-            <?php $counter = 0;
-            while ($the_query->have_posts()) :
-                    $the_query->the_post();
-                    $counter = $counter + 1; ?>
-                <?php get_template_part('template-parts/post_member_card'); ?>
-            <?php endwhile; ?>
+        <?php foreach($prof_categories as $prof_category) : ?>
+            <?php
+            $double_cats = '3-biostatistic+' . $prof_category->slug;
+            $args = array(
+                    'post_type' => 'Staff',
+                    'category_name' => $double_cats,
+                    'post_status' => 'publish',
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        'admin' => array(
+                            'key' => 'admin_for_sorting',
+                            'compare' => 'EXISTS',
+                        ),
+                        'prof' => array(
+                            'key' => 'prof_class_for_sorting',
+                            'compare' => 'EXISTS',
+                        ), 
+                    ),
+                    'orderby' => array( 
+                        'admin' => 'ASC',
+                        'prof' => 'ASC',
+                    ),
+                    'posts_per_page' => -1
+                );
+            $the_query = new WP_Query($args);
+            if($the_query->have_posts()):
+            ?>
+                <?php $counter = 0;
+                while ($the_query->have_posts()) :
+                        $the_query->the_post();
+                        $counter = $counter + 1; ?>
+                    <?php get_template_part('template-parts/post_member_card'); ?>
+                <?php endwhile; ?>
+            <?php endif; wp_reset_postdata(); $double_cats = '3-biostatistic+';?>
+    <?php endforeach; ?>
         </div>
-    <?php endif;
-        wp_reset_postdata(); 
-    ?>
     </div>
     <div id="thoughts_data">
         <div class="tgh_segment changing_animation">

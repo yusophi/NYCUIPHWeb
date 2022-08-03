@@ -16,7 +16,16 @@
             <img class="icon-clock" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
             <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
             <div class="banner_post_tags">
-                <div class="post_category"><?php the_field('news_item');?> </div>
+                <div class="post_category">
+                    <?php $new_cat = get_field('news_item');
+                        if($locale == "en_US" && $new_cat == "公告"){
+                            echo "General";
+                        }
+                        else{
+                            echo $new_cat;
+                        }
+                    ?> 
+                </div>
                 <?php
                 $sdgs = get_field('sdg');
                 if ($sdgs) : ?>
@@ -40,8 +49,29 @@
                     <p class="sidebar_title_ch">相關資訊</p>
                 </div>
                 <div class="sidebar_content">
-                    <div class="_content" id="sidebar_content-category">類別&nbsp;:&nbsp;<?php the_field('news_item'); ?></div>
-                    <p class="_content">發布日期&nbsp;:&nbsp;<?php the_time('Y.m.j'); ?></p>
+                    <div class="_content" id="sidebar_content-category">
+                        <?php if($locale == "en_US"){
+                            echo "Category : ";
+                            if($new_cat == "公告"){
+                                echo "General";
+                            }
+                            else{
+                                echo $new_cat;
+                            }
+                        }
+                        else{
+                            echo "類別 : " . $new_cat;
+                        }?> 
+                    </div>
+                    <p class="_content">
+                    <?php if($locale == "en_US"){
+                            echo "Date : ";
+                        }
+                        else{
+                            echo "發布日期 : " ;
+                        }
+                        the_time('Y.m.j');?> 
+                    </p>
                     <?php
                     $sdgs = get_field('sdg');
                     if ($sdgs) : ?>
@@ -121,7 +151,14 @@
                             <span class="post_time"><?php the_time('Y.m.j'); ?></span>
                         </div>
                         <div class="post_tags">
-                            <div class="post_category"><?php the_field('news_item');?> </div>
+                            <div class="post_category">
+                                <?php if($locale == "en_US" && $new_cat == "公告"){
+                                    echo "General";
+                                }
+                                else{
+                                    echo $new_cat;
+                                }?> 
+                            </div>
                             <?php
                             $sdgs = get_field('sdg');
                             if ($sdgs) : ?>

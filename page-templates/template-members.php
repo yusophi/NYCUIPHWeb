@@ -9,9 +9,9 @@
     <div class="banner">
         <?php if($locale == "zh_TW"):?>
         <span class="page_name" >系所成員<br></span>
-        <span class="page_name" id="eg">Members</span>
+        <span class="page_name" id="eg">Faculty</span>
         <?php else: ?>
-        <span class="page_name" id="page_name-en">Members</span>
+        <span class="page_name" id="page_name-en">Faculty</span>
         <?php endif; ?>
         <div class="circle"></div>
     </div>

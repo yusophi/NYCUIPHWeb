@@ -103,7 +103,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 <?php
 $rand = wp_rand();
 $nonce = wp_create_nonce('nonce');
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $rand . "' 'nonce-" . $nonce . "'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com http://iphalumni.iph.nycu.edu.tw/ https://calendar.google.com/calendar/; font-src 'self' fonts.gstatic.com data:;");
+//header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $rand . "' 'nonce-" . $nonce . "'; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com http://iphalumni.iph.nycu.edu.tw/ https://calendar.google.com/calendar/; font-src 'self' fonts.gstatic.com data:;");
 
 //header("X-Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . $nonce . "' https:; object-src 'none';base-uri 'none';img-src 'self' https: data:; style-src 'self' https: fonts.googleapis.com;  frame-src 'self' https://www.youtube.com; font-src 'self' fonts.gstatic.com data:;");
 /*
@@ -439,9 +439,24 @@ function filter_ajax() {
     $args = array(
       'post_type' => $postType,
       'post_status' => 'publish',
-      'orderby' => 'meta_value_num',
+      'meta_query' => array(
+        'relation' => 'AND',
+        'year' => array(
+            'key' => 'year',
+            'compare' => 'EXISTS',
+        ),
+        'degree' => array(
+            'key' => 'degree',
+            'compare' => 'EXISTS',
+        ), 
+      ),
+      /*'orderby' => 'meta_value_num',
       'meta_key' => 'year',
-      'order' => 'DESC',
+      'order' => 'DESC',*/
+      'orderby' => array( 
+        'degree' => 'DESC',
+        'year' => 'DESC'
+      ),
       'posts_per_page' => -1
     );
     if(isset($keyword))
@@ -497,7 +512,7 @@ function filter_ajax() {
       $arge['orederby'] = 'meta_value_num';
       $args['order'] = 'DESC';
     }
-    else{ /* for news, orderby the date of thh post */
+    else{ /* for news, orderby the date of the post */
       $arge['orderby'] = 'date';
       $args['order'] = 'desc';
     }
@@ -506,7 +521,7 @@ function filter_ajax() {
   if($check){
     $query = new WP_Query($args); // if have query condition, create a query
   }
-  global $wp_query;
+  
   if($postType == 'Staff'){ //post type: Staff
       //if($locale == "en_US"){echo "en_US";}else{echo $locale;}
       while($query->have_posts()) : $query->the_post();
@@ -528,7 +543,7 @@ function filter_ajax() {
       endwhile;
       echo '</div>';
     }
-    else if(!$check){
+    elseif(!$check){
       echo '<div id="search_hint">
         <p>填入欲查詢之學位論文關鍵字或類籤，系統將協助您列出相關資料。</p>
       </div>';

@@ -24,7 +24,7 @@
                 ) );
         }else{
             $categories = get_categories(array(
-                'parent' => 132, /*132 */
+                'parent' => 93, /*93, 132 */
                 'orderby' => 'slug',
                 'order'   => 'ASC'
             ) );
@@ -34,7 +34,12 @@
         <input type="hidden" id="filters-news" value="" />
         <ul class="cat-list">
             <li>
-                <a class="cat-list_item news <?php if(is_page('news')||is_page('news-en')){echo "cat_active";}?>" href="<?php echo site_url() . "/news\/#anchor";?>" data-filter-type="news" data-type="post" data-slug="news">
+                <a class="cat-list_item news <?php if(is_page('news')||is_page('news-en')){echo "cat_active";}?>" 
+                    <?php $page_name = "news";
+                        if($locale == "en_US"){ $page_name = "news-en"; }
+                        $href_url = get_site_url() . "/" . $page_name . "/#anchor";?>
+                        href="<?php echo $href_url;?>"    
+                    data-filter-type="news" data-type="post" data-slug="news">
                     <span class="cat-list_item_dot"></span>
                     <?php if($locale == "zh_TW"):?>
                     <span class="cat-list_item_name">總覽</span>
@@ -50,7 +55,7 @@
                 $count = 0;
                 foreach($categories as $category) : ?>
                 <li>
-                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="<?php echo site_url() . "/news\/" . $page_name[$count] . "/#anchor"; ?>" data-filter-type="news" data-type="post" data-slug="<?= $category->slug; ?>">
+                    <a class="<?= "cat-list_item " . $category->slug; ?>" href="<?php echo site_url() . "/" . $page_name[$count] . "/#anchor"; ?>" data-filter-type="news" data-type="post" data-slug="<?= $category->slug; ?>">
                         <span class="cat-list_item_dot"></span>    
                         <span class="cat-list_item_name"><?= $category->name; ?></span>
                     </a>
@@ -68,24 +73,20 @@
                 cat_list_item[1].className += " cat_active";
             </script>
             <?php $cat_name = '1-normal_news';?>
+            <?php if($locale == "en_US"){$cat_name = '1-announcement';}?>
         <?php elseif(is_page('scholarship')): ?>
             <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[2].className += " cat_active";
             </script>
             <?php $cat_name = '2-scholarship';?>
-        <?php elseif(is_page('covid19')): ?>
+        <?php elseif(is_page('covid19') || is_page('covid19-en')): ?>
             <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");
                 cat_list_item[3].className += " cat_active";
             </script>
             <?php $cat_name = '3-covid-19_news';?>
-        <?php elseif(is_page('covid19-en')): ?>
-            <script type='text/javascript' nonce="<?php echo $rand; ?>">
-                var cat_list_item = document.getElementsByClassName("cat-list_item");
-                cat_list_item[2].className += " cat_active";
-            </script>
-            <?php $cat_name = '3-covid-19_news';?>
+            <?php if($locale == "en_US"){$cat_name = '2-covid19';}?>
         <?php endif; ?>
     <div id="anchor"></div>
     <div class="post_block" id="news_post">
@@ -97,7 +98,7 @@
             'category_name' => $cat_name,
             'orderby' => 'date',
             'paged' => $paged,
-            'posts_per_page' => 15.
+            'posts_per_page' => 15
         );
 
         $arr_posts = new WP_Query($args);
@@ -117,74 +118,7 @@
                             }else{
                                 echo "0" . $counter . ".";} ?>
                     </div>
-                    <div class="post_icon">
-                        <img src="<?php bloginfo('template_url') ?>/images/icon/icon-newspaper.svg">
-                        <div>
-                            <p class="post_icon_hover_dots"></p>
-                            <p class="post_icon_hover_dots"></p>
-                            <p class="post_icon_hover_dots"></p>
-                        </div>
-                    </div>
-
-                    <div class="border-anim">
-                            <div class="inner-box"></div>
-                    </div>
-                    <div class="article-meta">
-                            <img class="icon-clock" src="<?php bloginfo('template_url'); ?>/images/icon/icon-clock.svg">
-                            <span class="post_time"><?php the_time('Y.m.j'); ?></span>
-                    </div>
-                    <div class="post_tags">
-                        <div class="post_category"><?php the_field('news_item');?></div>
-
-                        <?php
-                        $sdgs = get_field('sdg');
-                        if ($sdgs) : ?>
-                            <ul class="sdg-tag">
-                                <?php foreach ($sdgs as $sdg) : ?>
-                                    <li><?php echo $sdg; ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
-                    </div>
-                    <div class="article-passage">
-                        <div class="article-excerpt_bottom_line"></div>
-                        <div class="article-title">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php $mb_strlen = mb_strlen(get_the_title()) ; $strlen = strlen(get_the_title());
-                                if($locale == "en_US"){
-                                    if($mb_strlen >= 50){
-                                            echo mb_substr(get_the_title(), 0, 48) . "...";
-                                    }
-                                    else{
-                                            echo the_title();
-                                    }
-                                }
-                                else{if($mb_strlen == $strlen){
-                                    /*there is no mandarin*/
-                                    if($mb_strlen >= 50){
-                                            echo mb_substr(get_the_title(), 0, 48) . "...";
-                                    }
-                                    else{
-                                            echo the_title();
-                                    }
-                                }
-                                else{ 
-                                    /* in mandarin */
-                                    if($mb_strlen >= 30){
-                                            echo mb_substr(get_the_title(), 0, 28) . "...";
-                                    }
-                                    else{
-                                            echo the_title();
-                                    }
-                                } }
-                            ?>
-                            </a>
-                        </div>
-                        <div class="article-title_bottom_line"></div>
-                        <div class="excerpt" id="<?php echo $counter ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
-                        <div class="article-excerpt_bottom_line"></div>
-                    </div>
-                    <div class="clearfix"></div>
+                    <?php get_template_part('template-parts/post_news_card'); ?>
                 </div>
             <?php endwhile; ?>
         </div>

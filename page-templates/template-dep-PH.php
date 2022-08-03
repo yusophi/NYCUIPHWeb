@@ -30,7 +30,7 @@
             <span>學分數</span>
             <span>選別</span>
             <?php else: ?>
-            <span>Year</span>
+            <span>Department</span>
             <span>Course title</span>
             <span>Credit</span>
             <span>Compulsory/ Elective</span>

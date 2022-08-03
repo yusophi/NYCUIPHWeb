@@ -42,6 +42,6 @@
                 <?php the_field('goals') ?>
             </div>
         </div>
-        <div class="image"><img src="<?php bloginfo('template_url')?>/images/page_about/icon-s2.svg"></div>
+        <div class="image"><img src="<?php bloginfo('template_url')?>/images/page_about/icon-s2-v3.png"></div>
     </div>
 </div>

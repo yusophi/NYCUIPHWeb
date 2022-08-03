@@ -115,7 +115,9 @@
                         <a class="menu-list nav-list-item-4">Events</a>
                         <div class="dropdown-menu">
                             <ul>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events-en/">All</a></li>
                                 <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/seminars-en/">Seminars</a></li>
+                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/study_group-en/">Study groups</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>

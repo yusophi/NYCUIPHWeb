@@ -112,41 +112,56 @@
     <div id="teachers_data">
         <!-- 領域師資code -->
         <?php
-        $args = array(
-                'post_type' => 'Staff',
-                'category_name' => '1-epidemiology',
-                'post_status' => 'publish',
-                'meta_query' => array(
-                    'relation' => 'AND',
-                    'admin' => array(
-                        'key' => 'admin_for_sorting',
-                        'compare' => 'EXISTS',
+             $prof_categories = get_categories(array(
+                'parent' => 27, /*27, 25*/
+                'orderby' => 'slug',
+                'hide_empty' => false,
+                'order'   => 'ASC'
+            ) );
+        ?>
+        <div class="staff_block">
+        <?php foreach($prof_categories as $prof_category) : ?>
+            <?php
+                $double_cats = '1-epidemiology+' . $prof_category->slug;
+                //echo $double_cats;
+                $args = array(
+                    'post_type' => 'Staff',
+                    'category_name' => $double_cats,
+                    'post_status' => 'publish',
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        'admin' => array(
+                            'key' => 'admin_for_sorting',
+                            'compare' => 'EXISTS',
+                        ),
+                        'prof' => array(
+                            'key' => 'prof_class_for_sorting',
+                            'compare' => 'EXISTS',
+                        ), 
                     ),
-                    'prof' => array(
-                        'key' => 'prof_class_for_sorting',
-                        'compare' => 'EXISTS',
-                    ), 
-                ),
-                'orderby' => array( 
-                    'admin' => 'ASC',
-                    'prof' => 'ASC',
-                ),
-                'posts_per_page' => -1
-        );
-        $the_query = new WP_Query($args);
-        if($the_query->have_posts()):
-        ?>
-            <div class="staff_block">
-                <?php $counter = 0;
-                while ($the_query->have_posts()) :
-                        $the_query->the_post();
-                        $counter = $counter + 1; ?>
-                    <?php get_template_part('template-parts/post_member_card'); ?>
-                <?php endwhile; ?>
-            </div>
-        <?php endif;
-            wp_reset_postdata(); 
-        ?>
+                    'orderby' => array( 
+                        'admin' => 'ASC',
+                        'prof' => 'ASC',
+                    ),
+                    'posts_per_page' => -1
+                    );
+                $the_query = new WP_Query($args);
+                if($the_query->have_posts()):
+                ?>
+                <div class="staff_block">
+                    <?php $counter = 0;
+                    while ($the_query->have_posts()) :
+                            $the_query->the_post();
+                            $counter = $counter + 1; ?>
+                        <?php $post_categories = wp_get_post_categories();?>
+                        <?php get_template_part('template-parts/post_member_card'); ?>
+                    <?php endwhile; ?>
+            <?php endif;
+                wp_reset_postdata(); 
+                $double_cats = '1-epidemiology+';
+            ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 
     <div id="thoughts_data">

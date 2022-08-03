@@ -188,8 +188,8 @@ input[type=text]{
     flex-direction: row;
     align-items: center;
     border-bottom: solid 2px #647386;
-    padding-top: 3.021vw;
-    padding-bottom: 3.021vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
 }
 
 .row_paper > span{
@@ -209,12 +209,12 @@ span.year{
 
 span.name{
     width: 8vw;
-    margin-left: 6vw;
+    margin-left: 5vw;
 }
 
 span.degree{
     width: 10vw;
-    margin-left: 6.3vw;
+    margin-left: 4vw;
 }
 
 span.advisor{
@@ -223,8 +223,8 @@ span.advisor{
 }
 
 span.paper{
-    width: 40vw;
-    margin-left: 8.5vw;
+    width: 45vw;
+    margin-left: 5vw;
     letter-spacing: 0.171875vw;
 }
 
