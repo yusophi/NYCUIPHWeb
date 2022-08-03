@@ -324,6 +324,7 @@ li.lang-item > a{
 }
 
 #nav-menu li a{
+    z-index: 5;
     margin-right: 5px;
     display: block;
     font-family: 'Noto Sans TC', sans-serif;
@@ -382,6 +383,8 @@ li.lang-item > a{
     font-weight: 300;
     line-height: 1.5;
 }
+
+
 
 #slider-section {
     background-color: #2e4565;
@@ -549,7 +552,6 @@ h1.article-title{
 }
 
 #nav-toolbar #nav-hamburger {
-    background-color: aqua;
     display: none;
 }
 
@@ -647,11 +649,6 @@ h1.article-title{
 @media (max-width:700px) {
     #nav-toolbar #nav-hamburger {
         display: block;
-    }
-    
-    #nav-hamburger{
-        width: 16px;
-        height: 16px;
     }
 
     #nav-hr {
