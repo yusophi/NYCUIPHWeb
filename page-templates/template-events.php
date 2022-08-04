@@ -20,13 +20,13 @@
     <?php 
         if($locale == "zh_TW"){
             $categories = get_categories(array(
-                'parent' => 8, /* 10, 8, 379 */
+                'parent' => 8, /* 10, 8*/
                 'orderby' => 'slug',
                 'order'   => 'ASC'
                 ) );
         }else{
             $categories = get_categories(array(
-                'parent' => 91, /* 108, 525*/
+                'parent' => 105, /*91, 108*/
                 'orderby' => 'slug',
                 'order'   => 'ASC'
             ) );
