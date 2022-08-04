@@ -77,7 +77,7 @@
     padding-bottom: 2.084vw;
 }
 
-.item_titles span, span.file_title{
+.item_titles, .file_title{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.041667vw;
     font-weight: 500;
@@ -91,6 +91,10 @@
 
 .item_title2{
     margin-left: 14.2vw;
+}
+
+.item_title2-en{
+    margin-left: 4vw;
 }
 
 .regulation_rows{
@@ -145,6 +149,9 @@
     letter-spacing: 2.7px;
 }
 
+.en_text{
+    letter-spacing: 1.1px;
+}
 /*read more btn*/
 .bt-readmore{
     cursor: pointer;
@@ -186,7 +193,7 @@ img.icon_download{
 }
 
 @media (max-width: 960px) {
-    .item_titles span, span.file_title{
+    .item_titles span, .file_title{
         font-size: 11px;
         letter-spacing: 1.35px;
     }

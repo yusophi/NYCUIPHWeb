@@ -127,28 +127,59 @@
     <!-- ******** -->
 
     <div class="next_news">
+        <?php if($locale == "zh_TW"): ?>
         <div class="next_news_title">
             <span>下則活動</span>
             <span id="next_news_title_eg">Next</span>
         </div>
+        <?php else: ?>
+        <div class="next_news_title">
+            <span>Next</span>
+        </div>
+        <?php endif; ?>
         <div class="the_next3_block the_next3_event">
             <?php
-            global $post;
-            $myposts = get_posts(
-                array(
+            $post_object = get_queried_object();
+            /*echo $post_object->post_date;
+            echo gettype($post_object->post_date);
+            echo '<br>';
+            echo $post_object->ID;*/
+            $terms = wp_get_post_terms( $post_object->ID, 'category', array( 'fields' => 'ids' ) ); // Set fields to get only term ID's to make this more effient
+            //print_r( $terms );
+            $args = array(
+                'cat' => $terms[0],
+                'posts_per_page' => 2,
+                'no_found_rows' => true,   // Get 5 poss and bail. Make our query more effiecient, speed up
+                'suppress_filters' => true,  // We don't want any filters to alter this query
+                'date_query' => array(
+                    array(
+                        'before' => $post_object->post_date,  // Get posts after the current post, use current post post_date
+                        'inclusive' => false, // Don't include the current post in the query
+                    )
+                    ),
+                'meta_key' => 'event_date',
+                'orderby' => 'meta_value_num',
+                'order' => 'DSEC',
+                'post_status' => 'publish'
+            );
+            $myposts = new WP_Query( $args );
+            if(!$myposts){
+                $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'category_name' => 'event',
-                    'orderby' => 'date',
-                    'posts_per_page' => 2
-                )
-            );
-            if ($myposts) : ?>
+                    'cat' => $terms[0],
+                    'meta_key' => 'event_date',
+                    'orderby' => 'meta_value_num',
+                    'order' => 'DSEC',
+                    'paged' => $paged,
+                    'posts_per_page' => 2,
+                );
+                $myposts = new WP_Query( $args );
+            }?>
                 <?php
                 $counter = 0;
-                foreach ($myposts as $post) :
-                    $counter = $counter + 1;
-                    setup_postdata($post);
+                while ($myposts->have_posts()) :
+                        $myposts->the_post();
                 ?>
                     <div class="event-cards-mask">
                         <div class="event-main-margin">
@@ -224,9 +255,7 @@
                             <div class="event-intro"><?php the_field('excerpt'); ?><?php echo "..." ?></div>
                         </div>
                     </div>
-                <?php endforeach;
-                wp_reset_postdata(); ?>
-            <?php endif; ?>
+                <?php endwhile; wp_reset_postdata();?>
         </div>
     </div>
     <?php get_template_part('template-parts/backtoTOP', 'whiteText'); ?>

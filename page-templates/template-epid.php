@@ -148,18 +148,13 @@
                 $the_query = new WP_Query($args);
                 if($the_query->have_posts()):
                 ?>
-                <div class="staff_block">
-                    <?php $counter = 0;
-                    while ($the_query->have_posts()) :
-                            $the_query->the_post();
-                            $counter = $counter + 1; ?>
-                        <?php $post_categories = wp_get_post_categories();?>
+                    <?php while ($the_query->have_posts()) :
+                            $the_query->the_post(); ?>
                         <?php get_template_part('template-parts/post_member_card'); ?>
                     <?php endwhile; ?>
-            <?php endif;
-                wp_reset_postdata(); 
-                $double_cats = '1-epidemiology+';
-            ?>
+                <?php endif; wp_reset_postdata(); 
+                    $double_cats = '1-epidemiology+';
+                ?>
             <?php endforeach; ?>
         </div>
     </div>

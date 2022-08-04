@@ -158,10 +158,9 @@
                 $the_query = new WP_Query($args);
                 if($the_query->have_posts()):
             ?>
-            <?php $counter = 0;
+            <?php 
                 while ($the_query->have_posts()) :
-                        $the_query->the_post();
-                        $counter = $counter + 1; ?>
+                        $the_query->the_post(); ?>
                     <?php get_template_part('template-parts/post_member_card'); ?>
             <?php endwhile; ?>
             <?php endif; wp_reset_postdata();

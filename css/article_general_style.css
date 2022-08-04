@@ -180,6 +180,12 @@
     overflow-wrap: break-word;
 }
 
+.article table tr td{
+    border: solid 1.5px #efeee4;
+}
+
+
+
 /*** sideber ***/
 .sidebar{
     width: 18%;
@@ -272,18 +278,19 @@
 
 .next_news_title span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.6rem;
+    font-size: 2.083vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.13;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     text-align: left;
     color: #efeee4;
 }
+
 #next_news_title_eg{
     margin-top: 10px;
-    font-size: 1.3rem;
+    font-size: 1.5625vw;
     letter-spacing: 4px;
 
 }
@@ -293,8 +300,8 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: 5vw;
-    justify-content: space-between;
+    margin-top: 2vw;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 

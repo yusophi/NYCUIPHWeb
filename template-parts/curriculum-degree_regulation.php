@@ -25,8 +25,8 @@
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
             <?php else: ?>
-            <span>Year</span>
-            <span class="item_title2">Courses list</span>
+            <span class="en_text">Year</span>
+            <span class="item_title2-en en_text">Courses list</span>
             <?php endif; ?>
         </div>
         <div class="whole_regulation_files" id="regu_block1">
@@ -101,15 +101,15 @@
                         <span class="year _font20"><?php echo $group_data['year'];?></span>
                         <div class="item2">
                             <a class="link_block" href="<?php echo esc_url($group_data['course_rules']);?>" target="_blank">
-                                <span class="file_title">Regulations for Course Selection&nbsp;</span>
+                                <span class="file_title en_text">Regulations for Course Selection&nbsp;</span>
                                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                             </a>
                             <a class="link_block" href="<?php echo esc_url($group_data['mandatory_course']);?>" target="_blank">
-                                <span class="file_title">Compulsory/Required&nbsp;</span>
+                                <span class="file_title en_text">Compulsory/Required&nbsp;</span>
                                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                             </a>
                             <a class="link_block" href="<?php echo esc_url($group_data['domain_mandatory_course']);?>" target="_blank">
-                                <span class="file_title">Division for compulsory/required&nbsp;</span>
+                                <span class="file_title en_text">Division for compulsory/required&nbsp;</span>
                                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                             </a>
                         </div>
@@ -143,8 +143,8 @@
             <span class="item_title1">修業辦法與要則</span>
             <span class="item_title2">課程細目</span>
             <?php else: ?>
-            <span>Year</span>
-            <span class="item_title2">Courses list</span>
+            <span class="en_text">Year</span>
+            <span class="item_title2-en en_text">Courses list</span>
             <?php endif; ?>
         </div>
         <div class="whole_regulation_files" id="regu_block2">
@@ -203,11 +203,11 @@
                     <span class="year _font20"><?php echo $group_data['year'];?></span>
                     <div class="item2">
                         <a class="link_block" href="<?php echo esc_url($group_data['course_rules']);?>" target="_blank">
-                            <span class="file_title _font18">Regulations for Course Selection&nbsp;</span>
+                            <span class="file_title _font18 en_text">Regulations for Course Selection&nbsp;</span>
                             <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                         </a>
                         <a class="link_block" href="<?php echo esc_url($group_data['domain_mandatory_course']);?>" target="_blank">
-                            <span class="file_title _font18">Division for compulsory/required&nbsp;</span>
+                            <span class="file_title _font18 en_text">Division for compulsory/required&nbsp;</span>
                             <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                         </a>
                     </div>
@@ -223,18 +223,33 @@
         <span class="en_title _font40">Others</span>
         <?php endif; ?>
         <div class="others_regu_rows">
+            <?php if($locale == "zh_TW"):?>
             <a class="link_block" href="<?php echo esc_url(the_field('phd_program_regu'));?>" target="_blank">
-                <span class="file_title"><?php if($locale == "zh_TW"){echo "逕修讀博士學位甄選辦法";}else{echo "Regulations for the Selection of Master's Students for Doctoral Degrees";}?>&nbsp;</span>
+                <span class="file_title">逕修讀博士學位甄選辦法&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
             <a class="link_block" href="<?php echo esc_url(the_field('pre_master_program_regu'));?>" target="_blank">
-                <span class="file_title"><?php if($locale == "zh_TW"){echo "碩士班預備研究生甄選規定";}else{echo "Regulations for the Selected Candidates of the Master's Program";}?>&nbsp;</span>
+                <span class="file_title">碩士班預備研究生甄選規定&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
             <a class="link_block" href="<?php echo esc_url(the_field('transfer_ragu'));?>" target="_blank">
-                <span class="file_title"><?php if($locale == "zh_TW"){echo "博士班研究生申請轉入公共衛生研究所辦法";}else{echo "Regulations for Transfer of Doctoral Students from other institute to IPH";}?>&nbsp;</span>
+                <span class="file_title">博士班研究生申請轉入公共衛生研究所辦法&nbsp;</span>
                 <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
             </a>
+            <?php else: ?>
+                <a class="link_block" href="<?php echo esc_url(the_field('phd_program_regu'));?>" target="_blank">
+                <span class="file_title en_text">Regulations for the Selection of Master's Students for Doctoral Degrees&nbsp;</span>
+                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+            </a>
+            <a class="link_block" href="<?php echo esc_url(the_field('pre_master_program_regu'));?>" target="_blank">
+                <span class="file_title en_text">Regulations for the Selected Candidates of the Master's Program&nbsp;</span>
+                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+            </a>
+            <a class="link_block" href="<?php echo esc_url(the_field('transfer_ragu'));?>" target="_blank">
+                <span class="file_title en_text">Regulations for Transfer of Doctoral Students from other institute to IPH&nbsp;</span>
+                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+            </a>
+            <?php endif; ?>
         </div>
     </div>
 </div>

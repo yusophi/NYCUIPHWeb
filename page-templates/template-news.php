@@ -120,8 +120,8 @@
                     </div>
                     <?php get_template_part('template-parts/post_news_card'); ?>
                 </div>
-            <?php endwhile; ?>
-        </div>
+                <?php endwhile; ?>
+            </div>
        
         <?php endif; wp_reset_postdata(); ?>
         <div class="pagination">

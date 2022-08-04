@@ -270,7 +270,7 @@
     border-bottom: solid 2px #efeee4;
 }
 
-.whiteText div, .whiteText div a{
+.whiteText div, .whiteText div a, .whiteText div span{
     color: #efeee4;
 }
 
