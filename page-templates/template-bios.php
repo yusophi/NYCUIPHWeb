@@ -87,17 +87,29 @@
     </div>
     <div id="teachers_data">
         <?php
-            $prof_categories = get_categories(array(
-            'parent' => 27, /*27, 25*/
-            'orderby' => 'slug',
-            'hide_empty' => false,
-            'order'   => 'ASC'
-            ) );
+            if($locale == "zh_TW"){
+                $prof_categories = get_categories(array(
+                'parent' => 25, /*27, 25*/
+                'orderby' => 'slug',
+                'hide_empty' => false,
+                'order'   => 'ASC'
+                ) );
+            }
+            else{
+                $prof_categories = get_categories(array(
+                    'parent' => 120, /*114, 120 */
+                    'orderby' => 'slug',
+                    'hide_empty' => false,
+                    'order'   => 'ASC'
+                ) );
+            }
         ?>
         <div class="staff_block">
         <?php foreach($prof_categories as $prof_category) : ?>
             <?php
-            $double_cats = '3-biostatistic+' . $prof_category->slug;
+            if($locale == "zh_TW"){$double_cats = '3-biostatistic+' . $prof_category->slug;}
+            else{$double_cats = '3-biostatisticsanddatascience+' . $prof_category->slug;}
+            
             $args = array(
                     'post_type' => 'Staff',
                     'category_name' => $double_cats,

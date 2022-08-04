@@ -103,7 +103,7 @@
                 'orderby' => 'meta_value_num',
                 'order' => 'DSEC',
                 'paged' => $paged,
-                'posts_per_page' => 15,
+                'posts_per_page' => 8,
             );
             
             $arr_posts = new WP_Query($args);
