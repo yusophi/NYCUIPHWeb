@@ -145,7 +145,7 @@
         <?php foreach($prof_categories as $prof_category) : ?>
             <?php
                 if($locale == "zh_TW"){$double_cats = '2-health_policy+' . $prof_category->slug;}
-                else{$double_cats = '2-healthpolicyandlaw	+' . $prof_category->slug;}
+                else{$double_cats = '2-healthpolicyandlaw+' . $prof_category->slug;}
                 
                 $args = array(
                         'post_type' => 'Staff',

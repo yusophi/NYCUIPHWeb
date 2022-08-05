@@ -26,7 +26,7 @@
                 ) );
         }else{
             $categories = get_categories(array(
-                'parent' => 105, /*91, 108*/
+                'parent' => 108, /*91, 108*/
                 'orderby' => 'slug',
                 'order'   => 'ASC'
             ) );

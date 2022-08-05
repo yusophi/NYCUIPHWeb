@@ -27,7 +27,9 @@
             <div class="sidebar_block" id="info">
                 <div class="sidebar_title">
                     <p class="sidebar_title_en">Interview</p>
+                    <?php if($locale == "zh_TW"):?>
                     <p class="sidebar_title_ch">採訪</p>
+                    <?php endif; ?>
                 </div>  
                 <div class="sidebar_content">
                     <p class="_content"><?php the_field('interview'); ?></p>
@@ -36,7 +38,9 @@
             <div class="sidebar_block" id="author">
                 <div class="sidebar_title">
                     <p class="sidebar_title_en">Author</p>
+                    <?php if($locale == "zh_TW"):?>
                     <p class="sidebar_title_ch">撰文</p>
+                    <?php endif; ?>
                 </div>  
                 <div class="sidebar_content">
                     <p class="_content"><?php the_field('author'); ?></p>
@@ -45,7 +49,9 @@
             <div class="sidebar_block" id="share">
                 <div class="sidebar_title">
                     <p class="sidebar_title_en">Share</p>
+                    <?php if($locale == "zh_TW"):?>
                     <p class="sidebar_title_ch">分享</p>
+                    <?php endif; ?>
                 </div>  
                 <div class="sidebar_content">
                 </div>

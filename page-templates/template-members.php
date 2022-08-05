@@ -90,9 +90,6 @@
                 'post_type' => 'Staff',
                 'category_name' => '1-fulltime',
                 'post_status' => 'publish',
-                /*'meta_key'   => 'admin_for_sorting',
-                'orderby'    => 'meta_value_num',
-                'order'      => 'ASC'*/
                 'meta_query' => array(
                     'relation' => 'AND',
                     'admin' => array(

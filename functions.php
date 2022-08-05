@@ -426,7 +426,11 @@ function filter_ajax() {
       ];
     }
     else{ // if none category is selected, then show the default value
+      if($lang == "en"){
+        $args['category_name'] = '1-fulltime-en';
+      }else{
       $args['category_name'] = '1-fulltime';
+      }
     }
     
   }

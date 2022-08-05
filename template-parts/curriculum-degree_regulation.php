@@ -36,39 +36,34 @@
                 //print(count($master_regulation));
                 $key_value_pair = [];
                 if($master_regulation){
-                    for ($x = 0; $x < count($master_regulation) - 1; $x++){
-                        $name = "year_group_" . ($x+1);
+                    for ($x = 1; $x < count($master_regulation); $x++){
+                        $name = "year_group_" . $x;
                         $year = $master_regulation[$name]['year'];
                         if($year != null){
-                            $key_value_pair[$name] = $year;
+                            $key_value_pair[$x] = $year;
                         }
                     }
                 }
                 if($more_master_regulation){
-                    for ($x = 0; $x < count($more_master_regulation) - 1; $x++){
-                        $name = "year_group_" . ($x+1);
-                        $year = $master_regulation[$name]['year'];
+                    for ($x = 11; $x < 11 + count($more_master_regulation); $x++){
+                        $name = "year_group_" . $x;
+                        $year = $more_master_regulation[$name]['year'];
                         if($year != null){
-                            $key_value_pair[$name] = $year;
+                            $key_value_pair[$x] = $year;
                         }
                     }
                 }
-                /*foreach($key_value_pair as $y => $y_value){
-                    echo "Key: " . $y . ", Value: " . $y_value;
-                    echo "<br>";
-                }*/
                 arsort($key_value_pair);
-                /*foreach($key_value_pair as $y => $y_value){
-                    //echo "Key: " . $y . ", Value: " . $y_value;
-                    //echo "<br>";
-                    $group_data = $master_regulation[$y];
-                    $year = $group_data['year'];
-                    echo $year;
-                    echo "<br>";
-                }*/
             ?>
-            <?php foreach($key_value_pair as $group_name => $year_value): ?>
-                <?php $group_data = $master_regulation[$group_name];
+            <?php foreach($key_value_pair as $group_num => $year_value): ?>
+                <?php //$group_data = $master_regulation[$group_name];
+                    if($group_num < 11){
+                        $group_name = "year_group_" . $group_num;
+                        $group_data = $master_regulation[$group_name];
+                    }else{ 
+                        $group_name = "year_group_" . $group_num;
+                        $group_data = $more_master_regulation[$group_name]; 
+                    }
                     $year = $group_data['year'];?>
                     <div class="regulation_rows">
                         <?php if($locale == "zh_TW"): ?>    
@@ -154,27 +149,34 @@
                 //print(count($master_regulation));
                 $key_value_pair = [];
                 if($PhD_regulation){
-                    for ($x = 0; $x < count($PhD_regulation) - 1; $x++){
-                        $name = "year_group_" . ($x+1);
-                        $year = $master_regulation[$name]['year'];
+                    for ($x = 1; $x < count($PhD_regulation); $x++){
+                        $name = "year_group_" . $x;
+                        $year = $PhD_regulation[$name]['year'];
                         if($year != null){
-                            $key_value_pair[$name] = $year;
+                            $key_value_pair[$x] = $year;
                         }
                     }
                 }
                 if($more_PhD_regulation){
-                    for ($x = 0; $x < count($more_PhD_regulation) - 1; $x++){
-                        $name = "year_group_" . ($x+1);
-                        $year = $master_regulation[$name]['year'];
+                    for ($x = 11; $x < 11 + count($more_PhD_regulation); $x++){
+                        $name = "year_group_" . $x;
+                        $year = $more_PhD_regulation[$name]['year'];
                         if($year != null){
-                            $key_value_pair[$name] = $year;
+                            $key_value_pair[$x] = $year;
                         }
                     }
                 }
                 arsort($key_value_pair);
             ?>
-            <?php foreach($key_value_pair as $group_name => $year_value): ?>
-                <?php $group_data = $master_regulation[$group_name]; 
+            <?php foreach($key_value_pair as $group_num => $year_value): ?>
+                <?php 
+                    if($group_num < 11){
+                        $group_name = "year_group_" . $group_num;
+                        $group_data = $PhD_regulation[$group_name];
+                    }else{ 
+                        $group_name = "year_group_" . $group_num;
+                        $group_data = $more_PhD_regulation[$group_name]; 
+                    }
                     $year = $group_data['year']; ?>
                 <div class="regulation_rows">
                     <?php if($locale == "zh_TW"): ?>    

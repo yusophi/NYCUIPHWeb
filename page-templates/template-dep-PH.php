@@ -13,7 +13,7 @@
             <div>公共衛生學科</div>
             <div class="dep_en_title">Department of Public Health</div>
             <?php else: ?>
-            <div class="dep_en_title">Department of Public Health</div>
+            <div>Department of Public Health</div>
             <?php endif; ?>
         </div>
         <div class="dep_circle"></div>

@@ -73,7 +73,7 @@
                 cat_list_item[1].className += " cat_active";
             </script>
             <?php $cat_name = '1-normal_news';?>
-            <?php if($locale == "en_US"){$cat_name = '1-announcement';}?>
+            <?php if($locale == "en_US"){$cat_name = '1-announcements';}?>
         <?php elseif(is_page('scholarship')): ?>
             <script type='text/javascript' nonce="<?php echo $rand; ?>">
                 var cat_list_item = document.getElementsByClassName("cat-list_item");

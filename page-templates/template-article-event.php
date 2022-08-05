@@ -51,7 +51,9 @@
             <div class="sidebar_block" id="info">
                 <div class="sidebar_title">
                     <p class="sidebar_title_en">Info</p>
+                    <?php if($locale == "zh_TW"):?>
                     <p class="sidebar_title_ch">相關資訊</p>
+                    <?php endif; ?>
                 </div>
                 <div class="sidebar_content">
                     <div class="_content" id="sidebar_content-category">
@@ -105,7 +107,9 @@
             <div class="sidebar_block" id="author">
                 <div class="sidebar_title">
                     <p class="sidebar_title_en">Editor</p>
+                    <?php if($locale == "zh_TW"):?>
                     <p class="sidebar_title_ch">編輯</p>
+                    <?php endif; ?>
                 </div>
                 <div class="sidebar_content">
                     <p class="_content"><?php
@@ -117,7 +121,9 @@
             <div class="sidebar_block" id="share">
                 <div class="sidebar_title">
                     <p class="sidebar_title_en">Share</p>
+                    <?php if($locale == "zh_TW"):?>
                     <p class="sidebar_title_ch">分享</p>
+                    <?php endif; ?>
                 </div>
                 <div class="sidebar_content">
                 </div>
