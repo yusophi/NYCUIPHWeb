@@ -71,11 +71,14 @@ function showing_more(table_id, row_name){
     }
 }
 
+
+/*
 const regu1_whole_rows = document.getElementById("regu_block1").getElementsByClassName("regulation_rows");
 const regu2_whole_rows = document.getElementById("regu_block2").getElementsByClassName("regulation_rows");
-
+*/
 //console.log(regu_row_mst.length);
-if(regu1_whole_rows.length > 0){
+
+/*if(regu1_whole_rows.length > 0){
     for(var i = 0; i < 3; i++){
         regu1_whole_rows[i].className += " shown";   
     }
@@ -84,4 +87,4 @@ if(regu2_whole_rows.length > 0){
     for(var i = 0; i < 3; i++){
         regu2_whole_rows[i].className += " shown";   
     }
-}
+}*/
