@@ -95,6 +95,16 @@ a.statement:before {
     content: "►" !important;
 }
 
+a.statement{
+    color: #efeee4;
+    text-decoration: none;
+}
+
+a.statement:visited{
+    color: #efeee4;
+    text-decoration: none;
+}
+
 #privacy{
     margin-left: 2vw;
 }

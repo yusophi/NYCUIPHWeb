@@ -348,6 +348,9 @@ function wpdocs_ref_access() {
       wp_enqueue_style('dep_style', get_theme_file_uri('css/links.css'));
     }
     //wp_enqueue_script('backtoTOP_script', get_theme_file_uri('js/back_to_top.js'), true);
+    if(is_page('privacy-and-information-security-policy') || is_page('website-opendata-announcement')){
+      wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/footer-announcement.css')); 
+    }
 
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
