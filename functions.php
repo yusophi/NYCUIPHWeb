@@ -308,7 +308,7 @@ function wpdocs_ref_access() {
     elseif(is_page('degree_regulation') || is_page('degree_regulation-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
       wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
-      //wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
+      wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
     elseif(is_page('course_schedule') || is_page('course_schedule-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
@@ -381,13 +381,17 @@ function filter_ajax() {
           'relation' => 'AND',
           'admin' => array(
               'key' => 'admin_for_sorting',
-              'compare' => 'EXISTS',),
+              'compare' => 'EXISTS'),
           'prof' => array(
               'key' => 'prof_class_for_sorting',
-              'compare' => 'EXISTS',), 
+              'compare' => 'EXISTS'),
+          'prof_cat' => array(
+            'key' => 'prof_cat_for_sorting',
+            'compare' => 'EXISTS') 
           ),
       'orderby' => array( 
         'admin' => 'ASC',
+        'prof_cat' => 'ASC',
         'prof' => 'ASC',
       ),
       'posts_per_page' => -1
@@ -527,7 +531,6 @@ function filter_ajax() {
   }
   
   if($postType == 'Staff'){ //post type: Staff
-      //if($locale == "en_US"){echo "en_US";}else{echo $locale;}
       while($query->have_posts()) : $query->the_post();
         get_template_part('template-parts/post_member_card');
       endwhile;
