@@ -82,13 +82,10 @@
                     $count = 1;
                     while($count < 11 ):?>
                         <?php
-                            //$group_name = "group_content" . $count;
-                            $name = "name" . $count; 
-                            $honor = "honor" . $count; 
-
-                            //$group_data = $honor1[$group_name];
-                            $student_name = $honor1[$name];
-                            $honor_title = $honor1[$honor];
+                            $name = "group_content" . $count; 
+                            $group_data = $honor1[$name];
+                            $student_name = $group_data['name'];
+                            $honor_title = $group_data['honor'];
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <div class="honor_rows">
@@ -214,22 +211,69 @@
 </div>
 <?php global $rand; ?>
 <script type='text/javascript' nonce="<?php echo $rand; ?>">
+    const honor_blocks = document.getElementsByClassName("whole_honor_table");
+
+    for (var i = 0; i < honor_blocks.length; i++)
+    {
+        var honor_rows = honor_blocks[i].getElementsByClassName("honor_rows");
+        var honor_rows_len = honor_rows.length;
+
+        //console.log(honor_rows);
+        if (honor_rows_len > 0){
+                if(honor_rows_len - 3 >= 0){
+                for(var j = 0; j < 3; j++){
+                    honor_rows[j].className += " shown";   
+                }
+            }
+            else{
+                for(var j = 0; j < honor_rows_len; j++){
+                    honor_rows[j].className += " shown";   
+                }
+            }
+        }
+    }
     //const regu_row_mst = document.getElementsByClassName("ms_field");
     //const regu_row_phd = document.getElementsByClassName("phd_field");
-    const h1_whole_rows = document.getElementById("honor_block1").getElementsByClassName("honor_rows");
+    /*const h1_whole_rows = document.getElementById("honor_block1").getElementsByClassName("honor_rows");
     const h2_whole_rows = document.getElementById("honor_block2").getElementsByClassName("honor_rows");
     const h3_whole_rows = document.getElementById("honor_block3").getElementsByClassName("honor_rows");
     const h4_whole_rows = document.getElementById("honor_block4").getElementsByClassName("honor_rows");
     const h5_whole_rows = document.getElementById("honor_block5").getElementsByClassName("honor_rows");
+    */
     
     //console.log(regu_row_mst.length);
-    if( h1_whole_rows.length > 0){
+    //var h1_rows_len = h1_whole_rows.length;
+    //var h2_rows_len = h2_whole_rows.length;
+
+    /*if( h1_whole_rows.length > 0){
+        for(var i = 0; i < 3; i++){
+            h1_whole_rows[i].className += " shown";   
+        }
+    }*/
+
+    /*if(h1_rows_len - 3 >= 0){
         for(var i = 0; i < 3; i++){
             h1_whole_rows[i].className += " shown";   
         }
     }
+    else{
+        for(var i = 0; i < h1_rows_len; i++){
+            h1_whole_rows[i].className += " shown";   
+        }
+    }*/
+/*
     if( h2_whole_rows.length > 0){
         for(var i = 0; i < 3; i++){
+            h2_whole_rows[i].className += " shown";   
+        }
+    }*//*
+    if(h2_rows_len - 3 >= 0){
+        for(var i = 0; i < 3; i++){
+            h2_whole_rows[i].className += " shown";   
+        }
+    }
+    else{
+        for(var i = 0; i < h2_rows_len; i++){
             h2_whole_rows[i].className += " shown";   
         }
     }
@@ -247,6 +291,6 @@
         for(var i = 0; i < 3; i++){
             h5_whole_rows[i].className += " shown";   
         }
-    }
+    }*/
 
 </script>

@@ -257,18 +257,56 @@
 </div>
 <?php global $rand;?>
 <script type='text/javascript'>
-    var regu1_whole_rows = document.getElementById("regu_block1").getElementsByClassName("regulation_rows");
+    
+   const regu_blocks = document.getElementsByClassName("whole_regulation_files");
+    
+    for (var i = 0; i < regu_blocks.length; i++)
+    {
+        var regu_rows = regu_blocks[i].getElementsByClassName("regulation_rows");
+
+        var regu_rows_len = regu_rows.length;
+
+        //console.log(regu_rows_len);
+
+        if (regu_rows_len > 0){
+            if(regu_rows_len - 3 >= 0){
+                for(var j = 0; j < 3; j++){
+                    regu_rows[j].className += " shown";   
+                }
+            }
+            else{
+                for(var j = 0; j < regu_rows_len; j++){
+                    regu_rows[j].className += " shown";   
+                }
+            }
+        }
+    }
+    /*var regu1_whole_rows = document.getElementById("regu_block1").getElementsByClassName("regulation_rows");
     var regu2_whole_rows = document.getElementById("regu_block2").getElementsByClassName("regulation_rows");
 
     //console.log(regu_row_mst.length);
-    if(regu1_whole_rows.length > 0){
+    const regu1_len = regu1_whole_rows.length;
+    const regu2_len = regu2_whole_rows.length;
+
+    if(regu1_len - 3 >= 0){
         for(var i = 0; i < 3; i++){
             regu1_whole_rows[i].className += " shown";   
         }
     }
-    if(regu2_whole_rows.length > 0){
+    else{
+        for(var i = 0; i < regu1_len; i++){
+            regu1_whole_rows[i].className += " shown";   
+        }
+    }
+
+    if(regu2_len - 3 >= 0){
         for(var i = 0; i < 3; i++){
             regu2_whole_rows[i].className += " shown";   
         }
     }
+    else{
+        for(var i = 0; i < regu2_len; i++){
+            regu2_whole_rows[i].className += " shown";   
+        }
+    }*/
 </script>

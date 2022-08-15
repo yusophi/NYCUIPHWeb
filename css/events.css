@@ -150,7 +150,7 @@
 }
 
 .pagination .next{
-    position: absolute;
+    position:  absolute;
     width: 1.55rem;
     height: 1.55rem;
     font-size: 0;
@@ -158,7 +158,7 @@
     background-repeat:no-repeat;
     background-size: contain;
     border-radius:0;
-    margin-left: 30vw;
+    margin-left: 10vw;
     margin-top: -1.5rem;
 }
 
@@ -171,7 +171,7 @@
     background-repeat:no-repeat;
     background-size: contain;
     border-radius:0;
-    margin-left: -35vw;
+    margin-left: -10vw;
     margin-top: -1.5rem;
 }
 
