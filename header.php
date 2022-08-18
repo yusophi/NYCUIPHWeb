@@ -65,6 +65,7 @@
                     <li id="nav-main-list-item-1" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-1">關於我們</a>
+                        <img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp">
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about/">系所簡介</a></li>
@@ -84,6 +85,7 @@
                     <li id="nav-main-list-item-2" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-2">最新消息&nbsp;&nbsp;&nbsp;</a>
+                        <img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp">
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">總覽</a></li>
@@ -106,6 +108,7 @@
                     <li id="nav-main-list-item-4" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-4">學術活動</a>
+                        <img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp">
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">所有活動</a></li>
@@ -127,6 +130,7 @@
                     <li id="nav-main-list-item-5" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-5">課程規劃</a>
+                        <img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp">
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/course_architecture/">修課架構</a></li>
@@ -147,6 +151,7 @@
                     <?php if($hd_locale == "zh_TW"): ?>
                     <li id="nav-main-list-item-6" class="nav-item">
                         <a class="menu-list nav-list-item-6">學生園地</a>
+                        <img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp">
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/applications/">各類申請</a></li>
@@ -165,6 +170,7 @@
                     <li id="nav-main-list-item-3" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?> 
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
+                        <img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp">
                         <?php else: ?>
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission-en/">Admission</a>
                         <?php endif; ?>

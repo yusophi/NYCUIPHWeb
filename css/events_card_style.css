@@ -236,3 +236,79 @@
         letter-spacing: 1.875px;
     }
 }
+
+@media (max-width:480px) {
+    .event-main-margin {
+        height: 100%;
+        padding: 10.666vw 8vw;
+    }
+
+    .event-img-container {
+        display: none;
+    }
+
+    .event-main-margin {
+        justify-content: flex-start;
+    }
+
+    .event-date-title .img-container {
+        width: 16px;
+        height: 16px;
+    }
+
+    .event-date-words {
+        font-size: 4.002vw;
+    }
+
+    .event-date {
+        margin-top: 5px;
+        font-size: 4.535vw;
+    }
+
+    .event-info {
+        padding-left: 0;        
+    }
+
+    .hp_event_tag {
+        margin-top: 5.333vw;
+    }
+
+    .sdg-tag {
+        margin-top: 1.333vw;
+    }
+
+    .hp_event_tag > .post_category, .event-info > .sdg-tag li, .event-location {
+        padding: 3px 16px;
+        border-radius: 10.5px;
+        font-size: 10px;
+        line-height: unset;
+        height: unset;
+        min-height: 0;
+        letter-spacing: 1.5px;
+        min-width:max-content;
+        min-height: 5.6vw;
+        box-sizing: border-box;
+    }
+
+    .hp_event_tag {
+        width: unset;
+    }
+
+    .event-location {
+        margin-left: 1.3333vw;
+    }
+
+    .event-name {
+        margin-top: 5.3333vw;
+        font-size: 4.5354vw;
+        font-weight: bold;
+        line-height: 6.6688vw;
+        letter-spacing: 2.55px;
+        text-align: left;
+        color: #2e4565;
+    }
+
+    .event-intro {
+        display: none;
+    }
+}

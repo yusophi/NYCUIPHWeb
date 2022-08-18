@@ -191,7 +191,7 @@ body::-webkit-scrollbar {
     min-width: 100px;
 }
 
-#nav-toolbar > botton{
+#nav-toolbar > button{
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -210,7 +210,6 @@ body::-webkit-scrollbar {
 #nav-toolbar > div, #nav-toolbar > a {
    /* width: 1.666666vw;
     height: 1.666666vw;*/
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -589,6 +588,10 @@ h1.article-title{
     left: 25vw;
 }
 
+.nav-arrow-down {
+    display: none;
+}
+
 @media (max-width:960px) {
     #logo {
         width: 36px;
@@ -685,6 +688,7 @@ h1.article-title{
 
     .sm-nav-strech #nav-menu li {
         margin-bottom: 2vw;
+        position: relative;
     }
 
     .sm-nav-strech #nav-menu ul li {
@@ -694,13 +698,14 @@ h1.article-title{
     }
 
     .menu-list {
-        border-bottom: #2e4565 1px solid;  
+        border-bottom: #b5bbbe 1px solid;  
         padding-bottom: 2px;  
         width: fit-content;
     }
 
     .dropdown-menu {
         padding-top: 0;    
+        height: max-content;
     }
 
     .dropdown-menu ul {
@@ -728,5 +733,85 @@ h1.article-title{
 
     .web_name {
         justify-content: center;
+    }
+
+    .upper-nav-flex {
+        height: 77px;
+        padding: 0;
+    }
+
+    #logo {
+        width: 37px;
+        height: 37px;
+    }
+
+    #logo > span {
+        font-size: 9.008px;
+    }
+
+    .Name {
+        font-size: 15.008px;
+    }
+
+    #nav-toolbar > #icon-search {
+        display: none;
+    }
+
+    #nav-toolbar > #icon-calendar {
+        display: none;
+    }
+
+    #nav-toolbar > #icon-alumni_entry {
+        display: none;
+    }
+
+    .nav-container {
+        height: calc(100vh - 77px);
+    }
+
+    .sm-nav-strech #nav-menu li {
+        width: 100%;
+    }
+
+    .menu-list {
+        width: 100%;
+    }
+
+    #nav-menu li a {
+        font-size: 17.008px;
+        margin-top: 14.05px;
+        padding-bottom: 14.05px;
+    }
+
+    .sm-nav-strech #icon-en {
+        display: none;
+    }
+
+    .sm-nav-strech #nav-toolbar > #icon-calendar {
+        display: block;
+    }
+
+    .sm-nav-strech #nav-toolbar > #icon-alumni_entry {
+        display: block;
+    }
+
+    .nav-arrow-down {
+        position: absolute;
+        top: 14.05px;
+        right: 0;
+        width: 3.466vw;
+        height: 1.8667vw;
+        transform: translateY(50%);
+        display: block;
+    }
+
+    .dropdown-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: max-content;
+    }
+
+    .dropdown-menu ul li {
+        margin-top: 0;
     }
 }

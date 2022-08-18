@@ -157,3 +157,47 @@ a.statement:before {
         font-size: 10px;
     }
 }
+
+@media (max-width:480px) {
+    .footer-margin {
+        margin: 40px 20px;
+        width: unset;
+    }
+
+    .footer-exclam {
+        width: unset;
+        font-size: 6.6688vw;
+        letter-spacing: 1.25px;
+        margin-bottom: 40px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-pic, .footer-pic img {
+        position: relative;
+        width: 89.333vw;
+        height: 50.4vw;
+        left: unset;
+        top: unset;
+    }
+
+    .footer-info {
+        margin-top: 40px;
+        font-size: 2.667vw;
+    }
+
+    #footer-info-d2 {
+        margin-top: 20px;
+    }
+
+    #footer-info-d3 {
+        margin-top: 40px;
+    }
+
+    .footer-statement {
+        margin-top: 40px;
+        font-size: 2.667vw;
+    }
+}

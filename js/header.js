@@ -58,111 +58,166 @@ for (var i = 0; i < menu_lists.length; i++) {
 
 
 nav_main_list_item_1.addEventListener("mouseenter", function() {
-  for(var i = 0; i < nav_list_item_1.length; i++) {
-    nav_list_item_1[i].classList.add('visible');
+  let x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
+    for(var i = 0; i < nav_list_item_1.length; i++) {
+      nav_list_item_1[i].classList.add('visible');
+    }
   }
+
 });
 
 nav_main_list_item_1.addEventListener("mouseleave", function() {
+  let x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_1.length; i++) {
     nav_list_item_1[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_2.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_2.length; i++) {
     nav_list_item_2[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_2.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_2.length; i++) {
     nav_list_item_2[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_3.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_3.length; i++) {
     nav_list_item_3[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_3.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_3.length; i++) {
     nav_list_item_3[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_4.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_4.length; i++) {
     nav_list_item_4[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_4.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_4.length; i++) {
     nav_list_item_4[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_5.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_5.length; i++) {
     nav_list_item_5[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_5.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_5.length; i++) {
     nav_list_item_5[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_6.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_6.length; i++) {
     nav_list_item_6[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_6.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_6.length; i++) {
     nav_list_item_6[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_7.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_7.length; i++) {
     nav_list_item_7[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_7.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_7.length; i++) {
     nav_list_item_7[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_8.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_8.length; i++) {
     nav_list_item_8[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_8.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_8.length; i++) {
     nav_list_item_8[i].classList.remove('visible');
   }
+}
 });
 
 nav_main_list_item_9.addEventListener("mouseenter", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_9.length; i++) {
     nav_list_item_9[i].classList.add('visible');
   }
+}
 });
 
 nav_main_list_item_9.addEventListener("mouseleave", function() {
+  x = window.innerWidth || doc.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  if(x > 480) {
   for(var i = 0; i < nav_list_item_9.length; i++) {
     nav_list_item_9[i].classList.remove('visible');
   }
+}
 });
 
 
