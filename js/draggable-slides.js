@@ -1,3 +1,4 @@
+if (document.documentElement.clientWidth > 481){
 const container = document.querySelector(".Interview-container");
 const cards = document.querySelector(".cards");
 var interview_slides = document.querySelector(".interview-slide");
@@ -77,4 +78,5 @@ function boundCards() {
     cards.style.left = `-${cards_rect.width - container_rect.width}px`;
     cards_margin = cards_rect.width - container_rect.width;
   }
+}
 }

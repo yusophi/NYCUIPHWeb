@@ -71,7 +71,7 @@
         </a>
     </div>
     <div class="article-title_bottom_line"></div>
-    <div class="excerpt" id="<?php echo $counter; ?>"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
+    <div class="excerpt"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
     <div class="article-excerpt_bottom_line"></div>
 </div>
 <div class="clearfix"></div>

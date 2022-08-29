@@ -1404,6 +1404,7 @@
     .images-container {
         margin-top: 18vw;
     }
+
 }
 
 @media (max-width: 640px) {
@@ -1440,5 +1441,18 @@
 
     .contact_title, .email, .phone_num, .self_intro{
         line-height: 4.2vw;
+    }
+
+    .Interview-container{
+        height: auto;
+    }
+
+    .cards{
+        position: relative;
+        flex-direction: column;
+    }
+
+    .interview-slide{
+        margin: 2.5vw 5vw;
     }
 }
