@@ -396,6 +396,7 @@ function filter_ajax() {
         'admin' => 'ASC',
         'prof_cat' => 'ASC',
         'prof' => 'ASC',
+        'date' => 'DESC'
       ),
       'posts_per_page' => -1
     );

@@ -53,7 +53,7 @@
                 <span class="filename"><?php echo $filename; ?></span>
                 <div>
                 <?php if($word_file):?>
-                    <a href="<?php echo esc_url($word_file); ?>" target="_blank">【word】</a>
+                    <a href="<?php echo esc_url($word_file); ?>" target="_blank">【ODT】</a>
                 <?php endif; ?>
                 <?php if($pdf_file):?>
                     <a href="<?php echo esc_url($pdf_file); ?>" target="_blank">【PDF】</a>

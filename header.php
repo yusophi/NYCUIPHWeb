@@ -97,7 +97,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">All</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/announcement-en/">Announcements</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/announcement-en/">General</a></li>
                                 <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/covid19-en/">COVID-19</a></li>
                             </ul>
                         </div>

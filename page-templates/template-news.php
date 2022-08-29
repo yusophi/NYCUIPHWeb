@@ -66,6 +66,7 @@
     </div>
     <?php
         $cat_name = 'news';
+        if($locale == "en_US"){$cat_name = 'news-en';}
         global $rand;
         if(is_page('announcement') || is_page('announcement-en')):?>
             <script type='text/javascript' nonce="<?php echo $rand; ?>">

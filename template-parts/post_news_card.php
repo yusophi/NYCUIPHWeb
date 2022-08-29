@@ -50,24 +50,24 @@
                         echo the_title();
                 }
             }
-            else{if($mb_strlen == $strlen){
-                /*there is no mandarin*/
-                if($mb_strlen >= 50){
-                        echo mb_substr(get_the_title(), 0, 48) . "...";
+            else{
+                if($mb_strlen == $strlen){
+                    /*there is no mandarin*/
+                    if($mb_strlen >= 50){
+                            echo mb_substr(get_the_title(), 0, 48) . "...";
+                    }
+                    else{
+                            echo the_title();
+                    }
                 }
-                else{
-                        echo the_title();
-                }
-            }
-            else{ 
-                /* in mandarin */
-                if($mb_strlen >= 30){
-                        echo mb_substr(get_the_title(), 0, 28) . "...";
-                }
-                else{
-                        echo the_title();
-                }
-            } } ?>
+                else{ 
+                    /* in mandarin */
+                    if($mb_strlen >= 30){
+                            echo mb_substr(get_the_title(), 0, 28) . "...";
+                    }
+                    else{ echo the_title();}
+                } 
+            } ?>
         </a>
     </div>
     <div class="article-title_bottom_line"></div>

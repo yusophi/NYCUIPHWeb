@@ -28,7 +28,8 @@
             $categories = get_categories(array(
                 'parent' => 108, /*91, 108*/
                 'orderby' => 'slug',
-                'order'   => 'ASC'
+                'order'   => 'ASC',
+                'hide_empty' => 'false'
             ) );
         } 
         ?>
@@ -71,6 +72,7 @@
     </div>
     <?php
         $cat_name = 'event';
+        if($locale =="en_US"){$cat_name = 'event-en'; }
         global $rand;
         if(is_page('seminars') || is_page('seminars-en')):?>
             <script type='text/javascript' nonce="<?php echo $rand; ?>">
