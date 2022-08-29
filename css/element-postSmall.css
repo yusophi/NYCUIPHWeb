@@ -480,4 +480,8 @@
         transform: translateY(38vw);
         height: 47vw;
     }
+
+    #news_post .article-content {
+        width: 89.333vw;
+    }
 }

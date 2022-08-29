@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #2e4565;
+    overflow: hidden;
 }
 
 .slideshow-container {
@@ -1568,6 +1569,7 @@
         min-height: 410px;
         display: flex;
         flex-direction: row;
+        width: fit-content;
     }
 
     .About-container {

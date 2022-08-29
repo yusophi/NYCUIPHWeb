@@ -588,7 +588,7 @@ h1.article-title{
     left: 25vw;
 }
 
-.nav-arrow-down {
+.nav-arrow-down, .nav-arrow {
     display: none;
 }
 
@@ -796,13 +796,26 @@ h1.article-title{
     }
 
     .nav-arrow-down {
+        position: relative;
+        width: 3.466vw;
+        height: 1.8667vw;
+        display: block;
+    }
+
+    .nav-arrow {
+        z-index: 5;
+        cursor: pointer;
         position: absolute;
         top: 14.05px;
         right: 0;
-        width: 3.466vw;
-        height: 1.8667vw;
-        transform: translateY(50%);
-        display: block;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        -webkit-user-select: none;
+        transform: translateY(-5px);
     }
 
     .dropdown-menu ul {

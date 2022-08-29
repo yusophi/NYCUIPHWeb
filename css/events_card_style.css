@@ -170,6 +170,10 @@
     color: #2e4565;
 }
 
+.sm-event-pic {
+    display: none;
+}
+
 @media (max-width:1130px) {
     .event-main-margin {
         padding: 12px 39.432px;
@@ -310,5 +314,35 @@
 
     .event-intro {
         display: none;
+    }
+
+    .event-cards-mask {
+        min-width: unset;
+        width: 89.333vw;
+        height: 136.533vw;
+        margin: 0 0 40px 0;
+        border-radius: 6.667vw;
+    }
+
+    .event-date-title img {
+        width: 4.266vw;
+        height: 4.266vw;
+    }
+
+    .event-cards-mask > .event-main-margin {
+        justify-content: flex-start;
+        padding: 10.667vw 12.8vw;
+    }
+
+    .sm-event-pic {
+        margin-top: 20px;
+        display: block;
+        width: 64vw;
+        height: 49.333vw;
+    }
+    
+    .sm-event-pic img {
+        width: 100%;
+        height: auto;
     }
 }
