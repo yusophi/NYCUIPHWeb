@@ -88,6 +88,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: .3vw;
 }
 
@@ -98,6 +99,7 @@ a.statement:before {
 a.statement{
     color: #efeee4;
     text-decoration: none;
+    margin-right: 1vw;
 }
 
 a.statement:visited{
@@ -105,9 +107,9 @@ a.statement:visited{
     text-decoration: none;
 }
 
-#privacy{
+/*#privacy{
     margin-left: 2vw;
-}
+}*/
 
 #icon_yt{
     margin-left: 6.5vw;

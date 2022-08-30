@@ -26,8 +26,10 @@
             </div>
             <div class="footer-statement">
                   <div id="statement_block1">
+                        <a id="NYCU" class="statement" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
                         <a id="info_open" class="statement" href="<?php bloginfo('template_url');?>/website-opendata-announcement/">網站資訊開放宣告</a>
                         <a id="privacy" class="statement" href="<?php bloginfo('tmeplate_url');?>/privacy-and-information-security-policy/">隱私權及資訊安全政策</a>     
+                        <a id="sitemap" class="statement" href="<?php bloginfo('template_url');?>/sitemap/">網站導覽</a>
                         <img id="icon_yt" src="<?php bloginfo('template_url') ?>/images/icon/icon-youtube_link_white.svg">
                         <img id="icon_fb" src="<?php bloginfo('template_url') ?>/images/icon/icon-FB_link_white.svg">
                   </div>

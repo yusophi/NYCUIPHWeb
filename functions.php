@@ -249,6 +249,7 @@ function wpdocs_ref_access() {
     wp_enqueue_style('mytheme_page_banner_style', get_theme_file_uri('css/page_banner.css')); 
     wp_enqueue_style('mytheme_footer_style', get_theme_file_uri('css/footer.css')); 
     wp_enqueue_style('mytheme_backtoTOP_style', get_theme_file_uri('css/backtoTOP.css'));
+    wp_enqueue_style('mytheme_sitemap_style', get_theme_file_uri('css/sitemap.css')); 
 
     if(is_page('homepage') || is_page('homepage-en')){
       wp_enqueue_style('mytheme_homepage_style', get_theme_file_uri('css/homepage.css')); 
