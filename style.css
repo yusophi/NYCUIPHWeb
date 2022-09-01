@@ -217,9 +217,11 @@ body::-webkit-scrollbar {
     margin-left: 1vw;
 }
 
-li.lang-item > a{
+li.lang-item > a, #NYCU{
     color: #2e4565;
-    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.40625vw;
+    text-decoration: none;
 }
 
 #nav-toolbar div img {
@@ -556,6 +558,7 @@ h1.article-title{
 
 #icon-en a{
     position: relative;
+    text-decoration: none;
 }
 
 #calendar_overlay{

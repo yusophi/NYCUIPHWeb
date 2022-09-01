@@ -36,10 +36,7 @@
                             </a>
                         </div>
                         <div id="nav-toolbar">
-                            <div id="icon-en">  
-                            <ul><?php pll_the_languages(array('hide_current' => 1 )); ?> </ul></div>
-                            <!--<botton id="icon-en"><img src="<?php// bloginfo('template_url')?>/images/icon/icon-en.png">
-                            </botton>-->
+                            <div id="icon-en"><ul><?php pll_the_languages(array('hide_current' => 1 )); ?> </ul></div>
                             <div id="icon-search" title="全站搜尋" type="button">
                                 <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/search.svg">
                                 <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">
@@ -55,6 +52,7 @@
                             <div id="nav-hamburger">
                                 <img width="25" height="20" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
                             </div>
+                            <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
                         </div>
                     </div>  
                 </div>
