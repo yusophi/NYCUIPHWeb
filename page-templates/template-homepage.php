@@ -32,6 +32,7 @@
                               <div class="imagesSlide" id="thumb-image-<?php echo $counter; ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                          <img src="<?php bloginfo('template_url')?>/images/should_delete/img_mountain.jpg">
                                                 <?php the_post_thumbnail(); ?>      
                                           </a>
                                     <?php endif; ?>
@@ -90,7 +91,6 @@
                               $counter = $counter + 1;
                         ?>
                               <div class="article-content num-<?php echo $counter ?>">
-                                    <div class="post_counter <?php echo $counter ?>"><?php echo "0" . $counter . "." ?>&nbsp;&nbsp;</div>
                                     <?php get_template_part('template-parts/post_news_card'); ?>
                               </div>
                         <?php endwhile; ?>
@@ -145,6 +145,7 @@
                                                                               <span class="event-date-words">Date</span>
                                                                         </div>
                                                                         <div class="event-date"><?php the_field('event_date'); ?> </div>
+                                                                        <div class="sm-event-pic"><img src="<?php bloginfo('template_url')?>/images/icon/pic-seminar.svg"></div>
                                                                         <div class="hp_event_tag">
                                                                               <div class="post_category">
                                                                               <?php $event_cat = get_field('event_item');
@@ -247,6 +248,35 @@
                   <span class="ch-title">關於我們<br></span>
                   <?php endif; ?>
                   <span class="en-title">About IPH</span>
+            </div>
+            <div class="sphn-about-container">
+                  <div class="sphn-about-block">
+                        <?php if($locale == "zh_TW"):?>
+                        <div>
+                              <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
+                              <div class="iph_en"> <?php the_field('iph_en'); ?></div>
+                        </div>
+                        <div class="iph_intro"> <?php the_field('sphn_iph_intro'); ?></div>
+                        <?php else: ?>
+                        <div class="iph_en_title"> <?php the_field('iph_en'); ?></div>
+                        <div class="iph_intro_en"> <?php the_field('sphn_iph_intro'); ?></div>
+                        <?php endif; ?>
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
+                              read more
+                              <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
+                              <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+                        </a>
+                  </div>
+                  <div class="sphn-about-block">
+                        <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
+                        <div class="iph_en"> <?php the_field('iph_en'); ?></div>
+                        <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
+                              read more
+                              <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
+                              <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+                        </a>
+                  </div>
             </div>
             <div class="Aboutus-content-container">
                   <div class="intro_content">

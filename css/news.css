@@ -255,14 +255,23 @@
 @media (max-width: 480px){
    
     .select_bar_container{
-        padding-bottom: 2vw;
+        padding-bottom: 20px;
+    }
+
+    .cat-list_item_dot {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cat-list_item_name {
+        font-size: 3.733vw;
     }
 
     .cat-list{
         width: 82vw;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-left: -2vw;
+        justify-content: flex-start;
+        margin-left: 0;
     }
     
     .news-article{
@@ -292,4 +301,8 @@
         margin-top: -3.5vw;
     }
 
+
+    .post_block {
+        width: 100vw;
+    }
 }

@@ -195,16 +195,21 @@
 
 @media (max-width: 480px) {
     .bt-readmore {
-        min-width: 18.83958vw;
-        min-height: 6.25vw;
-        padding: 0 2.29333vw;
-        border-radius: 4.166666vw;
-        font-size: 2.083333vw;
+        width: 127px;
+        height: 42px;
+        min-width: 127px;
+        min-height: 42px;
+        padding: 0 18px;
+        border-radius: 21px;
+        font-size: 14px;
     }
-    
-    .bt-watchmore {
-        width: 14.6875vw;
-        height: 6.25vw;
-        font-size: 2.083333vw;
+
+    .plus_icon_hover {
+        right: 18px;
+    }
+
+    .plus_icon, .plus_icon_hover {
+        width: 12px;
+        height: 12px;
     }
 }

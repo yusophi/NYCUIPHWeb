@@ -10,6 +10,7 @@
                     <span class="event-date-words">Date</span>
                 </div>
                 <div class="event-date"><?php the_field('event_date');?> </div>
+                <div class="sm-event-pic"><img src="<?php bloginfo('template_url')?>/images/icon/pic-seminar.svg"></div>
                 <div class="hp_event_tag">
                     <div class="post_category">
                         <?php $event_cat = get_field('event_item');

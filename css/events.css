@@ -212,4 +212,29 @@
     .cat-list{
         width: 55vw;
     }
+
+    .event-cards {
+        width: 89.333vw;
+    }
+
+    .cat-list_item_dot {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cat-list_item_name {
+        font-size: 3.733vw;
+    }
+
+    .cat-list_item {
+        padding-bottom: 20px;
+    }
+
+    .select_bar_container {
+        margin-top: 80px;
+    }
+
+    .post_block {
+        margin-top: 40px;
+    }
 }

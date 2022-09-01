@@ -102,7 +102,12 @@
     }
 
     .back_to_top .icon {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .back_to_top .en-title {
+        font-size: 3.733vw;
+        letter-spacing: 0.7px;
     }
 }
