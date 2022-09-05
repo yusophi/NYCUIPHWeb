@@ -1170,6 +1170,10 @@
     text-decoration: none;
 }
 
+.links-items{
+    max-width: 25.104166666vw;;
+}
+
 .sphn-about-container {
     display: none;
 }
