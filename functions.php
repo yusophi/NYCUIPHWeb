@@ -223,11 +223,11 @@ function wpdocs_ref_access() {
 ?>
 
 <?php
-  add_image_size( 'hp-interview-img-thumb', 200, 250, array( 'center', 'top' ) ); // Hard crop x:center y:top
-  add_image_size( 'hp-interview-img-thumb1', 350, 250, array( 'center', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'post-thumb', 483, 218, array( 'center', 'top' ) ); // Hard crop x:center y:top
+  add_image_size( 'hp-interview-thumb', 1576, 620, array( 'center', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'pie_chart', 370, 370, array( 'left', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'ad_poster_size', 599, 835, array( 'left', 'top' ) ); // Hard crop x:center y:top
-  add_image_size( 'member_picture', 1500, 500,array( 'left', 'top' )); // Hard crop x:center y:top
+  add_image_size( 'member_picture', 376, 240,array( 'center', 'top' )); // Hard crop x:center y:top
   add_image_size( 'member_picture1', 1550, 500, array( 'left', 'top' ) );
   function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(

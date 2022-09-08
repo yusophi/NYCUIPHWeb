@@ -32,8 +32,7 @@
                               <div class="imagesSlide" id="thumb-image-<?php echo $counter; ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                          <img src="<?php bloginfo('template_url')?>/images/should_delete/img_mountain.jpg">
-                                                <?php the_post_thumbnail(); ?>      
+                                                <?php the_post_thumbnail('hp-interview-thumb'); ?>      
                                           </a>
                                     <?php endif; ?>
                               </div>

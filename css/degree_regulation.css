@@ -171,14 +171,14 @@
 .others_regu_rows{
     width: 63.64vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-left: -1vw;
     margin-top: 3.2291vw;
 }
 
 .others_regu_rows > .link_block{
-    margin-bottom: 1.3vw;
+    margin-bottom: 0.8vw;
 }
 
 #btn-degree{
