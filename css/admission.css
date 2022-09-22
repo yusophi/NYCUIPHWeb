@@ -199,6 +199,11 @@
     overflow: hidden;
 }
 
+.ad_poster img{
+    width: 29.11vw;
+    height: 43.48vw;
+}
+
 @media (max-width: 960px) {
     .deco-section {
         font-size: 8.1px;
