@@ -34,3 +34,11 @@
     line-height: 1.94;
     letter-spacing: 2.7px;
 }
+
+
+@media (max-width: 960px) {
+    .links{
+        margin-left: 3vw;
+        margin-top: 6vw;
+    }
+}
