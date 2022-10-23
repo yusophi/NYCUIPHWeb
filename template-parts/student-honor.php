@@ -2,12 +2,23 @@
     <div class="honor_block">
         <div class="honor_block_title">
             <span class="_font40">發表獲獎</span>
-            <a class="more_btn" onclick="showing_more('honor_block1','honor_rows')">
-                <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
-                <div class="more_btn_hover">
-                    <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
-                    <span class="more_btn_text _font18">展開</span>
-                </div>  
+            <a class="more_btn web-button" onclick="showing_more('honor_block1','honor_rows')">
+                <div id="more_web_ver">
+                    <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
+                    <div class="more_btn_hover">
+                        <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
+                        <span class="more_btn_text _font18">展開</span>
+                    </div>  
+                </div>
+                <div id="more_mobile_ver">
+                    <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
+                    <div class="more_btn_hover">
+                    </div>  
+                </div>
+            </a>
+            <a class="mobile-button">
+                <input type="checkbox" id="switch" onclick="showing_more('honor_block1','honor_rows')"/>
+                <label for="switch"></label>    
             </a>
         </div>
         <div class="item_titles">
@@ -63,12 +74,16 @@
     <div class="honor_block">
         <div class="honor_block_title">
             <span class="_font40">會議獎助</span>
-            <a class="more_btn" onclick="showing_more('honor_block2','honor_rows')">
+            <a class="more_btn web-button" onclick="showing_more('honor_block2','honor_rows')">
                 <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
                     <span class="more_btn_text _font18">展開</span>
                 </div>  
+            </a>
+            <a class="mobile-button">
+                <input type="checkbox" id="switch" onclick="showing_more('honor_block2','honor_rows')"/>
+                <label for="switch"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
@@ -100,12 +115,16 @@
     <div class="honor_block">
         <div class="honor_block_title">
             <span class="_font40">公費留學</span>
-            <a class="more_btn" onclick="showing_more('honor_block3','honor_rows')">
+            <a class="more_btn web-button" onclick="showing_more('honor_block3','honor_rows')">
                 <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
                     <span class="more_btn_text _font18">展開</span>
                 </div>  
+            </a>
+            <a class="mobile-button">
+                <input type="checkbox" id="switch" onclick="showing_more('honor_block3','honor_rows')"/>
+                <label for="switch"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
@@ -137,12 +156,16 @@
     <div class="honor_block">
         <div class="honor_block_title">
             <span class="_font40">公職考試</span>
-            <a class="more_btn" onclick="showing_more('honor_block4','honor_rows')">
-                <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
+            <a class="more_btn web-button" onclick="showing_more('honor_block4','honor_rows')">
+                <img  class="more_icon web-button" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
                     <span class="more_btn_text _font18">展開</span>
                 </div>  
+            </a>
+            <a class="mobile-button">
+                <input type="checkbox" id="switch" onclick="showing_more('honor_block4','honor_rows')"/>
+                <label for="switch"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
@@ -174,12 +197,16 @@
     <div class="honor_block">
         <div class="honor_block_title">
             <span class="_font40">其他</span>
-            <a class="more_btn" onclick="showing_more('honor_block5','honor_rows')">
+            <a class="more_btn web-button" onclick="showing_more('honor_block5','honor_rows')">
                 <img  class="more_icon" id="more_white"src="<?php bloginfo('template_url') ?>/images/icon/more_white.svg">
                 <div class="more_btn_hover">
                     <img  class="more_icon" id="more_blue" src="<?php bloginfo('template_url') ?>/images/icon/more_blue.svg">
                     <span class="more_btn_text _font18">展開</span>
                 </div>  
+            </a>
+            <a class="mobile-button">
+                <input type="checkbox" id="switch" onclick="showing_more('honor_block5','honor_rows')"/>
+                <label for="switch"></label>    
             </a>
         </div>
         <div class="item_titles _font18">

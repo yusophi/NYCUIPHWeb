@@ -59,21 +59,6 @@
     display: none;
 }
 
-/*.more_btn_active{
-    width: 5vw;
-}
-
-.more_btn_active > #more_white{
-    display: none;
-}*/
-/*.more_btn:active{
-    width: 5vw;
-    background-color: #2e4565;
-}
-.more_btn:active #more_white{
-    display: none;
-}*/
-
 .more_icon{
     width: 2.084vw;
     height: 2.084vw;
@@ -138,11 +123,56 @@
     letter-spacing: 0.171875vw;
 }
 
+.mobile-button{
+    display: none;
+}
+
+.arrow{
+    width: 10px;
+    height: 10px;
+    border-top: solid 3.5px #2e4565;
+    border-right: solid 3.5px #2e4565;
+    transform: rotate(45deg);
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	background: none;
+    border-top: solid 3.5px #2e4565;
+    border-right: solid 3.5px #2e4565;
+	display: block;
+	position: relative;
+    transform: rotate(45deg);
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	transition: 0.3s;
+}
+
+input:checked + label {
+    transform: rotate(135deg);
+}
+
+/*.arrow:focus{
+    border-top: solid 3.5px red;
+    border-right: solid 3.5px red;
+}*/
+
 @media (max-width: 960px) {
     .item_titles {
         margin-top: 30px;
         padding-bottom: 20px;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .honor_rows > .name {
@@ -154,32 +184,37 @@
     }
 
     .more_icon {
-        width: 20px;
-        height: 20px;
+        width: 28px;
+        height: 28px;
     }
 
     .more_btn {
-        width: 20px;
-        height: 20px;
+        width: 8.5vw;
+        height: 7.466vw;
+        align-items: center;
     }
 
     .more_btn_text {
         letter-spacing: 1.35px;
         margin-left: 5px;
     }
-}
 
-@media (max-width: 768px){
     .honor_block{
-        margin-top: 5vw;
+        margin-top: 10vw;
+    }
+
+    .web-button{
+        display: none;
+    }
+
+    .mobile-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
 @media (max-width: 480px){
-    .honor_block{
-        margin-top: 8vw;
-    }
-
     .item_titles{
         margin-top: 5vw;
     }
