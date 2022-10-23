@@ -82,8 +82,8 @@
                 </div>  
             </a>
             <a class="mobile-button">
-                <input type="checkbox" id="switch" onclick="showing_more('honor_block2','honor_rows')"/>
-                <label for="switch"></label>    
+                <input type="checkbox" id="switch2" onclick="showing_more('honor_block2','honor_rows')"/>
+                <label for="switch2"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
@@ -123,8 +123,8 @@
                 </div>  
             </a>
             <a class="mobile-button">
-                <input type="checkbox" id="switch" onclick="showing_more('honor_block3','honor_rows')"/>
-                <label for="switch"></label>    
+                <input type="checkbox" id="switch3" onclick="showing_more('honor_block3','honor_rows')"/>
+                <label for="switch3"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
@@ -164,8 +164,8 @@
                 </div>  
             </a>
             <a class="mobile-button">
-                <input type="checkbox" id="switch" onclick="showing_more('honor_block4','honor_rows')"/>
-                <label for="switch"></label>    
+                <input type="checkbox" id="switch4" onclick="showing_more('honor_block4','honor_rows')"/>
+                <label for="switch4"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
@@ -205,8 +205,8 @@
                 </div>  
             </a>
             <a class="mobile-button">
-                <input type="checkbox" id="switch" onclick="showing_more('honor_block5','honor_rows')"/>
-                <label for="switch"></label>    
+                <input type="checkbox" id="switch5" onclick="showing_more('honor_block5','honor_rows')"/>
+                <label for="switch5"></label>    
             </a>
         </div>
         <div class="item_titles _font18">
