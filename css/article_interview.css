@@ -141,3 +141,9 @@
         width: unset;
     }
 }
+
+@media (max-width:480px) {
+    .interview-picture {
+        margin-bottom: 0;
+    }
+}

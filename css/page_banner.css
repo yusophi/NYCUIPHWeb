@@ -222,5 +222,12 @@
 
     .banner {
         margin-top: 157px;
+        width: 89.33vw;
+    }
+
+    .circle {
+        width: 8vw;
+        height: 8vw;
+        border-radius: 8vw;
     }
 }

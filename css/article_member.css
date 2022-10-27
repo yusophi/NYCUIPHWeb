@@ -347,6 +347,9 @@
         align-content: center;
         justify-content: flex-start;
         margin-top: 30vw;
+        width: 89.33vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .left, .right{
@@ -355,13 +358,14 @@
 
     .member_picture{
         width: auto;
-        height: 45.56vw;
+        height: 52vw;
         border-radius: 12px;
     }
     
     .member_picture img{
-        width: 82vw;
-        height: 45.56vw;
+        width: 89.33vw;
+        height: 52vw;
+        object-fit: cover;
     }
 
     .short{
@@ -410,4 +414,7 @@
         margin-top: 4vw;
     }
     
+    .deco-dot {
+        
+    }
 }

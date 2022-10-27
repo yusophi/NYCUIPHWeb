@@ -482,4 +482,8 @@
     #news_post .article-content {
         width: 89.333vw;
     }
+
+    .article-preview-pic img {
+        border-radius: 15px;
+    }
 }

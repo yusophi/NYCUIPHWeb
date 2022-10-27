@@ -219,11 +219,11 @@ img.icon_download{
 @media (max-width: 480px){
     
     .item_title1{
-        margin-left: 3.5vw;
+        margin-left: 0;
     }
 
     .item_title2{
-        margin-left: 4.5vw;
+        margin-left: 0;
     }
 
     .link_block{
@@ -244,13 +244,11 @@ img.icon_download{
         align-items: center;
     }
 
-    .item1, .item2{
-        margin-left: 0;
-    }
-
-    .item2{
+    .item2, .item1{
         width: 100%;
         flex-direction: column;
+        margin-left: 0;
+        justify-content: flex-start;
     }
 
     img.icon_download{
@@ -259,6 +257,47 @@ img.icon_download{
     }
 
     .regulation_block{
-        margin-top: 6.125vw;
+        margin-top: 80px;
+    }
+
+    .degree_regulation, .regulation_block, .degree_block_title, .item_titles, .regulation_rows {
+        width: 89.333vw;
+    }
+
+    .year, .item_titles span:first-child {
+        min-width: 18.66vw;
+    }
+
+    .item1, .item_title1 {
+        min-width: 29.6vw;
+    }
+
+    .item2, .item_title2 {
+        min-width: 41.06vw;
+    }
+
+    .item_title2 {
+        text-align: right;
+    }
+
+    .item1 .link_block {
+        justify-content: flex-start;
+    }
+
+    .item2 .link_block {
+        justify-content: flex-end;
+    }
+
+    .file_title {
+        text-align: center;
+        font-size: 3.2vw;
+    }
+
+    .item_titles {
+        margin-top: 40px;
+    }
+
+    .item_titles span {
+        font-size: 3.733vw;
     }
 }

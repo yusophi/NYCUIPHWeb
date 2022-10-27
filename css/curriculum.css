@@ -150,8 +150,30 @@
     }
 
     .subpage_btn{
-        width: 18vw;
-        height: 7vw;
+        width: 27vw;
+        height: 9vw;
         border-radius: 12vw;
+    }
+
+    .subpage_buttons {
+        margin-top: 80px;
+        width: 89.333vw;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: space-between;
+    }
+
+    .curriculum_banner > .circle {
+        width: 8vw;
+        height: 8vw;
+        margin-top: 20px;
+    }
+
+    ._font40 {
+        font-size: 5.0688vw;
+    }
+
+    ._font20 {
+        font-size: 3.733vw;
     }
 }
