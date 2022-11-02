@@ -1,20 +1,20 @@
 <div class="student_paper">
     <?php $years = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 31, /* 40,31 */
+                'parent' => 40, /* 40,31 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'DSEC'
             ) );
           $divisions = get_categories(array(
                 'taxonomy' => 'papers_cat',
-                'parent' => 33, /* 41, 33 */
+                'parent' => 41, /* 41, 33 */
                 'orderby' => 'slug',
                 'hide_empty' => false,
                 'order'   => 'ASC'
             ) );
     ?>
-    <div class="select_bar_container">
+    <div class="select_bar_container web-selector">
         <input type="hidden" id="filters-year" value="" />
         <input type="hidden" id="filters-division" value="" />
         <div class="cat-list_container _font20">
@@ -44,10 +44,33 @@
             </ul>
         </div>
     </div>
-    
+    <div class="mobile-selector">
+        <input type="hidden" id="filters-year" value="" />
+        <input type="hidden" id="filters-division" value="" />
+        <div class="dropdown">
+            <button class="dropdown-title _font22" id="button-dropdown-year">年份<div class="arrow-down"></div></button>
+            <div class="dropdown-content" id="dropdown-year">
+                <?php foreach($years as $year) : ?>
+                    <a class="<?= "cat-list_item _font20 mobile-item " . $year->slug; ?>" href="#!" data-filter-type="year" data-type="papers" data-slug="<?= $year->slug; ?>">
+                        <?= $year->name; ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-title _font22" id="button-dropdown-division">領域<div class="arrow-down"></div></button>
+            <div class="dropdown-content" id="dropdown-division">
+                <?php foreach($divisions as $division) : ?>
+                    <a class="<?= "cat-list_item _font20 mobile-item " . $division->slug; ?>" href="#!" data-filter-type="division" data-type="papers" data-slug="<?= $division->slug; ?>">
+                        <?= $division->name; ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
     <div class="request_form">
         <img id="search_svg" src="<?php bloginfo('template_url')?>/images/page_student/search.svg">
-        <input type="text" name="s" placeholder="可用研究生姓名、指導老師、論文關鍵字進行搜尋" id="keyword" class="input_search">
+        <input type="text" name="s" placeholder="可使用研究生姓名、指導老師、論文關鍵字進行搜尋" id="keyword" class="input_search">
         <?php //wp_nonce_field( 'get_paper_search', 'paper_search_nonce' ); ?>
         <button id="search_btn">
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">
