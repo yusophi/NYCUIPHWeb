@@ -68,6 +68,7 @@
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about/">系所簡介</a></li>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member/">系所成員</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/administration_staff/">行政助教</a></li>
                             </ul>
                         </div>
                         <?php else: ?>
@@ -76,6 +77,7 @@
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about-en/">Introduction</a></li>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">Faculty</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/administration_staff-en/">Administration</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>

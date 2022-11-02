@@ -46,6 +46,19 @@
     height: 14.84vw;
 }
 
+.staff_picture{
+    width: 20.833333333vw;
+    height: 22.135416666vw;
+    border-radius: 6%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.staff_picture img{
+    width: 20.833333333vw;
+    height: 22.135416666vw;
+}
+
 .block-deco{
     width: 82vw;
     display: flex;
@@ -92,7 +105,7 @@
     -webkit-transform: rotate(45deg);
 }
 
-.staff_name{
+.left .staff_name{
     margin-top: 1vw;
 }
 
@@ -158,6 +171,9 @@
     position: relative;
     margin-top: 1vw;
     align-items: center;
+}
+
+.style-link{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.9375vw;
     font-weight: 500;
@@ -182,7 +198,7 @@
     letter-spacing: 0.12vw;
     text-align: left;
     color: #647386;
-    margin-bottom: 2vw;
+    margin-top: 2vw;
     hyphens: auto;
     -ms-hyphens: auto;
     -moz-hyphens: auto;
@@ -198,7 +214,7 @@
     letter-spacing: 0.12vw;
     text-align: left;
     color: #647386;
-    margin-bottom: 2vw;
+    margin-top: 2vw;
     hyphens: auto;
     -ms-hyphens: auto;
     -moz-hyphens: auto;

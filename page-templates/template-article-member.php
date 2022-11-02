@@ -14,7 +14,7 @@
         $title =  get_field('prof_class'); $name = get_field('name'); $en_name = get_field('en_name');
         $email = get_field('email'); $phone = get_field('phone'); $abuot_me = get_field('aboutME');
         $edu = get_field('educations'); $experience = get_field('experience'); 
-        $academy= get_field('academic_expertise'); $link = ""; $CV = get_field('CV');
+        $academy= get_field('academic_expertise'); $link = get_field('link'); $CV = get_field('CV');
         $works = get_field('works'); $guide_essay = get_field('guide_essay');
     ?>
     <div class="article_content">
@@ -42,9 +42,15 @@
                 <p><span><?php if($locale == "zh_TW"){echo "連絡電話"; }else{echo "Tel"; } ?>&nbsp;:&nbsp;</span><span><?php echo $phone;?></span></p>
             </div>
             <?php if( $CV ): ?>
-            <a class="staff_CV" href="<?php echo esc_url($CV);?>" target="_blank"><?php if($locale == "zh_TW"){echo "教師個人CV"; }else{echo "CV"; } ?>
-            <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
+                <a class="staff_CV style-link" href="<?php echo esc_url($CV);?>" target="_blank">
+                    <?php if($locale == "zh_TW"){echo "教師個人CV"; }else{echo "CV"; } ?>
+                    <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                </a>
+            <?php endif; ?>
+            <?php if( $link ): ?>
+                <a class="style-link" href="<?= $link;?>" target="_blank">
+                    <?php if($locale == "zh_TW"){echo "外部連結"; }else{echo "Links"; } ?>
+                </a>
             <?php endif; ?>
             <div class="block-deco short"></div>
         </div> 
