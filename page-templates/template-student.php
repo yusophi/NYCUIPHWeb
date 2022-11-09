@@ -12,10 +12,10 @@
         <div class="circle"></div>
     </div>
     <div class="subpage_buttons">
-        <a class="subpage_btn" id="btn-application" href="<?php echo site_url(); ?>/applications/"><p class="_font20">各類申請</p></a>
-        <a class="subpage_btn" id="btn-scholar" href="<?php echo site_url(); ?>/scholarships/"><p class="_font20">獎助學金</p></a>
-        <a class="subpage_btn" id="btn-honor" href="<?php echo site_url(); ?>/honor/"><p class="_font20">榮譽榜單</p></a>
-        <a class="subpage_btn" id="btn-papers" href="<?php echo site_url(); ?>/past_papers/"><p class="_font20">歷屆論文</p></a>
+        <a class="subpage_btn" id="btn-application" href="<?php echo site_url(); ?>/applications/"><p class="_font22">各類申請</p></a>
+        <a class="subpage_btn" id="btn-scholar" href="<?php echo site_url(); ?>/scholarships/"><p class="_font22">獎助學金</p></a>
+        <a class="subpage_btn" id="btn-honor" href="<?php echo site_url(); ?>/honor/"><p class="_font22">榮譽榜單</p></a>
+        <a class="subpage_btn" id="btn-papers" href="<?php echo site_url(); ?>/past_papers/"><p class="_font22">歷屆論文</p></a>
     </div>
     <?php
         global $rand; 

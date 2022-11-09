@@ -26,13 +26,15 @@
         <div class="group_title _font40">◆&nbsp;博士班學位考</div>
         <div class="group_content"><?php the_field('content8'); ?></div>
         <div class="Phd_paper_form">
-            <div class="orange_text _font27">博士班論文格式，請依照以下內容依序撰寫</div>
-            <div class="list"><?php the_field('PhD_paper_form');?></div>
-            <div class="appendix_text orange_text">Appendix.&nbsp;Published papers&nbsp;(全文若非open access，可放摘要)</div>
-            <div class="note">*論文內容若需引用已發表期刊內容應尊受相關版權規定。</div>
-            <div class="realted_files">
-                <a href="<?php echo esc_url(the_field('application_form1')); ?>" target="_blank">．國立陽明交通大學碩博士學位【延後公開】申請書</a>
-                <a href="<?php echo esc_url(the_field('application_form2')); ?>" target="_blank">．國立陽明交通大學碩博士學位論文格式</a>
+            <div class="Phd_paper_form_wrapper">
+                <div class="orange_text _font27">博士班論文格式，請依照以下內容依序撰寫</div>
+                <div class="list"><?php the_field('PhD_paper_form');?></div>
+                <div class="appendix_text orange_text">Appendix.&nbsp;Published papers&nbsp;(全文若非open access，可放摘要)</div>
+                <div class="note">*論文內容若需引用已發表期刊內容應尊受相關版權規定。</div>
+                <div class="realted_files">
+                    <a href="<?php echo esc_url(the_field('application_form1')); ?>" target="_blank">．國立陽明交通大學碩博士學位【延後公開】申請書</a>
+                    <a href="<?php echo esc_url(the_field('application_form2')); ?>" target="_blank">．國立陽明交通大學碩博士學位論文格式</a>
+                </div>
             </div>
         </div>
     </div><div class="content_group">

@@ -126,11 +126,12 @@
     }
     
     ._font20{
-        font-size: 11px;
+        font-size: 13px;
+        letter-spacing: 0.5vw;
     }
     
     ._font22{
-        font-size: 13px;
+        font-size: 15px;
     }
     
     ._font30{
@@ -138,25 +139,43 @@
     }
     
     ._font40{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .subpage_btn {
-        width: 84px;
-        height: 30px;
-        border-radius: 15px;
+        width: 127px;
+        height: 42px;
+        border-radius: 21px;
     }
 }
 
+@media (max-width: 768px){
+
+    .subpage_btn{
+        margin-left: 3px;
+    }
+}
 
 @media (max-width: 480px){
     .student_banner{
         margin-top: 35vw;
     }
 
+    .subpage_buttons{
+        flex-wrap: wrap;
+    }
+
     .subpage_btn{
-        width: 18vw;
-        height: 7vw;
-        border-radius: 12vw;
+        /*width: 33.8666vw;
+        height: 11.2vw;
+        border-radius: 5.6vw;*/
+        letter-spacing: 3px;
+    }
+
+    .subpage_btn:nth-child(2){
+        margin-bottom: 3vw;
+    }
+    .subpage_btn:first-child{
+        margin-bottom: 3vw;
     }
 }
