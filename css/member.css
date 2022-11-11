@@ -35,6 +35,19 @@
     height: 12.5vw;
 }
 
+.staff_picture{
+    width: 20.833333333vw;
+    height: 22.135416666vw;
+    border-radius: 6%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.staff_picture img{
+    width: 20.833333333vw;
+    height: 22.135416666vw;
+}
+
 .name, .title, .en_name, .en_title{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.40625vw; /*25 -> 27*/
@@ -52,10 +65,22 @@
     margin-top: 1.5vw;
 }
 
+.staff-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .title{
     font-size: 0.9375vw;
     letter-spacing: 0.140625vw;
     margin-left: 0.2vw;
+}
+
+.work_group{
+    font-size: 0.9375vw;
+    letter-spacing: 0.140625vw;
 }
 
 .en_name{

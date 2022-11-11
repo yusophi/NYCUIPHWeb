@@ -1,6 +1,14 @@
 <?php $locale = get_locale(); ?>
 
-<div class="article-preview-pic"><img src="<?php bloginfo('template_url') ?>\images\page_news\news-preview-pic.webp"></div>
+<div class="article-preview-pic">
+    <?php $post_thumbnail = get_field('post_thumbnail'); 
+        if ($post_thumbnail) : ?>
+        <?php //the_post_thumbnail('post-thumb'); ?>
+        <?php echo wp_get_attachment_image( $post_thumbnail, 'post-thumb'); ?>
+    <?php else: ?>
+        <img src="<?php bloginfo('template_url') ?>\images\page_news\news-preview-pic.webp">
+    <?php endif; ?>
+</div>
 <div class="article-title">
     <a href="<?php the_permalink(); ?>">
         <?php $mb_strlen = mb_strlen(get_the_title());

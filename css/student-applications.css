@@ -165,38 +165,50 @@
     flex-direction: column;
 }
 
+
 @media (max-width: 960px) {
     .group_content p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .group_content > h3 {
-        font-size: 10px;
+        font-size: 16px;
         margin: 28.8px 0;
     }
 
     .group_content a {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     ._font27{
-        font-size: 13.5px;
+        font-size: 19px;
+        font-weight: 700;
     }
 
     .list > p, .appendix_text, .note, .realted_files a {
-        font-size: 12px;
+        font-size: 15px;
+        text-align: left;
     }
 
     .filename {
-        font-size: 12px;
+        font-size: 15px;
     }
-}
 
+    .Phd_paper_form_wrapper{
+        padding: 9vw;
+    }
+
+    .note{
+        width: auto;
+        padding: 3vw 0;
+    }
+
+}
 
 @media (max-width: 480px){
     
     .content_group{
-        margin-top: 8vw;
+        margin-top: 15vw;
     }
 
     .group_content p{
@@ -211,9 +223,14 @@
 
     .list {
         width: auto;
+        margin-top: 6vw;
     }
 
     .file_group_content{
-        width: auto;
+        width: 82vw;
+    }
+
+    .files_table, .other_forms{
+        margin-top: 6vw;
     }
 }

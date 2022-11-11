@@ -61,7 +61,25 @@
     });
   })(jQuery);
   
-  
+  (function($){
+    $(document).ready(function(){
+      $(document).on('click', '#button-dropdown-year', function(e){
+        e.preventDefault();
+        document.getElementById("dropdown-year").classList.toggle("show");
+      });
+    });
+  })(jQuery);
+
+  (function($){
+    $(document).ready(function(){
+      $(document).on('click', '#button-dropdown-division', function(e){
+        e.preventDefault();
+        document.getElementById("dropdown-division").classList.toggle("show");
+      });
+    });
+  })(jQuery);
+
+
   function editFilterInputs(inputField, value) {
     const currentFilters = inputField.val().split(',');
     const newFilter = value.toString();

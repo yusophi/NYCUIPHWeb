@@ -358,7 +358,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: -2vw;
-    padding-bottom: 13.8541666vw;
+    /*padding-bottom: 13.8541666vw;*/
 }
 
 .abouttitle {
@@ -1168,6 +1168,10 @@
 
 .links-item a {
     text-decoration: none;
+}
+
+.links-items{
+    max-width: 25.104166666vw;;
 }
 
 .sphn-about-container {

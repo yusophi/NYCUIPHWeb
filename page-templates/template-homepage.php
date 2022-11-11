@@ -32,8 +32,7 @@
                               <div class="imagesSlide" id="thumb-image-<?php echo $counter; ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                          <img src="<?php bloginfo('template_url')?>/images/should_delete/img_mountain.jpg">
-                                                <?php the_post_thumbnail(); ?>      
+                                                <?php the_post_thumbnail('hp-interview-thumb'); ?>      
                                           </a>
                                     <?php endif; ?>
                               </div>
@@ -436,16 +435,17 @@
       </div>
 
       <!-- Milo: 從這裡開始是links的內容 -->
-      <?php if($locale == "zh_TW"):?> 
-      <div class="Links-container">
+      <?php //if($locale == "zh_TW"):?> 
+      <!--<div class="Links-container">
             <div class="block-title links_title">
-                  <img class="icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-links.svg">
+                  <img class="icon" src="<?php //bloginfo('template_url') ?>/images/icon/icon-links.svg">
                   <span class="ch-title">相關連結<br></span>
                   <span class="en-title">Links</span>
             </div>
-            <?php get_template_part('template-parts/links','content');?>
+            <?php //get_template_part('template-parts/links','content');?>
       </div>
-      <?php endif; ?>
+      <?php //endif; ?>
+      -->
       <!-- Milo: links結束 -->
 
       <!-- Jenny: Contact Us block start-->

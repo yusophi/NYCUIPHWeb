@@ -225,33 +225,15 @@
         <span class="en_title _font40">Others</span>
         <?php endif; ?>
         <div class="others_regu_rows">
-            <?php if($locale == "zh_TW"):?>
-            <a class="link_block" href="<?php echo esc_url(the_field('phd_program_regu'));?>" target="_blank">
-                <span class="file_title">逕修讀博士學位甄選辦法&nbsp;</span>
-                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
-            <a class="link_block" href="<?php echo esc_url(the_field('pre_master_program_regu'));?>" target="_blank">
-                <span class="file_title">碩士班預備研究生甄選規定&nbsp;</span>
-                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
-            <a class="link_block" href="<?php echo esc_url(the_field('transfer_ragu'));?>" target="_blank">
-                <span class="file_title">博士班研究生申請轉入公共衛生研究所辦法&nbsp;</span>
-                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
-            <?php else: ?>
-                <a class="link_block" href="<?php echo esc_url(the_field('phd_program_regu'));?>" target="_blank">
-                <span class="file_title en_text">Regulations for the Selection of Master's Students for Doctoral Degrees&nbsp;</span>
-                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
-            <a class="link_block" href="<?php echo esc_url(the_field('pre_master_program_regu'));?>" target="_blank">
-                <span class="file_title en_text">Regulations for the Selected Candidates of the Master's Program&nbsp;</span>
-                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
-            <a class="link_block" href="<?php echo esc_url(the_field('transfer_ragu'));?>" target="_blank">
-                <span class="file_title en_text">Regulations for Transfer of Doctoral Students from other institute to IPH&nbsp;</span>
-                <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
-            </a>
-            <?php endif; ?>
+            <?php $others_regu = get_field('others'); ?>
+            <?php foreach( $others_regu as $data_group): ?>
+                <?php if($data_group['file'] && $data_group['filename']): ?>
+                <a class="link_block" href="<?php echo esc_url($data_group['file']);?>" target="_blank">
+                    <span class="file_title"><?php echo $data_group['filename']; ?>&nbsp;</span>
+                    <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
+                </a>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
