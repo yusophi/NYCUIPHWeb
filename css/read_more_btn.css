@@ -212,4 +212,21 @@
         width: 12px;
         height: 12px;
     }
+
+    .bt-watchmore {
+        justify-content: center;
+        width: 30.13vw;
+        height: 11.2vw;
+        font-size: 3.733vw;
+    }
+
+    .watch_icon {
+        width: 7.2vw;
+        height: 5.33vw;
+        margin-left: 2.67vw;
+    }
+
+    .hover-part {
+        width: 0;
+    }
 }
