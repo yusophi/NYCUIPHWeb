@@ -25,15 +25,15 @@
     <div class="dep_table">
         <div class="table_heads">
             <?php if($locale == "zh_TW"): ?>
-            <span>學系</span>
-            <span>課程名稱</span>
-            <span>學分數</span>
-            <span>選別</span>
+            <div>學系</div>
+            <div>課程名稱</div>
+            <div>學分數</div>
+            <div>選別</div>
             <?php else: ?>
-            <span>Department</span>
-            <span>Course title</span>
-            <span>Credit</span>
-            <span>Compulsory/ Elective</span>
+            <div>Department</div>
+            <div>Course title</div>
+            <div>Credit</div>
+            <div>Compulsory/ Elective</div>
             <?php endif; ?>
         </div>
         <div class="table_hr"></div>
