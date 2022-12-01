@@ -62,12 +62,17 @@ img.icon_download{
 
 
 @media (max-width: 480px){
+    .course_schedule {
+        margin-top: 80px;
+    }
+
     .file_content{
-        margin-top: 5vw;
+        margin-top: unset;
     }
 
     .file_link{
-        width: 52vw;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .file_title{
@@ -79,10 +84,19 @@ img.icon_download{
     }
 
     img.icon_download{
-        width: 7vw;
-        height: 4.5vw;
+        width: 10.93vw;
+        height: 5.6vw;
     }
     .file_link > a{
-        font-size: 11px;
+        font-size: 3.2vw;
+        margin-bottom: 20px;
+    }
+
+    .file_title._font40 {
+        letter-spacing: unset;
+    }
+
+    .links {
+        margin-top: 40px;
     }
 }

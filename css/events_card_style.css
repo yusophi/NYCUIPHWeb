@@ -345,4 +345,12 @@
         width: 100%;
         height: auto;
     }
+
+    .event-name a {
+        font-size: 4.535vw;
+    }
+
+    .sdg-tag > li {
+        margin-left: 5px;
+    }
 }

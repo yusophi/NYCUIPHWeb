@@ -50,7 +50,7 @@
         <input type="hidden" id="filters-title" value="" />
         <div class="cat-list_container">
             <?php if($locale == "zh_TW"):?>
-            <p>領域&#124;</p>
+            <p>領域 &#124;</p>
             <?php else: ?>
             <p>Division&#124;</p>
             <?php endif; ?>
@@ -68,7 +68,7 @@
         </div>
         <div class="cat-list_container">
             <?php if($locale == "zh_TW"):?>
-            <p>職稱&#124;</p>
+            <p>職稱 &#124;</p>
             <?php else: ?>
             <p>Position&#124;</p>
             <?php endif; ?>

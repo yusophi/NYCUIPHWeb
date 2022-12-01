@@ -21,3 +21,17 @@
     background-color: #2e4565;
 }
 
+
+
+@media  (max-width:480px){
+
+    .curriculum_arch {
+        margin-top: 40px;
+    }
+
+    .arch_picture img {
+        margin-top: 40px;
+        width: 89.333vw;
+        height: auto;
+    }
+}

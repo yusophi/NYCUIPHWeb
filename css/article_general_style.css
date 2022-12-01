@@ -402,3 +402,123 @@
         align-items: center;
     }
 }
+
+@media (max-width:480px) {
+    #circle {
+        width: 8vw;
+        height: 8vw;
+        border-radius: 4vw;
+    }
+
+    .banner {
+        margin-left: 5.333vw;
+        margin-right: 5.333vw;
+        width: 89.334vw;
+        margin-top: 117px;
+    }
+
+    .post_title p {
+        font-size: 6.6688vw;
+    }
+
+    .banner_post_time {
+        font-size: 4.002vw;
+        margin-left: 2.667vw;
+        letter-spacing: 0.6vw;
+    }
+
+    .banner_post_tags > .post_category, .banner_post_tags > .sdg-tag li {
+        font-size: 2.667vw;
+        padding: 0.8vw 4.267vw;
+        border-radius: 2.8vw;
+    }
+
+    .banner_article_meta {
+        padding-bottom: 20px;
+    }
+
+    .single_post_info {
+        margin-top: 40px;
+    }
+
+    .article p, h3 {
+        font-size: 3.733vw;
+        letter-spacing: 0.56vw;
+    }
+
+    .article p > a {
+        font-size: 3.733vw;
+        letter-spacing: 0.56vw;
+    }
+
+    .sidebar_title_en {
+        font-size: 10.667vw;
+        line-height: 9.335vw;
+    }
+
+    .sidebar_title_ch {
+        font-size: 4.535vw;
+        margin-top: 0;
+        transform: translateY(calc(-3.3vw + 50%));
+        line-height: 9.335vw;
+    }
+
+    ._content {
+        font-size: 3.733vw;
+        letter-spacing: 0.56vw;
+    }
+
+    .sidebar_content > ul li {
+        font-size: 3.733vw;
+        letter-spacing: 0.56vw;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar_content > * {
+        margin-top: 2.133vw;
+    }
+
+    .sidebar_block {
+        margin-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .next_news_title span {
+        font-size: 5.0688vw;
+    }
+
+    #next_news_title_eg {
+        font-size: 3.733vw;
+    }
+
+    .single_post_info, .next_news {
+        margin-left: 5.333vw;
+        margin-right: 5.333vw;
+        width: 89.334vw;
+    }
+
+    .next_news .article-content {
+        margin: 60px 0 0 0;
+    }
+
+    .post_title p {
+        width: 69.333vw;
+        letter-spacing: 1vw;
+    }
+
+    .banner_post_tags > .sdg-tag {
+        margin-top: 0;
+    }
+
+    .icon-clock {
+        width: 4.267vw;
+        height: 4.267vw;
+    }
+
+    .the_next3_block {
+        margin-top: 40px;
+    }
+}

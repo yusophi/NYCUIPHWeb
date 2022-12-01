@@ -140,7 +140,6 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.041667vw;
     font-weight: bold;
-    line-height: 0.06;
     letter-spacing: 2.7px;
     color: #2e4565;
     margin-right: 2.604vw;
@@ -272,7 +271,10 @@
         width: 84vw;
         flex-wrap: wrap;
         justify-content: flex-start;
-        margin-top: 2vw;
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
     }
 
     .cat-list > li{
@@ -280,8 +282,9 @@
     }
 
     .post_block{
-        grid-template-columns: 60vw;
+        grid-template-columns: 89.33vw;
         row-gap: 6vw;
+        width: 89.33vw;
     }
 
     .member_picture{
@@ -295,7 +298,46 @@
     }
     
     .member_picture img{
-        width: 55vw;
-        height: 30vw;
+        height: 52vw;
+        width: 89.333vw;
     }
+
+    .member_picture{
+        height: 52vw;
+        width: 89.333vw;
+    }
+
+    .name, .en_name {
+        font-size: 4.535vw;
+    }
+
+    .education, .expertise {
+        font-size: 3.733vw;
+    }
+
+    .name {
+        margin-top: 20px;
+    }
+
+    .cat-list_container > p, .cat-list_item_name {
+        font-size: 3.733vw;
+        letter-spacing: 2.1px;
+    }
+
+    .cat-list_item_dot {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 50%;
+    }
+
+    .cat-list_item_name {
+        margin-left: 15px;
+    }
+
+    .select_bar_container {
+        border-bottom: none;
+        width: 89.33vw;
+    }
+
+
 }
