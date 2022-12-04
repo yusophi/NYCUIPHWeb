@@ -112,7 +112,7 @@
     justify-content: space-between;
 }
 
-.table_heads span {
+.table_heads div {
     font-family: "Noto Sans TC", sans-serif;
     font-size: 0.9375vw;
     font-weight: bold;
@@ -242,6 +242,10 @@
     color: #4f5ab8;
 }
 
+.mhe-card {
+    display: none;
+}
+
 @media (max-width: 960px) {
     .dep_title .dep_en_title {
         font-size: 15px;
@@ -269,7 +273,7 @@
         margin-top: 50px;
     }
 
-    .table_heads span {
+    .table_heads div {
         font-size: 9px;
         letter-spacing: 1.35px;
     }
@@ -313,6 +317,138 @@
 
 @media (max-width: 480px){
     .dep_ph_page{
-        padding-top: 30vw;
+        padding-top: 157px;
+    }
+
+    .dep_title {
+        font-size: 5.0688vw;
+    }
+
+    .dep_title .dep_en_title {
+        font-size: 3.733vw;
+    }
+    
+    .dep_circle {
+        min-width: 8vw;
+        width: 8vw;
+        height: 8vw;
+        border-radius: 8vw;
+    }
+
+    .dep_info {
+        margin-bottom: 80px;
+    }
+
+    .top_margined_s, .top_margined {
+        margin-top: 40px;
+    }
+
+    .dep_table {
+        margin-top: 80px;
+    }
+
+    .table_heads div {
+        font-size: 3.733vw;
+    }
+
+    .table_hr {
+        margin-top: 20px;
+    }
+
+    .table_row {
+        margin-top: 20px;
+    }
+
+    .table_heads {
+        margin-bottom: 40px;
+    }
+
+    .table_row div {
+        font-size: 3.733vw;
+    }
+
+    .table_heads :nth-child(2) {
+        left: 19.260416vw;
+    }
+
+    .table_row :nth-child(2) {
+        left: 19.260416vw;
+    }
+
+    .dep_ph_page {
+        padding-left: 5.33vw;
+        padding-right: 5.33vw;
+    }
+
+    .table_hr {
+        width: 89.33vw;
+    }
+
+    .dep_hr {
+        width: 89.333vw;
+    }
+
+    .dep_passage {
+        font-size: 3.733vw;
+    }
+
+    .dep_title_s {
+        font-size: 4.535vw;
+    }
+
+    .dep_passage .img_container {
+        max-width: 89.333vw;
+    }
+
+    .img_instru {
+        font-size: 3.733vw;
+    }
+
+    .curri_table_row {
+        margin-top: 20px;
+    }
+
+    .curri_table_row a {
+        font-size: 3.733vw;
+    }
+
+    .mhe-card {
+        margin-top: 40px;
+        display: inline-block;
+        width: 89.333vw;
+        box-shadow: 15px 15px 40px 0 rgb(255 111 0 / 30%);
+        border-radius: 25px;
+    }
+
+    .mhepic {
+        display: none;
+    }
+
+    .mhe-card .card-title {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 4.535vw;
+        font-weight: bold;
+        line-height: 1.47;
+        letter-spacing: 2.55px;
+        text-align: left;
+        color: #2e4565;
+        margin: 40px 30px;
+    }
+
+    .mhe-card .card-img {
+        width: 73.07vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mhe-card .card-img img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .mhe-card .card-readmore {
+        margin: 30px auto;
+        width:fit-content;
     }
 }

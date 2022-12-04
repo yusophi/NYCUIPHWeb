@@ -153,12 +153,15 @@
 
 .info-title span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 3.38541vw;
     line-height: 1.2;
     font-stretch: normal;
     font-style: normal;
     text-align: left;
     color: #2e4565;
+}
+
+.info-title .ch-title {
+
 }
 
 .ch-title{
@@ -168,7 +171,7 @@
 }
 
 .en_title{
-    font-size: 1.40625vw;
+    font-size: 1.407vw;
     font-weight: 900;
     letter-spacing: 0.07vw
 }
@@ -298,7 +301,7 @@
     margin-left: 7vw;
     border-radius: 0;
 }
-.subject-introduction img{
+.subject-introduction .image img{
     width: 29.0vw;
     height: 25.5vw;
 }
@@ -375,6 +378,10 @@
     font-style: normal;
 }
 
+.about-card {
+    display: none;
+}
+
 @media (max-width: 1024px){
     .page-about-banner {
         margin-top: 15vw;
@@ -400,8 +407,13 @@
         border-radius: 12.75px;
     }
 
-    .info-title span {
+    .info-title .ch-title {
         font-size: 32.5px;
+    }
+    
+    .info-title .en_title {
+        font-size: 13.504px;
+        letter-spacing: .675px;
     }
 
     .texts p {
@@ -425,7 +437,7 @@
         height: 251.424px;
     }
 
-    .subject-introduction img {
+    .subject-introduction .image img {
         width: 278.4px;
         height: 244.8px;
     }
@@ -507,7 +519,8 @@
     }
     
     .information-block{
-        margin-top: 25vw;
+        margin-top: 80px;
+        width: 89.33vw;
     }
 
     .supervisor .texts{
@@ -533,5 +546,160 @@
 
     .supervisor > .texts{
         width: auto;
+    }
+
+    .video-module-container {
+        display: none;
+    }
+
+    .about_banner > .circle {
+        width: 8vw;
+        height: 8vw;
+        border-radius: 8vw;
+        margin-top: 20px;
+    }
+
+    .info-title .ch-title {
+        font-size: 6.6688vw;
+    }
+
+    .info-title .en_title {
+        font-size: 3.733vw;
+    }
+
+    .block-deco {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-top: 20px;
+        width: 89.33vw;
+    }
+
+    .deco-dot {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 4vw;
+    }
+
+    .deco-arrow {
+        width: 1.6vw;
+        height: 1.6vw;
+    }
+
+    .deco-section {
+        font-size: 3.733vw;
+    }
+
+    .block-content {
+        width: 89.33vw;
+    }
+
+    .block-content.iph-intro {
+        flex-direction: column-reverse;
+    }
+
+    .IPH-introduction .image {
+        width: 89.33vw;
+        height: 60vw;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .IPH-introduction .texts {
+        margin-top: 40px;
+    }
+
+    .texts p {
+        font-size: 3.733vw;
+    }
+
+    .texts-title div {
+        font-size: 4.535vw;
+    }
+
+    .supervisor .texts p {
+        font-size: 3.733vw;
+    }
+
+    .unit-title {
+        font-size: 4.535vw;
+    }
+
+    .super-title {
+        font-size: 3.733vw;
+    }
+
+    .supervisor-title {
+        margin-bottom: 40px;
+    }
+
+    .IPH-purposeANDgoal .bt-watchmore img {
+        width: 7.2vw;
+        height: 5.33vw;
+    }
+
+    .subject-introduction .bt-watchmore img {
+        width: 7.2vw;
+        height: 5.33vw;
+    }
+
+    .about-card {
+        display: block;
+        width: 89.333vw;
+        box-shadow: 15px 15px 40px 0 rgb(255 111 0 / 30%);
+        border-radius: 25px;
+    }
+
+    .about-card .card-title {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 4.535vw;
+        font-weight: bold;
+        line-height: 1.47;
+        letter-spacing: 2.55px;
+        text-align: left;
+        color: #2e4565;
+        margin: 40px 30px;
+    }
+
+    .about-card .card-img {
+        width: 73.07vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-card .card-img img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .about-card .card-readmore {
+        margin: 30px auto;
+        width:fit-content;
+    }
+
+    .subject-introduction .about-card {
+        margin-top: 40px;
+    }
+
+    .subject-introduction .image img {
+        width: 89.333vw;
+        height: auto;
+    }
+
+    .img-teachers {
+        margin-left: auto;
+        margin-right: auto;
+        width: 51.87vw;
+        height: auto;
+    }
+
+    .img-teachers img {
+        width: 51.87vw;
+        height: auto;
     }
 }
