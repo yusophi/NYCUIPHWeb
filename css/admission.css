@@ -194,6 +194,10 @@
     overflow-wrap: anywhere;
 }
 
+.ad_content{
+    width: 40.057vw;
+}
+
 .ad_poster{
     /*width: 29.11vw;
     height: 43.48vw;*/
