@@ -143,7 +143,7 @@
                     <div id="overlay1" class="overlay">
                         <div class="overlay_content">
                             <img class="closebtn" src="<?php bloginfo('template_url') ?>/images/icon/ESC.svg">
-                            <div class="video_content"><?php the_field('video1') ?></div>
+                            <a class="video_content"><?php the_field('video1') ?></a>
                         </div>
                     </div>
                 </div>
@@ -151,11 +151,11 @@
         <?php endif; ?>
     </div>
     <?php if ($locale == "zh_TW") : ?>
-        <div class="dep_title top_margined">歷年課表</div>
+        <div class="dep_title top_margined syllabus">歷年課表</div>
     <?php else : ?>
-        <div class="dep_title top_margined">Syllabus</div>
+        <div class="dep_title top_margined syllabus">Syllabus</div>
     <?php endif; ?>
-    <div class="dep_table">
+    <div class="dep_table syllabus">
         <div class="table_hr"></div>
 
         <?php $curriculum_over_years = get_field('curriculum_over_years') ?>
