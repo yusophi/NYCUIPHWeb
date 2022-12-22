@@ -1,7 +1,5 @@
 .dep_ph_page {
-    padding-top: 18.8020833vw;
-    padding-left: 8.9583333vw;
-    padding-right: 8.9583333vw;
+    padding: 18.8vw 8.96vw;
     background-color: #e4dfd2;
 }
 
@@ -129,7 +127,7 @@
 
 .table_heads :nth-child(3) {
     position: absolute;
-    left: 52.708333vw;
+    left: 57.06vw;
 }
 
 .table_heads :nth-child(4) {
@@ -179,12 +177,12 @@
 
 .table_row :nth-child(3) {
     position: absolute;
-    left: 53.90625vw;
+    left: 62.133vw;
 }
 
 .table_row :nth-child(4) {
-    float: right;
-    text-align: right;
+    position: absolute;
+    left: 82.3vw;
 }
 
 .mhe_video_title {
@@ -312,6 +310,10 @@
     .curri_table_row a {
         font-size: 9px;
         letter-spacing: 1.35px;
+    }
+    
+    .syllabus{
+        display: none;
     }
 }
 
