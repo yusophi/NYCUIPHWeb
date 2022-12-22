@@ -50,9 +50,9 @@
                                 <img class="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
                                 <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
                             </a>
-                            <div id="nav-hamburger">
-                                <img width="25" height="20" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
-                            </div>
+                        </div>
+                        <div id="nav-hamburger">
+                            <img width="25" height="20" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
                         </div>
                     </div>  
                 </div>
@@ -170,7 +170,6 @@
                     <li id="nav-main-list-item-3" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?> 
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
-                        <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
                         <?php else: ?>
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission-en/">Admission</a>
                         <?php endif; ?>
