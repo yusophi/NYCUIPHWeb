@@ -449,6 +449,10 @@
     margin-top: 2.3vw;
 }
 
+.sphn-iph_intro{
+    display: none;
+}
+
 .iph_intro_en{
     width: 40.6vw;
     font-size: 1.041667vw;
@@ -1447,12 +1451,9 @@
     }
 
     .images-container {
-        margin-top: 85px;
-    }
-
-    .images-container {
         width: 95.733vw;
         height: 57.333vw;
+        margin-top: 85px;
     }
 
     #slide_btn, #social_btn {
@@ -1566,7 +1567,45 @@
     }
     
     .Aboutus-content-container {
+        /*display: none;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        min-height: 410px;
+    }
+
+    .videos {
+        width: 89.3;
+        margin-right: 0vw;
+        float: unset;
+        margin-top: 8vw;
+        width: fit-content;
+        background-color: transparent;
+        border-radius: 0vw;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .module{
+        border-radius: 3.125vw;
+        box-shadow: 6px 6px 15px 0 rgba(255, 111, 0, 0.3);
+        padding: 13% 10%;
+        margin: 7vw 0;
+        align-items: center;
+    }
+
+    .icon_aboutus_2{
+        margin: 0;
+    }
+
+    .bk_num{
         display: none;
+    }
+
+    .video_title{
+        font-size: 16px;
     }
 
     .sphn-about-container {
@@ -1596,7 +1635,21 @@
         justify-content: space-between;
     }
 
-    .iph_ch, .iph_en, .iph_en_title, .iph_intro, .iph_intro_en {
+    .intro_content{
+        margin-left: 0;
+        width: 79.3vw;
+        padding: 7vw;
+    }
+
+    .intro_content-text{
+        margin: 2vw;
+    }
+
+    .iph_intro{
+        display: none;
+    }
+
+    .iph_ch, .iph_en, .iph_en_title, .sphn-iph_intro, .iph_intro_en {
         width: unset;
         font-family: "Noto Sans TC", sans-serif;
         text-align: left;
@@ -1617,14 +1670,25 @@
         color: #2e4565;
     }
 
-    .iph_intro, .iph_intro_en {
+    .iph_intro_en {
         font-size: 3.733vw;
         margin-top: 0;
+        margin-left: 0;
+    }
+
+    .sphn-iph_intro{
+        font-size: 16px;
+        margin-top: 8vw;
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 1.79;
+        letter-spacing: 2.1px;
+        text-align: left;
+        color: #647386;
     }
 
     .sphn-about-block .bt-readmore {
         margin-left: auto;
-        margin-right: auto;
     }
 
     .Specialization-container {

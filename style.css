@@ -799,7 +799,7 @@ h1.article-title{
     }
 
     .sm-nav-strech #nav-toolbar > #icon-calendar {
-        display: block;
+        display: none;
     }
 
     .sm-nav-strech #nav-toolbar > #icon-alumni_entry {
