@@ -100,89 +100,54 @@
 
 .dep_table {
     width: 100%;
-    margin-top: 3.125vw;
+    margin-top: 2vw;
     position: relative;
 }
 
-.table_heads{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+ul.table{
+    display: block;
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.table_heads div {
+.thead{display: table-header-group;}
+
+.tr{display: table-row;}
+
+.tbody{display: table-row-group;}
+
+.thead li, .tr li{
+    width: 82vw;
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.thead li{
     font-family: "Noto Sans TC", sans-serif;
     font-size: 0.9375vw;
     font-weight: bold;
-    line-height: 0.06;
+    line-height: 1.59;
     letter-spacing: 0.140625vw;
-    text-align: left;
     color: #2e4565;
 }
 
-.table_heads :nth-child(2) {
-    position: absolute;
-    left: 25.260416vw;
-}
-
-.table_heads :nth-child(3) {
-    position: absolute;
-    left: 57.06vw;
-}
-
-.table_heads :nth-child(4) {
-    float: right;
-    text-align: right;
-}
-
-.table_hr {
-    margin-top: 2.0572916vw;
-    height: 0.052083333vw;
-    width: 82.083333vw;
-    background-color: #647386;
-}
-
-.table_row {
-    margin-top: 2.0572916vw;
-    margin-right: 0.4166666vw;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.table_row div {
+.tbody li{
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1.1458333vw;
     font-weight: 500;
     line-height: 1.59;
     letter-spacing: 0.05729166vw;
-    text-align: left;
     color: #2e4565;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.table_row :nth-child(1) {
-    width: 20vw;
-    justify-content: flex-start;
+.align-left{
+    text-align: left;
 }
 
-.table_row :nth-child(2) {
-    position: absolute;
-    left: 25.2604166vw;
-}
-
-.table_row :nth-child(3) {
-    position: absolute;
-    left: 62.133vw;
-}
-
-.table_row :nth-child(4) {
-    position: absolute;
-    left: 82.3vw;
+.align-center{
+    text-align: center;
 }
 
 .mhe_video_title {
@@ -256,7 +221,7 @@
     }
 
     .dep_info {
-        margin-bottom: 109.75px;
+        margin-bottom: 8.25vw;
     }
 
     .top_margined_s {
@@ -271,18 +236,8 @@
         margin-top: 50px;
     }
 
-    .table_heads div {
-        font-size: 9px;
-        letter-spacing: 1.35px;
-    }
-
-    .table_row div {
-        font-size: 12px;
-        letter-spacing: 0.55px;
-    }
-
     .dep_passage {
-        font-size: 12px;
+        font-size: 16px;
         letter-spacing: 1.65px;
     }
 
@@ -315,6 +270,14 @@
     .syllabus{
         display: none;
     }
+
+    .tbody li{
+        font-size: 16px;
+    }
+
+    .thead li{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px){
@@ -323,7 +286,7 @@
     }
 
     .dep_title {
-        font-size: 5.0688vw;
+        font-size: 20px;
     }
 
     .dep_title .dep_en_title {
@@ -345,45 +308,9 @@
         margin-top: 40px;
     }
 
-    .dep_table {
-        margin-top: 80px;
-    }
-
-    .table_heads div {
-        font-size: 3.733vw;
-    }
-
-    .table_hr {
-        margin-top: 20px;
-    }
-
-    .table_row {
-        margin-top: 20px;
-    }
-
-    .table_heads {
-        margin-bottom: 40px;
-    }
-
-    .table_row div {
-        font-size: 3.733vw;
-    }
-
-    .table_heads :nth-child(2) {
-        left: 19.260416vw;
-    }
-
-    .table_row :nth-child(2) {
-        left: 19.260416vw;
-    }
-
     .dep_ph_page {
         padding-left: 5.33vw;
         padding-right: 5.33vw;
-    }
-
-    .table_hr {
-        width: 89.33vw;
     }
 
     .dep_hr {
