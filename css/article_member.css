@@ -257,7 +257,7 @@
 @media (max-width: 1024px) {
 
     .deco-section{
-        font-size: 9px;
+        font-size: 3.733vw;
     }
     
     .staff_name{
@@ -284,7 +284,7 @@
     }
     
     .contact > p > span{
-        font-size: 16px;
+        font-size: 18px;
     }
     
     .staff_CV{
@@ -389,26 +389,10 @@
         padding-bottom: 2.041vw;
     }
 
-    /*.contact > p > span, .staff_CV{
-        font-size: 3.8vw;
-    }
-   
-    .staff_name {
-        margin-top: 5.2vw;
-    }
-    
-    .staff_name > p, .staff_name > p > span{
-        font-size: 5.8vw;
-    }*/
-
     .right_block, .en_right_block{
         margin-top: 6vw;
         margin-bottom: 0vw;
     }
-
-    /*.right_block_title, #en_staff_name > span{
-        font-size: 5vw;
-    }*/
 
     .block-deco{
         padding-top: 2.041vw;
@@ -420,6 +404,8 @@
 
     .right_block_content > p{
         margin-bottom: 3vw;
+        letter-spacing: 2px;
+        font-size: 18px;
     }
 
     .works > ol > li, .en_right_block ol li{
@@ -428,9 +414,21 @@
 
     .right_block_content{
         margin-top: 4vw;
+        margin-left: 4vw;
     }
     
     .deco-dot {
-        
+        width: 4vw;
+        height: 4vw;
+        border-radius: 4vw;
+    }
+
+    .deco-arrow{
+        width: 1.6vw;
+        height: 1.6vw;
+    }
+
+    .right_block_content > li{
+        letter-spacing: 2px;
     }
 }

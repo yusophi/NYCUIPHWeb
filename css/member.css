@@ -211,7 +211,8 @@
     }
 
     .title, .en_title{
-        font-size: 14px;
+        font-size: 16px;
+        letter-spacing: 2px;
     }
 
     .education, .expertise{
@@ -308,7 +309,8 @@
     }
 
     .name, .en_name {
-        font-size: 4.535vw;
+        font-size: 22px;
+        letter-spacing: 2px;
     }
 
     .education, .expertise {
@@ -320,7 +322,7 @@
     }
 
     .cat-list_container > p, .cat-list_item_name {
-        font-size: 3.733vw;
+        font-size: 16px;
         letter-spacing: 2.1px;
     }
 
@@ -336,8 +338,5 @@
 
     .select_bar_container {
         border-bottom: none;
-        width: 89.33vw;
     }
-
-
 }
