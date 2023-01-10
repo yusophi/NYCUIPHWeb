@@ -69,6 +69,7 @@ for (var i = 0; i < nav_arrow.length; i++) {
   nav_arrow[i].numParam = i;
   nav_arrow[i].addEventListener("click", function () {
     if (dropdown_menus[this.numParam].style.display == "none") {
+        //if the drpopdown is not open, open it
         for (var j = 0; j < dropdown_menus.length; j++) {
             dropdown_menus[j].style.display = "none";
         }
@@ -76,6 +77,7 @@ for (var i = 0; i < nav_arrow.length; i++) {
         nav_arrow_down[this.numParam].style.transform = "scaleY(-1)";
     }
     else {
+        //if the dropdown is open, close it
         dropdown_menus[this.numParam].style.display = "none"
         nav_arrow_down[this.numParam].style.transform = "none";
     }

@@ -209,7 +209,6 @@
                         <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
                         <a id="icon-alumni_entry" title="校友E化系統" type="button" href="http://iphalumni.iph.nycu.edu.tw/">
                             <img class="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
-                            <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
                         </a>
                     </div>
                 </ul>
