@@ -51,8 +51,12 @@
                                 <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
                             </a>
                         </div>
-                        <div id="nav-hamburger">
-                            <img width="25" height="20" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
+                        <div class="sm-nav-toolbar" id="sm-nav-toolbar-outer">
+                            <div id="icon-en"><ul><?php pll_the_languages(array('hide_current' => 1 )); ?> </ul></div>
+                            <div id="nav-hamburger">
+                                <img id="sm-img-hamburger" width="25" height="20" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
+                                <img id="sm-img-esc"width="25" height="20" src="<?php bloginfo('template_url')?>/images/header/esc.svg">
+                            </div>
                         </div>
                     </div>  
                 </div>
@@ -195,13 +199,19 @@
                     <li id="nav-main-list-item-7" class="nav-item">
                         <a class="menu-list nav-list-item-7" href="<?php echo site_url(); ?>/links/">相關資源</a>
                         <div class="dropdown-menu">
-                            <ul>
-                            </ul>
+                            <ul></ul>
                         </div>
                     </li>
                     <?php else: ?>
                     <li id="nav-main-list-item-7" class="nav-item"></li>
                     <?php endif; ?>
+                    <div class="sm-nav-toolbar" id="sm-nav-toolbar-inner">
+                        <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
+                        <a id="icon-alumni_entry" title="校友E化系統" type="button" href="http://iphalumni.iph.nycu.edu.tw/">
+                            <img class="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
+                            <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
+                        </a>
+                    </div>
                 </ul>
                 </div>
             </nav>
