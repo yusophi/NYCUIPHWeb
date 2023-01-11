@@ -17,7 +17,7 @@
     ?>
     <div class="article_content">
         <div class="left">
-            <div class="staff_picture">
+            <div class="member_picture">
                 <?php echo wp_get_attachment_image( $picture, 'large'); ?>
             </div>
         </div> 

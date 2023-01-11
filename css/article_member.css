@@ -34,29 +34,16 @@
     align-items: flex-start;
 }
 
-.member_picture{
+.member_picture, .staff_picture{
     width: 23.38vw;
     height: 14.84vw;
     overflow: hidden;
     border-radius: 1.302vw;
 }
 
-.member_picture img{
+.member_picture img, .staff_picture img{
     width: 23.38vw;
     height: 14.84vw;
-}
-
-.staff_picture{
-    width: 20.833333333vw;
-    height: 22.135416666vw;
-    border-radius: 6%;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.staff_picture img{
-    width: 20.833333333vw;
-    height: 22.135416666vw;
 }
 
 .block-deco{
