@@ -36,6 +36,7 @@
                 <p><span><?php if($locale == "zh_TW"){echo "電子郵件"; }else{echo "Mail"; } ?>&nbsp;:&nbsp;</span><span><?php echo $email;?></span></p>
                 <p><span><?php if($locale == "zh_TW"){echo "連絡電話"; }else{echo "Tel"; } ?>&nbsp;:&nbsp;</span><span><?php echo $phone;?></span></p>
             </div>  
+            <div class="block-deco short"></div>
             <?php if( $self_intro ): ?>
             <div class="<?php if($locale == "zh_TW"){echo "right_block";}else{echo "en_right_block"; } ?>">
                 <span class="right_block_title"><?php if($locale == "zh_TW"){echo "關於我"; }else{echo "About me"; } ?></span>

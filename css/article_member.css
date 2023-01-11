@@ -372,13 +372,13 @@
         width: auto;
     }
 
-    .member_picture{
+    .member_picture, .staff_picture{
         width: auto;
         height: 52vw;
         border-radius: 12px;
     }
     
-    .member_picture img{
+    .member_picture img, .staff_picture img{
         width: 89.33vw;
         height: 52vw;
         object-fit: cover;
@@ -430,5 +430,9 @@
 
     .right_block_content > li{
         letter-spacing: 2px;
+    }
+
+    .contact{
+        margin-top: 3vw;
     }
 }

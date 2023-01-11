@@ -227,6 +227,17 @@
     .title{
         margin-left: 4px;
     }
+
+    .staff-name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .work_group{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 768px){
@@ -258,6 +269,10 @@
     .member_picture img{
         width: 23.5vw;
         height: 15vw;
+    }
+
+    .work_group{
+        font-size: 13px;
     }
 }
 
@@ -338,5 +353,19 @@
 
     .select_bar_container {
         border-bottom: none;
+    }
+
+    .work_group{
+        font-size: 16px;
+    }
+
+    .staff_picture{
+        width: 89.333vw;
+        height: 52vw;
+    }
+
+    .staff_picture img{
+        width: 89.333vw;
+        height: 52vw;
     }
 }
