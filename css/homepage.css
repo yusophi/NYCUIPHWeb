@@ -1477,7 +1477,7 @@
     }
 
     .ch-title {
-        font-size: 19.008px;
+        font-size: 5.0688vw;
         font-weight: bold;
         line-height: 25.008px;
         letter-spacing: 2.85px;
@@ -1485,10 +1485,14 @@
     }
 
     .en-title {
-        font-size: 14px;
+        font-size: 3.733vw;
         font-weight: bold;
         letter-spacing: 0.7px;
         margin: 0;
+    }
+
+    .event-title {
+        margin-top: 40px;
     }
 
     .news_title{
@@ -1509,11 +1513,13 @@
     }
 
     .event-slider-item {
-        margin-left: 5.333vw;
-        width: 80vw;
-        height: 136.533vw;
         min-width: 0;
         max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 89.33vw;
+        height: 68.26vw;
+        margin-bottom: 20px;
     }
 
     #event-icon-prev, #event-icon-next {
@@ -1536,15 +1542,7 @@
     }
 
     .sm-event-pic {
-        display: block;
-        margin-top: 5.333vw;
-        width: 64vw;
-        height: 49.333vw;
-    }
-
-    .sm-event-pic img {
-        width: 100%;
-        height: 100%;
+        display: none;
     }
 
     .event-mask, .single-event, .event-mask::after {
@@ -1740,5 +1738,14 @@
 
     .profile_p2, .profile_p3 {
         color: #647386;
+    }
+
+    #event-slider-container {
+        flex-direction: column;
+    }
+
+    .event-info .sdg-tag {
+        margin-top: 6px;
+        height: 16.5px;
     }
 }
