@@ -119,15 +119,15 @@ ul.table{
     font-weight: 500;
     line-height: 1.59;
     letter-spacing: 1.1px;
-    width: 23.59vw;
+    width: 20vw;
 }
 
 .tdata-group1{
-    width: 21.35vw;
+    width: 20vw;
 }
 
 .tdata-group2{
-    width: 37.23vw;
+    width: 42vw;
 }
 
 .tdata > span{
@@ -236,26 +236,47 @@ img.icon_download{
         align-items: center;
     }
 
-    img.icon_download{
-        width: 10vw;
-        height: 7vw;
+    .more_btn, .more_icon{
+        width: 5vw;
+        height: 5vw;
     }
 
-    .more_btn_hover{
+    img.icon_download{
+        width: 13vw;
+        height: 6vw;
+    }
+
+    .more_btn:hover{
+        width: auto;
+    }
+    
+    .more_btn_text{
         display: none;
     }
     
     .flex-wrapper{
         flex-direction: column;
-        align-items: flex-end;
-        margin: 2vw 0;
+        align-items: flex-start;
     }
 
     .thead li, .tr li{
-        padding: 15px;
+        padding: 15px 7px;
     }
 
-    .margin-left{
-        margin: 2vw 0;
+    .tdata{
+        margin-left: 0;
+        margin-bottom: 3vw;
+    }
+
+    .tdata-year{
+        width: 10vw;
+    }
+
+    .tdata-group1{
+        width: 48vw;
+    }
+
+    .tdata-group2{
+        width: 34vw;
     }
 }

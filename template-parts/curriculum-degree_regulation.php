@@ -89,7 +89,7 @@
                                             <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                         </a>
                                         <a class="tdata" href="<?php echo esc_url($group_data['mandatory_course']);?>" target="_blank">
-                                            <span>所必選課程（核心三選二）</span>
+                                            <span>所必選課程(核心三選二)&nbsp;</span>
                                             <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                                         </a>
                                         <a class="tdata" href="<?php echo esc_url($group_data['domain_mandatory_course']);?>" target="_blank">
