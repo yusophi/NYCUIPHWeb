@@ -309,16 +309,16 @@ function wpdocs_ref_access() {
     }
     if(is_page('course_architecture')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
-      wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum_arch.css')); 
+      wp_enqueue_style('curriculum_arch_style', get_theme_file_uri('css/curriculum-arch.css')); 
     }
     elseif(is_page('degree_regulation') || is_page('degree_regulation-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
-      wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/degree_regulation.css')); 
+      wp_enqueue_style('curriculum_degree_style', get_theme_file_uri('css/curriculum-degree_regulation.css')); 
       wp_enqueue_script('read_more_script', get_theme_file_uri('js/curriculum_read_more.js'), true);
     }
     elseif(is_page('course_schedule') || is_page('course_schedule-en')){
       wp_enqueue_style('mytheme_page-curriculum_style', get_theme_file_uri('css/curriculum.css')); 
-      wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/course_schedule.css')); 
+      wp_enqueue_style('curriculum_schedule_style', get_theme_file_uri('css/curriculum-course_schedule.css')); 
     }
 
     if(is_page('applications')){
