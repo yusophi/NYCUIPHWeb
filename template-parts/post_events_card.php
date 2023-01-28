@@ -11,32 +11,34 @@
                 </div>
                 <div class="event-date"><?php the_field('event_date');?> </div>
                 <div class="sm-event-pic"><img src="<?php bloginfo('template_url')?>/images/icon/pic-seminar.svg"></div>
-                <div class="hp_event_tag">
-                    <div class="post_category">
-                        <?php $event_cat = get_field('event_item');
-                            if($locale == "en_US"){
-                                if($event_cat == "學術演講"){
-                                    echo "Seminar";
-                                }elseif($event_cat == "讀書會"){
-                                    echo "Study group";                                
+                <div class="event_tags">
+                    <div class="hp_event_tag">
+                        <div class="post_category">
+                            <?php $event_cat = get_field('event_item');
+                                if($locale == "en_US"){
+                                    if($event_cat == "學術演講"){
+                                        echo "Seminar";
+                                    }elseif($event_cat == "讀書會"){
+                                        echo "Study group";
+                                    }
                                 }
-                            }
-                            else{
-                                echo $event_cat;
-                            }
-                        ?>
+                                else{
+                                    echo $event_cat;
+                                }
+                            ?>
+                        </div>
+                        <div class="event-location"><?php the_field('event_location'); ?></div>
                     </div>
-                    <div class="event-location"><?php the_field('event_location'); ?></div>
+                    <?php
+                            $sdgs = get_field('sdg');
+                            if( $sdgs ): ?>
+                                <ul class="sdg-tag ">
+                                        <?php foreach( $sdgs as $sdg ): ?>
+                                            <li><?php echo $sdg; ?></li>
+                                        <?php endforeach; ?>
+                                </ul>
+                    <?php endif; ?>
                 </div>
-                <?php
-                        $sdgs = get_field('sdg');
-                        if( $sdgs ): ?>
-                            <ul class="sdg-tag ">
-                                    <?php foreach( $sdgs as $sdg ): ?>
-                                        <li><?php echo $sdg; ?></li>
-                                    <?php endforeach; ?>
-                            </ul>
-                <?php endif; ?>
             </div>
         </div>
         <div class="event-name">
