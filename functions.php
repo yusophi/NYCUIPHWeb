@@ -7,7 +7,6 @@
         )
     );
 ?>
-
 <?php
 // Disable wp-embed
 function disable_embed_feature(){
@@ -56,9 +55,7 @@ function disable_emojis_tinymce($plugins)
     return $plugins;
 }
 add_action('init', 'disable_emoji_feature');
-
 ?>
-
 <?php
 // Require Authentication for All Requests (REST API)
 add_filter( 'rest_authentication_errors', function( $result ) {
@@ -82,7 +79,6 @@ add_filter( 'rest_authentication_errors', function( $result ) {
     return $result;
 });
 ?>
-
 <?php
   remove_action('init', 'wp_admin_bar_init');
   add_action('get_header', 'my_filter_head');
@@ -99,7 +95,6 @@ add_filter( 'rest_authentication_errors', function( $result ) {
     @ini_set('session.use_only_cookies', true);
   } 
 ?>
-
 <?php
 $rand = wp_rand();
 $nonce = wp_create_nonce('nonce');
@@ -175,9 +170,7 @@ function wpdocs_ref_access() {
   }
 }
 */
-
 ?>
-
 <?php
   function my_custom_post_staff() {
     $labelsss = array(
@@ -211,7 +204,6 @@ function wpdocs_ref_access() {
   }
   add_action( 'init', 'my_custom_post_staff' );
 ?>
-
 <?php
   function wpb_image_editor_default_to_gd( $editors ) {
       $gd_editor = 'WP_Image_Editor_GD';
@@ -221,7 +213,6 @@ function wpdocs_ref_access() {
   }
   add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 ?>
-
 <?php
   add_image_size( 'post-thumb', 483, 218, array( 'center', 'top' ) ); // Hard crop x:center y:top
   add_image_size( 'hp-interview-thumb', 1576, 620, array( 'center', 'top' ) ); // Hard crop x:center y:top
@@ -238,8 +229,6 @@ function wpdocs_ref_access() {
 
 }
 ?>
-
-
 <?php
   //enqueue the stylesheet
   function mytheme_style_files() { 
@@ -361,7 +350,6 @@ function wpdocs_ref_access() {
   } 
   add_action('wp_enqueue_scripts', 'mytheme_style_files');
 ?>
-
 <?php
 // post filter function
 add_action('wp_ajax_filter', 'filter_ajax');
@@ -629,7 +617,6 @@ function filter_ajax() {
   die();
 } 
 ?>
-
 <?php /* create custom post type called "papers"*/
 // Creating a Deals Custom Post Type
 function paper_custom_post_type() {
@@ -671,7 +658,6 @@ function paper_custom_post_type() {
 }
 add_action( 'init', 'paper_custom_post_type', 0 );
 ?>
-
 <?php // Let us create Taxonomy for Custom Post Type
 add_action( 'init', 'create_paper_custom_taxonomy', 0 );
  
@@ -700,7 +686,6 @@ function create_paper_custom_taxonomy() {
   ));
 }
 ?>
-
 <?php
 /**
  * This function modifies the main WordPress query to include an array of 
@@ -715,7 +700,6 @@ function tg_include_custom_post_types_in_search_results( $query ) {
 }
 add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );*/
 ?>
-
 <?php
 /**
  * Extend WordPress search to include custom fields
@@ -770,7 +754,6 @@ function cf_search_distinct( $where ) {
 }
 add_filter( 'posts_distinct', 'cf_search_distinct' );
 ?>
-
 <?php
 add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
  
@@ -784,7 +767,6 @@ function add_cpt_to_pll( $post_types, $is_settings ) {
     }
     return $post_types;
 }?>
-
 <?php
   function custom_polylang_languages_switcher( $class = '' ) {
     if ( ! function_exists( 'pll_the_languages' ) ) return;

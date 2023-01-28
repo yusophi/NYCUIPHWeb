@@ -2,9 +2,6 @@ function show(table_id, row_name){
     var whole_rows = document.getElementById(table_id).getElementsByClassName(row_name);
     var current_shown = document.getElementById(table_id).getElementsByClassName("shown");
     
-    console.log(whole_rows.length);
-    console.log(current_shown.length);
-
     if( current_shown.length > 3){
         while(current_shown.length > 3){
             var cur_len = current_shown.length;
