@@ -248,35 +248,37 @@
                   <?php endif; ?>
                   <span class="en-title">About IPH</span>
             </div>
-            <div class="sphn-about-container">
+            <!--<div class="sphn-about-container">
                   <div class="sphn-about-block">
-                        <?php if($locale == "zh_TW"):?>
+                        <?php /*if($locale == "zh_TW"):
+                              $intro = get_field('iph_intro');  */    
+                        ?>
                         <div>
-                              <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
-                              <div class="iph_en"> <?php the_field('iph_en'); ?></div>
+                              <div class="iph_ch"> <?php //the_field('iph_ch'); ?></div>
+                              <div class="iph_en"> <?php //the_field('iph_en'); ?></div>
                         </div>
-                        <div class="iph_intro"> <?php the_field('sphn_iph_intro'); ?></div>
-                        <?php else: ?>
-                        <div class="iph_en_title"> <?php the_field('iph_en'); ?></div>
-                        <div class="iph_intro_en"> <?php the_field('sphn_iph_intro'); ?></div>
-                        <?php endif; ?>
-                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
+                        <div class="iph_intro"> <?php //echo mb_substr($intro, 0, 97);//the_field('sphn_iph_intro'); ?></div>
+                        <?php //else: ?>
+                        <div class="iph_en_title"> <?php //the_field('iph_en'); ?></div>
+                        <div class="iph_intro_en"> <?php //the_field('sphn_iph_intro'); ?></div>
+                        <?php //endif; ?>
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php //echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
                               read more
-                              <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-                              <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+                              <img class="plus_icon" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
+                              <img class="plus_icon_hover" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
                         </a>
                   </div>
                   <div class="sphn-about-block">
-                        <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
-                        <div class="iph_en"> <?php the_field('iph_en'); ?></div>
-                        <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
-                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
+                        <div class="iph_ch"> <?php //the_field('iph_ch'); ?></div>
+                        <div class="iph_en"> <?php //the_field('iph_en'); ?></div>
+                        <div class="iph_intro"> <?php //the_field('iph_intro'); ?></div>
+                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php //echo site_url(); ?>/<?php //if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
                               read more
-                              <img class="plus_icon" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-                              <img class="plus_icon_hover" src="<?php bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
+                              <img class="plus_icon" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
+                              <img class="plus_icon_hover" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
                         </a>
                   </div>
-            </div>
+            </div>-->
             <div class="Aboutus-content-container">
                   <div class="intro_content">
                         <div class="intro_content-text <?php if($locale == "en_US"){echo 'intro_content-text-en';} ?>">
@@ -284,6 +286,7 @@
                               <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
                               <div class="iph_en"> <?php the_field('iph_en'); ?></div>
                               <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
+                              <div class="sphn-iph_intro"><?php $intro = get_field('iph_intro'); echo mb_substr($intro, 0, 97);?></div>
                               <?php else: ?>
                               <div class="iph_en_title"> <?php the_field('iph_en'); ?></div>
                               <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>

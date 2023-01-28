@@ -23,21 +23,27 @@
     <div class="dep_passage"><?php the_field('dep_ph_intro'); ?></div>
     <div class="dep_title top_margined"><?php if($locale == "zh_TW"){echo "課程設計";}else{echo "Content of Course";}?><br><br></div>
     <div class="dep_table">
-        <div class="table_heads">
+        <ul class="table">
             <?php if($locale == "zh_TW"): ?>
-            <div>學系</div>
-            <div>課程名稱</div>
-            <div>學分數</div>
-            <div>選別</div>
+            <li class="thead">
+                <ol class="tr">
+                    <li class="align-left">學系</li>
+                    <li class="align-left">課程名稱</li>
+                    <li class="align-center">學分數</li>
+                    <li class="align-center">選別</li>
+                </ol>
+            </li>
             <?php else: ?>
-            <div>Department</div>
-            <div>Course title</div>
-            <div>Credit</div>
-            <div>Compulsory/ Elective</div>
+            <li class="thead">
+                <ol class="tr">
+                    <li class="align-left">Department</li>
+                    <li class="align-left">Course title</li>
+                    <li class="align-center">Credit</li>
+                    <li class="align-center">Compulsory/ Elective</li>
+                </ol>
+            </li>
             <?php endif; ?>
-        </div>
-        <div class="table_hr"></div>
-
+            <li class="tbody">
         <?php $curriculum = get_field('curriculum')?>
         <?php if($curriculum) :?>
             <?php 
@@ -52,18 +58,19 @@
                         $type = $group_data['type'];
                     ?>
                     <?php if($course_name): ?>
-                        <div class="table_row">
-                            <div><?php echo $dep?></div>
-                            <div><?php echo $course_name?></div>
-                            <div><?php echo $credit?></div>
-                            <div><?php echo $type?></div>
-                        </div>
-                        <div class="table_hr"></div>
+                        <ol class="tr">
+                            <li class="align-left"><?php echo $dep; ?></li>
+                            <li class="align-left"><?php echo $course_name; ?></li>
+                            <li class="align-center"><?php echo $credit; ?></li>
+                            <li class="align-center"><?php echo $type; ?></li>
+                        </ol>
                     <?php endif;
                         $count = $count + 1;
                     ?>
                 <?php endwhile;?>
         <?php endif;?>
+            </li>
+        </ul>
     </div>
 </div>
 <?php get_template_part('template-parts/backtoTOP'); ?>

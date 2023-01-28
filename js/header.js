@@ -28,9 +28,12 @@ var dropdown_menus = document.getElementsByClassName("dropdown-menu");
 var nav_hamburger = document.getElementById("nav-hamburger");
 var nav_arrow = document.getElementsByClassName("nav-arrow");
 var nav_arrow_down = document.getElementsByClassName("nav-arrow-down");
+var svg_hamburger = document.getElementById("sm-img-hamburger");
+var svg_esc = document.getElementById("sm-img-esc");
 
 nav_hamburger.addEventListener("click", function () {
     main_nav.classList.toggle("sm-nav-strech");
+    nav_hamburger.classList.toggle("sm-nav-open");
 });
 
 window.addEventListener("scroll", function () {
@@ -66,6 +69,7 @@ for (var i = 0; i < nav_arrow.length; i++) {
   nav_arrow[i].numParam = i;
   nav_arrow[i].addEventListener("click", function () {
     if (dropdown_menus[this.numParam].style.display == "none") {
+        //if the drpopdown is not open, open it
         for (var j = 0; j < dropdown_menus.length; j++) {
             dropdown_menus[j].style.display = "none";
         }
@@ -73,8 +77,9 @@ for (var i = 0; i < nav_arrow.length; i++) {
         nav_arrow_down[this.numParam].style.transform = "scaleY(-1)";
     }
     else {
-      dropdown_menus[this.numParam].style.display = "none"
-      nav_arrow_down[this.numParam].style.transform = "none";
+        //if the dropdown is open, close it
+        dropdown_menus[this.numParam].style.display = "none"
+        nav_arrow_down[this.numParam].style.transform = "none";
     }
 });
 }

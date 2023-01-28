@@ -552,7 +552,7 @@ h1.article-title{
     cursor: pointer;
 }
 
-#nav-toolbar #nav-hamburger {
+.sm-nav-toolbar{
     display: none;
 }
 
@@ -595,6 +595,10 @@ h1.article-title{
     display: none;
 }
 
+#sm-img-hamburger, #sm-img-esc{
+    display: none;
+}
+
 @media (max-width:960px) {
     #logo {
         width: 36px;
@@ -617,14 +621,6 @@ h1.article-title{
         line-height: 16.5px;
         letter-spacing: 0.25px;
     }
-
-    /*#nav-toolbar {
-        width: 108.5px;
-    }
-    #nav-toolbar div {
-        width: 16px;
-        height: 16px;
-    }*/
 
     .nav-menu-pullup {
         transform: translateY(-80px);
@@ -661,8 +657,40 @@ h1.article-title{
 }
 
 @media (max-width:700px) {
-    #nav-toolbar #nav-hamburger {
+    #nav-toolbar{
+        display: none;
+    }
+
+    .sm-nav-toolbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #sm-nav-toolbar-outer #nav-hamburger {
+        display: block;   
+        margin-left: 5vw;
+    }
+
+    #sm-img-hamburger{
         display: block;
+    }
+
+    .sm-nav-open > #sm-img-esc{
+        display: block;
+    }
+
+    .sm-nav-open > #sm-img-hamburger{
+        display: none;
+    }
+
+    #sm-nav-toolbar-inner{
+        margin-top: 3vw;
+    }
+
+    #icon-alumni_entry{
+        margin-left: 5vw;
     }
 
     #nav-hr {
@@ -764,7 +792,7 @@ h1.article-title{
         font-size: 15.008px;
     }
 
-    #nav-toolbar > #icon-search {
+    /*#nav-toolbar > #icon-search {
         display: none;
     }
 
@@ -774,7 +802,7 @@ h1.article-title{
 
     #nav-toolbar > #icon-alumni_entry {
         display: none;
-    }
+    }*/
 
     .nav-container {
         height: calc(100vh - 77px);
@@ -794,17 +822,17 @@ h1.article-title{
         padding-bottom: 14.05px;
     }
 
-    .sm-nav-strech #icon-en {
+    /*.sm-nav-strech #icon-en {
         display: none;
     }
 
     .sm-nav-strech #nav-toolbar > #icon-calendar {
-        display: block;
+        display: none;
     }
 
     .sm-nav-strech #nav-toolbar > #icon-alumni_entry {
         display: block;
-    }
+    }*/
 
     .nav-arrow-down {
         position: relative;

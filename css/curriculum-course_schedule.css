@@ -77,23 +77,19 @@ img.icon_download{
 
     .file_title{
         line-height: 1.5;
+        letter-spacing: 2.85px;
     }
 
     a.file_name{
         line-height: 1.4;
+        font-size: 16px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
     }
 
     img.icon_download{
         width: 10.93vw;
         height: 5.6vw;
-    }
-    .file_link > a{
-        font-size: 3.2vw;
-        margin-bottom: 20px;
-    }
-
-    .file_title._font40 {
-        letter-spacing: unset;
     }
 
     .links {
