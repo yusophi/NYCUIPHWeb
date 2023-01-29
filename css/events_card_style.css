@@ -299,6 +299,7 @@
     .hp_event_tag {
         width: unset;
         margin-top: 5px;
+        flex-wrap: wrap;
     }
 
     .event-name {
