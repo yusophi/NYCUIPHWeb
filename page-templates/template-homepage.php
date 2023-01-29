@@ -250,48 +250,17 @@
                   <?php endif; ?>
                   <span class="en-title">About IPH</span>
             </div>
-            <!--<div class="sphn-about-container">
-                  <div class="sphn-about-block">
-                        <?php /*if($locale == "zh_TW"):
-                              $intro = get_field('iph_intro');  */    
-                        ?>
-                        <div>
-                              <div class="iph_ch"> <?php //the_field('iph_ch'); ?></div>
-                              <div class="iph_en"> <?php //the_field('iph_en'); ?></div>
-                        </div>
-                        <div class="iph_intro"> <?php //echo mb_substr($intro, 0, 97);//the_field('sphn_iph_intro'); ?></div>
-                        <?php //else: ?>
-                        <div class="iph_en_title"> <?php //the_field('iph_en'); ?></div>
-                        <div class="iph_intro_en"> <?php //the_field('sphn_iph_intro'); ?></div>
-                        <?php //endif; ?>
-                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php //echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
-                              read more
-                              <img class="plus_icon" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-                              <img class="plus_icon_hover" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-                        </a>
-                  </div>
-                  <div class="sphn-about-block">
-                        <div class="iph_ch"> <?php //the_field('iph_ch'); ?></div>
-                        <div class="iph_en"> <?php //the_field('iph_en'); ?></div>
-                        <div class="iph_intro"> <?php //the_field('iph_intro'); ?></div>
-                        <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php //echo site_url(); ?>/<?php //if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
-                              read more
-                              <img class="plus_icon" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_blue.svg">
-                              <img class="plus_icon_hover" src="<?php //bloginfo('template_url') ?>/images/icon/icon-plus_white.svg">
-                        </a>
-                  </div>
-            </div>-->
             <div class="Aboutus-content-container">
                   <div class="intro_content">
                         <div class="intro_content-text <?php if($locale == "en_US"){echo 'intro_content-text-en';} ?>">
                               <?php if($locale == "zh_TW"):?>
-                              <div class="iph_ch"> <?php the_field('iph_ch'); ?></div>
-                              <div class="iph_en"> <?php the_field('iph_en'); ?></div>
-                              <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
-                              <div class="sphn-iph_intro"><?php $intro = get_field('iph_intro'); echo mb_substr($intro, 0, 97);?></div>
+                                    <div class="iph_ch"><?php the_field('iph_ch'); ?></div>
+                                    <div class="iph_en"><?php the_field('iph_en'); ?></div>
+                                    <div class="iph_intro"> <?php the_field('iph_intro'); ?></div>
+                                    <div class="sphn-iph_intro"><?php $intro = get_field('iph_intro'); echo mb_substr($intro, 0, 96);?></div>
                               <?php else: ?>
-                              <div class="iph_en_title"> <?php the_field('iph_en'); ?></div>
-                              <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>
+                                    <div class="iph_en_title"> <?php the_field('iph_en'); ?></div>
+                                    <div class="iph_intro_en"> <?php the_field('iph_intro'); ?></div>
                               <?php endif; ?>
                         </div>
                         <a class="bt-readmore animation1_btn" id="aboutUS_intro_btn" href="<?php echo site_url(); ?>/<?php if($locale == "zh_TW"){echo "about";}else{echo "about-en";}?>/">
@@ -308,8 +277,6 @@
                               <div class="video_title video1 <?php if($locale == "en_US"){echo 'video_title-en';} ?>"> <?php the_field('video_title1') ?></div>  
                               
                               <div class="bt-watchmore animation1_btn" id="hp-watchmore-1">watch
-                                    <!--<div class="watch_space"></div>
-                                    <div class="watch_text">watch</div>-->
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                               </div>  
@@ -325,8 +292,6 @@
                               <img class="icon_aboutus_2 video2" src="<?php bloginfo('template_url')?>/images/icon/icon-aboutus-3.svg">
                               <div class="video_title video2 <?php if($locale == "en_US"){echo 'video_title-en';} ?>"> <?php the_field('video_title2') ?></div>    
                               <div class="bt-watchmore animation1_btn" id="hp-watchmore-2">watch
-                                    <!--<div class="watch_space"></div>
-                                    <div class="watch_text">watch</div>-->
                                     <img class="watch_icon" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_blue.svg">
                                     <img class="watch_icon_hover" src="<?php bloginfo('template_url')?>/images/icon/icon-watch_yellow.svg">
                               </div>
@@ -438,20 +403,6 @@
                   </div>
             </div>
       </div>
-
-      <!-- Milo: 從這裡開始是links的內容 -->
-      <?php //if($locale == "zh_TW"):?> 
-      <!--<div class="Links-container">
-            <div class="block-title links_title">
-                  <img class="icon" src="<?php //bloginfo('template_url') ?>/images/icon/icon-links.svg">
-                  <span class="ch-title">相關連結<br></span>
-                  <span class="en-title">Links</span>
-            </div>
-            <?php //get_template_part('template-parts/links','content');?>
-      </div>
-      <?php //endif; ?>
-      -->
-      <!-- Milo: links結束 -->
 
       <!-- Jenny: Contact Us block start-->
       <div class="ContactUs-container <?php if($locale == 'en_US'){echo 'ContactUs-container-en';} ?>" > 

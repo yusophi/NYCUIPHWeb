@@ -1178,10 +1178,6 @@
     max-width: 25.104166666vw;;
 }
 
-.sphn-about-container {
-    display: none;
-}
-
 @media (max-width: 1130px) {
     #event-slider-container-outer {
         transform: translateX(calc(-1000px + 32.6vw));
@@ -1233,11 +1229,11 @@
         height: 225px;
     }
     .main-event .single-event {
-        height: 251px;
+        height: 100%;
     }
     .main-event .event-mask {
         top: calc((100% - 251px) / 2);
-        height: 251px;
+        height: 100%;
     }
     .event-mask.event-to-brighter {
         top: calc((100% - 251px) / 2);
@@ -1351,11 +1347,16 @@
     }
 
     .video_title {
-        font-size: 12.5px;
+        font-size: 16px;
     }
 
     .staff_name {
-        font-size: 12.5px;
+        font-size: 16px;
+    }
+
+    .work_respon{
+        font-size: 14px;
+        padding: 0;
     }
 
     #out_WR {
@@ -1363,7 +1364,7 @@
     }
 
     .contact_title, .email, .phone_num, .self_intro {
-        font-size: 10px;
+        font-size: 14px;
         line-height: 17.504px;
     }
 
@@ -1384,6 +1385,100 @@
         width: 22.08px;
         height: 3px;
         margin: 0 9.6px;
+    }
+
+    .Aboutus-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        min-height: 410px;
+    }
+
+    .iph_intro, .deco_waves, .Interview-container {
+        display: none;
+    }
+
+    .sphn-iph_intro{
+        display: block;
+    }
+
+    .intro_content{
+        margin-left: 0;
+        width: 68vw;
+        padding: 7vw;
+        box-shadow: 6px 6px 15px 0 rgb(255 111 0 / 30%);
+    }
+
+    .intro_content-text{
+        margin: 2vw;
+    }
+
+    .iph_ch, .iph_en, .iph_en_title, .sphn-iph_intro, .iph_intro_en {
+        width: unset;
+        font-family: "Noto Sans TC", sans-serif;
+        text-align: left;
+    }
+
+    .iph_ch{
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 3.75px;
+        color: #2e4565;
+        margin-top: 0;
+    }
+
+    .iph_en, .iph_en_title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.7px;
+        color: #2e4565;
+    }
+
+    .iph_en_title{
+        font-size: 18px;
+        letter-spacing: 0;
+        margin-bottom: 5vw;
+    }
+
+    .iph_intro_en {
+        font-size: 16px;
+        margin-top: 0;
+        margin-left: 0;
+        hyphens: auto;
+    }
+
+    .sphn-iph_intro{
+        font-size: 16px;
+        margin-top: 8vw;
+        margin-left: 0;
+        line-height: 1.79;
+        letter-spacing: 2.1px;
+        text-align: left;
+        color: #647386;
+    }
+
+    .videos {
+        width: 82vw;
+        margin-right: 0vw;
+        float: unset;
+        background-color: transparent;
+        border-radius: 0vw;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .module{
+        border-radius: 3.125vw;
+        box-shadow: 6px 6px 15px 0 rgba(255, 111, 0, 0.3);
+        padding: 7vw;
+        align-items: center;
+        margin: 4vw 0;
+    }
+
+    .ContactUs-container{
+        padding: 10vw;
     }
 }
 
@@ -1430,7 +1525,7 @@
     #administor_profile_block{
         flex-direction: column;
         align-items: center;
-        width: 89.333vw;
+        margin: 5vw 0;
     }
 
     .profile{
@@ -1441,7 +1536,7 @@
     }
 
     .profile_p1, .profile_p2, .profile_p3 {
-        margin-top: 2vw;
+        margin: 4vw 0;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1478,7 +1573,7 @@
     }
 
     .ch-title {
-        font-size: 5.0688vw;
+        font-size: 22px;
         font-weight: bold;
         line-height: 25.008px;
         letter-spacing: 2.85px;
@@ -1486,7 +1581,7 @@
     }
 
     .en-title {
-        font-size: 3.733vw;
+        font-size: 18px;
         font-weight: bold;
         letter-spacing: 0.7px;
         margin: 0;
@@ -1564,36 +1659,6 @@
         margin-top: calc(2vw + 40px);
     }
     
-    .Aboutus-content-container {
-        /*display: none;*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-        min-height: 410px;
-    }
-
-    .videos {
-        width: 89.3;
-        margin-right: 0vw;
-        float: unset;
-        margin-top: 8vw;
-        width: fit-content;
-        background-color: transparent;
-        border-radius: 0vw;
-        box-shadow: none;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .module{
-        border-radius: 3.125vw;
-        box-shadow: 6px 6px 15px 0 rgba(255, 111, 0, 0.3);
-        padding: 13% 10%;
-        margin: 7vw 0;
-        align-items: center;
-    }
-
     .icon_aboutus_2{
         margin: 0;
     }
@@ -1604,89 +1669,6 @@
 
     .video_title{
         font-size: 16px;
-    }
-
-    .sphn-about-container {
-        margin-top: 40px;
-        min-height: 410px;
-        display: flex;
-        flex-direction: row;
-        width: fit-content;
-    }
-
-    .About-container {
-        align-items: unset;
-        padding-bottom: 0;
-    }
-
-    .sphn-about-block {
-        min-width: 80vw;
-        height: 109.333vw;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 7px 10px 20px 0 rgba(255, 111, 0, 0.3);
-        border-radius: 6.667vw;
-        margin-left: 5.333vw;
-        padding: 10.667vw 8vw;
-        box-sizing: border-box;
-        overflow: hidden;
-        justify-content: space-between;
-    }
-
-    .intro_content{
-        margin-left: 0;
-        width: 79.3vw;
-        padding: 7vw;
-    }
-
-    .intro_content-text{
-        margin: 2vw;
-    }
-
-    .iph_intro{
-        display: none;
-    }
-
-    .iph_ch, .iph_en, .iph_en_title, .sphn-iph_intro, .iph_intro_en {
-        width: unset;
-        font-family: "Noto Sans TC", sans-serif;
-        text-align: left;
-    }
-
-    .iph_ch{
-        font-size: 6.669vw;
-        font-weight: bold;
-        letter-spacing: 3.75px;
-        color: #2e4565;
-        margin-top: 0;
-    }
-
-    .iph_en, .iph_en_title {
-        font-size: 3.733vw;
-        font-weight: bold;
-        letter-spacing: 0.7px;
-        color: #2e4565;
-    }
-
-    .iph_intro_en {
-        font-size: 3.733vw;
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-    .sphn-iph_intro{
-        font-size: 16px;
-        margin-top: 8vw;
-        margin-left: 0;
-        font-size: 16px;
-        line-height: 1.79;
-        letter-spacing: 2.1px;
-        text-align: left;
-        color: #647386;
-    }
-
-    .sphn-about-block .bt-readmore {
-        margin-left: auto;
     }
 
     .Specialization-container {
@@ -1729,10 +1711,6 @@
         height: 46.933vw;
         border-radius: 3.75vw;
         object-fit: cover;
-    }
-
-    .deco_waves, .Interview-container {
-        display: none;
     }
 
     .links_title .icon {
@@ -1778,12 +1756,12 @@
 
     .profile-header {
         width: 89.333vw;
-        height: 84.266vw;
+        height: 52vw;
     }
 
     .profile-header img {
         width: 89.333vw;
-        height: 84.266vw;
+        height: 52vw;
         object-fit: cover;
     }
 

@@ -169,9 +169,7 @@
     }
     
     .watch_icon_hover{
-        transform: translateX(-100%);
-        width: 19.65px;
-        height: 14.75px;
+        display: none;
     }
 
     .bt-watchmore {
