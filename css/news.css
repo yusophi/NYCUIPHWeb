@@ -11,7 +11,6 @@
 .post_block{
     width: 82vw;
     height: auto;
-    margin-top: 7.8125vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,7 +197,7 @@
     
 }
 
-@media (max-width: 970px) {
+@media (max-width: 960px) {
     /*since most device from 768px to 970px will get wrong layout,
     increase the breakpoint in the page*/
     .select_bar_container{
@@ -206,10 +205,11 @@
     }
 
     .cat-list{
-        width: 57vw;
+        width: 82vw;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-left: -4.5vw;
+        align-items: flex-start;
+        margin-left: 0;
     }
 
     .news-article{
@@ -225,31 +225,22 @@
         margin-bottom: 5vw;
     }
 
-    .pagination .next{
-        width: 2.5vw;
-        height: 2.5vw;
-        margin-left: 28vw;
-        margin-top: -2.5vw;
+    .cat-list_item_name{
+        font-size: 16px;
     }
 
-    .pagination .prev{
-        width: 2.5vw;
-        height: 2.5vw;
-        margin-left: -32vw;
-        margin-top: -2.5vw;
+    .page-numbers {
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .pagination .prev, .pagination .next{
+        position: relative;
+        background-image: none;
+        font-size: 14px;
+        margin: 0;
     }
     
-}
-
-@media (max-width: 960px) {
-    .cat-list_item_name {
-        font-size: 10px;
-        margin-left: 12.48px;
-    }
-
-    .page-numbers{
-        font-size: 10px;
-    }
 }
 
 @media (max-width: 480px){
@@ -269,9 +260,14 @@
 
     .cat-list{
         width: 82vw;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        align-items: flex-start;
         margin-left: 0;
+    }
+
+    .cat-list_item {
+        padding-bottom: 20px;
     }
     
     .news-article{
@@ -286,21 +282,6 @@
     .pagination{
         margin-bottom: 5vw;
     }
-
-    .pagination .next{
-        width: 2.5vw;
-        height: 2.5vw;
-        margin-left: 12vw;
-        margin-top: -3.5vw;
-    }
-
-    .pagination .prev{
-        width: 2.5vw;
-        height: 2.5vw;
-        margin-left: -18vw;
-        margin-top: -3.5vw;
-    }
-
 
     .post_block {
         width: 100vw;

@@ -137,8 +137,8 @@
                 'end_size' => 3,
                 'mid_size' => 2,
                 'prev_next' => True,
-                'prev_text' => __('<'),
-                'next_text' => __('>'),
+                'prev_text' => __('<<'),
+                'next_text' => __('>>'),
                 'type' => 'list',
             );
             echo paginate_links($args);

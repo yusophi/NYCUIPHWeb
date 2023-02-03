@@ -65,8 +65,6 @@
     </div>
 </div>
 <div class="article-passage">
-    <div class="article-title_bottom_line"></div>
     <div class="excerpt"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
-    <div class="article-excerpt_bottom_line"></div>
 </div>
 <div class="clearfix"></div>
