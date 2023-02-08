@@ -303,10 +303,8 @@
                               </div>
                         </div>
                   </div>
-                  <div class="deco_waves" id="up_waves">
-                        <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave_2.svg">
-                        <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave_3.svg">
-                        <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave_4.svg">
+                  <div class="deco_waves">
+                        <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave.webp">
                   </div>
             </div>
 
@@ -350,10 +348,8 @@
                   </div>
             </div>
 
-            <div class="deco_waves" id="below_wave">
-                  <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave_5.svg">
-                  <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave_6.svg">
-                  <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave_7.svg">
+            <div class="deco_waves">
+                  <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave.webp">
             </div>
 
             <div class="Interview-container">

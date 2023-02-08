@@ -525,17 +525,9 @@
 /* the waves decorations */
 .deco_waves {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
-/* let waves have spacing*/
-.deco_waves img {
+.wave {
     width: 100vw;
-    margin-top: 2%;
-}
-
-#up_waves {
-    top: 64vw;
 }
 
 /*video overlay*/
@@ -678,10 +670,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2vw;
-}
-
-#below_wave {
-    position: relative;
 }
 
 #Specialization_title {
