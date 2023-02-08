@@ -932,21 +932,20 @@
     display: flex;
     flex-direction: column;
     margin-left: 9%;
-    width: 20.833333333vw;
+    width: 19.583vw;
 }
 
 .profile-header {
-    width: 20.833333333vw;
-    height: 22.135416666vw;
+    width: 19.583vw;
+    height: 12.5vw;
     border-radius: 6%;
     overflow: hidden;
     cursor: pointer;
 }
 
 .profile-header img {
-    width: 20.83vw;
-    height: 22.14vw;
-    border-radius: 6%;
+    width: 19.583vw;
+    height: 12.5vw;
     transition-timing-function: ease-out;
     transition-duration: 0.5s;
 }

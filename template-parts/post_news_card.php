@@ -1,6 +1,7 @@
 <?php $locale = get_locale(); ?>
 
 <div class="article-preview-pic">
+    <a href="<?php the_permalink(); ?>">
     <?php $post_thumbnail = get_field('post_thumbnail'); 
         if ($post_thumbnail) : ?>
         <?php //the_post_thumbnail('post-thumb'); ?>
@@ -8,6 +9,7 @@
     <?php else: ?>
         <img src="<?php bloginfo('template_url') ?>\images\page_news\news-preview-pic.webp">
     <?php endif; ?>
+    </a>
 </div>
 <div class="article-title">
     <a href="<?php the_permalink(); ?>">
@@ -65,6 +67,15 @@
     </div>
 </div>
 <div class="article-passage">
-    <div class="excerpt"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
+    <div class="excerpt"> <?php $excerpt = get_field('excerpt'); ?>
+        <?php 
+            if($excerpt){
+                echo $excerpt . "...";
+            }
+            else{
+                echo "詳見內文...";
+            }
+        ?>
+    </div>
 </div>
 <div class="clearfix"></div>
