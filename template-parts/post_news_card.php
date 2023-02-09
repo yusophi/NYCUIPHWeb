@@ -4,7 +4,6 @@
     <a href="<?php the_permalink(); ?>">
     <?php $post_thumbnail = get_field('post_thumbnail'); 
         if ($post_thumbnail) : ?>
-        <?php //the_post_thumbnail('post-thumb'); ?>
         <?php echo wp_get_attachment_image( $post_thumbnail, 'post-thumb'); ?>
     <?php else: ?>
         <img src="<?php bloginfo('template_url') ?>\images\page_news\news-preview-pic.webp">
@@ -42,7 +41,8 @@
 </div>
 <div class="article-attr">
     <div class="article-meta">
-        <img class="icon-clock" src="<?php bloginfo('template_url'); ?>/images/icon/icon-clock.svg">
+        <img class="icon-clock" id="clock_blue" src="<?php bloginfo('template_url'); ?>/images/icon/clock-blue.webp">
+        <img class="icon-clock"id="clock_white" src="<?php bloginfo('template_url'); ?>/images/icon/clock-white.webp">
         <span class="post_time"><?php the_time('Y.m.j'); ?></span>
     </div>
     <div class="post_tags">

@@ -301,15 +301,13 @@
     display: flex;
     flex-direction: row;
     margin-top: 2vw;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .icon-clock {
     width: 1.19791666vw;
     height: 1.19791666vw;
 }
-
 
 @media (max-width:960px) {
     #circle {

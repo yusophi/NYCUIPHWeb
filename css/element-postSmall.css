@@ -105,6 +105,14 @@
     height: 1.1458vw;
 }
 
+#clock_blue{
+    display: block;
+}
+
+#clock_white{
+    display: none;
+}
+
 .post_tags{
     position: relative;
     transition: 450ms ease-in-out;
