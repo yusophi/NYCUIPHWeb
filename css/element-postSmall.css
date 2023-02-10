@@ -199,11 +199,6 @@
     border-top: solid 2px #2e4565;
 }
 
-.article-content:hover .whiteText > .article-passage{
-    transform: translateY(15.5vw);
-    border-top: solid 2px #efeee4;
-}
-
 .article-content:hover .article-preview-pic {
     transform: translateY(-15vw);
 }
@@ -247,16 +242,14 @@
     display: block;
     width: 22.8125vw;
     height: 11.354vw;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .article-preview-pic img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
 }
-
-
 
 @media (max-width:960px) {
     .article-preview-pic {

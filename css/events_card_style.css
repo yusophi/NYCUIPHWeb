@@ -205,7 +205,7 @@
     }
 
     .hp_event_tag > .post_category, .event-info .sdg-tag li, .event-location{
-        font-size: 9px;
+        font-size: 12px;
         line-height: 0.504px;
         letter-spacing: 0.75px;
         padding: 1.44px 8px;
@@ -285,7 +285,7 @@
     .hp_event_tag > .post_category, .event-info .sdg-tag li, .event-location {
         padding: 3px 16px;
         border-radius: 10.5px;
-        font-size: 2.67vw;
+        font-size: 14px;
         line-height: unset;
         height: 16.5px;
         min-height: 0;
