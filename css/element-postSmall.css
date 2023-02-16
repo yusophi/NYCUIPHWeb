@@ -247,12 +247,12 @@
 }
 
 .article-preview-pic img {
-    width: 100%;
-    height: 100%;
+    width: 22.8125vw;
+    height: 11.354vw;
 }
 
 @media (max-width:960px) {
-    .article-preview-pic {
+    .article-preview-pic, .article-preview-pic img {
         width: 219px;
         height: 109px;
     }
@@ -336,7 +336,7 @@
 }
 
 @media (max-width: 768px) {
-    .article-preview-pic {
+    .article-preview-pic, .article-preview-pic img {
         width: 219px;
         height: 109px;
     }
@@ -344,7 +344,8 @@
 
 
 @media (max-width: 480px) {
-    .article-preview-pic {
+    .article-preview-pic, .article-preview-pic img {
+        border-radius: 15px;
         width: 89.333vw;
         height: 52vw;
     }
@@ -391,8 +392,9 @@
     .article-attr {
         margin: 20px 0;
     }
-
-    .article-preview-pic img {
-        border-radius: 15px;
+    
+    .article-preview-pic img{
+        width: 89.333vw;
+        height: 52vw;
     }
 }

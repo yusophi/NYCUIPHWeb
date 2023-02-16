@@ -41,169 +41,91 @@
 
 <div class="data invisible">
     <div id="classes_data">
-        <div class="ls_segment changing_animation non-sphn">
-            <div class="std_clss">
-                <div class="std_cls">碩士班</div>
-                <div class="std_cls">博士班</div>
-            </div>
-            <div class="bubbles">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_right.png">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_left.png">
-            </div>
-            <div class="column_2_ls">
-                <div class="ls_logo">必修<br>課程</div>
-                <div class="ls_content_container">
-                    <div class="ls_content">
-                        <?php the_field('master_required'); ?>
+        <div class="ls_segment changing_animation">
+            <div class="course-data-wrapper">
+                <div class="course-block">
+                    <div class="course-table required-table">
+                        <div class="std_cls">碩士班</div>
+                        <img class="bubble" src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_right.png">
+                        <div class="content-container">
+                            <div class="ls_logo">必修<br>課程</div>
+                            <div class="ls_content_container">
+                                <div class="ls_content">
+                                    <?php the_field('master_required'); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-table selected-table">
+                        <div class="content-container">
+                            <div class="ls_logo">選修<br>課程</div>
+                            <div class="ls_content_container">
+                            <?php
+                                $elective1 = get_field('elective_1');
+                                $elective2 = get_field('elective_2');
+                                $e1_class1 = $elective1['class_1'];
+                                $e2_class2 = $elective1['class_2'];
+                                $e3_class3 = $elective1['class_3'];
+                            ?>
+                                <div class="ls_content electives">
+                                    <div class="ls_title"><?php echo $e1_class1['class_title']; ?></div>
+                                    <?php echo $e1_class1['course_name']; ?>
+                                    <?php if($e1_class1['note']):?>
+                                        <div class="ls_notes"><?php echo $e1_class1['note']; ?></div>
+                                    <?php endif; ?>
+
+                                    <?php if($e2_class2['note']):?>
+                                    <div class="ls_title"><?php echo $e2_class2['class_title']; ?></div>
+                                    <?php echo $e2_class2['course_name']; ?>
+                                        <div class="ls_notes"><?php echo $e2_class2['note']; ?></div>
+                                    <?php endif; ?>
+
+                                    <div class="ls_title"><?php echo $e3_class3['class_title']; ?></div>
+                                    <?php echo $e3_class3['course_name']; ?>
+                                    <?php if($e3_class3['note']):?>
+                                        <div class="ls_notes btm_margined"><?php echo $e3_class3['note']; ?></div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="ls_content_container">
-                    <div class="ls_content">
-                        <?php the_field('phd_required'); ?>
+                <div class="course-block">
+                    <div class="course-table required-table">
+                        <div class="std_cls">博士班</div>
+                        <img class="bubble" src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_left.png">
+                        <div class="content-container">
+                            <div class="ls_logo">必修<br>課程</div>
+                            <div class="ls_content_container">
+                                <div class="ls_content">
+                                    <?php the_field('phd_required'); ?>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="column_2_ls" id="law_required_ls">
-            <?php 
-                $elective1 = get_field('elective_1');
-                $elective2 = get_field('elective_2');?>
+                    <div class="course-table selected-table">
+                        <div class="content-container">
+                            <div class="ls_logo">選修<br>課程</div>
+                            <div class="ls_content_container">
+                                <?php
+                                    $e2_class1 = $elective2['class_1'];
+                                    $e2_class2 = $elective2['class_2'];
+                                ?>
+                                <div class="ls_content electives btm_padding">
+                                    <div class="ls_title"><?php echo $e2_class1['class_title']; ?></div>
+                                    <?php echo $e2_class1['course_name']; ?>
+                                    <?php if($e2_class1['note']):?>
+                                        <div class="ls_notes"><?php echo $e2_class1['note']; ?></div>
+                                    <?php endif; ?>
 
-                <div class="ls_logo">選修<br>課程</div>
-                <div class="ls_content_container">
-                    <?php
-                        $e1_class1 = $elective1['class_1'];
-                        $e2_class2 = $elective1['class_2'];
-                        $e3_class3 = $elective1['class_3'];
-                    ?>
-                    <div class="ls_content electives">
-                        <div class="ls_title"><?php echo $e1_class1['class_title']; ?></div>
-                        <?php echo $e1_class1['course_name']; ?>
-                        <?php if($e1_class1['note']):?>
-                            <div class="ls_notes"><?php echo $e1_class1['note']; ?></div>
-                        <?php endif; ?>
-
-                        <?php if($e2_class2['note']):?>
-                        <div class="ls_title"><?php echo $e2_class2['class_title']; ?></div>
-                        <?php echo $e2_class2['course_name']; ?>
-                            <div class="ls_notes"><?php echo $e2_class2['note']; ?></div>
-                        <?php endif; ?>
-
-                        <div class="ls_title"><?php echo $e3_class3['class_title']; ?></div>
-                        <?php echo $e3_class3['course_name']; ?>
-                        <?php if($e3_class3['note']):?>
-                            <div class="ls_notes btm_margined"><?php echo $e3_class3['note']; ?></div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="ls_content_container">
-                    <?php
-                        $e2_class1 = $elective2['class_1'];
-                        $e2_class2 = $elective2['class_2'];
-                    ?>
-                    <div class="ls_content electives btm_padding">
-                        <div class="ls_title"><?php echo $e2_class1['class_title']; ?></div>
-                        <?php echo $e2_class1['course_name']; ?>
-                        <?php if($e2_class1['note']):?>
-                            <div class="ls_notes"><?php echo $e2_class1['note']; ?></div>
-                        <?php endif; ?>
-
-                        <div class="ls_title"><?php echo $e2_class2['class_title']; ?></div>
-                        <?php echo $e2_class2['course_name']; ?>
-                        <?php if($e2_class2['note']):?>
-                            <div class="ls_notes"><?php echo $e2_class2['note']; ?></div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="ls_instru">
-                <div class="info_img_container"><img src="<?php bloginfo('template_url') ?>/images/page_pro_division/info.png"></div>
-                <div class="ls_instru_text">
-                    <?php the_field('note');?>   
-                </div>
-            </div>
-        </div>
-
-        <div class="ls_segment changing_animation sphn">
-        <div class="std_clss">
-                <div class="std_cls">碩士班</div>
-            </div>
-            <div class="bubbles">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble.webp">
-            </div>
-            <div class="column_2_ls">
-                <div class="ls_content_container">
-                    <div class="ls_logo">必修<br>課程</div>
-                    <div class="ls_content">
-                        <?php the_field('master_required'); ?>
-                    </div>
-                </div>
-            </div>
-
-            <div class="std_clss">
-                <div class="std_cls">博士班</div>
-            </div>
-            <div class="bubbles">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble.webp">
-            </div>
-            <div class="column_2_ls">
-                <div class="ls_content_container">
-                    <div class="ls_logo">必修<br>課程</div>
-                    <div class="ls_content">
-                        <?php the_field('phd_required'); ?>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="column_2_ls" id="law_required_ls">
-            <?php 
-                $elective1 = get_field('elective_1');
-                $elective2 = get_field('elective_2');?>
-
-                <div class="ls_logo">選修<br>課程</div>
-                <div class="ls_content_container">
-                    <?php
-                        $e1_class1 = $elective1['class_1'];
-                        $e2_class2 = $elective1['class_2'];
-                        $e3_class3 = $elective1['class_3'];
-                    ?>
-                    <div class="ls_content electives">
-                        <div class="ls_title"><?php echo $e1_class1['class_title']; ?></div>
-                        <?php echo $e1_class1['course_name']; ?>
-                        <?php if($e1_class1['note']):?>
-                            <div class="ls_notes"><?php echo $e1_class1['note']; ?></div>
-                        <?php endif; ?>
-
-                        <?php if($e2_class2['note']):?>
-                        <div class="ls_title"><?php echo $e2_class2['class_title']; ?></div>
-                        <?php echo $e2_class2['course_name']; ?>
-                            <div class="ls_notes"><?php echo $e2_class2['note']; ?></div>
-                        <?php endif; ?>
-
-                        <div class="ls_title"><?php echo $e3_class3['class_title']; ?></div>
-                        <?php echo $e3_class3['course_name']; ?>
-                        <?php if($e3_class3['note']):?>
-                            <div class="ls_notes btm_margined"><?php echo $e3_class3['note']; ?></div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="ls_content_container">
-                    <?php
-                        $e2_class1 = $elective2['class_1'];
-                        $e2_class2 = $elective2['class_2'];
-                    ?>
-                    <div class="ls_content electives btm_padding">
-                        <div class="ls_title"><?php echo $e2_class1['class_title']; ?></div>
-                        <?php echo $e2_class1['course_name']; ?>
-                        <?php if($e2_class1['note']):?>
-                            <div class="ls_notes"><?php echo $e2_class1['note']; ?></div>
-                        <?php endif; ?>
-
-                        <div class="ls_title"><?php echo $e2_class2['class_title']; ?></div>
-                        <?php echo $e2_class2['course_name']; ?>
-                        <?php if($e2_class2['note']):?>
-                            <div class="ls_notes"><?php echo $e2_class2['note']; ?></div>
-                        <?php endif; ?>
+                                    <div class="ls_title"><?php echo $e2_class2['class_title']; ?></div>
+                                    <?php echo $e2_class2['course_name']; ?>
+                                    <?php if($e2_class2['note']):?>
+                                        <div class="ls_notes"><?php echo $e2_class2['note']; ?></div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

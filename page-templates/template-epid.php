@@ -71,46 +71,47 @@
                     </div>
                 </div>
             </div>
-            <div class="course-table selected">
-                <?php 
-                    $elective1 = get_field('elective_1');
-                    $elective2 = get_field('elective_2');
-                ?>
-                <div class="content-container">
-                    <div class="ls_logo">選修<br>課程</div>
-                    <div class="ls_content_container">
-                        <div class="ls_title"><?php echo $elective1['class_title']; ?></div>
-                        <div class="ls_lr_content">
-                            <div class="ls_content elective_class1">
-                                <?php echo $elective1['course_name']; ?>
+            <div id="selected">
+                <div class="course-table">
+                    <?php 
+                        $elective1 = get_field('elective_1');
+                        $elective2 = get_field('elective_2');
+                    ?>
+                    <div class="content-container">
+                        <div class="ls_logo">選修<br>課程</div>
+                        <div class="ls_content_container">
+                            <div class="ls_title"><?php echo $elective1['class_title']; ?></div>
+                            <div class="ls_lr_content">
+                                <div class="ls_content elective_class1">
+                                    <?php echo $elective1['course_name']; ?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ls_hr"></div>
-                        <div class="ls_title"><?php echo $elective2['class_title']; ?></div>
-                        <?php
-                        $subclass1 = $elective2['subclass_1'];
-                        $subclass2 = $elective2['subclass_2'];
-                        $subclass3 = $elective2['subclass_3'];
-                        $subclass4 = $elective2['subclass_4'];
-                        ?>
-                        <div class="ls_lr_content">
-                            <div class="ls_content subclass">
-                                <span class="ls_sub_title"><?php echo $subclass1['subclass_name']; ?></span>
-                                <?php echo $subclass1['course_name']; ?>
-                                <span class="ls_sub_title"><?php echo $subclass2['subclass_name']; ?></span>
-                                <?php echo $subclass2['course_name']; ?>
-                            </div>
-                            <div class="ls_content subclass">
-                                <span class="ls_sub_title"><?php echo $subclass3['subclass_name']; ?></span>
-                                <?php echo $subclass3['course_name']; ?>
-                                <span class="ls_sub_title"><?php echo $subclass4['subclass_name']; ?></span>
-                                <?php echo $subclass4['course_name']; ?>
+                            <div class="ls_hr"></div>
+                            <div class="ls_title"><?php echo $elective2['class_title']; ?></div>
+                            <?php
+                            $subclass1 = $elective2['subclass_1'];
+                            $subclass2 = $elective2['subclass_2'];
+                            $subclass3 = $elective2['subclass_3'];
+                            $subclass4 = $elective2['subclass_4'];
+                            ?>
+                            <div class="ls_lr_content">
+                                <div class="ls_content subclass">
+                                    <span class="ls_sub_title"><?php echo $subclass1['subclass_name']; ?></span>
+                                    <?php echo $subclass1['course_name']; ?>
+                                    <span class="ls_sub_title"><?php echo $subclass2['subclass_name']; ?></span>
+                                    <?php echo $subclass2['course_name']; ?>
+                                </div>
+                                <div class="ls_content subclass">
+                                    <span class="ls_sub_title"><?php echo $subclass3['subclass_name']; ?></span>
+                                    <?php echo $subclass3['course_name']; ?>
+                                    <span class="ls_sub_title"><?php echo $subclass4['subclass_name']; ?></span>
+                                    <?php echo $subclass4['course_name']; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="ls_instru">
                 <div class="info_img_container"><img src="<?php bloginfo('template_url') ?>/images/page_pro_division/info.png"></div>
                 <div class="ls_instru_text">

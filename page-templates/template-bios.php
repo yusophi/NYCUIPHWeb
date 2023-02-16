@@ -41,102 +41,56 @@
 
 <div class="data invisible">
     <div id="classes_data">
-        <div class="ls_segment changing_animation non-sphn">
-            <div class="std_clss">
-                <div class="std_cls">碩士班</div>
-                <div class="std_cls">博士班</div>
-            </div>
-            <div class="bubbles">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_right.png">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_left.png">
-            </div>
-            <div class="column_2_ls">
-                <div class="ls_logo">必修<br>課程</div>
-                <div class="ls_content_container">
-                    <div class="ls_content">
-                        <?php the_field('master_required'); ?>
-                    </div>
-                </div>
-                <div class="ls_content_container">
-                    <div class="ls_content">
-                        <?php the_field('phd_required'); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="column_1_ls">
-                <?php $elective1 = get_field('elective_1'); ?>
-                <div class="ls_logo">選修<br>課程</div>
-                <div class="ls_content_container">
-                    <div class="ls_title"><?php echo $elective1['class_title']; ?></div>
-                    <div class="ls_lr_content bios_component">
-                        <div class="ls_content">
-                            <?php echo $elective1['course_name']; ?>
+        <div class="ls_segment changing_animation">
+            <div id="required">
+                <div class="course-table" id="master">
+                    <div class="std_cls">碩士班</div>
+                    <img class="bubble" src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_right.png">
+                    <div class="content-container">
+                        <div class="ls_logo">必修<br>課程</div>
+                        <div class="ls_content_container">
+                            <div class="ls_content">
+                                <?php the_field('master_required'); ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="ls_hr"></div>
-                    <div class="ls_remark"><?php echo $elective1['note']; ?></div>
-                    <div class="ls_hr btm_margined"></div>
+                </div>
+                <div class="course-table" id="phd">
+                    <div class="std_cls">博士班</div>
+                    <img class="bubble" src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble_left.png">
+                    <div class="content-container">
+                        <div class="ls_logo">必修<br>課程</div>
+                        <div class="ls_content_container">
+                            <div class="ls_content">
+                                <?php the_field('phd_required'); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="selected">
+                <div class="course-table">
+                    <?php $elective1 = get_field('elective_1'); ?>
+                    <div class="content-container">
+                        <div class="ls_logo">選修<br>課程</div>
+                        <div class="ls_content_container">
+                            <div class="ls_title"><?php echo $elective1['class_title']; ?></div>
+                            <div class="ls_lr_content bios_component">
+                                <div class="ls_content">
+                                    <?php echo $elective1['course_name']; ?>
+                                </div>
+                            </div>
+                            <div class="ls_hr"></div>
+                            <div class="ls_remark"><?php echo $elective1['note']; ?></div>
+                            <div class="ls_hr btm_margined"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="ls_instru">
                 <div class="info_img_container"><img src="<?php bloginfo('template_url') ?>/images/page_pro_division/info.png"></div>
                 <div class="ls_instru_text">
                     <?php the_field('note'); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="ls_segment changing_animation sphn">
-        <div class="std_clss">
-                <div class="std_cls">碩士班</div>
-            </div>
-            <div class="bubbles">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble.webp">
-            </div>
-            <div class="column_2_ls">
-                <div class="ls_content_container">
-                    <div class="ls_logo">必修<br>課程</div>
-                    <div class="ls_content">
-                        <?php the_field('master_required'); ?>
-                    </div>
-                </div>
-            </div>
-
-            <div class="std_clss">
-                <div class="std_cls">博士班</div>
-            </div>
-            <div class="bubbles">
-                <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/bubble.webp">
-            </div>
-            <div class="column_2_ls">
-                <div class="ls_content_container">
-                    <div class="ls_logo">必修<br>課程</div>
-                    <div class="ls_content">
-                        <?php the_field('phd_required'); ?>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="column_1_ls">
-            <?php $elective1 = get_field('elective_1');?>
-                <div class="ls_logo">選修<br>課程</div>
-                <div class="ls_content_container">
-                    <div class="ls_title"><?php echo $elective1['class_title']; ?></div>
-                    <div class="ls_lr_content bios_component">
-                        <div class="ls_content elective_class1">
-                            <?php echo $elective1['course_name']; ?>
-                        </div>
-                    </div>
-                    <div class="ls_hr"></div>
-                    <div class="ls_remark"><?php echo $elective1['note']; ?></div>
-                    <div class="ls_hr btm_margined"></div>
-                </div>
-            </div>
-            <div class="ls_instru">
-                <div class="info_img_container"><img src="<?php bloginfo('template_url') ?>/images/page_pro_division/info.png"></div>
-                <div class="ls_instru_text">
-                    <?php the_field('note');?>   
                 </div>
             </div>
         </div>
