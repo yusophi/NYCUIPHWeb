@@ -27,7 +27,9 @@
     <div id="divider"></div>
     <div id="divider_components">
         <div class="small_black_circle"></div>
-        <div class="down_arrow"></div>
+        <div class="down_arrow">
+            <img src="<?php bloginfo('template_url') ?>/images/page_pro_division/down_arrow.webp">
+        </div>
         <div class="section_indicator">s0</div>
     </div>
     <div class="pro_buttons">

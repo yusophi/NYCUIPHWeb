@@ -133,13 +133,18 @@ ul.table{
     color: #2e4565;
 }
 
-.tbody li{
+.tbody li, .tbody li a{
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1.1458333vw;
     font-weight: 500;
     line-height: 1.59;
     letter-spacing: 0.05729166vw;
     color: #2e4565;
+}
+
+.tbody li a{
+    color: #4f5ab8;
+    text-decoration: none;
 }
 
 .align-left{
@@ -271,7 +276,7 @@ ul.table{
         display: none;
     }
 
-    .tbody li{
+    .tbody li, .tbody li a {
         font-size: 16px;
     }
 
