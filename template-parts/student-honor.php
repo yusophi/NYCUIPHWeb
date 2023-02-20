@@ -42,8 +42,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                             <?php  $count =  $count + 1; ?>
                         <?php else: break;?>
@@ -62,8 +62,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                         <?php $count =  $count + 1;?>
                         <?php else: break;?>
@@ -115,8 +115,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                             <?php  $count =  $count + 1; ?>
                         <?php else: break;?>
@@ -135,8 +135,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                         <?php $count =  $count + 1;?>
                         <?php else: break;?>
@@ -188,8 +188,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                             <?php  $count =  $count + 1; ?>
                         <?php else: break;?>
@@ -208,8 +208,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                         <?php $count =  $count + 1;?>
                         <?php else: break;?>
@@ -261,8 +261,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                             <?php  $count =  $count + 1; ?>
                         <?php else: break;?>
@@ -281,8 +281,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                         <?php $count =  $count + 1;?>
                         <?php else: break;?>
@@ -334,8 +334,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                             <?php  $count =  $count + 1; ?>
                         <?php else: break;?>
@@ -354,8 +354,8 @@
                         ?>
                         <?php if( $student_name and $honor_title):?>
                             <ol class="tr">
-                                <li class="align-left"><?php echo $student_name;?></li>
-                                <li class="align-left tdata-group"><?php echo $honor_title;?></li>
+                                <li class="align-left tdata-group1"><?php echo $student_name;?></li>
+                                <li class="align-left tdata-group2"><?php echo $honor_title;?></li>
                             </ol>
                         <?php $count =  $count + 1;?>
                         <?php else: break;?>

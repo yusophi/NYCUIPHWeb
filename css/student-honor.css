@@ -177,8 +177,12 @@ ul.table{
     text-align: left;
 }
 
-.tdata-group{
-    width: 69vw;
+.tdata-group1{
+    width: 15vw;
+}
+
+.tdata-group2{
+    width: 65vw;
 }
 
 @media (max-width: 960px) {
@@ -222,7 +226,11 @@ ul.table{
         font-size: 16px;
     }
 
-    .tdata-group{
-        width: 52vw;
+    .tdata-group1{
+        width: 20vw;
+    }
+
+    .tdata-group2{
+        width: 60vw;
     }
 }
