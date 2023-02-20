@@ -41,4 +41,13 @@
         margin-left: 3vw;
         margin-top: 6vw;
     }
+    .link_block{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    .link_block{
+        font-size: 18px;
+    }
 }
