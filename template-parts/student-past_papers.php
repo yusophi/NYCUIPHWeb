@@ -47,30 +47,30 @@
     <div class="mobile-selector">
         <input type="hidden" id="filters-year" value="" />
         <input type="hidden" id="filters-division" value="" />
-        <div class="dropdown">
-            <button class="dropdown-title _font22" id="button-dropdown-year">年份<div class="arrow-down"></div></button>
-            <div class="dropdown-content" id="dropdown-year">
+        <li class="mobile-selector-dropdown">
+            <a class="dropdown-title _font22">年份<div class="arrow-down"></div></a>
+            <ul class="mobile-selector-dropdown-menu">
                 <?php foreach($years as $year) : ?>
-                    <a class="<?= "cat-list_item _font20 mobile-item " . $year->slug; ?>" href="#!" data-filter-type="year" data-type="papers" data-slug="<?= $year->slug; ?>">
+                    <li><a class="<?= "cat-list_item _font20 mobile-item " . $year->slug; ?>" href="#!" data-filter-type="year" data-type="papers" data-slug="<?= $year->slug; ?>">
                         <?= $year->name; ?>
-                    </a>
+                    </a></li>
                 <?php endforeach; ?>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-title _font22" id="button-dropdown-division">領域<div class="arrow-down"></div></button>
-            <div class="dropdown-content" id="dropdown-division">
+            </ul>
+        </li>
+        <li class="mobile-selector-dropdown">
+            <a class="dropdown-title _font22">領域<div class="arrow-down"></div></a>
+            <ul class="mobile-selector-dropdown-menu">
                 <?php foreach($divisions as $division) : ?>
-                    <a class="<?= "cat-list_item _font20 mobile-item " . $division->slug; ?>" href="#!" data-filter-type="division" data-type="papers" data-slug="<?= $division->slug; ?>">
+                   <li><a class="<?= "cat-list_item _font20 mobile-item " . $division->slug; ?>" href="#!" data-filter-type="division" data-type="papers" data-slug="<?= $division->slug; ?>">
                         <?= $division->name; ?>
-                    </a>
+                    </a></li>
                 <?php endforeach; ?>
-            </div>
-        </div>
+            </ul>
+        </li>
     </div>
     <div class="request_form">
         <img id="search_svg" src="<?php bloginfo('template_url')?>/images/page_student/search.svg">
-        <input type="text" name="s" placeholder="可使用研究生姓名、指導老師、論文關鍵字進行搜尋" id="keyword" class="input_search">
+        <input type="text" name="s" id="keyword" class="input_search">
         <?php //wp_nonce_field( 'get_paper_search', 'paper_search_nonce' ); ?>
         <button id="search_btn">
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">

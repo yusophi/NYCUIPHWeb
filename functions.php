@@ -535,18 +535,22 @@ function filter_ajax() {
   }
   else if($postType == 'papers'){ //post type: papers
     if($query->have_posts()){
-      echo '<div class="item_titles _font20">';
-      echo ' <span class="year">年份</span>
-      <span class="name">姓名</span>
-      <span class="degree">畢業學位</span>
-      <span class="advisor">指導教授</span>
-      <span class="paper">論文名稱</span>';
-      echo '</div>';
-      echo '<div class="block_paper_posts">';
+      echo '<ul class="table">
+      <li class="thead fontstyle-thead">';
+      echo '<ol class="thead-tr">
+      <li class="align-left tdata-group1">年份</li>
+      <li class="align-left tdata-group2">姓名</li>
+      <li class="align-left tdata-group3">畢業學位</li>
+      <li class="align-left tdata-group4">指導教授</li>
+      <li class="align-left tdata-group5">論文名稱</li>
+      </ol>';
+      echo '</li>';
+      echo '<li class="tbody">';
       while($query->have_posts()) : $query->the_post();
         get_template_part('template-parts/post_paper_card');
       endwhile;
-      echo '</div>';
+      echo '</li>
+      </ul>';
     }
     elseif(!$check){
       echo '<div id="search_hint">

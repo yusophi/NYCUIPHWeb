@@ -12,7 +12,7 @@
     margin-bottom: 7.864vw;
     flex-direction: column;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 /* selection bar*/
@@ -104,7 +104,7 @@
 }
 
 #keyword{
-    width: 70vw;
+    width: auto;
     border: 0px;
     background-color: transparent;
     margin-left: -2.5vw;
@@ -178,74 +178,20 @@ input[type=text]{
     margin-left: 7.8125vw;
 }
 
-/* block of papaers*/
-.block_papers{
-    width: 82vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.row_paper{
-    width: 82vw;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    border-bottom: solid 2px #647386;
-    padding-top: 1.5vw;
-    padding-bottom: 1.5vw;
-}
-
-.row_paper > span{
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.30vw;
-    font-weight: 500;
-    letter-spacing: 0.05729vw;
-    text-align: left;
-    color: #2e4565;
-    line-height: 1.59;
-    overflow-wrap: anywhere;
-}
-
-span.year{
-    width: 4.5vw;   
-}
-
-span.name{
-    width: 8vw;
-    margin-left: 5vw;
-}
-
-span.degree{
-    width: 10vw;
-    margin-left: 4vw;
-}
-
-span.advisor{
-    width: 15vw;
-    margin-left: 5vw;
-}
-
-span.paper{
-    width: 45vw;
-    margin-left: 5vw;
-    letter-spacing: 0.171875vw;
-}
 
 .mobile-selector{
     display: none;
 }
 
-.dropdown{
+.mobile-selector-dropdown{
     width: 30vw;
     border: solid 2px #2e4565;
     margin-left: 2vw;
     position: relative;
-    padding: 1.5vw;
+    list-style: none;
 }
 
 .dropdown-title{
-    width: 30vw;
     display: flex;
     position: relative;
     flex-direction: row;
@@ -255,6 +201,7 @@ span.paper{
     border: none;
     color: #2e4565;
     font-weight: bold;
+    padding: 3vw 4vw;
 }
 
 .arrow-down{
@@ -265,29 +212,119 @@ span.paper{
     transform: rotate(135deg);
 }
 
-.dropdown-content{
-    width: 30vw;
+.mobile-selector-dropdown-menu{
+    min-width: 100%;
     display: none;
     position: absolute;
     background-color: #e4dfd2;
     border: solid 2px #2e4565;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    list-style: none;
+    left: 0vw;
 }
 
 .mobile-item{
     color: #2e4565;
-    padding: 1.5vw;
+    padding: 2vw;
     text-decoration: none;
     line-height: 1.3;
     display: block;
     overflow: auto;
 }
 
-.show{
+/*********************/
+/* paper card */
+
+.block_papers{
+    width: 82vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+ul.table{
+    width: 82vw;
+    display: block;
+    border: 0;
+    border-collapse: collapse;
+    margin: 3.125vw 0;
+}
+
+.thead{
+    width: 82vw;
+    display: table-header-group;
+}
+
+.tbody{
+    width: 82vw;
+    display: table-row-group;
+}
+
+.thead-tr{
+    display: table-row;
+    border-bottom: solid 1px #647386;
+}
+
+.thead li, .tr li {
+    display: table-cell;
+    padding: 20px 30px 20px 0;
+}
+
+.tr{
+    display: table-row;
+    transition: display 0.3s ease-in;
+    border-bottom: solid 1px #647386;
+}
+
+.fontstyle-thead {
+    color: #2e4565;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 0.140625vw;
+}
+
+.tr li{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.30vw;
+    font-weight: 500;
+    letter-spacing: 0.1vw;
+    color: #2e4565;
+    line-height: 1.59;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.tdata-group1{
+    width: 4.5vw;   
+}
+
+.tdata-group2{
+    width: 8vw;
+    margin-left: 5vw;
+}
+
+.tdata-group3{
+    width: 10vw;
+    margin-left: 4vw;
+}
+
+.tdata-group4{
+    width: 15vw;
+    margin-left: 5vw;
+}
+
+.tdata-group5{
+    width: 45vw;
+    margin-left: 5vw;
+    letter-spacing: 0.171875vw;
+}
+
+.mobile-tr{
+    display: none;
 }
 
 @media (max-width: 960px) {
@@ -296,7 +333,7 @@ span.paper{
     }
 
     input[type=text] {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     #search_hint > p {
@@ -304,10 +341,6 @@ span.paper{
         font-size: 32.5px;
         letter-spacing: 4.875px;
         margin-top: 40px;
-    }
-
-    .cat-list_item_name {
-        font-size: 11px;
     }
 
     .row_paper > span{
@@ -319,6 +352,7 @@ span.paper{
     }
 
     .mobile-selector{
+        width: 65vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -367,18 +401,18 @@ span.paper{
     }
 
     .request_form{
-        height: 6.5vw;
-        border-radius: 3.5vw;
+        height: 10vw;
+        border-radius: 5vw;
     }
 
     #keyword{
-        margin-left: 1.5vw;
+        margin-left: 0vw;
     }
     
     #search_btn > img{
         width: 5vw;
         height: 5vw;
-        margin-right: 1.5vw;
+        margin-right: 0vw;
     }
 
     #search_svg {
@@ -387,22 +421,72 @@ span.paper{
         margin-left: 2vw;
     }
 
-    span.year{
-        width: 14vw;
+    .tbody{
+        display: flex;
+        flex-direction: column;
     }
-    span.name{
+
+    .thead li, .tr li{
+        padding: 15px 0;
+    }
+
+    .tr li{
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.5vw;  
+    }
+
+    .thead-tr{
+        width: 82vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .thead-tr li:nth-child(5){   
+        display: none;
+    }
+
+    .web-tr{
+        display: none;
+    }
+
+    .mobile-tr{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mobile-tdata-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .tdata-group1{
+        width: 10vw; 
+    }
+    
+    .tdata-group2{
+        width: 20vw;
+        margin-left: 3vw;
+    }
+    
+    .tdata-group3{
+        width: 20vw;
+        margin-left: 3vw;
+    }
+    
+    .tdata-group4{
         width: 18vw;
-        margin-left: 4vw;
-    }
-    span.degree{
-        width: 14vw;
         margin-left: 5vw;
     }
-    span.advisor{
-        width: 16vw;
-        margin-left: 5vw;
-    }
-    span.paper{
-        margin-left: 4vw;
+    
+    .tdata-group5{
+        width: auto;
+        margin-left: 0vw;
+        letter-spacing: 0.171875vw;
+        font-weight: bold;
     }
 }

@@ -5,10 +5,24 @@
     $advisor = get_field('advisors');
     $paper = get_field('paper');
 ?>
-<div class="row_paper">
-    <span class="year"><?php echo $year;?></span>
-    <span class="name"><?php echo $name;?></span>
-    <span class="degree"><?php echo $degree;?></span>
-    <span class="advisor"><?php echo $advisor;?></span>
-    <span class="paper"><?php echo $paper;?></span>
-</div>
+
+<ol class="tr web-tr">
+    <li class="align-left tdata-group1"><?php echo $year;?></li>
+    <li class="align-left tdata-group2"><?php echo $name;?></li>
+    <li class="align-left tdata-group3"><?php echo $degree;?></li>
+    <li class="align-left tdata-group4"><?php echo $advisor;?></li>
+    <li class="align-left tdata-group5"><?php echo $paper;?></li>
+</ol>
+
+<ol class="tr mobile-tr">
+    <div class="mobile-tdata-wrapper">
+        <li class="align-left tdata-group1"><?php echo $year;?></li>
+        <li class="align-left tdata-group2"><?php echo $name;?></li>
+        <li class="align-left tdata-group3"><?php echo $degree;?></li>
+        <li class="align-left tdata-group4"><?php echo $advisor;?></li>
+    </div>
+    <div class="mobile-tdata-wrapper">
+        <!--<li class="align-left item-5">論文名稱&nbsp;|&nbsp;</li>-->
+        <li class="align-left tdata-group5"><?php echo $paper;?></li>
+    </div>
+</ol>
