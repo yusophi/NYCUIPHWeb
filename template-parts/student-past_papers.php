@@ -70,7 +70,7 @@
     </div>
     <div class="request_form">
         <img id="search_svg" src="<?php bloginfo('template_url')?>/images/page_student/search.svg">
-        <input type="text" name="s" id="keyword" class="input_search">
+        <input type="text" name="s" id="keyword" placeholder="請輸入研究生姓名、指導老師、論文關鍵字查詢" class="input_search">
         <?php //wp_nonce_field( 'get_paper_search', 'paper_search_nonce' ); ?>
         <button id="search_btn">
             <img src="<?php bloginfo('template_url')?>/images/page_student/search_arrow.svg">
