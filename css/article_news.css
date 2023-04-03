@@ -1,0 +1,12 @@
+#clock_blue{
+    display: none;
+}
+
+#clock_white{
+    display: block;
+}
+
+.article-content:hover .whiteText > .article-passage{
+    transform: translateY(15.5vw);
+    border-top: solid 2px #efeee4;
+}

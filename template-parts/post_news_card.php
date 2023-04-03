@@ -1,13 +1,14 @@
 <?php $locale = get_locale(); ?>
 
 <div class="article-preview-pic">
+    <a href="<?php the_permalink(); ?>">
     <?php $post_thumbnail = get_field('post_thumbnail'); 
         if ($post_thumbnail) : ?>
-        <?php //the_post_thumbnail('post-thumb'); ?>
         <?php echo wp_get_attachment_image( $post_thumbnail, 'post-thumb'); ?>
     <?php else: ?>
         <img src="<?php bloginfo('template_url') ?>\images\page_news\news-preview-pic.webp">
     <?php endif; ?>
+    </a>
 </div>
 <div class="article-title">
     <a href="<?php the_permalink(); ?>">
@@ -40,7 +41,8 @@
 </div>
 <div class="article-attr">
     <div class="article-meta">
-        <img class="icon-clock" src="<?php bloginfo('template_url'); ?>/images/icon/icon-clock.svg">
+        <img class="icon-clock" id="clock_blue" src="<?php bloginfo('template_url'); ?>/images/icon/clock-blue.webp">
+        <img class="icon-clock"id="clock_white" src="<?php bloginfo('template_url'); ?>/images/icon/clock-white.webp">
         <span class="post_time"><?php the_time('Y.m.j'); ?></span>
     </div>
     <div class="post_tags">
@@ -65,8 +67,15 @@
     </div>
 </div>
 <div class="article-passage">
-    <div class="article-title_bottom_line"></div>
-    <div class="excerpt"> <?php the_field('excerpt'); ?><?php echo "..." ?> </div>
-    <div class="article-excerpt_bottom_line"></div>
+    <div class="excerpt"> <?php $excerpt = get_field('excerpt'); ?>
+        <?php 
+            if($excerpt){
+                echo $excerpt . "...";
+            }
+            else{
+                echo "詳見內文...";
+            }
+        ?>
+    </div>
 </div>
 <div class="clearfix"></div>

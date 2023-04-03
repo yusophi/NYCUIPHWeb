@@ -101,3 +101,19 @@
 .article table tr td{
     border: solid 1.5px #efeee4;
 }
+
+
+@media (max-width:960px) {
+    
+    #content{
+        margin: 40vw 9vw 15vw;;
+    }
+
+    #page_title{
+        font-size: 22px;
+    }
+
+    .article, .article div {
+        font-size: 16px;
+    }
+}

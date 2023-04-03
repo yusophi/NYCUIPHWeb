@@ -63,6 +63,11 @@
     width: 100%;
 }
 
+#instru_content a{
+    color: #4f5ab8;
+    text-decoration: none;
+}
+
 .black_circle {
     position: absolute;
     width: 3.28125vw;
@@ -167,8 +172,8 @@
 /* changing content part*/
 
 .ls_segment {
-    margin: 5.2083vw auto 0 auto;
-    width: 51.04166vw;
+    width: 82vw;
+    margin: 9vw;
 }
 
 .std_clss {
@@ -210,14 +215,6 @@
     height: auto;
 }
 
-.column_2_ls {
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50.885416vw;
-}
-
 .ls_logo {
     position: absolute;
     background-color: #efeee4;
@@ -241,18 +238,12 @@
     box-shadow: 3px 3px 15px 0 rgba(255, 111, 0, 0.3);
     background-color: #efeee4;
     border-radius: 25px;
-
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.column_2_ls .ls_content_container {
-    padding: 2.864583vw 0;
-}
-
-.column_2_ls .ls_content {
-    min-width: 24.21875vw;
+    padding: 2vw;
+    min-height: 15vw;
 }
 
 .ls_content {
@@ -266,27 +257,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-
-.column_1_ls {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 51.04166vw;
-    margin-top: 96px;
-}
-
-.column_1_ls .ls_content_container {
-    width: 100%;
-    height: 100%;
-    box-shadow: 3px 3px 15px 0 rgba(255, 111, 0, 0.3);
-    background-color: #efeee4;
-    border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
     flex-direction: column;
 }
 
@@ -491,6 +461,110 @@
 }
 
 
+.data.invisible {
+    display: none;
+}
+
+.subclass{
+    text-align: center;
+}
+
+.tgh_passage p, #instru_content p{
+    margin-top: 1.8vw;
+}
+
+.staff_block{
+    width: 69vw;
+    margin: 5vw 15vw;
+    display: grid;
+    grid-template-columns: 19.583vw 19.583vw 19.583vw;
+    column-gap: 5.208vw;
+    row-gap: 5.208vw;	
+}
+
+.electives{
+    width: 24.21vw;
+}
+
+.electives > p{
+    width: 15.5vw;
+}
+
+.tgh_group{
+    margin-top: 5vw;
+}
+
+#division_circle {
+    position: absolute;
+}
+
+/*********************************/
+#required, #selected{
+    width: 52vw;
+    margin: 0 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.course-table{
+    min-width: 24.21vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selected > .course-table{
+    width: 100%;
+}
+
+.content-container{
+    position: relative;
+    width: 100%;
+}
+
+.bubble {
+    width: 56px;
+    height: auto;
+    margin: 3vw 0;
+}
+
+#selected{
+    margin-top: 5vw;
+}
+
+.course-data-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 54vw;
+    margin: 0 14vw;
+}
+
+.course-block{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.required-table, .selected-table{
+    width: 100%;
+}
+
+.required-table .ls_content_container, .selected-table .ls_content_container{
+    min-height: 20vw;
+}
+
+.selected-table{
+    margin-top: 5vw;
+}
+
+#phd .ls_logo{
+    display: none;
+}
 
 @media (max-width: 960px) {
     .down_arrow {
@@ -559,33 +633,11 @@
         width: 345px;
     }
 
-    .ls_segment {
-        margin: 50px auto 0 auto;
-        width: 490px;
-    }
-
-    .bubbles {
-        margin: 15px auto 15px auto;
-        width: 337.5px;
-    }
-
-    .column_2_ls {
-        width: 488.5px;
-    }
-
     .ls_logo {
         width: 65.5px;
         height: 65.5px;
         border-radius: 65.5px;
         font-size: 15px;
-    }
-
-    .column_2_ls .ls_content_container {
-        padding: 27.5px 0;
-    }
-
-    .column_1_ls {
-        width: 490px;
     }
 
     .ls_title {
@@ -594,9 +646,9 @@
         font-size: 13.504px;
     }
 
-    .ls_lr_content {
+    /*.ls_lr_content {
         width: 345.6px;
-    }
+    }*/
 
     .ls_hr {
         width: 408px;
@@ -613,75 +665,18 @@
         min-height: 23.5px;
     }
 
-    .column_2_ls .ls_content {
-        min-width: 232.5px;
-    }
-
     .ls_instru_text {
         font-size: 10px;
     }
 }
 
-.data.invisible {
-    display: none;
-}
-
-.subclass{
-    text-align: center;
-}
-
-.tgh_passage p, #instru_content p{
-    margin-top: 1.8vw;
-}
-
-.staff_block{
-    width: 69vw;
-    margin: 5vw 15vw;
-    display: grid;
-    grid-template-columns: 19.583vw 19.583vw 19.583vw;
-    column-gap: 5.208vw;
-    row-gap: 5.208vw;	
-}
-
-.electives{
-    width: 24.21vw;
-}
-
-.electives > p{
-    width: 15.5vw;
-}
-
-.tgh_group{
-    margin-top: 5vw;
-}
-
-#division_circle {
-    position: absolute;
-}
-
-.sphn {
-    display: none;
-}
-
-.non-sphn {
-    display: block;
-}
-
 @media (max-width: 600px) {
-    .ls_segment {
-        width: 81.6666vw;
-    }
-
     .std_clss {
         width: 57.5vw;
     }
 
     .bubbles {
         width: 56.25vw;
-    }
-
-    .column_2_ls {
-        width: 81.41666vw;
     }
 
     .ls_logo {
@@ -691,20 +686,21 @@
         font-size: 2.5vw;
     }
 
-    .column_2_ls .ls_content {
-        min-width: 38.75vw;
-    }
-
-    .column_1_ls {
-        width: 81.6666vw;
-    }
-
     .ls_lr_content {
         width: 57.6vw;
     }
 
     .ls_sub_title {
         width: 26.43922vw;
+    }
+
+    .ls_content_container{
+        padding: 3vw;
+        min-height: 30vw;
+    }
+
+    #selected{
+        margin-top: 8vw;
     }
 }
 
@@ -798,23 +794,11 @@
         font-size: 3.733vw;
     }
 
-    .sphn {
-        display: block;
-    }
-
-    .non-sphn {
-        display: none;
-    }
-
     .std_clss {
         justify-content: center;
     }
 
     .bubbles {
-        justify-content: center;
-    }
-
-    .column_2_ls {
         justify-content: center;
     }
 
@@ -824,43 +808,26 @@
         font-size: 5.0688vw;
     }
 
-    .bubbles img {
-        width: 8vw;
-    }
-
     .ls_content {
         font-size: 3.733vw;
         line-height: 6.6688vw;
         text-align: center;
     }
 
-    .column_2_ls .ls_content_container {
-        padding: 9.333vw 9.066vw;
-    }
-
     .ls_logo {
-        width: 20.8vw;
-        height: 20.8vw;
+        width: 16.8vw;
+        height: 16.8vw;
         border-radius: 20.8vw;
-        font-size: 4.535vw;
+        font-size: 16px;
         left: 0;
         top: 0;
         z-index: 5;
     }
 
-    .ls_content_container {
+    /*.ls_content_container {
         position: relative;
-    }
-
-    .column_2_ls {
-        margin-bottom: 40px;
-    }
-
-    .column_1_ls {
-        margin-top: 79px;
-        position: relative;
-        width: 72.8vw;
-    }
+        padding: 5vw;
+    }*/
     
     .ls_title {
         font-size: 4.8vw;
@@ -881,8 +848,8 @@
 
     .ls_lr_content {
         flex-direction: column;
-        width: 75.1%;
         align-items: center;
+        margin-bottom: 10vw;
     }
 
     .ls_content {
@@ -932,158 +899,59 @@
         margin-top: 60px;
     }
 
-    .ls_title {
-        width: 72.8%;
-    }
-
     .ls_remark {
         width: 72.8%;
+        font-size: 14px;
     }
 
-    .column_2_ls {
-        flex-direction: column;
-    }
-}
-
-/* @media (max-width: 480px){
-
-    .pro_page{
-        padding-top: 13.802vw;
-    }
-
-    .black_circle{
-        width: 5vw;
-        height: 5vw;
-    }
-
-    .upper_instruction{
+    #required, #selected{
         width: 82vw;
-        margin: 0 9vw;
         flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10vw;
+        margin: 0vw;
     }
 
-    #title{
-        width: auto;
-        margin-left: 0;
+    .course-table{
+        width: 100%;
+        margin-bottom: 7vw;
     }
 
-    .instru_img_container{
-        width: auto;
-        margin-top: 8vw;
+    #phd .ls_logo{
+        display: flex;
     }
 
-    #instruction{
-        width: auto;
-        margin: 6vw 0 0;
+    .bubble{
+        display: none;
     }
 
-    .black_circle1{
-        margin: 13.03125vw 0 0 0.9583vw;
+    .content-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6vw;
+        width: 78vw;
     }
 
-    .black_circle2{
-        margin: 16.75vw 0 0 1.51875vw;
+    .ls_content_container{
+        width: 74vw;
     }
 
-    #instru_img{
-        border-radius: 25px;
+    .course-data-wrapper{
+        width: 82vw;
+        flex-direction: column;
+        align-items: center;
+        margin: 0vw;
     }
 
-    #ch_title{
-        font-size: 5vw;
+    .electives>p{
+        margin-top: 3vw;
+        width: 100%;
     }
 
-    #title{
-        font-size: 3vw;
+    .course-block{
+        width: 100%;
     }
 
-    #instru_content{
-        font-size: 3.5vw;
-    }
-
-    .tgh_passage p, #instru_content p{
-        margin-top: 6.5vw;
-    }
-
-    .pro_btn{
-        width: 18.75vw;
-        height: 6.125vw;
-        font-size: 3vw;
-    }
-
-    .staff_block{
-        width: 50vw;
-        grid-template-columns: 50vw;
-        margin: 8vw 25vw;
-        column-gap: 0;
-        row-gap: 6vw;
-    }
-
-    .member_picture img{
-        width: auto;
-        height: auto;
-    }
-
-    .column_2_ls .ls_content_container{
-        padding: 3.864583vw 5vw;
-        margin-left: 2vw;
-    }
-
-    .ls_content, ls_content p{
-        line-height: 5vw;
-    }
-
-    .column_2_ls{
-        margin-left: -11vw;
-    }
-
-    .column_1_ls{
-        width: 73vw;
-        margin-top: 10vw;
-        margin-left: -11vw;
-    }
-
-    .ls_lr_content{
-        width: auto;
-    }
-
-    .ls_sub_title{
-        width: 25vw;
-        height: 12vw;
-        margin-top: 5vw;
-        border-radius: 13px;
-    }
-
-    .elective_class1{
-        margin: 5vw 3vw 0;
-    }
-
-    .ls_instru{
-        width: 73vw;
-        margin-left: -11vw;
-    }
-
-    .ls_remark{
-        margin: 5vw 3vw;
-    }
-
-    .electives{
-        width: 30vw;
-        padding: 5vw 3vw;
-    }
-
-    .electives > p{
-        width: auto;
-    }
-
-    .bio_circle1{
-        margin: 25.03125vw 0 0 0.9583vw;
-    }
-
-    .bio_circle2{
-        margin: 28.75vw 0 0 1.51875vw;
+    .ls_notes{
+        font-size: 14px;
     }
 }
- */

@@ -69,13 +69,22 @@
                 $group_data = $curriculum[$name];
                 $grade = $group_data['grade'];
                 $course_name = $group_data['course_name'];
+                $course_list = $group_data['course_list'];
                 $credit = $group_data['credit'];
                 $type = $group_data['type'];
                 ?>
                 <?php if ($course_name) : ?>
                     <ol class="tr">
                         <li class="align-left"><?php echo $grade; ?></li>
-                        <li class="align-left"><?php echo $course_name; ?></li>
+                        <li class="align-left">
+                        <?php 
+                            echo $course_name; 
+                            if($count == 2 && $course_list):?>
+                            <a class="file_name" href="<?php echo esc_url($course_list);?>" target="_blank">
+                                (課程列表)
+                            </a>
+                            <?php endif; ?>
+                        </li>
                         <li class="align-center"><?php echo $credit; ?></li>
                         <li class="align-center"><?php echo $type; ?></li>
                     </ol>

@@ -306,7 +306,7 @@ window.addEventListener("scroll", function (){
     }
 })
 
-var sphn_about_container = document.getElementsByClassName('sphn-about-container')[0]
+/*var sphn_about_container = document.getElementsByClassName('sphn-about-container')[0]
 var about_container_is_down = false
 var about_container_offset = 0, about_container_start_x = 0
 sphn_about_container.transLeft = 0;
@@ -315,7 +315,7 @@ sphn_about_container.addEventListener('mousedown', function(e) {
     about_container_is_down = true;
     about_container_offset = sphn_about_container.transLeft - e.clientX;
     about_container_start_x = e.clientX
-    console.log("mousedown: about_container_offset = " + about_container_offset + ", transLeft = " + sphn_about_container.transLeft);
+    //console.log("mousedown: about_container_offset = " + about_container_offset + ", transLeft = " + sphn_about_container.transLeft);
 }, true)
 
 sphn_about_container.addEventListener('mouseup', function(e) {
@@ -323,7 +323,7 @@ sphn_about_container.addEventListener('mouseup', function(e) {
     var style = window.getComputedStyle(sphn_about_container)
     var matrix = new WebKitCSSMatrix(style.transform)
     sphn_about_container.transLeft = matrix.m41
-    console.log("mouseup: transLeft = " + sphn_about_container.transLeft)
+    //console.log("mouseup: transLeft = " + sphn_about_container.transLeft)
 }, true)
 
 sphn_about_container.addEventListener('mousemove', function(e) {
@@ -335,6 +335,6 @@ sphn_about_container.addEventListener('mousemove', function(e) {
     x = win.innerWidth || docElem.clientWidth || body.clientWidth;
     if (about_container_is_down && e.clientX + about_container_offset < 0 && e.clientX + about_container_offset > -sphn_about_container.offsetWidth + 0.9467 * x) {
         sphn_about_container.style.transform = 'translateX(' + (e.clientX + about_container_offset) + 'px)';
-        console.log("mousemove: e.clientX = " + e.clientX + ", about_container_offset = " + about_container_offset)
+        //console.log("mousemove: e.clientX = " + e.clientX + ", about_container_offset = " + about_container_offset)
     }
-}, true)
+}, true)*/

@@ -13,8 +13,10 @@
             <div id="circle"></div>
         </span>
         <div class="banner_article_meta">
-            <img class="icon-clock" src="<?php bloginfo('template_url') ?>/images/template-singlepost-icon/icon-whiteclock.svg">
-            <span class="banner_post_time"><?php the_time('Y.m.j'); ?></span>
+            <div class="banner_post_time">
+                <img class="icon-clock" id="clock_white" src="<?php bloginfo('template_url'); ?>/images/icon/clock-white.webp">
+                <span><?php the_time('Y.m.j'); ?></span>
+            </div>
             <div class="banner_post_tags">
                 <div class="post_category">
                     <?php $event_cat = get_field('event_item');

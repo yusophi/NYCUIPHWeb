@@ -1,8 +1,6 @@
 /* the waves decorations */
 .deco_waves {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 /* let waves have spacing*/

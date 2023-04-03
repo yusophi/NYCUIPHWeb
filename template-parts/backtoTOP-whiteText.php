@@ -1,6 +1,6 @@
 <div class="footer-back-to-top whitetext-style">
       <div class="deco_waves">
-            <img class="wave" src="<?php bloginfo('template_url')?>/images/icon/footer_wave.svg">
+            <img class="wave" src="<?php bloginfo('template_url') ?>/images/icon/wave.webp">
       </div>
       <button type="button" class="block-title back_to_top" id="back_to_top_btn">
             <img class="icon" src="<?php bloginfo('template_url')?>/images/template-singlepost-icon/icon-white-toTOP.svg">
