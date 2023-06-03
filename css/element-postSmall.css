@@ -252,7 +252,7 @@
 }
 
 @media (max-width:960px) {
-    .article-preview-pic {
+    .article-preview-pic, .article-preview-pic img {
         width: 219px;
         height: 109px;
     }
@@ -344,7 +344,8 @@
 
 
 @media (max-width: 480px) {
-    .article-preview-pic {
+    .article-preview-pic, .article-preview-pic img {
+        border-radius: 15px;
         width: 89.333vw;
         height: 52vw;
     }

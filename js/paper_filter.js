@@ -42,7 +42,6 @@
       $(document).on('click', '#search_btn', function(e){
         e.preventDefault();
         const search_str = $('#keyword').val();
-        //console.log(search_str);
         $.ajax({
           url: wpAjax.ajaxUrl,
           type: 'POST',

@@ -247,8 +247,8 @@
             <?php $others_regu = get_field('others'); ?>
             <?php foreach( $others_regu as $data_group): ?>
                 <?php if($data_group['file'] && $data_group['filename']): ?>
-                <a class="link_block" href="<?php echo esc_url($data_group['file']);?>" target="_blank">
-                    <span class="file_title"><?php echo $data_group['filename']; ?>&nbsp;</span>
+                <a class="tdata" href="<?php echo esc_url($data_group['file']);?>" target="_blank">
+                    <span><?php echo $data_group['filename']; ?>&nbsp;</span>
                     <img class="icon_download" src="<?php bloginfo('template_url')?>/images/page_curriculum/icon_download.svg">
                 </a>
                 <?php endif; ?>

@@ -317,7 +317,7 @@
             <div class="Interview-container">
                   <div class="cards">
                         <?php //query the recent 6 posts
-                        if($locale == "en_US"){
+                        /*if($locale == "en_US"){
                               $args = array(
                                     'post_type' => 'post',
                                     'post_status' => 'publish',
@@ -336,28 +336,27 @@
                         }
                         $arr_posts = new WP_Query($args);
 
-                        if ($arr_posts->have_posts()) :
+                        if ($arr_posts->have_posts()) :*/
                         ?>
                               <?php
                               //$counter = 0;
-                              while ($arr_posts->have_posts()) :
-                                    $arr_posts->the_post();
+                              /*while ($arr_posts->have_posts()) :
+                                    $arr_posts->the_post();*/
                                     //$counter = $counter + 1;
                               ?>
                                     <div class="interview-slide">
                                           <div class="interview-picture">
-                                                <?php echo wp_get_attachment_image(get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
+                                                <?php //echo wp_get_attachment_image(get_field('alumni_picture'), 'hp-interview-img-thumb'); ?>
                                           </div>
                                           <div class="interview-text-content">
-                                                <a class="interview-title" href="<?php the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─" ?> <?php the_field('alumni_name'); ?></a>
-                                                <span class="interview-excerpt"><?php the_field('interview-excerpt'); ?><?php echo "..."; ?></span>
+                                                <a class="interview-title" href="<?php //the_permalink(); ?>"><?php the_field('interview-class'); ?> <?php echo "─" ?> <?php the_field('alumni_name'); ?></a>
+                                                <span class="interview-excerpt"><?php //the_field('interview-excerpt'); ?><?php echo "..."; ?></span>
                                           </div>
 
                                     </div>
-                              <?php endwhile; ?>
-
-                        <?php endif;
-                        wp_reset_postdata(); ?>
+                              <?php //endwhile; ?>
+                        <?php /*endif;
+                        wp_reset_postdata();*/ ?>
                   </div>
             </div>
       </div>-->

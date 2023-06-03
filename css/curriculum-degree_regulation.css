@@ -178,16 +178,16 @@ ul.table{
 }
 
 .others_regu_rows{
-    width: 63.64vw;
+    width: 82vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: -1vw;
     margin-top: 3.2291vw;
 }
 
-.others_regu_rows > .link_block{
+.others_regu_rows > a{
     margin-bottom: 0.8vw;
+    margin-left: 0;
 }
 
 #btn-degree{
