@@ -28,16 +28,11 @@
                     <div class="upper-nav-flex">
                         <div id="upper-nav">
                             <a id="logo-small" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
-                            <!--<span>iPH.</span>-->
                                 <img src="<?php bloginfo('template_url');?>/images/header/logo-small.png">
                             </a>
                             <a id="logo" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                                 <img src="<?php bloginfo('template_url');?>/images/header/logo1.png">
                             </a>
-                            <!--<a class="web_name" title="國立陽明交通大學公共衛生研究所"href="<?php //echo site_url(); ?><?php //if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
-                                <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
-                                <span class="enName">Institute of Public Health, NYCU</span>
-                            </a>-->
                         </div>
                         <div id="nav-toolbar">
                             <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
@@ -46,14 +41,6 @@
                                 <img claee="icon_toolbar" id="site_search" width="25" height="25" alt="放大鏡" src="<?php bloginfo('template_url')?>/images/header/search.svg">
                                 <img class="icon_toolbar_hover" id="site_search_hover" width="25" height="25" alt="藍色放大鏡" src="<?php bloginfo('template_url')?>/images/header/site_search/search_hover.svg">
                             </div>
-                            <div id="icon-calendar" title="行事曆" type="button">
-                                <img class="icon_toolbar" id="calendar" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar.svg">
-                                <img class="icon_toolbar_hover" id="calendar_hover" width="25" height="25" src="<?php bloginfo('template_url')?>/images/header/calendar_hover.svg">
-                            </div>
-                            <a id="icon-alumni_entry" title="校友E化系統" type="button" href="http://iphalumni.iph.nycu.edu.tw/">
-                                <img class="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
-                                <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
-                            </a>
                         </div>
                         <div class="sm-nav-toolbar" id="sm-nav-toolbar-outer">
                             <div id="icon-en"><ul><?php pll_the_languages(array('hide_current' => 1 )); ?> </ul></div>
@@ -75,8 +62,9 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about/">系所簡介</a></li>
-                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member/">系所成員</a></li>
-                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/administration_staff/">行政助教</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/division/">專業領域</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/dep_mhe/">醫人學科</a></li>
                             </ul>
                         </div>
                         <?php else: ?>
@@ -84,58 +72,36 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/about-en/">Introduction</a></li>
-                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/member-en/">Faculty</a></li>
-                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/administration_staff-en/">Administration</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/division-en/">Divisions</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/dep_ph-en/">About DPH</a></li>
+                                <li class="nav-list-item-1"><a href="<?php echo site_url(); ?>/dep_mhe-en/">About MH&E</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>
                     </li>
+                    
                     <li id="nav-main-list-item-2" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
-                        <a class="menu-list nav-list-item-2">最新消息&nbsp;&nbsp;&nbsp;</a>
+                        <a class="menu-list nav-list-item-2">系所成員&nbsp;</a>
                         <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news/">總覽</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/announcement/">公告</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/scholarship/">獎學金</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/covid19/">COVID-19</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/member/">本所師資</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/administration_staff/">行政助教</a></li>
                             </ul>
                         </div>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-2">News</a>
+                        <a class="menu-list nav-list-item-2">Faculty</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/news-en/">All</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/announcement-en/">General</a></li>
-                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/covid19-en/">COVID-19</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/member-en/">Faculty</a></li>
+                                <li class="nav-list-item-2"><a href="<?php echo site_url(); ?>/administration_staff-en/">Administration</a></li>
                             </ul>
                         </div>
                         <?php endif; ?>
                     </li>   
-                    <li id="nav-main-list-item-4" class="nav-item">
-                        <?php if($hd_locale == "zh_TW"): ?>
-                        <a class="menu-list nav-list-item-4">學術活動</a>
-                        <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events/">所有活動</a></li>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/seminars/">學術演講</a></li>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/study_group/">讀書會</a></li>
-                            </ul>
-                        </div>
-                        <?php else: ?>
-                        <a class="menu-list nav-list-item-4">Events</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/events-en/">All</a></li>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/seminars-en/">Seminars</a></li>
-                                <li class="nav-list-item-4"><a href="<?php echo site_url(); ?>/study_group-en/">Study groups</a></li>
-                            </ul>
-                        </div>
-                        <?php endif; ?>
-                    </li>
-                    <li id="nav-main-list-item-5" class="nav-item">
+                    
+                    <li id="nav-main-list-item-3" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
                         <a class="menu-list nav-list-item-5">課程規劃</a>
                         <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
@@ -156,13 +122,14 @@
                         </div>
                         <?php endif; ?>  
                     </li>
+
                     <?php if($hd_locale == "zh_TW"): ?>
-                    <li id="nav-main-list-item-6" class="nav-item">
-                        <a class="menu-list nav-list-item-6">學生園地</a>
+                    <li id="nav-main-list-item-4" class="nav-item">
+                        <a class="menu-list nav-list-item-6">學生專區</a>
                         <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
                         <div class="dropdown-menu">
                             <ul>
-                                <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/applications/">各類申請</a></li>
+                                <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/applications/">各項申請</a></li>
                                 <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/scholarships/">獎助學金</a></li>
                                 <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/honor/">榮譽榜單</a></li>
                                 <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/past_papers/">歷屆論文</a></li>
@@ -170,32 +137,56 @@
                         </div>
                     </li>
                     <?php else: ?>
-                    <li id="nav-main-list-item-6" class="nav-item">
-                        <a class="menu-list nav-list-item-6" href="https://oia.nycu.edu.tw/en/degree-seeking/international-students/scholarship/">Scholarships</a>
+                    <li id="nav-main-list-item-4" class="nav-item">
+                        <a class="menu-list nav-list-item-4" href="https://oia.nycu.edu.tw/en/degree-seeking/international-students/scholarship/">Scholarships</a>
                     </li>
                     <?php endif; ?>
 
-                    <li id="nav-main-list-item-3" class="nav-item">
-                        <?php if($hd_locale == "zh_TW"): ?> 
-                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
+                    <li id="nav-main-list-item-5" class="nav-item">
+                        <?php if($hd_locale == "zh_TW"): ?>
+                            <a class="menu-list nav-list-item-5">校友專區&nbsp;</a>
+                            <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/">校友回娘家</a></li>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/">募款計畫</a></li>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/">傑出校友</a></li>
+                                    <li class="nav-list-item-5"><a href="https://iphalumni.iph.nycu.edu.tw/">校友登入</a></li>
+                                </ul>
+                            </div>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission-en/">Admission</a>
+                            <a class="menu-list nav-list-item-5">Alumni</a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/"></a></li>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/"></a></li>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/"></a></li>
+                                    <li class="nav-list-item-5"><a href="<?php echo site_url(); ?>/"></a></li>
+                                </ul>
+                            </div>
                         <?php endif; ?>
                     </li>
 
-                    <li id="nav-main-list-item-8" class="nav-item">
+                    <li id="nav-main-list-item-6" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?>
-                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph/">公衛學科</a>
+                            <a class="menu-list nav-list-item-6">資訊公告&nbsp;</a>
+                            <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/admission/">招生訊息</a></li>
+                                    <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/events/">學術活動</a></li>
+                                    <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/news/">一般公告</a></li>
+                                </ul>
+                            </div>
                         <?php else: ?>
-                        <a class="menu-list nav-list-item-8" href="<?php echo site_url(); ?>/dep_ph-en/">About DPH</a>
-                        <?php endif;?>
-                    </li>
-
-                    <li id="nav-main-list-item-9" class="nav-item">
-                        <?php if($hd_locale == "zh_TW"): ?>
-                        <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe/">醫人暨教育學科</a>
-                        <?php else: ?>
-                        <a class="menu-list nav-list-item-9" href="<?php echo site_url(); ?>/dep_mhe-en/">About MH&E</a>
+                            <a class="menu-list nav-list-item-6"></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/admission-en/"></a>Admission</li>
+                                    <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/events-en/"></a>Events</li>
+                                    <li class="nav-list-item-6"><a href="<?php echo site_url(); ?>/news-en/"></a>News</li>
+                                </ul>
+                            </div>
                         <?php endif; ?>
                     </li>
 
@@ -209,6 +200,7 @@
                     <?php else: ?>
                     <li id="nav-main-list-item-7" class="nav-item"></li>
                     <?php endif; ?>
+                    
                     <div class="sm-nav-toolbar" id="sm-nav-toolbar-inner">
                         <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
                         <a id="icon-alumni_entry" title="校友E化系統" type="button" href="http://iphalumni.iph.nycu.edu.tw/">
