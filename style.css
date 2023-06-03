@@ -105,15 +105,17 @@ html{
 body {
     background: #2e4565;
     font-family: 'Noto Sans TC', sans-serif;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    /*-ms-overflow-style: none;  /* IE and Edge
+    scrollbar-width: none;*/  /* Firefox */
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-    display: none; /*hide the scrollbar*/
-}
+/*body::-webkit-scrollbar {
+    display: none;
+}*/
 
 /*.header {
     position: fixed;
@@ -175,7 +177,6 @@ body::-webkit-scrollbar {
     transform: 0.3s;
 }
 
-
 #nav-toolbar {
     float: right;
     display: flex;
@@ -198,7 +199,7 @@ body::-webkit-scrollbar {
 }
 
 #nav-toolbar.pulldown {
-    transform: translateY(calc(50% + 4vw));
+    transform: translateY(calc(50% + 3vw));
     transition: 0.3s;
 }
 /*
@@ -252,22 +253,30 @@ li.lang-item > a, #NYCU{
     clear: both;
   }
 
-#logo {
-    transition: 0.3s;
-    width: 3.75vw;
+#logo img{
+    width: 15.315vw;
     height: 3.75vw;
+}
+
+#logo-small{
+    transition: 0.3s;
+    width: 5.5vw;
+    height: 5.5vw;
     margin-right: 1.5625vw;
-    border-radius: 1.5vw;
+    /*border-radius: 1.5vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
     background-color: #2e4565;
     text-decoration: none;
-    min-width: 3.75vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 3.75vw;*/
+    display: none;
 }
 
-#logo > span{
+#logo-small img{
+    width: 5.5vw;
+    height: 5.5vw;
+}
+
+/*#logo > span{
     font-family: jf-openhuninn-1.0;
     font-size: .8333333vw;
     line-height: 1.09416666vw;
@@ -278,16 +287,13 @@ li.lang-item > a, #NYCU{
 #logo:hover{
     border-radius: 3vw;
 }
-
-#mark {
-    margin-left:2.188rem;
-}
+*/
 
 #nav-hr {
     /*top: 62%;*/
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1.276041666vw;
+    margin-top: 1vw;
     height: 1.5px;
     width: 92.7083333vw;
     min-width: 92.7083333vw;
@@ -315,7 +321,7 @@ li.lang-item > a, #NYCU{
 }
 
 #nav-menu.shorten {
-    padding: 1.197916666vw 18.8541666vw 1.197916666vw 10.8333vw;
+    padding: 1.3vw 20vw 1.3vw 10.8333vw;
     transition: 0.3s;
 }
 
@@ -342,10 +348,10 @@ li.lang-item > a, #NYCU{
     transform: translateY(-8vw);
 }
 
-
-#logo.stay {
-    transform: translateY(8vw);
-    transition: 0.3s;
+#logo-small.stay {
+    transform: translateY(6vw);
+    transition: 0.3s ease-in;;
+    display: block;
 }
 
 .nav-disappearable {
@@ -552,7 +558,7 @@ h1.article-title{
     cursor: pointer;
 }
 
-#nav-toolbar #nav-hamburger {
+.sm-nav-toolbar{
     display: none;
 }
 
@@ -595,6 +601,10 @@ h1.article-title{
     display: none;
 }
 
+#sm-img-hamburger, #sm-img-esc{
+    display: none;
+}
+
 @media (max-width:960px) {
     #logo {
         width: 36px;
@@ -617,14 +627,6 @@ h1.article-title{
         line-height: 16.5px;
         letter-spacing: 0.25px;
     }
-
-    /*#nav-toolbar {
-        width: 108.5px;
-    }
-    #nav-toolbar div {
-        width: 16px;
-        height: 16px;
-    }*/
 
     .nav-menu-pullup {
         transform: translateY(-80px);
@@ -661,8 +663,40 @@ h1.article-title{
 }
 
 @media (max-width:700px) {
-    #nav-toolbar #nav-hamburger {
+    #nav-toolbar{
+        display: none;
+    }
+
+    .sm-nav-toolbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #sm-nav-toolbar-outer #nav-hamburger {
+        display: block;   
+        margin-left: 5vw;
+    }
+
+    #sm-img-hamburger{
         display: block;
+    }
+
+    .sm-nav-open > #sm-img-esc{
+        display: block;
+    }
+
+    .sm-nav-open > #sm-img-hamburger{
+        display: none;
+    }
+
+    #sm-nav-toolbar-inner{
+        margin-top: 3vw;
+    }
+
+    #icon-alumni_entry{
+        margin-left: 5vw;
     }
 
     #nav-hr {
@@ -764,7 +798,7 @@ h1.article-title{
         font-size: 15.008px;
     }
 
-    #nav-toolbar > #icon-search {
+    /*#nav-toolbar > #icon-search {
         display: none;
     }
 
@@ -774,7 +808,7 @@ h1.article-title{
 
     #nav-toolbar > #icon-alumni_entry {
         display: none;
-    }
+    }*/
 
     .nav-container {
         height: calc(100vh - 77px);
@@ -794,17 +828,17 @@ h1.article-title{
         padding-bottom: 14.05px;
     }
 
-    .sm-nav-strech #icon-en {
+    /*.sm-nav-strech #icon-en {
         display: none;
     }
 
     .sm-nav-strech #nav-toolbar > #icon-calendar {
-        display: block;
+        display: none;
     }
 
     .sm-nav-strech #nav-toolbar > #icon-alumni_entry {
         display: block;
-    }
+    }*/
 
     .nav-arrow-down {
         position: relative;

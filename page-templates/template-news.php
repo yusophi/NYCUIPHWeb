@@ -113,12 +113,12 @@
                     $counter = $counter + 1;
             ?>
                 <div class="article-content num-<?php echo $counter ?>">
-                    <div class="post_counter">
-                    <?php if($counter >= 10){
+                    <!--<div class="post_counter">
+                    <?php /*if($counter >= 10){
                                 echo $counter . ".";
                             }else{
-                                echo "0" . $counter . ".";} ?>
-                    </div>
+                                echo "0" . $counter . ".";}*/ ?>
+                    </div>-->
                     <?php get_template_part('template-parts/post_news_card'); ?>
                 </div>
                 <?php endwhile; ?>
@@ -137,8 +137,8 @@
                 'end_size' => 3,
                 'mid_size' => 2,
                 'prev_next' => True,
-                'prev_text' => __('<'),
-                'next_text' => __('>'),
+                'prev_text' => __('<<'),
+                'next_text' => __('>>'),
                 'type' => 'list',
             );
             echo paginate_links($args);

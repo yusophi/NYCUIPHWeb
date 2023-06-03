@@ -1,5 +1,5 @@
 // Jenny: slide show block
-var imagesIndex = 1;
+/*var imagesIndex = 1;
 var refreshIntervalId;
 displayImage(imagesIndex);
 
@@ -52,7 +52,7 @@ refreshIntervalId = setInterval(() => {
       imagesIndex = 1;
     }
 }, 2500); 
-
+*/
 // Milo: JS code for event part
 FlexSlider = {
     num_items: document.querySelectorAll(".event-data-item").length,
@@ -227,7 +227,7 @@ FlexSlider.init();
 
 // Milo: JS code for links part
 
-var links_category_items = document.getElementsByClassName(
+/*var links_category_items = document.getElementsByClassName(
     "links-category-item"
 );
 
@@ -245,12 +245,12 @@ for (var i = 0; i < links_upper_items.length; i++) {
         if (toExpand) this.parentElement.classList.add("expanded");
         Links_container[0].classList.toggle("expanded", toExpand);
     });
-}
+}*/
 
 // Milo: End of links part
 
 /* Jenny: contactUs block js*/
-var ProfileIndex = 1;
+/*var ProfileIndex = 1;
 
 function currentProfile(n) {
     ProfileIndex = n;
@@ -304,9 +304,9 @@ window.addEventListener("scroll", function (){
     for (var i = 0; i < availableProfiles.length; i++) {
         availableProfiles[i].style.display = "none";
     }
-})
+})*/
 
-var sphn_about_container = document.getElementsByClassName('sphn-about-container')[0]
+/*var sphn_about_container = document.getElementsByClassName('sphn-about-container')[0]
 var about_container_is_down = false
 var about_container_offset = 0, about_container_start_x = 0
 sphn_about_container.transLeft = 0;
@@ -315,7 +315,7 @@ sphn_about_container.addEventListener('mousedown', function(e) {
     about_container_is_down = true;
     about_container_offset = sphn_about_container.transLeft - e.clientX;
     about_container_start_x = e.clientX
-    console.log("mousedown: about_container_offset = " + about_container_offset + ", transLeft = " + sphn_about_container.transLeft);
+    //console.log("mousedown: about_container_offset = " + about_container_offset + ", transLeft = " + sphn_about_container.transLeft);
 }, true)
 
 sphn_about_container.addEventListener('mouseup', function(e) {
@@ -323,7 +323,7 @@ sphn_about_container.addEventListener('mouseup', function(e) {
     var style = window.getComputedStyle(sphn_about_container)
     var matrix = new WebKitCSSMatrix(style.transform)
     sphn_about_container.transLeft = matrix.m41
-    console.log("mouseup: transLeft = " + sphn_about_container.transLeft)
+    //console.log("mouseup: transLeft = " + sphn_about_container.transLeft)
 }, true)
 
 sphn_about_container.addEventListener('mousemove', function(e) {
@@ -335,6 +335,6 @@ sphn_about_container.addEventListener('mousemove', function(e) {
     x = win.innerWidth || docElem.clientWidth || body.clientWidth;
     if (about_container_is_down && e.clientX + about_container_offset < 0 && e.clientX + about_container_offset > -sphn_about_container.offsetWidth + 0.9467 * x) {
         sphn_about_container.style.transform = 'translateX(' + (e.clientX + about_container_offset) + 'px)';
-        console.log("mousemove: e.clientX = " + e.clientX + ", about_container_offset = " + about_container_offset)
+        //console.log("mousemove: e.clientX = " + e.clientX + ", about_container_offset = " + about_container_offset)
     }
-}, true)
+}, true)*/

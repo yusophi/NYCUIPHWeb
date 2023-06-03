@@ -192,25 +192,32 @@
 
 
 @media (max-width: 960px) {
+    .cat-list{
+        width: 55vw;
+    }
+
     .cat-list_item_name{
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .page-numbers {
-        font-size: 10px;
+        font-size: 14px;
+        flex-wrap: wrap;
     }
-}
 
-@media (max-width: 768px) {
-    .cat-list{
-        width: 35vw;
+    .pagination .prev, .pagination .next{
+        position: relative;
+        background-image: none;
+        font-size: 14px;
+        margin: 0;
     }
-    
 }
 
 @media (max-width: 480px) {
     .cat-list{
         width: 55vw;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .event-cards {
@@ -220,10 +227,6 @@
     .cat-list_item_dot {
         width: 15px;
         height: 15px;
-    }
-
-    .cat-list_item_name {
-        font-size: 3.733vw;
     }
 
     .cat-list_item {
@@ -237,4 +240,5 @@
     .post_block {
         margin-top: 40px;
     }
+
 }

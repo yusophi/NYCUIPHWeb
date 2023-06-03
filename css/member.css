@@ -35,19 +35,6 @@
     height: 12.5vw;
 }
 
-.staff_picture{
-    width: 20.833333333vw;
-    height: 22.135416666vw;
-    border-radius: 6%;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.staff_picture img{
-    width: 20.833333333vw;
-    height: 22.135416666vw;
-}
-
 .name, .title, .en_name, .en_title{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.40625vw; /*25 -> 27*/
@@ -211,7 +198,8 @@
     }
 
     .title, .en_title{
-        font-size: 14px;
+        font-size: 16px;
+        letter-spacing: 2px;
     }
 
     .education, .expertise{
@@ -225,6 +213,17 @@
 
     .title{
         margin-left: 4px;
+    }
+
+    .staff-name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .work_group{
+        font-size: 12px;
     }
 }
 
@@ -257,6 +256,10 @@
     .member_picture img{
         width: 23.5vw;
         height: 15vw;
+    }
+
+    .work_group{
+        font-size: 13px;
     }
 }
 
@@ -308,7 +311,8 @@
     }
 
     .name, .en_name {
-        font-size: 4.535vw;
+        font-size: 22px;
+        letter-spacing: 2px;
     }
 
     .education, .expertise {
@@ -320,7 +324,7 @@
     }
 
     .cat-list_container > p, .cat-list_item_name {
-        font-size: 3.733vw;
+        font-size: 16px;
         letter-spacing: 2.1px;
     }
 
@@ -336,8 +340,9 @@
 
     .select_bar_container {
         border-bottom: none;
-        width: 89.33vw;
     }
 
-
+    .work_group{
+        font-size: 16px;
+    }
 }

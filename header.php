@@ -15,7 +15,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/images/logo2.png">
+    <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/images/header/logo-small.png">
     <?php wp_head(); ?>
 </head>
 
@@ -27,13 +27,17 @@
                 <div class="cf nav-disappearable">
                     <div class="upper-nav-flex">
                         <div id="upper-nav">
-                            <a id="logo" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
-                            <span>iPH.</span>
+                            <a id="logo-small" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
+                            <!--<span>iPH.</span>-->
+                                <img src="<?php bloginfo('template_url');?>/images/header/logo-small.png">
                             </a>
-                            <a class="web_name" title="國立陽明交通大學公共衛生研究所"href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
+                            <a id="logo" href="<?php echo site_url(); ?><?php if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
+                                <img src="<?php bloginfo('template_url');?>/images/header/logo1.png">
+                            </a>
+                            <!--<a class="web_name" title="國立陽明交通大學公共衛生研究所"href="<?php //echo site_url(); ?><?php //if($hd_locale == "zh_TW"){echo '/homepage/';}else{echo '/homepage-en/';}?>">
                                 <span class="Name">國立陽明交通大學<br>公共衛生研究所<br></span>
                                 <span class="enName">Institute of Public Health, NYCU</span>
-                            </a>
+                            </a>-->
                         </div>
                         <div id="nav-toolbar">
                             <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
@@ -50,8 +54,12 @@
                                 <img class="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
                                 <img class="icon_toolbar_hover" id="alumni_entry_hover" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry_hover.svg">
                             </a>
+                        </div>
+                        <div class="sm-nav-toolbar" id="sm-nav-toolbar-outer">
+                            <div id="icon-en"><ul><?php pll_the_languages(array('hide_current' => 1 )); ?> </ul></div>
                             <div id="nav-hamburger">
-                                <img width="25" height="20" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
+                                <img id="sm-img-hamburger" width="25" height="20" src="<?php bloginfo('template_url')?>/images/header/menu.svg">
+                                <img id="sm-img-esc"width="25" height="20" src="<?php bloginfo('template_url')?>/images/header/esc.svg">
                             </div>
                         </div>
                     </div>  
@@ -170,7 +178,6 @@
                     <li id="nav-main-list-item-3" class="nav-item">
                         <?php if($hd_locale == "zh_TW"): ?> 
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission/">招生訊息</a>
-                        <div class="nav-arrow"><img class="nav-arrow-down" src="<?php bloginfo('template_url')?>/images/header/arrow_down.webp"></div>
                         <?php else: ?>
                         <a class="menu-list nav-list-item-3" href="<?php echo site_url(); ?>/admission-en/">Admission</a>
                         <?php endif; ?>
@@ -196,13 +203,18 @@
                     <li id="nav-main-list-item-7" class="nav-item">
                         <a class="menu-list nav-list-item-7" href="<?php echo site_url(); ?>/links/">相關資源</a>
                         <div class="dropdown-menu">
-                            <ul>
-                            </ul>
+                            <ul></ul>
                         </div>
                     </li>
                     <?php else: ?>
                     <li id="nav-main-list-item-7" class="nav-item"></li>
                     <?php endif; ?>
+                    <div class="sm-nav-toolbar" id="sm-nav-toolbar-inner">
+                        <a id="NYCU" title="陽明交大首頁" href="https://www.nycu.edu.tw/" target="blank">NYCU</a>
+                        <a id="icon-alumni_entry" title="校友E化系統" type="button" href="http://iphalumni.iph.nycu.edu.tw/">
+                            <img class="icon_toolbar" id="alumni_entry" width="29" height="29" alt="校友系統連結" src="<?php bloginfo('template_url')?>/images/header/alumni_entry.svg">
+                        </a>
+                    </div>
                 </ul>
                 </div>
             </nav>

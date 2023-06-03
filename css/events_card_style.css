@@ -92,12 +92,13 @@
 .sdg-tag{
     display: flex;
     flex-direction: row;
+    margin-top: 1vw;
 }
 .sdg-tag > li{
     margin-left: 0.5vw;
 }
 
-.hp_event_tag > .post_category, .event-info > .sdg-tag li, .event-location{
+.hp_event_tag > .post_category, .event-info .sdg-tag li, .event-location{
     /*position: relative;
     left: 6.5vw;
     top: -3.7vw;*/
@@ -121,7 +122,7 @@
 .event-location{
     margin-left: 0.5vw;
 }
-.event-info > .sdg-tag {
+.event-info .sdg-tag {
     margin-left: -0.5vw;
 }
 
@@ -203,8 +204,8 @@
         letter-spacing: 1px;
     }
 
-    .hp_event_tag > .post_category, .event-info > .sdg-tag li, .event-location{
-        font-size: 9px;
+    .hp_event_tag > .post_category, .event-info .sdg-tag li, .event-location{
+        font-size: 12px;
         line-height: 0.504px;
         letter-spacing: 0.75px;
         padding: 1.44px 8px;
@@ -278,28 +279,28 @@
     }
 
     .sdg-tag {
-        margin-top: 1.333vw;
+        margin-top: 6px;
     }
 
-    .hp_event_tag > .post_category, .event-info > .sdg-tag li, .event-location {
+    .hp_event_tag > .post_category, .event-info .sdg-tag li, .event-location {
         padding: 3px 16px;
         border-radius: 10.5px;
-        font-size: 10px;
+        font-size: 14px;
         line-height: unset;
-        height: unset;
+        height: 16.5px;
         min-height: 0;
         letter-spacing: 1.5px;
         min-width:max-content;
         min-height: 5.6vw;
         box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 5px;
     }
 
     .hp_event_tag {
         width: unset;
-    }
-
-    .event-location {
-        margin-left: 1.3333vw;
+        margin-top: 5px;
+        flex-wrap: wrap;
     }
 
     .event-name {
@@ -319,7 +320,7 @@
     .event-cards-mask {
         min-width: unset;
         width: 89.333vw;
-        height: 136.533vw;
+        height: 68.27vw;
         margin: 0 0 40px 0;
         border-radius: 6.667vw;
     }
@@ -331,19 +332,11 @@
 
     .event-cards-mask > .event-main-margin {
         justify-content: flex-start;
-        padding: 10.667vw 12.8vw;
+        padding: 10.667vw 8vw;
     }
 
     .sm-event-pic {
-        margin-top: 20px;
-        display: block;
-        width: 64vw;
-        height: 49.333vw;
-    }
-    
-    .sm-event-pic img {
-        width: 100%;
-        height: auto;
+        display: none;
     }
 
     .event-name a {
@@ -352,5 +345,15 @@
 
     .sdg-tag > li {
         margin-left: 5px;
+    }    
+
+    .event-info .sdg-tag {
+        margin-left: unset;
+    }
+
+    .event_tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
     }
 }

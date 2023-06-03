@@ -63,22 +63,18 @@
   
   (function($){
     $(document).ready(function(){
-      $(document).on('click', '#button-dropdown-year', function(e){
-        e.preventDefault();
-        document.getElementById("dropdown-year").classList.toggle("show");
+      $(".mobile-selector-dropdown").click(function(){
+        $(this).find(".mobile-selector-dropdown-menu").slideToggle("fast");
+      });
+
+      $(document).on("click", function(event){
+        var $trigger = $(".mobile-selector-dropdown");
+        if($trigger !== event.target && !$trigger.has(event.target).length){
+            $(".mobile-selector-dropdown-menu").slideUp("fast");
+        }            
       });
     });
   })(jQuery);
-
-  (function($){
-    $(document).ready(function(){
-      $(document).on('click', '#button-dropdown-division', function(e){
-        e.preventDefault();
-        document.getElementById("dropdown-division").classList.toggle("show");
-      });
-    });
-  })(jQuery);
-
 
   function editFilterInputs(inputField, value) {
     const currentFilters = inputField.val().split(',');

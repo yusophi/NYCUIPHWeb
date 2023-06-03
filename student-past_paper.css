@@ -104,9 +104,10 @@
 }
 
 #keyword{
-    width: 70vw;
+    width: auto;
     border: 0px;
     background-color: transparent;
+    margin-left: -2.5vw;
 }
 
 input::focus{
@@ -405,7 +406,6 @@ ul.table{
     }
 
     #keyword{
-        width: auto;
         margin-left: 0vw;
     }
     

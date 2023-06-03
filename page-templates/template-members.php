@@ -122,9 +122,9 @@
                         $edu = get_field('h_edu'); $exp = get_field('academic_expertise'); $link = ""; $CV = "";
                     ?>
                     <div class="member_card">
-                        <div class="member_picture">
+                        <a class="member_picture" href="<?php the_permalink(); ?>">
                             <?php echo wp_get_attachment_image( $picture , 'large'); ?>
-                        </div>
+                        </a>
                         <?php if ($locale == "zh_TW"): ?>
                         <a class="name" href="<?php the_permalink(); ?>"><?= $name; ?><span class="title"><?= $title; ?></span></a>
                         <?php else: ?>

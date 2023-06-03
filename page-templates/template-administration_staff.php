@@ -46,7 +46,7 @@
                         $work_group =  get_field('work_group'); $name = get_field('staff_name');
                     ?>
                     <div class="member_card">
-                        <a class="staff_picture" href="<?php the_permalink(); ?>">
+                        <a class="member_picture" href="<?php the_permalink(); ?>">
                             <?php echo wp_get_attachment_image( $picture, 'large' ); ?>
                         </a>
                         <?php if ($locale == "zh_TW"): ?>

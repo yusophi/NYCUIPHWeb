@@ -14,13 +14,9 @@
                         <?php $filesource = "file_source" . $count; 
                               $file_link = $apply_regulation[$filesource];
                         ?>
-                            
-                                <li>
-                                    <a class="link_block _font20" href="<?php echo esc_url($file_link); ?>" target="_blank"><?php echo $file_name; ?>&nbsp;
-                                        <!--<span class="file_title _font18"><?php //echo $file_name; ?>&nbsp;</span>-->
-                                    </a>
-                                </li>
-                            
+                            <li>
+                                <a class="link_block" href="<?php echo esc_url($file_link); ?>" target="_blank"><?php echo $file_name; ?>&nbsp;</a>
+                            </li>
                     <?php endif;  $count =  $count + 1; ?>
                 <?php endwhile; ?>
         <?php endif; ?>

@@ -129,6 +129,7 @@
     
     ._font40{
         font-size: 20px;
+        letter-spacing: 2.85px;
     }
 }
 
@@ -167,10 +168,6 @@
         width: 8vw;
         height: 8vw;
         margin-top: 20px;
-    }
-
-    ._font40 {
-        font-size: 5.0688vw;
     }
 
     ._font20 {

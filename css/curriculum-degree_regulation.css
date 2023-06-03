@@ -1,0 +1,282 @@
+.degree_regulation{
+    width: 82vw;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 3.125vw;
+    margin-bottom: 7.864vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.regulation_block{
+    width: 82vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3.125vw;
+}
+
+.degree_block_title{
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more_btn{
+    width: 2.084vw;
+    height: 2.084vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.more_btn_hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#more_white{
+    transition: 0.3s ease-in;
+}
+
+.more_btn:hover{
+    width: 5.5vw;
+}
+
+.more_btn:hover #more_white{
+    display: none;
+}
+
+.more_icon{
+    width: 2.084vw;
+    height: 2.084vw;
+}
+
+.more_btn_text{
+    line-height: 0.06;
+    letter-spacing: 0.140625vw;
+    text-align: left;
+    color: #2e4565;
+    margin-left: 0.52083vw;
+}
+
+ul.table{
+    width: 82vw;
+    display: block;
+    border: 0;
+    border-collapse: collapse;
+    margin: 3.125vw 0;
+}
+
+.thead{
+    width: 82vw;
+    display: table-header-group;
+}
+
+.tbody{
+    width: 82vw;
+    display: table-row-group;
+}
+
+.thead-tr{
+    display: table-row;
+    border-bottom: solid 1px #647386;
+}
+
+.tr{
+    display: none;
+}
+
+.thead li, .tr li {
+    display: table-cell;
+    padding: 20px;
+}
+
+.shown{
+    display: table-row;
+    transition: display 0.3s ease-in;
+    border-bottom: solid 1px #647386;
+}
+
+.tdata, .tdata-en{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0.5vw;
+}
+
+.tdata-year{
+    color: #2e4565;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.145vw;
+    font-weight: 500;
+    line-height: 1.59;
+    letter-spacing: 1.1px;
+    width: 20vw;
+}
+
+.tdata-group1{
+    width: 20vw;
+}
+
+.tdata-group2{
+    width: 42vw;
+}
+
+.tdata > span{
+    color: #4f5ab8; 
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: 500;
+    letter-spacing: 0.140625vw;  
+}
+
+.en_text{
+    letter-spacing: 1.1px;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.flex-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -0.5vw;
+}
+
+.fontstyle-thead {
+    color: #2e4565;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9375vw;
+    font-weight: 500;
+    letter-spacing: 0.140625vw;
+}
+
+/*read more btn*/
+.bt-readmore{
+    cursor: pointer;
+    position: relative;
+    top: 3.15vw;
+    left: 73.3vw;
+}
+
+.bt-readmore > a:visited {
+    color: #2e4565;
+}
+
+.bt-readmore:hover > a:visited {
+    color: #efeee4;
+}
+
+.others_regu_rows{
+    width: 63.64vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: -1vw;
+    margin-top: 3.2291vw;
+}
+
+.others_regu_rows > .link_block{
+    margin-bottom: 0.8vw;
+}
+
+#btn-degree{
+    color: #efeee4;
+    background-color: #2e4565;
+}
+
+img.icon_download{
+    width: 3.3854vw;
+    height: 1.71875vw;
+}
+
+.mobile-nav-arrow, .mobile-nav-arrow-down{
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .fontstyle-thead, .tdata > span{
+        font-size: 14px;
+        letter-spacing: 1.35px;
+    }
+
+    .tdata-year{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+   /* .year{
+        width: 12vw;
+    }
+*/
+    
+   
+}
+
+@media (max-width: 480px){
+
+    .others_regu_rows{
+        width: 100%;
+    }
+    
+    .others_regu_rows > .link_block{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .more_btn, .more_icon{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    img.icon_download{
+        width: 13vw;
+        height: 6vw;
+    }
+
+    .more_btn:hover{
+        width: auto;
+    }
+    
+    .more_btn_text{
+        display: none;
+    }
+    
+    .flex-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .thead li, .tr li{
+        padding: 15px 7px;
+    }
+
+    .tdata{
+        margin-left: 0;
+        margin-bottom: 3vw;
+    }
+
+    .tdata-year{
+        width: 10vw;
+    }
+
+    .tdata-group1{
+        width: 48vw;
+    }
+
+    .tdata-group2{
+        width: 34vw;
+    }
+}

@@ -37,20 +37,27 @@
         <?php echo get_field('intro_curriculum') ?>
     </div>
     <div class="dep_table">
-        <div class="table_heads">
+        <ul class="table">
             <?php if ($locale == "zh_TW") : ?>
-                <div>年級</div>
-                <div>課程名稱</div>
-                <div>學分數</div>
-                <div>選別</div>
+            <li class="thead">
+                <ol class="tr">
+                    <li class="align-left">年級</li>
+                    <li class="align-left">課程名稱</li>
+                    <li class="align-center">學分數</li>
+                    <li class="align-center">選別</li>
+                </ol>
+            </li>
             <?php else : ?>
-                <div>Year</div>
-                <div>Course title</div>
-                <div>Credit</div>
-                <div>Compulsory/ Elective</div>
+            <li class="thead">
+                <ol class="tr">
+                    <li class="align-left">Year</li>
+                    <li class="align-left">Course title</li>
+                    <li class="align-center">Credit</li>
+                    <li class="align-center">Compulsory/ Elective</li>
+                </ol>
+            </li>
             <?php endif; ?>
-        </div>
-        <div class="table_hr"></div>
+            <li class="tbody">
 
         <?php $curriculum = get_field('curriculum') ?>
         <?php if ($curriculum) : ?>
@@ -62,22 +69,30 @@
                 $group_data = $curriculum[$name];
                 $grade = $group_data['grade'];
                 $course_name = $group_data['course_name'];
+                $course_list = $group_data['course_list'];
                 $credit = $group_data['credit'];
                 $type = $group_data['type'];
                 ?>
                 <?php if ($course_name) : ?>
-                    <div class="table_row">
-                        <div><?php echo $grade ?></div>
-                        <div><?php echo $course_name ?></div>
-                        <div><?php echo $credit ?></div>
-                        <div><?php echo $type ?></div>
-                    </div>
-                    <div class="table_hr"></div>
-                <?php endif;
-                $count = $count + 1;
-                ?>
+                    <ol class="tr">
+                        <li class="align-left"><?php echo $grade; ?></li>
+                        <li class="align-left">
+                        <?php 
+                            echo $course_name; 
+                            if($count == 2 && $course_list):?>
+                            <a class="file_name" href="<?php echo esc_url($course_list);?>" target="_blank">
+                                (課程列表)
+                            </a>
+                            <?php endif; ?>
+                        </li>
+                        <li class="align-center"><?php echo $credit; ?></li>
+                        <li class="align-center"><?php echo $type; ?></li>
+                    </ol>
+                <?php endif;$count = $count + 1; ?>
             <?php endwhile; ?>
         <?php endif; ?>
+            </li>
+        </ul>
     </div>
     <div class="dep_passage top_margined_s">
         <?php echo get_field('text_curriculum_0') ?>
