@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 #btn-papers{
     color: #efeee4;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .student_paper{
@@ -38,7 +38,7 @@
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
-    color: #2e4565;
+    color: var(--main-color-blue);
     width: 5vw;
 }
 
@@ -61,16 +61,16 @@
 .cat-list_item_dot{
     width: 1vw;
     height: 1vw;
-    border: solid 2px #2e4565;
+    border: solid 2px var(--main-color-blue);
     border-radius: 50%;
 }
 
 .cat_active > .cat-list_item_dot{
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .cat-list_item:hover .cat-list_item_dot{
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .cat-list_item{
@@ -86,7 +86,7 @@
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
-    color: #2e4565;
+    color: var(--main-color-blue);
     margin-left: 1.3vw;
 }
 
@@ -165,7 +165,7 @@ input[type=text]{
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: #2e4565;
+    color: var(--main-color-blue);
     border-bottom: solid 2px #647386;
     margin-top: 3.125vw;
     padding-bottom: 2.084vw;
@@ -184,7 +184,7 @@ input[type=text]{
 
 .mobile-selector-dropdown{
     width: 30vw;
-    border: solid 2px #2e4565;
+    border: solid 2px var(--main-color-blue);
     margin-left: 2vw;
     position: relative;
     list-style: none;
@@ -198,7 +198,7 @@ input[type=text]{
     justify-content: space-between;
     background-color: transparent;
     border: none;
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-weight: bold;
     padding: 3vw 4vw;
 }
@@ -206,8 +206,8 @@ input[type=text]{
 .arrow-down{
     width: 5px;
     height: 5px;
-    border-top: solid 3px #2e4565;
-    border-right: solid 3px #2e4565;
+    border-top: solid 3px var(--main-color-blue);
+    border-right: solid 3px var(--main-color-blue);
     transform: rotate(135deg);
 }
 
@@ -215,8 +215,8 @@ input[type=text]{
     min-width: 100%;
     display: none;
     position: absolute;
-    background-color: #e4dfd2;
-    border: solid 2px #2e4565;
+    background-color: var(--main-bg-color);
+    border: solid 2px var(--main-color-blue);
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     list-style: none;
@@ -224,7 +224,7 @@ input[type=text]{
 }
 
 .mobile-item{
-    color: #2e4565;
+    color: var(--main-color-blue);
     padding: 2vw;
     text-decoration: none;
     line-height: 1.3;
@@ -277,7 +277,7 @@ ul.table{
 }
 
 .fontstyle-thead {
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1vw;
     font-weight: 500;
@@ -289,7 +289,7 @@ ul.table{
     font-size: 1.30vw;
     font-weight: 500;
     letter-spacing: 0.1vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
     line-height: 1.59;
 }
 

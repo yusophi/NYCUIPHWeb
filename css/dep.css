@@ -1,6 +1,6 @@
 .dep_ph_page {
     padding: 18.8vw 8.96vw;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
 }
 
 .dep_title {
@@ -10,7 +10,7 @@
     line-height: 1.5;
     letter-spacing: 1.5px;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .dep_title .dep_en_title {
@@ -31,7 +31,7 @@
     font-size: 1.4066666vw;
     font-weight: bold;
     letter-spacing: 0.2109375vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .dep_circle {
@@ -39,7 +39,7 @@
     height: 2.65625vw;
     border-radius: 1.328125vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .dep_info {
@@ -51,7 +51,7 @@
 
 .dep_hr {
     width: 82.083333vw;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
     height: 1px;
 }
 
@@ -61,7 +61,7 @@
     line-height: 1.82;
     letter-spacing: 0.171875vw;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .dep_passage .img_container {
@@ -130,7 +130,7 @@ ul.table{
     font-weight: bold;
     line-height: 1.59;
     letter-spacing: 0.140625vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .tbody li, .tbody li a{
@@ -139,7 +139,7 @@ ul.table{
     font-weight: 500;
     line-height: 1.59;
     letter-spacing: 0.05729166vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .tbody li a{
@@ -165,7 +165,7 @@ ul.table{
     font-weight: bold;
     line-height: 1.4;
     letter-spacing: 0.1953125vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .bt-text {
@@ -365,7 +365,7 @@ ul.table{
         line-height: 1.47;
         letter-spacing: 2.55px;
         text-align: left;
-        color: #2e4565;
+        color: var(--main-color-blue);
         margin: 40px 30px;
     }
 

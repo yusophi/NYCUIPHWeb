@@ -62,7 +62,7 @@
     line-height: 0.06;
     letter-spacing: 0.140625vw;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
     margin-left: 0.52083vw;
 }
 
@@ -113,7 +113,7 @@ ul.table{
 }
 
 .tdata-year{
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.145vw;
     font-weight: 500;
@@ -154,7 +154,7 @@ ul.table{
 }
 
 .fontstyle-thead {
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 0.9375vw;
     font-weight: 500;
@@ -170,7 +170,7 @@ ul.table{
 }
 
 .bt-readmore > a:visited {
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .bt-readmore:hover > a:visited {
@@ -192,7 +192,7 @@ ul.table{
 
 #btn-degree{
     color: #efeee4;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 img.icon_download{

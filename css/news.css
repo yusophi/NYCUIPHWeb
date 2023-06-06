@@ -4,7 +4,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
 }
 
 /*the News_block */
@@ -25,7 +25,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
 }
 
 .select_bar_container{
@@ -36,7 +36,7 @@
     position: relative;
     margin-top: 11.458vw;
     padding-bottom: 1vw;
-    border-bottom: solid 0.052vw #2e4565;
+    border-bottom: solid 0.052vw var(--main-color-blue);
 }
 
 .cat-list{
@@ -56,16 +56,16 @@
 .cat-list_item_dot{
     width: 1vw;
     height: 1vw;
-    border: solid 2px #2e4565;
+    border: solid 2px var(--main-color-blue);
     border-radius: 50%;
 }
 
 .cat_active > .cat-list_item_dot{
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .cat-list_item:hover .cat-list_item_dot{
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .cat-list_item{
@@ -81,7 +81,7 @@
     font-weight: bold;
     line-height: 0.06;
     letter-spacing: 2.7px;
-    color: #2e4565;
+    color: var(--main-color-blue);
     margin-left: 1.3vw;
 }
 
@@ -104,21 +104,21 @@
 
 .page-numbers > li{
     margin-left: 2vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-size: 1.041667vw;
 }
 
 .page-numbers > li > a{
     text-decoration: none;
-    color: #2e4565;
+    color: var(--main-color-blue);
     border-radius: 50%;
     padding: 0.6rem 0.8rem 0.6rem;
     transition: 0.3s;
 }
 
 .page-numbers .current{
-    color: #e4dfd2;
-    background-color: #2e4565;
+    color: ;
+    background-color: var(--main-color-blue);
     border-radius: 50%;
     padding: 0.6rem 0.8rem 0.6rem;
 }
@@ -151,13 +151,13 @@
 
 
 .page-numbers > li:hover{
-    background-color: #2e4565;
-    color: #e4dfd2;
+    background-color: var(--main-color-blue);
+    color: ;
     border-radius: 50%;
 }
 
 .page-numbers > li > a:hover{
-    color: #e4dfd2;
+    color: ;
     text-decoration: none;
     padding: 0.6rem 0.8rem 0.6rem;
 }

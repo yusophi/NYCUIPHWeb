@@ -59,6 +59,12 @@ table {
     border-spacing: 0;
 }
 
+:root{
+    --main-color-blue: #2e4565;
+    --main-color-yellow: #FF9E18;
+    --main-bg-color: #e4dfd2;
+}
+
 /*@media screen and (min-width: 701px) {
     li li,
     li p,
@@ -103,7 +109,7 @@ html{
 }
 
 body {
-    background: #2e4565;
+    background: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     /*-ms-overflow-style: none;  /* IE and Edge
     scrollbar-width: none;*/  /* Firefox */
@@ -129,7 +135,7 @@ body {
 
 .web_name{
     min-height: 4.73958333vw;
-    color: #374a73;
+    color: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
     display: flex;
@@ -137,23 +143,23 @@ body {
     justify-content:space-between;
 }
 .Name {
-    -webkit-text-stroke: 0.3px #2e4565;
+    -webkit-text-stroke: 0.3px var(--main-color-blue);
     font-family: jf-openhuninn-1.0;
     font-size: 1.458333333vw;
     line-height: 1.719166666vw;
     letter-spacing: .364583333vw;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 .enName
 {
-    -webkit-text-stroke: 0.3px #2e4565;
+    -webkit-text-stroke: 0.3px var(--main-color-blue);
     font-family: jf-openhuninn-1.0;
     font-size: .9375vw;
     line-height: 1.719166666vw;
     letter-spacing: .026041666vw;;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 #main-nav {
@@ -161,7 +167,7 @@ body {
     width: 100vw;
     top:0;
     z-index: 999;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     box-shadow: 0px 1px 2rem -1rem rgba(0.0,0.0,0.0,0.3);
@@ -219,7 +225,7 @@ body {
 }
 
 li.lang-item > a, #NYCU{
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.40625vw;
     text-decoration: none;
@@ -265,7 +271,7 @@ li.lang-item > a, #NYCU{
     margin-right: 1.5625vw;
     /*border-radius: 1.5vw;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
     text-decoration: none;
     min-width: 3.75vw;*/
     display: none;
@@ -281,7 +287,7 @@ li.lang-item > a, #NYCU{
     font-size: .8333333vw;
     line-height: 1.09416666vw;
     text-align: left;
-    color: #e4dfd2;
+    color: ;
 }
 
 #logo:hover{
@@ -297,7 +303,7 @@ li.lang-item > a, #NYCU{
     height: 1.5px;
     width: 92.7083333vw;
     min-width: 92.7083333vw;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
     transition: 0.3s;
 }
 
@@ -321,7 +327,7 @@ li.lang-item > a, #NYCU{
 }
 
 #nav-menu.shorten {
-    padding: 1.3vw 20vw 1.3vw 10.8333vw;
+    padding: 1.3vw 20vw;
     transition: 0.3s;
 }
 
@@ -337,7 +343,7 @@ li.lang-item > a, #NYCU{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.14vw;
     letter-spacing: 3px;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 #nav-menu li a:hover{
@@ -384,7 +390,7 @@ li.lang-item > a, #NYCU{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1rem;
     letter-spacing: 3px;
-    color:#2e4565;
+    color:var(--main-color-blue);
     list-style: none;
     text-decoration: none;
     font-weight: 300;
@@ -394,7 +400,7 @@ li.lang-item > a, #NYCU{
 
 
 #slider-section {
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
     padding-top: 200px;
 }
 
@@ -436,7 +442,7 @@ li.lang-item > a, #NYCU{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 3px #ffbb00;
+    border-bottom: solid 3px var(--main-color-yellow);
 }
 
 #yellow_search_btn{
@@ -462,7 +468,7 @@ input.site_search_input::placeholder{
     font-weight: 500;
     letter-spacing: 2.7px;
     text-align: left;
-    color: #ffbb00;
+    color: var(--main-color-yellow);
 }
 
 input.site_search_input[type=text]{
@@ -471,7 +477,7 @@ input.site_search_input[type=text]{
     font-weight: 500;
     letter-spacing: 2.7px;
     text-align: left;
-    color: #ffbb00;
+    color: var(--main-color-yellow);
 }
 
 .icon_toolbar_hover{
@@ -508,7 +514,7 @@ input.site_search_input[type=text]{
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
     position: relative;
 }
 
@@ -518,7 +524,7 @@ input.site_search_input[type=text]{
     margin-left: 9vw;
     margin-right: 9vw;
     margin-bottom: 5vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-weight: bold;
     font-size: 3.125vw;
     letter-spacing: 0.2vw;
@@ -535,7 +541,7 @@ article.article-content{
     padding-bottom: 2vw;
     color: grey;
     letter-spacing: 0.1vw;
-    border-bottom: solid 0.15vw #2e4565; 
+    border-bottom: solid 0.15vw var(--main-color-blue); 
 }
 
 h1.article-title > a{

@@ -18,7 +18,7 @@
 
 #btn-arch{
     color: #efeee4;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 

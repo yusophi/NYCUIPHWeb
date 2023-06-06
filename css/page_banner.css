@@ -15,7 +15,7 @@
     line-height: 1.45;
     letter-spacing: 0.3125vw;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 #eg{
@@ -32,7 +32,7 @@
     bottom: 23%;
     border-radius: 1.4rem;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .class_selector{
@@ -46,8 +46,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #e4dfd2;
-    border-bottom: solid 2px #2e4565;
+    background-color: var(--main-bg-color);
+    border-bottom: solid 2px var(--main-color-blue);
 }
 
 /***********/
@@ -61,7 +61,7 @@
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -83,7 +83,7 @@
     left: 0;
     width: 1rem;
     height: 1rem;
-    border: solid 2px #2e4565;
+    border: solid 2px var(--main-color-blue);
     border-radius: 50%;
 }
 
@@ -94,12 +94,12 @@
 
 /* On mouse-over, add a grey background color */
 .select_container:hover input ~ .checkmark {
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 /* When the radio button is checked, add a blue background */
 .select_container input:checked ~ .checkmark {
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 /*.select_container:hover input ~ .checkmark-hover {
@@ -132,9 +132,9 @@
     height: 2.1875vw;
     position: absolute;
     right: 0;
-    border: solid 2px #2e4565;
-    background-color: #e4dfd2;
-    color: #2e4565;
+    border: solid 2px var(--main-color-blue);
+    background-color: var(--main-bg-color);
+    color: var(--main-color-blue);
     font-size: 0.84375rem;
     font-weight: bold;
     letter-spacing: 0.04vw;
@@ -142,11 +142,11 @@
 }
 
 .sdg-dropdown option{
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-size: 0.84375rem;
     font-family: 'Noto Sans TC', sans-serif;
-    border: solid 2px #2e4565;
-    background-color: #e4dfd2;
+    border: solid 2px var(--main-color-blue);
+    background-color: var(--main-bg-color);
     padding: 0.5vw;
     font-weight: bold;
     letter-spacing: 0.04vw;
@@ -158,13 +158,13 @@
     width: 100%;
     height: 100%;
     border: #000;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -175,7 +175,7 @@
 #SDG_container {
     margin-left: auto;
     margin-right: 3.5%;
-    border: #2e4565 solid 2px;
+    border: var(--main-color-blue) solid 2px;
     width: 135px;
     height: 30px;
 }

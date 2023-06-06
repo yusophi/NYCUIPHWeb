@@ -4,7 +4,7 @@
     height: auto;
     display: flex;
     flex-direction:column;
-    background: #e4dfd2;
+    background: var(--main-bg-color);
 }
 
 .article_content{
@@ -68,8 +68,8 @@
 .deco-dot{
     width: 0.989vw;
     height: 0.989vw;
-    border: solid 1.5px #2e4565;
-    background-color: #2e4565;
+    border: solid 1.5px var(--main-color-blue);
+    background-color: var(--main-color-blue);
     border-radius: 45%;
 }
 
@@ -80,13 +80,13 @@
     line-height: 0.06;
     letter-spacing: 2.7px;
     text-align: center;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .deco-arrow{
     width: 0.5vw;
     height: 0.5vw;
-    border: solid #2e4565;
+    border: solid var(--main-color-blue);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -103,7 +103,7 @@
     line-height: 1.5;
     letter-spacing: 6px;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .staff_name > .staff_en_name{
@@ -148,7 +148,7 @@
     line-height: 1.82;
     letter-spacing: 1.7px;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .staff_CV{
@@ -213,7 +213,7 @@
     font-weight: bold;
     letter-spacing: 0.17vw;
     line-height: 1;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .right_block_content{

@@ -7,7 +7,7 @@
     justify-content: space-between;
     cursor: pointer;
     height: 3.125vw;
-    border: solid 1.5px #2e4565;
+    border: solid 1.5px var(--main-color-blue);
     border-radius: 2.0833333vw;
     padding: 0 1.145833333vw;
     min-width: 8.75vw;
@@ -20,16 +20,16 @@
     letter-spacing: normal;
     text-decoration: none; 
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .animation1_btn {
-    color: #2e4565;
+    color: var(--main-color-blue);
     position: relative;
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
-    background: linear-gradient(to top, #2e4565 50%, #e4dfd2 50%);
+    background: linear-gradient(to top, var(--main-color-blue) 50%,  50%);
     background-size: 100% 250%;
     background-position: left 0%;
     transition: all 0.6s ease;
@@ -37,7 +37,7 @@
 
 .animation1_btn:hover {
     background-position: 0% 90%;
-    color: #e4dfd2;
+    color: ;
 }
 
 .plus_icon{
@@ -85,7 +85,7 @@
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
-    background: linear-gradient(to top, #efeee4 50%, #2e4565 50%);
+    background: linear-gradient(to top, #efeee4 50%, var(--main-color-blue) 50%);
     background-size: 100% 250%;
     background-position: left 0%;
     transition: all 0.6s ease;
@@ -93,7 +93,7 @@
 
 .animation2_btn:hover {
     background-position: 0% 90%;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 
@@ -108,10 +108,10 @@
     cursor: pointer;
     width: 5.34vw;
     height: 3.125vw;
-    border: solid 1.5px #2e4565;
+    border: solid 1.5px var(--main-color-blue);
     border-radius: 35px;
     padding: 0 1vw 0;
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-size: 1.041666666vw;
 }
 

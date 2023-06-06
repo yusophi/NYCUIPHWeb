@@ -1,6 +1,6 @@
 #btn-scholar{
     color: #efeee4;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .student_scholar{

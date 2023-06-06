@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 #btn-application{
     color: #efeee4;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .student_applications{
@@ -27,14 +27,14 @@
     font-size: 1.041667vw;
     font-weight: bold;
     letter-spacing: 2.7px;
-    color: #2e4565;
+    color: var(--main-color-blue);
     margin: 3vw 0;
 }
 
 .group_content p{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.302083333vw;
-    color:#2e4565;
+    color:var(--main-color-blue);
     line-height: 1.82;
     letter-spacing: 3.3px;
     text-align: left;
@@ -86,7 +86,7 @@
     line-height: 2;
     letter-spacing: 1px;
     margin-top: 2.0833vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .appendix_text{
@@ -101,12 +101,12 @@
     line-height: 1.75;
     letter-spacing: 1px;
     text-align: center;
-    color: #2e4565;
-    border-top: solid 3px #e4dfd2;
-    border-bottom: solid 3px #e4dfd2;
+    color: var(--main-color-blue);
+    border-top: solid 3px ;
+    border-bottom: solid 3px ;
     padding: 0.9635vw 0;
     margin-top: 2.005vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .realted_files{
@@ -144,7 +144,7 @@
     line-height: 2.22;
     letter-spacing: 2.7px;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .file_group_content a, .other_forms a{

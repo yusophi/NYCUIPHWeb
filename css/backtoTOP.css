@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
 }
 
 /* icon and title */
@@ -52,7 +52,7 @@
 }
 
 .whitetext-style {
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .back_to_top .whitetext {

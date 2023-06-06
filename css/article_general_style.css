@@ -4,7 +4,7 @@
     height: auto;
     display: flex;
     flex-direction:column;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .banner{
@@ -86,7 +86,7 @@
 
 .banner_post_tags > .post_category, .banner_post_tags > .sdg-tag li{
     background-color: #efeee4;
-    color: #2e4565;
+    color: var(--main-color-blue);
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
     font-size: 0.9375vw;
@@ -262,7 +262,7 @@
     letter-spacing: 0.17vw;
     text-align: left;
     color: #efeee4;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
     margin-top: 0.41666666666667vw;
 }
 

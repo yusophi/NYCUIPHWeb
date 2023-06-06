@@ -4,7 +4,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
 }
 
 .student_banner{
@@ -24,7 +24,7 @@
     height: 2.65625vw;
     border-radius: 1.4rem;
     box-shadow: 2px 2px 6px 0 rgba(255, 111, 0, 0.6);
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .subpage_buttons{
@@ -46,21 +46,21 @@
     align-items: center;
     justify-content: center;
     border-radius: 1.5625vw;
-    border: solid 1.5px #2e4565;
-    color: #2e4565;
+    border: solid 1.5px var(--main-color-blue);
+    color: var(--main-color-blue);
     text-decoration: none;
     letter-spacing: 0.15vw;
     font-weight: bold;
 }
 
 .animation1_btn {
-    color: #2e4565;
+    color: var(--main-color-blue);
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
-    background: linear-gradient(to top, #2e4565 50%, #e4dfd2 50%);
+    background: linear-gradient(to top, var(--main-color-blue) 50%,  50%);
     background-size: 100% 250%;
     background-position: left 0%;
     transition: all 0.6s ease;
@@ -105,7 +105,7 @@
     line-height: 0.88;
     letter-spacing: 6px;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 ._font60{

@@ -9,7 +9,10 @@
 <div class="homepage">
       <!-- the slideshoe block-->
       <div class="slideshow-container">
+            <?php $promote_img = get_field('promotion_img');
+            if($promote_img):?>
             <div class="promot-img"> <?php echo wp_get_attachment_image( get_field('promotion_img'), 'large' ); ?> </div>
+            <?php endif; ?>
       </div>
       <!-- the promote video block -->
       <div class="promote-video-contanier">
@@ -25,6 +28,16 @@
                   }
             }
             ?>
+            <ul class="video-list">
+            <?php foreach ($video_arr as $title => $url) : ?>
+                  <li class="video-list-item">
+                        <div class="video">
+                              <?php echo $video_arr[$title]; ?>
+                        </div>
+                        <span class="video-title"><?php echo $title; ?></span>
+                  </li>
+            <?php endforeach ?>
+            </ul>
       </div>      
       <!-- the News block -->
       <div class="News-container">
@@ -494,45 +507,48 @@
 
       <div id="nav-circle">
             <div class="row-container">
-                  <a class="clm_content" href="<?php 
+                  <a class="clm-content" href="<?php 
                         $url = get_site_url();
-                        if($locale == "zh_TW"){$url += "/administration_staff/"; }
-                        else{ $url += "/administration_staff-en/"; }
-                        echo $url; ?>">
+                        if($locale == "zh_TW"){echo $url . "/administration_staff/"; }
+                        else{echo $url . "/administration_staff-en/"; }
+                        ?>">
                         <div class="clm-icon">
+                              <?php if($locale == "zh_TW"):?>
+                              <span class="ch_title">聯絡我們<br></span>
+                              <?php else: ?>
+                              <span class="en_title">Contact Us</span>
+                              <?php endif; ?>
                         </div>
-                        <?php if($locale == "zh_TW"):?>
-                        <span class="ch_title">聯絡我們<br></span>
-                        <?php endif; ?>
-                        <span class="en_title">Contact Us</span>
                   </a>
-                  <a class="clm_content" href="<?php echo site_url(); ?>/about/">
+                  <a class="clm-content" href="<?php echo site_url(); ?>/about/">
                         <div class="clm-icon">
+                              <?php if($locale == "zh_TW"):?>
+                              <span class="ch_title">系所簡介<br></span>
+                              <?php else: ?>
+                              <span class="en_title">About us</span>
+                              <?php endif; ?>
                         </div>
-                        <?php if($locale == "zh_TW"):?>
-                        <span class="ch_title">系所簡介<br></span>
-                        <?php endif; ?>
-                        <span class="en_title">About us</span>
                   </a>
-                  <a class="clm_content" href="">
+                  <a class="clm-content" href="">
                         <div class="clm-icon">
+                              <?php if($locale == "zh_TW"):?>
+                              <span class="ch_title">學生專區<br></span>
+                              <?php else: ?>
+                              <span class="en_title">Students</span>
+                              <?php endif; ?>
                         </div>
-                        <?php if($locale == "zh_TW"):?>
-                        <span class="ch_title">學生專區<br></span>
-                        <?php endif; ?>
-                        <span class="en_title">Students</span>
                   </a>
-                  <a class="clm_content" href="">
+                  <a class="clm-content" href="">
                         <div class="clm-icon">
+                              <?php if($locale == "zh_TW"):?>
+                              <span class="ch_title">校友專區<br></span>
+                              <?php else: ?>
+                              <span class="en_title">Alumni</span>
+                              <?php endif; ?>
                         </div>
-                        <?php if($locale == "zh_TW"):?>
-                        <span class="ch_title">校友專區<br></span>
-                        <?php endif; ?>
-                        <span class="en_title">Alumni</span>
                   </a>
             </div>
       </div>
-
       <?php get_template_part( 'template-parts/backtoTOP');?>
 </div>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/back_to_top.js"></script>

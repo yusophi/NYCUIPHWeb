@@ -1,6 +1,6 @@
 .links_page {
     padding-top: 18.8020833vw;
-    background-color: #2e4565;
+    background-color: var(--main-color-blue);
 }
 
 .links_title {
@@ -65,7 +65,7 @@
     font-weight: bold;
     line-height: 1.823333333vw;
     letter-spacing: .1953125vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
     transition: .6s;
     position: absolute;
     top: 50%;
@@ -78,7 +78,7 @@
     transform: translateY(-50%);
     right: 20px;
     font-size: 1.823333333vw;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 .links-item {
     font-family: 'Noto Sans TC', sans-serif;

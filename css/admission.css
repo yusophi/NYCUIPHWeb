@@ -4,7 +4,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    background-color: #e4dfd2;
+    background-color: var(--main-bg-color);
 }
 
 .block-deco{
@@ -21,15 +21,15 @@
 .deco-dot{
     width: 0.989vw;
     height: 0.989vw;
-    border: solid 1.5px #2e4565;
-    background-color: #2e4565;
+    border: solid 1.5px var(--main-color-blue);
+    background-color: var(--main-color-blue);
     border-radius: 45%;
 }
 
 .deco-arrow{
     width: 0.5vw;
     height: 0.5vw;
-    border: solid #2e4565;
+    border: solid var(--main-color-blue);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -42,7 +42,7 @@
     line-height: 0.06;
     letter-spacing: 2.7px;
     text-align: center;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .scetion1{
@@ -66,7 +66,7 @@
     font-family: 'Noto Sans TC', sans-serif;
     line-height: 1.82;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .content span{
@@ -144,18 +144,18 @@
     font-size: 1.041667vw;
     font-weight: 500;
     letter-spacing: 2.7px;
-    color: #2e4565;
+    color: var(--main-color-blue);
     text-decoration: none;
     border-radius: 30px;
-    border: solid 1.5px #2e4565;
+    border: solid 1.5px var(--main-color-blue);
     padding: 0.83vw 2.6vw;
     text-align: center;
     transition: 0.3s ease-in-out;
 }
 
 .actived, .ad_icon:hover{
-    background-color: #2e4565;
-    color: #e4dfd2;
+    background-color: var(--main-color-blue);
+    color: var(--main-bg-color);
 }
 
 .ad_info{
@@ -174,7 +174,7 @@
     line-height: 1.82;
     letter-spacing: 3.3px;
     text-align: left;
-    color: #2e4565;
+    color: var(--main-color-blue);
 }
 
 .ad_content strong{
