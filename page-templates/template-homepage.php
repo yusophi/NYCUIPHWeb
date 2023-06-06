@@ -9,57 +9,23 @@
 <div class="homepage">
       <!-- the slideshoe block-->
       <div class="slideshow-container">
-
-            <?php //query the recent 6 posts
-            /*$args = array(
-                  'post_type' => 'post',
-                  'post_status' => 'publish',
-                  'tag' => 'tag-slideshow',
-                  'orderby' => 'date',
-                  'order' => 'DESC',
-                  'posts_per_page' => 7
-            );
-            $arr_posts = new WP_Query($args);
-            $counter = 0;
-            if ($arr_posts->have_posts()) :*/
-            ?>
-                  <div class="images-container">
-                        <div class="promot-img"> <?php echo wp_get_attachment_image( get_field('promotion_img'), 'large' ); ?> </div>
-                        <?php
-                        /*while ($arr_posts->have_posts()) :
-                              $arr_posts->the_post();
-                              $counter = $counter + 1;*/
-                        ?>
-                              <!--<div class="imagesSlide" id="thumb-image-<?php// echo $counter; ?>">
-                                    <?php// if (has_post_thumbnail()) : ?>
-                                          <a href="<?php// the_permalink(); ?>" title="<?php// the_title_attribute(); ?>">
-                                                <?php// the_post_thumbnail('hp-interview-thumb'); ?>      
-                                          </a>
-                                    <?php// endif; ?>
-                              </div>-->
-                        <?php// endwhile; ?>
-                  </div>
-            <?php// endif; wp_reset_postdata(); ?>
-            <!--<div class="click_btn_bar">
-                  <div id="social_btn">
-                        <a><img src="<?php// bloginfo('template_url') ?>/images/icon/icon-youtube_link.svg"></a>
-                        <a><img src="<?php// bloginfo('template_url') ?>/images/icon/icon-FB_link.svg"></a>
-                  </div>
-                  <div class="image-bar">
-                  <?php// for ($i = 0; $i < $counter ; $i++) : ?>
-                        <div class="dot" onclick="currentImage(<?php// echo $i + 1; ?>)"></div>
-                  <?php// endfor; ?>
-                  </div>
-                  <div id="slide_btn">
-                        <button id="btn_pre_img" onclick="plusImage(-1)" type="button" title="前一張">
-                              <img src="<?php// bloginfo('template_url') ?>/images/icon/icon-pre.svg">
-                        </button>
-                        <button id="btn_next_img" onclick="plusImage(1)" type="button" title="後一張">
-                              <img src="<?php// bloginfo('template_url') ?>/images/icon/icon-next.svg">
-                        </button>
-                  </div>
-            </div>-->
+            <div class="promot-img"> <?php echo wp_get_attachment_image( get_field('promotion_img'), 'large' ); ?> </div>
       </div>
+      <!-- the promote video block -->
+      <div class="promote-video-contanier">
+            <?php 
+            $video_arr = array();
+            for($i = 1; $i <= 3 ; $i++){
+                  $tempfield_video = "video" . $i;
+                  $tempfield_title = "video_title" . $i;
+                  $url = get_field($tempfield_video);
+                  $title = get_field($tempfield_title);
+                  if($url && $title){
+                        $video_arr[$title] = $url;
+                  }
+            }
+            ?>
+      </div>      
       <!-- the News block -->
       <div class="News-container">
             <div class="block-title news_title">
@@ -528,13 +494,25 @@
 
       <div id="nav-circle">
             <div class="row-container">
-                  <a class="clm_content" href="">
+                  <a class="clm_content" href="<?php 
+                        $url = get_site_url();
+                        if($locale == "zh_TW"){$url += "/administration_staff/"; }
+                        else{ $url += "/administration_staff-en/"; }
+                        echo $url; ?>">
+                        <div class="clm-icon">
+                        </div>
+                        <?php if($locale == "zh_TW"):?>
+                        <span class="ch_title">聯絡我們<br></span>
+                        <?php endif; ?>
+                        <span class="en_title">Contact Us</span>
+                  </a>
+                  <a class="clm_content" href="<?php echo site_url(); ?>/about/">
                         <div class="clm-icon">
                         </div>
                         <?php if($locale == "zh_TW"):?>
                         <span class="ch_title">系所簡介<br></span>
                         <?php endif; ?>
-                        <span class="en_title"></span>
+                        <span class="en_title">About us</span>
                   </a>
                   <a class="clm_content" href="">
                         <div class="clm-icon">
@@ -542,7 +520,7 @@
                         <?php if($locale == "zh_TW"):?>
                         <span class="ch_title">學生專區<br></span>
                         <?php endif; ?>
-                        <span class="en_title"></span>
+                        <span class="en_title">Students</span>
                   </a>
                   <a class="clm_content" href="">
                         <div class="clm-icon">
@@ -550,15 +528,7 @@
                         <?php if($locale == "zh_TW"):?>
                         <span class="ch_title">校友專區<br></span>
                         <?php endif; ?>
-                        <span class="en_title"></span>
-                  </a>
-                  <a class="clm_content" href="">
-                        <div class="clm-icon">
-                        </div>
-                        <?php if($locale == "zh_TW"):?>
-                        <span class="ch_title">專區<br></span>
-                        <?php endif; ?>
-                        <span class="en_title"></span>
+                        <span class="en_title">Alumni</span>
                   </a>
             </div>
       </div>
